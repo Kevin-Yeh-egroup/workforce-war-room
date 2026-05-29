@@ -312,6 +312,29 @@
       padding-bottom: 0;
     }
 
+    .notice {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .notice strong {
+      font-size: 15px;
+    }
+
+    .notice .row {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: start;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .notice .row:last-child {
+      border-bottom: 0;
+    }
+
     .hidden {
       display: none;
     }
@@ -376,6 +399,10 @@
       td {
         padding: 9px 8px;
       }
+
+      .notice .row {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -404,6 +431,13 @@
       </header>
 
       <section class="metrics" id="metrics"></section>
+
+      <article class="panel">
+        <h2>待確認事項</h2>
+        <div class="panel-body">
+          <div class="notice" id="confirmationRows"></div>
+        </div>
+      </article>
 
       <section data-section="overview">
         <div class="grid">
@@ -534,11 +568,11 @@
         },
         {
           id: "pending-example-1",
-          title: "待審核案件範例",
+          title: "待審核案件範例（尚未接入真實資料）",
           person: "yachu Zhang",
           minutes: 0,
-          status: "待確認",
-          risk: "中",
+          status: "示範資料",
+          risk: "待接入",
           salary: "認證實習生薪資計算",
           dictionaryAction: "等待每週自動化擷取"
         }
@@ -594,6 +628,26 @@
           reason: "流程與行政型工作可標準化",
           gate: "需定義輸出格式與截止時間"
         }
+      ],
+      confirmations: [
+        {
+          type: "系統狀態",
+          title: "目前沒有真實待確認資料",
+          detail: "這個 v0.1 dashboard 尚未接每週五自動化輸出的真實 JSON，因此正式待確認數量應為 0。",
+          status: "已釐清"
+        },
+        {
+          type: "示範資料",
+          title: "待審核案件範例",
+          detail: "這筆只是用來示範未來每週自動化會顯示的欄位，不代表現在 InfoCenter 真的有一案等待你確認。",
+          status: "示範"
+        },
+        {
+          type: "下一步",
+          title: "接入每週審核報告",
+          detail: "週五 13:30 自動化會先產生候選詞、事件、分鐘數與薪資預覽；之後這裡會顯示需要你確認的批次。",
+          status: "待接入"
+        }
       ]
     };
 
@@ -602,7 +656,8 @@
 
     function badgeClass(value) {
       if (value === "已完成" || value === "可納入" || value === "低") return "green";
-      if (value === "待確認") return "amber";
+      if (value === "待確認" || value === "示範" || value === "待接入" || value === "示範資料") return "amber";
+      if (value === "已釐清") return "blue";
       if (value === "不納入" || value === "高") return "red";
       return "blue";
     }
@@ -613,13 +668,13 @@
 
     function renderMetrics() {
       const completed = data.cases.filter((item) => item.status === "已完成").length;
-      const pending = data.cases.filter((item) => item.status !== "已完成").length;
+      const pending = data.confirmations.filter((item) => item.status === "待確認").length;
       const minutes = data.cases.reduce((sum, item) => sum + item.minutes, 0);
       const includeCount = data.dictionary.filter((item) => item.decision === "可納入").length;
       const payroll = data.cases.reduce((sum, item) => sum + (item.minutes * 3.5), 0);
       $("#metrics").innerHTML = [
         ["本週完成", completed, "已完成審核案件"],
-        ["待確認", pending, "需 Kevin 決策"],
+        ["待確認", pending, "目前無真實待辦"],
         ["核定分鐘", minutes, "回流薪資與負載"],
         ["建議新增詞", includeCount, "不含已存在詞庫"],
         ["薪資預估", `TWD ${payroll.toFixed(1)}`, "以初級單價暫估"]
@@ -629,6 +684,19 @@
           <div class="value">${value}</div>
           <div class="hint">${hint}</div>
         </article>
+      `).join("");
+    }
+
+    function renderConfirmations() {
+      $("#confirmationRows").innerHTML = data.confirmations.map((item) => `
+        <div class="row">
+          <div>${badge(item.status)}</div>
+          <div>
+            <strong>${item.title}</strong>
+            <div class="meta">${item.detail}</div>
+          </div>
+          <div class="meta">${item.type}</div>
+        </div>
       `).join("");
     }
 
@@ -716,6 +784,7 @@
 
     function render() {
       renderMetrics();
+      renderConfirmations();
       renderCases();
       renderDictionary();
       renderPeople();
@@ -727,7 +796,7 @@
     });
 
     $("#nextAction").addEventListener("click", () => {
-      alert("本週摘要：1 案已完成驗證，1 案等待自動化擷取。正式寫入前仍需 Kevin 確認。");
+      alert("目前沒有真實待確認資料。這個 dashboard 下一步要接入每週五自動化產出的真實審核報告。");
     });
 
     $("#toggleSeed").addEventListener("click", () => {
