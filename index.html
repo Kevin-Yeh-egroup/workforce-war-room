@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>人力戰情系統</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #667085;
+      --line: #d8dee8;
+      --panel: #ffffff;
+      --bg: #f6f8fb;
+      --blue: #1f6feb;
+      --cyan: #008c95;
+      --green: #17833b;
+      --amber: #b7791f;
+      --red: #c2410c;
+      --soft-blue: #eaf2ff;
+      --soft-green: #eaf7ef;
+      --soft-amber: #fff4db;
+      --soft-red: #fff0e8;
+      --shadow: 0 10px 26px rgba(20, 31, 48, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif;
+      letter-spacing: 0;
+    }
+
+    .app {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+    }
+
+    aside {
+      background: #102033;
+      color: #f8fafc;
+      padding: 24px 18px;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 28px;
+    }
+
+    .nav {
+      display: grid;
+      gap: 8px;
+    }
+
+    .nav button {
+      width: 100%;
+      min-height: 42px;
+      border: 0;
+      border-radius: 6px;
+      padding: 10px 12px;
+      background: transparent;
+      color: #cbd5e1;
+      text-align: left;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .nav button[aria-selected="true"] {
+      background: #223853;
+      color: #fff;
+    }
+
+    main {
+      padding: 24px;
+      overflow: auto;
+    }
+
+    header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 26px;
+      line-height: 1.25;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .tool {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      border-radius: 6px;
+      padding: 9px 12px;
+      min-height: 38px;
+      font: inherit;
+    }
+
+    .tool.primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(130px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .metric,
+    .panel,
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      padding: 14px;
+      min-height: 96px;
+    }
+
+    .metric .label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .metric .value {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .metric .hint {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(320px, .8fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .panel {
+      overflow: hidden;
+    }
+
+    .panel h2 {
+      margin: 0;
+      padding: 16px 18px;
+      font-size: 17px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .panel-body {
+      padding: 16px 18px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 11px 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      background: #f1f4f8;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge.green {
+      color: var(--green);
+      background: var(--soft-green);
+    }
+
+    .badge.blue {
+      color: var(--blue);
+      background: var(--soft-blue);
+    }
+
+    .badge.amber {
+      color: var(--amber);
+      background: var(--soft-amber);
+    }
+
+    .badge.red {
+      color: var(--red);
+      background: var(--soft-red);
+    }
+
+    .stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .card {
+      padding: 14px;
+    }
+
+    .person {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: start;
+    }
+
+    .person h3,
+    .card h3 {
+      margin: 0 0 4px;
+      font-size: 15px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .bar {
+      height: 8px;
+      background: #e8edf4;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: var(--cyan);
+      width: var(--width);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .list li {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 1100px) {
+      .app {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        padding: 14px 16px;
+      }
+
+      .brand {
+        margin-bottom: 12px;
+      }
+
+      .nav {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .nav button {
+        text-align: center;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid,
+      .split {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 16px;
+      }
+
+      header {
+        display: block;
+      }
+
+      .toolbar {
+        justify-content: flex-start;
+        margin-top: 12px;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      th,
+      td {
+        padding: 9px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <div class="brand">人力戰情系統</div>
+      <nav class="nav" aria-label="戰情視圖">
+        <button type="button" aria-selected="true" data-view="overview">總覽</button>
+        <button type="button" aria-selected="false" data-view="reviews">名詞審核</button>
+        <button type="button" aria-selected="false" data-view="people">人才庫</button>
+        <button type="button" aria-selected="false" data-view="assignments">派工建議</button>
+      </nav>
+    </aside>
+
+    <main>
+      <header>
+        <div>
+          <h1>本週人力與審核戰情</h1>
+          <p class="subtitle">每週五 13:30 先產生審核確認清單；Kevin 確認後才寫入詞庫、審核、關閉事件與薪資。</p>
+        </div>
+        <div class="toolbar">
+          <button class="tool" type="button" id="toggleSeed">切換示範資料</button>
+          <button class="tool primary" type="button" id="nextAction">產生本週確認摘要</button>
+        </div>
+      </header>
+
+      <section class="metrics" id="metrics"></section>
+
+      <section data-section="overview">
+        <div class="grid">
+          <article class="panel">
+            <h2>進行中案件</h2>
+            <div class="panel-body">
+              <table>
+                <thead>
+                  <tr>
+                    <th>事件</th>
+                    <th>工讀生</th>
+                    <th>分鐘</th>
+                    <th>狀態</th>
+                    <th>風險</th>
+                  </tr>
+                </thead>
+                <tbody id="caseRows"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>人力負載</h2>
+            <div class="panel-body stack" id="personCards"></div>
+          </article>
+        </div>
+
+        <div class="split">
+          <article class="panel">
+            <h2>詞庫判斷摘要</h2>
+            <div class="panel-body">
+              <table>
+                <thead>
+                  <tr>
+                    <th>錯誤文字</th>
+                    <th>正確文字</th>
+                    <th>判斷</th>
+                    <th>原因</th>
+                  </tr>
+                </thead>
+                <tbody id="dictionaryRows"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h2>下週派工提醒</h2>
+            <div class="panel-body">
+              <ul class="list" id="assignmentList"></ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="hidden" data-section="reviews">
+        <article class="panel">
+          <h2>自訂義名詞審核清單</h2>
+          <div class="panel-body">
+            <table>
+              <thead>
+                <tr>
+                  <th>事件 ID</th>
+                  <th>事件標題</th>
+                  <th>候選詞</th>
+                  <th>預計動作</th>
+                  <th>薪資</th>
+                </tr>
+              </thead>
+              <tbody id="reviewRows"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="hidden" data-section="people">
+        <article class="panel">
+          <h2>人才庫</h2>
+          <div class="panel-body">
+            <table>
+              <thead>
+                <tr>
+                  <th>姓名</th>
+                  <th>薪資範本</th>
+                  <th>可承接工作</th>
+                  <th>品質訊號</th>
+                  <th>建議</th>
+                </tr>
+              </thead>
+              <tbody id="peopleRows"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="hidden" data-section="assignments">
+        <article class="panel">
+          <h2>派工池</h2>
+          <div class="panel-body">
+            <table>
+              <thead>
+                <tr>
+                  <th>任務</th>
+                  <th>適合人選</th>
+                  <th>原因</th>
+                  <th>確認點</th>
+                </tr>
+              </thead>
+              <tbody id="assignmentRows"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const data = {
+      cases: [
+        {
+          id: "2uqNjm7gRiOWb8RdccVwIg",
+          title: "115519-1150518 財務相談室-17-孫瑜",
+          person: "孫瑜",
+          minutes: 65,
+          status: "已完成",
+          risk: "低",
+          salary: "115529孫瑜薪資計算 / TWD 227.5",
+          dictionaryAction: "新增 3 筆，已存在 2 筆，排除 1 筆"
+        },
+        {
+          id: "pending-example-1",
+          title: "待審核案件範例",
+          person: "yachu Zhang",
+          minutes: 0,
+          status: "待確認",
+          risk: "中",
+          salary: "認證實習生薪資計算",
+          dictionaryAction: "等待每週自動化擷取"
+        }
+      ],
+      dictionary: [
+        { wrong: "袁家中心", correct: "原家中心", decision: "可納入", reason: "社福服務脈絡中的專有/機構用語" },
+        { wrong: "袁民", correct: "原民", decision: "可納入", reason: "原民為社福界常用詞" },
+        { wrong: "袁銘", correct: "原民", decision: "可納入", reason: "同批脈絡中明確指向原民" },
+        { wrong: "魚鱗", correct: "雲林", decision: "不納入", reason: "左詞有正常語意，可能造成全域誤替換" }
+      ],
+      people: [
+        {
+          name: "孫瑜",
+          template: "初級工讀生薪資計算",
+          work: "逐字稿名詞修正、資料整理",
+          quality: "本週完成 1 案，詞庫判斷需少量複核",
+          load: 42,
+          suggestion: "可持續安排詞庫修正與標準化任務"
+        },
+        {
+          name: "yachu Zhang",
+          template: "認證實習生薪資計算",
+          work: "進階校對、資料判讀、課程支援",
+          quality: "適合承接規則較多的審核任務",
+          load: 28,
+          suggestion: "可優先測試好理家在內容優化任務"
+        },
+        {
+          name: "李怡霖",
+          template: "怡霖薪資計算",
+          work: "行政流程、內容整理、專案協作",
+          quality: "需獨立薪資範本追蹤",
+          load: 34,
+          suggestion: "適合擔任流程型任務的固定窗口"
+        }
+      ],
+      assignments: [
+        {
+          task: "每週自訂義名詞審核",
+          person: "孫瑜 / yachu Zhang",
+          reason: "已累積逐字稿與名詞修正脈絡",
+          gate: "低信心詞先交 Kevin 判斷"
+        },
+        {
+          task: "好理家在文章與工具優化",
+          person: "yachu Zhang",
+          reason: "適合較高判讀與整理能力任務",
+          gate: "先以一篇文章或一個頁面試做"
+        },
+        {
+          task: "馴錢師活動資料整理",
+          person: "李怡霖",
+          reason: "流程與行政型工作可標準化",
+          gate: "需定義輸出格式與截止時間"
+        }
+      ]
+    };
+
+    const $ = (selector) => document.querySelector(selector);
+    const $$ = (selector) => Array.from(document.querySelectorAll(selector));
+
+    function badgeClass(value) {
+      if (value === "已完成" || value === "可納入" || value === "低") return "green";
+      if (value === "待確認") return "amber";
+      if (value === "不納入" || value === "高") return "red";
+      return "blue";
+    }
+
+    function badge(value) {
+      return `<span class="badge ${badgeClass(value)}">${value}</span>`;
+    }
+
+    function renderMetrics() {
+      const completed = data.cases.filter((item) => item.status === "已完成").length;
+      const pending = data.cases.filter((item) => item.status !== "已完成").length;
+      const minutes = data.cases.reduce((sum, item) => sum + item.minutes, 0);
+      const includeCount = data.dictionary.filter((item) => item.decision === "可納入").length;
+      const payroll = data.cases.reduce((sum, item) => sum + (item.minutes * 3.5), 0);
+      $("#metrics").innerHTML = [
+        ["本週完成", completed, "已完成審核案件"],
+        ["待確認", pending, "需 Kevin 決策"],
+        ["核定分鐘", minutes, "回流薪資與負載"],
+        ["建議新增詞", includeCount, "不含已存在詞庫"],
+        ["薪資預估", `TWD ${payroll.toFixed(1)}`, "以初級單價暫估"]
+      ].map(([label, value, hint]) => `
+        <article class="metric">
+          <div class="label">${label}</div>
+          <div class="value">${value}</div>
+          <div class="hint">${hint}</div>
+        </article>
+      `).join("");
+    }
+
+    function renderCases() {
+      $("#caseRows").innerHTML = data.cases.map((item) => `
+        <tr>
+          <td><strong>${item.title}</strong><div class="meta">${item.id}</div></td>
+          <td>${item.person}</td>
+          <td>${item.minutes}</td>
+          <td>${badge(item.status)}</td>
+          <td>${badge(item.risk)}</td>
+        </tr>
+      `).join("");
+
+      $("#reviewRows").innerHTML = data.cases.map((item) => `
+        <tr>
+          <td>${item.id}</td>
+          <td>${item.title}</td>
+          <td>${item.dictionaryAction}</td>
+          <td>${item.status === "已完成" ? "已完成三步驗證" : "等待 Kevin 確認"}</td>
+          <td>${item.salary}</td>
+        </tr>
+      `).join("");
+    }
+
+    function renderDictionary() {
+      $("#dictionaryRows").innerHTML = data.dictionary.map((item) => `
+        <tr>
+          <td>${item.wrong}</td>
+          <td>${item.correct}</td>
+          <td>${badge(item.decision)}</td>
+          <td>${item.reason}</td>
+        </tr>
+      `).join("");
+    }
+
+    function renderPeople() {
+      $("#personCards").innerHTML = data.people.map((person) => `
+        <article class="card">
+          <div class="person">
+            <div>
+              <h3>${person.name}</h3>
+              <div class="meta">${person.work}</div>
+            </div>
+            ${badge(`${person.load}%`)}
+          </div>
+          <div class="bar" aria-label="${person.name} 負載 ${person.load}%"><span style="--width: ${person.load}%"></span></div>
+        </article>
+      `).join("");
+
+      $("#peopleRows").innerHTML = data.people.map((person) => `
+        <tr>
+          <td><strong>${person.name}</strong></td>
+          <td>${person.template}</td>
+          <td>${person.work}</td>
+          <td>${person.quality}</td>
+          <td>${person.suggestion}</td>
+        </tr>
+      `).join("");
+    }
+
+    function renderAssignments() {
+      $("#assignmentList").innerHTML = data.assignments.map((item) => `
+        <li><strong>${item.task}</strong><br><span class="meta">${item.person}｜${item.reason}</span></li>
+      `).join("");
+
+      $("#assignmentRows").innerHTML = data.assignments.map((item) => `
+        <tr>
+          <td>${item.task}</td>
+          <td>${item.person}</td>
+          <td>${item.reason}</td>
+          <td>${item.gate}</td>
+        </tr>
+      `).join("");
+    }
+
+    function switchView(view) {
+      $$("[data-view]").forEach((button) => {
+        button.setAttribute("aria-selected", String(button.dataset.view === view));
+      });
+      $$("[data-section]").forEach((section) => {
+        section.classList.toggle("hidden", section.dataset.section !== view);
+      });
+    }
+
+    function render() {
+      renderMetrics();
+      renderCases();
+      renderDictionary();
+      renderPeople();
+      renderAssignments();
+    }
+
+    $$("[data-view]").forEach((button) => {
+      button.addEventListener("click", () => switchView(button.dataset.view));
+    });
+
+    $("#nextAction").addEventListener("click", () => {
+      alert("本週摘要：1 案已完成驗證，1 案等待自動化擷取。正式寫入前仍需 Kevin 確認。");
+    });
+
+    $("#toggleSeed").addEventListener("click", () => {
+      data.cases.reverse();
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>
