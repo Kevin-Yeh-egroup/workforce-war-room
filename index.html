@@ -423,6 +423,7 @@
         <div>
           <h1>本週人力與審核戰情</h1>
           <p class="subtitle">每週五 13:30 先產生審核確認清單；Kevin 確認後才寫入詞庫、審核、關閉事件與薪資。</p>
+          <p class="subtitle" id="sourceStatus">資料來源：讀取中</p>
         </div>
         <div class="toolbar">
           <button class="tool" type="button" id="toggleSeed">切換示範資料</button>
@@ -648,7 +649,13 @@
           detail: "週五 13:30 自動化會先產生候選詞、事件、分鐘數與薪資預覽；之後這裡會顯示需要你確認的批次。",
           status: "待接入"
         }
-      ]
+      ],
+      source: {
+        mode: "fallback",
+        updatedAt: "2026-05-29T17:10:00+08:00",
+        sources: ["HTML fallback seed data"],
+        publicNote: "目前顯示的是備援示範資料；正式資料會由 Codex 更新 data/dashboard.json。"
+      }
     };
 
     const $ = (selector) => document.querySelector(selector);
@@ -664,6 +671,46 @@
 
     function badge(value) {
       return `<span class="badge ${badgeClass(value)}">${value}</span>`;
+    }
+
+    function formatSourceTime(value) {
+      if (!value) return "尚未產生";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return value;
+      return date.toLocaleString("zh-TW", {
+        timeZone: "Asia/Taipei",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    }
+
+    async function loadLatestData() {
+      try {
+        const response = await fetch("data/dashboard.json", { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const latest = await response.json();
+        Object.assign(data, latest);
+        data.source = {
+          mode: "snapshot",
+          ...latest.source,
+          publicNote: latest.source?.publicNote || "這份資料由 Codex 依 dashboard 需求讀取來源後更新。"
+        };
+      } catch (error) {
+        data.source = {
+          ...data.source,
+          loadError: error.message
+        };
+      }
+    }
+
+    function renderSourceStatus() {
+      const mode = data.source?.mode === "snapshot" ? "公開 snapshot" : "備援示範資料";
+      const sources = (data.source?.sources || []).join("、") || "未標示";
+      const updatedAt = formatSourceTime(data.source?.updatedAt);
+      $("#sourceStatus").textContent = `資料來源：${mode}｜更新時間：${updatedAt}｜來源：${sources}`;
     }
 
     function renderMetrics() {
@@ -783,6 +830,7 @@
     }
 
     function render() {
+      renderSourceStatus();
       renderMetrics();
       renderConfirmations();
       renderCases();
@@ -804,7 +852,7 @@
       render();
     });
 
-    render();
+    loadLatestData().finally(render);
   </script>
 </body>
 </html>

@@ -63,7 +63,7 @@
 
 ## Dashboard v0.1
 
-`index.html` 是第一版靜態戰情系統，先用 seed data 顯示：
+`index.html` 是第一版靜態戰情系統，會讀取 `data/dashboard.json` 作為公開 snapshot。若 snapshot 讀取失敗，才使用 HTML 內的備援示範資料。
 
 - 本週待審核與完成狀況
 - 工讀生負載與品質訊號
@@ -71,7 +71,7 @@
 - 薪資預估
 - 下週派工建議
 
-後續可把 seed data 改成由每週 automation 匯出的 JSON。
+後續每週 automation 應依 dashboard 所需欄位讀取最新必要資料，更新 `data/dashboard.json`，再推送到 GitHub/Vercel。完整個資、薪資明細、低信心評語與內部判斷不直接放在 public snapshot；必要時另做私有版。
 
 ## Governance Review Card
 

@@ -1,0 +1,116 @@
+{
+  "source": {
+    "mode": "snapshot",
+    "updatedAt": "2026-05-29T17:12:00+08:00",
+    "sources": [
+      "Codex reviewed workflow record",
+      "InfoCenter verified test case",
+      "Kevin-provided review rules"
+    ],
+    "publicNote": "這份資料是公開 dashboard snapshot。完整個資、薪資明細與低信心判斷不直接公開，需由 Codex 在更新前過濾。"
+  },
+  "cases": [
+    {
+      "id": "2uqNjm7gRiOWb8RdccVwIg",
+      "title": "115519-1150518 財務相談室-17-孫瑜",
+      "person": "孫瑜",
+      "minutes": 65,
+      "status": "已完成",
+      "risk": "低",
+      "salary": "115529孫瑜薪資計算 / TWD 227.5",
+      "dictionaryAction": "新增 3 筆，已存在 2 筆，排除 1 筆"
+    }
+  ],
+  "dictionary": [
+    {
+      "wrong": "袁家中心",
+      "correct": "原家中心",
+      "decision": "可納入",
+      "reason": "社福服務脈絡中的專有/機構用語"
+    },
+    {
+      "wrong": "袁民",
+      "correct": "原民",
+      "decision": "可納入",
+      "reason": "原民為社福界常用詞"
+    },
+    {
+      "wrong": "袁銘",
+      "correct": "原民",
+      "decision": "可納入",
+      "reason": "同批脈絡中明確指向原民"
+    },
+    {
+      "wrong": "魚鱗",
+      "correct": "雲林",
+      "decision": "不納入",
+      "reason": "左詞有正常語意，可能造成全域誤替換"
+    }
+  ],
+  "people": [
+    {
+      "name": "孫瑜",
+      "template": "初級工讀生薪資計算",
+      "work": "逐字稿名詞修正、資料整理",
+      "quality": "已完成 1 案測試流程；詞庫候選需由 Kevin 校準規則後持續累積",
+      "load": 42,
+      "suggestion": "可持續安排詞庫修正與標準化任務"
+    },
+    {
+      "name": "yachu Zhang",
+      "template": "認證實習生薪資計算",
+      "work": "進階校對、資料判讀、課程支援",
+      "quality": "待匯入實際案件與 Kevin 補充資料",
+      "load": 0,
+      "suggestion": "待補能力資料後再派進階任務"
+    },
+    {
+      "name": "李怡霖",
+      "template": "怡霖薪資計算",
+      "work": "行政流程、內容整理、專案協作",
+      "quality": "待匯入實際案件與 Kevin 補充資料",
+      "load": 0,
+      "suggestion": "薪資範本需獨立追蹤"
+    }
+  ],
+  "assignments": [
+    {
+      "task": "每週自訂義名詞審核",
+      "person": "孫瑜 / yachu Zhang",
+      "reason": "已具備逐字稿與名詞修正脈絡，後續需用真實案件累積品質訊號",
+      "gate": "低信心詞先交 Kevin 判斷"
+    },
+    {
+      "task": "好理家在文章與工具優化",
+      "person": "待 Kevin 補資料後判斷",
+      "reason": "需要先建立每位工讀生能力、可用時段與品質資料",
+      "gate": "先以一篇文章或一個頁面試做"
+    },
+    {
+      "task": "馴錢師活動資料整理",
+      "person": "待 Kevin 補資料後判斷",
+      "reason": "流程與行政型工作可標準化，但需先知道人員偏好與穩定度",
+      "gate": "需定義輸出格式與截止時間"
+    }
+  ],
+  "confirmations": [
+    {
+      "type": "資料來源",
+      "title": "已改為 snapshot 資料架構",
+      "detail": "Dashboard 會讀取 data/dashboard.json。後續由 Codex 依需求讀取 InfoCenter、Codex 工作紀錄、GitHub 或 Kevin 補充資料後更新這個檔案。",
+      "status": "已釐清"
+    },
+    {
+      "type": "隱私邊界",
+      "title": "公開站只放必要摘要",
+      "detail": "完整薪資、個資、低信心評語與內部判斷不直接公開；若要完整戰情，需要另做私有版或受保護版本。",
+      "status": "待確認"
+    },
+    {
+      "type": "下一步",
+      "title": "等待 Kevin 補工讀生資料",
+      "detail": "可補每位工讀生的可用時間、擅長任務、穩定度、目前負載、希望培養方向與不適合任務。",
+      "status": "待接入"
+    }
+  ]
+}

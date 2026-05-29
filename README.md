@@ -12,6 +12,19 @@ Kevin 的工讀生人力戰情系統 v0.1。
 
 目前資料是 seed data。後續可接每週 InfoCenter 審核自動化輸出的 JSON。
 
+## Data source
+
+The dashboard reads `data/dashboard.json` as its public snapshot source.
+
+Codex should update that snapshot after reading the latest necessary sources, such as:
+
+- InfoCenter event/review/salary status
+- Codex review workflow records
+- Kevin-provided intern profile updates
+- GitHub/Vercel deployment state when relevant
+
+Because this is a public dashboard, private details should be summarized before publishing.
+
 ## Deployment
 
 This site is designed for Vercel static hosting.
