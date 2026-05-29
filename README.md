@@ -16,6 +16,10 @@ Kevin 的工讀生人力戰情系統 v0.1。
 
 This site is designed for Vercel static hosting.
 
+Production URL:
+
+https://workforce-war-room.vercel.app
+
 Review-stage search indexing controls are enabled:
 
 - HTML `noindex,nofollow,noarchive`
