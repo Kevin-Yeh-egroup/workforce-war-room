@@ -1,5 +1,6 @@
 const DEFAULT_WEEK = "../data/radar-week.json";
 const DEFAULT_TRACKING = "../data/radar-tracking.json";
+const DEFAULT_WORK_ITEMS = "../data/radar-work-items.md";
 
 function getParam(name) {
   const u = new URL(window.location.href);
@@ -10,8 +11,10 @@ const state = {
   view: "highlights",
   weekPath: getParam("week") || DEFAULT_WEEK,
   trackingPath: getParam("tracking") || DEFAULT_TRACKING,
+  workItemsPath: getParam("work") || DEFAULT_WORK_ITEMS,
   week: null,
   tracking: null,
+  workItemsText: "",
   items: [],
 };
 
@@ -113,6 +116,17 @@ function renderHighlights() {
       </div>
     </div>
     ${list}
+  `;
+}
+
+function renderWorkItems() {
+  const text = (state.workItemsText || "").trim();
+  els.view.innerHTML = `
+    <div class="row" style="margin-bottom:10px">
+      <div class="pill">view: 工作</div>
+      <div class="muted" style="font-size:12px">來源：${escapeHtml(state.workItemsPath)}</div>
+    </div>
+    <pre>${escapeHtml(text || "（尚無工作清單）")}</pre>
   `;
 }
 
@@ -286,6 +300,7 @@ function renderExport() {
 function render() {
   const v = state.view;
   if (v === "highlights") renderHighlights();
+  else if (v === "work") renderWorkItems();
   else if (v === "library") renderLibrary();
   else if (v === "tracking") renderTracking();
   else if (v === "export") renderExport();
@@ -297,13 +312,24 @@ async function loadJson(path) {
   return await res.json();
 }
 
+async function loadText(path) {
+  const res = await fetch(path, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+  return await res.text();
+}
+
 async function reload() {
   els.meta.textContent = "載入中…";
-  els.paths.textContent = `week: ${state.weekPath}\ntracking: ${state.trackingPath}`;
+  els.paths.textContent = `week: ${state.weekPath}\ntracking: ${state.trackingPath}\nwork: ${state.workItemsPath}`;
   try {
-    const [week, tracking] = await Promise.all([loadJson(state.weekPath), loadJson(state.trackingPath)]);
+    const [week, tracking, workItemsText] = await Promise.all([
+      loadJson(state.weekPath),
+      loadJson(state.trackingPath),
+      loadText(state.workItemsPath),
+    ]);
     state.week = week;
     state.tracking = tracking;
+    state.workItemsText = workItemsText;
     state.items = Array.isArray(week?.items) ? week.items : [];
     const meta = week?.meta || {};
     els.meta.textContent = `week ${meta.weekStart || "—"}～${meta.weekEnd || "—"} · generatedAt ${meta.generatedAt || "—"}`;
@@ -353,4 +379,3 @@ function wireUi() {
 
 wireUi();
 reload();
-

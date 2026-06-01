@@ -8,6 +8,6 @@
 ## 資料檔（同 repo、可被 Vercel 靜態讀取）
 - `data/radar-week.json`
 - `data/radar-tracking.json`
+- `data/radar-work-items.md`
 
 > 每週更新只需要覆寫 `data/radar-week.json`，並視情況更新 `data/radar-tracking.json`。
-
