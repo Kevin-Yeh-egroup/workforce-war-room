@@ -4,7 +4,7 @@
     "weekEnd": "YYYY-MM-DD",
     "generatedAt": "YYYY-MM-DDTHH:mm:ss+08:00",
     "timezone": "Asia/Taipei",
-    "notes": ["填入每週雷達資料；供 radar-addon 讀取。"]
+    "notes": ["請用 radar-week.template.json 當骨架填寫本檔案。"]
   },
   "highlights": [],
   "items": [],

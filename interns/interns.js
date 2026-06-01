@@ -70,7 +70,8 @@ async function main() {
     const data = await loadInterns();
     const interns = Array.isArray(data.interns) ? data.interns : [];
     const meta = data.meta || {};
-    metaEl.textContent = `generatedAt ${meta.generatedAt || '—'} · total ${meta.counts?.total ?? interns.length}`;
+    const updated = meta.sourceModifiedAt || meta.generatedAt || '—';
+    metaEl.textContent = `updated ${updated} · total ${meta.counts?.total ?? interns.length}`;
 
     const rerender = () => {
       const items = applyFilters(interns);

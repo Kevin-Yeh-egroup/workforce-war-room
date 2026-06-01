@@ -61,7 +61,8 @@ async function main() {
     const data = await loadInterns();
     const interns = Array.isArray(data.interns) ? data.interns : [];
     const meta = data.meta || {};
-    metaEl.textContent = `generatedAt ${meta.generatedAt || '—'}`;
+    const updated = meta.sourceModifiedAt || meta.generatedAt || '—';
+    metaEl.textContent = `updated ${updated}`;
     const intern = interns.find((x) => x.slug === slug);
     if (!intern) {
       cardEl.innerHTML = `<div class=\"muted\">找不到該工讀生：${escapeHtml(slug)}（請回到索引重新選擇）</div>`;
