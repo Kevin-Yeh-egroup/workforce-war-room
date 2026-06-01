@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>工讀生個人頁（索引）</title>
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>工讀生個人頁</h1>
+      <div class="meta" id="meta">載入中…</div>
+      <a class="pill" href="/radar-addon/index.html">回到 Radar Add-on</a>
+    </header>
+
+    <div class="wrap">
+      <div class="grid">
+        <div class="card col-4">
+          <div class="muted" style="font-size:12px">搜尋</div>
+          <div style="height:8px"></div>
+          <input id="q" placeholder="搜尋 displayName / notes / 標籤" />
+          <div style="height:10px"></div>
+          <div class="muted" style="font-size:12px">狀態</div>
+          <div style="height:8px"></div>
+          <select id="status">
+            <option value="">全部</option>
+            <option value="active">active</option>
+            <option value="paused">paused</option>
+          </select>
+          <div style="height:10px"></div>
+          <div class="muted" style="font-size:12px">本月薪資狀態（不含金額）</div>
+          <div style="height:8px"></div>
+          <select id="pay">
+            <option value="">全部</option>
+            <option value="paid">paid</option>
+            <option value="due">due</option>
+            <option value="n/a">n/a</option>
+          </select>
+        </div>
+
+        <div class="card col-8">
+          <div class="muted" style="font-size:12px;margin-bottom:10px">列表</div>
+          <div class="list" id="list"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./interns.js"></script>
+  </body>
+</html>
