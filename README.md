@@ -33,6 +33,11 @@ Production URL:
 
 https://workforce-war-room.vercel.app
 
+## Radar Add-on（附加功能）
+
+- Local entry: `radar-addon/index.html`
+- Data files: `data/radar-week.json`, `data/radar-tracking.json`
+
 Review-stage search indexing controls are enabled:
 
 - HTML `noindex,nofollow,noarchive`

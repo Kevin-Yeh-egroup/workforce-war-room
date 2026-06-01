@@ -5,3 +5,6 @@ node_modules/
 *.log
 
 .vercel
+
+# local snapshots / backups
+data/dashboard.bak-*.json
