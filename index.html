@@ -120,6 +120,12 @@
       font: inherit;
     }
 
+    a.tool {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+
     .tool.primary {
       background: var(--blue);
       border-color: var(--blue);
@@ -174,6 +180,10 @@
 
     .panel {
       overflow: hidden;
+    }
+
+    main > .panel {
+      margin-bottom: 16px;
     }
 
     .panel h2 {
@@ -335,6 +345,27 @@
       border-bottom: 0;
     }
 
+    .automation-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .automation-card {
+      display: grid;
+      gap: 8px;
+      min-height: 132px;
+    }
+
+    .automation-card .value {
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .automation-card a {
+      justify-self: start;
+    }
+
     .hidden {
       display: none;
     }
@@ -368,7 +399,8 @@
       }
 
       .grid,
-      .split {
+      .split,
+      .automation-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -426,12 +458,21 @@
           <p class="subtitle" id="sourceStatus">資料來源：讀取中</p>
         </div>
         <div class="toolbar">
+          <a class="tool" href="/radar-addon/index.html">資訊雷達</a>
+          <a class="tool" href="/interns/index.html">工讀生快照</a>
           <button class="tool" type="button" id="toggleSeed">切換示範資料</button>
           <button class="tool primary" type="button" id="nextAction">產生本週確認摘要</button>
         </div>
       </header>
 
       <section class="metrics" id="metrics"></section>
+
+      <article class="panel">
+        <h2>最新自動化資料</h2>
+        <div class="panel-body">
+          <div class="automation-grid" id="automationCards"></div>
+        </div>
+      </article>
 
       <article class="panel">
         <h2>待確認事項</h2>
@@ -504,7 +545,7 @@
                   <th>事件標題</th>
                   <th>候選詞</th>
                   <th>預計動作</th>
-                  <th>薪資</th>
+                  <th>派薪狀態</th>
                 </tr>
               </thead>
               <tbody id="reviewRows"></tbody>
@@ -564,7 +605,7 @@
           minutes: 65,
           status: "已完成",
           risk: "低",
-          salary: "115529孫瑜薪資計算 / TWD 227.5",
+          salary: "已建立（不顯示金額）",
           dictionaryAction: "新增 3 筆，已存在 2 筆，排除 1 筆"
         },
         {
@@ -574,7 +615,7 @@
           minutes: 0,
           status: "示範資料",
           risk: "待接入",
-          salary: "認證實習生薪資計算",
+          salary: "待確認",
           dictionaryAction: "等待每週自動化擷取"
         }
       ],
@@ -661,6 +702,13 @@
     const $ = (selector) => document.querySelector(selector);
     const $$ = (selector) => Array.from(document.querySelectorAll(selector));
 
+    const addon = {
+      interns: null,
+      radar: null,
+      workItems: "",
+      errors: []
+    };
+
     function badgeClass(value) {
       if (value === "已完成" || value === "可納入" || value === "低") return "green";
       if (value === "待確認" || value === "示範" || value === "待接入" || value === "示範資料") return "amber";
@@ -706,6 +754,33 @@
       }
     }
 
+    async function fetchJson(path) {
+      const response = await fetch(path, { cache: "no-store" });
+      if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
+      return response.json();
+    }
+
+    async function fetchText(path) {
+      const response = await fetch(path, { cache: "no-store" });
+      if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
+      return response.text();
+    }
+
+    async function loadAddonData() {
+      const tasks = [
+        fetchJson("data/interns.public.json")
+          .then((value) => { addon.interns = value; })
+          .catch((error) => { addon.errors.push(error.message); }),
+        fetchJson("data/radar-week.json")
+          .then((value) => { addon.radar = value; })
+          .catch((error) => { addon.errors.push(error.message); }),
+        fetchText("data/radar-work-items.md")
+          .then((value) => { addon.workItems = value; })
+          .catch((error) => { addon.errors.push(error.message); })
+      ];
+      await Promise.all(tasks);
+    }
+
     function renderSourceStatus() {
       const mode = data.source?.mode === "snapshot" ? "公開 snapshot" : "備援示範資料";
       const sources = (data.source?.sources || []).join("、") || "未標示";
@@ -718,18 +793,65 @@
       const pending = data.confirmations.filter((item) => item.status === "待確認").length;
       const minutes = data.cases.reduce((sum, item) => sum + item.minutes, 0);
       const includeCount = data.dictionary.filter((item) => item.decision === "可納入").length;
-      const payroll = data.cases.reduce((sum, item) => sum + (item.minutes * 3.5), 0);
+      const payrollReady = data.cases.filter((item) => item.salary || item.payStatus).length;
       $("#metrics").innerHTML = [
         ["本週完成", completed, "已完成審核案件"],
         ["待確認", pending, "目前無真實待辦"],
         ["核定分鐘", minutes, "回流薪資與負載"],
         ["建議新增詞", includeCount, "不含已存在詞庫"],
-        ["薪資預估", `TWD ${payroll.toFixed(1)}`, "以初級單價暫估"]
+        ["派薪狀態", payrollReady, "僅顯示狀態，不含金額"]
       ].map(([label, value, hint]) => `
         <article class="metric">
           <div class="label">${label}</div>
           <div class="value">${value}</div>
           <div class="hint">${hint}</div>
+        </article>
+      `).join("");
+    }
+
+    function isPlaceholderWeek(value) {
+      return !value || String(value).includes("YYYY");
+    }
+
+    function renderAutomationCards() {
+      const counts = addon.interns?.meta?.counts || {};
+      const sourceModifiedAt = addon.interns?.meta?.sourceModifiedAt || addon.interns?.meta?.generatedAt;
+      const weekStart = addon.radar?.meta?.weekStart;
+      const weekEnd = addon.radar?.meta?.weekEnd;
+      const highlights = Array.isArray(addon.radar?.highlights) ? addon.radar.highlights.length : 0;
+      const hasWorkItems = addon.workItems && !addon.workItems.includes("尚未產生");
+      const radarPeriod = isPlaceholderWeek(weekStart) ? "等待本週雷達" : `${weekStart}～${weekEnd}`;
+
+      $("#automationCards").innerHTML = [
+        {
+          title: "工讀生公開快照",
+          value: `${counts.active ?? "—"} / ${counts.total ?? "—"}`,
+          meta: `active / total｜paid ${counts.paid ?? "—"}｜due ${counts.due ?? "—"}｜${formatSourceTime(sourceModifiedAt)}`,
+          href: "/interns/index.html",
+          cta: "打開工讀生快照"
+        },
+        {
+          title: "每週資訊雷達",
+          value: highlights,
+          meta: `${radarPeriod}｜highlights`,
+          href: "/radar-addon/index.html",
+          cta: "打開資訊雷達"
+        },
+        {
+          title: "工作清單",
+          value: hasWorkItems ? "已產生" : "待產生",
+          meta: addon.errors.length ? addon.errors.join("｜") : "新聞摘要與派薪提醒會在每週排程後更新",
+          href: "/data/radar-work-items.md",
+          cta: "查看工作清單"
+        }
+      ].map((item) => `
+        <article class="card automation-card">
+          <div>
+            <h3>${item.title}</h3>
+            <div class="value">${item.value}</div>
+            <div class="meta">${item.meta}</div>
+          </div>
+          <a class="tool" href="${item.href}">${item.cta}</a>
         </article>
       `).join("");
     }
@@ -764,7 +886,7 @@
           <td>${item.title}</td>
           <td>${item.dictionaryAction}</td>
           <td>${item.status === "已完成" ? "已完成三步驗證" : "等待 Kevin 確認"}</td>
-          <td>${item.salary}</td>
+          <td>${item.salary ? "已建立（不顯示金額）" : "待確認"}</td>
         </tr>
       `).join("");
     }
@@ -832,6 +954,7 @@
     function render() {
       renderSourceStatus();
       renderMetrics();
+      renderAutomationCards();
       renderConfirmations();
       renderCases();
       renderDictionary();
@@ -852,7 +975,7 @@
       render();
     });
 
-    loadLatestData().finally(render);
+    Promise.all([loadLatestData(), loadAddonData()]).finally(render);
   </script>
 </body>
 </html>
