@@ -49,9 +49,22 @@ function resumeBadge(person) {
 }
 
 function resumeLink(person) {
-  const label = person.resume?.label || '履歷';
-  if (person.resume?.url) return `<a class="tool" href="${escapeHtml(person.resume.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
-  return `<span class="muted">${escapeHtml(label || '尚未提供履歷連結')}</span>`;
+  if (person.resume?.url) {
+    const label = person.resume?.label || '履歷';
+    return `<a class="tool" href="${escapeHtml(person.resume.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
+  }
+  return `<span class="muted">${escapeHtml(person.resume?.label || '尚未提供履歷連結')}</span>`;
+}
+
+function contactLine(person) {
+  const phone = person.phone ? `<a href="tel:${escapeHtml(person.phone)}">${escapeHtml(person.phone)}</a>` : '<span class="muted">缺電話</span>';
+  const email = person.email ? `<a href="mailto:${escapeHtml(person.email)}">${escapeHtml(person.email)}</a>` : '<span class="muted">缺 Email</span>';
+  return `${phone}<br>${email}`;
+}
+
+function missingLine(person) {
+  const missing = person.missingRequiredFields || [];
+  return missing.length ? missing.map((item) => badge(`待補 ${item}`)).join('') : badge('必要欄位完整');
 }
 
 function months(person) {
@@ -73,7 +86,7 @@ function signals(person) {
 }
 
 function personCard(person) {
-  const role = person.currentRole || person.educationOrJob || '未填基本背景';
+  const role = person.employmentOrStudy || person.currentRole || person.educationOrJob || '未填基本背景';
   return `<article class="card person-card">
     <div class="person-head">
       <div>
@@ -83,11 +96,14 @@ function personCard(person) {
       <div class="badges">${badge(person.status)}${resumeBadge(person)}</div>
     </div>
     <div class="kv">
+      <div class="k">電話 / Email</div><div class="v">${contactLine(person)}</div>
+      <div class="k">居住地</div><div class="v">${escapeHtml(person.residence || '待補')}</div>
       <div class="k">目前工作狀態</div><div class="v">${escapeHtml(person.workStatus || '—')}</div>
       <div class="k">聯繫狀況</div><div class="v">${escapeHtml(person.contactStatus || '—')}</div>
       <div class="k">工作等級</div><div class="v">${escapeHtml(person.workLevel || '—')}</div>
       <div class="k">介紹／來源</div><div class="v">${escapeHtml(person.referrer || '—')}</div>
       <div class="k">履歷</div><div class="v">${resumeLink(person)}</div>
+      <div class="k">缺漏</div><div class="v"><div class="signals">${missingLine(person)}</div></div>
     </div>
     <div>
       <div class="muted">1–4 月工作情況</div>
@@ -106,6 +122,10 @@ function personCard(person) {
 function searchable(person) {
   return [
     person.name,
+    person.phone,
+    person.email,
+    person.residence,
+    person.employmentOrStudy,
     person.status,
     person.currentRole,
     person.educationOrJob,
@@ -123,6 +143,7 @@ function filterPeople(people) {
   const query = (document.getElementById('q').value || '').trim().toLowerCase();
   const status = document.getElementById('status').value;
   const resume = document.getElementById('resume').value;
+  const contact = document.getElementById('contact').value;
   const level = document.getElementById('level').value;
   return people.filter((person) => {
     if (status && person.status !== status) return false;
@@ -130,6 +151,10 @@ function filterPeople(people) {
     if (resume === 'link' && !person.resume?.url) return false;
     if (resume === 'status' && !(person.resume?.url || person.resume?.label)) return false;
     if (resume === 'missing' && (person.resume?.url || person.resume?.label)) return false;
+    if (contact === 'complete' && !(person.phone && person.email)) return false;
+    if (contact === 'missing_phone' && person.phone) return false;
+    if (contact === 'missing_email' && person.email) return false;
+    if (contact === 'missing_required' && !(person.missingRequiredFields || []).length) return false;
     if (query && !searchable(person).includes(query)) return false;
     return true;
   });
@@ -142,10 +167,10 @@ async function main() {
   document.getElementById('sourceStatus').textContent = `資料更新：${formatTime(data.meta?.sourceModifiedAt || data.meta?.generatedAt)}｜月份：${(data.meta?.coveredMonths || []).join('、') || '尚未標示'}`;
   document.getElementById('metrics').innerHTML = [
     metric('人才總數', counts.total ?? people.length, `active ${counts.active ?? 0}／paused ${counts.paused ?? 0}`),
-    metric('有歷史工時', counts.withHistory ?? 0, `1–4 月累計 ${counts.historyTotalHours ?? 0} 小時`),
-    metric('履歷狀態', counts.withResumeStatus ?? 0, `其中有 URL：${counts.withResumeLink ?? 0}`),
-    metric('名詞庫工作', `${counts.dictionaryWorkMinutes ?? 0}m`, '已併入每位工讀生工作訊號'),
-    metric('隱私欄位', '已排除', '不含薪資金額／銀行／電話／Email')
+    metric('電話', counts.withPhone ?? 0, `缺 ${(counts.total ?? people.length) - (counts.withPhone ?? 0)} 人`),
+    metric('Email', counts.withEmail ?? 0, `缺 ${(counts.total ?? people.length) - (counts.withEmail ?? 0)} 人`),
+    metric('居住地', counts.withResidence ?? 0, '只顯示縣市/區'),
+    metric('缺必要欄位', counts.missingAnyRequired ?? 0, '可用補件表補齊')
   ].join('');
 
   const levels = [...new Set(people.map((person) => String(person.workLevel || '').trim()).filter(Boolean))].sort();
@@ -161,7 +186,7 @@ async function main() {
     const filtered = filterPeople(people);
     document.getElementById('peopleGrid').innerHTML = filtered.map(personCard).join('') || '<div class="panel empty" style="grid-column:span 12">沒有符合條件的人才資料。</div>';
   };
-  ['q', 'status', 'resume', 'level'].forEach((id) => {
+  ['q', 'status', 'resume', 'contact', 'level'].forEach((id) => {
     document.getElementById(id).addEventListener('input', render);
     document.getElementById(id).addEventListener('change', render);
   });

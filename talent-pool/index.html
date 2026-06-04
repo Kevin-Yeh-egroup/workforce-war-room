@@ -24,7 +24,7 @@
 
   <main class="wrap">
     <div class="privacy">
-      內部人才庫頁：目前只呈現姓名、基本工作資訊、履歷狀態與每月工時追蹤；不含薪資金額、身分證、地址、銀行帳號、電話與 Email。
+      內部人才庫頁：呈現姓名、電話、Email、居住地（縣市/區）、基本工作資訊、履歷狀態與每月工時追蹤；不含薪資金額、身分證、完整地址、銀行帳號。
     </div>
 
     <section class="metrics" id="metrics"></section>
@@ -32,7 +32,7 @@
     <section class="panel">
       <h2>搜尋與篩選</h2>
       <div class="panel-body filters">
-        <input id="q" placeholder="搜尋姓名、現職、學歷/職業、備註、工作訊號" />
+        <input id="q" placeholder="搜尋姓名、電話、Email、居住地、現職、學歷/職業、備註、工作訊號" />
         <select id="status">
           <option value="">全部狀態</option>
           <option value="active">active</option>
@@ -44,6 +44,13 @@
           <option value="link">有履歷連結</option>
           <option value="status">有履歷狀態</option>
           <option value="missing">待補履歷</option>
+        </select>
+        <select id="contact">
+          <option value="">聯絡資料全部</option>
+          <option value="complete">電話+Email完整</option>
+          <option value="missing_phone">缺電話</option>
+          <option value="missing_email">缺Email</option>
+          <option value="missing_required">缺必要欄位</option>
         </select>
         <select id="level">
           <option value="">全部等級</option>

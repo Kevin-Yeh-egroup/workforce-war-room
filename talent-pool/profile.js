@@ -28,6 +28,12 @@ function resume(person) {
   return `<span class="muted">${escapeHtml(person.resume?.label || '尚未提供履歷連結')}</span>`;
 }
 
+function contactLine(person) {
+  const phone = person.phone ? `<a href="tel:${escapeHtml(person.phone)}">${escapeHtml(person.phone)}</a>` : '<span class="muted">缺電話</span>';
+  const email = person.email ? `<a href="mailto:${escapeHtml(person.email)}">${escapeHtml(person.email)}</a>` : '<span class="muted">缺 Email</span>';
+  return `${phone}<br>${email}`;
+}
+
 function months(person) {
   const max = Math.max(1, ...((person.monthlyWork || []).map((month) => Number(month.hours) || 0)));
   return (person.monthlyWork || []).map((month) => {
@@ -49,16 +55,18 @@ function signals(person) {
 function render(person, meta) {
   document.title = `${person.name}｜工讀生個人追蹤`;
   document.getElementById('title').textContent = person.name;
-  document.getElementById('sourceStatus').textContent = `累計 ${person.historyTotalHours || 0} 小時｜有工時月份 ${person.monthsWithHours || 0}｜資料：${meta?.coveredMonths?.join('、') || '未標示'}`;
+  document.getElementById('sourceStatus').textContent = `累計 ${person.historyTotalHours || 0} 小時｜${person.missingRequiredFields?.length ? '待補：' + person.missingRequiredFields.join('、') : '必要欄位完整'}｜資料：${meta?.coveredMonths?.join('、') || '未標示'}`;
   document.getElementById('profileCard').innerHTML = `
     <div class="person-head">
       <div>
         <h2 style="margin:0 0 6px">${escapeHtml(person.name)}</h2>
-        <div class="muted">${escapeHtml(person.currentRole || person.educationOrJob || '未填基本背景')}</div>
+        <div class="muted">${escapeHtml(person.employmentOrStudy || person.currentRole || person.educationOrJob || '未填基本背景')}</div>
       </div>
       <div class="badges">${badge(person.status)}${badge(person.resume?.url ? '有連結' : person.resume?.label ? '有狀態' : '待補')}</div>
     </div>
     <div class="kv" style="margin-top:16px">
+      <div class="k">電話 / Email</div><div class="v">${contactLine(person)}</div>
+      <div class="k">居住地</div><div class="v">${escapeHtml(person.residence || '待補')}</div>
       <div class="k">現職</div><div class="v">${escapeHtml(person.currentRole || '—')}</div>
       <div class="k">學歷/職業</div><div class="v">${escapeHtml(person.educationOrJob || '—')}</div>
       <div class="k">目前工作狀態</div><div class="v">${escapeHtml(person.workStatus || '—')}</div>

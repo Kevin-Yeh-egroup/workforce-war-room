@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-04T11:42:58+08:00",
+    "generatedAt": "2026-06-04T14:16:07+08:00",
     "sourceModifiedAt": "2026-06-01T12:20:24.844Z",
     "source": "Current intern workbook + 2026-01 to 2026-04 reimbursement sheets",
     "historySource": "1-4月工讀生工時薪資表（內部解析）",
@@ -10,16 +10,14 @@
       "2026-03",
       "2026-04"
     ],
-    "privacy": "Internal talent-pool view: names and work/profile signals only. Salary amounts, ID numbers, addresses, bank data, phone numbers, and emails are excluded.",
+    "privacy": "Internal talent-pool view: includes names, phone, email, district-level residence, and work/profile signals. Salary amounts, ID numbers, full addresses, and bank data are excluded.",
     "excludedFields": [
       "salary amount",
       "ID number",
-      "address",
+      "full address",
       "bank name",
       "branch",
-      "bank account",
-      "phone",
-      "email"
+      "bank account"
     ],
     "counts": {
       "total": 43,
@@ -29,6 +27,11 @@
       "withHistory": 35,
       "withResumeLink": 0,
       "withResumeStatus": 1,
+      "withPhone": 37,
+      "withEmail": 36,
+      "withResidence": 33,
+      "withEmploymentOrStudy": 29,
+      "missingAnyRequired": 21,
       "historyTotalHours": 1110.064,
       "dictionaryWorkMinutes": 330
     }
@@ -45,8 +48,12 @@
         "historical_hours"
       ],
       "currentRole": "學生",
+      "phone": "0980496493",
+      "email": "egroup.yuyu@gmail.com",
+      "residence": "屏東縣萬丹鄉",
       "educationOrJob": "",
       "workStatus": "9月休學 11月做日照中心18歲-26歲，老人養護中心  去年成立的祥合 生輔員跟教保員合作服務個案，行政比較多，之後要學寫計畫，想要做跟照護者相關領域。",
+      "employmentOrStudy": "學生／9月休學 11月做日照中心18歲-26歲，老人養護中心  去年成立的祥合 生輔員跟教保員合作服務個案，行政比較多，之後要學寫計畫，想要做跟照護者相關領域。",
       "contactStatus": "O",
       "workLevel": "1.0",
       "referrer": "東海鄭教授",
@@ -107,9 +114,10 @@
           "hours": 5.5
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 5
+      "profileCompleteness": 9
     },
     {
       "id": "5a8cad415c12",
@@ -122,8 +130,12 @@
         "historical_hours"
       ],
       "currentRole": "學生",
+      "phone": "0972467208",
+      "email": "egroup.chu@gmail.com",
+      "residence": "臺中市太平區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "學生",
       "contactStatus": "46133.8125",
       "workLevel": "1.0",
       "referrer": "曾于沁Alison",
@@ -178,9 +190,10 @@
           "hours": 21.97
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 5
+      "profileCompleteness": 9
     },
     {
       "id": "c6957afc2fb7",
@@ -193,8 +206,12 @@
         "historical_hours"
       ],
       "currentRole": "求職中",
+      "phone": "0970188302",
+      "email": "egroup.ethan@gmail.com",
+      "residence": "台北市大同區",
       "educationOrJob": "雞肉本家 展店業務",
       "workStatus": "",
+      "employmentOrStudy": "求職中／雞肉本家 展店業務",
       "contactStatus": "",
       "workLevel": "1.0",
       "referrer": "林弈妏Cathy",
@@ -243,9 +260,10 @@
           "hours": 7.08
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 5
+      "profileCompleteness": 9
     },
     {
       "id": "4402a377709e",
@@ -258,8 +276,12 @@
         "historical_hours"
       ],
       "currentRole": "學生",
+      "phone": "0926817525",
+      "email": "egroup.alison@gmail.com",
+      "residence": "臺中市外埔區",
       "educationOrJob": "碩二",
       "workStatus": "近期忙於專題及論文比較少有工作時間",
+      "employmentOrStudy": "學生／碩二／近期忙於專題及論文比較少有工作時間",
       "contactStatus": "x",
       "workLevel": "2.0",
       "referrer": "",
@@ -302,9 +324,10 @@
           "hours": 19.92
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": true,
-      "profileCompleteness": 5
+      "profileCompleteness": 9
     },
     {
       "id": "e6c8249bb53e",
@@ -317,8 +340,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "0980394550",
+      "email": "egroup.vivian@gmail.com",
+      "residence": "台中市梧棲區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "林弈妏Cathy",
@@ -373,9 +400,12 @@
           "hours": 4.22
         }
       ],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 1
+      "profileCompleteness": 4
     },
     {
       "id": "9c57f621e2d4",
@@ -388,8 +418,12 @@
         "historical_hours"
       ],
       "currentRole": "學生",
+      "phone": "0981417070",
+      "email": "egroup.tracy@gmail.com",
+      "residence": "",
       "educationOrJob": "輔大社會系大五寒假後畢業",
       "workStatus": "沒有想要朝社工領域發展，想要找貿易及科技類業務，希望是在工作中可以自我成長。",
+      "employmentOrStudy": "學生／輔大社會系大五寒假後畢業／沒有想要朝社工領域發展，想要找貿易及科技類業務，希望是在工作中可以自我成長。",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "施妤臻Yuyu",
@@ -450,9 +484,12 @@
           "hours": 3.3
         }
       ],
+      "missingRequiredFields": [
+        "居住地"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 4
+      "profileCompleteness": 7
     },
     {
       "id": "f1b469bd0f1e",
@@ -465,8 +502,12 @@
         "historical_hours"
       ],
       "currentRole": "行銷業助",
+      "phone": "0979910133",
+      "email": "egroup.cathy@gmail.com",
+      "residence": "屏東縣屏東市",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "行銷業助",
       "contactStatus": "",
       "workLevel": "1.0",
       "referrer": "施妤臻Yuyu",
@@ -521,9 +562,10 @@
           "hours": 5.48
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 4
+      "profileCompleteness": 8
     },
     {
       "id": "383dd21d83d1",
@@ -536,8 +578,12 @@
         "historical_hours"
       ],
       "currentRole": "待業",
+      "phone": "0966459436",
+      "email": "egroup.jonathan@gmail.com",
+      "residence": "台中市西區",
       "educationOrJob": "待業",
       "workStatus": "先前在西區區公所的社會科服務",
+      "employmentOrStudy": "待業／待業／先前在西區區公所的社會科服務",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "陳資旻Lala",
@@ -586,9 +632,10 @@
           "hours": 3.05
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 4
+      "profileCompleteness": 8
     },
     {
       "id": "ff864aedde4f",
@@ -600,8 +647,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "",
+      "email": "",
+      "residence": "",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -650,6 +701,12 @@
           "hours": 8.9
         }
       ],
+      "missingRequiredFields": [
+        "電話",
+        "Email",
+        "目前就職/就讀狀態",
+        "居住地"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
       "profileCompleteness": 0
@@ -665,8 +722,12 @@
         "historical_hours"
       ],
       "currentRole": "學生",
+      "phone": "0971765751",
+      "email": "egroup.zian@gmail.com",
+      "residence": "臺中市大甲區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "學生",
       "contactStatus": "",
       "workLevel": "1.0",
       "referrer": "東海鄭教授",
@@ -715,9 +776,10 @@
           "hours": 20.0
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 4
+      "profileCompleteness": 8
     },
     {
       "id": "dca79e5089ab",
@@ -730,8 +792,12 @@
         "historical_hours"
       ],
       "currentRole": "學生",
+      "phone": "0910050529",
+      "email": "egroup.chingju@gmail.com",
+      "residence": "新北市新店區",
       "educationOrJob": "東海社工系大三",
       "workStatus": "",
+      "employmentOrStudy": "學生／東海社工系大三",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "陳子安Zian",
@@ -786,9 +852,10 @@
           "hours": 3.93
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 3
+      "profileCompleteness": 7
     },
     {
       "id": "45214b121411",
@@ -801,8 +868,12 @@
         "historical_hours"
       ],
       "currentRole": "學生",
+      "phone": "0983601701",
+      "email": "egroup.wala@gmail.com",
+      "residence": "高雄市鳳山區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "學生",
       "contactStatus": "",
       "workLevel": "2.0",
       "referrer": "東海鄭教授",
@@ -851,9 +922,10 @@
           "hours": 4.0
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 4
+      "profileCompleteness": 8
     },
     {
       "id": "2f4884d2f85c",
@@ -866,8 +938,12 @@
         "historical_hours"
       ],
       "currentRole": "學生",
+      "phone": "0927863301",
+      "email": "egroup.lala@gmail.com",
+      "residence": "彰化縣花壇鄉",
       "educationOrJob": "太平親子館 社工",
       "workStatus": "",
+      "employmentOrStudy": "學生／太平親子館 社工",
       "contactStatus": "O",
       "workLevel": "3.0",
       "referrer": "曾于沁Alison",
@@ -922,9 +998,10 @@
           "hours": 5.83
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 6
+      "profileCompleteness": 10
     },
     {
       "id": "244c0faa6865",
@@ -936,8 +1013,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "0905130512",
+      "email": "egroup.wei@gmail.com",
+      "residence": "台中市南區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -992,9 +1073,12 @@
           "hours": 2.43
         }
       ],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 1
+      "profileCompleteness": 4
     },
     {
       "id": "05e0794df6ed",
@@ -1007,8 +1091,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "0928838176",
+      "email": "egroup.max@gmail.com",
+      "residence": "台中市外埔區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "曾于沁Alison",
@@ -1057,9 +1145,12 @@
           "hours": 9.57
         }
       ],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 1
+      "profileCompleteness": 4
     },
     {
       "id": "c4c55e13a311",
@@ -1072,8 +1163,12 @@
         "historical_hours"
       ],
       "currentRole": "社工",
+      "phone": "0978014975",
+      "email": "egroup.zoe@gmail.com",
+      "residence": "台中市大里區",
       "educationOrJob": "在太平親子館服務快1年，先前在世界展望會作經扶3年時間",
       "workStatus": "如果是單次比較快結束的工作，我每週可以完成3-4份(就像這次的記帳測試或之前的16面向測試)所以往後在申請工作時，我會先跟您確認過或問過其他夥伴再申請",
+      "employmentOrStudy": "社工／在太平親子館服務快1年，先前在世界展望會作經扶3年時間／如果是單次比較快結束的工作，我每週可以完成3-4份(就像這次的記帳測試或之前的16面向測試)所以往後在申請工作時，我會先跟您確認過或問過其他夥伴再申請",
       "contactStatus": "",
       "workLevel": "3.0",
       "referrer": "陳資旻Lala",
@@ -1122,9 +1217,10 @@
           "hours": 2.0
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 5
+      "profileCompleteness": 9
     },
     {
       "id": "d7f1864e3dd0",
@@ -1136,8 +1232,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "0908091513",
+      "email": "egroup.amara@gmail.com",
+      "residence": "桃園市桃園區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -1186,9 +1286,12 @@
           "hours": 1.03
         }
       ],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 1
+      "profileCompleteness": 4
     },
     {
       "id": "8c22f2fd8016",
@@ -1201,8 +1304,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "0968887628",
+      "email": "egroup.emily@gmail.com",
+      "residence": "雲林縣斗南鎮",
       "educationOrJob": "靜宜大學三年級",
       "workStatus": "* 正在準備期中報告與期中考\n  * 即將開始實習\n  * 暑期實習已確定錄取（期中實習機構尚未確定）\n* 工作參與動機：\n\n  * 希望利用空閒時間增加收入\n  * 想了解社工在經濟議題上的協助方式\n  * 透過記帳工作培養自身記帳習慣",
+      "employmentOrStudy": "靜宜大學三年級／* 正在準備期中報告與期中考\n  * 即將開始實習\n  * 暑期實習已確定錄取（期中實習機構尚未確定）\n* 工作參與動機：\n\n  * 希望利用空閒時間增加收入\n  * 想了解社工在經濟議題上的協助方式\n  * 透過記帳工作培養自身記帳習慣",
       "contactStatus": "* 語音轉文字\n  * 記帳相關工作",
       "workLevel": "3.0",
       "referrer": "張雅筑 Chu",
@@ -1251,9 +1358,10 @@
           "hours": 2.52
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 5
+      "profileCompleteness": 9
     },
     {
       "id": "85247e815ae3",
@@ -1266,8 +1374,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "0978712737",
+      "email": "egroup.dolly@gmail.com",
+      "residence": "彰化縣彰化市",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -1316,9 +1428,12 @@
           "hours": 1.0
         }
       ],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 0
+      "profileCompleteness": 3
     },
     {
       "id": "07279789e47e",
@@ -1331,8 +1446,12 @@
         "historical_hours"
       ],
       "currentRole": "社工",
+      "phone": "0975950867",
+      "email": "egroup.krystal@gmail.com",
+      "residence": "南投縣南投市",
       "educationOrJob": "精神復健中心社工",
       "workStatus": "",
+      "employmentOrStudy": "社工／精神復健中心社工",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "陳資旻Lala",
@@ -1375,9 +1494,10 @@
           "hours": 1.5
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 3
+      "profileCompleteness": 7
     },
     {
       "id": "2cc0a19a66f6",
@@ -1390,8 +1510,12 @@
         "historical_hours"
       ],
       "currentRole": "學生",
+      "phone": "0902092134",
+      "email": "egroupjerry18@gmail.com",
+      "residence": "台中市沙鹿區",
       "educationOrJob": "",
       "workStatus": "社工系學弟，香港籍",
+      "employmentOrStudy": "學生／社工系學弟，香港籍",
       "contactStatus": "",
       "workLevel": "3.0",
       "referrer": "張雅筑 Chu",
@@ -1434,9 +1558,10 @@
           "hours": 6.33
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 4
+      "profileCompleteness": 8
     },
     {
       "id": "43273957ea20",
@@ -1449,8 +1574,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "0903633274",
+      "email": "egroup.yuchao@gmail.com",
+      "residence": "桃園市楊梅區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "葉宥辰Eason",
@@ -1486,9 +1615,12 @@
       "monthsWithHours": 1,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 1
+      "profileCompleteness": 4
     },
     {
       "id": "2b6bf0c24658",
@@ -1501,8 +1633,12 @@
         "historical_hours"
       ],
       "currentRole": "學生",
+      "phone": "0903193605",
+      "email": "egroup.julie@gmail.com",
+      "residence": "",
       "educationOrJob": "輔大社會系",
       "workStatus": "",
+      "employmentOrStudy": "學生／輔大社會系",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "施妤臻Yuyu",
@@ -1545,9 +1681,12 @@
           "hours": 2.25
         }
       ],
+      "missingRequiredFields": [
+        "居住地"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 3
+      "profileCompleteness": 6
     },
     {
       "id": "3a9e70d04b82",
@@ -1559,8 +1698,12 @@
         "historical_hours"
       ],
       "currentRole": "研究生",
+      "phone": "0905684953",
+      "email": "egroup.quin@gmail.com",
+      "residence": "台南市關廟區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "研究生",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -1609,9 +1752,10 @@
           "hours": 1.43
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 2
+      "profileCompleteness": 6
     },
     {
       "id": "b78661d6dcf4",
@@ -1624,8 +1768,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "0987390898",
+      "email": "egroup.hilda@gmail.com",
+      "residence": "臺中市大里區",
       "educationOrJob": "飯店訂房部門\n雖然上班時間固定、但下班的時間不太一定、主要看工作量",
       "workStatus": "正職工作平日比較忙，如果可以希望PT的工作能在假日進行，希望您可以安排較不急迫性的工作，讓我能在每週假日完成",
+      "employmentOrStudy": "飯店訂房部門\n雖然上班時間固定、但下班的時間不太一定、主要看工作量／正職工作平日比較忙，如果可以希望PT的工作能在假日進行，希望您可以安排較不急迫性的工作，讓我能在每週假日完成",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "劉欣柔Zoe",
@@ -1668,9 +1816,10 @@
           "hours": 1.5
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 4
+      "profileCompleteness": 8
     },
     {
       "id": "659b0588a539",
@@ -1683,8 +1832,12 @@
         "historical_hours"
       ],
       "currentRole": "社工",
+      "phone": "0968610150",
+      "email": "egroup.cherry@gmail.com",
+      "residence": "台中市北屯區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "社工",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "陳資旻Lala",
@@ -1727,9 +1880,10 @@
           "hours": 2.33
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 2
+      "profileCompleteness": 6
     },
     {
       "id": "a3032b04952d",
@@ -1742,8 +1896,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "0916947883",
+      "email": "egroup.ting@gmail.com",
+      "residence": "彰化縣彰化市",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "劉欣柔Zoe",
@@ -1786,9 +1944,12 @@
           "hours": 1.5
         }
       ],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 1
+      "profileCompleteness": 4
     },
     {
       "id": "f279f22c9ded",
@@ -1801,8 +1962,12 @@
         "historical_hours"
       ],
       "currentRole": "系統櫃業務",
+      "phone": "0903110991",
+      "email": "egroup.xavier@gmail.com",
+      "residence": "屏東縣萬丹鄉",
       "educationOrJob": "系統櫃業務及裝設",
       "workStatus": "是社工系畢業，因興趣從事，目前工作比較多在竹科及台北，因此能工作時數較少。",
+      "employmentOrStudy": "系統櫃業務／系統櫃業務及裝設／是社工系畢業，因興趣從事，目前工作比較多在竹科及台北，因此能工作時數較少。",
       "contactStatus": "",
       "workLevel": "3.0",
       "referrer": "施妤臻Yuyu",
@@ -1838,9 +2003,10 @@
       "monthsWithHours": 1,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 5
+      "profileCompleteness": 9
     },
     {
       "id": "7b630a5c0e44",
@@ -1853,8 +2019,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "0903897272",
+      "email": "egroup.verna@gmail.com",
+      "residence": "彰化縣伸港鄉",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -1897,9 +2067,12 @@
           "hours": 2.0
         }
       ],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 1
+      "profileCompleteness": 4
     },
     {
       "id": "37e5b2f31223",
@@ -1912,8 +2085,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "0975553226",
+      "email": "egroup.hannahlin@gmail.com",
+      "residence": "台北市士林區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -1956,9 +2133,12 @@
           "hours": 1.42
         }
       ],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 0
+      "profileCompleteness": 3
     },
     {
       "id": "4cda6db65f17",
@@ -1970,8 +2150,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "0963967188",
+      "email": "egroup.alicia@gmail.com",
+      "residence": "臺東縣臺東市",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -2014,9 +2198,12 @@
           "hours": 1.0
         }
       ],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 1
+      "profileCompleteness": 4
     },
     {
       "id": "367814eda832",
@@ -2029,8 +2216,12 @@
         "historical_hours"
       ],
       "currentRole": "社工",
+      "phone": "0979701159",
+      "email": "egroup.lai@gmail.com",
+      "residence": "台中市太平區",
       "educationOrJob": "太平親子館 社工",
       "workStatus": "",
+      "employmentOrStudy": "社工／太平親子館 社工",
       "contactStatus": "",
       "workLevel": "3.0",
       "referrer": "陳資旻Lala",
@@ -2073,9 +2264,10 @@
           "hours": 1.0
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 5
+      "profileCompleteness": 9
     },
     {
       "id": "615a9eb66f18",
@@ -2088,8 +2280,12 @@
         "historical_hours"
       ],
       "currentRole": "學生",
+      "phone": "",
+      "email": "egroup.piggy907@gmail.com",
+      "residence": "",
       "educationOrJob": "東海大學碩一",
       "workStatus": "原本是樹德科大，家庭教育親職教育，兒少、老人跟社區，辦活動。",
+      "employmentOrStudy": "學生／東海大學碩一／原本是樹德科大，家庭教育親職教育，兒少、老人跟社區，辦活動。",
       "contactStatus": "",
       "workLevel": "3.0",
       "referrer": "東海鄭教授",
@@ -2125,9 +2321,13 @@
       "monthsWithHours": 0,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
+      "missingRequiredFields": [
+        "電話",
+        "居住地"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 5
+      "profileCompleteness": 7
     },
     {
       "id": "f75ea28ada4d",
@@ -2140,8 +2340,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "",
+      "email": "egroup.zhanzhan@gmail.com",
+      "residence": "",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "陳資旻Lala",
@@ -2177,9 +2381,14 @@
       "monthsWithHours": 0,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
+      "missingRequiredFields": [
+        "電話",
+        "目前就職/就讀狀態",
+        "居住地"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 1
+      "profileCompleteness": 2
     },
     {
       "id": "7b228c45c6b7",
@@ -2190,8 +2399,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "",
+      "email": "",
+      "residence": "",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -2227,6 +2440,12 @@
       "monthsWithHours": 1,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
+      "missingRequiredFields": [
+        "電話",
+        "Email",
+        "目前就職/就讀狀態",
+        "居住地"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
       "profileCompleteness": 0
@@ -2240,8 +2459,12 @@
         "historical_hours"
       ],
       "currentRole": "",
+      "phone": "",
+      "email": "",
+      "residence": "",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -2277,6 +2500,12 @@
       "monthsWithHours": 0,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
+      "missingRequiredFields": [
+        "電話",
+        "Email",
+        "目前就職/就讀狀態",
+        "居住地"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
       "profileCompleteness": 0
@@ -2290,9 +2519,13 @@
         "paused_sheet",
         "historical_hours"
       ],
-      "currentRole": "",
+      "currentRole": "學生",
+      "phone": "0968870383",
+      "email": "egroup.jessie@gmail.com",
+      "residence": "彰化縣埔鹽鄉",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "學生",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -2341,9 +2574,10 @@
           "hours": 3.47
         }
       ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 0
+      "profileCompleteness": 5
     },
     {
       "id": "2f3a8886190d",
@@ -2354,9 +2588,13 @@
         "paused_sheet",
         "historical_hours"
       ],
-      "currentRole": "",
+      "currentRole": "學生",
+      "phone": "0986809119",
+      "email": "egroup.yoyo@gmail.com",
+      "residence": "台中市霧峰區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "學生",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -2392,9 +2630,10 @@
       "monthsWithHours": 1,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 0
+      "profileCompleteness": 5
     },
     {
       "id": "5b708760e94e",
@@ -2405,9 +2644,13 @@
         "paused_sheet",
         "historical_hours"
       ],
-      "currentRole": "",
+      "currentRole": "編輯",
+      "phone": "0926543785",
+      "email": "egroup.aaliyah@gmail.com",
+      "residence": "屏東縣萬丹鄉",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "編輯",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -2443,9 +2686,10 @@
       "monthsWithHours": 0,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 0
+      "profileCompleteness": 5
     },
     {
       "id": "5e46a77fde6d",
@@ -2455,13 +2699,17 @@
       "sourceMembership": [
         "paused_sheet"
       ],
-      "currentRole": "",
+      "currentRole": "小學教師",
+      "phone": "0970129528",
+      "email": "",
+      "residence": "",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "小學教師",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
-      "notes": "",
+      "notes": "0.0",
       "resume": {
         "label": "",
         "url": ""
@@ -2493,9 +2741,13 @@
       "monthsWithHours": 0,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
+      "missingRequiredFields": [
+        "Email",
+        "居住地"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 0
+      "profileCompleteness": 4
     },
     {
       "id": "8d7e15e10b36",
@@ -2505,13 +2757,17 @@
       "sourceMembership": [
         "paused_sheet"
       ],
-      "currentRole": "",
+      "currentRole": "學生",
+      "phone": "",
+      "email": "",
+      "residence": "",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "學生",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
-      "notes": "",
+      "notes": "子安介紹，大三",
       "resume": {
         "label": "",
         "url": ""
@@ -2543,9 +2799,14 @@
       "monthsWithHours": 0,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
+      "missingRequiredFields": [
+        "電話",
+        "Email",
+        "居住地"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 0
+      "profileCompleteness": 3
     },
     {
       "id": "b52f6fcb3078",
@@ -2555,13 +2816,17 @@
       "sourceMembership": [
         "paused_sheet"
       ],
-      "currentRole": "",
+      "currentRole": "自營工作室",
+      "phone": "0958184710",
+      "email": "",
+      "residence": "新北市汐止區",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "自營工作室",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
-      "notes": "",
+      "notes": "Ivy圖文小編",
       "resume": {
         "label": "",
         "url": ""
@@ -2593,9 +2858,12 @@
       "monthsWithHours": 0,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
+      "missingRequiredFields": [
+        "Email"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 0
+      "profileCompleteness": 5
     },
     {
       "id": "eda751ff0e7a",
@@ -2605,13 +2873,17 @@
       "sourceMembership": [
         "paused_sheet"
       ],
-      "currentRole": "",
+      "currentRole": "學生",
+      "phone": "0988557796",
+      "email": "",
+      "residence": "",
       "educationOrJob": "",
       "workStatus": "",
+      "employmentOrStudy": "學生",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
-      "notes": "",
+      "notes": "0.0",
       "resume": {
         "label": "",
         "url": ""
@@ -2643,9 +2915,13 @@
       "monthsWithHours": 0,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
+      "missingRequiredFields": [
+        "Email",
+        "居住地"
+      ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 0
+      "profileCompleteness": 4
     }
   ]
 }
