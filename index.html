@@ -460,6 +460,7 @@
         <div class="toolbar">
           <a class="tool" href="/radar-addon/index.html">資訊雷達</a>
           <a class="tool" href="/interns/index.html">工讀生快照</a>
+          <a class="tool" href="/talent-pool/index.html">人才庫追蹤</a>
           <button class="tool" type="button" id="toggleSeed">切換示範資料</button>
           <button class="tool primary" type="button" id="nextAction">產生本週確認摘要</button>
         </div>
@@ -562,10 +563,10 @@
               <thead>
                 <tr>
                   <th>姓名</th>
-                  <th>薪資範本</th>
-                  <th>可承接工作</th>
-                  <th>品質訊號</th>
-                  <th>建議</th>
+                  <th>基本資訊</th>
+                  <th>履歷</th>
+                  <th>1–4 月工時</th>
+                  <th>工作訊號／建議</th>
                 </tr>
               </thead>
               <tbody id="peopleRows"></tbody>
@@ -704,6 +705,7 @@
 
     const addon = {
       interns: null,
+      talent: null,
       radar: null,
       workItems: "",
       errors: []
@@ -719,6 +721,15 @@
 
     function badge(value) {
       return `<span class="badge ${badgeClass(value)}">${value}</span>`;
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
     }
 
     function formatSourceTime(value) {
@@ -771,6 +782,9 @@
         fetchJson("data/interns.public.json")
           .then((value) => { addon.interns = value; })
           .catch((error) => { addon.errors.push(error.message); }),
+        fetchJson("data/talent-pool.internal.json")
+          .then((value) => { addon.talent = value; })
+          .catch((error) => { addon.errors.push(error.message); }),
         fetchJson("data/radar-week.json")
           .then((value) => { addon.radar = value; })
           .catch((error) => { addon.errors.push(error.message); }),
@@ -815,7 +829,9 @@
 
     function renderAutomationCards() {
       const counts = addon.interns?.meta?.counts || {};
+      const talentCounts = addon.talent?.meta?.counts || {};
       const sourceModifiedAt = addon.interns?.meta?.sourceModifiedAt || addon.interns?.meta?.generatedAt;
+      const talentUpdatedAt = addon.talent?.meta?.sourceModifiedAt || addon.talent?.meta?.generatedAt;
       const weekStart = addon.radar?.meta?.weekStart;
       const weekEnd = addon.radar?.meta?.weekEnd;
       const highlights = Array.isArray(addon.radar?.highlights) ? addon.radar.highlights.length : 0;
@@ -829,6 +845,13 @@
           meta: `active / total｜paid ${counts.paid ?? "—"}｜due ${counts.due ?? "—"}｜${formatSourceTime(sourceModifiedAt)}`,
           href: "/interns/index.html",
           cta: "打開工讀生快照"
+        },
+        {
+          title: "人才庫追蹤",
+          value: `${talentCounts.withHistory ?? "—"} / ${talentCounts.total ?? "—"}`,
+          meta: `有歷史工時 / total｜履歷狀態 ${talentCounts.withResumeStatus ?? "—"}｜${formatSourceTime(talentUpdatedAt)}`,
+          href: "/talent-pool/index.html",
+          cta: "打開人才庫"
         },
         {
           title: "每週資訊雷達",
@@ -903,25 +926,66 @@
     }
 
     function renderPeople() {
-      $("#personCards").innerHTML = data.people.map((person) => `
+      const talentPeople = Array.isArray(addon.talent?.people) ? addon.talent.people : null;
+      const peopleForCards = talentPeople
+        ? talentPeople.slice().sort((a, b) => (b.historyTotalHours || 0) - (a.historyTotalHours || 0)).slice(0, 6)
+        : data.people;
+
+      $("#personCards").innerHTML = peopleForCards.map((person) => {
+        const name = person.name;
+        const work = talentPeople
+          ? [person.currentRole, person.educationOrJob, person.workStatus].filter(Boolean).join("｜") || "尚未填基本背景"
+          : person.work;
+        const load = talentPeople
+          ? Math.min(100, Math.max(2, Math.round((person.historyTotalHours || 0) / 2)))
+          : person.load;
+        return `
         <article class="card">
           <div class="person">
             <div>
-              <h3>${person.name}</h3>
-              <div class="meta">${person.work}</div>
+              <h3>${escapeHtml(name)}</h3>
+              <div class="meta">${escapeHtml(work)}</div>
             </div>
-            ${badge(`${person.load}%`)}
+            ${badge(`${load}%`)}
           </div>
-          <div class="bar" aria-label="${person.name} 負載 ${person.load}%"><span style="--width: ${person.load}%"></span></div>
+          <div class="bar" aria-label="${escapeHtml(name)} 負載 ${load}%"><span style="--width: ${load}%"></span></div>
         </article>
-      `).join("");
+      `;
+      }).join("");
+
+      if (talentPeople) {
+        $("#peopleRows").innerHTML = talentPeople.map((person) => {
+          const resume = person.resume?.url
+            ? `<a href="${escapeHtml(person.resume.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(person.resume.label || "履歷")}</a>`
+            : escapeHtml(person.resume?.label || "待補履歷連結");
+          const info = [person.currentRole, person.educationOrJob, person.workStatus, person.contactStatus, person.workLevel ? `等級 ${person.workLevel}` : ""]
+            .filter(Boolean)
+            .map(escapeHtml)
+            .join("<br>");
+          const months = (person.monthlyWork || [])
+            .map((month) => `${escapeHtml(month.month)}：${escapeHtml(month.hours)}h`)
+            .join("<br>");
+          const signals = (person.topWorkSignals || [])
+            .map((signal) => `${escapeHtml(signal.label)} ${escapeHtml(signal.hours)}h`)
+            .join("<br>") || "尚無分類訊號";
+          return `
+        <tr>
+          <td><strong>${escapeHtml(person.name)}</strong><div class="meta">${badge(person.status)}</div></td>
+          <td>${info || "—"}</td>
+          <td>${resume}</td>
+          <td><strong>${escapeHtml(person.historyTotalHours || 0)}h</strong><div class="meta">${months || "—"}</div></td>
+          <td>${signals}<div class="meta"><a href="/talent-pool/${encodeURIComponent(person.slug)}/index.html">個人追蹤頁</a></div></td>
+        </tr>`;
+        }).join("");
+        return;
+      }
 
       $("#peopleRows").innerHTML = data.people.map((person) => `
         <tr>
           <td><strong>${person.name}</strong></td>
-          <td>${person.template}</td>
           <td>${person.work}</td>
-          <td>${person.quality}</td>
+          <td>待補履歷連結</td>
+          <td>—</td>
           <td>${person.suggestion}</td>
         </tr>
       `).join("");
