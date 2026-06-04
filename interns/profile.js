@@ -17,6 +17,26 @@ function pill(cls, text) {
   return `<span class="pill ${cls || ''}">${escapeHtml(text)}</span>`;
 }
 
+function renderHistory(history) {
+  if (!history) return '';
+  const monthRows = Object.entries(history.monthlyHours || {})
+    .map(([month, hours]) => `<div class="k">${escapeHtml(month)}</div><div class="v">${escapeHtml(hours)} 小時</div>`)
+    .join('');
+  const signals = (history.topWorkSignals || [])
+    .map((signal) => `${signal.category}: ${signal.hours}h`)
+    .join(' / ');
+  return `
+    <div class="muted" style="font-size:12px; margin-top:18px">1-4 月歷史工時訊號（已排除薪資金額）</div>
+    <div class="kvs" style="margin-top:10px">
+      <div class="k">累計工時</div><div class="v">${escapeHtml(history.totalHours || 0)} 小時</div>
+      <div class="k">有工時月份</div><div class="v">${escapeHtml(history.monthsWithHours || 0)} 個月</div>
+      <div class="k">名詞庫工作</div><div class="v">${escapeHtml(history.dictionaryWorkMinutes || 0)} 分鐘</div>
+      <div class="k">主要工作訊號</div><div class="v">${escapeHtml(signals || '—')}</div>
+      ${monthRows}
+    </div>
+  `;
+}
+
 function getSlug() {
   const parts = window.location.pathname.split('/').filter(Boolean);
   // /interns/<slug>/index.html
@@ -50,6 +70,7 @@ function render(intern) {
       <div class="k">介紹人</div><div class="v">${escapeHtml(intern.referrer || '—')}</div>
       <div class="k">備註</div><div class="v">${escapeHtml(intern.notes || '—')}</div>
     </div>
+    ${renderHistory(intern.history)}
   `;
 }
 

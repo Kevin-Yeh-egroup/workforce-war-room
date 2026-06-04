@@ -1,9 +1,21 @@
 {
   "meta": {
-    "generatedAt": "2026-06-01T22:42:13+08:00",
+    "generatedAt": "2026-06-04T11:20:01+08:00",
     "sourceModifiedAt": "2026-06-01T12:20:24.844Z",
     "source": "intern spreadsheet (redacted)",
     "privacy": "Redacted: no ID/phone/address/bank/account/salary/email.",
+    "history": {
+      "source": "Historical 2026-01 to 2026-04 payroll sheets, redacted and merged by stable hash.",
+      "coveredMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04"
+      ],
+      "salaryAmountsExcluded": true,
+      "peopleWithHistory": 37,
+      "dictionaryWorkMinutes": 330
+    },
     "counts": {
       "total": 41,
       "active": 34,
@@ -26,7 +38,38 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 7.5,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 3.167,
+          "2026-02": 6.067,
+          "2026-03": 7.05,
+          "2026-04": 7.5
+        },
+        "totalHours": 23.784,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 603,
+            "hours": 10.05
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 574,
+            "hours": 9.57
+          }
+        ]
+      }
     },
     {
       "id": "07279789e47e",
@@ -41,7 +84,33 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 1.5,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 11.0,
+          "2026-02": 0.0,
+          "2026-03": 0.0,
+          "2026-04": 1.5
+        },
+        "totalHours": 12.5,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 90,
+            "hours": 1.5
+          }
+        ]
+      }
     },
     {
       "id": "244c0faa6865",
@@ -56,7 +125,37 @@
       "referrer": "",
       "notes": "新夥伴",
       "workHoursThisMonth": 35.55,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-04": 35.55
+        },
+        "totalHours": 35.55,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 1208,
+            "hours": 20.13
+          },
+          {
+            "category": "content_and_course",
+            "minutes": 385,
+            "hours": 6.42
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 146,
+            "hours": 2.43
+          }
+        ]
+      }
     },
     {
       "id": "268aa0c527a7",
@@ -71,7 +170,38 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 22.533,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 13.3,
+          "2026-02": 8.333,
+          "2026-03": 2.0,
+          "2026-04": 22.533
+        },
+        "totalHours": 46.166,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 1382,
+            "hours": 23.03
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 1200,
+            "hours": 20.0
+          }
+        ]
+      }
     },
     {
       "id": "2b6bf0c24658",
@@ -86,7 +216,33 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 1.0,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 3.783,
+          "2026-02": 0.0,
+          "2026-03": 1.25,
+          "2026-04": 1.0
+        },
+        "totalHours": 6.033,
+        "monthsWithHours": 3,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 135,
+            "hours": 2.25
+          }
+        ]
+      }
     },
     {
       "id": "2cc0a19a66f6",
@@ -101,7 +257,33 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 8.333,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 3.0,
+          "2026-02": 0.0,
+          "2026-03": 0.0,
+          "2026-04": 8.333
+        },
+        "totalHours": 11.333,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 380,
+            "hours": 6.33
+          }
+        ]
+      }
     },
     {
       "id": "2f4884d2f85c",
@@ -116,7 +298,43 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 20.333,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 11.0,
+          "2026-02": 7.167,
+          "2026-03": 5.833,
+          "2026-04": 20.333
+        },
+        "totalHours": 44.333,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 1270,
+            "hours": 21.17
+          },
+          {
+            "category": "financial_education",
+            "minutes": 560,
+            "hours": 9.33
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 350,
+            "hours": 5.83
+          }
+        ]
+      }
     },
     {
       "id": "367814eda832",
@@ -131,7 +349,31 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 0.0,
-      "payStatusThisMonth": "n/a"
+      "payStatusThisMonth": "n/a",
+      "history": {
+        "coveredMonths": [
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-02": 0.0,
+          "2026-03": 1.0,
+          "2026-04": 0.0
+        },
+        "totalHours": 1.0,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 60,
+            "hours": 1.0
+          }
+        ]
+      }
     },
     {
       "id": "37e5b2f31223",
@@ -146,7 +388,29 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 0.0,
-      "payStatusThisMonth": "n/a"
+      "payStatusThisMonth": "n/a",
+      "history": {
+        "coveredMonths": [
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-03": 1.417,
+          "2026-04": 0.0
+        },
+        "totalHours": 1.417,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 85,
+            "hours": 1.42
+          }
+        ]
+      }
     },
     {
       "id": "383dd21d83d1",
@@ -161,7 +425,38 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 0.0,
-      "payStatusThisMonth": "n/a"
+      "payStatusThisMonth": "n/a",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 48.933,
+          "2026-02": 0.0,
+          "2026-03": 3.05,
+          "2026-04": 0.0
+        },
+        "totalHours": 51.983,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "social_welfare_resources",
+            "minutes": 1260,
+            "hours": 21.0
+          },
+          {
+            "category": "financial_education",
+            "minutes": 183,
+            "hours": 3.05
+          }
+        ]
+      }
     },
     {
       "id": "3a9e70d04b82",
@@ -176,7 +471,32 @@
       "referrer": "",
       "notes": "新夥伴",
       "workHoursThisMonth": 5.7,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-04": 5.7
+        },
+        "totalHours": 5.7,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 191,
+            "hours": 3.18
+          },
+          {
+            "category": "financial_education",
+            "minutes": 86,
+            "hours": 1.43
+          }
+        ]
+      }
     },
     {
       "id": "43273957ea20",
@@ -191,7 +511,27 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 0.0,
-      "payStatusThisMonth": "n/a"
+      "payStatusThisMonth": "n/a",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 10.767,
+          "2026-02": 0.0,
+          "2026-03": 0.0,
+          "2026-04": 0.0
+        },
+        "totalHours": 10.767,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
     },
     {
       "id": "4402a377709e",
@@ -206,7 +546,33 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 6.17,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 6.08,
+          "2026-02": 18.42,
+          "2026-03": 31.72,
+          "2026-04": 6.17
+        },
+        "totalHours": 62.39,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 1195,
+            "hours": 19.92
+          }
+        ]
+      }
     },
     {
       "id": "45214b121411",
@@ -221,7 +587,38 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 28.416,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 8.333,
+          "2026-02": 6.917,
+          "2026-03": 2.25,
+          "2026-04": 28.416
+        },
+        "totalHours": 45.916,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 415,
+            "hours": 6.92
+          },
+          {
+            "category": "financial_education",
+            "minutes": 240,
+            "hours": 4.0
+          }
+        ]
+      }
     },
     {
       "id": "4cda6db65f17",
@@ -236,7 +633,27 @@
       "referrer": "",
       "notes": "新夥伴",
       "workHoursThisMonth": 1.0,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-04": 1.0
+        },
+        "totalHours": 1.0,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 60,
+            "hours": 1.0
+          }
+        ]
+      }
     },
     {
       "id": "5a8cad415c12",
@@ -251,7 +668,43 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 55.683,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 32.283,
+          "2026-02": 28.067,
+          "2026-03": 28.067,
+          "2026-04": 55.683
+        },
+        "totalHours": 144.1,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 1894,
+            "hours": 31.57
+          },
+          {
+            "category": "content_and_course",
+            "minutes": 1693,
+            "hours": 28.22
+          },
+          {
+            "category": "financial_education",
+            "minutes": 1318,
+            "hours": 21.97
+          }
+        ]
+      }
     },
     {
       "id": "615a9eb66f18",
@@ -266,7 +719,25 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 0.0,
-      "payStatusThisMonth": "n/a"
+      "payStatusThisMonth": "n/a",
+      "history": {
+        "coveredMonths": [
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-02": 0.0,
+          "2026-03": 0.0,
+          "2026-04": 0.0
+        },
+        "totalHours": 0.0,
+        "monthsWithHours": 0,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
     },
     {
       "id": "659b0588a539",
@@ -281,7 +752,33 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 0.0,
-      "payStatusThisMonth": "n/a"
+      "payStatusThisMonth": "n/a",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 2.0,
+          "2026-02": 0.0,
+          "2026-03": 2.33,
+          "2026-04": 0.0
+        },
+        "totalHours": 4.33,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "social_welfare_resources",
+            "minutes": 140,
+            "hours": 2.33
+          }
+        ]
+      }
     },
     {
       "id": "7b630a5c0e44",
@@ -296,7 +793,27 @@
       "referrer": "",
       "notes": "新夥伴",
       "workHoursThisMonth": 2.0,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-04": 2.0
+        },
+        "totalHours": 2.0,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 120,
+            "hours": 2.0
+          }
+        ]
+      }
     },
     {
       "id": "85247e815ae3",
@@ -311,7 +828,36 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 4.5,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-02": 4.25,
+          "2026-03": 5.5,
+          "2026-04": 4.5
+        },
+        "totalHours": 14.25,
+        "monthsWithHours": 3,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 370,
+            "hours": 6.17
+          },
+          {
+            "category": "financial_education",
+            "minutes": 60,
+            "hours": 1.0
+          }
+        ]
+      }
     },
     {
       "id": "8c22f2fd8016",
@@ -326,7 +872,36 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 5.516,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-02": 3.883,
+          "2026-03": 8.617,
+          "2026-04": 5.516
+        },
+        "totalHours": 18.016,
+        "monthsWithHours": 3,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 766,
+            "hours": 12.77
+          },
+          {
+            "category": "financial_education",
+            "minutes": 151,
+            "hours": 2.52
+          }
+        ]
+      }
     },
     {
       "id": "9c57f621e2d4",
@@ -341,7 +916,48 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 15.433,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 2.167,
+          "2026-02": 20.367,
+          "2026-03": 16.8,
+          "2026-04": 15.433
+        },
+        "totalHours": 54.767,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 1352,
+            "hours": 22.53
+          },
+          {
+            "category": "financial_education",
+            "minutes": 618,
+            "hours": 10.3
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 260,
+            "hours": 4.33
+          },
+          {
+            "category": "content_and_course",
+            "minutes": 198,
+            "hours": 3.3
+          }
+        ]
+      }
     },
     {
       "id": "a3032b04952d",
@@ -356,7 +972,33 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 1.0,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 1.5,
+          "2026-02": 0.0,
+          "2026-03": 1.0,
+          "2026-04": 1.0
+        },
+        "totalHours": 3.5,
+        "monthsWithHours": 3,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 90,
+            "hours": 1.5
+          }
+        ]
+      }
     },
     {
       "id": "b78661d6dcf4",
@@ -371,7 +1013,33 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 0.5,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 3.667,
+          "2026-02": 0.0,
+          "2026-03": 1.0,
+          "2026-04": 0.5
+        },
+        "totalHours": 5.167,
+        "monthsWithHours": 3,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 90,
+            "hours": 1.5
+          }
+        ]
+      }
     },
     {
       "id": "c4c55e13a311",
@@ -386,7 +1054,38 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 1.0,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 15.083,
+          "2026-02": 3.333,
+          "2026-03": 1.0,
+          "2026-04": 1.0
+        },
+        "totalHours": 20.416,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "social_welfare_resources",
+            "minutes": 760,
+            "hours": 12.67
+          },
+          {
+            "category": "financial_education",
+            "minutes": 120,
+            "hours": 2.0
+          }
+        ]
+      }
     },
     {
       "id": "c6957afc2fb7",
@@ -401,7 +1100,38 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 8.917,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 3.7,
+          "2026-02": 22.133,
+          "2026-03": 32.13,
+          "2026-04": 8.917
+        },
+        "totalHours": 66.88,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 2023,
+            "hours": 33.72
+          },
+          {
+            "category": "financial_education",
+            "minutes": 425,
+            "hours": 7.08
+          }
+        ]
+      }
     },
     {
       "id": "d7f1864e3dd0",
@@ -416,7 +1146,32 @@
       "referrer": "",
       "notes": "新夥伴",
       "workHoursThisMonth": 20.216,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-04": 20.216
+        },
+        "totalHours": 20.216,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 521,
+            "hours": 8.68
+          },
+          {
+            "category": "financial_education",
+            "minutes": 62,
+            "hours": 1.03
+          }
+        ]
+      }
     },
     {
       "id": "dca79e5089ab",
@@ -431,7 +1186,43 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 13.5,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 9.167,
+          "2026-02": 0.0,
+          "2026-03": 23.367,
+          "2026-04": 13.5
+        },
+        "totalHours": 46.034,
+        "monthsWithHours": 3,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 824,
+            "hours": 13.73
+          },
+          {
+            "category": "financial_education",
+            "minutes": 248,
+            "hours": 4.13
+          },
+          {
+            "category": "content_and_course",
+            "minutes": 236,
+            "hours": 3.93
+          }
+        ]
+      }
     },
     {
       "id": "e6c8249bb53e",
@@ -446,7 +1237,43 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 3.933,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 14.55,
+          "2026-02": 16.483,
+          "2026-03": 20.3,
+          "2026-04": 3.933
+        },
+        "totalHours": 55.266,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 1763,
+            "hours": 29.38
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 497,
+            "hours": 8.28
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 253,
+            "hours": 4.22
+          }
+        ]
+      }
     },
     {
       "id": "edab786ed607",
@@ -461,7 +1288,50 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 44.167,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 41.83,
+          "2026-02": 51.75,
+          "2026-03": 28.5,
+          "2026-04": 44.167
+        },
+        "totalHours": 166.247,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 330,
+        "dictionaryWorkHours": 5.5,
+        "dictionaryWorkMonths": [
+          "2026-01"
+        ],
+        "topWorkSignals": [
+          {
+            "category": "social_welfare_resources",
+            "minutes": 8560,
+            "hours": 142.67
+          },
+          {
+            "category": "financial_education",
+            "minutes": 575,
+            "hours": 9.58
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 510,
+            "hours": 8.5
+          },
+          {
+            "category": "dictionary",
+            "minutes": 330,
+            "hours": 5.5
+          }
+        ]
+      }
     },
     {
       "id": "f1b469bd0f1e",
@@ -476,7 +1346,43 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 0.0,
-      "payStatusThisMonth": "n/a"
+      "payStatusThisMonth": "n/a",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 26.4,
+          "2026-02": 11.567,
+          "2026-03": 16.35,
+          "2026-04": 0.0
+        },
+        "totalHours": 54.317,
+        "monthsWithHours": 3,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 1494,
+            "hours": 24.9
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 665,
+            "hours": 11.08
+          },
+          {
+            "category": "financial_education",
+            "minutes": 329,
+            "hours": 5.48
+          }
+        ]
+      }
     },
     {
       "id": "f279f22c9ded",
@@ -491,7 +1397,27 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 0.0,
-      "payStatusThisMonth": "n/a"
+      "payStatusThisMonth": "n/a",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 2.667,
+          "2026-02": 0.0,
+          "2026-03": 0.0,
+          "2026-04": 0.0
+        },
+        "totalHours": 2.667,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
     },
     {
       "id": "f75ea28ada4d",
@@ -506,7 +1432,25 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 0.0,
-      "payStatusThisMonth": "n/a"
+      "payStatusThisMonth": "n/a",
+      "history": {
+        "coveredMonths": [
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-02": 0.0,
+          "2026-03": 0.0,
+          "2026-04": 0.0
+        },
+        "totalHours": 0.0,
+        "monthsWithHours": 0,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
     },
     {
       "id": "ff864aedde4f",
@@ -521,7 +1465,38 @@
       "referrer": "",
       "notes": "",
       "workHoursThisMonth": 8.983,
-      "payStatusThisMonth": "paid"
+      "payStatusThisMonth": "paid",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04"
+        ],
+        "monthlyHours": {
+          "2026-01": 15.533,
+          "2026-02": 13.843,
+          "2026-03": 9.95,
+          "2026-04": 8.983
+        },
+        "totalHours": 48.309,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 1246,
+            "hours": 20.77
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 534,
+            "hours": 8.9
+          }
+        ]
+      }
     },
     {
       "id": "2f3a8886190d",
@@ -529,14 +1504,30 @@
       "displayName": "Member-2F3A",
       "status": "paused",
       "currentRole": "",
-      "educationOrJob": "0986809119",
-      "workStatus": "台中市霧峰區六股里板橋路58號",
+      "educationOrJob": "",
+      "workStatus": "",
       "contactStatus": "",
-      "workLevel": "中國信託",
+      "workLevel": "",
       "referrer": "",
-      "notes": "108540483063",
+      "notes": "",
       "workHoursThisMonth": 0.0,
-      "payStatusThisMonth": "n/a"
+      "payStatusThisMonth": "n/a",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02"
+        ],
+        "monthlyHours": {
+          "2026-01": 7.917,
+          "2026-02": 0.0
+        },
+        "totalHours": 7.917,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
     },
     {
       "id": "5b708760e94e",
@@ -544,14 +1535,30 @@
       "displayName": "Member-5B70",
       "status": "paused",
       "currentRole": "",
-      "educationOrJob": "0926543785",
-      "workStatus": "屏東縣萬丹鄉新庄村19鄰新富街17號",
+      "educationOrJob": "",
+      "workStatus": "",
       "contactStatus": "",
-      "workLevel": "中國信託",
+      "workLevel": "",
       "referrer": "",
-      "notes": "160540684897",
+      "notes": "",
       "workHoursThisMonth": 0.0,
-      "payStatusThisMonth": "n/a"
+      "payStatusThisMonth": "n/a",
+      "history": {
+        "coveredMonths": [
+          "2026-02",
+          "2026-03"
+        ],
+        "monthlyHours": {
+          "2026-02": 0.0,
+          "2026-03": 0.0
+        },
+        "totalHours": 0.0,
+        "monthsWithHours": 0,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
     },
     {
       "id": "5e46a77fde6d",
@@ -560,11 +1567,11 @@
       "status": "paused",
       "currentRole": "",
       "educationOrJob": "",
-      "workStatus": "小學教師",
+      "workStatus": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
-      "notes": "0.0",
+      "notes": "",
       "workHoursThisMonth": 0.0,
       "payStatusThisMonth": "n/a"
     },
@@ -575,7 +1582,7 @@
       "status": "paused",
       "currentRole": "",
       "educationOrJob": "",
-      "workStatus": "學生",
+      "workStatus": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
@@ -589,12 +1596,12 @@
       "displayName": "Member-B52F",
       "status": "paused",
       "currentRole": "",
-      "educationOrJob": "新北市汐止區新昌里33鄰水碓街36號4樓",
-      "workStatus": "自營工作室",
+      "educationOrJob": "",
+      "workStatus": "",
       "contactStatus": "",
-      "workLevel": "重陽",
+      "workLevel": "",
       "referrer": "",
-      "notes": "4.5",
+      "notes": "",
       "workHoursThisMonth": 0.0,
       "payStatusThisMonth": "n/a"
     },
@@ -604,14 +1611,41 @@
       "displayName": "Member-E381",
       "status": "paused",
       "currentRole": "",
-      "educationOrJob": "0968870383",
-      "workStatus": "彰化縣埔鹽鄉大有村12鄰員鹿路三段25號之16",
+      "educationOrJob": "",
+      "workStatus": "",
       "contactStatus": "",
-      "workLevel": "中國信託",
+      "workLevel": "",
       "referrer": "",
-      "notes": "160540612377",
+      "notes": "",
       "workHoursThisMonth": 0.0,
-      "payStatusThisMonth": "n/a"
+      "payStatusThisMonth": "n/a",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02"
+        ],
+        "monthlyHours": {
+          "2026-01": 5.05,
+          "2026-02": 4.783
+        },
+        "totalHours": 9.833,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 255,
+            "hours": 4.25
+          },
+          {
+            "category": "financial_education",
+            "minutes": 208,
+            "hours": 3.47
+          }
+        ]
+      }
     },
     {
       "id": "eda751ff0e7a",
@@ -620,11 +1654,11 @@
       "status": "paused",
       "currentRole": "",
       "educationOrJob": "",
-      "workStatus": "學生",
+      "workStatus": "",
       "contactStatus": "",
       "workLevel": "",
       "referrer": "",
-      "notes": "0.0",
+      "notes": "",
       "workHoursThisMonth": 0.0,
       "payStatusThisMonth": "n/a"
     }

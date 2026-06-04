@@ -17,8 +17,18 @@ function pill(cls, text) {
   return `<span class="pill ${cls || ''}">${escapeHtml(text)}</span>`;
 }
 
+function historyPills(intern) {
+  const history = intern.history || {};
+  const parts = [];
+  if (history.totalHours) parts.push(pill('', `1-4月: ${history.totalHours}h`));
+  if (history.monthsWithHours) parts.push(pill('', `月數: ${history.monthsWithHours}`));
+  if (history.dictionaryWorkMinutes) parts.push(pill('good', `名詞庫: ${history.dictionaryWorkMinutes}m`));
+  return parts.join('');
+}
+
 function renderCard(intern) {
   const payCls = intern.payStatusThisMonth === 'paid' ? 'good' : intern.payStatusThisMonth === 'due' ? 'bad' : '';
+  const history = historyPills(intern);
   return `
     <div class="card" style="padding:14px">
       <div style="display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap">
@@ -30,6 +40,7 @@ function renderCard(intern) {
           ${pill('', `status: ${intern.status}`)}
           ${pill(payCls, `pay: ${intern.payStatusThisMonth}`)}
           ${pill('', `hours: ${intern.workHoursThisMonth}`)}
+          ${history}
         </div>
       </div>
       <div class="muted" style="font-size:12px; margin-top:10px">重點</div>
@@ -56,6 +67,7 @@ function applyFilters(interns) {
     if (pay && it.payStatusThisMonth !== pay) return false;
     if (!q) return true;
     const hay = [it.displayName, it.notes, it.currentRole, it.educationOrJob, it.workStatus, it.workLevel, it.referrer]
+      .concat((it.history?.topWorkSignals || []).map((signal) => signal.category))
       .filter(Boolean)
       .join(' ')
       .toLowerCase();
