@@ -1,14 +1,15 @@
 {
   "meta": {
-    "generatedAt": "2026-06-04T14:39:42+08:00",
-    "sourceModifiedAt": "2026-06-01T12:20:24.844Z",
-    "source": "Current intern workbook + 2026-01 to 2026-04 reimbursement sheets",
-    "historySource": "1-4月工讀生工時薪資表（內部解析）",
+    "generatedAt": "2026-06-04T16:59:48+08:00",
+    "sourceModifiedAt": "2026-06-04T08:46:42.688Z",
+    "source": "Current intern workbook + configured historical reimbursement sheets",
+    "historySource": "2026-01 起工讀生工時報帳表（內部解析；薪資金額排除）",
     "coveredMonths": [
       "2026-01",
       "2026-02",
       "2026-03",
-      "2026-04"
+      "2026-04",
+      "2026-05"
     ],
     "privacy": "Internal talent-pool view: includes names, phone, email, district-level residence, and work/profile signals. Salary amounts, ID numbers, full addresses, and bank data are excluded.",
     "excludedFields": [
@@ -20,105 +21,23 @@
       "bank account"
     ],
     "counts": {
-      "total": 43,
+      "total": 45,
       "active": 34,
       "paused": 7,
-      "historyOnly": 2,
-      "withHistory": 35,
+      "historyOnly": 4,
+      "withHistory": 37,
       "withResumeLink": 0,
       "withResumeStatus": 1,
       "withPhone": 37,
       "withEmail": 36,
       "withResidence": 33,
       "withEmploymentOrStudy": 29,
-      "missingAnyRequired": 21,
-      "historyTotalHours": 1110.064,
+      "missingAnyRequired": 23,
+      "historyTotalHours": 1348.809,
       "dictionaryWorkMinutes": 330
     }
   },
   "people": [
-    {
-      "id": "edab786ed607",
-      "slug": "edab786ed607",
-      "name": "施妤臻",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "partner_info",
-        "historical_hours"
-      ],
-      "currentRole": "學生",
-      "phone": "0980496493",
-      "email": "egroup.yuyu@gmail.com",
-      "residence": "屏東縣萬丹鄉",
-      "educationOrJob": "",
-      "workStatus": "9月休學 11月做日照中心18歲-26歲，老人養護中心  去年成立的祥合 生輔員跟教保員合作服務個案，行政比較多，之後要學寫計畫，想要做跟照護者相關領域。",
-      "employmentOrStudy": "學生／9月休學 11月做日照中心18歲-26歲，老人養護中心  去年成立的祥合 生輔員跟教保員合作服務個案，行政比較多，之後要學寫計畫，想要做跟照護者相關領域。",
-      "contactStatus": "O",
-      "workLevel": "1.0",
-      "referrer": "東海鄭教授",
-      "notes": "",
-      "resume": {
-        "label": "",
-        "url": ""
-      },
-      "currentSummaryHours": 44.167,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 41.83,
-          "status": "worked"
-        },
-        {
-          "month": "2026-02",
-          "hours": 51.75,
-          "status": "worked"
-        },
-        {
-          "month": "2026-03",
-          "hours": 28.5,
-          "status": "worked"
-        },
-        {
-          "month": "2026-04",
-          "hours": 44.167,
-          "status": "worked"
-        }
-      ],
-      "historyTotalHours": 166.247,
-      "monthsWithHours": 4,
-      "dictionaryWorkMinutes": 330,
-      "topWorkSignals": [
-        {
-          "category": "social_welfare_resources",
-          "label": "社福與資源整理",
-          "minutes": 8560,
-          "hours": 142.67
-        },
-        {
-          "category": "financial_education",
-          "label": "財務教育／金融素養",
-          "minutes": 575,
-          "hours": 9.58
-        },
-        {
-          "category": "transcript_and_meeting",
-          "label": "逐字稿、會議與訓練",
-          "minutes": 510,
-          "hours": 8.5
-        },
-        {
-          "category": "dictionary",
-          "label": "自定義名詞庫／詞庫工作",
-          "minutes": 330,
-          "hours": 5.5
-        }
-      ],
-      "missingRequiredFields": [],
-      "hasResumeLink": false,
-      "hasResumeStatus": false,
-      "profileCompleteness": 9
-    },
     {
       "id": "5a8cad415c12",
       "slug": "5a8cad415c12",
@@ -165,29 +84,127 @@
           "month": "2026-04",
           "hours": 55.683,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 54.683,
+          "status": "worked"
         }
       ],
-      "historyTotalHours": 144.1,
-      "monthsWithHours": 4,
+      "historyTotalHours": 198.783,
+      "monthsWithHours": 5,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [
         {
           "category": "transcript_and_meeting",
           "label": "逐字稿、會議與訓練",
-          "minutes": 1894,
-          "hours": 31.57
-        },
-        {
-          "category": "content_and_course",
-          "label": "內容、課程與會員經營",
-          "minutes": 1693,
-          "hours": 28.22
+          "minutes": 2303,
+          "hours": 38.38
         },
         {
           "category": "financial_education",
           "label": "財務教育／金融素養",
-          "minutes": 1318,
-          "hours": 21.97
+          "minutes": 1884,
+          "hours": 31.4
+        },
+        {
+          "category": "content_and_course",
+          "label": "內容、課程與會員經營",
+          "minutes": 1829,
+          "hours": 30.48
+        },
+        {
+          "category": "social_welfare_resources",
+          "label": "社福與資源整理",
+          "minutes": 197,
+          "hours": 3.28
+        }
+      ],
+      "missingRequiredFields": [],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 9
+    },
+    {
+      "id": "edab786ed607",
+      "slug": "edab786ed607",
+      "name": "施妤臻",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "partner_info",
+        "historical_hours"
+      ],
+      "currentRole": "學生",
+      "phone": "0980496493",
+      "email": "egroup.yuyu@gmail.com",
+      "residence": "屏東縣萬丹鄉",
+      "educationOrJob": "",
+      "workStatus": "9月休學 11月做日照中心18歲-26歲，老人養護中心  去年成立的祥合 生輔員跟教保員合作服務個案，行政比較多，之後要學寫計畫，想要做跟照護者相關領域。",
+      "employmentOrStudy": "學生／9月休學 11月做日照中心18歲-26歲，老人養護中心  去年成立的祥合 生輔員跟教保員合作服務個案，行政比較多，之後要學寫計畫，想要做跟照護者相關領域。",
+      "contactStatus": "O",
+      "workLevel": "1.0",
+      "referrer": "東海鄭教授",
+      "notes": "",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 44.167,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 41.83,
+          "status": "worked"
+        },
+        {
+          "month": "2026-02",
+          "hours": 51.75,
+          "status": "worked"
+        },
+        {
+          "month": "2026-03",
+          "hours": 28.5,
+          "status": "worked"
+        },
+        {
+          "month": "2026-04",
+          "hours": 44.167,
+          "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
+        }
+      ],
+      "historyTotalHours": 166.247,
+      "monthsWithHours": 4,
+      "dictionaryWorkMinutes": 330,
+      "topWorkSignals": [
+        {
+          "category": "social_welfare_resources",
+          "label": "社福與資源整理",
+          "minutes": 8560,
+          "hours": 142.67
+        },
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 575,
+          "hours": 9.58
+        },
+        {
+          "category": "transcript_and_meeting",
+          "label": "逐字稿、會議與訓練",
+          "minutes": 510,
+          "hours": 8.5
+        },
+        {
+          "category": "dictionary",
+          "label": "自定義名詞庫／詞庫工作",
+          "minutes": 330,
+          "hours": 5.5
         }
       ],
       "missingRequiredFields": [],
@@ -241,10 +258,15 @@
           "month": "2026-04",
           "hours": 8.917,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 18.5,
+          "status": "worked"
         }
       ],
-      "historyTotalHours": 66.88,
-      "monthsWithHours": 4,
+      "historyTotalHours": 85.38,
+      "monthsWithHours": 5,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [
         {
@@ -256,606 +278,14 @@
         {
           "category": "financial_education",
           "label": "財務教育／金融素養",
-          "minutes": 425,
-          "hours": 7.08
+          "minutes": 885,
+          "hours": 14.75
         }
       ],
       "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
       "profileCompleteness": 9
-    },
-    {
-      "id": "4402a377709e",
-      "slug": "4402a377709e",
-      "name": "曾于沁",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "partner_info",
-        "historical_hours"
-      ],
-      "currentRole": "學生",
-      "phone": "0926817525",
-      "email": "egroup.alison@gmail.com",
-      "residence": "臺中市外埔區",
-      "educationOrJob": "碩二",
-      "workStatus": "近期忙於專題及論文比較少有工作時間",
-      "employmentOrStudy": "學生／碩二／近期忙於專題及論文比較少有工作時間",
-      "contactStatus": "x",
-      "workLevel": "2.0",
-      "referrer": "",
-      "notes": "",
-      "resume": {
-        "label": "投104履歷",
-        "url": ""
-      },
-      "currentSummaryHours": 6.17,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 6.08,
-          "status": "worked"
-        },
-        {
-          "month": "2026-02",
-          "hours": 18.42,
-          "status": "worked"
-        },
-        {
-          "month": "2026-03",
-          "hours": 31.72,
-          "status": "worked"
-        },
-        {
-          "month": "2026-04",
-          "hours": 6.17,
-          "status": "worked"
-        }
-      ],
-      "historyTotalHours": 62.39,
-      "monthsWithHours": 4,
-      "dictionaryWorkMinutes": 0,
-      "topWorkSignals": [
-        {
-          "category": "financial_education",
-          "label": "財務教育／金融素養",
-          "minutes": 1195,
-          "hours": 19.92
-        }
-      ],
-      "missingRequiredFields": [],
-      "hasResumeLink": false,
-      "hasResumeStatus": true,
-      "profileCompleteness": 9
-    },
-    {
-      "id": "e6c8249bb53e",
-      "slug": "e6c8249bb53e",
-      "name": "許芳瑋",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "partner_info",
-        "historical_hours"
-      ],
-      "currentRole": "",
-      "phone": "0980394550",
-      "email": "egroup.vivian@gmail.com",
-      "residence": "台中市梧棲區",
-      "educationOrJob": "",
-      "workStatus": "",
-      "employmentOrStudy": "",
-      "contactStatus": "",
-      "workLevel": "",
-      "referrer": "林弈妏Cathy",
-      "notes": "",
-      "resume": {
-        "label": "",
-        "url": ""
-      },
-      "currentSummaryHours": 3.933,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 14.55,
-          "status": "worked"
-        },
-        {
-          "month": "2026-02",
-          "hours": 16.483,
-          "status": "worked"
-        },
-        {
-          "month": "2026-03",
-          "hours": 20.3,
-          "status": "worked"
-        },
-        {
-          "month": "2026-04",
-          "hours": 3.933,
-          "status": "worked"
-        }
-      ],
-      "historyTotalHours": 55.266,
-      "monthsWithHours": 4,
-      "dictionaryWorkMinutes": 0,
-      "topWorkSignals": [
-        {
-          "category": "financial_education",
-          "label": "財務教育／金融素養",
-          "minutes": 1763,
-          "hours": 29.38
-        },
-        {
-          "category": "social_welfare_resources",
-          "label": "社福與資源整理",
-          "minutes": 497,
-          "hours": 8.28
-        },
-        {
-          "category": "transcript_and_meeting",
-          "label": "逐字稿、會議與訓練",
-          "minutes": 253,
-          "hours": 4.22
-        }
-      ],
-      "missingRequiredFields": [
-        "目前就職/就讀狀態"
-      ],
-      "hasResumeLink": false,
-      "hasResumeStatus": false,
-      "profileCompleteness": 4
-    },
-    {
-      "id": "9c57f621e2d4",
-      "slug": "9c57f621e2d4",
-      "name": "陳曦",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "partner_info",
-        "historical_hours"
-      ],
-      "currentRole": "學生",
-      "phone": "0981417070",
-      "email": "egroup.tracy@gmail.com",
-      "residence": "",
-      "educationOrJob": "輔大社會系大五寒假後畢業",
-      "workStatus": "沒有想要朝社工領域發展，想要找貿易及科技類業務，希望是在工作中可以自我成長。",
-      "employmentOrStudy": "學生／輔大社會系大五寒假後畢業／沒有想要朝社工領域發展，想要找貿易及科技類業務，希望是在工作中可以自我成長。",
-      "contactStatus": "",
-      "workLevel": "",
-      "referrer": "施妤臻Yuyu",
-      "notes": "",
-      "resume": {
-        "label": "",
-        "url": ""
-      },
-      "currentSummaryHours": 15.433,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 2.167,
-          "status": "worked"
-        },
-        {
-          "month": "2026-02",
-          "hours": 20.367,
-          "status": "worked"
-        },
-        {
-          "month": "2026-03",
-          "hours": 16.8,
-          "status": "worked"
-        },
-        {
-          "month": "2026-04",
-          "hours": 15.433,
-          "status": "worked"
-        }
-      ],
-      "historyTotalHours": 54.767,
-      "monthsWithHours": 4,
-      "dictionaryWorkMinutes": 0,
-      "topWorkSignals": [
-        {
-          "category": "transcript_and_meeting",
-          "label": "逐字稿、會議與訓練",
-          "minutes": 1352,
-          "hours": 22.53
-        },
-        {
-          "category": "financial_education",
-          "label": "財務教育／金融素養",
-          "minutes": 618,
-          "hours": 10.3
-        },
-        {
-          "category": "social_welfare_resources",
-          "label": "社福與資源整理",
-          "minutes": 260,
-          "hours": 4.33
-        },
-        {
-          "category": "content_and_course",
-          "label": "內容、課程與會員經營",
-          "minutes": 198,
-          "hours": 3.3
-        }
-      ],
-      "missingRequiredFields": [
-        "居住地"
-      ],
-      "hasResumeLink": false,
-      "hasResumeStatus": false,
-      "profileCompleteness": 7
-    },
-    {
-      "id": "f1b469bd0f1e",
-      "slug": "f1b469bd0f1e",
-      "name": "林弈妏",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "partner_info",
-        "historical_hours"
-      ],
-      "currentRole": "行銷業助",
-      "phone": "0979910133",
-      "email": "egroup.cathy@gmail.com",
-      "residence": "屏東縣屏東市",
-      "educationOrJob": "",
-      "workStatus": "",
-      "employmentOrStudy": "行銷業助",
-      "contactStatus": "",
-      "workLevel": "1.0",
-      "referrer": "施妤臻Yuyu",
-      "notes": "妤臻介紹，日文系，Kapah 卡帕咖啡廳＆餐酒館計時人員。",
-      "resume": {
-        "label": "",
-        "url": ""
-      },
-      "currentSummaryHours": 0.0,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 26.4,
-          "status": "worked"
-        },
-        {
-          "month": "2026-02",
-          "hours": 11.567,
-          "status": "worked"
-        },
-        {
-          "month": "2026-03",
-          "hours": 16.35,
-          "status": "worked"
-        },
-        {
-          "month": "2026-04",
-          "hours": 0.0,
-          "status": "no_hours"
-        }
-      ],
-      "historyTotalHours": 54.317,
-      "monthsWithHours": 3,
-      "dictionaryWorkMinutes": 0,
-      "topWorkSignals": [
-        {
-          "category": "transcript_and_meeting",
-          "label": "逐字稿、會議與訓練",
-          "minutes": 1494,
-          "hours": 24.9
-        },
-        {
-          "category": "social_welfare_resources",
-          "label": "社福與資源整理",
-          "minutes": 665,
-          "hours": 11.08
-        },
-        {
-          "category": "financial_education",
-          "label": "財務教育／金融素養",
-          "minutes": 329,
-          "hours": 5.48
-        }
-      ],
-      "missingRequiredFields": [],
-      "hasResumeLink": false,
-      "hasResumeStatus": false,
-      "profileCompleteness": 8
-    },
-    {
-      "id": "383dd21d83d1",
-      "slug": "383dd21d83d1",
-      "name": "洪嘉緯",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "partner_info",
-        "historical_hours"
-      ],
-      "currentRole": "待業",
-      "phone": "0966459436",
-      "email": "egroup.jonathan@gmail.com",
-      "residence": "台中市西區",
-      "educationOrJob": "待業",
-      "workStatus": "先前在西區區公所的社會科服務",
-      "employmentOrStudy": "待業／待業／先前在西區區公所的社會科服務",
-      "contactStatus": "",
-      "workLevel": "",
-      "referrer": "陳資旻Lala",
-      "notes": "",
-      "resume": {
-        "label": "",
-        "url": ""
-      },
-      "currentSummaryHours": 0.0,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 48.933,
-          "status": "worked"
-        },
-        {
-          "month": "2026-02",
-          "hours": 0.0,
-          "status": "no_hours"
-        },
-        {
-          "month": "2026-03",
-          "hours": 3.05,
-          "status": "worked"
-        },
-        {
-          "month": "2026-04",
-          "hours": 0.0,
-          "status": "no_hours"
-        }
-      ],
-      "historyTotalHours": 51.983,
-      "monthsWithHours": 2,
-      "dictionaryWorkMinutes": 0,
-      "topWorkSignals": [
-        {
-          "category": "social_welfare_resources",
-          "label": "社福與資源整理",
-          "minutes": 1260,
-          "hours": 21.0
-        },
-        {
-          "category": "financial_education",
-          "label": "財務教育／金融素養",
-          "minutes": 183,
-          "hours": 3.05
-        }
-      ],
-      "missingRequiredFields": [],
-      "hasResumeLink": false,
-      "hasResumeStatus": false,
-      "profileCompleteness": 8
-    },
-    {
-      "id": "ff864aedde4f",
-      "slug": "ff864aedde4f",
-      "name": "李怡霖",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "historical_hours"
-      ],
-      "currentRole": "",
-      "phone": "",
-      "email": "",
-      "residence": "",
-      "educationOrJob": "",
-      "workStatus": "",
-      "employmentOrStudy": "",
-      "contactStatus": "",
-      "workLevel": "",
-      "referrer": "",
-      "notes": "",
-      "resume": {
-        "label": "",
-        "url": ""
-      },
-      "currentSummaryHours": 8.983,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 15.533,
-          "status": "worked"
-        },
-        {
-          "month": "2026-02",
-          "hours": 13.843,
-          "status": "worked"
-        },
-        {
-          "month": "2026-03",
-          "hours": 9.95,
-          "status": "worked"
-        },
-        {
-          "month": "2026-04",
-          "hours": 8.983,
-          "status": "worked"
-        }
-      ],
-      "historyTotalHours": 48.309,
-      "monthsWithHours": 4,
-      "dictionaryWorkMinutes": 0,
-      "topWorkSignals": [
-        {
-          "category": "financial_education",
-          "label": "財務教育／金融素養",
-          "minutes": 1246,
-          "hours": 20.77
-        },
-        {
-          "category": "transcript_and_meeting",
-          "label": "逐字稿、會議與訓練",
-          "minutes": 534,
-          "hours": 8.9
-        }
-      ],
-      "missingRequiredFields": [
-        "電話",
-        "Email",
-        "目前就職/就讀狀態",
-        "居住地"
-      ],
-      "hasResumeLink": false,
-      "hasResumeStatus": false,
-      "profileCompleteness": 0
-    },
-    {
-      "id": "268aa0c527a7",
-      "slug": "268aa0c527a7",
-      "name": "陳子安",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "partner_info",
-        "historical_hours"
-      ],
-      "currentRole": "學生",
-      "phone": "0971765751",
-      "email": "egroup.zian@gmail.com",
-      "residence": "臺中市大甲區",
-      "educationOrJob": "",
-      "workStatus": "",
-      "employmentOrStudy": "學生",
-      "contactStatus": "",
-      "workLevel": "1.0",
-      "referrer": "東海鄭教授",
-      "notes": "東海鄭教授介紹，大三，未來評估不會在相關領域工作，因家人是從事居服相關工作，覺得太累。",
-      "resume": {
-        "label": "",
-        "url": ""
-      },
-      "currentSummaryHours": 22.533,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 13.3,
-          "status": "worked"
-        },
-        {
-          "month": "2026-02",
-          "hours": 8.333,
-          "status": "worked"
-        },
-        {
-          "month": "2026-03",
-          "hours": 2.0,
-          "status": "worked"
-        },
-        {
-          "month": "2026-04",
-          "hours": 22.533,
-          "status": "worked"
-        }
-      ],
-      "historyTotalHours": 46.166,
-      "monthsWithHours": 4,
-      "dictionaryWorkMinutes": 0,
-      "topWorkSignals": [
-        {
-          "category": "financial_education",
-          "label": "財務教育／金融素養",
-          "minutes": 1382,
-          "hours": 23.03
-        },
-        {
-          "category": "social_welfare_resources",
-          "label": "社福與資源整理",
-          "minutes": 1200,
-          "hours": 20.0
-        }
-      ],
-      "missingRequiredFields": [],
-      "hasResumeLink": false,
-      "hasResumeStatus": false,
-      "profileCompleteness": 8
-    },
-    {
-      "id": "dca79e5089ab",
-      "slug": "dca79e5089ab",
-      "name": "陳靖儒",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "partner_info",
-        "historical_hours"
-      ],
-      "currentRole": "學生",
-      "phone": "0910050529",
-      "email": "egroup.chingju@gmail.com",
-      "residence": "新北市新店區",
-      "educationOrJob": "東海社工系大三",
-      "workStatus": "",
-      "employmentOrStudy": "學生／東海社工系大三",
-      "contactStatus": "",
-      "workLevel": "",
-      "referrer": "陳子安Zian",
-      "notes": "",
-      "resume": {
-        "label": "",
-        "url": ""
-      },
-      "currentSummaryHours": 13.5,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 9.167,
-          "status": "worked"
-        },
-        {
-          "month": "2026-02",
-          "hours": 0.0,
-          "status": "no_hours"
-        },
-        {
-          "month": "2026-03",
-          "hours": 23.367,
-          "status": "worked"
-        },
-        {
-          "month": "2026-04",
-          "hours": 13.5,
-          "status": "worked"
-        }
-      ],
-      "historyTotalHours": 46.034,
-      "monthsWithHours": 3,
-      "dictionaryWorkMinutes": 0,
-      "topWorkSignals": [
-        {
-          "category": "transcript_and_meeting",
-          "label": "逐字稿、會議與訓練",
-          "minutes": 824,
-          "hours": 13.73
-        },
-        {
-          "category": "financial_education",
-          "label": "財務教育／金融素養",
-          "minutes": 248,
-          "hours": 4.13
-        },
-        {
-          "category": "content_and_course",
-          "label": "內容、課程與會員經營",
-          "minutes": 236,
-          "hours": 3.93
-        }
-      ],
-      "missingRequiredFields": [],
-      "hasResumeLink": false,
-      "hasResumeStatus": false,
-      "profileCompleteness": 7
     },
     {
       "id": "45214b121411",
@@ -903,23 +333,34 @@
           "month": "2026-04",
           "hours": 28.416,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 35.333,
+          "status": "worked"
         }
       ],
-      "historyTotalHours": 45.916,
-      "monthsWithHours": 4,
+      "historyTotalHours": 81.249,
+      "monthsWithHours": 5,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [
         {
           "category": "transcript_and_meeting",
           "label": "逐字稿、會議與訓練",
-          "minutes": 415,
-          "hours": 6.92
+          "minutes": 1240,
+          "hours": 20.67
         },
         {
           "category": "financial_education",
           "label": "財務教育／金融素養",
-          "minutes": 240,
-          "hours": 4.0
+          "minutes": 590,
+          "hours": 9.83
+        },
+        {
+          "category": "content_and_course",
+          "label": "內容、課程與會員經營",
+          "minutes": 135,
+          "hours": 2.25
         }
       ],
       "missingRequiredFields": [],
@@ -973,35 +414,766 @@
           "month": "2026-04",
           "hours": 20.333,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 35.6,
+          "status": "worked"
         }
       ],
-      "historyTotalHours": 44.333,
-      "monthsWithHours": 4,
+      "historyTotalHours": 79.933,
+      "monthsWithHours": 5,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [
         {
+          "category": "social_welfare_resources",
+          "label": "社福與資源整理",
+          "minutes": 1615,
+          "hours": 26.92
+        },
+        {
           "category": "transcript_and_meeting",
           "label": "逐字稿、會議與訓練",
-          "minutes": 1270,
-          "hours": 21.17
+          "minutes": 1530,
+          "hours": 25.5
         },
         {
           "category": "financial_education",
           "label": "財務教育／金融素養",
-          "minutes": 560,
-          "hours": 9.33
+          "minutes": 1040,
+          "hours": 17.33
         },
         {
-          "category": "social_welfare_resources",
-          "label": "社福與資源整理",
-          "minutes": 350,
-          "hours": 5.83
+          "category": "content_and_course",
+          "label": "內容、課程與會員經營",
+          "minutes": 130,
+          "hours": 2.17
         }
       ],
       "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
       "profileCompleteness": 10
+    },
+    {
+      "id": "4402a377709e",
+      "slug": "4402a377709e",
+      "name": "曾于沁",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "partner_info",
+        "historical_hours"
+      ],
+      "currentRole": "學生",
+      "phone": "0926817525",
+      "email": "egroup.alison@gmail.com",
+      "residence": "臺中市外埔區",
+      "educationOrJob": "碩二",
+      "workStatus": "近期忙於專題及論文比較少有工作時間",
+      "employmentOrStudy": "學生／碩二／近期忙於專題及論文比較少有工作時間",
+      "contactStatus": "x",
+      "workLevel": "2.0",
+      "referrer": "",
+      "notes": "",
+      "resume": {
+        "label": "投104履歷",
+        "url": ""
+      },
+      "currentSummaryHours": 6.17,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 6.08,
+          "status": "worked"
+        },
+        {
+          "month": "2026-02",
+          "hours": 18.42,
+          "status": "worked"
+        },
+        {
+          "month": "2026-03",
+          "hours": 31.72,
+          "status": "worked"
+        },
+        {
+          "month": "2026-04",
+          "hours": 6.17,
+          "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 6.33,
+          "status": "worked"
+        }
+      ],
+      "historyTotalHours": 68.72,
+      "monthsWithHours": 5,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 1515,
+          "hours": 25.25
+        },
+        {
+          "category": "transcript_and_meeting",
+          "label": "逐字稿、會議與訓練",
+          "minutes": 60,
+          "hours": 1.0
+        }
+      ],
+      "missingRequiredFields": [],
+      "hasResumeLink": false,
+      "hasResumeStatus": true,
+      "profileCompleteness": 9
+    },
+    {
+      "id": "9c57f621e2d4",
+      "slug": "9c57f621e2d4",
+      "name": "陳曦",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "partner_info",
+        "historical_hours"
+      ],
+      "currentRole": "學生",
+      "phone": "0981417070",
+      "email": "egroup.tracy@gmail.com",
+      "residence": "",
+      "educationOrJob": "輔大社會系大五寒假後畢業",
+      "workStatus": "沒有想要朝社工領域發展，想要找貿易及科技類業務，希望是在工作中可以自我成長。",
+      "employmentOrStudy": "學生／輔大社會系大五寒假後畢業／沒有想要朝社工領域發展，想要找貿易及科技類業務，希望是在工作中可以自我成長。",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "施妤臻Yuyu",
+      "notes": "",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 15.433,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 2.167,
+          "status": "worked"
+        },
+        {
+          "month": "2026-02",
+          "hours": 20.367,
+          "status": "worked"
+        },
+        {
+          "month": "2026-03",
+          "hours": 16.8,
+          "status": "worked"
+        },
+        {
+          "month": "2026-04",
+          "hours": 15.433,
+          "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 6.1,
+          "status": "worked"
+        }
+      ],
+      "historyTotalHours": 60.867,
+      "monthsWithHours": 5,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "transcript_and_meeting",
+          "label": "逐字稿、會議與訓練",
+          "minutes": 1564,
+          "hours": 26.07
+        },
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 772,
+          "hours": 12.87
+        },
+        {
+          "category": "social_welfare_resources",
+          "label": "社福與資源整理",
+          "minutes": 260,
+          "hours": 4.33
+        },
+        {
+          "category": "content_and_course",
+          "label": "內容、課程與會員經營",
+          "minutes": 198,
+          "hours": 3.3
+        }
+      ],
+      "missingRequiredFields": [
+        "居住地"
+      ],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 7
+    },
+    {
+      "id": "e6c8249bb53e",
+      "slug": "e6c8249bb53e",
+      "name": "許芳瑋",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "partner_info",
+        "historical_hours"
+      ],
+      "currentRole": "",
+      "phone": "0980394550",
+      "email": "egroup.vivian@gmail.com",
+      "residence": "台中市梧棲區",
+      "educationOrJob": "",
+      "workStatus": "",
+      "employmentOrStudy": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "林弈妏Cathy",
+      "notes": "",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 3.933,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 14.55,
+          "status": "worked"
+        },
+        {
+          "month": "2026-02",
+          "hours": 16.483,
+          "status": "worked"
+        },
+        {
+          "month": "2026-03",
+          "hours": 20.3,
+          "status": "worked"
+        },
+        {
+          "month": "2026-04",
+          "hours": 3.933,
+          "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 2.467,
+          "status": "worked"
+        }
+      ],
+      "historyTotalHours": 57.733,
+      "monthsWithHours": 5,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 1763,
+          "hours": 29.38
+        },
+        {
+          "category": "social_welfare_resources",
+          "label": "社福與資源整理",
+          "minutes": 645,
+          "hours": 10.75
+        },
+        {
+          "category": "transcript_and_meeting",
+          "label": "逐字稿、會議與訓練",
+          "minutes": 253,
+          "hours": 4.22
+        }
+      ],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 4
+    },
+    {
+      "id": "f1b469bd0f1e",
+      "slug": "f1b469bd0f1e",
+      "name": "林弈妏",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "partner_info",
+        "historical_hours"
+      ],
+      "currentRole": "行銷業助",
+      "phone": "0979910133",
+      "email": "egroup.cathy@gmail.com",
+      "residence": "屏東縣屏東市",
+      "educationOrJob": "",
+      "workStatus": "",
+      "employmentOrStudy": "行銷業助",
+      "contactStatus": "",
+      "workLevel": "1.0",
+      "referrer": "施妤臻Yuyu",
+      "notes": "妤臻介紹，日文系，Kapah 卡帕咖啡廳＆餐酒館計時人員。",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 0.0,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 26.4,
+          "status": "worked"
+        },
+        {
+          "month": "2026-02",
+          "hours": 11.567,
+          "status": "worked"
+        },
+        {
+          "month": "2026-03",
+          "hours": 16.35,
+          "status": "worked"
+        },
+        {
+          "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
+          "hours": 3.017,
+          "status": "worked"
+        }
+      ],
+      "historyTotalHours": 57.334,
+      "monthsWithHours": 4,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "transcript_and_meeting",
+          "label": "逐字稿、會議與訓練",
+          "minutes": 1494,
+          "hours": 24.9
+        },
+        {
+          "category": "social_welfare_resources",
+          "label": "社福與資源整理",
+          "minutes": 665,
+          "hours": 11.08
+        },
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 329,
+          "hours": 5.48
+        }
+      ],
+      "missingRequiredFields": [],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 8
+    },
+    {
+      "id": "ff864aedde4f",
+      "slug": "ff864aedde4f",
+      "name": "李怡霖",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "historical_hours"
+      ],
+      "currentRole": "",
+      "phone": "",
+      "email": "",
+      "residence": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "employmentOrStudy": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 8.983,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 15.533,
+          "status": "worked"
+        },
+        {
+          "month": "2026-02",
+          "hours": 13.843,
+          "status": "worked"
+        },
+        {
+          "month": "2026-03",
+          "hours": 9.95,
+          "status": "worked"
+        },
+        {
+          "month": "2026-04",
+          "hours": 8.983,
+          "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 3.883,
+          "status": "worked"
+        }
+      ],
+      "historyTotalHours": 52.192,
+      "monthsWithHours": 5,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 1381,
+          "hours": 23.02
+        },
+        {
+          "category": "transcript_and_meeting",
+          "label": "逐字稿、會議與訓練",
+          "minutes": 632,
+          "hours": 10.53
+        }
+      ],
+      "missingRequiredFields": [
+        "電話",
+        "Email",
+        "目前就職/就讀狀態",
+        "居住地"
+      ],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 0
+    },
+    {
+      "id": "383dd21d83d1",
+      "slug": "383dd21d83d1",
+      "name": "洪嘉緯",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "partner_info",
+        "historical_hours"
+      ],
+      "currentRole": "待業",
+      "phone": "0966459436",
+      "email": "egroup.jonathan@gmail.com",
+      "residence": "台中市西區",
+      "educationOrJob": "待業",
+      "workStatus": "先前在西區區公所的社會科服務",
+      "employmentOrStudy": "待業／待業／先前在西區區公所的社會科服務",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "陳資旻Lala",
+      "notes": "",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 0.0,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 48.933,
+          "status": "worked"
+        },
+        {
+          "month": "2026-02",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-03",
+          "hours": 3.05,
+          "status": "worked"
+        },
+        {
+          "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
+        }
+      ],
+      "historyTotalHours": 51.983,
+      "monthsWithHours": 2,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "social_welfare_resources",
+          "label": "社福與資源整理",
+          "minutes": 1260,
+          "hours": 21.0
+        },
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 183,
+          "hours": 3.05
+        }
+      ],
+      "missingRequiredFields": [],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 8
+    },
+    {
+      "id": "dca79e5089ab",
+      "slug": "dca79e5089ab",
+      "name": "陳靖儒",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "partner_info",
+        "historical_hours"
+      ],
+      "currentRole": "學生",
+      "phone": "0910050529",
+      "email": "egroup.chingju@gmail.com",
+      "residence": "新北市新店區",
+      "educationOrJob": "東海社工系大三",
+      "workStatus": "",
+      "employmentOrStudy": "學生／東海社工系大三",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "陳子安Zian",
+      "notes": "",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 13.5,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 9.167,
+          "status": "worked"
+        },
+        {
+          "month": "2026-02",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-03",
+          "hours": 23.367,
+          "status": "worked"
+        },
+        {
+          "month": "2026-04",
+          "hours": 13.5,
+          "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 3.95,
+          "status": "worked"
+        }
+      ],
+      "historyTotalHours": 49.984,
+      "monthsWithHours": 4,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "transcript_and_meeting",
+          "label": "逐字稿、會議與訓練",
+          "minutes": 824,
+          "hours": 13.73
+        },
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 248,
+          "hours": 4.13
+        },
+        {
+          "category": "content_and_course",
+          "label": "內容、課程與會員經營",
+          "minutes": 236,
+          "hours": 3.93
+        }
+      ],
+      "missingRequiredFields": [],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 7
+    },
+    {
+      "id": "268aa0c527a7",
+      "slug": "268aa0c527a7",
+      "name": "陳子安",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "partner_info",
+        "historical_hours"
+      ],
+      "currentRole": "學生",
+      "phone": "0971765751",
+      "email": "egroup.zian@gmail.com",
+      "residence": "臺中市大甲區",
+      "educationOrJob": "",
+      "workStatus": "",
+      "employmentOrStudy": "學生",
+      "contactStatus": "",
+      "workLevel": "1.0",
+      "referrer": "東海鄭教授",
+      "notes": "東海鄭教授介紹，大三，未來評估不會在相關領域工作，因家人是從事居服相關工作，覺得太累。",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 22.533,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 13.3,
+          "status": "worked"
+        },
+        {
+          "month": "2026-02",
+          "hours": 8.333,
+          "status": "worked"
+        },
+        {
+          "month": "2026-03",
+          "hours": 2.0,
+          "status": "worked"
+        },
+        {
+          "month": "2026-04",
+          "hours": 22.533,
+          "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
+        }
+      ],
+      "historyTotalHours": 46.166,
+      "monthsWithHours": 4,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 1382,
+          "hours": 23.03
+        },
+        {
+          "category": "social_welfare_resources",
+          "label": "社福與資源整理",
+          "minutes": 1200,
+          "hours": 20.0
+        }
+      ],
+      "missingRequiredFields": [],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 8
+    },
+    {
+      "id": "d7f1864e3dd0",
+      "slug": "d7f1864e3dd0",
+      "name": "孫瑜",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "historical_hours"
+      ],
+      "currentRole": "",
+      "phone": "0908091513",
+      "email": "egroup.amara@gmail.com",
+      "residence": "桃園市桃園區",
+      "educationOrJob": "",
+      "workStatus": "",
+      "employmentOrStudy": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "新夥伴",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 20.216,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-02",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-03",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-04",
+          "hours": 20.216,
+          "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 17.183,
+          "status": "worked"
+        }
+      ],
+      "historyTotalHours": 37.399,
+      "monthsWithHours": 2,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "transcript_and_meeting",
+          "label": "逐字稿、會議與訓練",
+          "minutes": 725,
+          "hours": 12.08
+        },
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 615,
+          "hours": 10.25
+        },
+        {
+          "category": "social_welfare_resources",
+          "label": "社福與資源整理",
+          "minutes": 185,
+          "hours": 3.08
+        }
+      ],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 4
     },
     {
       "id": "244c0faa6865",
@@ -1048,6 +1220,11 @@
           "month": "2026-04",
           "hours": 35.55,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
         }
       ],
       "historyTotalHours": 35.55,
@@ -1126,23 +1303,28 @@
           "month": "2026-04",
           "hours": 7.5,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 6.083,
+          "status": "worked"
         }
       ],
-      "historyTotalHours": 23.784,
-      "monthsWithHours": 4,
+      "historyTotalHours": 29.867,
+      "monthsWithHours": 5,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [
+        {
+          "category": "transcript_and_meeting",
+          "label": "逐字稿、會議與訓練",
+          "minutes": 724,
+          "hours": 12.07
+        },
         {
           "category": "financial_education",
           "label": "財務教育／金融素養",
           "minutes": 603,
           "hours": 10.05
-        },
-        {
-          "category": "transcript_and_meeting",
-          "label": "逐字稿、會議與訓練",
-          "minutes": 574,
-          "hours": 9.57
         }
       ],
       "missingRequiredFields": [
@@ -1151,6 +1333,75 @@
       "hasResumeLink": false,
       "hasResumeStatus": false,
       "profileCompleteness": 4
+    },
+    {
+      "id": "2cc0a19a66f6",
+      "slug": "2cc0a19a66f6",
+      "name": "張梓康",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "partner_info",
+        "historical_hours"
+      ],
+      "currentRole": "學生",
+      "phone": "0902092134",
+      "email": "egroupjerry18@gmail.com",
+      "residence": "台中市沙鹿區",
+      "educationOrJob": "",
+      "workStatus": "社工系學弟，香港籍",
+      "employmentOrStudy": "學生／社工系學弟，香港籍",
+      "contactStatus": "",
+      "workLevel": "3.0",
+      "referrer": "張雅筑 Chu",
+      "notes": "",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 8.333,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 3.0,
+          "status": "worked"
+        },
+        {
+          "month": "2026-02",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-03",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-04",
+          "hours": 8.333,
+          "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 15.0,
+          "status": "worked"
+        }
+      ],
+      "historyTotalHours": 26.333,
+      "monthsWithHours": 3,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "transcript_and_meeting",
+          "label": "逐字稿、會議與訓練",
+          "minutes": 1040,
+          "hours": 17.33
+        }
+      ],
+      "missingRequiredFields": [],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 8
     },
     {
       "id": "c4c55e13a311",
@@ -1198,10 +1449,15 @@
           "month": "2026-04",
           "hours": 1.0,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 1.0,
+          "status": "worked"
         }
       ],
-      "historyTotalHours": 20.416,
-      "monthsWithHours": 4,
+      "historyTotalHours": 21.416,
+      "monthsWithHours": 5,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [
         {
@@ -1213,85 +1469,14 @@
         {
           "category": "financial_education",
           "label": "財務教育／金融素養",
-          "minutes": 120,
-          "hours": 2.0
+          "minutes": 180,
+          "hours": 3.0
         }
       ],
       "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
       "profileCompleteness": 9
-    },
-    {
-      "id": "d7f1864e3dd0",
-      "slug": "d7f1864e3dd0",
-      "name": "孫瑜",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "historical_hours"
-      ],
-      "currentRole": "",
-      "phone": "0908091513",
-      "email": "egroup.amara@gmail.com",
-      "residence": "桃園市桃園區",
-      "educationOrJob": "",
-      "workStatus": "",
-      "employmentOrStudy": "",
-      "contactStatus": "",
-      "workLevel": "",
-      "referrer": "",
-      "notes": "新夥伴",
-      "resume": {
-        "label": "",
-        "url": ""
-      },
-      "currentSummaryHours": 20.216,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 0.0,
-          "status": "no_hours"
-        },
-        {
-          "month": "2026-02",
-          "hours": 0.0,
-          "status": "no_hours"
-        },
-        {
-          "month": "2026-03",
-          "hours": 0.0,
-          "status": "no_hours"
-        },
-        {
-          "month": "2026-04",
-          "hours": 20.216,
-          "status": "worked"
-        }
-      ],
-      "historyTotalHours": 20.216,
-      "monthsWithHours": 1,
-      "dictionaryWorkMinutes": 0,
-      "topWorkSignals": [
-        {
-          "category": "transcript_and_meeting",
-          "label": "逐字稿、會議與訓練",
-          "minutes": 521,
-          "hours": 8.68
-        },
-        {
-          "category": "financial_education",
-          "label": "財務教育／金融素養",
-          "minutes": 62,
-          "hours": 1.03
-        }
-      ],
-      "missingRequiredFields": [
-        "目前就職/就讀狀態"
-      ],
-      "hasResumeLink": false,
-      "hasResumeStatus": false,
-      "profileCompleteness": 4
     },
     {
       "id": "8c22f2fd8016",
@@ -1339,10 +1524,15 @@
           "month": "2026-04",
           "hours": 5.516,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 2.75,
+          "status": "worked"
         }
       ],
-      "historyTotalHours": 18.016,
-      "monthsWithHours": 3,
+      "historyTotalHours": 20.766,
+      "monthsWithHours": 4,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [
         {
@@ -1354,8 +1544,8 @@
         {
           "category": "financial_education",
           "label": "財務教育／金融素養",
-          "minutes": 151,
-          "hours": 2.52
+          "minutes": 181,
+          "hours": 3.02
         }
       ],
       "missingRequiredFields": [],
@@ -1409,10 +1599,15 @@
           "month": "2026-04",
           "hours": 4.5,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 4.5,
+          "status": "worked"
         }
       ],
-      "historyTotalHours": 14.25,
-      "monthsWithHours": 3,
+      "historyTotalHours": 18.75,
+      "monthsWithHours": 4,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [
         {
@@ -1434,134 +1629,6 @@
       "hasResumeLink": false,
       "hasResumeStatus": false,
       "profileCompleteness": 3
-    },
-    {
-      "id": "07279789e47e",
-      "slug": "07279789e47e",
-      "name": "蔡欣妤",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "partner_info",
-        "historical_hours"
-      ],
-      "currentRole": "社工",
-      "phone": "0975950867",
-      "email": "egroup.krystal@gmail.com",
-      "residence": "南投縣南投市",
-      "educationOrJob": "精神復健中心社工",
-      "workStatus": "",
-      "employmentOrStudy": "社工／精神復健中心社工",
-      "contactStatus": "",
-      "workLevel": "",
-      "referrer": "陳資旻Lala",
-      "notes": "",
-      "resume": {
-        "label": "",
-        "url": ""
-      },
-      "currentSummaryHours": 1.5,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 11.0,
-          "status": "worked"
-        },
-        {
-          "month": "2026-02",
-          "hours": 0.0,
-          "status": "no_hours"
-        },
-        {
-          "month": "2026-03",
-          "hours": 0.0,
-          "status": "no_hours"
-        },
-        {
-          "month": "2026-04",
-          "hours": 1.5,
-          "status": "worked"
-        }
-      ],
-      "historyTotalHours": 12.5,
-      "monthsWithHours": 2,
-      "dictionaryWorkMinutes": 0,
-      "topWorkSignals": [
-        {
-          "category": "financial_education",
-          "label": "財務教育／金融素養",
-          "minutes": 90,
-          "hours": 1.5
-        }
-      ],
-      "missingRequiredFields": [],
-      "hasResumeLink": false,
-      "hasResumeStatus": false,
-      "profileCompleteness": 7
-    },
-    {
-      "id": "2cc0a19a66f6",
-      "slug": "2cc0a19a66f6",
-      "name": "張梓康",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "partner_info",
-        "historical_hours"
-      ],
-      "currentRole": "學生",
-      "phone": "0902092134",
-      "email": "egroupjerry18@gmail.com",
-      "residence": "台中市沙鹿區",
-      "educationOrJob": "",
-      "workStatus": "社工系學弟，香港籍",
-      "employmentOrStudy": "學生／社工系學弟，香港籍",
-      "contactStatus": "",
-      "workLevel": "3.0",
-      "referrer": "張雅筑 Chu",
-      "notes": "",
-      "resume": {
-        "label": "",
-        "url": ""
-      },
-      "currentSummaryHours": 8.333,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 3.0,
-          "status": "worked"
-        },
-        {
-          "month": "2026-02",
-          "hours": 0.0,
-          "status": "no_hours"
-        },
-        {
-          "month": "2026-03",
-          "hours": 0.0,
-          "status": "no_hours"
-        },
-        {
-          "month": "2026-04",
-          "hours": 8.333,
-          "status": "worked"
-        }
-      ],
-      "historyTotalHours": 11.333,
-      "monthsWithHours": 2,
-      "dictionaryWorkMinutes": 0,
-      "topWorkSignals": [
-        {
-          "category": "transcript_and_meeting",
-          "label": "逐字稿、會議與訓練",
-          "minutes": 380,
-          "hours": 6.33
-        }
-      ],
-      "missingRequiredFields": [],
-      "hasResumeLink": false,
-      "hasResumeStatus": false,
-      "profileCompleteness": 8
     },
     {
       "id": "43273957ea20",
@@ -1609,10 +1676,15 @@
           "month": "2026-04",
           "hours": 0.0,
           "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
+          "hours": 5.233,
+          "status": "worked"
         }
       ],
-      "historyTotalHours": 10.767,
-      "monthsWithHours": 1,
+      "historyTotalHours": 16.0,
+      "monthsWithHours": 2,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
       "missingRequiredFields": [
@@ -1623,35 +1695,35 @@
       "profileCompleteness": 4
     },
     {
-      "id": "2b6bf0c24658",
-      "slug": "2b6bf0c24658",
-      "name": "陳芷凌",
+      "id": "07279789e47e",
+      "slug": "07279789e47e",
+      "name": "蔡欣妤",
       "status": "active",
       "sourceMembership": [
         "current_summary",
         "partner_info",
         "historical_hours"
       ],
-      "currentRole": "學生",
-      "phone": "0903193605",
-      "email": "egroup.julie@gmail.com",
-      "residence": "",
-      "educationOrJob": "輔大社會系",
+      "currentRole": "社工",
+      "phone": "0975950867",
+      "email": "egroup.krystal@gmail.com",
+      "residence": "南投縣南投市",
+      "educationOrJob": "精神復健中心社工",
       "workStatus": "",
-      "employmentOrStudy": "學生／輔大社會系",
+      "employmentOrStudy": "社工／精神復健中心社工",
       "contactStatus": "",
       "workLevel": "",
-      "referrer": "施妤臻Yuyu",
+      "referrer": "陳資旻Lala",
       "notes": "",
       "resume": {
         "label": "",
         "url": ""
       },
-      "currentSummaryHours": 1.0,
+      "currentSummaryHours": 1.5,
       "monthlyWork": [
         {
           "month": "2026-01",
-          "hours": 3.783,
+          "hours": 11.0,
           "status": "worked"
         },
         {
@@ -1661,32 +1733,35 @@
         },
         {
           "month": "2026-03",
-          "hours": 1.25,
-          "status": "worked"
+          "hours": 0.0,
+          "status": "no_hours"
         },
         {
           "month": "2026-04",
-          "hours": 1.0,
+          "hours": 1.5,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
         }
       ],
-      "historyTotalHours": 6.033,
-      "monthsWithHours": 3,
+      "historyTotalHours": 12.5,
+      "monthsWithHours": 2,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [
         {
           "category": "financial_education",
           "label": "財務教育／金融素養",
-          "minutes": 135,
-          "hours": 2.25
+          "minutes": 90,
+          "hours": 1.5
         }
       ],
-      "missingRequiredFields": [
-        "居住地"
-      ],
+      "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 6
+      "profileCompleteness": 7
     },
     {
       "id": "3a9e70d04b82",
@@ -1733,10 +1808,15 @@
           "month": "2026-04",
           "hours": 5.7,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 5.933,
+          "status": "worked"
         }
       ],
-      "historyTotalHours": 5.7,
-      "monthsWithHours": 1,
+      "historyTotalHours": 11.633,
+      "monthsWithHours": 2,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [
         {
@@ -1748,8 +1828,8 @@
         {
           "category": "financial_education",
           "label": "財務教育／金融素養",
-          "minutes": 86,
-          "hours": 1.43
+          "minutes": 146,
+          "hours": 2.43
         }
       ],
       "missingRequiredFields": [],
@@ -1803,23 +1883,99 @@
           "month": "2026-04",
           "hours": 0.5,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 1.0,
+          "status": "worked"
         }
       ],
-      "historyTotalHours": 5.167,
-      "monthsWithHours": 3,
+      "historyTotalHours": 6.167,
+      "monthsWithHours": 4,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [
         {
           "category": "financial_education",
           "label": "財務教育／金融素養",
-          "minutes": 90,
-          "hours": 1.5
+          "minutes": 150,
+          "hours": 2.5
         }
       ],
       "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
       "profileCompleteness": 8
+    },
+    {
+      "id": "2b6bf0c24658",
+      "slug": "2b6bf0c24658",
+      "name": "陳芷凌",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "partner_info",
+        "historical_hours"
+      ],
+      "currentRole": "學生",
+      "phone": "0903193605",
+      "email": "egroup.julie@gmail.com",
+      "residence": "",
+      "educationOrJob": "輔大社會系",
+      "workStatus": "",
+      "employmentOrStudy": "學生／輔大社會系",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "施妤臻Yuyu",
+      "notes": "",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 1.0,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 3.783,
+          "status": "worked"
+        },
+        {
+          "month": "2026-02",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-03",
+          "hours": 1.25,
+          "status": "worked"
+        },
+        {
+          "month": "2026-04",
+          "hours": 1.0,
+          "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
+        }
+      ],
+      "historyTotalHours": 6.033,
+      "monthsWithHours": 3,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 135,
+          "hours": 2.25
+        }
+      ],
+      "missingRequiredFields": [
+        "居住地"
+      ],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 6
     },
     {
       "id": "659b0588a539",
@@ -1865,6 +2021,11 @@
         },
         {
           "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
           "hours": 0.0,
           "status": "no_hours"
         }
@@ -1931,6 +2092,11 @@
           "month": "2026-04",
           "hours": 1.0,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
         }
       ],
       "historyTotalHours": 3.5,
@@ -1942,6 +2108,82 @@
           "label": "財務教育／金融素養",
           "minutes": 90,
           "hours": 1.5
+        }
+      ],
+      "missingRequiredFields": [
+        "目前就職/就讀狀態"
+      ],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 4
+    },
+    {
+      "id": "4cda6db65f17",
+      "slug": "4cda6db65f17",
+      "name": "許雅媜",
+      "status": "active",
+      "sourceMembership": [
+        "current_summary",
+        "historical_hours"
+      ],
+      "currentRole": "",
+      "phone": "0963967188",
+      "email": "egroup.alicia@gmail.com",
+      "residence": "臺東縣臺東市",
+      "educationOrJob": "",
+      "workStatus": "",
+      "employmentOrStudy": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "新夥伴",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 1.0,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-02",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-03",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-04",
+          "hours": 1.0,
+          "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 2.5,
+          "status": "worked"
+        }
+      ],
+      "historyTotalHours": 3.5,
+      "monthsWithHours": 2,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "social_welfare_resources",
+          "label": "社福與資源整理",
+          "minutes": 150,
+          "hours": 2.5
+        },
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 60,
+          "hours": 1.0
         }
       ],
       "missingRequiredFields": [
@@ -1995,6 +2237,11 @@
         },
         {
           "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
           "hours": 0.0,
           "status": "no_hours"
         }
@@ -2054,6 +2301,11 @@
           "month": "2026-04",
           "hours": 2.0,
           "status": "worked"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
         }
       ],
       "historyTotalHours": 2.0,
@@ -2120,6 +2372,11 @@
           "month": "2026-04",
           "hours": 0.0,
           "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
         }
       ],
       "historyTotalHours": 1.417,
@@ -2139,71 +2396,6 @@
       "hasResumeLink": false,
       "hasResumeStatus": false,
       "profileCompleteness": 3
-    },
-    {
-      "id": "4cda6db65f17",
-      "slug": "4cda6db65f17",
-      "name": "許雅媜",
-      "status": "active",
-      "sourceMembership": [
-        "current_summary",
-        "historical_hours"
-      ],
-      "currentRole": "",
-      "phone": "0963967188",
-      "email": "egroup.alicia@gmail.com",
-      "residence": "臺東縣臺東市",
-      "educationOrJob": "",
-      "workStatus": "",
-      "employmentOrStudy": "",
-      "contactStatus": "",
-      "workLevel": "",
-      "referrer": "",
-      "notes": "新夥伴",
-      "resume": {
-        "label": "",
-        "url": ""
-      },
-      "currentSummaryHours": 1.0,
-      "monthlyWork": [
-        {
-          "month": "2026-01",
-          "hours": 0.0,
-          "status": "no_hours"
-        },
-        {
-          "month": "2026-02",
-          "hours": 0.0,
-          "status": "no_hours"
-        },
-        {
-          "month": "2026-03",
-          "hours": 0.0,
-          "status": "no_hours"
-        },
-        {
-          "month": "2026-04",
-          "hours": 1.0,
-          "status": "worked"
-        }
-      ],
-      "historyTotalHours": 1.0,
-      "monthsWithHours": 1,
-      "dictionaryWorkMinutes": 0,
-      "topWorkSignals": [
-        {
-          "category": "financial_education",
-          "label": "財務教育／金融素養",
-          "minutes": 60,
-          "hours": 1.0
-        }
-      ],
-      "missingRequiredFields": [
-        "目前就職/就讀狀態"
-      ],
-      "hasResumeLink": false,
-      "hasResumeStatus": false,
-      "profileCompleteness": 4
     },
     {
       "id": "367814eda832",
@@ -2249,6 +2441,11 @@
         },
         {
           "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
           "hours": 0.0,
           "status": "no_hours"
         }
@@ -2315,6 +2512,11 @@
           "month": "2026-04",
           "hours": 0.0,
           "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
         }
       ],
       "historyTotalHours": 0.0,
@@ -2373,6 +2575,11 @@
         },
         {
           "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
           "hours": 0.0,
           "status": "no_hours"
         }
@@ -2434,9 +2641,157 @@
           "month": "2026-04",
           "hours": 0.0,
           "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
         }
       ],
       "historyTotalHours": 5.96,
+      "monthsWithHours": 1,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [],
+      "missingRequiredFields": [
+        "電話",
+        "Email",
+        "目前就職/就讀狀態",
+        "居住地"
+      ],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 0
+    },
+    {
+      "id": "ee42e15d628c",
+      "slug": "ee42e15d628c",
+      "name": "黃奕綸",
+      "status": "history_only",
+      "sourceMembership": [
+        "historical_hours"
+      ],
+      "currentRole": "",
+      "phone": "",
+      "email": "",
+      "residence": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "employmentOrStudy": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 0.0,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-02",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-03",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
+          "hours": 4.5,
+          "status": "worked"
+        }
+      ],
+      "historyTotalHours": 4.5,
+      "monthsWithHours": 1,
+      "dictionaryWorkMinutes": 0,
+      "topWorkSignals": [
+        {
+          "category": "financial_education",
+          "label": "財務教育／金融素養",
+          "minutes": 180,
+          "hours": 3.0
+        },
+        {
+          "category": "transcript_and_meeting",
+          "label": "逐字稿、會議與訓練",
+          "minutes": 90,
+          "hours": 1.5
+        }
+      ],
+      "missingRequiredFields": [
+        "電話",
+        "Email",
+        "目前就職/就讀狀態",
+        "居住地"
+      ],
+      "hasResumeLink": false,
+      "hasResumeStatus": false,
+      "profileCompleteness": 0
+    },
+    {
+      "id": "a9753d207b2f",
+      "slug": "a9753d207b2f",
+      "name": "蔡忻妤",
+      "status": "history_only",
+      "sourceMembership": [
+        "historical_hours"
+      ],
+      "currentRole": "",
+      "phone": "",
+      "email": "",
+      "residence": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "employmentOrStudy": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "resume": {
+        "label": "",
+        "url": ""
+      },
+      "currentSummaryHours": 0.0,
+      "monthlyWork": [
+        {
+          "month": "2026-01",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-02",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-03",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
+          "hours": 3.2,
+          "status": "worked"
+        }
+      ],
+      "historyTotalHours": 3.2,
       "monthsWithHours": 1,
       "dictionaryWorkMinutes": 0,
       "topWorkSignals": [],
@@ -2492,6 +2847,11 @@
         },
         {
           "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
           "hours": 0.0,
           "status": "no_hours"
         }
@@ -2553,6 +2913,11 @@
         },
         {
           "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
           "hours": 0.0,
           "status": "no_hours"
         }
@@ -2624,6 +2989,11 @@
           "month": "2026-04",
           "hours": 0.0,
           "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
         }
       ],
       "historyTotalHours": 7.917,
@@ -2680,6 +3050,11 @@
           "month": "2026-04",
           "hours": 0.0,
           "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
         }
       ],
       "historyTotalHours": 0.0,
@@ -2733,6 +3108,11 @@
         },
         {
           "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
           "hours": 0.0,
           "status": "no_hours"
         }
@@ -2791,6 +3171,11 @@
         },
         {
           "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
           "hours": 0.0,
           "status": "no_hours"
         }
@@ -2852,6 +3237,11 @@
           "month": "2026-04",
           "hours": 0.0,
           "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
+          "hours": 0.0,
+          "status": "no_hours"
         }
       ],
       "historyTotalHours": 0.0,
@@ -2907,6 +3297,11 @@
         },
         {
           "month": "2026-04",
+          "hours": 0.0,
+          "status": "no_hours"
+        },
+        {
+          "month": "2026-05",
           "hours": 0.0,
           "status": "no_hours"
         }

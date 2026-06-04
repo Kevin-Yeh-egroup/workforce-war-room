@@ -55,31 +55,52 @@ function signals(person) {
 function render(person, meta) {
   document.title = `${person.name}｜工讀生個人追蹤`;
   document.getElementById('title').textContent = person.name;
-  document.getElementById('sourceStatus').textContent = `累計 ${person.historyTotalHours || 0} 小時｜${person.missingRequiredFields?.length ? '待補：' + person.missingRequiredFields.join('、') : '必要欄位完整'}｜資料：${meta?.coveredMonths?.join('、') || '未標示'}`;
+  const coveredMonths = meta?.coveredMonths?.length ? meta.coveredMonths.join('、') : '逐月資料';
+  const missingFields = person.missingRequiredFields?.length ? `待補：${person.missingRequiredFields.join('、')}` : '必要欄位完整';
+  document.getElementById('sourceStatus').textContent = `累計 ${person.historyTotalHours || 0} 小時｜${missingFields}｜${coveredMonths}`;
   document.getElementById('profileCard').innerHTML = `
-    <div class="person-head">
-      <div>
-        <h2 style="margin:0 0 6px">${escapeHtml(person.name)}</h2>
-        <div class="muted">${escapeHtml(person.employmentOrStudy || person.currentRole || person.educationOrJob || '未填基本背景')}</div>
+    <section class="section-card">
+      <div class="person-head">
+        <div>
+          <h2 style="margin:0 0 6px">${escapeHtml(person.name)}</h2>
+          <div class="person-role">${escapeHtml(person.employmentOrStudy || person.currentRole || person.educationOrJob || '未填基本背景')}</div>
+        </div>
+        <div class="badges">${badge(person.status)}${badge(person.resume?.url ? '有履歷連結' : person.resume?.label ? '有履歷狀態' : '缺履歷')}</div>
       </div>
-      <div class="badges">${badge(person.status)}${badge(person.resume?.url ? '有連結' : person.resume?.label ? '有狀態' : '待補')}</div>
+    </section>
+    <div class="section-grid">
+      <section class="section-card">
+        <h2>基本資料</h2>
+        <div class="kv">
+          <div class="k">電話 / Email</div><div class="v">${contactLine(person)}</div>
+          <div class="k">居住地</div><div class="v">${escapeHtml(person.residence || '待補')}</div>
+          <div class="k">現職</div><div class="v">${escapeHtml(person.currentRole || '—')}</div>
+          <div class="k">學歷/職業</div><div class="v">${escapeHtml(person.educationOrJob || '—')}</div>
+          <div class="k">介紹／來源</div><div class="v">${escapeHtml(person.referrer || '—')}</div>
+        </div>
+      </section>
+      <section class="section-card">
+        <h2>工作狀態</h2>
+        <div class="kv">
+          <div class="k">目前狀態</div><div class="v">${escapeHtml(person.workStatus || '—')}</div>
+          <div class="k">聯繫狀況</div><div class="v">${escapeHtml(person.contactStatus || '—')}</div>
+          <div class="k">工作範本</div><div class="v">${escapeHtml(person.workLevel || '—')}</div>
+          <div class="k">缺漏</div><div class="v">${escapeHtml(missingFields)}</div>
+          <div class="k">備註</div><div class="v">${escapeHtml(person.notes || '—')}</div>
+        </div>
+      </section>
     </div>
-    <div class="kv" style="margin-top:16px">
-      <div class="k">電話 / Email</div><div class="v">${contactLine(person)}</div>
-      <div class="k">居住地</div><div class="v">${escapeHtml(person.residence || '待補')}</div>
-      <div class="k">現職</div><div class="v">${escapeHtml(person.currentRole || '—')}</div>
-      <div class="k">學歷/職業</div><div class="v">${escapeHtml(person.educationOrJob || '—')}</div>
-      <div class="k">目前工作狀態</div><div class="v">${escapeHtml(person.workStatus || '—')}</div>
-      <div class="k">聯繫狀況</div><div class="v">${escapeHtml(person.contactStatus || '—')}</div>
-      <div class="k">工作範本</div><div class="v">${escapeHtml(person.workLevel || '—')}</div>
-      <div class="k">介紹／來源</div><div class="v">${escapeHtml(person.referrer || '—')}</div>
-      <div class="k">履歷</div><div class="v">${resume(person)}</div>
-      <div class="k">備註</div><div class="v">${escapeHtml(person.notes || '—')}</div>
-    </div>
-    <h2 style="font-size:17px;margin:22px 0 10px">每月工作情況</h2>
-    <div class="month-grid">${months(person)}</div>
-    <h2 style="font-size:17px;margin:22px 0 10px">工作訊號</h2>
-    <div class="signals">${signals(person)}</div>
+    <section class="section-card">
+      <h2>逐月工時</h2>
+      <div class="month-grid">${months(person)}</div>
+    </section>
+    <section class="section-card">
+      <h2>履歷與工作訊號</h2>
+      <div class="kv">
+        <div class="k">履歷</div><div class="v">${resume(person)}</div>
+        <div class="k">工作訊號</div><div class="v"><div class="signals">${signals(person)}</div></div>
+      </div>
+    </section>
   `;
 }
 

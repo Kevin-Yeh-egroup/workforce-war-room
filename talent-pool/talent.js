@@ -79,6 +79,27 @@ function months(person) {
   }).join('');
 }
 
+function currentMonthWork(person) {
+  const monthly = person.monthlyWork || [];
+  if (!monthly.length) return { label: '本月', hours: 0 };
+  const latest = monthly[monthly.length - 1];
+  return { label: latest.month || '本月', hours: Number(latest.hours) || 0 };
+}
+
+function workTemplate(person) {
+  const signals = (person.topWorkSignals || []).slice(0, 2).map((signal) => signal.label).filter(Boolean);
+  if (signals.length) return signals.join('、');
+  return person.workLevel ? `工作等級 ${person.workLevel}` : '尚未標示';
+}
+
+function hoursSummary(person) {
+  const latest = currentMonthWork(person);
+  return `<div class="summary-row">
+    ${badge(`累計 ${person.historyTotalHours || 0}h`)}
+    ${badge(`${latest.label} ${latest.hours}h`)}
+  </div>`;
+}
+
 function signals(person) {
   const items = (person.topWorkSignals || []).map((signal) => badge(`${signal.label}: ${signal.hours}h`));
   if (person.dictionaryWorkMinutes) items.unshift(badge(`名詞庫 ${person.dictionaryWorkMinutes}m`));
@@ -91,27 +112,15 @@ function personCard(person) {
     <div class="person-head">
       <div>
         <h3>${escapeHtml(person.name)}</h3>
-        <div class="muted">${escapeHtml(role)}</div>
+        <div class="person-role clamp">${escapeHtml(role)}</div>
       </div>
-      <div class="badges">${badge(person.status)}${resumeBadge(person)}</div>
+      <div class="badges">${badge(person.status)}</div>
     </div>
-    <div class="kv">
+    <div class="kv compact-kv">
       <div class="k">電話 / Email</div><div class="v">${contactLine(person)}</div>
       <div class="k">居住地</div><div class="v">${escapeHtml(person.residence || '待補')}</div>
-      <div class="k">目前工作狀態</div><div class="v">${escapeHtml(person.workStatus || '—')}</div>
-      <div class="k">聯繫狀況</div><div class="v">${escapeHtml(person.contactStatus || '—')}</div>
-      <div class="k">工作範本</div><div class="v">${escapeHtml(person.workLevel || '—')}</div>
-      <div class="k">介紹／來源</div><div class="v">${escapeHtml(person.referrer || '—')}</div>
-      <div class="k">履歷</div><div class="v">${resumeLink(person)}</div>
-      <div class="k">缺漏</div><div class="v"><div class="signals">${missingLine(person)}</div></div>
-    </div>
-    <div>
-      <div class="muted">1–4 月工作情況</div>
-      <div class="month-grid" style="margin-top:8px">${months(person)}</div>
-    </div>
-    <div>
-      <div class="muted">主要工作訊號</div>
-      <div class="signals" style="margin-top:8px">${signals(person)}</div>
+      <div class="k">工作範本</div><div class="v clamp">${escapeHtml(workTemplate(person))}</div>
+      <div class="k">工時摘要</div><div class="v">${hoursSummary(person)}</div>
     </div>
     <div class="toolbar" style="justify-content:flex-start">
       <a class="tool primary" href="/talent-pool/${encodeURIComponent(person.slug)}/index.html">打開個人追蹤頁</a>

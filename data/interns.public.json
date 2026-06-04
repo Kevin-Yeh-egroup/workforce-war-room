@@ -1,16 +1,17 @@
 {
   "meta": {
-    "generatedAt": "2026-06-04T14:39:40+08:00",
-    "sourceModifiedAt": "2026-06-01T12:20:24.844Z",
+    "generatedAt": "2026-06-04T16:59:47+08:00",
+    "sourceModifiedAt": "2026-06-04T08:46:42.688Z",
     "source": "intern spreadsheet (redacted)",
     "privacy": "Redacted: no ID/phone/address/bank/account/salary/email.",
     "history": {
-      "source": "Historical 2026-01 to 2026-04 payroll sheets, redacted and merged by stable hash.",
+      "source": "2026-01 起工讀生工時報帳表（內部解析；薪資金額排除）",
       "coveredMonths": [
         "2026-01",
         "2026-02",
         "2026-03",
-        "2026-04"
+        "2026-04",
+        "2026-05"
       ],
       "salaryAmountsExcluded": true,
       "peopleWithHistory": 37,
@@ -44,29 +45,31 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 3.167,
           "2026-02": 6.067,
           "2026-03": 7.05,
-          "2026-04": 7.5
+          "2026-04": 7.5,
+          "2026-05": 6.083
         },
-        "totalHours": 23.784,
-        "monthsWithHours": 4,
+        "totalHours": 29.867,
+        "monthsWithHours": 5,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
         "topWorkSignals": [
           {
+            "category": "transcript_and_meeting",
+            "minutes": 724,
+            "hours": 12.07
+          },
+          {
             "category": "financial_education",
             "minutes": 603,
             "hours": 10.05
-          },
-          {
-            "category": "transcript_and_meeting",
-            "minutes": 574,
-            "hours": 9.57
           }
         ]
       }
@@ -90,13 +93,15 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 11.0,
           "2026-02": 0.0,
           "2026-03": 0.0,
-          "2026-04": 1.5
+          "2026-04": 1.5,
+          "2026-05": 0.0
         },
         "totalHours": 12.5,
         "monthsWithHours": 2,
@@ -128,10 +133,12 @@
       "payStatusThisMonth": "paid",
       "history": {
         "coveredMonths": [
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
-          "2026-04": 35.55
+          "2026-04": 35.55,
+          "2026-05": 0.0
         },
         "totalHours": 35.55,
         "monthsWithHours": 1,
@@ -176,13 +183,15 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 13.3,
           "2026-02": 8.333,
           "2026-03": 2.0,
-          "2026-04": 22.533
+          "2026-04": 22.533,
+          "2026-05": 0.0
         },
         "totalHours": 46.166,
         "monthsWithHours": 4,
@@ -222,13 +231,15 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 3.783,
           "2026-02": 0.0,
           "2026-03": 1.25,
-          "2026-04": 1.0
+          "2026-04": 1.0,
+          "2026-05": 0.0
         },
         "totalHours": 6.033,
         "monthsWithHours": 3,
@@ -263,24 +274,26 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 3.0,
           "2026-02": 0.0,
           "2026-03": 0.0,
-          "2026-04": 8.333
+          "2026-04": 8.333,
+          "2026-05": 15.0
         },
-        "totalHours": 11.333,
-        "monthsWithHours": 2,
+        "totalHours": 26.333,
+        "monthsWithHours": 3,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
         "topWorkSignals": [
           {
             "category": "transcript_and_meeting",
-            "minutes": 380,
-            "hours": 6.33
+            "minutes": 1040,
+            "hours": 17.33
           }
         ]
       }
@@ -304,34 +317,41 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 11.0,
           "2026-02": 7.167,
           "2026-03": 5.833,
-          "2026-04": 20.333
+          "2026-04": 20.333,
+          "2026-05": 35.6
         },
-        "totalHours": 44.333,
-        "monthsWithHours": 4,
+        "totalHours": 79.933,
+        "monthsWithHours": 5,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
         "topWorkSignals": [
           {
+            "category": "social_welfare_resources",
+            "minutes": 1615,
+            "hours": 26.92
+          },
+          {
             "category": "transcript_and_meeting",
-            "minutes": 1270,
-            "hours": 21.17
+            "minutes": 1530,
+            "hours": 25.5
           },
           {
             "category": "financial_education",
-            "minutes": 560,
-            "hours": 9.33
+            "minutes": 1040,
+            "hours": 17.33
           },
           {
-            "category": "social_welfare_resources",
-            "minutes": 350,
-            "hours": 5.83
+            "category": "content_and_course",
+            "minutes": 130,
+            "hours": 2.17
           }
         ]
       }
@@ -354,12 +374,14 @@
         "coveredMonths": [
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-02": 0.0,
           "2026-03": 1.0,
-          "2026-04": 0.0
+          "2026-04": 0.0,
+          "2026-05": 0.0
         },
         "totalHours": 1.0,
         "monthsWithHours": 1,
@@ -392,11 +414,13 @@
       "history": {
         "coveredMonths": [
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-03": 1.417,
-          "2026-04": 0.0
+          "2026-04": 0.0,
+          "2026-05": 0.0
         },
         "totalHours": 1.417,
         "monthsWithHours": 1,
@@ -431,13 +455,15 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 48.933,
           "2026-02": 0.0,
           "2026-03": 3.05,
-          "2026-04": 0.0
+          "2026-04": 0.0,
+          "2026-05": 0.0
         },
         "totalHours": 51.983,
         "monthsWithHours": 2,
@@ -474,13 +500,15 @@
       "payStatusThisMonth": "paid",
       "history": {
         "coveredMonths": [
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
-          "2026-04": 5.7
+          "2026-04": 5.7,
+          "2026-05": 5.933
         },
-        "totalHours": 5.7,
-        "monthsWithHours": 1,
+        "totalHours": 11.633,
+        "monthsWithHours": 2,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
@@ -492,8 +520,8 @@
           },
           {
             "category": "financial_education",
-            "minutes": 86,
-            "hours": 1.43
+            "minutes": 146,
+            "hours": 2.43
           }
         ]
       }
@@ -517,16 +545,18 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 10.767,
           "2026-02": 0.0,
           "2026-03": 0.0,
-          "2026-04": 0.0
+          "2026-04": 0.0,
+          "2026-05": 5.233
         },
-        "totalHours": 10.767,
-        "monthsWithHours": 1,
+        "totalHours": 16.0,
+        "monthsWithHours": 2,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
@@ -552,24 +582,31 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 6.08,
           "2026-02": 18.42,
           "2026-03": 31.72,
-          "2026-04": 6.17
+          "2026-04": 6.17,
+          "2026-05": 6.33
         },
-        "totalHours": 62.39,
-        "monthsWithHours": 4,
+        "totalHours": 68.72,
+        "monthsWithHours": 5,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
         "topWorkSignals": [
           {
             "category": "financial_education",
-            "minutes": 1195,
-            "hours": 19.92
+            "minutes": 1515,
+            "hours": 25.25
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 60,
+            "hours": 1.0
           }
         ]
       }
@@ -593,29 +630,36 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 8.333,
           "2026-02": 6.917,
           "2026-03": 2.25,
-          "2026-04": 28.416
+          "2026-04": 28.416,
+          "2026-05": 35.333
         },
-        "totalHours": 45.916,
-        "monthsWithHours": 4,
+        "totalHours": 81.249,
+        "monthsWithHours": 5,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
         "topWorkSignals": [
           {
             "category": "transcript_and_meeting",
-            "minutes": 415,
-            "hours": 6.92
+            "minutes": 1240,
+            "hours": 20.67
           },
           {
             "category": "financial_education",
-            "minutes": 240,
-            "hours": 4.0
+            "minutes": 590,
+            "hours": 9.83
+          },
+          {
+            "category": "content_and_course",
+            "minutes": 135,
+            "hours": 2.25
           }
         ]
       }
@@ -636,17 +680,24 @@
       "payStatusThisMonth": "paid",
       "history": {
         "coveredMonths": [
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
-          "2026-04": 1.0
+          "2026-04": 1.0,
+          "2026-05": 2.5
         },
-        "totalHours": 1.0,
-        "monthsWithHours": 1,
+        "totalHours": 3.5,
+        "monthsWithHours": 2,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
         "topWorkSignals": [
+          {
+            "category": "social_welfare_resources",
+            "minutes": 150,
+            "hours": 2.5
+          },
           {
             "category": "financial_education",
             "minutes": 60,
@@ -674,34 +725,41 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 32.283,
           "2026-02": 28.067,
           "2026-03": 28.067,
-          "2026-04": 55.683
+          "2026-04": 55.683,
+          "2026-05": 54.683
         },
-        "totalHours": 144.1,
-        "monthsWithHours": 4,
+        "totalHours": 198.783,
+        "monthsWithHours": 5,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
         "topWorkSignals": [
           {
             "category": "transcript_and_meeting",
-            "minutes": 1894,
-            "hours": 31.57
-          },
-          {
-            "category": "content_and_course",
-            "minutes": 1693,
-            "hours": 28.22
+            "minutes": 2303,
+            "hours": 38.38
           },
           {
             "category": "financial_education",
-            "minutes": 1318,
-            "hours": 21.97
+            "minutes": 1884,
+            "hours": 31.4
+          },
+          {
+            "category": "content_and_course",
+            "minutes": 1829,
+            "hours": 30.48
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 197,
+            "hours": 3.28
           }
         ]
       }
@@ -724,12 +782,14 @@
         "coveredMonths": [
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-02": 0.0,
           "2026-03": 0.0,
-          "2026-04": 0.0
+          "2026-04": 0.0,
+          "2026-05": 0.0
         },
         "totalHours": 0.0,
         "monthsWithHours": 0,
@@ -758,13 +818,15 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 2.0,
           "2026-02": 0.0,
           "2026-03": 2.33,
-          "2026-04": 0.0
+          "2026-04": 0.0,
+          "2026-05": 0.0
         },
         "totalHours": 4.33,
         "monthsWithHours": 2,
@@ -833,15 +895,17 @@
         "coveredMonths": [
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-02": 4.25,
           "2026-03": 5.5,
-          "2026-04": 4.5
+          "2026-04": 4.5,
+          "2026-05": 4.5
         },
-        "totalHours": 14.25,
-        "monthsWithHours": 3,
+        "totalHours": 18.75,
+        "monthsWithHours": 4,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
@@ -877,15 +941,17 @@
         "coveredMonths": [
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-02": 3.883,
           "2026-03": 8.617,
-          "2026-04": 5.516
+          "2026-04": 5.516,
+          "2026-05": 2.75
         },
-        "totalHours": 18.016,
-        "monthsWithHours": 3,
+        "totalHours": 20.766,
+        "monthsWithHours": 4,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
@@ -897,8 +963,8 @@
           },
           {
             "category": "financial_education",
-            "minutes": 151,
-            "hours": 2.52
+            "minutes": 181,
+            "hours": 3.02
           }
         ]
       }
@@ -922,29 +988,31 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 2.167,
           "2026-02": 20.367,
           "2026-03": 16.8,
-          "2026-04": 15.433
+          "2026-04": 15.433,
+          "2026-05": 6.1
         },
-        "totalHours": 54.767,
-        "monthsWithHours": 4,
+        "totalHours": 60.867,
+        "monthsWithHours": 5,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
         "topWorkSignals": [
           {
             "category": "transcript_and_meeting",
-            "minutes": 1352,
-            "hours": 22.53
+            "minutes": 1564,
+            "hours": 26.07
           },
           {
             "category": "financial_education",
-            "minutes": 618,
-            "hours": 10.3
+            "minutes": 772,
+            "hours": 12.87
           },
           {
             "category": "social_welfare_resources",
@@ -978,13 +1046,15 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 1.5,
           "2026-02": 0.0,
           "2026-03": 1.0,
-          "2026-04": 1.0
+          "2026-04": 1.0,
+          "2026-05": 0.0
         },
         "totalHours": 3.5,
         "monthsWithHours": 3,
@@ -1019,24 +1089,26 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 3.667,
           "2026-02": 0.0,
           "2026-03": 1.0,
-          "2026-04": 0.5
+          "2026-04": 0.5,
+          "2026-05": 1.0
         },
-        "totalHours": 5.167,
-        "monthsWithHours": 3,
+        "totalHours": 6.167,
+        "monthsWithHours": 4,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
         "topWorkSignals": [
           {
             "category": "financial_education",
-            "minutes": 90,
-            "hours": 1.5
+            "minutes": 150,
+            "hours": 2.5
           }
         ]
       }
@@ -1060,16 +1132,18 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 15.083,
           "2026-02": 3.333,
           "2026-03": 1.0,
-          "2026-04": 1.0
+          "2026-04": 1.0,
+          "2026-05": 1.0
         },
-        "totalHours": 20.416,
-        "monthsWithHours": 4,
+        "totalHours": 21.416,
+        "monthsWithHours": 5,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
@@ -1081,8 +1155,8 @@
           },
           {
             "category": "financial_education",
-            "minutes": 120,
-            "hours": 2.0
+            "minutes": 180,
+            "hours": 3.0
           }
         ]
       }
@@ -1106,16 +1180,18 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 3.7,
           "2026-02": 22.133,
           "2026-03": 32.13,
-          "2026-04": 8.917
+          "2026-04": 8.917,
+          "2026-05": 18.5
         },
-        "totalHours": 66.88,
-        "monthsWithHours": 4,
+        "totalHours": 85.38,
+        "monthsWithHours": 5,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
@@ -1127,8 +1203,8 @@
           },
           {
             "category": "financial_education",
-            "minutes": 425,
-            "hours": 7.08
+            "minutes": 885,
+            "hours": 14.75
           }
         ]
       }
@@ -1149,26 +1225,33 @@
       "payStatusThisMonth": "paid",
       "history": {
         "coveredMonths": [
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
-          "2026-04": 20.216
+          "2026-04": 20.216,
+          "2026-05": 17.183
         },
-        "totalHours": 20.216,
-        "monthsWithHours": 1,
+        "totalHours": 37.399,
+        "monthsWithHours": 2,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
         "topWorkSignals": [
           {
             "category": "transcript_and_meeting",
-            "minutes": 521,
-            "hours": 8.68
+            "minutes": 725,
+            "hours": 12.08
           },
           {
             "category": "financial_education",
-            "minutes": 62,
-            "hours": 1.03
+            "minutes": 615,
+            "hours": 10.25
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 185,
+            "hours": 3.08
           }
         ]
       }
@@ -1192,16 +1275,18 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 9.167,
           "2026-02": 0.0,
           "2026-03": 23.367,
-          "2026-04": 13.5
+          "2026-04": 13.5,
+          "2026-05": 3.95
         },
-        "totalHours": 46.034,
-        "monthsWithHours": 3,
+        "totalHours": 49.984,
+        "monthsWithHours": 4,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
@@ -1243,16 +1328,18 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 14.55,
           "2026-02": 16.483,
           "2026-03": 20.3,
-          "2026-04": 3.933
+          "2026-04": 3.933,
+          "2026-05": 2.467
         },
-        "totalHours": 55.266,
-        "monthsWithHours": 4,
+        "totalHours": 57.733,
+        "monthsWithHours": 5,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
@@ -1264,8 +1351,8 @@
           },
           {
             "category": "social_welfare_resources",
-            "minutes": 497,
-            "hours": 8.28
+            "minutes": 645,
+            "hours": 10.75
           },
           {
             "category": "transcript_and_meeting",
@@ -1294,13 +1381,15 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 41.83,
           "2026-02": 51.75,
           "2026-03": 28.5,
-          "2026-04": 44.167
+          "2026-04": 44.167,
+          "2026-05": 0.0
         },
         "totalHours": 166.247,
         "monthsWithHours": 4,
@@ -1352,16 +1441,18 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 26.4,
           "2026-02": 11.567,
           "2026-03": 16.35,
-          "2026-04": 0.0
+          "2026-04": 0.0,
+          "2026-05": 3.017
         },
-        "totalHours": 54.317,
-        "monthsWithHours": 3,
+        "totalHours": 57.334,
+        "monthsWithHours": 4,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
@@ -1403,13 +1494,15 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 2.667,
           "2026-02": 0.0,
           "2026-03": 0.0,
-          "2026-04": 0.0
+          "2026-04": 0.0,
+          "2026-05": 0.0
         },
         "totalHours": 2.667,
         "monthsWithHours": 1,
@@ -1437,12 +1530,14 @@
         "coveredMonths": [
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-02": 0.0,
           "2026-03": 0.0,
-          "2026-04": 0.0
+          "2026-04": 0.0,
+          "2026-05": 0.0
         },
         "totalHours": 0.0,
         "monthsWithHours": 0,
@@ -1471,29 +1566,31 @@
           "2026-01",
           "2026-02",
           "2026-03",
-          "2026-04"
+          "2026-04",
+          "2026-05"
         ],
         "monthlyHours": {
           "2026-01": 15.533,
           "2026-02": 13.843,
           "2026-03": 9.95,
-          "2026-04": 8.983
+          "2026-04": 8.983,
+          "2026-05": 3.883
         },
-        "totalHours": 48.309,
-        "monthsWithHours": 4,
+        "totalHours": 52.192,
+        "monthsWithHours": 5,
         "dictionaryWorkMinutes": 0,
         "dictionaryWorkHours": 0.0,
         "dictionaryWorkMonths": [],
         "topWorkSignals": [
           {
             "category": "financial_education",
-            "minutes": 1246,
-            "hours": 20.77
+            "minutes": 1381,
+            "hours": 23.02
           },
           {
             "category": "transcript_and_meeting",
-            "minutes": 534,
-            "hours": 8.9
+            "minutes": 632,
+            "hours": 10.53
           }
         ]
       }
