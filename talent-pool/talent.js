@@ -100,7 +100,7 @@ function personCard(person) {
       <div class="k">居住地</div><div class="v">${escapeHtml(person.residence || '待補')}</div>
       <div class="k">目前工作狀態</div><div class="v">${escapeHtml(person.workStatus || '—')}</div>
       <div class="k">聯繫狀況</div><div class="v">${escapeHtml(person.contactStatus || '—')}</div>
-      <div class="k">工作等級</div><div class="v">${escapeHtml(person.workLevel || '—')}</div>
+      <div class="k">工作範本</div><div class="v">${escapeHtml(person.workLevel || '—')}</div>
       <div class="k">介紹／來源</div><div class="v">${escapeHtml(person.referrer || '—')}</div>
       <div class="k">履歷</div><div class="v">${resumeLink(person)}</div>
       <div class="k">缺漏</div><div class="v"><div class="signals">${missingLine(person)}</div></div>
@@ -178,7 +178,7 @@ async function main() {
   levels.forEach((level) => {
     const option = document.createElement('option');
     option.value = level;
-    option.textContent = `等級 ${level}`;
+    option.textContent = `工作範本 ${level}`;
     levelSelect.appendChild(option);
   });
 

@@ -48,7 +48,7 @@ function renderCard(intern) {
         <div class="k">現職</div><div class="v">${escapeHtml(intern.currentRole || '—')}</div>
         <div class="k">學歷/職業</div><div class="v">${escapeHtml(intern.educationOrJob || '—')}</div>
         <div class="k">目前工作狀態</div><div class="v">${escapeHtml(intern.workStatus || '—')}</div>
-        <div class="k">工作等級</div><div class="v">${escapeHtml(intern.workLevel || '—')}</div>
+        <div class="k">工作範本</div><div class="v">${escapeHtml(intern.workLevel || '—')}</div>
         <div class="k">備註</div><div class="v">${escapeHtml(intern.notes || '—')}</div>
       </div>
       <div style="margin-top:12px">

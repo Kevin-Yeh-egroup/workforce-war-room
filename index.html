@@ -366,6 +366,45 @@
       justify-self: start;
     }
 
+    .talent-overview .panel-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .talent-lead {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .talent-lead h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .talent-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .talent-stat {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      background: #fbfcff;
+    }
+
+    .talent-stat strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
     .hidden {
       display: none;
     }
@@ -400,7 +439,8 @@
 
       .grid,
       .split,
-      .automation-grid {
+      .automation-grid,
+      .talent-overview .panel-body {
         grid-template-columns: 1fr;
       }
     }
@@ -458,15 +498,21 @@
           <p class="subtitle" id="sourceStatus">資料來源：讀取中</p>
         </div>
         <div class="toolbar">
+          <a class="tool primary" href="/talent-pool/index.html">打開人才庫總覽</a>
           <a class="tool" href="/radar-addon/index.html">資訊雷達</a>
-          <a class="tool" href="/interns/index.html">工讀生快照</a>
-          <a class="tool" href="/talent-pool/index.html">人才庫追蹤</a>
           <button class="tool" type="button" id="toggleSeed">切換示範資料</button>
           <button class="tool primary" type="button" id="nextAction">產生本週確認摘要</button>
         </div>
       </header>
 
       <section class="metrics" id="metrics"></section>
+
+      <article class="panel talent-overview">
+        <h2>人才庫總覽</h2>
+        <div class="panel-body" id="talentOverview">
+          <div class="meta">讀取人才庫資料中…</div>
+        </div>
+      </article>
 
       <article class="panel">
         <h2>最新自動化資料</h2>
@@ -840,16 +886,16 @@
 
       $("#automationCards").innerHTML = [
         {
-          title: "工讀生公開快照",
+          title: "人才庫資料更新",
           value: `${counts.active ?? "—"} / ${counts.total ?? "—"}`,
-          meta: `active / total｜paid ${counts.paid ?? "—"}｜due ${counts.due ?? "—"}｜${formatSourceTime(sourceModifiedAt)}`,
-          href: "/interns/index.html",
-          cta: "打開工讀生快照"
+          meta: `後台快照比對用｜paid ${counts.paid ?? "—"}｜due ${counts.due ?? "—"}｜${formatSourceTime(sourceModifiedAt)}`,
+          href: "/talent-pool/index.html",
+          cta: "查看人才庫"
         },
         {
           title: "人才庫追蹤",
           value: `${talentCounts.withHistory ?? "—"} / ${talentCounts.total ?? "—"}`,
-          meta: `有歷史工時 / total｜履歷狀態 ${talentCounts.withResumeStatus ?? "—"}｜${formatSourceTime(talentUpdatedAt)}`,
+          meta: `有歷史工時 / total｜電話 ${talentCounts.withPhone ?? "—"}｜Email ${talentCounts.withEmail ?? "—"}｜${formatSourceTime(talentUpdatedAt)}`,
           href: "/talent-pool/index.html",
           cta: "打開人才庫"
         },
@@ -877,6 +923,39 @@
           <a class="tool" href="${item.href}">${item.cta}</a>
         </article>
       `).join("");
+    }
+
+    function renderTalentOverview() {
+      const people = Array.isArray(addon.talent?.people) ? addon.talent.people : [];
+      const counts = addon.talent?.meta?.counts || {};
+      const total = counts.total ?? people.length;
+      const withPhone = counts.withPhone ?? people.filter((person) => person.phone).length;
+      const withEmail = counts.withEmail ?? people.filter((person) => person.email).length;
+      const withResidence = counts.withResidence ?? people.filter((person) => person.residence).length;
+      const missing = counts.missingAnyRequired ?? people.filter((person) => (person.missingRequiredFields || []).length).length;
+      const updatedAt = formatSourceTime(addon.talent?.meta?.sourceModifiedAt || addon.talent?.meta?.generatedAt);
+      const coveredMonths = (addon.talent?.meta?.coveredMonths || []).join("、") || "尚未標示";
+
+      $("#talentOverview").innerHTML = `
+        <div class="talent-lead">
+          <h3>工讀生基本資料、履歷連結與每月工作情況都集中在人才庫。</h3>
+          <p class="subtitle">首頁只保留入口與追蹤摘要；後台快照繼續給自動化比對新增、補件與派薪狀態，不再當成主要頁面。</p>
+          <div class="toolbar" style="justify-content:flex-start;margin-top:4px">
+            <a class="tool primary" href="/talent-pool/index.html">打開完整人才庫</a>
+            <button class="tool" type="button" data-view-shortcut="people">查看首頁人才表</button>
+          </div>
+          <div class="meta">更新時間：${updatedAt}｜月份：${escapeHtml(coveredMonths)}｜薪資金額與銀行資料仍不顯示</div>
+        </div>
+        <div class="talent-stats">
+          <div class="talent-stat"><strong>${escapeHtml(total)}</strong><span class="meta">人才總數</span></div>
+          <div class="talent-stat"><strong>${escapeHtml(withPhone)} / ${escapeHtml(withEmail)}</strong><span class="meta">電話 / Email 已建檔</span></div>
+          <div class="talent-stat"><strong>${escapeHtml(withResidence)}</strong><span class="meta">已有居住地（縣市/區）</span></div>
+          <div class="talent-stat"><strong>${escapeHtml(missing)}</strong><span class="meta">仍缺必要欄位</span></div>
+        </div>
+      `;
+
+      const shortcut = document.querySelector("[data-view-shortcut='people']");
+      if (shortcut) shortcut.addEventListener("click", () => switchView("people"));
     }
 
     function renderConfirmations() {
@@ -958,7 +1037,7 @@
           const resume = person.resume?.url
             ? `<a href="${escapeHtml(person.resume.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(person.resume.label || "履歷")}</a>`
             : escapeHtml(person.resume?.label || "待補履歷連結");
-          const info = [person.currentRole, person.educationOrJob, person.workStatus, person.contactStatus, person.workLevel ? `等級 ${person.workLevel}` : ""]
+          const info = [person.currentRole, person.educationOrJob, person.workStatus, person.contactStatus, person.workLevel ? `工作範本 ${person.workLevel}` : ""]
             .filter(Boolean)
             .map(escapeHtml)
             .join("<br>");
@@ -1018,6 +1097,7 @@
     function render() {
       renderSourceStatus();
       renderMetrics();
+      renderTalentOverview();
       renderAutomationCards();
       renderConfirmations();
       renderCases();

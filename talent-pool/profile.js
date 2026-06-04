@@ -71,7 +71,7 @@ function render(person, meta) {
       <div class="k">學歷/職業</div><div class="v">${escapeHtml(person.educationOrJob || '—')}</div>
       <div class="k">目前工作狀態</div><div class="v">${escapeHtml(person.workStatus || '—')}</div>
       <div class="k">聯繫狀況</div><div class="v">${escapeHtml(person.contactStatus || '—')}</div>
-      <div class="k">工作等級</div><div class="v">${escapeHtml(person.workLevel || '—')}</div>
+      <div class="k">工作範本</div><div class="v">${escapeHtml(person.workLevel || '—')}</div>
       <div class="k">介紹／來源</div><div class="v">${escapeHtml(person.referrer || '—')}</div>
       <div class="k">履歷</div><div class="v">${resume(person)}</div>
       <div class="k">備註</div><div class="v">${escapeHtml(person.notes || '—')}</div>
