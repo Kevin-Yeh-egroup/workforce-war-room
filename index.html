@@ -494,7 +494,7 @@
       <header>
         <div>
           <h1>本週人力與審核戰情</h1>
-          <p class="subtitle">每週五 13:30 先產生審核確認清單；Kevin 確認後才寫入詞庫、審核、關閉事件與薪資。</p>
+          <p class="subtitle">主要指標改讀最新人才庫、工時歷史、派薪狀態與資訊雷達；舊 dashboard snapshot 只保留作為下方審核範例區塊。</p>
           <p class="subtitle" id="sourceStatus">資料來源：讀取中</p>
         </div>
         <div class="toolbar">
@@ -677,7 +677,7 @@
           name: "孫瑜",
           template: "初級工讀生薪資計算",
           work: "逐字稿名詞修正、資料整理",
-          quality: "本週完成 1 案，詞庫判斷需少量複核",
+          quality: "舊審核 snapshot：曾完成 1 案，需接入真實週報後才作為本週判斷",
           load: 42,
           suggestion: "可持續安排詞庫修正與標準化任務"
         },
@@ -842,29 +842,51 @@
     }
 
     function renderSourceStatus() {
-      const mode = data.source?.mode === "snapshot" ? "公開 snapshot" : "備援示範資料";
-      const sources = (data.source?.sources || []).join("、") || "未標示";
-      const updatedAt = formatSourceTime(data.source?.updatedAt);
-      $("#sourceStatus").textContent = `資料來源：${mode}｜更新時間：${updatedAt}｜來源：${sources}`;
+      const talentUpdatedAt = addon.talent?.meta?.sourceModifiedAt || addon.talent?.meta?.generatedAt;
+      const internsUpdatedAt = addon.interns?.meta?.sourceModifiedAt || addon.interns?.meta?.generatedAt;
+      const radarMeta = addon.radar?.meta || {};
+      const radarReady = radarMeta.weekStart && !isPlaceholderWeek(radarMeta.weekStart);
+      const sources = [
+        addon.talent ? `人才庫 ${formatSourceTime(talentUpdatedAt)}` : "",
+        addon.interns ? `派薪狀態 ${formatSourceTime(internsUpdatedAt)}` : "",
+        radarReady ? `資訊雷達 ${radarMeta.weekStart}～${radarMeta.weekEnd}` : "資訊雷達待產生"
+      ].filter(Boolean);
+      const fallback = data.source?.updatedAt ? `舊審核 snapshot ${formatSourceTime(data.source.updatedAt)}` : "尚未取得資料";
+      $("#sourceStatus").textContent = `資料來源：${sources.join("｜") || fallback}`;
     }
 
     function renderMetrics() {
-      const completed = data.cases.filter((item) => item.status === "已完成").length;
-      const pending = data.confirmations.filter((item) => item.status === "待確認").length;
-      const minutes = data.cases.reduce((sum, item) => sum + item.minutes, 0);
-      const includeCount = data.dictionary.filter((item) => item.decision === "可納入").length;
-      const payrollReady = data.cases.filter((item) => item.salary || item.payStatus).length;
+      const talentPeople = Array.isArray(addon.talent?.people) ? addon.talent.people : [];
+      const talentCounts = addon.talent?.meta?.counts || {};
+      const internCounts = addon.interns?.meta?.counts || {};
+      const total = talentCounts.total ?? talentPeople.length;
+      const active = talentCounts.active ?? internCounts.active ?? 0;
+      const paused = talentCounts.paused ?? internCounts.paused ?? 0;
+      const historyOnly = talentCounts.historyOnly ?? 0;
+      const withPhone = talentCounts.withPhone ?? talentPeople.filter((person) => person.phone).length;
+      const withEmail = talentCounts.withEmail ?? talentPeople.filter((person) => person.email).length;
+      const withResidence = talentCounts.withResidence ?? talentPeople.filter((person) => person.residence).length;
+      const missing = talentCounts.missingAnyRequired ?? talentPeople.filter((person) => (person.missingRequiredFields || []).length).length;
+      const historyHours = Number(talentCounts.historyTotalHours || 0);
+      const historyHoursLabel = historyHours
+        ? historyHours.toLocaleString("zh-TW", { maximumFractionDigits: 1 })
+        : "—";
+      const dictionaryMinutes = talentCounts.dictionaryWorkMinutes ?? addon.interns?.meta?.history?.dictionaryWorkMinutes ?? 0;
+      const radarMeta = addon.radar?.meta || {};
+      const radarReady = radarMeta.weekStart && !isPlaceholderWeek(radarMeta.weekStart);
+      const highlights = Array.isArray(addon.radar?.highlights) ? addon.radar.highlights.length : 0;
+      const hasWorkItems = addon.workItems && !addon.workItems.includes("尚未產生");
       $("#metrics").innerHTML = [
-        ["本週完成", completed, "已完成審核案件"],
-        ["待確認", pending, "目前無真實待辦"],
-        ["核定分鐘", minutes, "回流薪資與負載"],
-        ["建議新增詞", includeCount, "不含已存在詞庫"],
-        ["派薪狀態", payrollReady, "僅顯示狀態，不含金額"]
+        ["人才總數", total || "—", `active ${active}｜paused ${paused}｜history-only ${historyOnly}`],
+        ["待補資料", missing || 0, `缺電話 ${Math.max(0, total - withPhone)}｜缺 Email ${Math.max(0, total - withEmail)}｜缺居住地 ${Math.max(0, total - withResidence)}`],
+        ["1–4 月工時", historyHoursLabel, `${talentCounts.withHistory ?? 0} 人有歷史工時｜名詞庫 ${dictionaryMinutes} 分鐘`],
+        ["派薪狀態", `${internCounts.paid ?? "—"} / ${internCounts.due ?? "—"}`, "paid / due｜不含金額與銀行資料"],
+        ["本週雷達", radarReady ? highlights : "待產生", hasWorkItems ? "工作清單已產生" : "新聞摘要與派工清單待產生"]
       ].map(([label, value, hint]) => `
         <article class="metric">
-          <div class="label">${label}</div>
-          <div class="value">${value}</div>
-          <div class="hint">${hint}</div>
+          <div class="label">${escapeHtml(label)}</div>
+          <div class="value">${escapeHtml(value)}</div>
+          <div class="hint">${escapeHtml(hint)}</div>
         </article>
       `).join("");
     }
