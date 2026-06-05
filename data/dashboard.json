@@ -1,116 +1,143 @@
 {
   "source": {
     "mode": "snapshot",
-    "updatedAt": "2026-05-29T17:12:00+08:00",
+    "updatedAt": "2026-06-05T15:20:00+08:00",
     "sources": [
-      "Codex reviewed workflow record",
-      "InfoCenter verified test case",
-      "Kevin-provided review rules"
+      "InfoCenter dictionary write batch",
+      "InfoCenter pending dictionary rejection batch",
+      "InfoCenter review SUCCESS + event close batch",
+      "InfoCenter salary create batch"
     ],
-    "publicNote": "這份資料是公開 dashboard snapshot。完整個資、薪資明細與低信心判斷不直接公開，需由 Codex 在更新前過濾。"
+    "publicNote": "本 snapshot 已移除薪資金額與個資，只保留公開營運摘要。"
   },
   "cases": [
     {
-      "id": "2uqNjm7gRiOWb8RdccVwIg",
-      "title": "115519-1150518 財務相談室-17-孫瑜",
-      "person": "孫瑜",
-      "minutes": 65,
+      "id": "XAMMFq0VSzyn0JqaAObXMA",
+      "title": "115526-1130824 債務工作坊-初階梯次1-2-吳婷宇",
+      "person": "吳○○",
+      "minutes": 230,
       "status": "已完成",
       "risk": "低",
-      "salary": "已建立（不顯示金額）",
-      "dictionaryAction": "新增 3 筆，已存在 2 筆，排除 1 筆"
+      "salary": "已建立（細節隱去）",
+      "dictionaryAction": "已完成",
+      "review": "SUCCESS",
+      "eventClosed": true
+    },
+    {
+      "id": "0P0Yue6MVSbKnMPj3CumwQ",
+      "title": "115520-1130911主管班第二梯：如何協助社工進行經濟輔導-yachu Zhang",
+      "person": "Y***",
+      "minutes": 215,
+      "status": "已完成",
+      "risk": "低",
+      "salary": "已建立（細節隱去）",
+      "dictionaryAction": "已完成",
+      "review": "SUCCESS",
+      "eventClosed": true
     }
   ],
   "dictionary": [
     {
-      "wrong": "袁家中心",
-      "correct": "原家中心",
-      "decision": "可納入",
-      "reason": "社福服務脈絡中的專有/機構用語"
+      "wrong": "聊去自營",
+      "correct": "療癒自己",
+      "status": "ACTIVE"
     },
     {
-      "wrong": "袁民",
-      "correct": "原民",
-      "decision": "可納入",
-      "reason": "原民為社福界常用詞"
+      "wrong": "粹家",
+      "correct": "脆家",
+      "status": "ACTIVE"
     },
     {
-      "wrong": "袁銘",
-      "correct": "原民",
-      "decision": "可納入",
-      "reason": "同批脈絡中明確指向原民"
+      "wrong": "不務對象",
+      "correct": "服務對象",
+      "status": "ACTIVE"
     },
     {
-      "wrong": "魚鱗",
-      "correct": "雲林",
-      "decision": "不納入",
-      "reason": "左詞有正常語意，可能造成全域誤替換"
+      "wrong": "事親",
+      "correct": "事情",
+      "status": "ACTIVE"
+    },
+    {
+      "wrong": "代真工",
+      "correct": "代振工",
+      "status": "ACTIVE"
+    },
+    {
+      "wrong": "熱工",
+      "correct": "社工",
+      "status": "ACTIVE"
+    },
+    {
+      "wrong": "產補式",
+      "correct": "殘補式",
+      "status": "ACTIVE"
+    },
+    {
+      "wrong": "入股浮出",
+      "correct": "入不敷出",
+      "status": "ACTIVE"
+    },
+    {
+      "wrong": "按材理",
+      "correct": "按常理",
+      "status": "ACTIVE"
+    },
+    {
+      "wrong": "按行",
+      "correct": "案型",
+      "status": "ACTIVE"
+    },
+    {
+      "wrong": "字品原因",
+      "correct": "致貧原因",
+      "status": "ACTIVE"
+    },
+    {
+      "wrong": "中國新貨13基金會",
+      "correct": "中國信託慈善基金會",
+      "status": "ACTIVE"
     }
   ],
   "people": [
     {
-      "name": "孫瑜",
+      "name": "吳○○",
+      "work": "自定義名詞庫修正",
       "template": "初級工讀生薪資計算",
-      "work": "逐字稿名詞修正、資料整理",
-      "quality": "已完成 1 案測試流程；詞庫候選需由 Kevin 校準規則後持續累積",
-      "load": 42,
-      "suggestion": "可持續安排詞庫修正與標準化任務"
+      "status": "completed"
     },
     {
-      "name": "yachu Zhang",
+      "name": "Y***",
+      "work": "自定義名詞庫修正",
       "template": "認證實習生薪資計算",
-      "work": "進階校對、資料判讀、課程支援",
-      "quality": "待匯入實際案件與 Kevin 補充資料",
-      "load": 0,
-      "suggestion": "待補能力資料後再派進階任務"
-    },
-    {
-      "name": "李怡霖",
-      "template": "怡霖薪資計算",
-      "work": "行政流程、內容整理、專案協作",
-      "quality": "待匯入實際案件與 Kevin 補充資料",
-      "load": 0,
-      "suggestion": "薪資範本需獨立追蹤"
+      "status": "completed"
     }
   ],
   "assignments": [
     {
-      "task": "每週自訂義名詞審核",
-      "person": "孫瑜 / yachu Zhang",
-      "reason": "已具備逐字稿與名詞修正脈絡，後續需用真實案件累積品質訊號",
-      "gate": "低信心詞先交 Kevin 判斷"
-    },
-    {
-      "task": "好理家在文章與工具優化",
-      "person": "待 Kevin 補資料後判斷",
-      "reason": "需要先建立每位工讀生能力、可用時段與品質資料",
-      "gate": "先以一篇文章或一個頁面試做"
-    },
-    {
-      "task": "馴錢師活動資料整理",
-      "person": "待 Kevin 補資料後判斷",
-      "reason": "流程與行政型工作可標準化，但需先知道人員偏好與穩定度",
-      "gate": "需定義輸出格式與截止時間"
+      "task": "本週 InfoCenter dictionary/salary batch",
+      "person": "Kevin",
+      "status": "completed_local",
+      "note": "外部執行已完成，本地發布待決策"
     }
   ],
   "confirmations": [
     {
-      "type": "資料來源",
-      "title": "已改為 snapshot 資料架構",
-      "detail": "Dashboard 會讀取 data/dashboard.json。後續由 Codex 依需求讀取 InfoCenter、Codex 工作紀錄、GitHub 或 Kevin 補充資料後更新這個檔案。",
-      "status": "已釐清"
+      "type": "dictionary",
+      "title": "待審核 33 筆已拒絕",
+      "detail": "本輪待審核已清空。",
+      "status": "done_local"
     },
     {
-      "type": "隱私邊界",
-      "title": "公開站只放必要摘要",
-      "detail": "完整薪資、個資、低信心評語與內部判斷不直接公開；若要完整戰情，需要另做私有版或受保護版本。",
-      "status": "待確認"
+      "type": "execution",
+      "title": "2 事件已結案與派薪",
+      "detail": "兩筆事件皆為 SUCCESS、closed、salaryCount=1。",
+      "status": "done_local"
     },
     {
-      "type": "下一步",
-      "title": "等待 Kevin 補工讀生資料",
-      "detail": "可補每位工讀生的可用時間、擅長任務、穩定度、目前負載、希望培養方向與不適合任務。",
-      "status": "待接入"
+      "type": "publish_gate",
+      "title": "GitHub / Vercel 發布已批准",
+      "detail": "本輪 dashboard 已完成並準備推送至公開站。",
+      "status": "approved"
     }
   ]
 }
