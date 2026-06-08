@@ -1,4 +1,52 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": "tracking-20260608-financial-week-wrap",
+      "createdAt": "2026-06-08",
+      "topic": "tw_fin_ed",
+      "title": "Review 2026 Taiwan Financial Week outputs and reusable examples",
+      "status": "open",
+      "nextCheck": "2026-06-15",
+      "question": "Which activity formats or anti-fraud examples are worth turning into FamilyFin content or member education?",
+      "links": [
+        "https://www.tfsr.org.tw/information/179"
+      ]
+    },
+    {
+      "id": "tracking-20260608-codex-sites-pilot",
+      "createdAt": "2026-06-08",
+      "topic": "codex_workflow",
+      "title": "Pilot one Codex Sites or role-plugin workflow",
+      "status": "open",
+      "nextCheck": "2026-06-16",
+      "question": "Does a Site or role-plugin path reduce handoff friction for weekly artifacts versus file-only delivery?",
+      "links": [
+        "https://openai.com/index/codex-for-every-role-tool-workflow/"
+      ]
+    },
+    {
+      "id": "tracking-20260608-memory-rollout-watch",
+      "createdAt": "2026-06-08",
+      "topic": "global_ai",
+      "title": "Watch ChatGPT memory rollout outside US Plus/Pro",
+      "status": "open",
+      "nextCheck": "2026-06-20",
+      "question": "When the rollout expands, which Kevin workflows gain enough continuity value to justify a fresh checkpoint policy review?",
+      "links": [
+        "https://openai.com/index/chatgpt-memory-dreaming/"
+      ]
+    },
+    {
+      "id": "tracking-20260608-search-profile-eligibility",
+      "createdAt": "2026-06-08",
+      "topic": "growth_gamification",
+      "title": "Track Search profile eligibility and international expansion",
+      "status": "open",
+      "nextCheck": "2026-06-20",
+      "question": "Can any public-facing project use this directly, or should the same pattern be mimicked locally with simpler author hubs?",
+      "links": [
+        "https://blog.google/products-and-platforms/products/search/a-new-profile-to-help-publishers-and-creators-highlight-their-work-on-search/"
+      ]
+    }
+  ]
 }
-

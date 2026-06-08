@@ -1,22 +1,278 @@
 {
   "meta": {
-    "weekStart": "YYYY-MM-DD",
-    "weekEnd": "YYYY-MM-DD",
-    "generatedAt": "YYYY-MM-DDTHH:mm:ss+08:00",
+    "weekStart": "2026-06-01",
+    "weekEnd": "2026-06-08",
+    "generatedAt": "2026-06-08T09:08:24+08:00",
     "timezone": "Asia/Taipei",
-    "notes": ["請用 radar-week.template.json 當骨架填寫本檔案。"]
+    "notes": [
+      "Coverage is the last 7 days in Asia/Taipei, with one carry-forward event item when the public activity lands inside this week.",
+      "Sources favor primary or official pages; the social-work conference item uses a disclosed submitted release and is marked medium credibility."
+    ]
   },
-  "highlights": [],
-  "items": [],
+  "highlights": [
+    {
+      "title": "2026 Taiwan Financial Week starts on June 8",
+      "why": "A live public campaign window already exists for anti-fraud, financial literacy, and long-term planning outreach.",
+      "next": "Shortlist two relevant sessions and turn one anti-fraud or TISA takeaway into a member-facing outline by 2026-06-10."
+    },
+    {
+      "title": "Codex is now explicitly packaging workflow plugins, annotations, and shareable Sites",
+      "why": "This directly matches Kevin-style operator workflows: files, dashboards, briefs, and lightweight public/internal tools.",
+      "next": "Pick one weekly artifact to pilot with Codex Sites or a role-specific plugin and capture whether it reduces manual handoff time."
+    },
+    {
+      "title": "Memory systems are becoming a first-class workflow layer, not just a chat convenience",
+      "why": "OpenAI is optimizing memory for freshness and continuity, which makes checkpoint quality and privacy boundaries more important.",
+      "next": "Review which recurring workflows should rely on model memory versus durable local state before expanding any automation."
+    }
+  ],
+  "items": [
+    {
+      "id": "20260603-tw-social-work-chaoyang-ai-welfare-shift",
+      "date": "2026-06-03",
+      "topic": "tw_social_work",
+      "title": "Chaoyang social-work conference framed AI as a workforce and governance issue",
+      "oneLine": "A June 3 conference on welfare transformation treated AI, supervision, ethics, and governance as one shared professional agenda.",
+      "facts": [
+        "Chaoyang University said its June 3 conference on welfare transformation and social-work development drew about 120 participants from academia, practice, and student groups.",
+        "The forum discussion explicitly covered education quality, technology-enabled services, social-work supervision, professional development, and welfare governance in an aging society.",
+        "The organizing statement positioned social work as needing both helping skills and stronger cross-domain and technology application ability."
+      ],
+      "yourTake": [
+        "The useful signal is not a single AI tool. It is that social-work training and frontline service design are starting to treat technology capability as part of professional readiness."
+      ],
+      "actions": [
+        "Draft a one-page list of low-risk AI support tasks for social-work and welfare operations: meeting prep, document cleanup, case-admin summaries, training-note extraction, and public resource mapping."
+      ],
+      "sources": [
+        {
+          "label": "CNA Message Platform - Chaoyang conference release",
+          "url": "https://www.cna.com.tw/postwrite/chi/435253",
+          "publishedAt": "2026-06-03"
+        }
+      ],
+      "credibility": {
+        "level": "medium",
+        "reason": "Date, organizer, and discussion topics are explicit, but this is a submitted institutional release rather than staff reporting."
+      },
+      "status": "new",
+      "followups": [
+        "Check whether slides, proceedings, or follow-up materials are released after the conference."
+      ],
+      "tags": [
+        "social-work",
+        "ai-adoption",
+        "governance"
+      ]
+    },
+    {
+      "id": "20260608-tw-fin-ed-taiwan-financial-week",
+      "date": "2026-06-08",
+      "topic": "tw_fin_ed",
+      "title": "2026 Taiwan Financial Week opens with a ready-made public education window",
+      "oneLine": "Taiwan Financial Week runs June 8 to June 14 and bundles 28 financial education activities across banking, insurance, securities, funds, and anti-fraud outreach.",
+      "facts": [
+        "The Taiwan Financial Services Roundtable said the week is part of the FSC-backed financial literacy promotion plan and runs from 2026-06-08 to 2026-06-14.",
+        "The announcement says participating institutions jointly offer 28 activities, online and offline, with roughly 26,000 expected participant visits.",
+        "The program emphasizes practical money management, anti-fraud awareness, and sustainable financial capability rather than product marketing alone."
+      ],
+      "yourTake": [
+        "This is a strong timing hook for FamilyFin or member education because the public attention window already exists and the content is easier to contextualize than launching a standalone campaign from zero."
+      ],
+      "actions": [
+        "Pick two event topics that map cleanly to FamilyFin teaching needs and convert one into a short member-friendly outline this week."
+      ],
+      "sources": [
+        {
+          "label": "Taiwan Financial Services Roundtable - 2026 Taiwan Financial Week",
+          "url": "https://www.tfsr.org.tw/information/179",
+          "publishedAt": "2026-05-18"
+        }
+      ],
+      "credibility": {
+        "level": "high",
+        "reason": "Official organizer announcement with concrete dates, activity count, and program framing."
+      },
+      "status": "new",
+      "followups": [
+        "Review the post-event outputs or summary materials after 2026-06-14 to see which formats drew the most usable education examples."
+      ],
+      "tags": [
+        "financial-education",
+        "taiwan",
+        "anti-fraud",
+        "tisa"
+      ]
+    },
+    {
+      "id": "20260604-global-ai-chatgpt-memory-dreaming",
+      "date": "2026-06-04",
+      "topic": "global_ai",
+      "title": "OpenAI upgrades ChatGPT memory toward fresher long-running context",
+      "oneLine": "OpenAI is rolling out a more scalable memory-synthesis system designed to keep context fresher and reduce stale saved-memory drift.",
+      "facts": [
+        "OpenAI announced the update on 2026-06-04 and described it as a more capable and scalable memory-synthesis system for freshness, continuity, and relevance.",
+        "The post says the new approach is meant to address staleness, correctness, and scalability problems across hundreds of millions of users and multi-year time horizons.",
+        "Availability starts with Plus and Pro users in the US, with more countries and Free and Go users scheduled later."
+      ],
+      "yourTake": [
+        "For recurring operational work, better model memory increases leverage only if checkpoint discipline stays strong. It helps with continuity, but it also raises the cost of sloppy or sensitive context boundaries."
+      ],
+      "actions": [
+        "Review which recurring workflows should rely on model memory versus explicit local state files, especially around payroll, approvals, and privacy-sensitive intern data."
+      ],
+      "sources": [
+        {
+          "label": "OpenAI - Dreaming: Better memory for a more helpful ChatGPT",
+          "url": "https://openai.com/index/chatgpt-memory-dreaming/",
+          "publishedAt": "2026-06-04"
+        }
+      ],
+      "credibility": {
+        "level": "high",
+        "reason": "Primary product/research release from OpenAI with concrete rollout scope and rationale."
+      },
+      "status": "new",
+      "followups": [
+        "Watch for rollout expansion beyond the US before depending on this in shared-team habits."
+      ],
+      "tags": [
+        "memory",
+        "chatgpt",
+        "workflow",
+        "continuity"
+      ]
+    },
+    {
+      "id": "20260602-codex-workflow-role-plugins-sites",
+      "date": "2026-06-02",
+      "topic": "codex_workflow",
+      "title": "Codex adds role plugins, annotations, and shareable Sites",
+      "oneLine": "OpenAI is explicitly turning Codex into a broader work platform for operators, analysts, designers, and researchers, not only developers.",
+      "facts": [
+        "OpenAI published the update on 2026-06-02 and said more than 5 million people now use Codex every week.",
+        "The post says non-developers make up about 20 percent of overall Codex users and are growing more than three times as fast as developers.",
+        "OpenAI launched six role-specific plugins and said they bundle 62 apps and 110 skills, alongside annotations and a preview of shareable Sites via URL."
+      ],
+      "yourTake": [
+        "This validates Kevin-style report, dashboard, and workflow automation use cases as a first-class path. The key opportunity is to reduce the last-mile handoff from draft artifact to reviewable surface."
+      ],
+      "actions": [
+        "Pilot one weekly artifact with a shareable Site or role-specific plugin flow and compare the review friction against the current file-first path."
+      ],
+      "sources": [
+        {
+          "label": "OpenAI - Codex for every role, tool, and workflow",
+          "url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
+          "publishedAt": "2026-06-02"
+        }
+      ],
+      "credibility": {
+        "level": "high",
+        "reason": "Primary product announcement with specific adoption and capability details."
+      },
+      "status": "new",
+      "followups": [
+        "Track which plugin bundles overlap most with Kevin workflows before standardizing any new runbook."
+      ],
+      "tags": [
+        "codex",
+        "plugins",
+        "sites",
+        "workflow"
+      ]
+    },
+    {
+      "id": "20260602-global-ai-project-glasswing-expansion",
+      "date": "2026-06-02",
+      "topic": "global_ai",
+      "title": "Anthropic expands Project Glasswing from a pilot to broader critical-infrastructure coverage",
+      "oneLine": "Anthropic says its cyber-defense partnership is expanding to about 150 new organizations across more than 15 countries.",
+      "facts": [
+        "Anthropic announced the expansion on 2026-06-02 after an initial partner group used Mythos Preview to scan codebases for vulnerabilities.",
+        "The company says the expanded group includes roughly 150 additional organizations in sectors such as power, water, healthcare, communications, and hardware.",
+        "Anthropic frames the next bottleneck as not just finding vulnerabilities, but reviewing, disclosing, patching, and safely scaling defensive use."
+      ],
+      "yourTake": [
+        "The bigger signal is governance maturity: frontier-model discussions are moving from raw capability headlines toward operational norms, patch workflows, and defender advantage."
+      ],
+      "actions": [
+        "Keep approval gates, audit trails, and patch-ready outputs explicit in any automation that touches public artifacts or sensitive operational data."
+      ],
+      "sources": [
+        {
+          "label": "Anthropic - Expanding Project Glasswing",
+          "url": "https://www.anthropic.com/news/expanding-project-glasswing",
+          "publishedAt": "2026-06-02"
+        }
+      ],
+      "credibility": {
+        "level": "high",
+        "reason": "Primary announcement with concrete scale, geography, and deployment framing."
+      },
+      "status": "new",
+      "followups": [
+        "Watch for the next public detail on safeguards, partner tooling, or broader access criteria."
+      ],
+      "tags": [
+        "ai-governance",
+        "cybersecurity",
+        "deployment"
+      ]
+    },
+    {
+      "id": "20260604-growth-search-profiles",
+      "date": "2026-06-04",
+      "topic": "growth_gamification",
+      "title": "Google Search profiles turn publisher identity into a followable landing page",
+      "oneLine": "Google launched Search profiles so eligible creators and publishers can centralize links, recent content, and a direct follow surface from Search and Discover.",
+      "facts": [
+        "Google announced Search profiles on 2026-06-04 as a dedicated, shareable space for publishers and creators to highlight content across platforms.",
+        "The profile can showcase recent articles, videos, social posts, and key links, and can be reached from mobile knowledge panels, Discover, or a direct URL.",
+        "Initial launch is US-only and eligibility starts with creators or publishers that already have a sizable following on a major social or video platform."
+      ],
+      "yourTake": [
+        "The growth lesson is not the feature alone. It is the lighter acquisition loop: identity page, direct URL, current links, and follow behavior in one place. Small public projects can mimic this pattern even before platform eligibility exists."
+      ],
+      "actions": [
+        "Check whether any public-facing project should adopt a simpler author or publisher hub pattern instead of sending people straight into a deep content tree."
+      ],
+      "sources": [
+        {
+          "label": "Google - A new profile to help publishers and creators highlight their work on Search",
+          "url": "https://blog.google/products-and-platforms/products/search/a-new-profile-to-help-publishers-and-creators-highlight-their-work-on-search/",
+          "publishedAt": "2026-06-04"
+        }
+      ],
+      "credibility": {
+        "level": "high",
+        "reason": "Primary Google product announcement with launch mechanics and eligibility details."
+      },
+      "status": "new",
+      "followups": [
+        "Watch for expansion beyond the US and for whether small publishers receive clearer eligibility guidance."
+      ],
+      "tags": [
+        "growth",
+        "discoverability",
+        "creators",
+        "search"
+      ]
+    }
+  ],
   "dashboard": {
     "countsByTopic": {
-      "tw_social_work": 0,
-      "tw_fin_ed": 0,
-      "global_ai": 0,
-      "codex_workflow": 0,
-      "growth_gamification": 0
+      "tw_social_work": 1,
+      "tw_fin_ed": 1,
+      "global_ai": 2,
+      "codex_workflow": 1,
+      "growth_gamification": 1
     },
-    "trackingItems": []
+    "trackingItems": [
+      "Review Taiwan Financial Week outcomes after 2026-06-14.",
+      "Pilot one Codex Site or plugin-backed weekly artifact.",
+      "Watch ChatGPT memory rollout beyond US Plus/Pro availability.",
+      "Monitor Search profiles international rollout and eligibility."
+    ]
   }
 }
-
