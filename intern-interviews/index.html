@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>工讀生 15 分鐘會談工具</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #667085;
+      --line: #d8dee8;
+      --panel: #ffffff;
+      --bg: #f6f8fb;
+      --blue: #1f6feb;
+      --cyan: #008c95;
+      --green: #17833b;
+      --amber: #b7791f;
+      --red: #c2410c;
+      --soft-blue: #eaf2ff;
+      --soft-green: #eaf7ef;
+      --soft-amber: #fff4db;
+      --shadow: 0 10px 26px rgba(20, 31, 48, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: radial-gradient(circle at top left, #e9f3ff, transparent 32rem), var(--bg);
+      font-family: "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: rgba(255, 255, 255, .9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner,
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 20px;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.18;
+      letter-spacing: -.02em;
+    }
+
+    h2 { margin: 0 0 12px; font-size: 20px; line-height: 1.35; }
+    h3 { margin: 0 0 6px; font-size: 16px; }
+    p { margin: 0; }
+
+    .subtitle,
+    .muted {
+      color: var(--muted);
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .tool,
+    button.tool {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 9px 12px;
+      font: inherit;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .tool.primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .wrap { display: grid; gap: 16px; }
+
+    .hero,
+    .panel,
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 22px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--blue);
+      background: var(--soft-blue);
+    }
+
+    .badge.green { color: var(--green); background: var(--soft-green); }
+    .badge.amber { color: var(--amber); background: var(--soft-amber); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .panel { overflow: hidden; }
+    .panel.span-7 { grid-column: span 7; }
+    .panel.span-5 { grid-column: span 5; }
+    .panel.span-12 { grid-column: span 12; }
+
+    .panel h2 {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .panel-body {
+      padding: 16px 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 10px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      background: #fbfcff;
+    }
+
+    .time {
+      font-weight: 800;
+      color: var(--cyan);
+      white-space: nowrap;
+    }
+
+    .question-list {
+      display: grid;
+      gap: 10px;
+      counter-reset: question;
+    }
+
+    .question {
+      counter-increment: question;
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      background: #fbfcff;
+    }
+
+    .question::before {
+      content: counter(question);
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .note-form {
+      display: grid;
+      gap: 12px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 11px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      line-height: 1.5;
+    }
+
+    textarea {
+      min-height: 86px;
+      resize: vertical;
+    }
+
+    .full { grid-column: 1 / -1; }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .decision {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      background: #fbfcff;
+    }
+
+    .copy-status {
+      min-height: 24px;
+      color: var(--green);
+      font-size: 13px;
+    }
+
+    .notice {
+      border: 1px solid #f3d489;
+      border-radius: 12px;
+      background: #fff9e9;
+      color: #6b4a00;
+      padding: 12px 14px;
+    }
+
+    @media (max-width: 920px) {
+      .header-inner,
+      .hero { display: block; }
+      .toolbar { justify-content: flex-start; margin-top: 12px; }
+      .panel.span-7,
+      .panel.span-5,
+      .panel.span-12 { grid-column: span 12; }
+      .decision-grid,
+      .form-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .header-inner,
+      .wrap { padding: 14px; }
+      .step { grid-template-columns: 1fr; }
+      .question { grid-template-columns: 30px minmax(0, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div>
+        <h1>工讀生 15 分鐘會談工具</h1>
+        <p class="subtitle">快速理解近況、工作適配、想多做什麼，最後收斂成一個可追蹤的小任務。</p>
+      </div>
+      <nav class="toolbar" aria-label="頁面導覽">
+        <a class="tool" href="/">回人力戰情室</a>
+        <a class="tool" href="/talent-pool/index.html">人才庫</a>
+        <button class="tool primary" type="button" id="copyNote">複製會談紀錄</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <span class="badge green">建議語氣：理解，不是考核</span>
+        <h2 style="margin-top:12px">開場可以這樣說</h2>
+        <p>「我想更了解你目前的狀態，也想知道這份工作裡有哪些事情你願意多做、多了解或累積作品。這不是考核，比較像是幫我們把合作方式調得更順。」</p>
+        <div class="hero-points">
+          <span class="badge">15 分鐘一輪</span>
+          <span class="badge">只抓重點，不追問隱私</span>
+          <span class="badge">結尾一定收斂一個下一步</span>
+        </div>
+      </div>
+      <div class="notice">
+        <strong>使用提醒</strong>
+        <p>右側速記只會存在這台瀏覽器的 localStorage，不會送出到伺服器。正式保存前，請複製到你的工作紀錄或人才庫備註。</p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="panel span-7">
+        <h2>15 分鐘歷程</h2>
+        <div class="panel-body timeline">
+          <div class="step">
+            <div class="time">0:00–1:30</div>
+            <div><h3>定調</h3><p>說明這是了解與工作安排會談，不是考核。確認對方今天可以聊 15 分鐘。</p></div>
+          </div>
+          <div class="step">
+            <div class="time">1:30–4:00</div>
+            <div><h3>近況</h3><p>快速掌握學業、工作、時間彈性與近期壓力。目標是知道可投入程度。</p></div>
+          </div>
+          <div class="step">
+            <div class="time">4:00–7:00</div>
+            <div><h3>工作回顧</h3><p>請對方說做過哪些任務、哪裡順、哪裡卡。聽出能力與支援需求。</p></div>
+          </div>
+          <div class="step">
+            <div class="time">7:00–11:00</div>
+            <div><h3>興趣探索</h3><p>詢問願意多做或多了解的方向，例如研究、教材、AI、行政、社群、財務教育或社福議題。</p></div>
+          </div>
+          <div class="step">
+            <div class="time">11:00–13:30</div>
+            <div><h3>合作條件</h3><p>確認他需要什麼說明、範例、回饋頻率或工具教學，才能做得更穩。</p></div>
+          </div>
+          <div class="step">
+            <div class="time">13:30–15:00</div>
+            <div><h3>收斂下一步</h3><p>約定一個兩週內可試的小任務，並記下預估時數與追蹤時間。</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel span-5">
+        <h2>必問 8 題</h2>
+        <div class="panel-body question-list">
+          <div class="question"><p>你最近學業、工作或生活狀態如何？接下來兩週大概能穩定投入多少時間？</p></div>
+          <div class="question"><p>目前做過的任務裡，哪一類你覺得最順、最有成就感？</p></div>
+          <div class="question"><p>哪一類任務比較卡、比較無聊，或你不太確定標準？</p></div>
+          <div class="question"><p>如果未來多給你一點任務，你比較想接哪一類？為什麼？</p></div>
+          <div class="question"><p>你希望在這份工作裡累積什麼能力、作品或經驗？</p></div>
+          <div class="question"><p>你比較喜歡明確 SOP、先看範例，還是先討論方向再做？</p></div>
+          <div class="question"><p>如果我要讓你工作更順，需要調整什麼？說明、工具、回饋、時程都可以。</p></div>
+          <div class="question"><p>接下來兩週，你願意試一個什麼小任務？</p></div>
+        </div>
+      </article>
+
+      <article class="panel span-12">
+        <h2>可探索任務方向</h2>
+        <div class="panel-body">
+          <div class="chips">
+            <span class="chip">資料整理</span>
+            <span class="chip">研究摘要</span>
+            <span class="chip">會議紀錄</span>
+            <span class="chip">課程教材</span>
+            <span class="chip">財務教育</span>
+            <span class="chip">社福議題</span>
+            <span class="chip">AI 工具操作</span>
+            <span class="chip">行政協作</span>
+            <span class="chip">社群內容</span>
+            <span class="chip">會員經營</span>
+            <span class="chip">網站資料維護</span>
+            <span class="chip">訪談/逐字稿整理</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel span-7">
+        <h2>會談速記</h2>
+        <div class="panel-body">
+          <form class="note-form" id="noteForm">
+            <div class="form-grid">
+              <label>姓名
+                <input name="name" autocomplete="off" placeholder="例如：張雅筑">
+              </label>
+              <label>會談日期
+                <input name="date" type="date">
+              </label>
+              <label>目前狀態
+                <input name="status" placeholder="就學 / 就職 / 待業 / 其他">
+              </label>
+              <label>可投入時間
+                <input name="availability" placeholder="例如：每週 3–5 小時、晚上較可">
+              </label>
+              <label class="full">做得順 / 有成就感的任務
+                <textarea name="strengths" placeholder="記下具體任務與原因"></textarea>
+              </label>
+              <label class="full">卡住 / 不想多做的任務
+                <textarea name="frictions" placeholder="記下卡點，不急著評價"></textarea>
+              </label>
+              <label class="full">想多做或多了解的方向
+                <textarea name="interests" placeholder="例如：AI 工具、財務教育、資料整理、社福議題研究"></textarea>
+              </label>
+              <label class="full">需要的支援
+                <textarea name="support" placeholder="SOP、範例、工具教學、回饋頻率、任務切小等"></textarea>
+              </label>
+              <label class="full">下一個小任務
+                <textarea name="nextTask" placeholder="兩週內可試的小任務 + 預估時數 + 交付物"></textarea>
+              </label>
+              <label>追蹤時間
+                <input name="followUp" placeholder="例如：下週三前看初稿">
+              </label>
+              <label>初步判斷
+                <select name="decision">
+                  <option value="">尚未判斷</option>
+                  <option>可多派任務</option>
+                  <option>先小任務試做</option>
+                  <option>需要補訓練或範例</option>
+                  <option>近期先降載</option>
+                </select>
+              </label>
+            </div>
+            <div class="toolbar" style="justify-content:flex-start">
+              <button class="tool primary" type="button" id="copyNoteBottom">複製會談紀錄</button>
+              <button class="tool" type="button" id="clearNote">清空速記</button>
+              <span class="copy-status" id="copyStatus" aria-live="polite"></span>
+            </div>
+          </form>
+        </div>
+      </article>
+
+      <article class="panel span-5">
+        <h2>會後判斷</h2>
+        <div class="panel-body decision-grid">
+          <div class="decision">
+            <span class="badge green">多派</span>
+            <h3>已經穩定且有意願</h3>
+            <p class="muted">給一個小專案或固定任務，明確定義交付物與回饋週期。</p>
+          </div>
+          <div class="decision">
+            <span class="badge">試做</span>
+            <h3>有興趣但不確定能力</h3>
+            <p class="muted">安排 1–2 小時任務，先看理解力、整理品質與回覆節奏。</p>
+          </div>
+          <div class="decision">
+            <span class="badge amber">補訓練</span>
+            <h3>願意但缺方法</h3>
+            <p class="muted">補 SOP、範例、工具教學；不要直接加難任務。</p>
+          </div>
+          <div class="decision">
+            <span class="badge amber">降載</span>
+            <h3>近期狀態不穩</h3>
+            <p class="muted">改短任務或暫停新任務，避免誤判成態度問題。</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const form = document.querySelector("#noteForm");
+    const copyStatus = document.querySelector("#copyStatus");
+    const storageKey = "workforce-intern-interview-note-v1";
+
+    function formData() {
+      return Object.fromEntries(new FormData(form).entries());
+    }
+
+    function restore() {
+      const saved = JSON.parse(localStorage.getItem(storageKey) || "{}");
+      if (!saved.date) saved.date = new Date().toISOString().slice(0, 10);
+      for (const [key, value] of Object.entries(saved)) {
+        if (form.elements[key]) form.elements[key].value = value;
+      }
+    }
+
+    function save() {
+      localStorage.setItem(storageKey, JSON.stringify(formData()));
+    }
+
+    function markdownNote() {
+      const data = formData();
+      return [
+        `# 工讀生 15 分鐘會談紀錄`,
+        ``,
+        `- 姓名：${data.name || ""}`,
+        `- 日期：${data.date || ""}`,
+        `- 目前狀態：${data.status || ""}`,
+        `- 可投入時間：${data.availability || ""}`,
+        `- 初步判斷：${data.decision || ""}`,
+        ``,
+        `## 做得順 / 有成就感`,
+        data.strengths || "",
+        ``,
+        `## 卡住 / 不想多做`,
+        data.frictions || "",
+        ``,
+        `## 想多做或多了解`,
+        data.interests || "",
+        ``,
+        `## 需要支援`,
+        data.support || "",
+        ``,
+        `## 下一個小任務`,
+        data.nextTask || "",
+        ``,
+        `## 追蹤時間`,
+        data.followUp || ""
+      ].join("\\n");
+    }
+
+    async function copyNote() {
+      save();
+      await navigator.clipboard.writeText(markdownNote());
+      copyStatus.textContent = "已複製會談紀錄";
+      window.setTimeout(() => { copyStatus.textContent = ""; }, 2600);
+    }
+
+    form.addEventListener("input", save);
+    document.querySelector("#copyNote").addEventListener("click", copyNote);
+    document.querySelector("#copyNoteBottom").addEventListener("click", copyNote);
+    document.querySelector("#clearNote").addEventListener("click", () => {
+      localStorage.removeItem(storageKey);
+      form.reset();
+      form.elements.date.value = new Date().toISOString().slice(0, 10);
+      copyStatus.textContent = "已清空";
+      window.setTimeout(() => { copyStatus.textContent = ""; }, 1800);
+    });
+
+    restore();
+  </script>
+</body>
+</html>

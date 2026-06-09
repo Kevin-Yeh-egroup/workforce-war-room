@@ -580,6 +580,7 @@
         </div>
         <div class="toolbar">
           <a class="tool primary" href="/talent-pool/index.html">打開人才庫總覽</a>
+          <a class="tool" href="/intern-interviews/index.html">工讀生會談</a>
           <a class="tool" href="/radar-addon/index.html">資訊雷達</a>
           <button class="tool" type="button" id="toggleSeed">切換示範資料</button>
           <button class="tool primary" type="button" id="nextAction">產生本週確認摘要</button>
@@ -994,6 +995,13 @@
           cta: "打開人才庫"
         },
         {
+          title: "15 分鐘工讀生會談",
+          value: "會談表",
+          meta: "了解近況、任務意願、可投入時間，會後收斂一個小任務",
+          href: "/intern-interviews/index.html",
+          cta: "打開會談工具"
+        },
+        {
           title: "每週資訊雷達",
           value: highlights,
           meta: `${radarPeriod}｜highlights`,
@@ -1036,6 +1044,7 @@
           <p class="subtitle">首頁只保留入口與追蹤摘要；後台快照繼續給自動化比對新增、補件與派薪狀態，不再當成主要頁面。</p>
           <div class="toolbar" style="justify-content:flex-start;margin-top:4px">
             <a class="tool primary" href="/talent-pool/index.html">打開完整人才庫</a>
+            <a class="tool" href="/intern-interviews/index.html">開 15 分鐘會談表</a>
             <button class="tool" type="button" data-view-shortcut="people">查看首頁人才表</button>
           </div>
           <div class="meta">更新時間：${updatedAt}｜月份：${escapeHtml(coveredMonths)}｜薪資金額與銀行資料仍不顯示</div>
