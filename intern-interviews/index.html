@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <title>工讀生 15 分鐘會談工具</title>
+  <title>工讀生 15 分鐘暖身會談工具</title>
   <style>
     :root {
       --ink: #17202a;
@@ -17,9 +17,11 @@
       --green: #17833b;
       --amber: #b7791f;
       --red: #c2410c;
+      --purple: #7c3aed;
       --soft-blue: #eaf2ff;
       --soft-green: #eaf7ef;
       --soft-amber: #fff4db;
+      --soft-purple: #f2edff;
       --shadow: 0 10px 26px rgba(20, 31, 48, .08);
     }
 
@@ -30,14 +32,14 @@
       color: var(--ink);
       background: radial-gradient(circle at top left, #e9f3ff, transparent 32rem), var(--bg);
       font-family: "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif;
-      line-height: 1.65;
+      line-height: 1.68;
     }
 
     a { color: var(--blue); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     header {
-      background: rgba(255, 255, 255, .9);
+      background: rgba(255, 255, 255, .92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
       position: sticky;
@@ -69,6 +71,7 @@
     h2 { margin: 0 0 12px; font-size: 20px; line-height: 1.35; }
     h3 { margin: 0 0 6px; font-size: 16px; }
     p { margin: 0; }
+    ul { margin: 0; padding-left: 1.2em; }
 
     .subtitle,
     .muted {
@@ -116,15 +119,24 @@
     .hero {
       padding: 22px;
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr);
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
       gap: 18px;
       align-items: start;
     }
 
-    .hero-points {
+    .hero-points,
+    .stack {
       display: grid;
       gap: 8px;
       margin-top: 14px;
+    }
+
+    .quote {
+      border-left: 4px solid var(--blue);
+      background: #fbfcff;
+      border-radius: 12px;
+      padding: 13px 14px;
+      font-size: 17px;
     }
 
     .badge {
@@ -142,6 +154,8 @@
 
     .badge.green { color: var(--green); background: var(--soft-green); }
     .badge.amber { color: var(--amber); background: var(--soft-amber); }
+    .badge.purple { color: var(--purple); background: var(--soft-purple); }
+    .badge.red { color: var(--red); background: #fff0e8; }
 
     .grid {
       display: grid;
@@ -151,6 +165,7 @@
 
     .panel { overflow: hidden; }
     .panel.span-7 { grid-column: span 7; }
+    .panel.span-6 { grid-column: span 6; }
     .panel.span-5 { grid-column: span 5; }
     .panel.span-12 { grid-column: span 12; }
 
@@ -163,6 +178,80 @@
       padding: 16px 18px;
       display: grid;
       gap: 14px;
+    }
+
+    .talent-picker {
+      display: grid;
+      grid-template-columns: minmax(220px, 360px) minmax(0, 1fr);
+      gap: 12px;
+      align-items: end;
+    }
+
+    .profile-card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbfcff;
+      padding: 14px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .profile-head {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .profile-head h3 {
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .mini {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 10px;
+      min-height: 72px;
+    }
+
+    .mini strong {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .prompt-grid,
+    .angle-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .prompt,
+    .angle-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      background: #fff;
+      display: grid;
+      gap: 7px;
+    }
+
+    .angle-card h3,
+    .prompt h3 {
+      display: flex;
+      gap: 8px;
+      align-items: center;
     }
 
     .timeline {
@@ -231,6 +320,13 @@
       font-size: 13px;
     }
 
+    .chip.strong {
+      color: var(--blue);
+      background: var(--soft-blue);
+      border-color: #c9dcff;
+      font-weight: 700;
+    }
+
     .note-form {
       display: grid;
       gap: 12px;
@@ -272,7 +368,7 @@
 
     .decision-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
       gap: 10px;
     }
 
@@ -299,12 +395,16 @@
 
     @media (max-width: 920px) {
       .header-inner,
-      .hero { display: block; }
+      .hero,
+      .talent-picker { display: block; }
       .toolbar { justify-content: flex-start; margin-top: 12px; }
       .panel.span-7,
+      .panel.span-6,
       .panel.span-5,
       .panel.span-12 { grid-column: span 12; }
-      .decision-grid,
+      .mini-grid,
+      .prompt-grid,
+      .angle-grid,
       .form-grid { grid-template-columns: 1fr; }
     }
 
@@ -313,6 +413,7 @@
       .wrap { padding: 14px; }
       .step { grid-template-columns: 1fr; }
       .question { grid-template-columns: 30px minmax(0, 1fr); }
+      .profile-head { display: grid; }
     }
   </style>
 </head>
@@ -320,8 +421,8 @@
   <header>
     <div class="header-inner">
       <div>
-        <h1>工讀生 15 分鐘會談工具</h1>
-        <p class="subtitle">快速理解近況、工作適配、想多做什麼，最後收斂成一個可追蹤的小任務。</p>
+        <h1>工讀生 15 分鐘暖身會談工具</h1>
+        <p class="subtitle">從他們真的做過的工作切入，聊出近況、卡點、想練的能力，再收斂成一個兩週內可試的小任務。</p>
       </div>
       <nav class="toolbar" aria-label="頁面導覽">
         <a class="tool" href="/">回人力戰情室</a>
@@ -334,82 +435,125 @@
   <main class="wrap">
     <section class="hero">
       <div>
-        <span class="badge green">建議語氣：理解，不是考核</span>
+        <span class="badge green">語氣：理解，不是考核</span>
         <h2 style="margin-top:12px">開場可以這樣說</h2>
-        <p>「我想更了解你目前的狀態，也想知道這份工作裡有哪些事情你願意多做、多了解或累積作品。這不是考核，比較像是幫我們把合作方式調得更順。」</p>
+        <p class="quote">「我看你前面做過一些任務，今天想先聽你自己的感覺：哪些事情做起來順、哪些其實有點卡。這不是要評分，我是想之後派工作時更貼近你想練的能力，也避免一直丟不適合的事給你。」</p>
         <div class="hero-points">
-          <span class="badge">15 分鐘一輪</span>
-          <span class="badge">只抓重點，不追問隱私</span>
-          <span class="badge">結尾一定收斂一個下一步</span>
+          <span class="badge">先聊一件做過的事</span>
+          <span class="badge">問題可以挑，不要像問卷</span>
+          <span class="badge">最後只收一個小下一步</span>
         </div>
       </div>
       <div class="notice">
-        <strong>使用提醒</strong>
-        <p>右側速記只會存在這台瀏覽器的 localStorage，不會送出到伺服器。正式保存前，請複製到你的工作紀錄或人才庫備註。</p>
+        <strong>內部使用提醒</strong>
+        <p>這頁會讀取內部人才庫，可能顯示電話、Email、居住地與工作紀錄摘要；不適合公開分享。速記只存在這台瀏覽器的 localStorage，正式保存前請複製到你的工作紀錄或人才庫備註。</p>
       </div>
     </section>
 
     <section class="grid">
+      <article class="panel span-12">
+        <h2>先選一位工讀生，讓問題變自然</h2>
+        <div class="panel-body">
+          <div class="talent-picker">
+            <label>工讀生
+              <select id="talentSelect">
+                <option value="">讀取人才庫中...</option>
+              </select>
+            </label>
+            <p class="muted">選人後會依照過往工時、工作類型、工作等級與缺漏欄位，產生比較像聊天、不是盤問的切入句。</p>
+          </div>
+          <div id="talentCard" class="profile-card">
+            <p class="muted">尚未選擇。你也可以直接用下面的通用流程開始聊。</p>
+          </div>
+        </div>
+      </article>
+
       <article class="panel span-7">
         <h2>15 分鐘歷程</h2>
         <div class="panel-body timeline">
           <div class="step">
-            <div class="time">0:00–1:30</div>
-            <div><h3>定調</h3><p>說明這是了解與工作安排會談，不是考核。確認對方今天可以聊 15 分鐘。</p></div>
+            <div class="time">0:00–2:00</div>
+            <div><h3>先鬆開</h3><p>說明這不是考核，先問最近工作還習慣嗎、有沒有哪件事比較有感。</p></div>
           </div>
           <div class="step">
-            <div class="time">1:30–4:00</div>
-            <div><h3>近況</h3><p>快速掌握學業、工作、時間彈性與近期壓力。目標是知道可投入程度。</p></div>
+            <div class="time">2:00–5:00</div>
+            <div><h3>從過往任務切入</h3><p>拿他真的做過的一類工作當入口：財務教育、社福資源、逐字稿、教材、資料整理或名詞校對。</p></div>
           </div>
           <div class="step">
-            <div class="time">4:00–7:00</div>
-            <div><h3>工作回顧</h3><p>請對方說做過哪些任務、哪裡順、哪裡卡。聽出能力與支援需求。</p></div>
+            <div class="time">5:00–8:00</div>
+            <div><h3>找順手與卡點</h3><p>問哪裡知道怎麼做、哪裡不確定標準。先拆成流程、工具、範例、時程，不急著歸因到人。</p></div>
           </div>
           <div class="step">
-            <div class="time">7:00–11:00</div>
-            <div><h3>興趣探索</h3><p>詢問願意多做或多了解的方向，例如研究、教材、AI、行政、社群、財務教育或社福議題。</p></div>
+            <div class="time">8:00–11:30</div>
+            <div><h3>聊想多了解什麼</h3><p>把方向放小：想練整理、查找、撰寫、校對、AI 工具、教材、社福研究或財務教育推廣。</p></div>
           </div>
           <div class="step">
-            <div class="time">11:00–13:30</div>
-            <div><h3>合作條件</h3><p>確認他需要什麼說明、範例、回饋頻率或工具教學，才能做得更穩。</p></div>
+            <div class="time">11:30–13:30</div>
+            <div><h3>對齊派工方式</h3><p>確認他需要明確 SOP、範例、先試做、固定回饋，或比較適合半開放任務。</p></div>
           </div>
           <div class="step">
             <div class="time">13:30–15:00</div>
-            <div><h3>收斂下一步</h3><p>約定一個兩週內可試的小任務，並記下預估時數與追蹤時間。</p></div>
+            <div><h3>收斂一個小任務</h3><p>約一個兩週內能完成的任務，寫下交付物、預估時數、追蹤時間與需要的支援。</p></div>
           </div>
         </div>
       </article>
 
       <article class="panel span-5">
-        <h2>必問 8 題</h2>
+        <h2>好聊版 8 題</h2>
         <div class="panel-body question-list">
-          <div class="question"><p>你最近學業、工作或生活狀態如何？接下來兩週大概能穩定投入多少時間？</p></div>
-          <div class="question"><p>目前做過的任務裡，哪一類你覺得最順、最有成就感？</p></div>
-          <div class="question"><p>哪一類任務比較卡、比較無聊，或你不太確定標準？</p></div>
-          <div class="question"><p>如果未來多給你一點任務，你比較想接哪一類？為什麼？</p></div>
-          <div class="question"><p>你希望在這份工作裡累積什麼能力、作品或經驗？</p></div>
-          <div class="question"><p>你比較喜歡明確 SOP、先看範例，還是先討論方向再做？</p></div>
-          <div class="question"><p>如果我要讓你工作更順，需要調整什麼？說明、工具、回饋、時程都可以。</p></div>
-          <div class="question"><p>接下來兩週，你願意試一個什麼小任務？</p></div>
+          <div class="question"><p>最近工作做起來，整體感覺是比較順、普通，還是有點卡？</p></div>
+          <div class="question"><p>你前面做過的任務裡，哪一件讓你覺得「我大概知道怎麼做」？</p></div>
+          <div class="question"><p>有沒有哪一件任務，你其實不太確定自己做得對不對？</p></div>
+          <div class="question"><p>如果卡住，通常是卡在理解需求、找資料、工具操作，還是時間安排？</p></div>
+          <div class="question"><p>目前給你的說明，會太少、剛好，還是有時候太細？</p></div>
+          <div class="question"><p>哪些工作你做起來比較有耐心，或覺得可以再多練？</p></div>
+          <div class="question"><p>有沒有哪類事情你想多了解一點，但之前還沒有機會碰？</p></div>
+          <div class="question"><p>接下來如果只選一個小目標，你覺得自己最適合先練什麼？</p></div>
         </div>
       </article>
 
       <article class="panel span-12">
-        <h2>可探索任務方向</h2>
-        <div class="panel-body">
-          <div class="chips">
-            <span class="chip">資料整理</span>
-            <span class="chip">研究摘要</span>
-            <span class="chip">會議紀錄</span>
-            <span class="chip">課程教材</span>
-            <span class="chip">財務教育</span>
-            <span class="chip">社福議題</span>
-            <span class="chip">AI 工具操作</span>
-            <span class="chip">行政協作</span>
-            <span class="chip">社群內容</span>
-            <span class="chip">會員經營</span>
-            <span class="chip">網站資料維護</span>
-            <span class="chip">訪談/逐字稿整理</span>
+        <h2>從過往工作切入</h2>
+        <div class="panel-body angle-grid">
+          <div class="angle-card">
+            <h3><span class="badge">財務教育</span></h3>
+            <p class="muted">適合有金融素養、課程整理、教材摘要紀錄的人。</p>
+            <p>可以問：「你之前碰到財務教育內容時，哪一段比較有感或好理解？如果要幫同齡的人整理，你會想怎麼講比較自然？」</p>
+          </div>
+          <div class="angle-card">
+            <h3><span class="badge green">社福研究</span></h3>
+            <p class="muted">適合社工系、社福現場、親子館、日照、區公所或資源整理訊號高的人。</p>
+            <p>可以問：「你整理資源時，有沒有哪類機構或服務讓你比較有感？哪些地方最容易混淆？」</p>
+          </div>
+          <div class="angle-card">
+            <h3><span class="badge purple">逐字稿/會議</span></h3>
+            <p class="muted">適合做過會議紀錄、逐字稿、訓練摘要的人。</p>
+            <p>可以問：「你整理會議時，通常怎麼判斷哪些重點要留下？有沒有什麼格式會讓你做得更順？」</p>
+          </div>
+          <div class="angle-card">
+            <h3><span class="badge">教材與會員</span></h3>
+            <p class="muted">適合做過課程、內容、會員經營、社群素材的人。</p>
+            <p>可以問：「如果把你整理過的內容變成一頁教材、懶人包或會員任務，你比較想做文字、架構還是範例？」</p>
+          </div>
+          <div class="angle-card">
+            <h3><span class="badge amber">資料行政</span></h3>
+            <p class="muted">適合新夥伴、工時較少，或還不知道工作等級的人。</p>
+            <p>可以問：「如果先用小任務試合作，你比較喜歡整理表格、補資料、核對名單，還是把零散資訊變清楚？」</p>
+          </div>
+          <div class="angle-card">
+            <h3><span class="badge purple">AI/網站工具</span></h3>
+            <p class="muted">適合對科技、業務、資料維護、內容流程有興趣的人。</p>
+            <p>可以問：「你會不會想試試看用 AI 或網站工具，把資料整理得更快？如果有人給範例，你願意先做哪一小段？」</p>
+          </div>
+          <div class="angle-card">
+            <h3><span class="badge green">名詞庫/校對</span></h3>
+            <p class="muted">適合做過自定義名詞、校對、品質檢查，或對專有名詞敏感的人。</p>
+            <p>可以問：「你在校對名詞或修正錯字時，最難的是判斷專有名詞、上下文，還是格式一致？」</p>
+          </div>
+          <div class="angle-card">
+            <h3><span class="badge amber">節奏與近況</span></h3>
+            <p class="muted">適合忙論文、求職、轉換工作、暫停或近期工時變少的人。</p>
+            <p>可以問：「接下來兩週你的時間大概怎麼分配？我們怎麼派任務會比較不打亂你的生活？」</p>
           </div>
         </div>
       </article>
@@ -426,25 +570,28 @@
                 <input name="date" type="date">
               </label>
               <label>目前狀態
-                <input name="status" placeholder="就學 / 就職 / 待業 / 其他">
+                <input name="status" placeholder="就學 / 就職 / 求職 / 暫停 / 其他">
               </label>
               <label>可投入時間
                 <input name="availability" placeholder="例如：每週 3–5 小時、晚上較可">
               </label>
-              <label class="full">做得順 / 有成就感的任務
-                <textarea name="strengths" placeholder="記下具體任務與原因"></textarea>
+              <label class="full">這次從哪個過往工作切入
+                <textarea name="startedFrom" placeholder="例如：先聊之前做過的社福資源整理與財務教育摘要"></textarea>
               </label>
-              <label class="full">卡住 / 不想多做的任務
-                <textarea name="frictions" placeholder="記下卡點，不急著評價"></textarea>
+              <label class="full">對方有感、順手或有成就感的任務
+                <textarea name="strengths" placeholder="記具體任務與原因，不只寫「可多派」"></textarea>
+              </label>
+              <label class="full">卡住、不確定或不想多做的任務
+                <textarea name="frictions" placeholder="拆成需求理解、資料查找、工具、標準、時間"></textarea>
               </label>
               <label class="full">想多做或多了解的方向
-                <textarea name="interests" placeholder="例如：AI 工具、財務教育、資料整理、社福議題研究"></textarea>
+                <textarea name="interests" placeholder="例如：AI 工具、財務教育、資料整理、社福議題研究、教材設計"></textarea>
               </label>
               <label class="full">需要的支援
                 <textarea name="support" placeholder="SOP、範例、工具教學、回饋頻率、任務切小等"></textarea>
               </label>
-              <label class="full">下一個小任務
-                <textarea name="nextTask" placeholder="兩週內可試的小任務 + 預估時數 + 交付物"></textarea>
+              <label class="full">下一個兩週小任務
+                <textarea name="nextTask" placeholder="任務類型 + 預估時數 + 交付物 + 需要的範例或 SOP"></textarea>
               </label>
               <label>追蹤時間
                 <input name="followUp" placeholder="例如：下週三前看初稿">
@@ -469,27 +616,40 @@
       </article>
 
       <article class="panel span-5">
+        <h2>不生硬提醒</h2>
+        <div class="panel-body">
+          <ul>
+            <li>不要把 8 題全部問完；先抓一件過往工作慢慢聊。</li>
+            <li>多用「我好奇」「我想了解」，少用「你要說明」。</li>
+            <li>有卡點時，先拆流程、工具、標準、時間，不直接說成能力問題。</li>
+            <li>缺電話、Email、居住地、目前狀態時，放最後用「順手確認」補資料。</li>
+            <li>收尾一定給一個小而明確的下一步，才不會聊完散掉。</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="panel span-12">
         <h2>會後判斷</h2>
         <div class="panel-body decision-grid">
           <div class="decision">
             <span class="badge green">多派</span>
-            <h3>已經穩定且有意願</h3>
-            <p class="muted">給一個小專案或固定任務，明確定義交付物與回饋週期。</p>
+            <h3>理解穩定，也主動想練</h3>
+            <p class="muted">給一個小專案或固定任務，明確定義交付物、品質標準與回饋週期。</p>
           </div>
           <div class="decision">
             <span class="badge">試做</span>
-            <h3>有興趣但不確定能力</h3>
-            <p class="muted">安排 1–2 小時任務，先看理解力、整理品質與回覆節奏。</p>
+            <h3>有興趣但經驗不明</h3>
+            <p class="muted">安排 1–2 小時低風險任務，先看理解力、整理品質與回覆節奏。</p>
           </div>
           <div class="decision">
             <span class="badge amber">補訓練</span>
-            <h3>願意但缺方法</h3>
-            <p class="muted">補 SOP、範例、工具教學；不要直接加難任務。</p>
+            <h3>不是態度，是方法不足</h3>
+            <p class="muted">補 SOP、範例、工具教學或一次示範；不要直接加難任務。</p>
           </div>
           <div class="decision">
             <span class="badge amber">降載</span>
-            <h3>近期狀態不穩</h3>
-            <p class="muted">改短任務或暫停新任務，避免誤判成態度問題。</p>
+            <h3>近期狀態或時間不穩</h3>
+            <p class="muted">改短任務或暫停新任務，保留穩定可完成的小工作。</p>
           </div>
         </div>
       </article>
@@ -499,7 +659,236 @@
   <script>
     const form = document.querySelector("#noteForm");
     const copyStatus = document.querySelector("#copyStatus");
-    const storageKey = "workforce-intern-interview-note-v1";
+    const talentSelect = document.querySelector("#talentSelect");
+    const talentCard = document.querySelector("#talentCard");
+    const storageKey = "workforce-intern-interview-note-v2";
+    const talentState = { people: [] };
+
+    const categoryPrompts = {
+      financial_education: {
+        label: "財務教育／金融素養",
+        question: "你之前碰到財務教育內容時，哪一段比較有感或比較好理解？如果要幫同齡的人整理，你會想怎麼講比較自然？",
+        task: "把一個財務教育主題整理成一頁 FAQ、教案草稿或社群貼文架構"
+      },
+      social_welfare_resources: {
+        label: "社福與資源整理",
+        question: "你做資源整理時，有沒有哪類機構或服務讓你覺得特別值得理解？哪些地方最容易混淆？",
+        task: "整理一類服務對象的資源清單，補上適用情境與易混淆處"
+      },
+      transcript_and_meeting: {
+        label: "逐字稿、會議與訓練",
+        question: "你整理會議或逐字稿時，通常怎麼判斷哪些重點要留下？有沒有什麼格式會讓你做得更順？",
+        task: "把一份會議或訪談整理成重點摘要、待辦、可追蹤問題"
+      },
+      content_and_course: {
+        label: "內容、課程與會員經營",
+        question: "如果把你整理過的內容變成一頁教材、懶人包或會員任務，你比較想做文字、架構還是範例？",
+        task: "把一段內容改成學習任務、徽章條件或會員回訪提醒"
+      },
+      dictionary_and_quality: {
+        label: "名詞庫與品質校對",
+        question: "你在校對名詞或修正錯字時，最難的是判斷專有名詞、上下文，還是格式一致？",
+        task: "校對一批名詞或摘要，標出不確定處與建議規則"
+      },
+      dictionary: {
+        label: "名詞庫與品質校對",
+        question: "你在校對名詞或修正錯字時，最難的是判斷專有名詞、上下文，還是格式一致？",
+        task: "校對一批名詞或摘要，標出不確定處與建議規則"
+      },
+      data_and_admin: {
+        label: "資料整理／行政協作",
+        question: "如果先用小任務試合作，你比較喜歡整理表格、補資料、核對名單，還是幫忙把零散資訊變清楚？",
+        task: "核對一份名單或資料表，補缺欄位並整理待確認事項"
+      }
+    };
+
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;",
+        "'": "&#039;"
+      })[char]);
+    }
+
+    function formatHours(value) {
+      const number = Number(value || 0);
+      if (!number) return "0 小時";
+      const fixed = number >= 10 ? number.toFixed(1) : number.toFixed(2);
+      return `${fixed.replace(/\.?0+$/, "")} 小時`;
+    }
+
+    function statusLabel(person) {
+      const status = person?.status || "";
+      if (status === "active") return "目前可合作";
+      if (status === "paused") return "暫停或低負荷";
+      if (status === "history_only") return "歷史合作";
+      return status || "狀態待確認";
+    }
+
+    function fieldLabel(field) {
+      const labels = {
+        phone: "電話",
+        email: "Email",
+        residence: "居住地",
+        employmentOrStudy: "目前就職/就讀狀態",
+        currentRole: "目前狀態"
+      };
+      return labels[field] || field;
+    }
+
+    function workLevelGuide(workLevel) {
+      const level = Number.parseFloat(workLevel);
+      if (!Number.isFinite(level)) return "工作等級待確認：先用 1–2 小時小任務看理解方式。";
+      if (level <= 1) return "等級 1：適合明確 SOP、範例、可快速回饋的小任務。";
+      if (level <= 2) return "等級 2：可給半開放任務，但要先對齊交付物與品質標準。";
+      return "等級 3：可試小專案或整段流程，保留週期性回饋。";
+    }
+
+    function topSignals(person) {
+      return Array.isArray(person?.topWorkSignals) ? person.topWorkSignals.slice(0, 4) : [];
+    }
+
+    function signalText(person) {
+      const signals = topSignals(person).slice(0, 3);
+      if (!signals.length) return "幾個小任務";
+      return signals.map((signal) => `${signal.label || signal.category} ${formatHours(signal.hours)}`).join("、");
+    }
+
+    function buildOpening(person) {
+      if (!person) return "";
+      return `我看到你前面做過 ${signalText(person)}。今天想先聽你自己的感覺：哪些做起來順、哪些其實有點卡，也看看接下來有沒有更適合你的小任務。`;
+    }
+
+    function buildQuestions(person) {
+      const questions = topSignals(person).map((signal) => {
+        const prompt = categoryPrompts[signal.category];
+        return prompt?.question || `你之前做「${signal.label || signal.category}」時，哪一段最順？哪一段最需要範例或標準？`;
+      });
+
+      if (person?.workStatus || person?.employmentOrStudy) {
+        questions.push("你現在的學業、工作或生活節奏，接下來兩週大概能承接多少任務？");
+      }
+
+      if (person?.status === "paused") {
+        questions.push("如果近期先恢復合作，你會比較適合短任務、固定任務，還是先暫停新任務？");
+      } else {
+        questions.push("如果接下來兩週只安排一個小任務，你想先試哪一種？");
+      }
+
+      questions.push("我目前派任務的方式，有哪裡可以調整，會讓你更好理解或更有安全感？");
+
+      return Array.from(new Set(questions)).slice(0, 6);
+    }
+
+    function buildTasks(person) {
+      const tasks = topSignals(person).map((signal) => {
+        const prompt = categoryPrompts[signal.category];
+        return prompt?.task || `延伸一個「${signal.label || signal.category}」的小任務`;
+      });
+
+      if (Number(person?.dictionaryWorkMinutes || 0) > 0) {
+        tasks.push(categoryPrompts.dictionary_and_quality.task);
+      }
+
+      tasks.push("順手補齊基本資訊：電話、Email、居住地、目前狀態");
+      return Array.from(new Set(tasks)).slice(0, 5);
+    }
+
+    function monthlySummary(person) {
+      const monthlyWork = Array.isArray(person?.monthlyWork) ? person.monthlyWork : [];
+      const latest = monthlyWork.filter((item) => Number(item.hours || 0) > 0).slice(-1)[0];
+      const latestText = latest ? `${latest.month} ${formatHours(latest.hours)}` : "近期工時待確認";
+      return `${latestText}；累計 ${formatHours(person?.historyTotalHours)}；有工時月份 ${person?.monthsWithHours || 0} 個月`;
+    }
+
+    function renderTalentCard(person) {
+      if (!person) {
+        talentCard.innerHTML = `<p class="muted">尚未選擇。你也可以直接用下面的通用流程開始聊。</p>`;
+        return;
+      }
+
+      const missingFields = Array.isArray(person.missingRequiredFields) ? person.missingRequiredFields : [];
+      const missingText = missingFields.length
+        ? `順手確認：${missingFields.map(fieldLabel).join("、")}`
+        : "基本欄位看起來完整，最後只要確認近期狀態即可。";
+      const signalChips = topSignals(person).map((signal) => (
+        `<span class="chip strong">${escapeHtml(signal.label || signal.category)} ${escapeHtml(formatHours(signal.hours))}</span>`
+      )).join("");
+      const questions = buildQuestions(person).map((question) => `<li>${escapeHtml(question)}</li>`).join("");
+      const tasks = buildTasks(person).map((task) => `<li>${escapeHtml(task)}</li>`).join("");
+
+      talentCard.innerHTML = `
+        <div class="profile-head">
+          <div>
+            <h3>${escapeHtml(person.name || "未命名")}</h3>
+            <p class="muted">${escapeHtml(person.notes || person.referrer || "沒有額外備註")}</p>
+          </div>
+          <span class="badge ${person.status === "paused" ? "amber" : "green"}">${escapeHtml(statusLabel(person))}</span>
+        </div>
+        <div class="mini-grid">
+          <div class="mini"><strong>電話</strong>${escapeHtml(person.phone || "待補")}</div>
+          <div class="mini"><strong>Email</strong>${escapeHtml(person.email || "待補")}</div>
+          <div class="mini"><strong>居住地</strong>${escapeHtml(person.residence || "待補")}</div>
+          <div class="mini"><strong>目前狀態</strong>${escapeHtml(person.employmentOrStudy || person.currentRole || "待補")}</div>
+        </div>
+        <div class="prompt-grid">
+          <div class="prompt">
+            <h3><span class="badge">自然開場</span></h3>
+            <p>${escapeHtml(buildOpening(person))}</p>
+          </div>
+          <div class="prompt">
+            <h3><span class="badge purple">派工提醒</span></h3>
+            <p>${escapeHtml(workLevelGuide(person.workLevel))}</p>
+            <p class="muted">${escapeHtml(monthlySummary(person))}</p>
+          </div>
+        </div>
+        <div>
+          <h3>過往工作線索</h3>
+          <div class="chips">${signalChips || '<span class="chip">還沒有明顯分類，先從小任務試聊</span>'}</div>
+        </div>
+        <div class="prompt-grid">
+          <div class="prompt">
+            <h3><span class="badge green">適合問</span></h3>
+            <ul>${questions}</ul>
+          </div>
+          <div class="prompt">
+            <h3><span class="badge amber">下一步可試</span></h3>
+            <ul>${tasks}</ul>
+            <p class="muted">${escapeHtml(missingText)}</p>
+          </div>
+        </div>
+      `;
+    }
+
+    function populateTalentSelect() {
+      talentSelect.innerHTML = `<option value="">選擇工讀生...</option>`;
+      talentState.people.forEach((person, index) => {
+        const option = document.createElement("option");
+        option.value = String(index);
+        option.textContent = `${person.name || "未命名"}｜${statusLabel(person)}｜${formatHours(person.historyTotalHours)}`;
+        talentSelect.append(option);
+      });
+    }
+
+    async function loadTalentPool() {
+      try {
+        const response = await fetch(new URL("../data/talent-pool.internal.json", window.location.href), { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        const people = Array.isArray(data.people) ? data.people : Array.isArray(data.items) ? data.items : [];
+        talentState.people = people.sort((left, right) => {
+          const statusScore = (person) => person.status === "active" ? 0 : person.status === "paused" ? 1 : 2;
+          return statusScore(left) - statusScore(right) || String(left.name || "").localeCompare(String(right.name || ""), "zh-Hant");
+        });
+        populateTalentSelect();
+        renderTalentCard(null);
+      } catch (error) {
+        talentSelect.innerHTML = `<option value="">人才庫讀取失敗</option>`;
+        talentCard.innerHTML = `<p class="muted">讀不到人才庫資料，請先確認 <code>data/talent-pool.internal.json</code> 是否已部署。錯誤：${escapeHtml(error.message)}</p>`;
+      }
+    }
 
     function formData() {
       return Object.fromEntries(new FormData(form).entries());
@@ -528,10 +917,13 @@
         `- 可投入時間：${data.availability || ""}`,
         `- 初步判斷：${data.decision || ""}`,
         ``,
-        `## 做得順 / 有成就感`,
+        `## 這次從哪個過往工作切入`,
+        data.startedFrom || "",
+        ``,
+        `## 對方有感、順手或有成就感`,
         data.strengths || "",
         ``,
-        `## 卡住 / 不想多做`,
+        `## 卡住、不確定或不想多做`,
         data.frictions || "",
         ``,
         `## 想多做或多了解`,
@@ -540,20 +932,51 @@
         `## 需要支援`,
         data.support || "",
         ``,
-        `## 下一個小任務`,
+        `## 下一個兩週小任務`,
         data.nextTask || "",
         ``,
         `## 追蹤時間`,
         data.followUp || ""
-      ].join("\\n");
+      ].join("\n");
+    }
+
+    async function copyText(text) {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.append(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      textarea.remove();
     }
 
     async function copyNote() {
       save();
-      await navigator.clipboard.writeText(markdownNote());
+      await copyText(markdownNote());
       copyStatus.textContent = "已複製會談紀錄";
       window.setTimeout(() => { copyStatus.textContent = ""; }, 2600);
     }
+
+    talentSelect.addEventListener("change", () => {
+      if (talentSelect.value === "") {
+        renderTalentCard(null);
+        return;
+      }
+      const person = talentState.people[Number(talentSelect.value)];
+      renderTalentCard(person);
+      if (person) {
+        form.elements.name.value = person.name || "";
+        form.elements.status.value = person.employmentOrStudy || person.currentRole || statusLabel(person);
+        form.elements.startedFrom.value = buildOpening(person);
+        save();
+      }
+    });
 
     form.addEventListener("input", save);
     document.querySelector("#copyNote").addEventListener("click", copyNote);
@@ -567,6 +990,7 @@
     });
 
     restore();
+    loadTalentPool();
   </script>
 </body>
 </html>
