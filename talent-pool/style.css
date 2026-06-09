@@ -137,6 +137,8 @@ input, select {
 .bar { height: 8px; background: #e8edf4; border-radius: 999px; overflow: hidden; margin-top: 8px; }
 .bar span { display: block; height: 100%; background: var(--cyan); width: var(--width); }
 .signals { display: flex; gap: 6px; flex-wrap: wrap; }
+.summary-list { margin: 0; padding-left: 1.2em; line-height: 1.6; }
+.summary-list li + li { margin-top: 4px; }
 .privacy {
   background: #fff9e9;
   border: 1px solid #f3d489;

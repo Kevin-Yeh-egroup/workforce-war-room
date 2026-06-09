@@ -106,8 +106,13 @@ function signals(person) {
   return items.join('') || '<span class="muted">尚無分類訊號</span>';
 }
 
+function interviewHeadline(person) {
+  return person.interviewSummary?.headline || '';
+}
+
 function personCard(person) {
   const role = person.employmentOrStudy || person.currentRole || person.educationOrJob || '未填基本背景';
+  const interview = interviewHeadline(person);
   return `<article class="card person-card">
     <div class="person-head">
       <div>
@@ -121,6 +126,7 @@ function personCard(person) {
       <div class="k">居住地</div><div class="v">${escapeHtml(person.residence || '待補')}</div>
       <div class="k">缺漏欄位</div><div class="v"><div class="badges inline-badges">${missingLine(person)}</div></div>
       <div class="k">工作範本</div><div class="v clamp">${escapeHtml(workTemplate(person))}</div>
+      ${interview ? `<div class="k">會談摘要</div><div class="v clamp">${escapeHtml(interview)}</div>` : ''}
       <div class="k">工時摘要</div><div class="v">${hoursSummary(person)}</div>
     </div>
     <div class="toolbar" style="justify-content:flex-start">
@@ -144,6 +150,9 @@ function searchable(person) {
     person.workLevel,
     person.referrer,
     person.notes,
+    person.interviewSummary?.headline,
+    ...(person.interviewSummary?.points || []),
+    ...(person.interviewSummary?.nextWorkIdeas || []),
     person.resume?.label,
     ...(person.topWorkSignals || []).map((signal) => signal.label)
   ].filter(Boolean).join(' ').toLowerCase();

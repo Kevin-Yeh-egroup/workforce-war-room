@@ -1348,13 +1348,27 @@
       "phone": "0902092134",
       "email": "egroupjerry18@gmail.com",
       "residence": "台中市沙鹿區",
-      "educationOrJob": "",
-      "workStatus": "社工系學弟，香港籍",
+      "educationOrJob": "社工系學生；曾於澎湖平安基金會、立達啟能中心實習",
+      "workStatus": "現階段準備 8 月社工師考試；考後想嘗試接記帳、家系圖等工作。",
       "employmentOrStudy": "學生／社工系學弟，香港籍",
       "contactStatus": "",
       "workLevel": "3.0",
       "referrer": "張雅筑 Chu",
-      "notes": "",
+      "notes": "社工系學弟，香港籍；24 歲；高中畢業後先讀一年專科，後來先投入就業，因切換環境來台灣。",
+      "interviewSummary": {
+        "recordedAt": "2026-06-09",
+        "headline": "8 月社工師考試前以備考為主；考後想嘗試接記帳、家系圖等工作。",
+        "points": [
+          "曾到澎湖平安基金會實習，接觸老人、身障、精障服務。",
+          "曾到立達啟能中心實習，接觸成人身障領域。",
+          "在香港已有身障領域相關經驗，包含活動助理、生活引導員。",
+          "高中畢業後先讀一年專科，後來先投入就業；因切換環境來台灣。"
+        ],
+        "nextWorkIdeas": [
+          "8 月社工師考試後，可先安排記帳或家系圖相關的小任務。",
+          "身障、老人與精障服務經驗可作為社福資源整理或個案脈絡判讀的切入點。"
+        ]
+      },
       "resume": {
         "label": "",
         "url": ""
@@ -1401,7 +1415,7 @@
       "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 8
+      "profileCompleteness": 9
     },
     {
       "id": "c4c55e13a311",

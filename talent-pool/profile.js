@@ -57,6 +57,22 @@ function signals(person) {
   return items.join('') || '<span class="muted">尚無分類訊號</span>';
 }
 
+function interviewSummary(person) {
+  const summary = person.interviewSummary;
+  if (!summary) return '';
+  const points = (summary.points || []).map((point) => `<li>${escapeHtml(point)}</li>`).join('');
+  const nextWorkIdeas = (summary.nextWorkIdeas || []).map((idea) => `<li>${escapeHtml(idea)}</li>`).join('');
+  return `<section class="section-card">
+    <h2>會談摘要</h2>
+    <div class="kv">
+      <div class="k">紀錄日期</div><div class="v">${escapeHtml(summary.recordedAt || '未標示')}</div>
+      <div class="k">重點摘要</div><div class="v">${escapeHtml(summary.headline || '—')}</div>
+      <div class="k">背景線索</div><div class="v">${points ? `<ul class="summary-list">${points}</ul>` : '—'}</div>
+      <div class="k">後續可試</div><div class="v">${nextWorkIdeas ? `<ul class="summary-list">${nextWorkIdeas}</ul>` : '—'}</div>
+    </div>
+  </section>`;
+}
+
 function render(person, meta) {
   document.title = `${person.name}｜工讀生個人追蹤`;
   document.getElementById('title').textContent = person.name;
@@ -96,6 +112,7 @@ function render(person, meta) {
         </div>
       </section>
     </div>
+    ${interviewSummary(person)}
     <section class="section-card">
       <h2>逐月工時</h2>
       <div class="month-grid">${months(person)}</div>
