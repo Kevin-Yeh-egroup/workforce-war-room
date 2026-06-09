@@ -28,8 +28,8 @@ function formatTime(value) {
 }
 
 function badgeClass(value) {
-  if (value === 'active' || value === 'worked' || value === '有連結') return 'green';
-  if (value === 'paused' || value === '待補' || String(value).startsWith('待補 ')) return 'red';
+  if (value === 'active' || value === 'worked' || value === '有連結' || value === '必要欄位完整') return 'green';
+  if (value === 'paused' || value === '待補' || String(value).startsWith('缺 ')) return 'red';
   if (value === 'history_only' || value === '有狀態') return 'amber';
   return 'blue';
 }
@@ -64,7 +64,7 @@ function contactLine(person) {
 
 function missingLine(person) {
   const missing = person.missingRequiredFields || [];
-  return missing.length ? missing.map((item) => badge(`待補 ${item}`)).join('') : badge('必要欄位完整');
+  return missing.length ? missing.map((item) => badge(`缺 ${item}`)).join('') : badge('必要欄位完整');
 }
 
 function months(person) {
@@ -110,9 +110,14 @@ function interviewHeadline(person) {
   return person.interviewSummary?.headline || '';
 }
 
+function humanIntelNote(person) {
+  return (person.humanIntelNotes || [])[0] || '';
+}
+
 function personCard(person) {
   const role = person.employmentOrStudy || person.currentRole || person.educationOrJob || '未填基本背景';
   const interview = interviewHeadline(person);
+  const intel = humanIntelNote(person);
   return `<article class="card person-card">
     <div class="person-head">
       <div>
@@ -126,6 +131,7 @@ function personCard(person) {
       <div class="k">居住地</div><div class="v">${escapeHtml(person.residence || '待補')}</div>
       <div class="k">缺漏欄位</div><div class="v"><div class="badges inline-badges">${missingLine(person)}</div></div>
       <div class="k">工作範本</div><div class="v clamp">${escapeHtml(workTemplate(person))}</div>
+      ${intel ? `<div class="k">人力情報</div><div class="v clamp">${escapeHtml(intel)}</div>` : ''}
       ${interview ? `<div class="k">會談摘要</div><div class="v clamp">${escapeHtml(interview)}</div>` : ''}
       <div class="k">工時摘要</div><div class="v">${hoursSummary(person)}</div>
     </div>
@@ -150,6 +156,7 @@ function searchable(person) {
     person.workLevel,
     person.referrer,
     person.notes,
+    ...(person.humanIntelNotes || []),
     person.interviewSummary?.headline,
     ...(person.interviewSummary?.points || []),
     ...(person.interviewSummary?.nextWorkIdeas || []),
@@ -189,7 +196,7 @@ async function main() {
     metric('電話', counts.withPhone ?? 0, `缺 ${(counts.total ?? people.length) - (counts.withPhone ?? 0)} 人`),
     metric('Email', counts.withEmail ?? 0, `缺 ${(counts.total ?? people.length) - (counts.withEmail ?? 0)} 人`),
     metric('居住地', counts.withResidence ?? 0, '只顯示縣市/區'),
-    metric('缺漏欄位', counts.missingAnyRequired ?? 0, '可用補件表補齊')
+    metric('缺必要欄位', counts.missingAnyRequired ?? 0, '可用補件表補齊')
   ].join('');
 
   const levels = [...new Set(people.map((person) => String(person.workLevel || '').trim()).filter(Boolean))].sort();

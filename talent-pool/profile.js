@@ -14,7 +14,7 @@ function escapeHtml(value) {
 }
 
 function badge(value) {
-  const cls = value === 'active' || value === '有連結' || value === '必要欄位完整' ? 'green' : value === 'paused' || value === '待補' || String(value).startsWith('待補 ') ? 'red' : 'blue';
+  const cls = value === 'active' || value === '有連結' || value === '必要欄位完整' ? 'green' : value === 'paused' || value === '待補' || String(value).startsWith('缺 ') ? 'red' : 'blue';
   return `<span class="badge ${cls}">${escapeHtml(value)}</span>`;
 }
 
@@ -36,7 +36,7 @@ function contactLine(person) {
 
 function missingLine(person) {
   const missing = person.missingRequiredFields || [];
-  return missing.length ? missing.map((item) => badge(`待補 ${item}`)).join('') : badge('必要欄位完整');
+  return missing.length ? missing.map((item) => badge(`缺 ${item}`)).join('') : badge('必要欄位完整');
 }
 
 function months(person) {
@@ -70,6 +70,16 @@ function interviewSummary(person) {
       <div class="k">背景線索</div><div class="v">${points ? `<ul class="summary-list">${points}</ul>` : '—'}</div>
       <div class="k">後續可試</div><div class="v">${nextWorkIdeas ? `<ul class="summary-list">${nextWorkIdeas}</ul>` : '—'}</div>
     </div>
+  </section>`;
+}
+
+function humanIntel(person) {
+  const notes = person.humanIntelNotes || [];
+  if (!notes.length) return '';
+  const items = notes.map((note) => `<li>${escapeHtml(note)}</li>`).join('');
+  return `<section class="section-card">
+    <h2>人力情報</h2>
+    <ul class="summary-list">${items}</ul>
   </section>`;
 }
 
@@ -108,10 +118,12 @@ function render(person, meta) {
           <div class="k">目前狀態</div><div class="v">${escapeHtml(person.workStatus || '—')}</div>
           <div class="k">聯繫狀況</div><div class="v">${escapeHtml(person.contactStatus || '—')}</div>
           <div class="k">工作範本</div><div class="v">${escapeHtml(person.workLevel || '—')}</div>
+          <div class="k">缺漏</div><div class="v">${escapeHtml(missingFields)}</div>
           <div class="k">備註</div><div class="v">${escapeHtml(person.notes || '—')}</div>
         </div>
       </section>
     </div>
+    ${humanIntel(person)}
     ${interviewSummary(person)}
     <section class="section-card">
       <h2>逐月工時</h2>

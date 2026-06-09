@@ -1115,8 +1115,9 @@
 
       $("#personCards").innerHTML = peopleForCards.map((person) => {
         const name = person.name;
+        const humanIntel = (person.humanIntelNotes || []).join("｜");
         const work = talentPeople
-          ? [person.currentRole, person.educationOrJob, person.workStatus].filter(Boolean).join("｜") || "尚未填基本背景"
+          ? [person.currentRole, person.educationOrJob, person.workStatus, humanIntel].filter(Boolean).join("｜") || "尚未填基本背景"
           : person.work;
         const load = talentPeople
           ? Math.min(100, Math.max(2, Math.round((person.historyTotalHours || 0) / 2)))
@@ -1144,6 +1145,7 @@
             .filter(Boolean)
             .map(escapeHtml)
             .join("｜") || "尚未填基本背景";
+          const humanIntel = (person.humanIntelNotes || []).join("｜");
           const months = (person.monthlyWork || []).map((month) => {
             const label = String(month.month || "").slice(5) || month.month;
             return `<span class="month-chip">${escapeHtml(label)}月 ${escapeHtml(month.hours)}h</span>`;
@@ -1168,6 +1170,7 @@
             <div class="mini-fact"><div class="label">居住地</div><div class="value">${escapeHtml(person.residence || "待補")}</div></div>
             <div class="mini-fact"><div class="label">工作範本</div><div class="value text-clamp">${escapeHtml(person.workLevel || "待補")}</div></div>
             <div class="mini-fact"><div class="label">履歷</div><div class="value">${resume}</div></div>
+            ${humanIntel ? `<div class="mini-fact"><div class="label">人力情報</div><div class="value text-clamp">${escapeHtml(humanIntel)}</div></div>` : ""}
           </div>
           <div>
             <strong>${escapeHtml(person.historyTotalHours || 0)}h</strong>

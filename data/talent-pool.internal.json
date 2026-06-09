@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-08T09:08:01+08:00",
+    "generatedAt": "2026-06-09T18:44:35+08:00",
     "sourceModifiedAt": "2026-06-01T12:20:24.844Z",
     "source": "Current intern workbook + configured historical reimbursement sheets",
     "historySource": "2026-01 起工讀生工時報帳表（內部解析；薪資金額排除）",
@@ -22,8 +22,8 @@
     ],
     "counts": {
       "total": 45,
-      "active": 34,
-      "paused": 7,
+      "active": 33,
+      "paused": 8,
       "historyOnly": 4,
       "withHistory": 37,
       "withResumeLink": 0,
@@ -453,7 +453,10 @@
       "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 10
+      "profileCompleteness": 10,
+      "humanIntelNotes": [
+        "2026-05 報帳總表備註：有意願轉正職。"
+      ]
     },
     {
       "id": "4402a377709e",
@@ -1355,20 +1358,6 @@
       "workLevel": "3.0",
       "referrer": "張雅筑 Chu",
       "notes": "社工系學弟，香港籍；24 歲；高中畢業後先讀一年專科，後來先投入就業，因切換環境來台灣。",
-      "interviewSummary": {
-        "recordedAt": "2026-06-09",
-        "headline": "8 月社工師考試前以備考為主；考後想嘗試接記帳、家系圖等工作。",
-        "points": [
-          "曾到澎湖平安基金會實習，接觸老人、身障、精障服務。",
-          "曾到立達啟能中心實習，接觸成人身障領域。",
-          "在香港已有身障領域相關經驗，包含活動助理、生活引導員。",
-          "高中畢業後先讀一年專科，後來先投入就業；因切換環境來台灣。"
-        ],
-        "nextWorkIdeas": [
-          "8 月社工師考試後，可先安排記帳或家系圖相關的小任務。",
-          "身障、老人與精障服務經驗可作為社福資源整理或個案脈絡判讀的切入點。"
-        ]
-      },
       "resume": {
         "label": "",
         "url": ""
@@ -1415,7 +1404,21 @@
       "missingRequiredFields": [],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 9
+      "profileCompleteness": 9,
+      "interviewSummary": {
+        "recordedAt": "2026-06-09",
+        "headline": "8 月社工師考試前以備考為主；考後想嘗試接記帳、家系圖等工作。",
+        "points": [
+          "曾到澎湖平安基金會實習，接觸老人、身障、精障服務。",
+          "曾到立達啟能中心實習，接觸成人身障領域。",
+          "在香港已有身障領域相關經驗，包含活動助理、生活引導員。",
+          "高中畢業後先讀一年專科，後來先投入就業；因切換環境來台灣。"
+        ],
+        "nextWorkIdeas": [
+          "8 月社工師考試後，可先安排記帳或家系圖相關的小任務。",
+          "身障、老人與精障服務經驗可作為社福資源整理或個案脈絡判讀的切入點。"
+        ]
+      }
     },
     {
       "id": "c4c55e13a311",
@@ -1582,7 +1585,7 @@
       "email": "egroup.dolly@gmail.com",
       "residence": "彰化縣彰化市",
       "educationOrJob": "",
-      "workStatus": "",
+      "workStatus": "5–7 月準備機構評鑑，暫時比較不能接工作。",
       "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
@@ -1642,7 +1645,10 @@
       ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 3
+      "profileCompleteness": 3,
+      "humanIntelNotes": [
+        "2026-05 報帳總表備註：5–7 月要準備機構評鑑，暫時比較不能接工作。"
+      ]
     },
     {
       "id": "43273957ea20",
@@ -2273,7 +2279,7 @@
       "id": "7b630a5c0e44",
       "slug": "7b630a5c0e44",
       "name": "柯婷恩",
-      "status": "active",
+      "status": "paused",
       "sourceMembership": [
         "current_summary",
         "partner_info",
@@ -2284,7 +2290,7 @@
       "email": "egroup.verna@gmail.com",
       "residence": "彰化縣伸港鄉",
       "educationOrJob": "",
-      "workStatus": "",
+      "workStatus": "因個人因素無法配合，已退出。",
       "employmentOrStudy": "",
       "contactStatus": "",
       "workLevel": "",
@@ -2338,7 +2344,10 @@
       ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 4
+      "profileCompleteness": 4,
+      "humanIntelNotes": [
+        "2026-05 報帳總表事件：因個人因素無法配合，已退出。"
+      ]
     },
     {
       "id": "37e5b2f31223",
@@ -2752,7 +2761,10 @@
       ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 0
+      "profileCompleteness": 0,
+      "humanIntelNotes": [
+        "2026-05 報帳總表事件：新增工讀夥伴，已有 5 月工時紀錄，基本資料仍待補。"
+      ]
     },
     {
       "id": "a9753d207b2f",
@@ -2817,7 +2829,10 @@
       ],
       "hasResumeLink": false,
       "hasResumeStatus": false,
-      "profileCompleteness": 0
+      "profileCompleteness": 0,
+      "humanIntelNotes": [
+        "2026-05 報帳總表事件：新增工讀夥伴，已有 5 月工時紀錄，基本資料仍待補。"
+      ]
     },
     {
       "id": "811725e29b86",
