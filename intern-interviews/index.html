@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <title>工讀生 15 分鐘暖身會談工具</title>
+  <title>工讀夥伴近況會談（15 分鐘）</title>
   <style>
     :root {
       --ink: #17202a;
@@ -409,8 +409,10 @@
     }
 
     @media (max-width: 560px) {
+      header { position: static; }
       .header-inner,
       .wrap { padding: 14px; }
+      #copyNote { display: none; }
       .step { grid-template-columns: 1fr; }
       .question { grid-template-columns: 30px minmax(0, 1fr); }
       .profile-head { display: grid; }
@@ -421,13 +423,13 @@
   <header>
     <div class="header-inner">
       <div>
-        <h1>工讀生 15 分鐘暖身會談工具</h1>
-        <p class="subtitle">從他們真的做過的工作切入，聊出近況、卡點、想練的能力，再收斂成一個兩週內可試的小任務。</p>
+        <h1>工讀夥伴近況會談（15 分鐘）</h1>
+        <p class="subtitle">從實際做過的工作切入，聊出近況、不順的地方、想累積的能力，再確認一個兩週內可試的小任務。</p>
       </div>
       <nav class="toolbar" aria-label="頁面導覽">
-        <a class="tool" href="/">回人力戰情室</a>
-        <a class="tool" href="/talent-pool/index.html">人才庫</a>
-        <button class="tool primary" type="button" id="copyNote">複製會談紀錄</button>
+        <a class="tool" href="/">回首頁</a>
+        <a class="tool" href="/talent-pool/index.html">查看人才庫</a>
+        <button class="tool primary" type="button" id="copyNote">複製紀錄</button>
       </nav>
     </div>
   </header>
@@ -437,30 +439,34 @@
       <div>
         <span class="badge green">語氣：理解，不是考核</span>
         <h2 style="margin-top:12px">開場可以這樣說</h2>
-        <p class="quote">「我看你前面做過一些任務，今天想先聽你自己的感覺：哪些事情做起來順、哪些其實有點卡。這不是要評分，我是想之後派工作時更貼近你想練的能力，也避免一直丟不適合的事給你。」</p>
+        <p class="quote">「我有先看過你前面做的幾項工作，今天主要想聽聽你自己的感受：哪些做起來比較順、哪些地方需要多一點說明或支援。這不是考核，只是想讓後續安排的任務更符合你想累積的方向。」</p>
         <div class="hero-points">
           <span class="badge">先聊一件做過的事</span>
           <span class="badge">問題可以挑，不要像問卷</span>
-          <span class="badge">最後只收一個小下一步</span>
+          <span class="badge">最後確認一個小下一步</span>
         </div>
       </div>
       <div class="notice">
         <strong>內部使用提醒</strong>
-        <p>這頁會讀取內部人才庫，可能顯示電話、Email、居住地與工作紀錄摘要；不適合公開分享。速記只存在這台瀏覽器的 localStorage，正式保存前請複製到你的工作紀錄或人才庫備註。</p>
+        <ul>
+          <li>這頁會讀取內部人才庫，可能顯示電話、Email、居住地與工作紀錄摘要。</li>
+          <li>不適合公開分享；這是內部會談輔助頁。</li>
+          <li>速記只存在本機瀏覽器，離開前請先複製到工作紀錄或人才庫備註。</li>
+        </ul>
       </div>
     </section>
 
     <section class="grid">
       <article class="panel span-12">
-        <h2>先選一位工讀生，讓問題變自然</h2>
+        <h2>先選會談對象，讓問題變自然</h2>
         <div class="panel-body">
           <div class="talent-picker">
-            <label>工讀生
+            <label>選擇會談對象
               <select id="talentSelect">
                 <option value="">讀取人才庫中...</option>
               </select>
             </label>
-            <p class="muted">選人後會依照過往工時、工作類型、工作等級與缺漏欄位，產生比較像聊天、不是盤問的切入句。</p>
+            <p class="muted">選人後會依照過往工時、工作類型、工作範本與缺漏欄位，產生比較像聊天、不是盤問的切入句。</p>
           </div>
           <div id="talentCard" class="profile-card">
             <p class="muted">尚未選擇。你也可以直接用下面的通用流程開始聊。</p>
@@ -469,7 +475,7 @@
       </article>
 
       <article class="panel span-7">
-        <h2>15 分鐘歷程</h2>
+        <h2>15 分鐘流程</h2>
         <div class="panel-body timeline">
           <div class="step">
             <div class="time">0:00–2:00</div>
@@ -477,11 +483,11 @@
           </div>
           <div class="step">
             <div class="time">2:00–5:00</div>
-            <div><h3>從過往任務切入</h3><p>拿他真的做過的一類工作當入口：財務教育、社福資源、逐字稿、教材、資料整理或名詞校對。</p></div>
+            <div><h3>從做過的工作開始聊</h3><p>拿他實際做過的一類工作當入口：財務教育、社福資源、逐字稿、教材、資料整理或名詞校對。</p></div>
           </div>
           <div class="step">
             <div class="time">5:00–8:00</div>
-            <div><h3>找順手與卡點</h3><p>問哪裡知道怎麼做、哪裡不確定標準。先拆成流程、工具、範例、時程，不急著歸因到人。</p></div>
+            <div><h3>找順手與不順的地方</h3><p>問哪裡知道怎麼做、哪裡不確定標準。先拆成流程、工具、範例、時間，不急著歸因到人。</p></div>
           </div>
           <div class="step">
             <div class="time">8:00–11:30</div>
@@ -489,22 +495,22 @@
           </div>
           <div class="step">
             <div class="time">11:30–13:30</div>
-            <div><h3>對齊派工方式</h3><p>確認他需要明確 SOP、範例、先試做、固定回饋，或比較適合半開放任務。</p></div>
+            <div><h3>確認交辦方式</h3><p>確認他需要明確步驟、範例、先試做、固定回饋，或比較適合可自行規劃一部分的任務。</p></div>
           </div>
           <div class="step">
             <div class="time">13:30–15:00</div>
-            <div><h3>收斂一個小任務</h3><p>約一個兩週內能完成的任務，寫下交付物、預估時數、追蹤時間與需要的支援。</p></div>
+            <div><h3>確認一個小任務</h3><p>約一個兩週內能完成的任務，寫下完成成果、預估時數、追蹤時間與需要的支援。</p></div>
           </div>
         </div>
       </article>
 
       <article class="panel span-5">
-        <h2>好聊版 8 題</h2>
+        <h2>可挑的 8 個問題</h2>
         <div class="panel-body question-list">
-          <div class="question"><p>最近工作做起來，整體感覺是比較順、普通，還是有點卡？</p></div>
+          <div class="question"><p>最近工作做起來，整體感覺是比較順、普通，還是有點不太順？</p></div>
           <div class="question"><p>你前面做過的任務裡，哪一件讓你覺得「我大概知道怎麼做」？</p></div>
           <div class="question"><p>有沒有哪一件任務，你其實不太確定自己做得對不對？</p></div>
-          <div class="question"><p>如果卡住，通常是卡在理解需求、找資料、工具操作，還是時間安排？</p></div>
+          <div class="question"><p>如果有不順，通常是需求說明不夠清楚、資料不好找、工具不熟，還是時間比較難安排？</p></div>
           <div class="question"><p>目前給你的說明，會太少、剛好，還是有時候太細？</p></div>
           <div class="question"><p>哪些工作你做起來比較有耐心，或覺得可以再多練？</p></div>
           <div class="question"><p>有沒有哪類事情你想多了解一點，但之前還沒有機會碰？</p></div>
@@ -513,7 +519,7 @@
       </article>
 
       <article class="panel span-12">
-        <h2>從過往工作切入</h2>
+        <h2>從做過的工作開始聊</h2>
         <div class="panel-body angle-grid">
           <div class="angle-card">
             <h3><span class="badge">財務教育</span></h3>
@@ -522,7 +528,7 @@
           </div>
           <div class="angle-card">
             <h3><span class="badge green">社福研究</span></h3>
-            <p class="muted">適合社工系、社福現場、親子館、日照、區公所或資源整理訊號高的人。</p>
+            <p class="muted">適合社工系、社福現場、親子館、日照、區公所或資源整理經驗較明顯的人。</p>
             <p>可以問：「你整理資源時，有沒有哪類機構或服務讓你比較有感？哪些地方最容易混淆？」</p>
           </div>
           <div class="angle-card">
@@ -537,8 +543,8 @@
           </div>
           <div class="angle-card">
             <h3><span class="badge amber">資料行政</span></h3>
-            <p class="muted">適合新夥伴、工時較少，或還不知道工作等級的人。</p>
-            <p>可以問：「如果先用小任務試合作，你比較喜歡整理表格、補資料、核對名單，還是把零散資訊變清楚？」</p>
+            <p class="muted">適合新夥伴、工時較少，或還不確定適合哪一類工作範本的人。</p>
+            <p>可以問：「如果先用小任務試合作，你比較喜歡整理表格、補資料、核對名單，還是把零散資訊整理清楚？」</p>
           </div>
           <div class="angle-card">
             <h3><span class="badge purple">AI/網站工具</span></h3>
@@ -572,37 +578,37 @@
               <label>目前狀態
                 <input name="status" placeholder="就學 / 就職 / 求職 / 暫停 / 其他">
               </label>
-              <label>可投入時間
-                <input name="availability" placeholder="例如：每週 3–5 小時、晚上較可">
+              <label>可配合時間
+                <input name="availability" placeholder="例如：每週 3–5 小時、晚上比較可以">
               </label>
-              <label class="full">這次從哪個過往工作切入
+              <label class="full">從哪件事開始聊
                 <textarea name="startedFrom" placeholder="例如：先聊之前做過的社福資源整理與財務教育摘要"></textarea>
               </label>
-              <label class="full">對方有感、順手或有成就感的任務
-                <textarea name="strengths" placeholder="記具體任務與原因，不只寫「可多派」"></textarea>
+              <label class="full">對方覺得順手或有收穫的工作
+                <textarea name="strengths" placeholder="記具體工作與原因，不只寫「可加一點任務」"></textarea>
               </label>
-              <label class="full">卡住、不確定或不想多做的任務
-                <textarea name="frictions" placeholder="拆成需求理解、資料查找、工具、標準、時間"></textarea>
+              <label class="full">不太順、不確定或暫時不想多做的工作
+                <textarea name="frictions" placeholder="拆成需求說明、資料查找、工具、標準、時間"></textarea>
               </label>
               <label class="full">想多做或多了解的方向
                 <textarea name="interests" placeholder="例如：AI 工具、財務教育、資料整理、社福議題研究、教材設計"></textarea>
               </label>
               <label class="full">需要的支援
-                <textarea name="support" placeholder="SOP、範例、工具教學、回饋頻率、任務切小等"></textarea>
+                <textarea name="support" placeholder="操作步驟、範例、工具教學、回饋頻率、任務切小等"></textarea>
               </label>
-              <label class="full">下一個兩週小任務
-                <textarea name="nextTask" placeholder="任務類型 + 預估時數 + 交付物 + 需要的範例或 SOP"></textarea>
+              <label class="full">接下來兩週的小任務
+                <textarea name="nextTask" placeholder="任務類型 + 預估時數 + 完成成果 + 需要的範例或步驟"></textarea>
               </label>
               <label>追蹤時間
                 <input name="followUp" placeholder="例如：下週三前看初稿">
               </label>
-              <label>初步判斷
+              <label>接下來怎麼安排
                 <select name="decision">
-                  <option value="">尚未判斷</option>
-                  <option>可多派任務</option>
+                  <option value="">先不判斷</option>
+                  <option>可加一點任務</option>
                   <option>先小任務試做</option>
-                  <option>需要補訓練或範例</option>
-                  <option>近期先降載</option>
+                  <option>先補說明或範例</option>
+                  <option>近期先減量</option>
                 </select>
               </label>
             </div>
@@ -621,7 +627,7 @@
           <ul>
             <li>不要把 8 題全部問完；先抓一件過往工作慢慢聊。</li>
             <li>多用「我好奇」「我想了解」，少用「你要說明」。</li>
-            <li>有卡點時，先拆流程、工具、標準、時間，不直接說成能力問題。</li>
+            <li>有不順時，先拆流程、工具、標準、時間，不直接說成能力問題。</li>
             <li>缺電話、Email、居住地、目前狀態時，放最後用「順手確認」補資料。</li>
             <li>收尾一定給一個小而明確的下一步，才不會聊完散掉。</li>
           </ul>
@@ -629,27 +635,27 @@
       </article>
 
       <article class="panel span-12">
-        <h2>會後判斷</h2>
+        <h2>會後怎麼安排</h2>
         <div class="panel-body decision-grid">
           <div class="decision">
-            <span class="badge green">多派</span>
+            <span class="badge green">加一點</span>
             <h3>理解穩定，也主動想練</h3>
-            <p class="muted">給一個小專案或固定任務，明確定義交付物、品質標準與回饋週期。</p>
+            <p class="muted">可安排固定小任務或一個小專案，先說清楚預期成果、檢核方式與回饋時間。</p>
           </div>
           <div class="decision">
             <span class="badge">試做</span>
             <h3>有興趣但經驗不明</h3>
-            <p class="muted">安排 1–2 小時低風險任務，先看理解力、整理品質與回覆節奏。</p>
+            <p class="muted">安排 1–2 小時、範圍小的任務，先看理解狀況、整理品質與回覆節奏。</p>
           </div>
           <div class="decision">
-            <span class="badge amber">補訓練</span>
-            <h3>不是態度，是方法不足</h3>
-            <p class="muted">補 SOP、範例、工具教學或一次示範；不要直接加難任務。</p>
+            <span class="badge amber">補說明</span>
+            <h3>不是態度，是方法還不清楚</h3>
+            <p class="muted">補步驟、範例、工具教學或一次示範；不要直接加難任務。</p>
           </div>
           <div class="decision">
-            <span class="badge amber">降載</span>
+            <span class="badge amber">先減量</span>
             <h3>近期狀態或時間不穩</h3>
-            <p class="muted">改短任務或暫停新任務，保留穩定可完成的小工作。</p>
+            <p class="muted">先減少任務量或改成較短任務，保留能穩定完成的工作。</p>
           </div>
         </div>
       </article>
@@ -668,7 +674,7 @@
       financial_education: {
         label: "財務教育／金融素養",
         question: "你之前碰到財務教育內容時，哪一段比較有感或比較好理解？如果要幫同齡的人整理，你會想怎麼講比較自然？",
-        task: "把一個財務教育主題整理成一頁 FAQ、教案草稿或社群貼文架構"
+        task: "把一個財務教育主題整理成一頁常見問答、教案草稿或社群貼文架構"
       },
       social_welfare_resources: {
         label: "社福與資源整理",
@@ -722,8 +728,8 @@
     function statusLabel(person) {
       const status = person?.status || "";
       if (status === "active") return "目前可合作";
-      if (status === "paused") return "暫停或低負荷";
-      if (status === "history_only") return "歷史合作";
+      if (status === "paused") return "暫時少接";
+      if (status === "history_only") return "曾合作過";
       return status || "狀態待確認";
     }
 
@@ -740,10 +746,10 @@
 
     function workLevelGuide(workLevel) {
       const level = Number.parseFloat(workLevel);
-      if (!Number.isFinite(level)) return "工作等級待確認：先用 1–2 小時小任務看理解方式。";
-      if (level <= 1) return "等級 1：適合明確 SOP、範例、可快速回饋的小任務。";
-      if (level <= 2) return "等級 2：可給半開放任務，但要先對齊交付物與品質標準。";
-      return "等級 3：可試小專案或整段流程，保留週期性回饋。";
+      if (!Number.isFinite(level)) return "工作範本待確認：先用 1–2 小時的小任務看看適合哪一類工作。";
+      if (level <= 1) return "工作範本 1：適合有明確步驟、範例、能快速確認的小任務。";
+      if (level <= 2) return "工作範本 2：可安排一部分自行規劃的任務，但要先說清楚完成成果與檢核方式。";
+      return "工作範本 3：可試小專案或整段流程，保留固定回饋時間。";
     }
 
     function topSignals(person) {
@@ -758,7 +764,7 @@
 
     function buildOpening(person) {
       if (!person) return "";
-      return `我看到你前面做過 ${signalText(person)}。今天想先聽你自己的感覺：哪些做起來順、哪些其實有點卡，也看看接下來有沒有更適合你的小任務。`;
+      return `我有先看過你前面做的幾項工作，像是 ${signalText(person)}。今天主要想聽聽你自己的感受：哪些做起來比較順、哪些地方需要多一點說明或支援，也看看接下來有沒有更適合你的小任務。`;
     }
 
     function buildQuestions(person) {
@@ -768,16 +774,16 @@
       });
 
       if (person?.workStatus || person?.employmentOrStudy) {
-        questions.push("你現在的學業、工作或生活節奏，接下來兩週大概能承接多少任務？");
+        questions.push("你現在的學業、工作或生活節奏，接下來兩週大概可以配合多少工作量？");
       }
 
       if (person?.status === "paused") {
-        questions.push("如果近期先恢復合作，你會比較適合短任務、固定任務，還是先暫停新任務？");
+        questions.push("如果近期先恢復合作，你會比較適合短一點的任務、固定任務，還是先保持少量？");
       } else {
         questions.push("如果接下來兩週只安排一個小任務，你想先試哪一種？");
       }
 
-      questions.push("我目前派任務的方式，有哪裡可以調整，會讓你更好理解或更有安全感？");
+      questions.push("我目前交辦任務的方式，有哪裡可以調整，讓你比較清楚、比較安心？");
 
       return Array.from(new Set(questions)).slice(0, 6);
     }
@@ -800,7 +806,7 @@
       const monthlyWork = Array.isArray(person?.monthlyWork) ? person.monthlyWork : [];
       const latest = monthlyWork.filter((item) => Number(item.hours || 0) > 0).slice(-1)[0];
       const latestText = latest ? `${latest.month} ${formatHours(latest.hours)}` : "近期工時待確認";
-      return `${latestText}；累計 ${formatHours(person?.historyTotalHours)}；有工時月份 ${person?.monthsWithHours || 0} 個月`;
+      return `${latestText}；累計 ${formatHours(person?.historyTotalHours)}；有紀錄月份 ${person?.monthsWithHours || 0} 個月`;
     }
 
     function renderTalentCard(person) {
@@ -835,26 +841,26 @@
         </div>
         <div class="prompt-grid">
           <div class="prompt">
-            <h3><span class="badge">自然開場</span></h3>
+            <h3><span class="badge">建議開場</span></h3>
             <p>${escapeHtml(buildOpening(person))}</p>
           </div>
           <div class="prompt">
-            <h3><span class="badge purple">派工提醒</span></h3>
+            <h3><span class="badge purple">合作提醒</span></h3>
             <p>${escapeHtml(workLevelGuide(person.workLevel))}</p>
             <p class="muted">${escapeHtml(monthlySummary(person))}</p>
           </div>
         </div>
         <div>
-          <h3>過往工作線索</h3>
+          <h3>做過的工作</h3>
           <div class="chips">${signalChips || '<span class="chip">還沒有明顯分類，先從小任務試聊</span>'}</div>
         </div>
         <div class="prompt-grid">
           <div class="prompt">
-            <h3><span class="badge green">適合問</span></h3>
+            <h3><span class="badge green">可以這樣問</span></h3>
             <ul>${questions}</ul>
           </div>
           <div class="prompt">
-            <h3><span class="badge amber">下一步可試</span></h3>
+            <h3><span class="badge amber">下一步可以試</span></h3>
             <ul>${tasks}</ul>
             <p class="muted">${escapeHtml(missingText)}</p>
           </div>
@@ -863,7 +869,7 @@
     }
 
     function populateTalentSelect() {
-      talentSelect.innerHTML = `<option value="">選擇工讀生...</option>`;
+      talentSelect.innerHTML = `<option value="">選擇工讀夥伴...</option>`;
       talentState.people.forEach((person, index) => {
         const option = document.createElement("option");
         option.value = String(index);
@@ -909,21 +915,21 @@
     function markdownNote() {
       const data = formData();
       return [
-        `# 工讀生 15 分鐘會談紀錄`,
+        `# 工讀夥伴近況會談紀錄`,
         ``,
         `- 姓名：${data.name || ""}`,
         `- 日期：${data.date || ""}`,
         `- 目前狀態：${data.status || ""}`,
-        `- 可投入時間：${data.availability || ""}`,
-        `- 初步判斷：${data.decision || ""}`,
+        `- 可配合時間：${data.availability || ""}`,
+        `- 接下來怎麼安排：${data.decision || ""}`,
         ``,
-        `## 這次從哪個過往工作切入`,
+        `## 從哪件事開始聊`,
         data.startedFrom || "",
         ``,
-        `## 對方有感、順手或有成就感`,
+        `## 對方覺得順手或有收穫`,
         data.strengths || "",
         ``,
-        `## 卡住、不確定或不想多做`,
+        `## 不太順、不確定或暫時不想多做`,
         data.frictions || "",
         ``,
         `## 想多做或多了解`,
@@ -932,7 +938,7 @@
         `## 需要支援`,
         data.support || "",
         ``,
-        `## 下一個兩週小任務`,
+        `## 接下來兩週的小任務`,
         data.nextTask || "",
         ``,
         `## 追蹤時間`,
@@ -982,6 +988,7 @@
     document.querySelector("#copyNote").addEventListener("click", copyNote);
     document.querySelector("#copyNoteBottom").addEventListener("click", copyNote);
     document.querySelector("#clearNote").addEventListener("click", () => {
+      if (!window.confirm("確定要清空這份速記嗎？")) return;
       localStorage.removeItem(storageKey);
       form.reset();
       form.elements.date.value = new Date().toISOString().slice(0, 10);
