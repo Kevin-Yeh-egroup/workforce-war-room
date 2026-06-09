@@ -29,7 +29,7 @@ function formatTime(value) {
 
 function badgeClass(value) {
   if (value === 'active' || value === 'worked' || value === '有連結') return 'green';
-  if (value === 'paused' || value === '待補') return 'red';
+  if (value === 'paused' || value === '待補' || String(value).startsWith('待補 ')) return 'red';
   if (value === 'history_only' || value === '有狀態') return 'amber';
   return 'blue';
 }
@@ -119,6 +119,7 @@ function personCard(person) {
     <div class="kv compact-kv">
       <div class="k">電話 / Email</div><div class="v">${contactLine(person)}</div>
       <div class="k">居住地</div><div class="v">${escapeHtml(person.residence || '待補')}</div>
+      <div class="k">缺漏欄位</div><div class="v"><div class="badges inline-badges">${missingLine(person)}</div></div>
       <div class="k">工作範本</div><div class="v clamp">${escapeHtml(workTemplate(person))}</div>
       <div class="k">工時摘要</div><div class="v">${hoursSummary(person)}</div>
     </div>
@@ -179,7 +180,7 @@ async function main() {
     metric('電話', counts.withPhone ?? 0, `缺 ${(counts.total ?? people.length) - (counts.withPhone ?? 0)} 人`),
     metric('Email', counts.withEmail ?? 0, `缺 ${(counts.total ?? people.length) - (counts.withEmail ?? 0)} 人`),
     metric('居住地', counts.withResidence ?? 0, '只顯示縣市/區'),
-    metric('缺必要欄位', counts.missingAnyRequired ?? 0, '可用補件表補齊')
+    metric('缺漏欄位', counts.missingAnyRequired ?? 0, '可用補件表補齊')
   ].join('');
 
   const levels = [...new Set(people.map((person) => String(person.workLevel || '').trim()).filter(Boolean))].sort();

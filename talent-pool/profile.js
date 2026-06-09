@@ -14,7 +14,7 @@ function escapeHtml(value) {
 }
 
 function badge(value) {
-  const cls = value === 'active' || value === '有連結' ? 'green' : value === 'paused' || value === '待補' ? 'red' : 'blue';
+  const cls = value === 'active' || value === '有連結' || value === '必要欄位完整' ? 'green' : value === 'paused' || value === '待補' || String(value).startsWith('待補 ') ? 'red' : 'blue';
   return `<span class="badge ${cls}">${escapeHtml(value)}</span>`;
 }
 
@@ -32,6 +32,11 @@ function contactLine(person) {
   const phone = person.phone ? `<a href="tel:${escapeHtml(person.phone)}">${escapeHtml(person.phone)}</a>` : '<span class="muted">缺電話</span>';
   const email = person.email ? `<a href="mailto:${escapeHtml(person.email)}">${escapeHtml(person.email)}</a>` : '<span class="muted">缺 Email</span>';
   return `${phone}<br>${email}`;
+}
+
+function missingLine(person) {
+  const missing = person.missingRequiredFields || [];
+  return missing.length ? missing.map((item) => badge(`待補 ${item}`)).join('') : badge('必要欄位完整');
 }
 
 function months(person) {
@@ -57,6 +62,7 @@ function render(person, meta) {
   document.getElementById('title').textContent = person.name;
   const coveredMonths = meta?.coveredMonths?.length ? meta.coveredMonths.join('、') : '逐月資料';
   const missingFields = person.missingRequiredFields?.length ? `待補：${person.missingRequiredFields.join('、')}` : '必要欄位完整';
+  const missingBadge = person.missingRequiredFields?.length ? badge(`缺漏 ${person.missingRequiredFields.length}`) : badge('必要欄位完整');
   document.getElementById('sourceStatus').textContent = `累計 ${person.historyTotalHours || 0} 小時｜${missingFields}｜${coveredMonths}`;
   document.getElementById('profileCard').innerHTML = `
     <section class="section-card">
@@ -65,7 +71,7 @@ function render(person, meta) {
           <h2 style="margin:0 0 6px">${escapeHtml(person.name)}</h2>
           <div class="person-role">${escapeHtml(person.employmentOrStudy || person.currentRole || person.educationOrJob || '未填基本背景')}</div>
         </div>
-        <div class="badges">${badge(person.status)}${badge(person.resume?.url ? '有履歷連結' : person.resume?.label ? '有履歷狀態' : '缺履歷')}</div>
+        <div class="badges">${badge(person.status)}${missingBadge}${badge(person.resume?.url ? '有履歷連結' : person.resume?.label ? '有履歷狀態' : '缺履歷')}</div>
       </div>
     </section>
     <div class="section-grid">
@@ -74,6 +80,7 @@ function render(person, meta) {
         <div class="kv">
           <div class="k">電話 / Email</div><div class="v">${contactLine(person)}</div>
           <div class="k">居住地</div><div class="v">${escapeHtml(person.residence || '待補')}</div>
+          <div class="k">缺漏欄位</div><div class="v"><div class="badges inline-badges">${missingLine(person)}</div></div>
           <div class="k">現職</div><div class="v">${escapeHtml(person.currentRole || '—')}</div>
           <div class="k">學歷/職業</div><div class="v">${escapeHtml(person.educationOrJob || '—')}</div>
           <div class="k">介紹／來源</div><div class="v">${escapeHtml(person.referrer || '—')}</div>
@@ -85,7 +92,6 @@ function render(person, meta) {
           <div class="k">目前狀態</div><div class="v">${escapeHtml(person.workStatus || '—')}</div>
           <div class="k">聯繫狀況</div><div class="v">${escapeHtml(person.contactStatus || '—')}</div>
           <div class="k">工作範本</div><div class="v">${escapeHtml(person.workLevel || '—')}</div>
-          <div class="k">缺漏</div><div class="v">${escapeHtml(missingFields)}</div>
           <div class="k">備註</div><div class="v">${escapeHtml(person.notes || '—')}</div>
         </div>
       </section>
