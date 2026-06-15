@@ -1,51 +1,51 @@
 {
   "items": [
     {
-      "id": "tracking-20260608-financial-week-wrap",
-      "createdAt": "2026-06-08",
+      "id": "tracking-20260615-mohw-lottery-review-window",
+      "createdAt": "2026-06-15",
+      "topic": "tw_social_work",
+      "title": "Watch for post-intake review signals from the MOHW lottery-grant cycle",
+      "status": "open",
+      "nextCheck": "2026-06-17",
+      "question": "After the June 16 local-review handoff, do any proposal themes, shortlist signals, or reusable framing patterns become visible?",
+      "links": [
+        "https://dep.mohw.gov.tw/DOSAASW/cp-4974-86315-103.html"
+      ]
+    },
+    {
+      "id": "tracking-20260615-fsc-fin-ed-booklet-extract",
+      "createdAt": "2026-06-15",
       "topic": "tw_fin_ed",
-      "title": "Review 2026 Taiwan Financial Week outputs and reusable examples",
+      "title": "Mine the FSC financial-education results booklet for reusable formats",
       "status": "open",
-      "nextCheck": "2026-06-15",
-      "question": "Which activity formats or anti-fraud examples are worth turning into FamilyFin content or member education?",
+      "nextCheck": "2026-06-22",
+      "question": "Which official examples from the new booklet are actually reusable for FamilyFin education, anti-fraud, or member communication?",
       "links": [
-        "https://www.tfsr.org.tw/information/179"
+        "https://www.fsc.gov.tw/ch/home.jsp?id=1112&parentpath=0%2C4"
       ]
     },
     {
-      "id": "tracking-20260608-codex-sites-pilot",
-      "createdAt": "2026-06-08",
-      "topic": "codex_workflow",
-      "title": "Pilot one Codex Sites or role-plugin workflow",
-      "status": "open",
-      "nextCheck": "2026-06-16",
-      "question": "Does a Site or role-plugin path reduce handoff friction for weekly artifacts versus file-only delivery?",
-      "links": [
-        "https://openai.com/index/codex-for-every-role-tool-workflow/"
-      ]
-    },
-    {
-      "id": "tracking-20260608-memory-rollout-watch",
-      "createdAt": "2026-06-08",
+      "id": "tracking-20260615-anthropic-fable5-stability",
+      "createdAt": "2026-06-15",
       "topic": "global_ai",
-      "title": "Watch ChatGPT memory rollout outside US Plus/Pro",
+      "title": "Track whether Anthropic restores Fable 5 and Mythos 5 access quickly",
       "status": "open",
-      "nextCheck": "2026-06-20",
-      "question": "When the rollout expands, which Kevin workflows gain enough continuity value to justify a fresh checkpoint policy review?",
+      "nextCheck": "2026-06-19",
+      "question": "Does the suspension resolve fast enough to treat the launch as workflow-relevant, or is the bigger lesson still fallback discipline?",
       "links": [
-        "https://openai.com/index/chatgpt-memory-dreaming/"
+        "https://www.anthropic.com/news/claude-fable-5-mythos-5"
       ]
     },
     {
-      "id": "tracking-20260608-search-profile-eligibility",
-      "createdAt": "2026-06-08",
-      "topic": "growth_gamification",
-      "title": "Track Search profile eligibility and international expansion",
+      "id": "tracking-20260615-codex-shared-handoff-watch",
+      "createdAt": "2026-06-15",
+      "topic": "codex_workflow",
+      "title": "Keep watching for Codex features that support shared weekly handoff workflows",
       "status": "open",
-      "nextCheck": "2026-06-20",
-      "question": "Can any public-facing project use this directly, or should the same pattern be mimicked locally with simpler author hubs?",
+      "nextCheck": "2026-06-26",
+      "question": "Are the recent Codex sharing and quota-management changes enough to justify a pilot for one weekly artifact handoff?",
       "links": [
-        "https://blog.google/products-and-platforms/products/search/a-new-profile-to-help-publishers-and-creators-highlight-their-work-on-search/"
+        "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       ]
     }
   ]

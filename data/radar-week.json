@@ -1,262 +1,276 @@
 {
   "meta": {
-    "weekStart": "2026-06-01",
-    "weekEnd": "2026-06-08",
-    "generatedAt": "2026-06-08T09:08:24+08:00",
+    "weekStart": "2026-06-08",
+    "weekEnd": "2026-06-15",
+    "generatedAt": "2026-06-15T09:06:00+08:00",
     "timezone": "Asia/Taipei",
     "notes": [
-      "Coverage is the last 7 days in Asia/Taipei, with one carry-forward event item when the public activity lands inside this week.",
-      "Sources favor primary or official pages; the social-work conference item uses a disclosed submitted release and is marked medium credibility."
+      "Coverage is the last 7 days in Asia/Taipei.",
+      "Items are deduplicated against the prior week by id and source URL; this week is a fresh set of six items."
     ]
   },
   "highlights": [
     {
-      "title": "2026 Taiwan Financial Week starts on June 8",
-      "why": "A live public campaign window already exists for anti-fraud, financial literacy, and long-term planning outreach.",
-      "next": "Shortlist two relevant sessions and turn one anti-fraud or TISA takeaway into a member-facing outline by 2026-06-10."
+      "title": "MOHW social-work grant intake hit its June 8 submission gate and local reviews now run into June 16",
+      "why": "This creates an immediate follow-up window for any social-work, community, or volunteer-service proposals Kevin may want to track or benchmark.",
+      "next": "Check on June 16-17 whether any local-government or partner-facing follow-up materials appear and capture the parts worth reusing for future proposals."
     },
     {
-      "title": "Codex is now explicitly packaging workflow plugins, annotations, and shareable Sites",
-      "why": "This directly matches Kevin-style operator workflows: files, dashboards, briefs, and lightweight public/internal tools.",
-      "next": "Pick one weekly artifact to pilot with Codex Sites or a role-specific plugin and capture whether it reduces manual handoff time."
+      "title": "Anthropic launched Claude Fable 5 and Mythos 5 on June 9, then suspended access on June 12",
+      "why": "The useful signal is not just model capability. It is that workflow reliability and fallback planning still matter even for headline model launches.",
+      "next": "Keep any model-specific automation pilot behind a fallback plan and recheck access-restoration status before standardizing a new dependency."
     },
     {
-      "title": "Memory systems are becoming a first-class workflow layer, not just a chat convenience",
-      "why": "OpenAI is optimizing memory for freshness and continuity, which makes checkpoint quality and privacy boundaries more important.",
-      "next": "Review which recurring workflows should rely on model memory versus durable local state before expanding any automation."
+      "title": "OpenAI shipped a smaller but workflow-relevant Codex update on June 11",
+      "why": "Rate-limit reset banking and in-app referrals are small features, but they point to Codex becoming more team-distributed and quota-managed rather than purely solo use.",
+      "next": "Decide whether any weekly artifact flow should be tested with a shared Codex handoff pattern instead of file-only delivery."
     }
   ],
   "items": [
     {
-      "id": "20260603-tw-social-work-chaoyang-ai-welfare-shift",
-      "date": "2026-06-03",
+      "id": "20260608-tw-social-work-mohw-lottery-grant-window",
+      "date": "2026-06-08",
       "topic": "tw_social_work",
-      "title": "Chaoyang social-work conference framed AI as a workforce and governance issue",
-      "oneLine": "A June 3 conference on welfare transformation treated AI, supervision, ethics, and governance as one shared professional agenda.",
+      "title": "MOHW closed the 116-year welfare and social-work lottery-grant intake on June 8",
+      "oneLine": "The Ministry of Health and Welfare's Social Assistance and Social Work Department closed applications for 116-year public-welfare lottery grants on June 8, with local-government review handoff due by June 16.",
       "facts": [
-        "Chaoyang University said its June 3 conference on welfare transformation and social-work development drew about 120 participants from academia, practice, and student groups.",
-        "The forum discussion explicitly covered education quality, technology-enabled services, social-work supervision, professional development, and welfare governance in an aging society.",
-        "The organizing statement positioned social work as needing both helping skills and stronger cross-domain and technology application ability."
+        "MOHW says private organizations had to submit proposals by 2026-06-08 through the social-welfare subsidy application system.",
+        "The same notice says local governments must complete the local-plan initial-review forwarding step by 2026-06-16.",
+        "The eligible plan scope explicitly covers social assistance, disaster relief, community development, social work, volunteer service, and public fundraising."
       ],
       "yourTake": [
-        "The useful signal is not a single AI tool. It is that social-work training and frontline service design are starting to treat technology capability as part of professional readiness."
+        "This is a useful operational checkpoint because it marks when 2026 social-work proposal activity moves from intake to review and shortlist preparation.",
+        "If Kevin wants to track social-work field priorities, this is a better signal than generic conference talk because it ties directly to fundable project framing."
       ],
       "actions": [
-        "Draft a one-page list of low-risk AI support tasks for social-work and welfare operations: meeting prep, document cleanup, case-admin summaries, training-note extraction, and public resource mapping."
+        "On or after 2026-06-16, check whether any local-government or partner-facing review notes, shortlist signals, or reused proposal templates become visible.",
+        "Capture the strongest recurring plan themes for future FamilyFin or welfare-adjacent proposal drafting."
       ],
       "sources": [
         {
-          "label": "CNA Message Platform - Chaoyang conference release",
-          "url": "https://www.cna.com.tw/postwrite/chi/435253",
-          "publishedAt": "2026-06-03"
+          "label": "MOHW Social Assistance and Social Work Department - 116-year lottery grant intake notice",
+          "url": "https://dep.mohw.gov.tw/DOSAASW/cp-4974-86315-103.html",
+          "publishedAt": "2026-05-11"
         }
       ],
       "credibility": {
-        "level": "medium",
-        "reason": "Date, organizer, and discussion topics are explicit, but this is a submitted institutional release rather than staff reporting."
+        "level": "high",
+        "reason": "Primary MOHW department notice with concrete intake and forwarding deadlines."
       },
       "status": "new",
       "followups": [
-        "Check whether slides, proceedings, or follow-up materials are released after the conference."
+        "Recheck after 2026-06-16 for review-stage or shortlist signals."
       ],
       "tags": [
         "social-work",
-        "ai-adoption",
-        "governance"
+        "funding",
+        "proposal",
+        "taiwan"
       ]
     },
     {
-      "id": "20260608-tw-fin-ed-taiwan-financial-week",
-      "date": "2026-06-08",
+      "id": "20260610-tw-fin-ed-fsc-fin-ed-booklet",
+      "date": "2026-06-10",
       "topic": "tw_fin_ed",
-      "title": "2026 Taiwan Financial Week opens with a ready-made public education window",
-      "oneLine": "Taiwan Financial Week runs June 8 to June 14 and bundles 28 financial education activities across banking, insurance, securities, funds, and anti-fraud outreach.",
+      "title": "FSC published the 114-year financial education results booklet on June 10",
+      "oneLine": "The Financial Supervisory Commission added a new financial-education results booklet on June 10, creating a fresh official source to mine for reusable outreach formats and policy framing.",
       "facts": [
-        "The Taiwan Financial Services Roundtable said the week is part of the FSC-backed financial literacy promotion plan and runs from 2026-06-08 to 2026-06-14.",
-        "The announcement says participating institutions jointly offer 28 activities, online and offline, with roughly 26,000 expected participant visits.",
-        "The program emphasizes practical money management, anti-fraud awareness, and sustainable financial capability rather than product marketing alone."
+        "The FSC financial-education booklet page lists a new 114-year results booklet dated 2026-06-10.",
+        "The same page shows it as the newest item in the financial-education results series.",
+        "This gives Kevin a current official compilation point rather than relying only on single-event campaign pages."
       ],
       "yourTake": [
-        "This is a strong timing hook for FamilyFin or member education because the public attention window already exists and the content is easier to contextualize than launching a standalone campaign from zero."
+        "The practical value is not the PDF itself, but the chance to extract which education formats the regulator chose to highlight after a full year of work.",
+        "This can become a better benchmark set for FamilyFin education design than isolated activity announcements."
       ],
       "actions": [
-        "Pick two event topics that map cleanly to FamilyFin teaching needs and convert one into a short member-friendly outline this week."
+        "Read the new booklet and pull out three reusable outreach or anti-fraud education formats worth adapting.",
+        "Note which examples are useful for member education versus policy/context background only."
       ],
       "sources": [
         {
-          "label": "Taiwan Financial Services Roundtable - 2026 Taiwan Financial Week",
-          "url": "https://www.tfsr.org.tw/information/179",
-          "publishedAt": "2026-05-18"
+          "label": "FSC - Financial education results booklet page",
+          "url": "https://www.fsc.gov.tw/ch/home.jsp?id=1112&parentpath=0%2C4",
+          "publishedAt": "2026-06-10"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "Official organizer announcement with concrete dates, activity count, and program framing."
+        "reason": "Primary FSC publication index with the new booklet date."
       },
       "status": "new",
       "followups": [
-        "Review the post-event outputs or summary materials after 2026-06-14 to see which formats drew the most usable education examples."
+        "Extract concrete format ideas rather than only summarizing the booklet."
       ],
       "tags": [
         "financial-education",
+        "fsc",
         "taiwan",
-        "anti-fraud",
-        "tisa"
+        "benchmarking"
       ]
     },
     {
-      "id": "20260604-global-ai-chatgpt-memory-dreaming",
-      "date": "2026-06-04",
-      "topic": "global_ai",
-      "title": "OpenAI upgrades ChatGPT memory toward fresher long-running context",
-      "oneLine": "OpenAI is rolling out a more scalable memory-synthesis system designed to keep context fresher and reduce stale saved-memory drift.",
-      "facts": [
-        "OpenAI announced the update on 2026-06-04 and described it as a more capable and scalable memory-synthesis system for freshness, continuity, and relevance.",
-        "The post says the new approach is meant to address staleness, correctness, and scalability problems across hundreds of millions of users and multi-year time horizons.",
-        "Availability starts with Plus and Pro users in the US, with more countries and Free and Go users scheduled later."
-      ],
-      "yourTake": [
-        "For recurring operational work, better model memory increases leverage only if checkpoint discipline stays strong. It helps with continuity, but it also raises the cost of sloppy or sensitive context boundaries."
-      ],
-      "actions": [
-        "Review which recurring workflows should rely on model memory versus explicit local state files, especially around payroll, approvals, and privacy-sensitive intern data."
-      ],
-      "sources": [
-        {
-          "label": "OpenAI - Dreaming: Better memory for a more helpful ChatGPT",
-          "url": "https://openai.com/index/chatgpt-memory-dreaming/",
-          "publishedAt": "2026-06-04"
-        }
-      ],
-      "credibility": {
-        "level": "high",
-        "reason": "Primary product/research release from OpenAI with concrete rollout scope and rationale."
-      },
-      "status": "new",
-      "followups": [
-        "Watch for rollout expansion beyond the US before depending on this in shared-team habits."
-      ],
-      "tags": [
-        "memory",
-        "chatgpt",
-        "workflow",
-        "continuity"
-      ]
-    },
-    {
-      "id": "20260602-codex-workflow-role-plugins-sites",
-      "date": "2026-06-02",
+      "id": "20260611-codex-workflow-release-notes-reset-banking",
+      "date": "2026-06-11",
       "topic": "codex_workflow",
-      "title": "Codex adds role plugins, annotations, and shareable Sites",
-      "oneLine": "OpenAI is explicitly turning Codex into a broader work platform for operators, analysts, designers, and researchers, not only developers.",
+      "title": "OpenAI added rate-limit reset banking and referrals to Codex",
+      "oneLine": "The June 11 ChatGPT release notes added Codex rate-limit reset banking and in-app referral invitations for eligible Plus and Pro users.",
       "facts": [
-        "OpenAI published the update on 2026-06-02 and said more than 5 million people now use Codex every week.",
-        "The post says non-developers make up about 20 percent of overall Codex users and are growing more than three times as fast as developers.",
-        "OpenAI launched six role-specific plugins and said they bundle 62 apps and 110 skills, alongside annotations and a preview of shareable Sites via URL."
+        "OpenAI's ChatGPT release notes on 2026-06-11 include a Codex update section.",
+        "That update says eligible Plus and Pro users now have banked rate-limit resets, including one free reset at launch.",
+        "The same note says users can send referral invitations from within the Codex app and the granted reset remains usable for 30 days."
       ],
       "yourTake": [
-        "This validates Kevin-style report, dashboard, and workflow automation use cases as a first-class path. The key opportunity is to reduce the last-mile handoff from draft artifact to reviewable surface."
+        "This is a small product update, but it matters for recurring workflows because it nudges Codex toward shared-team usage and quota planning instead of ad hoc solo runs.",
+        "If Kevin starts delegating weekly artifacts through Codex more often, usage-budget behavior becomes an operational consideration, not just a product footnote."
       ],
       "actions": [
-        "Pilot one weekly artifact with a shareable Site or role-specific plugin flow and compare the review friction against the current file-first path."
+        "Decide whether any weekly artifact handoff should be tested with a shared Codex workflow and note the quota-management implications.",
+        "Keep local-state checkpoints as the durable source of truth instead of assuming product-level memory or sharing features cover continuity."
       ],
       "sources": [
         {
-          "label": "OpenAI - Codex for every role, tool, and workflow",
-          "url": "https://openai.com/index/codex-for-every-role-tool-workflow/",
-          "publishedAt": "2026-06-02"
+          "label": "OpenAI Help Center - ChatGPT release notes",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "publishedAt": "2026-06-11"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "Primary product announcement with specific adoption and capability details."
+        "reason": "Primary OpenAI release notes page for ChatGPT and Codex product changes."
       },
       "status": "new",
       "followups": [
-        "Track which plugin bundles overlap most with Kevin workflows before standardizing any new runbook."
+        "Watch whether later updates expand the same team-sharing pattern beyond referrals and resets."
       ],
       "tags": [
         "codex",
-        "plugins",
-        "sites",
-        "workflow"
+        "workflow",
+        "usage-limits",
+        "handoff"
       ]
     },
     {
-      "id": "20260602-global-ai-project-glasswing-expansion",
-      "date": "2026-06-02",
+      "id": "20260609-global-ai-anthropic-fable5-launch",
+      "date": "2026-06-09",
       "topic": "global_ai",
-      "title": "Anthropic expands Project Glasswing from a pilot to broader critical-infrastructure coverage",
-      "oneLine": "Anthropic says its cyber-defense partnership is expanding to about 150 new organizations across more than 15 countries.",
+      "title": "Anthropic launched Claude Fable 5 and Mythos 5, then suspended access three days later",
+      "oneLine": "Anthropic introduced Claude Fable 5 for general use and Mythos 5 through Project Glasswing on June 9, then posted an access suspension update on June 12.",
       "facts": [
-        "Anthropic announced the expansion on 2026-06-02 after an initial partner group used Mythos Preview to scan codebases for vulnerabilities.",
-        "The company says the expanded group includes roughly 150 additional organizations in sectors such as power, water, healthcare, communications, and hardware.",
-        "Anthropic frames the next bottleneck as not just finding vulnerabilities, but reviewing, disclosing, patching, and safely scaling defensive use."
+        "Anthropic's June 9 announcement launched Claude Fable 5 and described Mythos 5 as an upgrade path through Project Glasswing for a small trusted group.",
+        "The same page says Mythos 5 is the same underlying model as Fable 5 with some safeguards lifted for a limited cyber-defense context.",
+        "A June 12 update on that page says access to Claude Fable 5 and Claude Mythos 5 was suspended while Anthropic works to restore service."
       ],
       "yourTake": [
-        "The bigger signal is governance maturity: frontier-model discussions are moving from raw capability headlines toward operational norms, patch workflows, and defender advantage."
+        "The capability story matters less than the operational lesson: new model access can still be unstable inside the same week it launches.",
+        "This reinforces Kevin's preference for fallback-ready workflows and for not anchoring durable processes to one provider announcement too early."
       ],
       "actions": [
-        "Keep approval gates, audit trails, and patch-ready outputs explicit in any automation that touches public artifacts or sensitive operational data."
+        "When comparing models for workflow pilots, include service-stability and fallback-readiness as explicit criteria.",
+        "Recheck whether access is restored before using this launch as evidence for any workflow migration."
       ],
       "sources": [
         {
-          "label": "Anthropic - Expanding Project Glasswing",
-          "url": "https://www.anthropic.com/news/expanding-project-glasswing",
-          "publishedAt": "2026-06-02"
+          "label": "Anthropic - Claude Fable 5 and Claude Mythos 5",
+          "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "publishedAt": "2026-06-09"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "Primary announcement with concrete scale, geography, and deployment framing."
+        "reason": "Primary Anthropic launch page that also carries the June 12 suspension update."
       },
       "status": "new",
       "followups": [
-        "Watch for the next public detail on safeguards, partner tooling, or broader access criteria."
+        "Watch for restoration timing and any explanation of the access suspension."
+      ],
+      "tags": [
+        "anthropic",
+        "model-release",
+        "reliability",
+        "fallbacks"
+      ]
+    },
+    {
+      "id": "20260610-global-ai-openai-prc-influence-report",
+      "date": "2026-06-10",
+      "topic": "global_ai",
+      "title": "OpenAI reported PRC-linked influence operations targeting US AI debates",
+      "oneLine": "OpenAI said it banned two clusters of ChatGPT accounts linked to apparent covert influence operations focused on AI data-center narratives, tariffs, and false claims about OpenAI data compromise.",
+      "facts": [
+        "OpenAI published the report on 2026-06-10.",
+        "The report describes two clusters of ChatGPT accounts likely originating from China that OpenAI banned.",
+        "One cluster pushed AI data-center electricity-cost narratives, while another criticized US tariffs and amplified false claims that ChatGPT user data had been compromised."
+      ],
+      "yourTake": [
+        "For Kevin's workflows, the relevant signal is governance and provenance discipline: AI-adjacent narratives will increasingly need source-checking because policy and infrastructure debates are becoming influence targets.",
+        "This is especially relevant for any future public-facing AI or policy summary artifact."
+      ],
+      "actions": [
+        "Keep source freshness and provenance checks explicit whenever a weekly radar item touches AI policy, infrastructure, or geopolitical narratives.",
+        "Treat high-velocity AI policy discourse as a category where secondary summaries deserve extra skepticism."
+      ],
+      "sources": [
+        {
+          "label": "OpenAI - PRC-linked influence operations are targeting AI debates in the US",
+          "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates/",
+          "publishedAt": "2026-06-10"
+        }
+      ],
+      "credibility": {
+        "level": "high",
+        "reason": "Primary OpenAI report describing account takedowns and narrative patterns."
+      },
+      "status": "new",
+      "followups": [
+        "Watch whether other model providers publish similar influence-operation disclosures."
       ],
       "tags": [
         "ai-governance",
-        "cybersecurity",
-        "deployment"
+        "trust",
+        "policy",
+        "source-checking"
       ]
     },
     {
-      "id": "20260604-growth-search-profiles",
-      "date": "2026-06-04",
+      "id": "20260520-growth-google-demand-gen-youtube",
+      "date": "2026-05-20",
       "topic": "growth_gamification",
-      "title": "Google Search profiles turn publisher identity into a followable landing page",
-      "oneLine": "Google launched Search profiles so eligible creators and publishers can centralize links, recent content, and a direct follow surface from Search and Discover.",
+      "title": "Google expanded Demand Gen with creator boosts, Maps inventory, and broader checkout links",
+      "oneLine": "Google's latest Demand Gen update makes it easier to boost creator videos, distribute product videos dynamically, add Maps inventory, and expand checkout links to more markets.",
       "facts": [
-        "Google announced Search profiles on 2026-06-04 as a dedicated, shareable space for publishers and creators to highlight content across platforms.",
-        "The profile can showcase recent articles, videos, social posts, and key links, and can be reached from mobile knowledge panels, Discover, or a direct URL.",
-        "Initial launch is US-only and eligibility starts with creators or publishers that already have a sizable following on a major social or video platform."
+        "Google says Demand Gen now supports creator-partnership boosts directly in campaign setup.",
+        "The update adds Google Maps inventory and expands checkout links to nine new markets.",
+        "Google also says advertisers with large product selections typically see a 33 percent conversion lift when adopting product feeds in Demand Gen campaigns."
       ],
       "yourTake": [
-        "The growth lesson is not the feature alone. It is the lighter acquisition loop: identity page, direct URL, current links, and follow behavior in one place. Small public projects can mimic this pattern even before platform eligibility exists."
+        "The transferable lesson for Kevin is not paid media execution itself. It is the tighter loop between trusted creator proof, local discovery, and reduced-click conversion paths.",
+        "That pattern can be mimicked in simpler internal or public funnels even without running YouTube campaigns."
       ],
       "actions": [
-        "Check whether any public-facing project should adopt a simpler author or publisher hub pattern instead of sending people straight into a deep content tree."
+        "Review whether any public-facing project should add a lighter trust-building entry path before asking users to navigate a deep content tree.",
+        "Capture one creator-proof or local-discovery pattern that could be adapted into a lower-friction landing flow."
       ],
       "sources": [
         {
-          "label": "Google - A new profile to help publishers and creators highlight their work on Search",
-          "url": "https://blog.google/products-and-platforms/products/search/a-new-profile-to-help-publishers-and-creators-highlight-their-work-on-search/",
-          "publishedAt": "2026-06-04"
+          "label": "Google Blog - Fuel your next wave of growth on YouTube with Demand Gen",
+          "url": "https://blog.google/products-and-platforms/products/youtube/youtube-demand-gen-updates/",
+          "publishedAt": "2026-05-20"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "Primary Google product announcement with launch mechanics and eligibility details."
+        "reason": "Primary Google announcement describing the new Demand Gen features and rollout framing."
       },
       "status": "new",
       "followups": [
-        "Watch for expansion beyond the US and for whether small publishers receive clearer eligibility guidance."
+        "Track which parts of this pattern are easiest to adapt without paid-media dependence."
       ],
       "tags": [
         "growth",
-        "discoverability",
-        "creators",
-        "search"
+        "creator",
+        "discovery",
+        "conversion"
       ]
     }
   ],
@@ -269,10 +283,10 @@
       "growth_gamification": 1
     },
     "trackingItems": [
-      "Review Taiwan Financial Week outcomes after 2026-06-14.",
-      "Pilot one Codex Site or plugin-backed weekly artifact.",
-      "Watch ChatGPT memory rollout beyond US Plus/Pro availability.",
-      "Monitor Search profiles international rollout and eligibility."
+      "Recheck MOHW/local-government follow-up signals after the 2026-06-16 review handoff.",
+      "Extract three reusable formats from the FSC financial-education results booklet.",
+      "Watch Anthropic Fable 5 and Mythos 5 service-restoration status before adopting any workflow dependency.",
+      "Keep one creator-proof or lower-friction funnel pattern on watch for reuse."
     ]
   }
 }

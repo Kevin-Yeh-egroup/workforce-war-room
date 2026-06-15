@@ -1,25 +1,26 @@
-# Weekly Work Items: 2026-06-01 to 2026-06-08
+# Weekly Work Items: 2026-06-08 to 2026-06-15
 
 All items should be doable within 30 minutes. Owner defaults to Kevin. This file contains reminders and statuses only: no salary numbers and no bank details.
 
 ## A. Radar-driven actions
 
-- [ ] Shortlist two Taiwan Financial Week activities that map to FamilyFin education or anti-fraud messaging. Owner: Kevin. Due: 2026-06-09.
-- [ ] Turn one Taiwan Financial Week takeaway into a one-page member-facing outline or post draft. Owner: Kevin. Due: 2026-06-10.
-- [ ] Choose one weekly artifact to pilot with Codex Sites or a role-specific plugin. Owner: Kevin. Due: 2026-06-10.
-- [ ] Write a short note on when to use model memory versus local durable state for recurring workflows. Owner: Kevin. Due: 2026-06-12.
-- [ ] Check whether Search profiles are relevant for any public-facing project, or whether the same pattern should be mimicked locally. Owner: Kevin. Due: 2026-06-13.
-- [ ] Draft a one-page list of low-risk AI support tasks for social-work or welfare operations. Owner: Kevin. Due: 2026-06-13.
+- [ ] Pull three reusable anti-fraud or money-habit examples from Taiwan Financial Week materials. Owner: Kevin. Due: 2026-06-18.
+- [ ] Turn one Taiwan Financial Week example into a short FamilyFin outline, post skeleton, or checklist. Owner: Kevin. Due: 2026-06-18.
+- [ ] Rewrite one existing recurring workflow in the shape `trigger -> inputs -> tools -> checkpoints -> human review -> proof`. Owner: Kevin. Due: 2026-06-19.
+- [ ] Note one fallback path for any workflow that currently assumes uninterrupted access to a single frontier model. Owner: Kevin. Due: 2026-06-19.
+- [ ] Capture whether the Oracle procurement path or Partner Network changes anything practical for Kevin-style workflow rollout, or is only enterprise positioning for now. Owner: Kevin. Due: 2026-06-23.
+- [ ] Turn one scam pattern from Google's June advisory into a plain-language warning card or internal education note. Owner: Kevin. Due: 2026-06-20.
 
 ## B. Intern dispatch and pay-status checks
 
-- [ ] Confirm the latest May-history rebuild reached the repo and still shows public pay status without amounts. Owner: Kevin. Due: 2026-06-09.
-- [ ] Spot-check three `/interns/` pages and three `/talent-pool/` pages after the rebuild. Owner: Kevin. Due: 2026-06-09.
-- [ ] Review talent-pool missing-field totals and pick the top five profiles that most need follow-up data. Owner: Kevin. Due: 2026-06-11.
-- [ ] Record this week's payroll reminder status as `due=0` after the refreshed source sync. Owner: Kevin. Due: 2026-06-09.
+- [ ] Record this week's payroll reminder status as `due=0` because the tracked intern source timestamp is unchanged at `2026-06-01T12:20:24.844Z`. Owner: Kevin. Due: 2026-06-16.
+- [ ] Spot-check the live `/interns/` and `/talent-pool/` routes after the radar publish to confirm no older file set was reintroduced. Owner: Kevin. Due: 2026-06-16.
+- [ ] Review the missing-field list in talent-pool data and choose the top five profiles that most need follow-up contact or profile completion. Owner: Kevin. Due: 2026-06-18.
+- [ ] Verify the homepage metric cards still read from `data/interns.public.json`, `data/talent-pool.internal.json`, `data/radar-week.json`, and `data/radar-work-items.md`, not `data/dashboard.json`. Owner: Kevin. Due: 2026-06-16.
 
 ## C. Carry-forward tracking
 
-- [ ] Re-check Taiwan Financial Week outputs after the event window closes. Owner: Kevin. Due: 2026-06-15.
-- [ ] Re-check ChatGPT memory rollout availability beyond US Plus/Pro. Owner: Kevin. Due: 2026-06-20.
-- [ ] Re-check Search profile international rollout and eligibility guidance. Owner: Kevin. Due: 2026-06-20.
+- [ ] Re-check Taiwan Financial Week output examples and post-event artifacts. Owner: Kevin. Due: 2026-06-22.
+- [ ] Re-check whether Anthropic restores Fable 5 and Mythos 5 access. Owner: Kevin. Due: 2026-06-19.
+- [ ] Re-check OCI availability timing for OpenAI models and Codex. Owner: Kevin. Due: 2026-06-23.
+- [ ] Re-check whether OpenAI publishes Codex-specific partner specialization details. Owner: Kevin. Due: 2026-06-23.
