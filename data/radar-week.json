@@ -1,276 +1,276 @@
 {
   "meta": {
-    "weekStart": "2026-06-08",
-    "weekEnd": "2026-06-15",
-    "generatedAt": "2026-06-15T09:06:00+08:00",
+    "weekStart": "2026-06-15",
+    "weekEnd": "2026-06-22",
+    "generatedAt": "2026-06-22T09:08:00+08:00",
     "timezone": "Asia/Taipei",
     "notes": [
       "Coverage is the last 7 days in Asia/Taipei.",
-      "Items are deduplicated against the prior week by id and source URL; this week is a fresh set of six items."
+      "Items are deduplicated against the prior week by id and source URL; this week contains six new items."
     ]
   },
   "highlights": [
     {
-      "title": "MOHW social-work grant intake hit its June 8 submission gate and local reviews now run into June 16",
-      "why": "This creates an immediate follow-up window for any social-work, community, or volunteer-service proposals Kevin may want to track or benchmark.",
-      "next": "Check on June 16-17 whether any local-government or partner-facing follow-up materials appear and capture the parts worth reusing for future proposals."
+      "title": "MOHW specialist social-work training organization applications enter the final week",
+      "why": "The June 29 deadline is a practical social-work capacity signal: institutions that want specialist training recognition must finish their application package now.",
+      "next": "Use this as a checklist prompt for any partner-facing social-work training or supervision proposal before 2026-06-29."
     },
     {
-      "title": "Anthropic launched Claude Fable 5 and Mythos 5 on June 9, then suspended access on June 12",
-      "why": "The useful signal is not just model capability. It is that workflow reliability and fallback planning still matter even for headline model launches.",
-      "next": "Keep any model-specific automation pilot behind a fallback plan and recheck access-restoration status before standardizing a new dependency."
+      "title": "AI-agent governance shifted from model-only safety to operating controls",
+      "why": "Google DeepMind's AI Control Roadmap, OpenAI's enterprise spend controls, and Codex automation fixes all point to the same operational pattern: visibility, permissions, fallback, and cost controls matter as much as model choice.",
+      "next": "Add an explicit controls row to future AI workflow pilots: who can run it, what it can access, how spend is bounded, and how failure is detected."
     },
     {
-      "title": "OpenAI shipped a smaller but workflow-relevant Codex update on June 11",
-      "why": "Rate-limit reset banking and in-app referrals are small features, but they point to Codex becoming more team-distributed and quota-managed rather than purely solo use.",
-      "next": "Decide whether any weekly artifact flow should be tested with a shared Codex handoff pattern instead of file-only delivery."
+      "title": "Discord continues turning quests and monthly rewards into retention infrastructure",
+      "why": "Nitro Rewards/Orbs show a mature community-growth pattern that is more relevant to member engagement than generic gamification statistics.",
+      "next": "Prototype one lightweight FamilyFin-style weekly challenge/reward loop on paper before building anything."
     }
   ],
   "items": [
     {
-      "id": "20260608-tw-social-work-mohw-lottery-grant-window",
-      "date": "2026-06-08",
+      "id": "20260622-tw-social-work-specialist-training-org-deadline",
+      "date": "2026-06-22",
       "topic": "tw_social_work",
-      "title": "MOHW closed the 116-year welfare and social-work lottery-grant intake on June 8",
-      "oneLine": "The Ministry of Health and Welfare's Social Assistance and Social Work Department closed applications for 116-year public-welfare lottery grants on June 8, with local-government review handoff due by June 16.",
+      "title": "MOHW specialist social-work training organization applications close on June 29",
+      "oneLine": "MOHW's 115-year specialist social-worker training organization recognition window for new applicants runs through 2026-06-29.",
       "facts": [
-        "MOHW says private organizations had to submit proposals by 2026-06-08 through the social-welfare subsidy application system.",
-        "The same notice says local governments must complete the local-plan initial-review forwarding step by 2026-06-16.",
-        "The eligible plan scope explicitly covers social assistance, disaster relief, community development, social work, volunteer service, and public fundraising."
+        "MOHW's Social Assistance and Social Work Department says new applicants can apply from 2026-04-30 through 2026-06-29.",
+        "Extension applicants have a separate 2026-07-16 to 2026-09-15 window.",
+        "Applications are handled online through the social-welfare institution and professional manpower management information system."
       ],
       "yourTake": [
-        "This is a useful operational checkpoint because it marks when 2026 social-work proposal activity moves from intake to review and shortlist preparation.",
-        "If Kevin wants to track social-work field priorities, this is a better signal than generic conference talk because it ties directly to fundable project framing."
+        "This is a capacity-building signal rather than a headline policy change.",
+        "For Kevin's social-work and workforce lens, it is useful because specialist training recognition shapes which institutions can credibly run supervision or continuing education pipelines."
       ],
       "actions": [
-        "On or after 2026-06-16, check whether any local-government or partner-facing review notes, shortlist signals, or reused proposal templates become visible.",
-        "Capture the strongest recurring plan themes for future FamilyFin or welfare-adjacent proposal drafting."
+        "Before 2026-06-29, capture the application requirements as a reusable checklist for future social-work training partner review.",
+        "Tag any partner or institution that might need the extension window from 2026-07-16."
       ],
       "sources": [
         {
-          "label": "MOHW Social Assistance and Social Work Department - 116-year lottery grant intake notice",
-          "url": "https://dep.mohw.gov.tw/DOSAASW/cp-4974-86315-103.html",
-          "publishedAt": "2026-05-11"
+          "label": "MOHW Social Assistance and Social Work Department - specialist social-work training organization recognition",
+          "url": "https://dep.mohw.gov.tw/DOSAASW/cp-4970-86212-103.html",
+          "publishedAt": "2026-04-24"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "Primary MOHW department notice with concrete intake and forwarding deadlines."
+        "reason": "Primary MOHW department notice with concrete dates and application route."
       },
       "status": "new",
       "followups": [
-        "Recheck after 2026-06-16 for review-stage or shortlist signals."
+        "Recheck after 2026-06-29 for any late notice, FAQ, or applicant-status update."
       ],
       "tags": [
         "social-work",
-        "funding",
-        "proposal",
+        "training",
+        "taiwan",
+        "capacity-building"
+      ]
+    },
+    {
+      "id": "20260616-tw-finance-sme-carbon-check-bank-meeting",
+      "date": "2026-06-16",
+      "topic": "tw_fin_ed",
+      "title": "FSC used the bank general managers meeting to push SME finance plus carbon-check practices",
+      "oneLine": "FSC's June 16 bank general managers meeting combined SME lending recognition with sharing on financial carbon-check services for small and micro enterprises.",
+      "facts": [
+        "FSC held the 61st domestic bank general managers business liaison meeting and recognition ceremony on 2026-06-16.",
+        "The meeting recognized banks for SME lending, New Southbound target-country credit, and six core strategic industry lending.",
+        "FSC invited the Small and Medium Enterprise and Startup Administration and high-performing banks to share experience on matching SMEs into carbon-check services."
+      ],
+      "yourTake": [
+        "This is relevant to financial education because SME finance is being connected to carbon-awareness and advisory workflows, not only credit volume.",
+        "For FamilyFin-style education, the reusable angle is turning abstract policy into a simple business-owner checklist."
+      ],
+      "actions": [
+        "Draft one plain-language explainer outline: what an SME financial carbon check is, what documents a small business should prepare, and what questions to ask the bank.",
+        "Keep this as background material only unless a concrete audience or partner asks for it."
+      ],
+      "sources": [
+        {
+          "label": "FSC - 61st domestic bank general managers meeting",
+          "url": "https://www.fsc.gov.tw/ch/home.jsp?aplistdn=ou%3Dnews%2Cou%3Dmultisite%2Cou%3Dchinese%2Cou%3Dap_root%2Co%3Dfsc%2Cc%3Dtw&dataserno=202606160004&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2",
+          "publishedAt": "2026-06-16"
+        }
+      ],
+      "credibility": {
+        "level": "high",
+        "reason": "Primary FSC news release describing the meeting and policy topics."
+      },
+      "status": "new",
+      "followups": [
+        "Watch whether FSC or SME Administration publishes a reusable carbon-check guide."
+      ],
+      "tags": [
+        "financial-education",
+        "sme",
+        "carbon-check",
         "taiwan"
       ]
     },
     {
-      "id": "20260610-tw-fin-ed-fsc-fin-ed-booklet",
-      "date": "2026-06-10",
-      "topic": "tw_fin_ed",
-      "title": "FSC published the 114-year financial education results booklet on June 10",
-      "oneLine": "The Financial Supervisory Commission added a new financial-education results booklet on June 10, creating a fresh official source to mine for reusable outreach formats and policy framing.",
-      "facts": [
-        "The FSC financial-education booklet page lists a new 114-year results booklet dated 2026-06-10.",
-        "The same page shows it as the newest item in the financial-education results series.",
-        "This gives Kevin a current official compilation point rather than relying only on single-event campaign pages."
-      ],
-      "yourTake": [
-        "The practical value is not the PDF itself, but the chance to extract which education formats the regulator chose to highlight after a full year of work.",
-        "This can become a better benchmark set for FamilyFin education design than isolated activity announcements."
-      ],
-      "actions": [
-        "Read the new booklet and pull out three reusable outreach or anti-fraud education formats worth adapting.",
-        "Note which examples are useful for member education versus policy/context background only."
-      ],
-      "sources": [
-        {
-          "label": "FSC - Financial education results booklet page",
-          "url": "https://www.fsc.gov.tw/ch/home.jsp?id=1112&parentpath=0%2C4",
-          "publishedAt": "2026-06-10"
-        }
-      ],
-      "credibility": {
-        "level": "high",
-        "reason": "Primary FSC publication index with the new booklet date."
-      },
-      "status": "new",
-      "followups": [
-        "Extract concrete format ideas rather than only summarizing the booklet."
-      ],
-      "tags": [
-        "financial-education",
-        "fsc",
-        "taiwan",
-        "benchmarking"
-      ]
-    },
-    {
-      "id": "20260611-codex-workflow-release-notes-reset-banking",
-      "date": "2026-06-11",
+      "id": "20260616-codex-automation-approval-mode-fix",
+      "date": "2026-06-16",
       "topic": "codex_workflow",
-      "title": "OpenAI added rate-limit reset banking and referrals to Codex",
-      "oneLine": "The June 11 ChatGPT release notes added Codex rate-limit reset banking and in-app referral invitations for eligible Plus and Pro users.",
+      "title": "Codex changelog fixed scheduled automations to honor approval mode",
+      "oneLine": "OpenAI's Codex changelog says scheduled automations now honor the selected approval mode and also adds workspace/plugin and usage-limit guidance improvements.",
       "facts": [
-        "OpenAI's ChatGPT release notes on 2026-06-11 include a Codex update section.",
-        "That update says eligible Plus and Pro users now have banked rate-limit resets, including one free reset at launch.",
-        "The same note says users can send referral invitations from within the Codex app and the granted reset remains usable for 30 days."
+        "The Codex changelog entry includes improved plugin management across workspace plugins.",
+        "It improves usage-limit errors with inline plan and workspace guidance, including reset timing when available.",
+        "It fixes scheduled automations so they honor the selected approval mode."
       ],
       "yourTake": [
-        "This is a small product update, but it matters for recurring workflows because it nudges Codex toward shared-team usage and quota planning instead of ad hoc solo runs.",
-        "If Kevin starts delegating weekly artifacts through Codex more often, usage-budget behavior becomes an operational consideration, not just a product footnote."
+        "This maps directly onto Kevin's recurring automation practice: approval mode is a boundary, not just a UI setting.",
+        "The changelog reinforces keeping explicit local safety gates in prompts and scripts even when product behavior improves."
       ],
       "actions": [
-        "Decide whether any weekly artifact handoff should be tested with a shared Codex workflow and note the quota-management implications.",
-        "Keep local-state checkpoints as the durable source of truth instead of assuming product-level memory or sharing features cover continuity."
+        "For any automation with external impact, keep the approval boundary in the task prompt and not only in app settings.",
+        "Add this item to the next Codex automation governance review as evidence that approval-mode semantics are product-relevant."
       ],
       "sources": [
         {
-          "label": "OpenAI Help Center - ChatGPT release notes",
-          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
-          "publishedAt": "2026-06-11"
+          "label": "OpenAI Developers - Codex changelog",
+          "url": "https://developers.openai.com/codex/changelog",
+          "publishedAt": "2026-06-16"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "Primary OpenAI release notes page for ChatGPT and Codex product changes."
+        "reason": "Primary OpenAI Codex changelog."
       },
       "status": "new",
       "followups": [
-        "Watch whether later updates expand the same team-sharing pattern beyond referrals and resets."
+        "During the next automation audit, verify whether local automation approval settings and prompt gates still align."
       ],
       "tags": [
         "codex",
-        "workflow",
-        "usage-limits",
-        "handoff"
+        "automation",
+        "approval-mode",
+        "governance"
       ]
     },
     {
-      "id": "20260609-global-ai-anthropic-fable5-launch",
-      "date": "2026-06-09",
+      "id": "20260618-openai-enterprise-spend-controls",
+      "date": "2026-06-18",
       "topic": "global_ai",
-      "title": "Anthropic launched Claude Fable 5 and Mythos 5, then suspended access three days later",
-      "oneLine": "Anthropic introduced Claude Fable 5 for general use and Mythos 5 through Project Glasswing on June 9, then posted an access suspension update on June 12.",
+      "title": "OpenAI introduced usage analytics and spend controls for ChatGPT Enterprise",
+      "oneLine": "OpenAI announced credit usage analytics and updated spend controls so enterprise admins can see adoption patterns and bound AI costs.",
       "facts": [
-        "Anthropic's June 9 announcement launched Claude Fable 5 and described Mythos 5 as an upgrade path through Project Glasswing for a small trusted group.",
-        "The same page says Mythos 5 is the same underlying model as Fable 5 with some safeguards lifted for a limited cyber-defense context.",
-        "A June 12 update on that page says access to Claude Fable 5 and Claude Mythos 5 was suspended while Anthropic works to restore service."
+        "OpenAI published the enterprise usage analytics and spend controls update on 2026-06-18.",
+        "The update is aimed at giving admins more visibility, control, and confidence in AI deployments.",
+        "The stated use case includes tracking credit usage, understanding adoption patterns, and managing costs."
       ],
       "yourTake": [
-        "The capability story matters less than the operational lesson: new model access can still be unstable inside the same week it launches.",
-        "This reinforces Kevin's preference for fallback-ready workflows and for not anchoring durable processes to one provider announcement too early."
+        "The weekly workflow lesson is that AI adoption is becoming an operations-management problem, not just a prompt-quality problem.",
+        "For Kevin's local automations, cost and usage visibility should be recorded beside quality and source checks when a workflow becomes recurring."
       ],
       "actions": [
-        "When comparing models for workflow pilots, include service-stability and fallback-readiness as explicit criteria.",
-        "Recheck whether access is restored before using this launch as evidence for any workflow migration."
+        "Add a lightweight usage/cost line to future automation run summaries when a workflow becomes expensive or frequent.",
+        "Keep local artifacts as the audit trail even if provider dashboards improve."
       ],
       "sources": [
         {
-          "label": "Anthropic - Claude Fable 5 and Claude Mythos 5",
-          "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-          "publishedAt": "2026-06-09"
+          "label": "OpenAI - New usage analytics and updated spend controls for enterprises",
+          "url": "https://openai.com/index/chatgpt-enterprise-spend-controls/",
+          "publishedAt": "2026-06-18"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "Primary Anthropic launch page that also carries the June 12 suspension update."
+        "reason": "Primary OpenAI product announcement."
       },
       "status": "new",
       "followups": [
-        "Watch for restoration timing and any explanation of the access suspension."
+        "Watch whether similar usage-control features appear for Codex workspace automations."
       ],
       "tags": [
-        "anthropic",
-        "model-release",
-        "reliability",
-        "fallbacks"
+        "openai",
+        "enterprise",
+        "usage-analytics",
+        "spend-controls"
       ]
     },
     {
-      "id": "20260610-global-ai-openai-prc-influence-report",
-      "date": "2026-06-10",
+      "id": "20260618-google-deepmind-ai-control-roadmap",
+      "date": "2026-06-18",
       "topic": "global_ai",
-      "title": "OpenAI reported PRC-linked influence operations targeting US AI debates",
-      "oneLine": "OpenAI said it banned two clusters of ChatGPT accounts linked to apparent covert influence operations focused on AI data-center narratives, tariffs, and false claims about OpenAI data compromise.",
+      "title": "Google DeepMind published an AI Control Roadmap for agent security",
+      "oneLine": "Google DeepMind framed agent security as a multilayered control problem for increasingly capable and imperfectly aligned AI systems.",
       "facts": [
-        "OpenAI published the report on 2026-06-10.",
-        "The report describes two clusters of ChatGPT accounts likely originating from China that OpenAI banned.",
-        "One cluster pushed AI data-center electricity-cost narratives, while another criticized US tariffs and amplified false claims that ChatGPT user data had been compromised."
+        "Google DeepMind published the roadmap on 2026-06-18.",
+        "The post presents AI control as part of a multilayered approach to agent security.",
+        "It emphasizes integrating control protocols with broader infrastructure to manage advanced AI models safely."
       ],
       "yourTake": [
-        "For Kevin's workflows, the relevant signal is governance and provenance discipline: AI-adjacent narratives will increasingly need source-checking because policy and infrastructure debates are becoming influence targets.",
-        "This is especially relevant for any future public-facing AI or policy summary artifact."
+        "This is a useful counterweight to model-release hype because it asks what controls exist after an agent has tools, access, and delegated goals.",
+        "For Kevin's workflows, it supports the existing pattern of separating data access, approval mode, state files, and human checkpoints."
       ],
       "actions": [
-        "Keep source freshness and provenance checks explicit whenever a weekly radar item touches AI policy, infrastructure, or geopolitical narratives.",
-        "Treat high-velocity AI policy discourse as a category where secondary summaries deserve extra skepticism."
+        "Add an agent-control checklist to any future browser-backed or account-connected automation: access, monitoring, halt condition, and audit log.",
+        "Use this source when explaining why reliable automations need explicit boundaries even when the model is strong."
       ],
       "sources": [
         {
-          "label": "OpenAI - PRC-linked influence operations are targeting AI debates in the US",
-          "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates/",
-          "publishedAt": "2026-06-10"
+          "label": "Google DeepMind - Securing internal systems against increasingly capable and imperfectly aligned AI",
+          "url": "https://deepmind.google/blog/securing-the-future-of-ai-agents/",
+          "publishedAt": "2026-06-18"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "Primary OpenAI report describing account takedowns and narrative patterns."
+        "reason": "Primary Google DeepMind safety post."
       },
       "status": "new",
       "followups": [
-        "Watch whether other model providers publish similar influence-operation disclosures."
+        "Turn this into a small internal automation-control checklist if Kevin asks to formalize the next automation review."
       ],
       "tags": [
-        "ai-governance",
-        "trust",
-        "policy",
-        "source-checking"
+        "ai-safety",
+        "agents",
+        "controls",
+        "workflow"
       ]
     },
     {
-      "id": "20260520-growth-google-demand-gen-youtube",
-      "date": "2026-05-20",
+      "id": "20260618-discord-nitro-rewards-orbs-retention",
+      "date": "2026-06-18",
       "topic": "growth_gamification",
-      "title": "Google expanded Demand Gen with creator boosts, Maps inventory, and broader checkout links",
-      "oneLine": "Google's latest Demand Gen update makes it easier to boost creator videos, distribute product videos dynamically, add Maps inventory, and expand checkout links to more markets.",
+      "title": "Discord expanded Nitro Rewards with monthly Orbs and quest multipliers",
+      "oneLine": "Discord's Nitro Rewards update gives Nitro members monthly Orbs and quest multipliers, turning quests into a recurring reward loop.",
       "facts": [
-        "Google says Demand Gen now supports creator-partnership boosts directly in campaign setup.",
-        "The update adds Google Maps inventory and expands checkout links to nine new markets.",
-        "Google also says advertisers with large product selections typically see a 33 percent conversion lift when adopting product feeds in Demand Gen campaigns."
+        "Discord says Nitro members unlock 250 Orbs every month.",
+        "The same update adds an Orbs Multiplier so completed Quests earn more Orbs.",
+        "Orbs can be redeemed in the Shop for profile items and other benefits."
       ],
       "yourTake": [
-        "The transferable lesson for Kevin is not paid media execution itself. It is the tighter loop between trusted creator proof, local discovery, and reduced-click conversion paths.",
-        "That pattern can be mimicked in simpler internal or public funnels even without running YouTube campaigns."
+        "The useful pattern is not the specific reward currency. It is a repeatable loop: monthly grant, action multiplier, visible redemption, and profile/status payoff.",
+        "For member education or community operations, this suggests starting with small recurring challenges and visible progress instead of a heavy points system."
       ],
       "actions": [
-        "Review whether any public-facing project should add a lighter trust-building entry path before asking users to navigate a deep content tree.",
-        "Capture one creator-proof or local-discovery pattern that could be adapted into a lower-friction landing flow."
+        "Sketch one weekly member challenge with a non-monetary reward/status signal and a simple completion proof.",
+        "Avoid building a full loyalty platform until one manual loop produces evidence of repeat participation."
       ],
       "sources": [
         {
-          "label": "Google Blog - Fuel your next wave of growth on YouTube with Demand Gen",
-          "url": "https://blog.google/products-and-platforms/products/youtube/youtube-demand-gen-updates/",
-          "publishedAt": "2026-05-20"
+          "label": "Discord - Nitro Rewards",
+          "url": "https://discord.com/blog/nitro-rewards",
+          "publishedAt": "2026-06-18"
         }
       ],
       "credibility": {
-        "level": "high",
-        "reason": "Primary Google announcement describing the new Demand Gen features and rollout framing."
+        "level": "medium",
+        "reason": "Primary company product post; useful as product-pattern evidence, not as independent retention-performance proof."
       },
       "status": "new",
       "followups": [
-        "Track which parts of this pattern are easiest to adapt without paid-media dependence."
+        "Compare this with any Taiwan member-community behavior before adapting it to FamilyFin."
       ],
       "tags": [
-        "growth",
-        "creator",
-        "discovery",
-        "conversion"
+        "gamification",
+        "retention",
+        "community",
+        "discord"
       ]
     }
   ],
@@ -283,10 +283,11 @@
       "growth_gamification": 1
     },
     "trackingItems": [
-      "Recheck MOHW/local-government follow-up signals after the 2026-06-16 review handoff.",
-      "Extract three reusable formats from the FSC financial-education results booklet.",
-      "Watch Anthropic Fable 5 and Mythos 5 service-restoration status before adopting any workflow dependency.",
-      "Keep one creator-proof or lower-friction funnel pattern on watch for reuse."
+      "tracking-20260622-social-work-training-org-deadline",
+      "tracking-20260622-fsc-sme-carbon-check-guide",
+      "tracking-20260622-codex-automation-approval-mode",
+      "tracking-20260622-ai-agent-control-checklist",
+      "tracking-20260622-discord-reward-loop-prototype"
     ]
   }
 }

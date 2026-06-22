@@ -1,51 +1,64 @@
 {
   "items": [
     {
-      "id": "tracking-20260615-mohw-lottery-review-window",
-      "createdAt": "2026-06-15",
+      "id": "tracking-20260622-social-work-training-org-deadline",
+      "createdAt": "2026-06-22",
       "topic": "tw_social_work",
-      "title": "Watch for post-intake review signals from the MOHW lottery-grant cycle",
+      "title": "Check whether MOHW specialist social-work training organization applicants need deadline support",
       "status": "open",
-      "nextCheck": "2026-06-17",
-      "question": "After the June 16 local-review handoff, do any proposal themes, shortlist signals, or reusable framing patterns become visible?",
+      "nextCheck": "2026-06-29",
+      "question": "Do any partner-facing social-work training or supervision proposals need a simple application checklist before the new-applicant window closes?",
       "links": [
-        "https://dep.mohw.gov.tw/DOSAASW/cp-4974-86315-103.html"
+        "https://dep.mohw.gov.tw/DOSAASW/cp-4970-86212-103.html"
       ]
     },
     {
-      "id": "tracking-20260615-fsc-fin-ed-booklet-extract",
-      "createdAt": "2026-06-15",
+      "id": "tracking-20260622-fsc-sme-carbon-check-guide",
+      "createdAt": "2026-06-22",
       "topic": "tw_fin_ed",
-      "title": "Mine the FSC financial-education results booklet for reusable formats",
+      "title": "Watch for reusable SME financial carbon-check education material",
       "status": "open",
-      "nextCheck": "2026-06-22",
-      "question": "Which official examples from the new booklet are actually reusable for FamilyFin education, anti-fraud, or member communication?",
+      "nextCheck": "2026-07-06",
+      "question": "Does FSC, the SME Administration, or a bank publish a guide that can become a plain-language SME education checklist?",
       "links": [
-        "https://www.fsc.gov.tw/ch/home.jsp?id=1112&parentpath=0%2C4"
+        "https://www.fsc.gov.tw/ch/home.jsp?aplistdn=ou%3Dnews%2Cou%3Dmultisite%2Cou%3Dchinese%2Cou%3Dap_root%2Co%3Dfsc%2Cc%3Dtw&dataserno=202606160004&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"
       ]
     },
     {
-      "id": "tracking-20260615-anthropic-fable5-stability",
-      "createdAt": "2026-06-15",
-      "topic": "global_ai",
-      "title": "Track whether Anthropic restores Fable 5 and Mythos 5 access quickly",
-      "status": "open",
-      "nextCheck": "2026-06-19",
-      "question": "Does the suspension resolve fast enough to treat the launch as workflow-relevant, or is the bigger lesson still fallback discipline?",
-      "links": [
-        "https://www.anthropic.com/news/claude-fable-5-mythos-5"
-      ]
-    },
-    {
-      "id": "tracking-20260615-codex-shared-handoff-watch",
-      "createdAt": "2026-06-15",
+      "id": "tracking-20260622-codex-automation-approval-mode",
+      "createdAt": "2026-06-22",
       "topic": "codex_workflow",
-      "title": "Keep watching for Codex features that support shared weekly handoff workflows",
+      "title": "Verify approval-mode alignment in the next Codex automation review",
       "status": "open",
-      "nextCheck": "2026-06-26",
-      "question": "Are the recent Codex sharing and quota-management changes enough to justify a pilot for one weekly artifact handoff?",
+      "nextCheck": "2026-07-01",
+      "question": "Do recurring automations still carry prompt-level approval gates that match product approval-mode behavior?",
       "links": [
-        "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        "https://developers.openai.com/codex/changelog"
+      ]
+    },
+    {
+      "id": "tracking-20260622-ai-agent-control-checklist",
+      "createdAt": "2026-06-22",
+      "topic": "global_ai",
+      "title": "Convert AI-agent control signals into a local automation checklist",
+      "status": "open",
+      "nextCheck": "2026-07-08",
+      "question": "Which controls should be mandatory before any browser-backed or account-connected automation becomes recurring?",
+      "links": [
+        "https://deepmind.google/blog/securing-the-future-of-ai-agents/",
+        "https://openai.com/index/chatgpt-enterprise-spend-controls/"
+      ]
+    },
+    {
+      "id": "tracking-20260622-discord-reward-loop-prototype",
+      "createdAt": "2026-06-22",
+      "topic": "growth_gamification",
+      "title": "Sketch one manual reward-loop prototype before building gamification",
+      "status": "open",
+      "nextCheck": "2026-07-03",
+      "question": "Can one weekly challenge plus a visible non-monetary status signal produce repeat participation before any platform work?",
+      "links": [
+        "https://discord.com/blog/nitro-rewards"
       ]
     }
   ]

@@ -1,26 +1,25 @@
-# Weekly Work Items: 2026-06-08 to 2026-06-15
+# Work Items: 2026-06-15 to 2026-06-22
 
-All items should be doable within 30 minutes. Owner defaults to Kevin. This file contains reminders and statuses only: no salary numbers and no bank details.
+> Each item is intended to be doable within 30 minutes. Payroll/disbursement items are reminders/status checks only; no amounts or bank data are included.
 
-## A. Radar-driven actions
+## A. Weekly radar follow-ups
 
-- [ ] Pull three reusable anti-fraud or money-habit examples from Taiwan Financial Week materials. Owner: Kevin. Due: 2026-06-18.
-- [ ] Turn one Taiwan Financial Week example into a short FamilyFin outline, post skeleton, or checklist. Owner: Kevin. Due: 2026-06-18.
-- [ ] Rewrite one existing recurring workflow in the shape `trigger -> inputs -> tools -> checkpoints -> human review -> proof`. Owner: Kevin. Due: 2026-06-19.
-- [ ] Note one fallback path for any workflow that currently assumes uninterrupted access to a single frontier model. Owner: Kevin. Due: 2026-06-19.
-- [ ] Capture whether the Oracle procurement path or Partner Network changes anything practical for Kevin-style workflow rollout, or is only enterprise positioning for now. Owner: Kevin. Due: 2026-06-23.
-- [ ] Turn one scam pattern from Google's June advisory into a plain-language warning card or internal education note. Owner: Kevin. Due: 2026-06-20.
+- [ ] Turn the MOHW specialist social-work training organization requirements into a one-page checklist. Owner: Kevin. Due: 2026-06-29.
+- [ ] Draft a 5-bullet SME financial carbon-check explainer outline from the FSC bank meeting signal. Owner: Kevin. Due: 2026-07-06.
+- [ ] Add "approval mode + prompt gate" to the next Codex automation review checklist. Owner: Kevin. Due: 2026-07-01.
+- [ ] Sketch an AI-agent control checklist covering access, monitoring, halt condition, and audit log. Owner: Kevin. Due: 2026-07-08.
+- [ ] Sketch one manual weekly member challenge/reward loop inspired by Discord Nitro Rewards. Owner: Kevin. Due: 2026-07-03.
+- [ ] Recheck whether OpenAI adds Codex/workspace-level usage or spend controls after the enterprise controls announcement. Owner: Kevin. Due: 2026-07-08.
 
-## B. Intern dispatch and pay-status checks
+## B. Dispatch and pay reminders
 
-- [ ] Record this week's payroll reminder status as `due=0` because the tracked intern source timestamp is unchanged at `2026-06-01T12:20:24.844Z`. Owner: Kevin. Due: 2026-06-16.
-- [ ] Spot-check the live `/interns/` and `/talent-pool/` routes after the radar publish to confirm no older file set was reintroduced. Owner: Kevin. Due: 2026-06-16.
-- [ ] Review the missing-field list in talent-pool data and choose the top five profiles that most need follow-up contact or profile completion. Owner: Kevin. Due: 2026-06-18.
-- [ ] Verify the homepage metric cards still read from `data/interns.public.json`, `data/talent-pool.internal.json`, `data/radar-week.json`, and `data/radar-work-items.md`, not `data/dashboard.json`. Owner: Kevin. Due: 2026-06-16.
+- [ ] Review `data/interns.public.json` pay statuses after the intern refresh; follow up only if any status is `due`. Owner: Kevin. Due: 2026-06-24.
+- [ ] Check talent-pool records with missing required contact/profile fields and pick the top 3 to update manually. Owner: Kevin. Due: 2026-06-27.
+- [ ] Assign one low-risk, non-urgent work item to a partner marked active with recent history. Owner: Kevin. Due: 2026-06-28.
+- [ ] Review paused partners before assigning new work; do not dispatch to paused records without a manual reason. Owner: Kevin. Due: 2026-06-28.
 
-## C. Carry-forward tracking
+## C. Tracking backlog maintenance
 
-- [ ] Re-check Taiwan Financial Week output examples and post-event artifacts. Owner: Kevin. Due: 2026-06-22.
-- [ ] Re-check whether Anthropic restores Fable 5 and Mythos 5 access. Owner: Kevin. Due: 2026-06-19.
-- [ ] Re-check OCI availability timing for OpenAI models and Codex. Owner: Kevin. Due: 2026-06-23.
-- [ ] Re-check whether OpenAI publishes Codex-specific partner specialization details. Owner: Kevin. Due: 2026-06-23.
+- [ ] Close or carry forward the FSC financial-education booklet extraction item from last week. Owner: Kevin. Due: 2026-06-25.
+- [ ] Decide whether the MOHW lottery-grant review-window tracker has visible new evidence or should be archived. Owner: Kevin. Due: 2026-06-25.
+- [ ] Keep the Anthropic Fable/Mythos stability tracker as a fallback-discipline reference only unless access is restored with useful detail. Owner: Kevin. Due: 2026-06-26.
