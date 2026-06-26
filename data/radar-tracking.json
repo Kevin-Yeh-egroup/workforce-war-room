@@ -8,9 +8,7 @@
       "status": "open",
       "nextCheck": "2026-07-03",
       "question": "Do weekly automation summaries record URL, visible account, visible file/context, and blocker label when exact metadata cannot be read?",
-      "links": [
-        "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600"
-      ]
+      "links": ["https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600"]
     },
     {
       "id": "tracking-20260626-social-work-capacity-watch",
@@ -19,11 +17,8 @@
       "title": "Watch MOHW social-work staffing and training-capacity windows",
       "status": "open",
       "nextCheck": "2026-07-02",
-      "question": "Did the June 29 training-organization window or July 1 social-work unit job posting produce a follow-up notice?",
-      "links": [
-        "https://www.mohw.gov.tw/sp-SUOList-1.html",
-        "https://dep.mohw.gov.tw/DOSAASW/cp-4970-86212-103.html"
-      ]
+      "question": "Did the June 29 training-organization window produce a follow-up notice?",
+      "links": ["https://www.mohw.gov.tw/sp-SUOList-1.html", "https://dep.mohw.gov.tw/DOSAASW/cp-4970-86212-103.html"]
     },
     {
       "id": "tracking-20260626-fsc-enotice-consumer-checklist",
@@ -33,22 +28,17 @@
       "status": "open",
       "nextCheck": "2026-07-10",
       "question": "Has FSC, TDCC, or a financial institution published a consumer-facing explanation of expanded eNotice use?",
-      "links": [
-        "https://www.fsc.gov.tw/ch/home.jsp?id=2&parentpath=0"
-      ]
+      "links": ["https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2"]
     },
     {
-      "id": "tracking-20260626-codex-source-mode-summary",
+      "id": "tracking-20260626-codex-remote-approval-boundary",
       "createdAt": "2026-06-26",
       "topic": "codex_workflow",
-      "title": "Add source-mode language to recurring Codex automation summaries",
+      "title": "Define Codex Remote approval boundaries before operational use",
       "status": "open",
-      "nextCheck": "2026-07-03",
-      "question": "Do closeouts distinguish live web, cached web, local files, and visible browser-account evidence?",
-      "links": [
-        "https://developers.openai.com/codex/changelog",
-        "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
-      ]
+      "nextCheck": "2026-07-10",
+      "question": "Which recurring automation actions may be approved from phone, and which still require desktop/browser-visible account context?",
+      "links": ["https://developers.openai.com/codex/changelog"]
     },
     {
       "id": "tracking-20260626-infocenter-work-rhythm-review",
@@ -58,21 +48,17 @@
       "status": "open",
       "nextCheck": "2026-07-03",
       "question": "Does the work-rhythm page help assignment timing without exposing raw titles, comments, or payroll-sensitive data?",
-      "links": [
-        "https://www.egroup-infocenter.com/me/event/events"
-      ]
+      "links": ["https://www.egroup-infocenter.com/me/event/events"]
     },
     {
-      "id": "tracking-20260622-discord-reward-loop-prototype",
-      "createdAt": "2026-06-22",
+      "id": "tracking-20260626-discord-reward-loop-prototype",
+      "createdAt": "2026-06-26",
       "topic": "growth_gamification",
       "title": "Sketch one manual reward-loop prototype before building gamification",
       "status": "open",
       "nextCheck": "2026-07-03",
       "question": "Can one weekly challenge plus a visible non-monetary status signal produce repeat participation before any platform work?",
-      "links": [
-        "https://discord.com/blog/nitro-rewards"
-      ]
+      "links": ["https://discord.com/blog/nitro-rewards"]
     }
   ]
 }
