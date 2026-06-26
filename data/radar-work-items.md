@@ -1,25 +1,23 @@
-# Work Items: 2026-06-15 to 2026-06-22
+# Weekly Work Items: 2026-06-19 to 2026-06-26
+> Checklist only. No salary amounts, bank data, ID numbers, phone, address, or payroll-sensitive values.
 
-> Each item is intended to be doable within 30 minutes. Payroll/disbursement items are reminders/status checks only; no amounts or bank data are included.
+## A. Radar follow-ups
 
-## A. Weekly radar follow-ups
-
-- [ ] Turn the MOHW specialist social-work training organization requirements into a one-page checklist. Owner: Kevin. Due: 2026-06-29.
-- [ ] Draft a 5-bullet SME financial carbon-check explainer outline from the FSC bank meeting signal. Owner: Kevin. Due: 2026-07-06.
-- [ ] Add "approval mode + prompt gate" to the next Codex automation review checklist. Owner: Kevin. Due: 2026-07-01.
-- [ ] Sketch an AI-agent control checklist covering access, monitoring, halt condition, and audit log. Owner: Kevin. Due: 2026-07-08.
-- [ ] Sketch one manual weekly member challenge/reward loop inspired by Discord Nitro Rewards. Owner: Kevin. Due: 2026-07-03.
-- [ ] Recheck whether OpenAI adds Codex/workspace-level usage or spend controls after the enterprise controls announcement. Owner: Kevin. Due: 2026-07-08.
+- [ ] Add the MOHW 2026-07-01 Social Assistance and Social Work Department deadline to the capacity watch list. Owner: Kevin. Due: 2026-07-01.
+- [ ] Check whether the June 29 MOHW specialist training-organization window produced a follow-up notice. Owner: Kevin. Due: 2026-07-02.
+- [ ] Draft a short FSC eNotice consumer-checklist outline only after confirming whether a clearer FAQ exists. Owner: Kevin. Due: 2026-07-10.
+- [ ] Read the linked OpenAI Codex economic-potential paper before turning the agent-work signal into a durable workflow rule. Owner: Kevin. Due: 2026-07-03.
+- [ ] Add source-mode wording to the next recurring automation closeout template. Owner: Kevin. Due: 2026-07-03.
 
 ## B. Dispatch and pay reminders
 
-- [ ] Review `data/interns.public.json` pay statuses after the intern refresh; follow up only if any status is `due`. Owner: Kevin. Due: 2026-06-24.
-- [ ] Check talent-pool records with missing required contact/profile fields and pick the top 3 to update manually. Owner: Kevin. Due: 2026-06-27.
-- [ ] Assign one low-risk, non-urgent work item to a partner marked active with recent history. Owner: Kevin. Due: 2026-06-28.
-- [ ] Review paused partners before assigning new work; do not dispatch to paused records without a manual reason. Owner: Kevin. Due: 2026-06-28.
+- [ ] Review intern public pay-status counts for due/paid/n-a labels only; do not include amounts. Owner: Kevin. Due: 2026-06-30.
+- [ ] Use the talent-pool page to identify missing contact/profile fields; do not expose salary, ID, full address, or bank data. Owner: Kevin. Due: 2026-07-03.
+- [ ] Use work-rhythm signals only for timing/check-in planning; verify real work records against reimbursement sheets before any pay-related decision. Owner: Kevin. Due: 2026-07-03.
+- [ ] Pick one person or small group for a low-risk check-in based on rhythm signals, without treating the signal as performance evidence. Owner: Kevin. Due: 2026-07-03.
 
-## C. Tracking backlog maintenance
+## C. Tracking backlog
 
-- [ ] Close or carry forward the FSC financial-education booklet extraction item from last week. Owner: Kevin. Due: 2026-06-25.
-- [ ] Decide whether the MOHW lottery-grant review-window tracker has visible new evidence or should be archived. Owner: Kevin. Due: 2026-06-25.
-- [ ] Keep the Anthropic Fable/Mythos stability tracker as a fallback-discipline reference only unless access is restored with useful detail. Owner: Kevin. Due: 2026-06-26.
+- [ ] Keep the Discord/manual reward-loop prototype open until one paper sketch exists. Owner: Kevin. Due: 2026-07-03.
+- [ ] Add provider-availability/fallback labels to any AI workflow that depends on one external model provider. Owner: Kevin. Due: 2026-07-08.
+- [ ] Re-run privacy scan after publishing work-rhythm pages and data. Owner: Kevin. Due: 2026-06-26.

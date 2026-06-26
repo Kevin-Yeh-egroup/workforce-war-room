@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>工作節奏觀察｜人力情報站</title>
+    <style>
+      :root {
+        --bg: #f6f8fb;
+        --panel: #ffffff;
+        --ink: #17202a;
+        --muted: #667085;
+        --line: #d8dee8;
+        --blue: #1f6feb;
+        --cyan: #008c95;
+        --green: #17833b;
+        --amber: #b7791f;
+        --red: #c2410c;
+        --soft-blue: #eaf2ff;
+        --soft-green: #eaf7ef;
+        --soft-amber: #fff4db;
+        --soft-red: #fff0e8;
+        --shadow: 0 10px 26px rgba(20, 31, 48, .08);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--bg);
+        font-family: "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif;
+      }
+
+      header {
+        background: #102033;
+        color: #fff;
+        padding: 18px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      h1 {
+        margin: 0 0 4px;
+        font-size: 22px;
+        line-height: 1.25;
+      }
+
+      .subtitle {
+        margin: 0;
+        color: #cbd5e1;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .nav {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .nav a,
+      .button {
+        border: 1px solid rgba(255,255,255,.2);
+        border-radius: 999px;
+        padding: 8px 12px;
+        color: #fff;
+        text-decoration: none;
+        background: rgba(255,255,255,.08);
+        font-size: 13px;
+      }
+
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(120px, 1fr));
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .metric,
+      .panel,
+      .person,
+      .notice {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+      }
+
+      .metric {
+        padding: 14px;
+      }
+
+      .metric .label {
+        color: var(--muted);
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+
+      .metric .value {
+        font-size: 24px;
+        font-weight: 800;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 300px minmax(0, 1fr);
+        gap: 16px;
+      }
+
+      .panel {
+        padding: 14px;
+        margin-bottom: 14px;
+      }
+
+      .panel h2 {
+        margin: 0 0 10px;
+        font-size: 16px;
+      }
+
+      label {
+        display: block;
+        color: var(--muted);
+        font-size: 13px;
+        margin: 12px 0 6px;
+      }
+
+      input,
+      select {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--ink);
+        padding: 10px 11px;
+        font: inherit;
+      }
+
+      .legend {
+        display: grid;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 8px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .pill.high { color: var(--green); border-color: rgba(23,131,59,.25); background: var(--soft-green); }
+      .pill.medium { color: var(--amber); border-color: rgba(183,121,31,.25); background: var(--soft-amber); }
+      .pill.low { color: var(--red); border-color: rgba(194,65,12,.25); background: var(--soft-red); }
+      .pill.blue { color: var(--blue); border-color: rgba(31,111,235,.25); background: var(--soft-blue); }
+
+      .person {
+        padding: 16px;
+        margin-bottom: 12px;
+      }
+
+      .person-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: flex-start;
+        margin-bottom: 12px;
+      }
+
+      .person h3 {
+        margin: 0 0 6px;
+        font-size: 18px;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 13px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .bars {
+        display: grid;
+        gap: 7px;
+      }
+
+      .bar {
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr) 34px;
+        gap: 8px;
+        align-items: center;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .track {
+        height: 8px;
+        border-radius: 999px;
+        background: #edf1f7;
+        overflow: hidden;
+      }
+
+      .fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--cyan), var(--blue));
+        border-radius: inherit;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .small-list {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .notice {
+        padding: 18px;
+        border-style: dashed;
+      }
+
+      .recent {
+        display: grid;
+        gap: 8px;
+      }
+
+      .recent-item {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 10px;
+        background: #fff;
+      }
+
+      .footer-note {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.6;
+        margin-top: 14px;
+      }
+
+      @media (max-width: 940px) {
+        .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .layout { grid-template-columns: 1fr; }
+        .grid-2 { grid-template-columns: 1fr; }
+      }
+
+      @media (max-width: 560px) {
+        header { padding: 16px; }
+        main { padding: 14px; }
+        .metrics { grid-template-columns: 1fr; }
+        .person-header { display: block; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>工作節奏觀察</h1>
+        <p class="subtitle">從 InfoCenter 事件列表推估工讀生的送審、評論與活躍時段；只做派工與關心參考，不當成薪資工時計算。</p>
+      </div>
+      <nav class="nav" aria-label="附加功能導覽">
+        <a href="/talent-pool/index.html">人才庫</a>
+        <a href="/radar-addon/index.html">資訊雷達</a>
+        <a href="/">戰情首頁</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="metrics" id="metrics"></section>
+
+      <div class="layout">
+        <aside>
+          <section class="panel">
+            <h2>篩選</h2>
+            <label for="query">搜尋姓名或工作類型</label>
+            <input id="query" type="search" placeholder="例：yachu、自定義名詞" />
+
+            <label for="confidence">信心等級</label>
+            <select id="confidence">
+              <option value="">全部</option>
+              <option value="high">高信心</option>
+              <option value="medium">中信心</option>
+            </select>
+
+            <label for="time">工作時段</label>
+            <select id="time">
+              <option value="">全部</option>
+              <option value="evening">晚間/清晨較多</option>
+              <option value="weekend">假日較多</option>
+            </select>
+          </section>
+
+          <section class="panel">
+            <h2>判讀規則</h2>
+            <div class="legend" id="legend"></div>
+          </section>
+
+          <section class="panel">
+            <h2>資料狀態</h2>
+            <div class="legend" id="source"></div>
+          </section>
+        </aside>
+
+        <section>
+          <div id="people"></div>
+          <section class="panel">
+            <h2>最近訊號</h2>
+            <div class="recent" id="recent"></div>
+          </section>
+          <section class="panel">
+            <h2>缺口與限制</h2>
+            <ul class="small-list" id="gaps"></ul>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

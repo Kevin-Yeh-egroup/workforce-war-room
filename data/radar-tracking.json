@@ -1,52 +1,65 @@
 {
   "items": [
     {
-      "id": "tracking-20260622-social-work-training-org-deadline",
-      "createdAt": "2026-06-22",
-      "topic": "tw_social_work",
-      "title": "Check whether MOHW specialist social-work training organization applicants need deadline support",
+      "id": "tracking-20260626-google-browser-source-evidence",
+      "createdAt": "2026-06-26",
+      "topic": "codex_workflow",
+      "title": "Keep Google-backed automation evidence on visible browser context",
       "status": "open",
-      "nextCheck": "2026-06-29",
-      "question": "Do any partner-facing social-work training or supervision proposals need a simple application checklist before the new-applicant window closes?",
+      "nextCheck": "2026-07-03",
+      "question": "Do weekly automation summaries record URL, visible account, visible file/context, and blocker label when exact metadata cannot be read?",
       "links": [
+        "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600"
+      ]
+    },
+    {
+      "id": "tracking-20260626-social-work-capacity-watch",
+      "createdAt": "2026-06-26",
+      "topic": "tw_social_work",
+      "title": "Watch MOHW social-work staffing and training-capacity windows",
+      "status": "open",
+      "nextCheck": "2026-07-02",
+      "question": "Did the June 29 training-organization window or July 1 social-work unit job posting produce a follow-up notice?",
+      "links": [
+        "https://www.mohw.gov.tw/sp-SUOList-1.html",
         "https://dep.mohw.gov.tw/DOSAASW/cp-4970-86212-103.html"
       ]
     },
     {
-      "id": "tracking-20260622-fsc-sme-carbon-check-guide",
-      "createdAt": "2026-06-22",
+      "id": "tracking-20260626-fsc-enotice-consumer-checklist",
+      "createdAt": "2026-06-26",
       "topic": "tw_fin_ed",
-      "title": "Watch for reusable SME financial carbon-check education material",
+      "title": "Turn FSC eNotice expansion into a consumer checklist only if FAQ appears",
       "status": "open",
-      "nextCheck": "2026-07-06",
-      "question": "Does FSC, the SME Administration, or a bank publish a guide that can become a plain-language SME education checklist?",
+      "nextCheck": "2026-07-10",
+      "question": "Has FSC, TDCC, or a financial institution published a consumer-facing explanation of expanded eNotice use?",
       "links": [
-        "https://www.fsc.gov.tw/ch/home.jsp?aplistdn=ou%3Dnews%2Cou%3Dmultisite%2Cou%3Dchinese%2Cou%3Dap_root%2Co%3Dfsc%2Cc%3Dtw&dataserno=202606160004&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"
+        "https://www.fsc.gov.tw/ch/home.jsp?id=2&parentpath=0"
       ]
     },
     {
-      "id": "tracking-20260622-codex-automation-approval-mode",
-      "createdAt": "2026-06-22",
+      "id": "tracking-20260626-codex-source-mode-summary",
+      "createdAt": "2026-06-26",
       "topic": "codex_workflow",
-      "title": "Verify approval-mode alignment in the next Codex automation review",
+      "title": "Add source-mode language to recurring Codex automation summaries",
       "status": "open",
-      "nextCheck": "2026-07-01",
-      "question": "Do recurring automations still carry prompt-level approval gates that match product approval-mode behavior?",
+      "nextCheck": "2026-07-03",
+      "question": "Do closeouts distinguish live web, cached web, local files, and visible browser-account evidence?",
       "links": [
-        "https://developers.openai.com/codex/changelog"
+        "https://developers.openai.com/codex/changelog",
+        "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
       ]
     },
     {
-      "id": "tracking-20260622-ai-agent-control-checklist",
-      "createdAt": "2026-06-22",
-      "topic": "global_ai",
-      "title": "Convert AI-agent control signals into a local automation checklist",
+      "id": "tracking-20260626-infocenter-work-rhythm-review",
+      "createdAt": "2026-06-26",
+      "topic": "tw_social_work",
+      "title": "Use InfoCenter rhythm as planning context, not payroll evidence",
       "status": "open",
-      "nextCheck": "2026-07-08",
-      "question": "Which controls should be mandatory before any browser-backed or account-connected automation becomes recurring?",
+      "nextCheck": "2026-07-03",
+      "question": "Does the work-rhythm page help assignment timing without exposing raw titles, comments, or payroll-sensitive data?",
       "links": [
-        "https://deepmind.google/blog/securing-the-future-of-ai-agents/",
-        "https://openai.com/index/chatgpt-enterprise-spend-controls/"
+        "https://www.egroup-infocenter.com/me/event/events"
       ]
     },
     {

@@ -1,0 +1,5524 @@
+{
+  "meta": {
+    "generatedAt": "2026-06-26T07:09:22.658Z",
+    "source": {
+      "system": "InfoCenter",
+      "mode": "event-list-readonly",
+      "eventListUrl": "https://www.egroup-infocenter.com/me/event/events",
+      "organizationId": "awK6cKwQTlatT2CbaK8d0Q",
+      "organizationLabel": "馴錢師星展專案",
+      "totalAvailable": 1581,
+      "fetchedEvents": 500
+    },
+    "privacy": "Aggregate-only internal view. Raw event titles, salary amounts, bank data, ID numbers, full addresses, and comment bodies are excluded.",
+    "confidenceGuide": {
+      "high": "評論/留言時間或明確最新審核時間。",
+      "medium": "事件建立、更新或審核中狀態推估。",
+      "low": "目前未納入正式判讀。"
+    },
+    "coverage": {
+      "firstSignalAt": "2026-01-20T10:05:45.000Z",
+      "latestSignalAt": "2026-06-24T10:23:53.000Z"
+    }
+  },
+  "summary": {
+    "peopleCount": 72,
+    "totalSignals": 480,
+    "scannedEvents": 500,
+    "highConfidenceSignals": 0,
+    "mediumConfidenceSignals": 480,
+    "eveningSignals": 116,
+    "weekendSignals": 3,
+    "hourBuckets": [
+      {
+        "key": "11",
+        "count": 86
+      },
+      {
+        "key": "18",
+        "count": 80
+      },
+      {
+        "key": "17",
+        "count": 73
+      },
+      {
+        "key": "15",
+        "count": 50
+      },
+      {
+        "key": "10",
+        "count": 46
+      },
+      {
+        "key": "09",
+        "count": 34
+      },
+      {
+        "key": "16",
+        "count": 31
+      },
+      {
+        "key": "14",
+        "count": 28
+      },
+      {
+        "key": "23",
+        "count": 16
+      },
+      {
+        "key": "12",
+        "count": 14
+      },
+      {
+        "key": "00",
+        "count": 5
+      },
+      {
+        "key": "02",
+        "count": 5
+      },
+      {
+        "key": "19",
+        "count": 5
+      },
+      {
+        "key": "21",
+        "count": 5
+      },
+      {
+        "key": "08",
+        "count": 1
+      },
+      {
+        "key": "13",
+        "count": 1
+      }
+    ],
+    "weekdayBuckets": [
+      {
+        "key": "1",
+        "count": 119
+      },
+      {
+        "key": "2",
+        "count": 113
+      },
+      {
+        "key": "3",
+        "count": 108
+      },
+      {
+        "key": "5",
+        "count": 73
+      },
+      {
+        "key": "4",
+        "count": 64
+      },
+      {
+        "key": "6",
+        "count": 3
+      }
+    ],
+    "confidenceBreakdown": [
+      {
+        "key": "medium",
+        "count": 480
+      }
+    ]
+  },
+  "people": [
+    {
+      "name": "yachu Zhang",
+      "signalCount": 62,
+      "eventCount": 62,
+      "activeDayCount": 16,
+      "latestSignalAt": "2026-06-24T10:23:53.000Z",
+      "firstSignalAt": "2026-01-20T10:14:55.000Z",
+      "eveningShare": 0.258,
+      "weekendShare": 0.016,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 16
+        },
+        {
+          "key": "17",
+          "count": 14
+        },
+        {
+          "key": "09",
+          "count": 11
+        },
+        {
+          "key": "11",
+          "count": 8
+        },
+        {
+          "key": "12",
+          "count": 5
+        },
+        {
+          "key": "15",
+          "count": 5
+        },
+        {
+          "key": "08",
+          "count": 1
+        },
+        {
+          "key": "10",
+          "count": 1
+        },
+        {
+          "key": "14",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 23
+        },
+        {
+          "key": "5",
+          "count": 12
+        },
+        {
+          "key": "2",
+          "count": 10
+        },
+        {
+          "key": "4",
+          "count": 10
+        },
+        {
+          "key": "1",
+          "count": 6
+        },
+        {
+          "key": "6",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 62
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 62
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 39
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 10
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 9
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 4
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 62
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 62
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "委員會議14",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-22T03:07:05.000Z",
+      "firstSignalAt": "2026-06-22T03:07:05.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "11",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "陳資旻",
+      "signalCount": 35,
+      "eventCount": 35,
+      "activeDayCount": 10,
+      "latestSignalAt": "2026-06-19T15:24:30.000Z",
+      "firstSignalAt": "2026-01-20T10:26:04.000Z",
+      "eveningShare": 0.457,
+      "weekendShare": 0.029,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 10
+        },
+        {
+          "key": "11",
+          "count": 6
+        },
+        {
+          "key": "23",
+          "count": 6
+        },
+        {
+          "key": "15",
+          "count": 5
+        },
+        {
+          "key": "17",
+          "count": 5
+        },
+        {
+          "key": "09",
+          "count": 2
+        },
+        {
+          "key": "12",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 12
+        },
+        {
+          "key": "2",
+          "count": 10
+        },
+        {
+          "key": "5",
+          "count": 10
+        },
+        {
+          "key": "1",
+          "count": 2
+        },
+        {
+          "key": "6",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 35
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 35
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 16
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 10
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 7
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 35
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 35
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "張梓康",
+      "signalCount": 15,
+      "eventCount": 15,
+      "activeDayCount": 3,
+      "latestSignalAt": "2026-06-19T15:11:52.000Z",
+      "firstSignalAt": "2026-03-30T03:43:05.000Z",
+      "eveningShare": 0.333,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "11",
+          "count": 5
+        },
+        {
+          "key": "12",
+          "count": 5
+        },
+        {
+          "key": "23",
+          "count": 5
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 5
+        },
+        {
+          "key": "3",
+          "count": 5
+        },
+        {
+          "key": "5",
+          "count": 5
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 15
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 15
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 6
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 5
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 4
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 15
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 15
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "台東",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:05:51.000Z",
+      "firstSignalAt": "2026-06-18T08:05:51.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "宜蘭",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:05:45.000Z",
+      "firstSignalAt": "2026-06-18T08:05:45.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "高雄2",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:05:38.000Z",
+      "firstSignalAt": "2026-06-18T08:05:38.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "台南2",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:05:32.000Z",
+      "firstSignalAt": "2026-06-18T08:05:32.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "雲林2",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:05:26.000Z",
+      "firstSignalAt": "2026-06-18T08:05:26.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "台中2",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:05:18.000Z",
+      "firstSignalAt": "2026-06-18T08:05:18.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "桃園2",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:05:11.000Z",
+      "firstSignalAt": "2026-06-18T08:05:11.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "新北2",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:05:04.000Z",
+      "firstSignalAt": "2026-06-18T08:05:04.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "台北2",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:04:58.000Z",
+      "firstSignalAt": "2026-06-18T08:04:58.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "屏東",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:04:51.000Z",
+      "firstSignalAt": "2026-06-18T08:04:51.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "花蓮",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:04:44.000Z",
+      "firstSignalAt": "2026-06-18T08:04:44.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "高雄1",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:04:38.000Z",
+      "firstSignalAt": "2026-06-18T08:04:38.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "台南1",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:04:27.000Z",
+      "firstSignalAt": "2026-06-18T08:04:27.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "雲林1",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:04:04.000Z",
+      "firstSignalAt": "2026-06-18T08:04:04.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "彰化",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:03:54.000Z",
+      "firstSignalAt": "2026-06-18T08:03:54.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "台中1",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:03:44.000Z",
+      "firstSignalAt": "2026-06-18T08:03:44.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "桃園1",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T08:02:44.000Z",
+      "firstSignalAt": "2026-06-18T08:02:44.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "新北1",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T07:55:48.000Z",
+      "firstSignalAt": "2026-06-18T07:55:48.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "15",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "台北1",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T07:53:08.000Z",
+      "firstSignalAt": "2026-06-18T07:53:08.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "15",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "高雄_督",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T07:51:39.000Z",
+      "firstSignalAt": "2026-06-18T07:51:39.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "15",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "台中_督",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T07:50:23.000Z",
+      "firstSignalAt": "2026-06-18T07:50:23.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "15",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "台北_督",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-18T07:42:26.000Z",
+      "firstSignalAt": "2026-06-18T07:42:26.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "15",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "la Ro",
+      "signalCount": 12,
+      "eventCount": 12,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-06-17T09:12:01.000Z",
+      "firstSignalAt": "2026-06-08T03:14:07.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "17",
+          "count": 7
+        },
+        {
+          "key": "11",
+          "count": 5
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 7
+        },
+        {
+          "key": "1",
+          "count": 5
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 12
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 12
+        }
+      ],
+      "categories": [
+        {
+          "key": "自定義名詞修正",
+          "count": 10
+        },
+        {
+          "key": "一般事件",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 12
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 12
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "Max",
+      "signalCount": 27,
+      "eventCount": 27,
+      "activeDayCount": 7,
+      "latestSignalAt": "2026-06-16T07:41:34.000Z",
+      "firstSignalAt": "2026-01-30T09:36:24.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "15",
+          "count": 10
+        },
+        {
+          "key": "10",
+          "count": 6
+        },
+        {
+          "key": "11",
+          "count": 5
+        },
+        {
+          "key": "17",
+          "count": 5
+        },
+        {
+          "key": "14",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "5",
+          "count": 11
+        },
+        {
+          "key": "2",
+          "count": 10
+        },
+        {
+          "key": "3",
+          "count": 5
+        },
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 27
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 27
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 15
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 10
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 27
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 27
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "yilun",
+      "signalCount": 7,
+      "eventCount": 7,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-06-16T06:10:38.000Z",
+      "firstSignalAt": "2026-04-02T06:17:44.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "14",
+          "count": 7
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 5
+        },
+        {
+          "key": "2",
+          "count": 2
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 7
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 7
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 6
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 7
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 7
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "新魚",
+      "signalCount": 6,
+      "eventCount": 6,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-06-15T03:35:26.000Z",
+      "firstSignalAt": "2026-04-14T08:49:23.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "11",
+          "count": 5
+        },
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 5
+        },
+        {
+          "key": "2",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 6
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 6
+        }
+      ],
+      "categories": [
+        {
+          "key": "自定義名詞修正",
+          "count": 5
+        },
+        {
+          "key": "一般事件",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "孫瑜",
+      "signalCount": 20,
+      "eventCount": 20,
+      "activeDayCount": 5,
+      "latestSignalAt": "2026-06-13T01:37:31.000Z",
+      "firstSignalAt": "2026-03-23T08:44:01.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0.05,
+      "hourBuckets": [
+        {
+          "key": "11",
+          "count": 5
+        },
+        {
+          "key": "15",
+          "count": 5
+        },
+        {
+          "key": "17",
+          "count": 5
+        },
+        {
+          "key": "16",
+          "count": 3
+        },
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "12",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 6
+        },
+        {
+          "key": "2",
+          "count": 5
+        },
+        {
+          "key": "4",
+          "count": 5
+        },
+        {
+          "key": "1",
+          "count": 3
+        },
+        {
+          "key": "6",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 20
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 20
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 15
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 3
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 20
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 20
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "楊筑涵",
+      "signalCount": 5,
+      "eventCount": 5,
+      "activeDayCount": 5,
+      "latestSignalAt": "2026-06-12T07:34:29.000Z",
+      "firstSignalAt": "2026-03-09T01:09:35.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "10",
+          "count": 1
+        },
+        {
+          "key": "11",
+          "count": 1
+        },
+        {
+          "key": "14",
+          "count": 1
+        },
+        {
+          "key": "15",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 2
+        },
+        {
+          "key": "5",
+          "count": 2
+        },
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 5
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 5
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 5
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 5
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 5
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "黃駿宇",
+      "signalCount": 10,
+      "eventCount": 10,
+      "activeDayCount": 6,
+      "latestSignalAt": "2026-06-12T07:33:50.000Z",
+      "firstSignalAt": "2026-04-08T06:10:44.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "14",
+          "count": 4
+        },
+        {
+          "key": "10",
+          "count": 3
+        },
+        {
+          "key": "11",
+          "count": 1
+        },
+        {
+          "key": "15",
+          "count": 1
+        },
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 7
+        },
+        {
+          "key": "2",
+          "count": 1
+        },
+        {
+          "key": "4",
+          "count": 1
+        },
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 10
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 10
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 6
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 3
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 10
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 10
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "施妤臻",
+      "signalCount": 8,
+      "eventCount": 8,
+      "activeDayCount": 4,
+      "latestSignalAt": "2026-06-10T03:51:59.000Z",
+      "firstSignalAt": "2026-01-20T10:37:36.000Z",
+      "eveningShare": 0.75,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 6
+        },
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "11",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 5
+        },
+        {
+          "key": "3",
+          "count": 2
+        },
+        {
+          "key": "2",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 8
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 8
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 6
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 1
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 8
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 8
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "陳靖儒",
+      "signalCount": 10,
+      "eventCount": 10,
+      "activeDayCount": 5,
+      "latestSignalAt": "2026-06-10T03:51:21.000Z",
+      "firstSignalAt": "2026-02-23T07:57:09.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "15",
+          "count": 5
+        },
+        {
+          "key": "10",
+          "count": 2
+        },
+        {
+          "key": "11",
+          "count": 1
+        },
+        {
+          "key": "12",
+          "count": 1
+        },
+        {
+          "key": "14",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 6
+        },
+        {
+          "key": "3",
+          "count": 3
+        },
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 10
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 10
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 6
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 2
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 10
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 10
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "曾于沁",
+      "signalCount": 7,
+      "eventCount": 7,
+      "activeDayCount": 3,
+      "latestSignalAt": "2026-06-10T03:46:18.000Z",
+      "firstSignalAt": "2026-03-09T01:26:54.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "10",
+          "count": 5
+        },
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "11",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 6
+        },
+        {
+          "key": "3",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 7
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 7
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 5
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 7
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 7
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "zoe liu",
+      "signalCount": 4,
+      "eventCount": 4,
+      "activeDayCount": 4,
+      "latestSignalAt": "2026-06-10T03:45:18.000Z",
+      "firstSignalAt": "2026-03-09T01:23:56.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "10",
+          "count": 1
+        },
+        {
+          "key": "11",
+          "count": 1
+        },
+        {
+          "key": "14",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 2
+        },
+        {
+          "key": "1",
+          "count": 1
+        },
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 4
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 4
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 4
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 4
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 4
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "李怡蓁",
+      "signalCount": 16,
+      "eventCount": 16,
+      "activeDayCount": 4,
+      "latestSignalAt": "2026-06-03T09:11:46.000Z",
+      "firstSignalAt": "2026-02-26T09:30:59.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "17",
+          "count": 10
+        },
+        {
+          "key": "16",
+          "count": 5
+        },
+        {
+          "key": "11",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 6
+        },
+        {
+          "key": "1",
+          "count": 5
+        },
+        {
+          "key": "4",
+          "count": 5
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 16
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 16
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 7
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 3
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 3
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 3
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 16
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 16
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "家庭財務韌性平台發布暨推動計畫說明會",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-01T09:31:52.000Z",
+      "firstSignalAt": "2026-06-01T09:31:52.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "17",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "古庭毓",
+      "signalCount": 3,
+      "eventCount": 3,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-06-01T02:48:37.000Z",
+      "firstSignalAt": "2026-06-01T02:48:08.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "10",
+          "count": 3
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 3
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 3
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 3
+        }
+      ],
+      "categories": [
+        {
+          "key": "自定義名詞修正",
+          "count": 3
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 3
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 3
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "委員會議13",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-05-29T05:51:46.000Z",
+      "firstSignalAt": "2026-05-29T05:51:46.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "13",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "吳婷宇",
+      "signalCount": 28,
+      "eventCount": 28,
+      "activeDayCount": 8,
+      "latestSignalAt": "2026-05-26T02:36:58.000Z",
+      "firstSignalAt": "2026-01-26T10:30:28.000Z",
+      "eveningShare": 0.536,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "14",
+          "count": 6
+        },
+        {
+          "key": "10",
+          "count": 5
+        },
+        {
+          "key": "18",
+          "count": 5
+        },
+        {
+          "key": "19",
+          "count": 5
+        },
+        {
+          "key": "21",
+          "count": 5
+        },
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "11",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 16
+        },
+        {
+          "key": "2",
+          "count": 5
+        },
+        {
+          "key": "4",
+          "count": 5
+        },
+        {
+          "key": "3",
+          "count": 1
+        },
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 28
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 28
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 14
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 10
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 4
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 28
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 28
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "基隆家扶中心「關懷兒童愛心園遊會」",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-05-18T02:49:42.000Z",
+      "firstSignalAt": "2026-05-18T02:49:42.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "10",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "任林教育基金會「2026家庭韌性與社會情緒教育論壇」",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-05-15T08:41:24.000Z",
+      "firstSignalAt": "2026-05-15T08:41:24.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "陳曦",
+      "signalCount": 35,
+      "eventCount": 35,
+      "activeDayCount": 7,
+      "latestSignalAt": "2026-05-11T07:33:20.000Z",
+      "firstSignalAt": "2026-01-20T10:21:53.000Z",
+      "eveningShare": 0.429,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "11",
+          "count": 10
+        },
+        {
+          "key": "18",
+          "count": 10
+        },
+        {
+          "key": "02",
+          "count": 5
+        },
+        {
+          "key": "15",
+          "count": 5
+        },
+        {
+          "key": "17",
+          "count": 5
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 10
+        },
+        {
+          "key": "2",
+          "count": 10
+        },
+        {
+          "key": "3",
+          "count": 10
+        },
+        {
+          "key": "5",
+          "count": 5
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 35
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 35
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 18
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 10
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 7
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 35
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 35
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "張雅筑",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-04-23T08:49:40.000Z",
+      "firstSignalAt": "2026-04-23T08:49:40.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "委員會議9",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-04-22T07:54:40.000Z",
+      "firstSignalAt": "2026-04-22T07:54:40.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "15",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "委員會議12",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-04-22T07:53:13.000Z",
+      "firstSignalAt": "2026-04-22T07:53:13.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "15",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "李怡霖",
+      "signalCount": 27,
+      "eventCount": 27,
+      "activeDayCount": 7,
+      "latestSignalAt": "2026-04-21T09:35:38.000Z",
+      "firstSignalAt": "2026-02-03T07:47:07.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "17",
+          "count": 15
+        },
+        {
+          "key": "11",
+          "count": 6
+        },
+        {
+          "key": "15",
+          "count": 5
+        },
+        {
+          "key": "09",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 10
+        },
+        {
+          "key": "1",
+          "count": 6
+        },
+        {
+          "key": "4",
+          "count": 5
+        },
+        {
+          "key": "5",
+          "count": 5
+        },
+        {
+          "key": "3",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 27
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 27
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 23
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 4
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 27
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 27
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "Alicia Hsu",
+      "signalCount": 6,
+      "eventCount": 6,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-04-20T02:25:10.000Z",
+      "firstSignalAt": "2026-04-20T02:22:42.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "10",
+          "count": 6
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 6
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 6
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 6
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 3
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 3
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "WEI TING",
+      "signalCount": 6,
+      "eventCount": 6,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-04-20T02:21:42.000Z",
+      "firstSignalAt": "2026-03-31T03:22:23.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "11",
+          "count": 4
+        },
+        {
+          "key": "10",
+          "count": 2
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 4
+        },
+        {
+          "key": "1",
+          "count": 2
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 6
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 6
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 4
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "施冠廷",
+      "signalCount": 6,
+      "eventCount": 6,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-04-20T02:17:16.000Z",
+      "firstSignalAt": "2026-01-20T10:18:36.000Z",
+      "eveningShare": 0.833,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 5
+        },
+        {
+          "key": "10",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 5
+        },
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 6
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 6
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 5
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "葉宥辰",
+      "signalCount": 17,
+      "eventCount": 17,
+      "activeDayCount": 4,
+      "latestSignalAt": "2026-04-15T04:05:56.000Z",
+      "firstSignalAt": "2026-01-26T10:24:31.000Z",
+      "eveningShare": 0.588,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 10
+        },
+        {
+          "key": "11",
+          "count": 6
+        },
+        {
+          "key": "12",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 5
+        },
+        {
+          "key": "2",
+          "count": 5
+        },
+        {
+          "key": "5",
+          "count": 5
+        },
+        {
+          "key": "3",
+          "count": 2
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 17
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 17
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 13
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 2
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 17
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 17
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "劉爾達",
+      "signalCount": 3,
+      "eventCount": 3,
+      "activeDayCount": 3,
+      "latestSignalAt": "2026-04-15T03:16:27.000Z",
+      "firstSignalAt": "2026-03-09T01:25:13.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "11",
+          "count": 1
+        },
+        {
+          "key": "14",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 1
+        },
+        {
+          "key": "3",
+          "count": 1
+        },
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 3
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 3
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 3
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 3
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 3
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "王介廷",
+      "signalCount": 3,
+      "eventCount": 3,
+      "activeDayCount": 3,
+      "latestSignalAt": "2026-04-15T02:59:30.000Z",
+      "firstSignalAt": "2026-03-09T01:20:26.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "10",
+          "count": 1
+        },
+        {
+          "key": "14",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 1
+        },
+        {
+          "key": "3",
+          "count": 1
+        },
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 3
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 3
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 3
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 3
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 3
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "賴惠均",
+      "signalCount": 2,
+      "eventCount": 2,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-04-15T02:58:58.000Z",
+      "firstSignalAt": "2026-03-23T08:38:28.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "10",
+          "count": 1
+        },
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 1
+        },
+        {
+          "key": "3",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 2
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 2
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 2
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 2
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "洪嘉緯",
+      "signalCount": 6,
+      "eventCount": 6,
+      "activeDayCount": 4,
+      "latestSignalAt": "2026-04-15T02:56:44.000Z",
+      "firstSignalAt": "2026-01-20T10:05:45.000Z",
+      "eveningShare": 0.5,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 3
+        },
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "10",
+          "count": 1
+        },
+        {
+          "key": "14",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 3
+        },
+        {
+          "key": "1",
+          "count": 1
+        },
+        {
+          "key": "3",
+          "count": 1
+        },
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 6
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 6
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 5
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "陳子安",
+      "signalCount": 5,
+      "eventCount": 5,
+      "activeDayCount": 4,
+      "latestSignalAt": "2026-04-15T02:51:59.000Z",
+      "firstSignalAt": "2026-03-02T06:38:31.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "10",
+          "count": 2
+        },
+        {
+          "key": "14",
+          "count": 2
+        },
+        {
+          "key": "09",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 2
+        },
+        {
+          "key": "3",
+          "count": 2
+        },
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 5
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 5
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 4
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 5
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 5
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "謝宛妤",
+      "signalCount": 8,
+      "eventCount": 8,
+      "activeDayCount": 3,
+      "latestSignalAt": "2026-04-15T02:19:56.000Z",
+      "firstSignalAt": "2026-03-03T09:20:09.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "17",
+          "count": 5
+        },
+        {
+          "key": "10",
+          "count": 2
+        },
+        {
+          "key": "09",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 5
+        },
+        {
+          "key": "3",
+          "count": 2
+        },
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 8
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 8
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 4
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 2
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 8
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 8
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "{{單位成員名稱}}",
+      "signalCount": 2,
+      "eventCount": 2,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-04-08T06:11:29.000Z",
+      "firstSignalAt": "2026-03-31T03:22:42.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "11",
+          "count": 1
+        },
+        {
+          "key": "14",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 1
+        },
+        {
+          "key": "3",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 2
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 2
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 2
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 2
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "陳郁淇",
+      "signalCount": 6,
+      "eventCount": 6,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-03-30T09:47:24.000Z",
+      "firstSignalAt": "2026-01-20T10:29:23.000Z",
+      "eveningShare": 0.833,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 5
+        },
+        {
+          "key": "17",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 5
+        },
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 6
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 6
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 2
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 2
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "委員會議11",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-03-25T08:01:45.000Z",
+      "firstSignalAt": "2026-03-25T08:01:45.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "委員會議10",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-03-25T07:59:38.000Z",
+      "firstSignalAt": "2026-03-25T07:59:38.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "15",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "林弈妏",
+      "signalCount": 11,
+      "eventCount": 11,
+      "activeDayCount": 3,
+      "latestSignalAt": "2026-03-24T03:34:35.000Z",
+      "firstSignalAt": "2026-01-21T16:35:35.000Z",
+      "eveningShare": 0.455,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "00",
+          "count": 5
+        },
+        {
+          "key": "11",
+          "count": 5
+        },
+        {
+          "key": "09",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 5
+        },
+        {
+          "key": "4",
+          "count": 5
+        },
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 11
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 11
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 9
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 11
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 11
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "許芳瑋",
+      "signalCount": 6,
+      "eventCount": 6,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-03-13T03:53:35.000Z",
+      "firstSignalAt": "2026-02-23T01:53:47.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "11",
+          "count": 5
+        },
+        {
+          "key": "09",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "5",
+          "count": 5
+        },
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 6
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 6
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 4
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "Julie",
+      "signalCount": 2,
+      "eventCount": 2,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-03-13T01:45:27.000Z",
+      "firstSignalAt": "2026-03-09T01:18:55.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "09",
+          "count": 2
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 1
+        },
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 2
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 2
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 1
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 2
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 2
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "陳昱兆",
+      "signalCount": 7,
+      "eventCount": 7,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-03-13T01:43:15.000Z",
+      "firstSignalAt": "2026-01-20T15:13:56.000Z",
+      "eveningShare": 0.714,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "23",
+          "count": 5
+        },
+        {
+          "key": "09",
+          "count": 2
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 5
+        },
+        {
+          "key": "5",
+          "count": 2
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 7
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 7
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 3
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 3
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 7
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 7
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "Lin韞恩",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-03-09T02:08:18.000Z",
+      "firstSignalAt": "2026-03-09T02:08:18.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "10",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "柯婷恩",
+      "signalCount": 6,
+      "eventCount": 6,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-03-09T02:05:31.000Z",
+      "firstSignalAt": "2026-03-03T10:09:34.000Z",
+      "eveningShare": 0.833,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 5
+        },
+        {
+          "key": "10",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 5
+        },
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 6
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 6
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 4
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "zhan",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-03-09T01:21:47.000Z",
+      "firstSignalAt": "2026-03-09T01:21:47.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "09",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "Krystal",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-03-09T01:16:29.000Z",
+      "firstSignalAt": "2026-03-09T01:16:29.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "09",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "陳昱婷",
+      "signalCount": 6,
+      "eventCount": 6,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-02-23T01:55:08.000Z",
+      "firstSignalAt": "2026-01-20T10:10:06.000Z",
+      "eveningShare": 0.833,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 5
+        },
+        {
+          "key": "09",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 5
+        },
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 6
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 6
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 3
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 3
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 6
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    }
+  ],
+  "recentSignals": [
+    {
+      "person": "yachu Zhang",
+      "at": "2026-06-24T18:23:53+08:00",
+      "day": "2026-06-24",
+      "hour": 18,
+      "weekday": 3,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-06-24T18:23:38+08:00",
+      "day": "2026-06-24",
+      "hour": 18,
+      "weekday": 3,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-06-24T18:23:23+08:00",
+      "day": "2026-06-24",
+      "hour": 18,
+      "weekday": 3,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-06-24T18:23:10+08:00",
+      "day": "2026-06-24",
+      "hour": 18,
+      "weekday": 3,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-06-24T18:22:59+08:00",
+      "day": "2026-06-24",
+      "hour": 18,
+      "weekday": 3,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "委員會議14",
+      "at": "2026-06-22T11:07:05+08:00",
+      "day": "2026-06-22",
+      "hour": 11,
+      "weekday": 1,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "會議紀錄/資料整理"
+    },
+    {
+      "person": "陳資旻",
+      "at": "2026-06-19T23:24:30+08:00",
+      "day": "2026-06-19",
+      "hour": 23,
+      "weekday": 5,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "陳資旻",
+      "at": "2026-06-19T23:23:28+08:00",
+      "day": "2026-06-19",
+      "hour": 23,
+      "weekday": 5,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "陳資旻",
+      "at": "2026-06-19T23:23:07+08:00",
+      "day": "2026-06-19",
+      "hour": 23,
+      "weekday": 5,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "陳資旻",
+      "at": "2026-06-19T23:22:45+08:00",
+      "day": "2026-06-19",
+      "hour": 23,
+      "weekday": 5,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "陳資旻",
+      "at": "2026-06-19T23:20:52+08:00",
+      "day": "2026-06-19",
+      "hour": 23,
+      "weekday": 5,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "張梓康",
+      "at": "2026-06-19T23:11:52+08:00",
+      "day": "2026-06-19",
+      "hour": 23,
+      "weekday": 5,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "張梓康",
+      "at": "2026-06-19T23:11:27+08:00",
+      "day": "2026-06-19",
+      "hour": 23,
+      "weekday": 5,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "張梓康",
+      "at": "2026-06-19T23:11:08+08:00",
+      "day": "2026-06-19",
+      "hour": 23,
+      "weekday": 5,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "張梓康",
+      "at": "2026-06-19T23:10:45+08:00",
+      "day": "2026-06-19",
+      "hour": 23,
+      "weekday": 5,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "張梓康",
+      "at": "2026-06-19T23:10:10+08:00",
+      "day": "2026-06-19",
+      "hour": 23,
+      "weekday": 5,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "台東",
+      "at": "2026-06-18T16:05:51+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "宜蘭",
+      "at": "2026-06-18T16:05:45+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "高雄2",
+      "at": "2026-06-18T16:05:38+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "台南2",
+      "at": "2026-06-18T16:05:32+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "雲林2",
+      "at": "2026-06-18T16:05:26+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "台中2",
+      "at": "2026-06-18T16:05:18+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "桃園2",
+      "at": "2026-06-18T16:05:11+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "新北2",
+      "at": "2026-06-18T16:05:04+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "台北2",
+      "at": "2026-06-18T16:04:58+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "屏東",
+      "at": "2026-06-18T16:04:51+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "花蓮",
+      "at": "2026-06-18T16:04:44+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "高雄1",
+      "at": "2026-06-18T16:04:38+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "台南1",
+      "at": "2026-06-18T16:04:27+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "雲林1",
+      "at": "2026-06-18T16:04:04+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "彰化",
+      "at": "2026-06-18T16:03:54+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "台中1",
+      "at": "2026-06-18T16:03:44+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "桃園1",
+      "at": "2026-06-18T16:02:44+08:00",
+      "day": "2026-06-18",
+      "hour": 16,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "新北1",
+      "at": "2026-06-18T15:55:48+08:00",
+      "day": "2026-06-18",
+      "hour": 15,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "台北1",
+      "at": "2026-06-18T15:53:08+08:00",
+      "day": "2026-06-18",
+      "hour": 15,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "高雄_督",
+      "at": "2026-06-18T15:51:39+08:00",
+      "day": "2026-06-18",
+      "hour": 15,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "台中_督",
+      "at": "2026-06-18T15:50:23+08:00",
+      "day": "2026-06-18",
+      "hour": 15,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "台北_督",
+      "at": "2026-06-18T15:42:26+08:00",
+      "day": "2026-06-18",
+      "hour": 15,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "家庭財務/社福資料"
+    },
+    {
+      "person": "la Ro",
+      "at": "2026-06-17T17:12:01+08:00",
+      "day": "2026-06-17",
+      "hour": 17,
+      "weekday": 3,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "一般事件"
+    },
+    {
+      "person": "la Ro",
+      "at": "2026-06-17T17:11:39+08:00",
+      "day": "2026-06-17",
+      "hour": 17,
+      "weekday": 3,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "一般事件"
+    }
+  ],
+  "gaps": [
+    "若最新審核時間為空，送審時間只能以事件建立或更新時間中信心推估。",
+    "若 InfoCenter 列表未附評論清單，需再補單筆事件詳情端點才能提高信心。",
+    "此資料只適合做派工與關心節奏，不適合直接作為薪資計算依據。"
+  ]
+}

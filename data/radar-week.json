@@ -1,257 +1,273 @@
 {
   "meta": {
-    "weekStart": "2026-06-15",
-    "weekEnd": "2026-06-22",
-    "generatedAt": "2026-06-22T09:08:00+08:00",
+    "weekStart": "2026-06-19",
+    "weekEnd": "2026-06-26",
+    "generatedAt": "2026-06-26T15:25:00+08:00",
     "timezone": "Asia/Taipei",
     "notes": [
       "Coverage is the last 7 days in Asia/Taipei.",
-      "Items are deduplicated against the prior week by id and source URL; this week contains six new items."
+      "Google-account-backed spreadsheet metadata was observed only through the in-app Browser because Google connectors are frozen for this run.",
+      "Items are deduplicated against the prior week by id and source URL; this run contains six new radar items."
     ]
   },
   "highlights": [
     {
-      "title": "MOHW specialist social-work training organization applications enter the final week",
-      "why": "The June 29 deadline is a practical social-work capacity signal: institutions that want specialist training recognition must finish their application package now.",
-      "next": "Use this as a checklist prompt for any partner-facing social-work training or supervision proposal before 2026-06-29."
+      "title": "Google-account source handling now needs visible browser proof",
+      "why": "The June 26 connector freeze changes the operating risk more than the data itself: spreadsheet and Google-backed evidence must show account/context in the in-app Browser, or the run must stop instead of falling back to connectors.",
+      "next": "Keep the browser-context line in future automation summaries: URL, visible account, visible file/context, and whether exact modified_time was available."
     },
     {
-      "title": "AI-agent governance shifted from model-only safety to operating controls",
-      "why": "Google DeepMind's AI Control Roadmap, OpenAI's enterprise spend controls, and Codex automation fixes all point to the same operational pattern: visibility, permissions, fallback, and cost controls matter as much as model choice.",
-      "next": "Add an explicit controls row to future AI workflow pilots: who can run it, what it can access, how spend is bounded, and how failure is detected."
+      "title": "Agent work is moving from tool novelty to delegated work management",
+      "why": "OpenAI published Codex economic-potential research the same week Codex Remote became generally available and CLI/IDE web search changed. The signal is that agents are becoming managed work surfaces, not just prompt boxes.",
+      "next": "For every recurring Codex workflow, track delegated task scope, approval point, source mode, and handoff artifact."
     },
     {
-      "title": "Discord continues turning quests and monthly rewards into retention infrastructure",
-      "why": "Nitro Rewards/Orbs show a mature community-growth pattern that is more relevant to member engagement than generic gamification statistics.",
-      "next": "Prototype one lightweight FamilyFin-style weekly challenge/reward loop on paper before building anything."
+      "title": "InfoCenter rhythm now has an aggregate planning signal",
+      "why": "The work-rhythm collector scanned 500 events and produced 480 medium-confidence person-level rhythm signals across 72 people without publishing raw event titles or comment bodies.",
+      "next": "Use the rhythm view only for timing/check-in support; keep reimbursement sheets as the authoritative work/pay source."
     }
   ],
   "items": [
     {
-      "id": "20260622-tw-social-work-specialist-training-org-deadline",
-      "date": "2026-06-22",
+      "id": "20260624-mohw-social-work-staffing-capacity-signal",
+      "date": "2026-06-24",
       "topic": "tw_social_work",
-      "title": "MOHW specialist social-work training organization applications close on June 29",
-      "oneLine": "MOHW's 115-year specialist social-worker training organization recognition window for new applicants runs through 2026-06-29.",
+      "title": "MOHW social-assistance and social-work unit posted another fixed-term research role",
+      "oneLine": "MOHW job listings show a Social Assistance and Social Work Department contract deputy researcher role posted on 2026-06-24 with a 2026-07-01 deadline.",
       "facts": [
-        "MOHW's Social Assistance and Social Work Department says new applicants can apply from 2026-04-30 through 2026-06-29.",
-        "Extension applicants have a separate 2026-07-16 to 2026-09-15 window.",
-        "Applications are handled online through the social-welfare institution and professional manpower management information system."
+        "MOHW job information lists a contract deputy researcher role for the Social Assistance and Social Work Department published on 2026-06-24.",
+        "The listed application deadline is 2026-07-01.",
+        "The same job list still shows the prior 2026-06-15 Social Assistance and Social Work Department role with a 2026-06-29 deadline."
       ],
       "yourTake": [
-        "This is a capacity-building signal rather than a headline policy change.",
-        "For Kevin's social-work and workforce lens, it is useful because specialist training recognition shapes which institutions can credibly run supervision or continuing education pipelines."
+        "This is not a policy announcement, but it is a workforce-capacity signal inside the central social-work administration surface.",
+        "For weekly workforce radar, repeated temporary/replacement-role postings are worth tracking beside training-recognition windows because they affect implementation capacity."
       ],
       "actions": [
-        "Before 2026-06-29, capture the application requirements as a reusable checklist for future social-work training partner review.",
-        "Tag any partner or institution that might need the extension window from 2026-07-16."
+        "Add the 2026-07-01 deadline to the internal social-work capacity watch list.",
+        "If a partner discussion touches social-work policy delivery, mention staffing/capacity as an evidence category rather than only policy text."
       ],
       "sources": [
         {
-          "label": "MOHW Social Assistance and Social Work Department - specialist social-work training organization recognition",
-          "url": "https://dep.mohw.gov.tw/DOSAASW/cp-4970-86212-103.html",
-          "publishedAt": "2026-04-24"
+          "label": "MOHW job information list",
+          "url": "https://www.mohw.gov.tw/sp-SUOList-1.html",
+          "publishedAt": "2026-06-24"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "Primary MOHW department notice with concrete dates and application route."
+        "reason": "Primary MOHW job information page with unit and deadline."
       },
       "status": "new",
       "followups": [
-        "Recheck after 2026-06-29 for any late notice, FAQ, or applicant-status update."
+        "Recheck after 2026-07-01 for whether the role closes, extends, or repeats."
       ],
       "tags": [
         "social-work",
-        "training",
+        "workforce",
         "taiwan",
-        "capacity-building"
+        "capacity"
       ]
     },
     {
-      "id": "20260616-tw-finance-sme-carbon-check-bank-meeting",
-      "date": "2026-06-16",
+      "id": "20260623-fsc-enotice-cash-capital-notice-digitalization",
+      "date": "2026-06-23",
       "topic": "tw_fin_ed",
-      "title": "FSC used the bank general managers meeting to push SME finance plus carbon-check practices",
-      "oneLine": "FSC's June 16 bank general managers meeting combined SME lending recognition with sharing on financial carbon-check services for small and micro enterprises.",
+      "title": "FSC expanded eNotice toward cash capital subscription-stock issuance notices",
+      "oneLine": "FSC’s June 23 news list records an eNotice expansion that adds electronic notices for cash capital subscription-stock issuance.",
       "facts": [
-        "FSC held the 61st domestic bank general managers business liaison meeting and recognition ceremony on 2026-06-16.",
-        "The meeting recognized banks for SME lending, New Southbound target-country credit, and six core strategic industry lending.",
-        "FSC invited the Small and Medium Enterprise and Startup Administration and high-performing banks to share experience on matching SMEs into carbon-check services."
+        "FSC news list shows a 2026-06-23 Securities and Futures Bureau item on expanding eNotice service scope.",
+        "The title says the expansion adds electronic notification for cash capital subscription-stock issuance notices.",
+        "The same FSC financial-education section remains updated during the week, keeping official consumer/education resources current."
       ],
       "yourTake": [
-        "This is relevant to financial education because SME finance is being connected to carbon-awareness and advisory workflows, not only credit volume.",
-        "For FamilyFin-style education, the reusable angle is turning abstract policy into a simple business-owner checklist."
+        "This is a financial-literacy operations signal: more investor notices are moving into electronic workflows, so consumer education needs to explain what is legitimate, what to check, and what not to ignore.",
+        "For FamilyFin-style education, the useful angle is a short anti-scam and document-reading checklist for ordinary investors."
       ],
       "actions": [
-        "Draft one plain-language explainer outline: what an SME financial carbon check is, what documents a small business should prepare, and what questions to ask the bank.",
-        "Keep this as background material only unless a concrete audience or partner asks for it."
+        "Draft a 30-minute outline: how to recognize an official securities eNotice, what action deadline matters, and when to call the institution.",
+        "Watch whether FSC publishes a consumer-facing FAQ or operational guide."
       ],
       "sources": [
         {
-          "label": "FSC - 61st domestic bank general managers meeting",
-          "url": "https://www.fsc.gov.tw/ch/home.jsp?aplistdn=ou%3Dnews%2Cou%3Dmultisite%2Cou%3Dchinese%2Cou%3Dap_root%2Co%3Dfsc%2Cc%3Dtw&dataserno=202606160004&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2",
-          "publishedAt": "2026-06-16"
+          "label": "FSC news list",
+          "url": "https://www.fsc.gov.tw/ch/home.jsp?id=2&parentpath=0",
+          "publishedAt": "2026-06-23"
+        },
+        {
+          "label": "FSC financial-education activity information",
+          "url": "https://www.fsc.gov.tw/ch/home.jsp?id=1088&parentpath=0%2C5",
+          "publishedAt": "2026-06-22"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "Primary FSC news release describing the meeting and policy topics."
+        "reason": "Primary FSC news and education pages."
       },
       "status": "new",
       "followups": [
-        "Watch whether FSC or SME Administration publishes a reusable carbon-check guide."
+        "Check FSC or TDCC pages for an eNotice FAQ before turning this into public copy."
       ],
       "tags": [
         "financial-education",
-        "sme",
-        "carbon-check",
+        "enotice",
+        "investor-notices",
         "taiwan"
       ]
     },
     {
-      "id": "20260616-codex-automation-approval-mode-fix",
-      "date": "2026-06-16",
+      "id": "20260625-codex-remote-ga-web-search-local-tasks",
+      "date": "2026-06-25",
       "topic": "codex_workflow",
-      "title": "Codex changelog fixed scheduled automations to honor approval mode",
-      "oneLine": "OpenAI's Codex changelog says scheduled automations now honor the selected approval mode and also adds workspace/plugin and usage-limit guidance improvements.",
+      "title": "Codex Remote reached GA and CLI/IDE local tasks gained web search behavior",
+      "oneLine": "OpenAI release notes say Codex Remote is now generally available on all ChatGPT plans, while the Codex changelog adds web search behavior for local CLI/IDE tasks.",
       "facts": [
-        "The Codex changelog entry includes improved plugin management across workspace plugins.",
-        "It improves usage-limit errors with inline plan and workspace guidance, including reset timing when available.",
-        "It fixes scheduled automations so they honor the selected approval mode."
+        "ChatGPT release notes dated 2026-06-25 say Codex Remote is generally available on all ChatGPT plans.",
+        "The same note describes authenticated one-to-one QR pairing for Remote Control.",
+        "The Codex changelog dated 2026-06-25 says local tasks in Codex CLI and IDE Extension can use web search, with cached/live behavior controlled by configuration."
       ],
       "yourTake": [
-        "This maps directly onto Kevin's recurring automation practice: approval mode is a boundary, not just a UI setting.",
-        "The changelog reinforces keeping explicit local safety gates in prompts and scripts even when product behavior improves."
+        "This matters for Kevin’s automations because local work, browser/account evidence, and remote approval are now closer together operationally.",
+        "The risk is source-mode ambiguity: a run summary must say whether evidence came from live web, cached web, local files, or visible account browser."
       ],
       "actions": [
-        "For any automation with external impact, keep the approval boundary in the task prompt and not only in app settings.",
-        "Add this item to the next Codex automation governance review as evidence that approval-mode semantics are product-relevant."
+        "Add source-mode wording to recurring automation closeouts when web search or browser-backed evidence is used.",
+        "For account-connected runs, keep the Google connector freeze rule above any Codex web-search convenience."
       ],
       "sources": [
         {
+          "label": "ChatGPT release notes",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "publishedAt": "2026-06-25"
+        },
+        {
           "label": "OpenAI Developers - Codex changelog",
           "url": "https://developers.openai.com/codex/changelog",
-          "publishedAt": "2026-06-16"
+          "publishedAt": "2026-06-25"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "Primary OpenAI Codex changelog."
+        "reason": "Primary OpenAI release notes and Codex changelog."
       },
       "status": "new",
       "followups": [
-        "During the next automation audit, verify whether local automation approval settings and prompt gates still align."
+        "Revisit automation summaries after the next remote-control run to confirm the source-mode wording is sufficient."
       ],
       "tags": [
         "codex",
-        "automation",
-        "approval-mode",
+        "remote-control",
+        "web-search",
+        "automation-governance"
+      ]
+    },
+    {
+      "id": "20260625-openai-agents-transforming-work-codex-research",
+      "date": "2026-06-25",
+      "topic": "global_ai",
+      "title": "OpenAI published economic research on Codex and delegated agent work",
+      "oneLine": "OpenAI’s June 25 research post frames Codex as evidence that capable agents enable longer, more complex, cross-functional work.",
+      "facts": [
+        "OpenAI published “How agents are transforming work” on 2026-06-25.",
+        "The post describes an Economic Research paper measuring Codex’s economic potential at the frontier.",
+        "OpenAI says frontier users use capable agentic tools for longer, more complex, and more cross-functional work as the tools improve."
+      ],
+      "yourTake": [
+        "The practical lesson is to design agent workflows around delegated task boundaries, not around single prompts.",
+        "For Kevin’s workbench/report automations, the useful metric is whether the agent produced a verified handoff artifact that a human can review quickly."
+      ],
+      "actions": [
+        "Add one “delegated work unit” field to future workflow proposals: input, allowed tools, stop condition, proof artifact.",
+        "Use this source in governance discussions about why recurring agents need state, approval gates, and no-op behavior."
+      ],
+      "sources": [
+        {
+          "label": "OpenAI - How agents are transforming work",
+          "url": "https://openai.com/index/how-agents-are-transforming-work/",
+          "publishedAt": "2026-06-25"
+        }
+      ],
+      "credibility": {
+        "level": "high",
+        "reason": "Primary OpenAI research-facing post."
+      },
+      "status": "new",
+      "followups": [
+        "Read the linked paper before converting this into a stronger internal workflow-design rule."
+      ],
+      "tags": [
+        "agents",
+        "future-of-work",
+        "codex",
+        "workflow-design"
+      ]
+    },
+    {
+      "id": "20260624-anthropic-claude-code-service-reliability-watch",
+      "date": "2026-06-24",
+      "topic": "global_ai",
+      "title": "Claude reliability reports reinforce the need for provider fallback planning",
+      "oneLine": "Public outage coverage around Claude elevated error rates is a reminder that agent workflows need graceful degraded modes and retry boundaries.",
+      "facts": [
+        "Public reporting on 2026-06-24 described Anthropic investigating elevated Claude error rates after user disruption reports.",
+        "The issue is relevant to AI operations even when the exact incident details come from status/reporting rather than a product launch.",
+        "Kevin’s local workflows already separate verified, partially verified, fallback-only, and blocked states."
+      ],
+      "yourTake": [
+        "This is a reliability/governance item, not a feature item.",
+        "The action is to keep degraded-mode labels visible rather than silently substituting another provider or connector."
+      ],
+      "actions": [
+        "Add provider-availability and fallback labels to any AI workflow that depends on a single external model provider.",
+        "For Google-account-backed work, do not treat model/provider fallback as permission to bypass the browser-surface freeze."
+      ],
+      "sources": [
+        {
+          "label": "Anthropic status page",
+          "url": "https://status.anthropic.com/",
+          "publishedAt": "2026-06-24"
+        }
+      ],
+      "credibility": {
+        "level": "medium",
+        "reason": "Operational status signal; useful for workflow reliability, not a product capability claim."
+      },
+      "status": "new",
+      "followups": [
+        "Check the provider status page during any future blocked AI-provider run before blaming local scripts."
+      ],
+      "tags": [
+        "ai-operations",
+        "reliability",
+        "fallbacks",
         "governance"
       ]
     },
     {
-      "id": "20260618-openai-enterprise-spend-controls",
-      "date": "2026-06-18",
-      "topic": "global_ai",
-      "title": "OpenAI introduced usage analytics and spend controls for ChatGPT Enterprise",
-      "oneLine": "OpenAI announced credit usage analytics and updated spend controls so enterprise admins can see adoption patterns and bound AI costs.",
-      "facts": [
-        "OpenAI published the enterprise usage analytics and spend controls update on 2026-06-18.",
-        "The update is aimed at giving admins more visibility, control, and confidence in AI deployments.",
-        "The stated use case includes tracking credit usage, understanding adoption patterns, and managing costs."
-      ],
-      "yourTake": [
-        "The weekly workflow lesson is that AI adoption is becoming an operations-management problem, not just a prompt-quality problem.",
-        "For Kevin's local automations, cost and usage visibility should be recorded beside quality and source checks when a workflow becomes recurring."
-      ],
-      "actions": [
-        "Add a lightweight usage/cost line to future automation run summaries when a workflow becomes expensive or frequent.",
-        "Keep local artifacts as the audit trail even if provider dashboards improve."
-      ],
-      "sources": [
-        {
-          "label": "OpenAI - New usage analytics and updated spend controls for enterprises",
-          "url": "https://openai.com/index/chatgpt-enterprise-spend-controls/",
-          "publishedAt": "2026-06-18"
-        }
-      ],
-      "credibility": {
-        "level": "high",
-        "reason": "Primary OpenAI product announcement."
-      },
-      "status": "new",
-      "followups": [
-        "Watch whether similar usage-control features appear for Codex workspace automations."
-      ],
-      "tags": [
-        "openai",
-        "enterprise",
-        "usage-analytics",
-        "spend-controls"
-      ]
-    },
-    {
-      "id": "20260618-google-deepmind-ai-control-roadmap",
-      "date": "2026-06-18",
-      "topic": "global_ai",
-      "title": "Google DeepMind published an AI Control Roadmap for agent security",
-      "oneLine": "Google DeepMind framed agent security as a multilayered control problem for increasingly capable and imperfectly aligned AI systems.",
-      "facts": [
-        "Google DeepMind published the roadmap on 2026-06-18.",
-        "The post presents AI control as part of a multilayered approach to agent security.",
-        "It emphasizes integrating control protocols with broader infrastructure to manage advanced AI models safely."
-      ],
-      "yourTake": [
-        "This is a useful counterweight to model-release hype because it asks what controls exist after an agent has tools, access, and delegated goals.",
-        "For Kevin's workflows, it supports the existing pattern of separating data access, approval mode, state files, and human checkpoints."
-      ],
-      "actions": [
-        "Add an agent-control checklist to any future browser-backed or account-connected automation: access, monitoring, halt condition, and audit log.",
-        "Use this source when explaining why reliable automations need explicit boundaries even when the model is strong."
-      ],
-      "sources": [
-        {
-          "label": "Google DeepMind - Securing internal systems against increasingly capable and imperfectly aligned AI",
-          "url": "https://deepmind.google/blog/securing-the-future-of-ai-agents/",
-          "publishedAt": "2026-06-18"
-        }
-      ],
-      "credibility": {
-        "level": "high",
-        "reason": "Primary Google DeepMind safety post."
-      },
-      "status": "new",
-      "followups": [
-        "Turn this into a small internal automation-control checklist if Kevin asks to formalize the next automation review."
-      ],
-      "tags": [
-        "ai-safety",
-        "agents",
-        "controls",
-        "workflow"
-      ]
-    },
-    {
-      "id": "20260618-discord-nitro-rewards-orbs-retention",
-      "date": "2026-06-18",
+      "id": "20260625-discord-update-social-loops-changelog",
+      "date": "2026-06-25",
       "topic": "growth_gamification",
-      "title": "Discord expanded Nitro Rewards with monthly Orbs and quest multipliers",
-      "oneLine": "Discord's Nitro Rewards update gives Nitro members monthly Orbs and quest multipliers, turning quests into a recurring reward loop.",
+      "title": "Discord’s June 25 update keeps social SDK and quest loops visible in product communication",
+      "oneLine": "Discord’s blog index highlights a June 25 changelog alongside Social SDK and quest/reward content, continuing the pattern of social and reward loops as growth infrastructure.",
       "facts": [
-        "Discord says Nitro members unlock 250 Orbs every month.",
-        "The same update adds an Orbs Multiplier so completed Quests earn more Orbs.",
-        "Orbs can be redeemed in the Shop for profile items and other benefits."
+        "Discord’s blog page lists “Discord Update: June 25, 2026 Changelog.”",
+        "The same blog surface continues to promote Social SDK and quest/reward content as product-feature material.",
+        "The prior Nitro Rewards/Orbs item remains the strongest concrete reward-loop source in the current tracking set."
       ],
       "yourTake": [
-        "The useful pattern is not the specific reward currency. It is a repeatable loop: monthly grant, action multiplier, visible redemption, and profile/status payoff.",
-        "For member education or community operations, this suggests starting with small recurring challenges and visible progress instead of a heavy points system."
+        "The durable pattern is still small repeated participation loops rather than a full gamification system.",
+        "For FamilyFin/community use, the adaptation should start as one manual weekly challenge and proof-of-completion loop."
       ],
       "actions": [
-        "Sketch one weekly member challenge with a non-monetary reward/status signal and a simple completion proof.",
-        "Avoid building a full loyalty platform until one manual loop produces evidence of repeat participation."
+        "Keep the reward-loop prototype tracking item open until one manual loop is sketched.",
+        "Do not build a platform feature until a manual weekly loop has evidence of repeat use."
       ],
       "sources": [
+        {
+          "label": "Discord Blog",
+          "url": "https://discord.com/blog",
+          "publishedAt": "2026-06-25"
+        },
         {
           "label": "Discord - Nitro Rewards",
           "url": "https://discord.com/blog/nitro-rewards",
@@ -260,16 +276,16 @@
       ],
       "credibility": {
         "level": "medium",
-        "reason": "Primary company product post; useful as product-pattern evidence, not as independent retention-performance proof."
+        "reason": "Primary company blog surface; useful for product-pattern tracking, not independent performance proof."
       },
       "status": "new",
       "followups": [
-        "Compare this with any Taiwan member-community behavior before adapting it to FamilyFin."
+        "Compare with Taiwan member-community behavior before any FamilyFin adaptation."
       ],
       "tags": [
         "gamification",
-        "retention",
         "community",
+        "retention",
         "discord"
       ]
     }
@@ -283,10 +299,11 @@
       "growth_gamification": 1
     },
     "trackingItems": [
-      "tracking-20260622-social-work-training-org-deadline",
-      "tracking-20260622-fsc-sme-carbon-check-guide",
-      "tracking-20260622-codex-automation-approval-mode",
-      "tracking-20260622-ai-agent-control-checklist",
+      "tracking-20260626-google-browser-source-evidence",
+      "tracking-20260626-social-work-capacity-watch",
+      "tracking-20260626-fsc-enotice-consumer-checklist",
+      "tracking-20260626-codex-source-mode-summary",
+      "tracking-20260626-infocenter-work-rhythm-review",
       "tracking-20260622-discord-reward-loop-prototype"
     ]
   }
