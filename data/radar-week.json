@@ -1,213 +1,281 @@
 {
   "meta": {
-    "weekStart": "2026-06-19",
-    "weekEnd": "2026-06-26",
-    "generatedAt": "2026-06-26T15:18:30+08:00",
+    "weekStart": "2026-06-26",
+    "weekEnd": "2026-07-03",
+    "generatedAt": "2026-07-03T15:10:01+08:00",
     "timezone": "Asia/Taipei",
     "notes": [
       "Coverage is the last 7 days in Asia/Taipei.",
-      "Google-account-backed workbook observation used Codex in-app Browser only; no Google connector/API fallback was used.",
+      "Google-account-backed connector/API fallback remained frozen. The intern workbook tab opened in the in-app Browser with title '4月先博薪資彙整 - Google 試算表', but deeper visible account/metadata reads timed out; source modified_time therefore remains the last verified timestamp instead of a newly claimed value.",
       "Items are deduplicated against the prior week by id and source URL; this week contains six new items."
     ]
   },
   "highlights": [
     {
-      "title": "Google-backed automation evidence moved to visible browser context",
-      "why": "The 2026-06-26 connector freeze changes the operating proof for weekly data refresh: account, URL, file context, and browser-export evidence now matter more than Drive connector metadata.",
-      "next": "Keep source-mode notes in every weekly run and stop with google_browser_blocked/google_account_wrong if the visible browser cannot prove the intended account."
+      "title": "Google workbook refresh is browser-blocked beyond tab title",
+      "why": "The approved browser surface opened the intended Sheet URL, but DOM/account/metadata reads timed out twice, so the run preserved the previous verified workbook timestamp and avoided frozen Google connector fallback.",
+      "next": "Treat this as google_browser_blocked for current Google metadata/download freshness; ask Kevin to keep the Sheet open and responsive before the next run if current modified_time proof is required."
     },
     {
-      "title": "Codex Remote general availability makes mobile approval a real operations pattern",
-      "why": "Codex Remote GA adds authenticated phone-to-host control and approval, which is directly relevant to Kevin's recurring automation and remote review workflow.",
-      "next": "Use it only with explicit approval gates and host/account context recorded before any external action."
+      "title": "Work-rhythm signal base expanded to 73 people",
+      "why": "The read-only InfoCenter helper refreshed aggregate rhythm data from 500 events and increased the person count from 72 to 73 while keeping raw titles/comments out of the repo.",
+      "next": "Use rhythm labels only for assignment timing and check-in preparation, not reimbursement or payroll evidence."
     },
     {
-      "title": "Work-rhythm add-on now has aggregate InfoCenter signals",
-      "why": "The InfoCenter helper scanned 500 events and generated 72-person aggregate rhythm signals without publishing raw event titles or comments.",
-      "next": "Use rhythm only for assignment timing and check-in planning, not reimbursement or payroll evidence."
+      "title": "Frontier AI operations now need release-control tracking",
+      "why": "Codex shipped a trace-log privacy fix, while Anthropic published Sonnet 5 and Fable 5 safeguard updates in the same week; the operational theme is controlled agent capability plus auditability.",
+      "next": "Keep one weekly checklist item for model/tool release risk: privacy logs, approval gates, and which work may be delegated."
     }
   ],
   "items": [
     {
-      "id": "20260626-google-browser-source-evidence-freeze",
-      "date": "2026-06-26",
+      "id": "20260703-google-browser-blocked-workbook-freshness",
+      "date": "2026-07-03",
       "topic": "codex_workflow",
-      "title": "Google plugin freeze makes visible browser evidence the default source mode",
-      "oneLine": "Google-account-backed observations must now happen through the Codex in-app Browser, with account and target context recorded, not through Google connectors.",
+      "title": "Google workbook freshness could not be re-proven through the browser",
+      "oneLine": "The intended intern workbook opened in the in-app Browser, but account/context/modified-time reads timed out, so the automation kept the last verified source timestamp.",
       "facts": [
-        "This run opened the intern workbook in the Codex in-app Browser and confirmed the visible account as egroup.kevin@gmail.com.",
-        "The browser URL was https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600 and the visible file title was 4月先博薪資彙整.",
-        "The main workbook browser export matched the existing local XLSX SHA256 hash, while historical reimbursement browser exports were refreshed into the private workspace before rebuilding redacted outputs."
+        "The in-app Browser tab list showed the intended URL: https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600.",
+        "The visible tab title was '4月先博薪資彙整 - Google 試算表'.",
+        "Two deeper browser reads timed out and reset the control session, so no current visible account or Google modified_time was captured this run.",
+        "The automation did not use Google Drive, Sheets, Docs, or connector/API fallback because the 2026-06-26 freeze is still active."
       ],
       "yourTake": [
-        "This is the most important workflow change this week because it affects how every future Google-backed automation proves freshness.",
-        "The practical rule is source-mode accounting: visible browser evidence is current evidence; connector/API shortcuts are blocked unless Kevin explicitly lifts the freeze."
+        "This is a valid stop condition for Google-backed freshness, not a reason to bypass the freeze.",
+        "The safest local outcome is a no-op intern rebuild using the last verified timestamp, plus an explicit blocker note."
       ],
       "actions": [
-        "Add browser URL, visible account, file/context, query/date range, and blocker label to future weekly run closeouts.",
-        "Treat missing visible browser access as a stopped run, not as permission to use a connector fallback."
+        "Before the next run, open the workbook in the in-app Browser and confirm it is responsive under egroup.kevin@gmail.com.",
+        "If exact source freshness matters this week, rerun only the browser workbook-export section after the browser is stable."
       ],
       "sources": [
         {
-          "label": "Visible Codex in-app Browser - Google Sheets workbook",
+          "label": "Visible Codex in-app Browser - Google Sheets workbook tab",
           "url": "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600",
-          "publishedAt": "2026-06-26"
+          "publishedAt": "2026-07-03"
         }
       ],
-      "credibility": { "level": "high", "reason": "Observed directly in the approved in-app Browser with the expected Google account visible." },
+      "credibility": {
+        "level": "high",
+        "reason": "Direct browser tab evidence for URL/title; metadata freshness intentionally not claimed."
+      },
       "status": "new",
-      "followups": ["Next run should verify whether browser-visible modified-time evidence can be captured without using Google connector metadata."],
-      "tags": ["codex", "automation", "google-browser", "source-evidence"]
+      "followups": [
+        "Recheck browser-visible account and workbook export path before using any current Google freshness claim."
+      ],
+      "tags": ["google-browser", "automation", "blocked", "source-evidence"]
     },
     {
-      "id": "20260626-tw-social-work-mohw-capacity-watch",
-      "date": "2026-06-26",
+      "id": "20260703-infocenter-work-rhythm-refresh",
+      "date": "2026-07-03",
       "topic": "tw_social_work",
-      "title": "MOHW social-work staffing and training notices remain the capacity watch point",
-      "oneLine": "MOHW social-work related public signals this week are operational: training windows, staffing, and unit capacity rather than a major policy shift.",
+      "title": "InfoCenter work-rhythm refreshed with one more person in aggregate signals",
+      "oneLine": "The read-only rhythm helper scanned 500 events and generated aggregate planning signals for 73 people without publishing raw event content.",
       "facts": [
-        "The specialist social-work training organization application window still closes on 2026-06-29.",
-        "MOHW public notice pages continue to show social-welfare and social-work unit staffing/activity signals rather than a major new policy change in this week window."
+        "The helper wrote data/work-rhythm.internal.json and private raw evidence stayed under the workspace work folder.",
+        "This run reported scannedEvents=500, peopleCount=73, totalSignals=480, highConfidenceSignals=0.",
+        "The output remains aggregate-only: no raw event titles, comments, salary amounts, bank data, ID numbers, or full addresses."
       ],
       "yourTake": [
-        "For Kevin's workforce lens, this is a no-drama but actionable signal: staffing and training pipeline readiness matter more than headline policy this week.",
-        "The useful artifact is a partner checklist for training capacity and supervision readiness, not another generic news summary."
+        "The new count is useful for assignment and support planning, but it is still a planning signal rather than an authority record.",
+        "Because high-confidence signals remain zero, use the page as a prompt for human check-in rather than automatic assignment routing."
       ],
       "actions": [
-        "Before 2026-06-29, keep the specialist-training organization requirements in the partner-review checklist.",
-        "Recheck after 2026-07-02 for any follow-up notice or application result signal."
+        "Use the work-rhythm page before weekly dispatch to spot who may need clearer check-in timing.",
+        "Keep reimbursement sheets and explicit work records as the source of truth for pay/work proof."
       ],
       "sources": [
-        { "label": "MOHW specialist social-work training organization recognition notice", "url": "https://dep.mohw.gov.tw/DOSAASW/cp-4970-86212-103.html", "publishedAt": "2026-04-24" },
-        { "label": "MOHW public notices list", "url": "https://www.mohw.gov.tw/sp-SUOList-1.html", "publishedAt": "2026-06-26" }
+        {
+          "label": "InfoCenter event list - read-only configured helper",
+          "url": "https://www.egroup-infocenter.com/me/event/events",
+          "publishedAt": "2026-07-03"
+        }
       ],
-      "credibility": { "level": "medium", "reason": "Primary official sources, but the week produced continuity signals rather than a major new social-work policy release." },
+      "credibility": {
+        "level": "medium",
+        "reason": "Live helper read succeeded, but the published artifact intentionally contains aggregate rhythm evidence only."
+      },
       "status": "new",
-      "followups": ["Check whether the June 29 window creates any July follow-up notice."],
-      "tags": ["social-work", "taiwan", "training", "staffing"]
-    },
-    {
-      "id": "20260623-tw-fin-ed-enotice-expansion",
-      "date": "2026-06-23",
-      "topic": "tw_fin_ed",
-      "title": "FSC eNotice expansion points to consumer document-readiness education",
-      "oneLine": "FSC news this week included eNotice-related consumer-finance infrastructure, which is a practical trigger for plain-language account/document education.",
-      "facts": [
-        "FSC's news center carried a June 2026 item on electronic notice and financial-market infrastructure.",
-        "The consumer education angle is not product promotion: it is helping people know which official notices matter, where they arrive, and how to avoid missing account or rights-related messages."
+      "followups": [
+        "Check whether the 73-person output changes the weekly assignment/support list."
       ],
-      "yourTake": [
-        "This is useful for financial education because e-notice adoption usually creates confusion around official channels, scams, and missed deadlines.",
-        "A good FamilyFin-style output would be a short checklist, not a technical market-infrastructure explainer."
-      ],
-      "actions": [
-        "Watch for FSC/TDCC FAQ material and only then draft a consumer-facing checklist.",
-        "Frame the checklist around safe official channels, what to archive, and when to ask a financial institution for help."
-      ],
-      "sources": [
-        { "label": "FSC news center", "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2", "publishedAt": "2026-06-23" }
-      ],
-      "credibility": { "level": "medium", "reason": "Primary FSC news list; final consumer checklist should wait for a more specific FAQ or release page." },
-      "status": "new",
-      "followups": ["Recheck FSC/TDCC for a dedicated eNotice consumer FAQ by 2026-07-10."],
-      "tags": ["financial-education", "consumer-notice", "taiwan", "fsc"]
-    },
-    {
-      "id": "20260625-codex-remote-ga",
-      "date": "2026-06-25",
-      "topic": "codex_workflow",
-      "title": "Codex Remote reached general availability",
-      "oneLine": "OpenAI says Codex Remote is GA, allowing work to start or continue from the ChatGPT mobile app on a connected Mac or Windows host.",
-      "facts": [
-        "The 2026-06-25 Codex changelog says Codex Remote reached general availability.",
-        "Remote Control now uses authenticated one-to-one QR pairing between each iOS or Android device and each host.",
-        "Connections used since 2026-06-08 remain paired, while older inactive connections need to pair again."
-      ],
-      "yourTake": [
-        "This makes phone-based review and approval a mainstream Codex workflow pattern, not just an experiment.",
-        "For Kevin's automations, the key is not convenience; it is preserving approval mode, host identity, and action scope when review happens away from the desktop."
-      ],
-      "actions": [
-        "Document which automation actions may be approved remotely and which still require desktop/browser-visible context.",
-        "If Codex Remote is used for Google-account-backed work, still require visible target context before account-backed observation or writes."
-      ],
-      "sources": [
-        { "label": "OpenAI Developers - Codex changelog", "url": "https://developers.openai.com/codex/changelog", "publishedAt": "2026-06-25" }
-      ],
-      "credibility": { "level": "high", "reason": "Primary OpenAI Codex changelog." },
-      "status": "new",
-      "followups": ["Add Codex Remote to the next automation approval-boundary review if Kevin starts using it operationally."],
-      "tags": ["codex", "remote", "mobile", "approval"]
-    },
-    {
-      "id": "20260626-infocenter-work-rhythm-aggregate",
-      "date": "2026-06-26",
-      "topic": "tw_social_work",
-      "title": "InfoCenter work-rhythm add-on produced aggregate-only planning signals",
-      "oneLine": "The read-only InfoCenter helper generated a public-safe aggregate rhythm file for assignment timing and support planning.",
-      "facts": [
-        "The helper scanned 500 InfoCenter events and generated signals for 72 people.",
-        "The output file is data/work-rhythm.internal.json and excludes raw event titles, comment bodies, salary amounts, bank data, ID numbers, and full addresses.",
-        "The current run reported 480 total signals and 0 high-confidence signals."
-      ],
-      "yourTake": [
-        "This is useful as a staffing-support lens, not as a payroll or reimbursement source of truth.",
-        "Low or medium confidence should prompt human check-in before assignment decisions, not automatic routing."
-      ],
-      "actions": [
-        "Review the work-rhythm page for whether the aggregate labels are useful enough for Kevin's weekly assignment planning.",
-        "Keep reimbursement sheets as authoritative for work records and pay status."
-      ],
-      "sources": [
-        { "label": "InfoCenter event list - read-only browser/profile helper", "url": "https://www.egroup-infocenter.com/me/event/events", "publishedAt": "2026-06-26" }
-      ],
-      "credibility": { "level": "medium", "reason": "Live helper read succeeded, but the output is aggregate rhythm evidence only and intentionally not raw audit evidence." },
-      "status": "new",
-      "followups": ["Check whether the work-rhythm route is understandable without exposing raw private event data."],
       "tags": ["infocenter", "work-rhythm", "aggregate", "planning"]
     },
     {
-      "id": "20260626-growth-monthly-reward-loop-followup",
-      "date": "2026-06-26",
-      "topic": "growth_gamification",
-      "title": "Retention-loop watch shifts from reward mechanics to manual proof",
-      "oneLine": "After last week's Discord reward-loop signal, the useful next step is a manual weekly challenge prototype rather than more platform scanning.",
+      "id": "20260701-codex-cli-websocket-trace-fix",
+      "date": "2026-07-01",
+      "topic": "codex_workflow",
+      "title": "Codex CLI shipped a trace-log privacy fix",
+      "oneLine": "Codex CLI 0.142.5 prevents full Responses WebSocket request payloads from being written to trace logs.",
       "facts": [
-        "Last week's Nitro Rewards/Orbs item remains the clearest recent growth-pattern source in the current watchlist.",
-        "No new higher-confidence public product pattern displaced it during this run."
+        "OpenAI's Codex changelog lists Codex CLI 0.142.5 on 2026-07-01.",
+        "The release note identifies a bug fix that prevents full Responses WebSocket request payloads from being written to trace logs.",
+        "The 2026-06-29 and 2026-06-26 CLI releases were maintenance-only/no user-facing change entries."
       ],
       "yourTake": [
-        "The insight should now move from radar to experiment: one manual loop can test whether people repeat, reply, or complete before any tooling exists.",
-        "For FamilyFin or member education, a low-friction non-monetary status signal is safer than points, cash, or complex badges."
+        "For Kevin's local automation layer, this matters because trace/log boundaries are part of privacy hygiene when prompts may mention private workbooks, account surfaces, or internal data.",
+        "It is not a feature to chase immediately, but it belongs in the weekly tool-safety watchlist."
       ],
       "actions": [
-        "Write one paper prototype for a weekly challenge with completion proof and non-monetary status.",
-        "Define one success measure: repeat participation, reply rate, saved checklist, or consultation click."
+        "When upgrading Codex CLI next, verify the installed version and keep sensitive payload logging out of any shared artifact.",
+        "Add log-scrubbing to future automation debugging notes when browser/account/private workbook context is involved."
       ],
       "sources": [
-        { "label": "Discord - Nitro Rewards", "url": "https://discord.com/blog/nitro-rewards", "publishedAt": "2026-06-18" }
+        {
+          "label": "OpenAI Developers - Codex changelog",
+          "url": "https://developers.openai.com/codex/changelog",
+          "publishedAt": "2026-07-01"
+        }
       ],
-      "credibility": { "level": "medium", "reason": "Primary product-pattern source from the prior week; this item is a follow-through action signal rather than a new external announcement." },
+      "credibility": {
+        "level": "high",
+        "reason": "Primary OpenAI Codex changelog."
+      },
       "status": "new",
-      "followups": ["Decide whether to run one manual challenge before building any gamification UI."],
-      "tags": ["gamification", "retention", "manual-prototype", "community"]
+      "followups": [
+        "Check local Codex CLI version during the next maintenance window before making any upgrade recommendation."
+      ],
+      "tags": ["codex", "privacy", "logs", "cli"]
+    },
+    {
+      "id": "20260630-anthropic-sonnet5-fable5-safeguards",
+      "date": "2026-06-30",
+      "topic": "global_ai",
+      "title": "Anthropic paired broader agent access with Fable 5 safeguard updates",
+      "oneLine": "Anthropic's newsroom shows Sonnet 5, Fable 5 redeployment, and cyber-safeguard details clustered around June 30 to July 2.",
+      "facts": [
+        "Anthropic listed 'Introducing Claude Sonnet 5' on 2026-06-30.",
+        "The same newsroom window included 'Redeploying Fable 5' on 2026-06-30 and more Fable 5 cyber-safeguard details on 2026-07-02.",
+        "The pattern is agent capability becoming broader while governance and jailbreak severity scoring become more explicit."
+      ],
+      "yourTake": [
+        "The practical lesson for Kevin's workflows is not model hype; it is that agentic delegation needs a safety/control checklist next to the capability checklist.",
+        "This can inform how FamilyFin or internal automation distinguishes low-risk drafting, browser observation, and account-backed operation."
+      ],
+      "actions": [
+        "Draft a small 'agent delegation risk' checklist: source mode, private data exposure, external action, and rollback path.",
+        "Use the checklist before assigning repetitive account-backed tasks to any model/tool."
+      ],
+      "sources": [
+        {
+          "label": "Anthropic Newsroom",
+          "url": "https://www.anthropic.com/news",
+          "publishedAt": "2026-07-02"
+        }
+      ],
+      "credibility": {
+        "level": "high",
+        "reason": "Primary Anthropic newsroom listing with dated releases."
+      },
+      "status": "new",
+      "followups": [
+        "Revisit if Anthropic publishes the detailed jailbreak framework as a reusable scorecard."
+      ],
+      "tags": ["anthropic", "agents", "safeguards", "model-release"]
+    },
+    {
+      "id": "20260629-mohw-social-work-admin-capacity",
+      "date": "2026-06-29",
+      "topic": "tw_social_work",
+      "title": "MOHW social-work capacity signal shifted to administrative hiring",
+      "oneLine": "The social-work radar this week is less a policy headline and more a staffing/administrative-capacity watch point.",
+      "facts": [
+        "MOHW's employment list shows a 2026-06-29 research assistant opening in the Department of Social Assistance and Social Work, closing 2026-07-06.",
+        "The role includes public fundraising, fundraising management-system work, and social assistance/relief related tasks.",
+        "The same list also shows late-June social-assistance/social-work office openings and deadlines extending into early July."
+      ],
+      "yourTake": [
+        "For workforce planning, this suggests the official system still needs administrative capacity around relief, fundraising, and case-support infrastructure.",
+        "It is a useful background signal for partner conversations about why social-work support requires operational staff, not only frontline professionals."
+      ],
+      "actions": [
+        "Keep a July 6 follow-up to see whether the opening closes normally or reappears.",
+        "Translate this into one partner-facing talking point about back-office load behind social-service delivery."
+      ],
+      "sources": [
+        {
+          "label": "MOHW employment list",
+          "url": "https://www.mohw.gov.tw/sp-SUOList-1.html",
+          "publishedAt": "2026-07-03"
+        },
+        {
+          "label": "MOHW research assistant opening - Social Assistance and Social Work",
+          "url": "https://www.mohw.gov.tw/suc-2392-98423-1.html",
+          "publishedAt": "2026-06-29"
+        }
+      ],
+      "credibility": {
+        "level": "high",
+        "reason": "Primary MOHW employment pages."
+      },
+      "status": "new",
+      "followups": [
+        "Check the July 6 deadline and whether a selection result appears."
+      ],
+      "tags": ["social-work", "mohw", "capacity", "staffing"]
+    },
+    {
+      "id": "20260630-fsc-financial-education-results-journal",
+      "date": "2026-06-30",
+      "topic": "tw_fin_ed",
+      "title": "FSC financial education outputs remain resource-map material",
+      "oneLine": "FSC surfaces continue to point toward curated financial-education resources and measurable inclusion targets, useful for FamilyFin content planning.",
+      "facts": [
+        "FSC's financial knowledge page lists official and affiliated resources such as MoneyWise, financial mini-encyclopedia, risk/insurance education, training courses, and dispute/consumer education materials.",
+        "FSC's inclusive-finance results page says 2026 indicators include expanded financial-knowledge outreach for groups such as new residents and women.",
+        "A recent FSC law/news listing also surfaced '金融教育成果專刊' around 2026-06-30."
+      ],
+      "yourTake": [
+        "The immediate content opportunity is a resource map: where to learn, calculate, verify terms, and ask for consumer-dispute help.",
+        "This is better than a generic financial-literacy article because it gives users official next stops."
+      ],
+      "actions": [
+        "Build one FamilyFin draft outline that maps user needs to official FSC-linked resources.",
+        "Track whether the 2026 financial-education results publication exposes reusable case examples."
+      ],
+      "sources": [
+        {
+          "label": "FSC financial knowledge resource page",
+          "url": "https://www.fsc.gov.tw/ch/home.jsp?id=1089&parentpath=0%2C5",
+          "publishedAt": "2026-07-02"
+        },
+        {
+          "label": "FSC inclusive finance indicators 2026 update",
+          "url": "https://www.fsc.gov.tw/ch/home.jsp?dataserno=202605280004&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2",
+          "publishedAt": "2026-05-28"
+        },
+        {
+          "label": "FSC latest laws/news listing",
+          "url": "https://www.fsc.gov.tw/ch/home.jsp?dataserno=202606300001&dtable=NewsLaw&id=3&mcustomize=lawnew_view.jsp&parentpath=0",
+          "publishedAt": "2026-06-30"
+        }
+      ],
+      "credibility": {
+        "level": "medium",
+        "reason": "Primary FSC pages, but the results-publication detail needs a dedicated follow-up if it will be quoted."
+      },
+      "status": "new",
+      "followups": [
+        "Find the downloadable financial-education results publication and extract reusable case categories."
+      ],
+      "tags": ["financial-education", "fsc", "resource-map", "familyfin"]
     }
   ],
   "dashboard": {
     "countsByTopic": {
       "tw_social_work": 2,
       "tw_fin_ed": 1,
-      "global_ai": 0,
+      "global_ai": 1,
       "codex_workflow": 2,
-      "growth_gamification": 1
+      "growth_gamification": 0
     },
     "trackingItems": [
-      "tracking-20260626-google-browser-source-evidence",
-      "tracking-20260626-social-work-capacity-watch",
-      "tracking-20260626-fsc-enotice-consumer-checklist",
-      "tracking-20260626-codex-remote-approval-boundary",
-      "tracking-20260626-infocenter-work-rhythm-review",
-      "tracking-20260626-discord-reward-loop-prototype"
+      "tracking-20260703-google-browser-blocked-workbook-freshness",
+      "tracking-20260703-work-rhythm-assignment-planning",
+      "tracking-20260703-codex-log-privacy-watch",
+      "tracking-20260703-agent-release-control-checklist",
+      "tracking-20260703-mohw-admin-capacity-watch",
+      "tracking-20260703-fsc-resource-map"
     ]
   }
 }

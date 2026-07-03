@@ -1,64 +1,79 @@
 {
   "items": [
     {
-      "id": "tracking-20260626-google-browser-source-evidence",
-      "createdAt": "2026-06-26",
+      "id": "tracking-20260703-google-browser-blocked-workbook-freshness",
+      "createdAt": "2026-07-03",
       "topic": "codex_workflow",
-      "title": "Keep Google-backed automation evidence on visible browser context",
+      "title": "Restore browser-visible workbook freshness proof",
       "status": "open",
-      "nextCheck": "2026-07-03",
-      "question": "Do weekly automation summaries record URL, visible account, visible file/context, and blocker label when exact metadata cannot be read?",
-      "links": ["https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600"]
+      "nextCheck": "2026-07-10",
+      "question": "Can the in-app Browser capture expected Google account, workbook context, and a current export/metadata proof without connector fallback?",
+      "links": [
+        "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600"
+      ]
     },
     {
-      "id": "tracking-20260626-social-work-capacity-watch",
-      "createdAt": "2026-06-26",
+      "id": "tracking-20260703-work-rhythm-assignment-planning",
+      "createdAt": "2026-07-03",
       "topic": "tw_social_work",
-      "title": "Watch MOHW social-work staffing and training-capacity windows",
+      "title": "Use work-rhythm only for assignment planning",
       "status": "open",
-      "nextCheck": "2026-07-02",
-      "question": "Did the June 29 training-organization window produce a follow-up notice?",
-      "links": ["https://www.mohw.gov.tw/sp-SUOList-1.html", "https://dep.mohw.gov.tw/DOSAASW/cp-4970-86212-103.html"]
+      "nextCheck": "2026-07-10",
+      "question": "Do the 73-person aggregate rhythm labels help Kevin prepare check-ins without becoming payroll evidence?",
+      "links": [
+        "https://www.egroup-infocenter.com/me/event/events"
+      ]
     },
     {
-      "id": "tracking-20260626-fsc-enotice-consumer-checklist",
-      "createdAt": "2026-06-26",
+      "id": "tracking-20260703-codex-log-privacy-watch",
+      "createdAt": "2026-07-03",
+      "topic": "codex_workflow",
+      "title": "Track Codex log privacy fixes before upgrades",
+      "status": "open",
+      "nextCheck": "2026-07-10",
+      "question": "Is the local Codex CLI on a version with the WebSocket trace payload fix, and are automation debug logs scrubbed?",
+      "links": [
+        "https://developers.openai.com/codex/changelog"
+      ]
+    },
+    {
+      "id": "tracking-20260703-agent-release-control-checklist",
+      "createdAt": "2026-07-03",
+      "topic": "global_ai",
+      "title": "Draft a small agent release-control checklist",
+      "status": "open",
+      "nextCheck": "2026-07-17",
+      "question": "Can Kevin's workflows separate low-risk drafting, browser observation, and account-backed operation before delegating to newer agent models?",
+      "links": [
+        "https://www.anthropic.com/news",
+        "https://developers.openai.com/codex/changelog"
+      ]
+    },
+    {
+      "id": "tracking-20260703-mohw-admin-capacity-watch",
+      "createdAt": "2026-07-03",
+      "topic": "tw_social_work",
+      "title": "Watch MOHW social-work administrative capacity hiring",
+      "status": "open",
+      "nextCheck": "2026-07-07",
+      "question": "Did the July 6 social-assistance/social-work office hiring window close normally or produce a follow-up result?",
+      "links": [
+        "https://www.mohw.gov.tw/sp-SUOList-1.html",
+        "https://www.mohw.gov.tw/suc-2392-98423-1.html"
+      ]
+    },
+    {
+      "id": "tracking-20260703-fsc-resource-map",
+      "createdAt": "2026-07-03",
       "topic": "tw_fin_ed",
-      "title": "Turn FSC eNotice expansion into a consumer checklist only if FAQ appears",
+      "title": "Turn FSC education resources into a user map",
       "status": "open",
-      "nextCheck": "2026-07-10",
-      "question": "Has FSC, TDCC, or a financial institution published a consumer-facing explanation of expanded eNotice use?",
-      "links": ["https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2"]
-    },
-    {
-      "id": "tracking-20260626-codex-remote-approval-boundary",
-      "createdAt": "2026-06-26",
-      "topic": "codex_workflow",
-      "title": "Define Codex Remote approval boundaries before operational use",
-      "status": "open",
-      "nextCheck": "2026-07-10",
-      "question": "Which recurring automation actions may be approved from phone, and which still require desktop/browser-visible account context?",
-      "links": ["https://developers.openai.com/codex/changelog"]
-    },
-    {
-      "id": "tracking-20260626-infocenter-work-rhythm-review",
-      "createdAt": "2026-06-26",
-      "topic": "tw_social_work",
-      "title": "Use InfoCenter rhythm as planning context, not payroll evidence",
-      "status": "open",
-      "nextCheck": "2026-07-03",
-      "question": "Does the work-rhythm page help assignment timing without exposing raw titles, comments, or payroll-sensitive data?",
-      "links": ["https://www.egroup-infocenter.com/me/event/events"]
-    },
-    {
-      "id": "tracking-20260626-discord-reward-loop-prototype",
-      "createdAt": "2026-06-26",
-      "topic": "growth_gamification",
-      "title": "Sketch one manual reward-loop prototype before building gamification",
-      "status": "open",
-      "nextCheck": "2026-07-03",
-      "question": "Can one weekly challenge plus a visible non-monetary status signal produce repeat participation before any platform work?",
-      "links": ["https://discord.com/blog/nitro-rewards"]
+      "nextCheck": "2026-07-17",
+      "question": "Which FSC-linked resource should FamilyFin point users to for learning, calculators, term lookup, insurance education, and disputes?",
+      "links": [
+        "https://www.fsc.gov.tw/ch/home.jsp?id=1089&parentpath=0%2C5",
+        "https://www.fsc.gov.tw/ch/home.jsp?dataserno=202605280004&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"
+      ]
     }
   ]
 }
