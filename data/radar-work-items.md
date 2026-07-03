@@ -1,25 +1,23 @@
-# 每週工作清單（2026-06-26 至 2026-07-03）
-> 每項控制在 30 分鐘內。派工/派薪只列提醒與狀態，不含金額、帳戶或銀行資料。
+# Weekly Work Items 2026-06-26 to 2026-07-03
 
-## A. 本週可行動派工（5 項）
+> Checklist only. No salary amounts, bank data, ID numbers, full addresses, or payment instructions.
 
-- [ ] 重開 Google Sheet in-app Browser 分頁並確認 visible account / workbook context（Owner: Kevin，Due: 2026-07-04，Note: 只做觀察，不用 connector fallback）
-- [ ] 檢查 `/work-rhythm/` 73-person aggregate signals，挑 3 位需要 check-in timing 的人（Owner: Kevin，Due: 2026-07-05，Note: 不作為薪資證據）
-- [ ] 把 MOHW 社工司行政量能訊號整理成 3 句 partner-facing talking point（Owner: Kevin，Due: 2026-07-07，Note: 聚焦 back-office capacity）
-- [ ] 草擬 FSC official resource map outline（Owner: Kevin，Due: 2026-07-09，Note: 學習/名詞/試算/保險/評議）
-- [ ] 寫一張 agent delegation risk checklist 草稿（Owner: Kevin，Due: 2026-07-10，Note: source mode / private data / external action / rollback）
+## A. Dispatch / Review Items
 
-## B. 派薪 / 報帳提醒（僅狀態，不含金額）
+- [ ] Reopen the intern workbook in Codex in-app Browser and confirm visible account/file context. Owner: Kevin. Due: 2026-07-04. Timebox: 15 minutes.
+- [ ] Compare work-rhythm peopleCount 73 against last week's 72 and note whether it is a real new person or parser/category drift. Owner: Kevin. Due: 2026-07-10. Timebox: 30 minutes.
+- [ ] Review the work-rhythm page for assignment-planning usefulness without using it as payroll evidence. Owner: Kevin. Due: 2026-07-10. Timebox: 20 minutes.
+- [ ] Check the Codex changelog for any browser/control change that affects Google-account evidence capture. Owner: Kevin. Due: 2026-07-10. Timebox: 15 minutes.
+- [ ] Turn Anthropic's safeguards/jailbreak framing into a short untrusted-content checklist for browser/account automations. Owner: Kevin. Due: 2026-07-17. Timebox: 30 minutes.
 
-- [ ] 確認 `data/interns.public.json` 的 paid/due 狀態是否仍符合本週派薪紀錄（Owner: Kevin，Due: 2026-07-04，Note: 本輪 no-op，未取得新 Google modified_time）
-- [ ] 若需要本週最新工讀生資料，先解決 `google_browser_blocked` 再重新跑 workbook export（Owner: Kevin，Due: 2026-07-04，Note: 不使用 Google connector）
-- [ ] 下週跑 automation 前確認 2026-06 reimbursement sheet 是否已加入 configured historical sheets（Owner: Kevin，Due: 2026-07-10，Note: 目前 configured history 仍為 2026-01 至 2026-05）
+## B. Pay / Disbursement Reminders
 
-## C. tracking.json 下週追蹤（6 項）
+- [ ] Keep intern pay status as checklist status only; do not add amounts or bank data to public or radar outputs. Owner: Kevin. Due: 2026-07-04. Timebox: 10 minutes.
+- [ ] After Google browser access is restored, rerun the redacted intern snapshot and confirm paid/due/n-a counts without exposing amounts. Owner: Kevin. Due: 2026-07-04. Timebox: 30 minutes.
 
-- [ ] Restore browser-visible workbook freshness proof（Owner: Kevin，Due: 2026-07-10，Note: visible account + context + metadata/export proof）
-- [ ] Use work-rhythm only for assignment planning（Owner: Kevin，Due: 2026-07-10，Note: 73 people / 480 signals）
-- [ ] Track Codex log privacy fixes before upgrades（Owner: Kevin，Due: 2026-07-10，Note: CLI 0.142.5 trace-log fix）
-- [ ] Draft a small agent release-control checklist（Owner: Kevin，Due: 2026-07-17，Note: Anthropic/OpenAI release-control signal）
-- [ ] Watch MOHW social-work administrative capacity hiring（Owner: Kevin，Due: 2026-07-07，Note: 7/6 deadline follow-up）
-- [ ] Turn FSC education resources into a user map（Owner: Kevin，Due: 2026-07-17，Note: 官方資源對應使用者任務）
+## C. Content / Growth Follow-ups
+
+- [ ] Find the latest FSC virtual-asset FAQ or explainer before drafting a consumer checklist. Owner: Kevin. Due: 2026-07-10. Timebox: 20 minutes.
+- [ ] Draft one virtual-asset consumer checklist that separates legal platform status from investment safety. Owner: Kevin. Due: 2026-07-17. Timebox: 30 minutes.
+- [ ] Write one manual weekly challenge prototype with completion proof and non-monetary status. Owner: Kevin. Due: 2026-07-10. Timebox: 30 minutes.
+- [ ] Choose one challenge success metric: repeat participation, reply rate, saved checklist, or consultation click. Owner: Kevin. Due: 2026-07-10. Timebox: 10 minutes.
