@@ -1,12 +1,12 @@
 {
   "meta": {
-    "weekStart": "2026-06-26",
-    "weekEnd": "2026-07-03",
-    "generatedAt": "2026-07-03T15:10:46+08:00",
+    "weekStart": "2026-07-03",
+    "weekEnd": "2026-07-10",
+    "generatedAt": "2026-07-10T15:00:00+08:00",
     "timezone": "Asia/Taipei",
     "notes": [
       "Coverage is the last 7 days in Asia/Taipei.",
-      "Google-account-backed workbook observation attempted through Codex in-app Browser only; the Sheets page timed out twice, so intern workbook freshness is marked google_browser_blocked and prior intern/talent outputs were kept.",
+      "Google-account-backed workbook observation attempted through Codex in-app Browser only; the browser page attach failed, so intern workbook freshness is marked google_browser_blocked and prior intern/talent outputs were kept.",
       "Items are deduplicated against the prior week by id and source URL; this week contains six new radar items."
     ],
     "sourceAccess": {
@@ -19,7 +19,7 @@
         "nextAction": "Open the workbook in the in-app Browser with egroup.kevin@gmail.com visible, then rerun the intern export/update path."
       },
       "infocenterWorkRhythm": {
-        "status": "updated",
+        "status": "updated-no-content-delta",
         "scannedEvents": 500,
         "peopleCount": 73,
         "totalSignals": 480,
@@ -30,203 +30,277 @@
   },
   "highlights": [
     {
-      "title": "Google workbook refresh is blocked by browser loading, not by connector fallback",
-      "why": "The connector freeze was honored: no Google connector/API fallback was used after the in-app Browser could not load the Sheets workbook reliably.",
-      "next": "Keep the prior intern/talent data live, and rerun only after the workbook opens in the visible signed-in browser context."
+      "title": "Google workbook freshness is still blocked at the visible browser layer",
+      "why": "The connector freeze was honored again: no Google Drive or Sheets connector/API fallback was used after the in-app Browser could not attach to the Sheets page.",
+      "next": "Keep the prior intern and talent-pool data live, and rerun the workbook export only after the signed-in Google page is visible."
     },
     {
-      "title": "Virtual-asset law movement creates a plain-language finance education task",
-      "why": "Taiwan's virtual-asset supervision signal is now concrete enough to prepare reader education around licenses, custody, fraud, and what ordinary users should not assume.",
-      "next": "Draft a short consumer checklist only after confirming the latest FSC explanatory page or FAQ."
+      "title": "Codex moved further into long-running desktop work",
+      "why": "OpenAI announced Codex inside the ChatGPT desktop app and broader Work capabilities, which raises the bar for evidence, approvals, and task state in Kevin-style automations.",
+      "next": "Keep logging source surface, approval boundary, blocker label, and production proof for every recurring automation."
     },
     {
-      "title": "Codex and agent-safety changes point to stronger automation proof logs",
-      "why": "Codex changelog updates and Anthropic's jailbreak framework both reinforce the same operations lesson: agent workflows need source-mode, approval, and failure evidence, not just successful output.",
-      "next": "Carry blocker labels, source URLs, and account/context proof into future automation closeouts."
+      "title": "Community platforms are making trust and policy loops more explicit",
+      "why": "Patreon is previewing policy updates with creator feedback, while Discord continues shipping operational patch notes; both are useful patterns for member/community workflow design.",
+      "next": "Use a lightweight feedback window before adding any new FamilyFin challenge, badge, or membership mechanic."
     }
   ],
   "items": [
     {
-      "id": "20260703-google-workbook-browser-blocked",
-      "date": "2026-07-03",
+      "id": "20260710-google-workbook-browser-blocked",
+      "date": "2026-07-10",
       "topic": "codex_workflow",
-      "title": "Intern workbook refresh stopped at Google browser blocker",
-      "oneLine": "The in-app Browser could not complete the Google Sheets load, so the run kept previous intern/talent outputs and did not use a frozen connector fallback.",
+      "title": "Intern workbook refresh remains blocked by the in-app Browser",
+      "oneLine": "The Google Sheets workbook could not be observed through the required visible browser surface, so the run kept the last verified intern snapshot and did not use frozen Google connectors.",
       "facts": [
         "The attempted workbook URL was https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600.",
-        "Two browser attempts timed out before a reliable signed-in account/file context could be captured.",
+        "The browser connection succeeded for documentation, but opening the workbook failed with a webview attach timeout.",
         "No Google Drive, Sheets, or other Google connector/API fallback was used."
       ],
       "yourTake": [
-        "This is a correct blocked state under the 2026-06-26 freeze, not an intern-data no-op proof.",
-        "The site can still publish public-source radar and InfoCenter rhythm updates, but intern workbook freshness remains unverified for this run."
+        "This is a real freshness blocker, not proof that the spreadsheet is unchanged.",
+        "The public snapshot and talent-pool pages can stay live because they remain based on the last verified workbook timestamp and local historical files."
       ],
       "actions": [
-        "Rerun the workbook observation when the in-app Browser can show the expected Google account and file title.",
-        "Do not treat the old 2026-06-01 workbook timestamp as freshly verified current evidence."
+        "Rerun workbook observation after the in-app Browser can show the expected signed-in account and file title.",
+        "Do not claim a new source modified_time until the browser or an explicitly approved non-frozen path proves it."
       ],
       "sources": [
         {
           "label": "Attempted visible Google Sheets workbook",
           "url": "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600",
-          "publishedAt": "2026-07-03"
+          "publishedAt": "2026-07-10"
         }
       ],
-      "credibility": { "level": "high", "reason": "Direct browser attempts failed; no frozen connector fallback was used." },
+      "credibility": {
+        "level": "high",
+        "reason": "Direct browser attempt failed and connector fallback was intentionally not used."
+      },
       "status": "new",
-      "followups": ["Rerun with the workbook already visible in the in-app Browser."],
-      "tags": ["google-browser", "automation", "blocked", "interns"]
+      "followups": [
+        "Open workbook visibly in Codex in-app Browser and rerun intern export."
+      ],
+      "tags": [
+        "google-browser",
+        "automation",
+        "blocked",
+        "interns"
+      ]
     },
     {
-      "id": "20260703-infocenter-work-rhythm-refresh",
-      "date": "2026-07-03",
+      "id": "20260710-infocenter-work-rhythm-stable",
+      "date": "2026-07-10",
       "topic": "tw_social_work",
-      "title": "InfoCenter work-rhythm aggregate refreshed",
-      "oneLine": "The read-only InfoCenter rhythm helper refreshed aggregate planning signals without publishing raw event titles, comments, or payroll-sensitive data.",
+      "title": "InfoCenter rhythm aggregate stayed stable after refresh",
+      "oneLine": "The read-only work-rhythm helper ran, but the public aggregate file has no new content delta from the last successful snapshot.",
       "facts": [
-        "The helper scanned 500 events and produced signals for 73 people.",
-        "The output has 480 total signals, 0 high-confidence signals, and 480 medium-confidence signals.",
-        "Raw private source data stayed under the workspace work folder; the repo output is aggregate-only."
+        "Current aggregate summary remains 500 scanned events, 73 people, 480 total signals, 0 high-confidence signals, and 480 medium-confidence signals.",
+        "The output remains aggregate-only and excludes raw titles, comment bodies, salary amounts, bank data, IDs, and full addresses.",
+        "No InfoCenter write action was performed."
       ],
       "yourTake": [
-        "The rhythm page remains useful for timing check-ins and assignment planning, but it still should not drive reimbursement or payroll decisions.",
-        "The increase from 72 to 73 people is worth checking manually before interpreting it as a staffing change."
+        "Stable rhythm data is still useful for assignment timing and check-ins, but it is not payroll or reimbursement evidence.",
+        "The 73-person count should remain a tracking item until a future live delta explains the increase from earlier 72-person runs."
       ],
       "actions": [
-        "Use the work-rhythm page as a weekly planning lens only.",
-        "Review the newly appearing person or category signal before assigning sensitive work."
+        "Use rhythm data only as planning evidence.",
+        "Keep the people-count tracking item open for the next run."
       ],
       "sources": [
         {
           "label": "InfoCenter event list - read-only helper",
           "url": "https://www.egroup-infocenter.com/me/event/events",
-          "publishedAt": "2026-07-03"
+          "publishedAt": "2026-07-10"
         }
       ],
-      "credibility": { "level": "medium", "reason": "Live read succeeded, but output is intentionally aggregate rhythm evidence only." },
+      "credibility": {
+        "level": "medium",
+        "reason": "Helper completed, but file content did not change from the prior aggregate snapshot."
+      },
       "status": "new",
-      "followups": ["Compare peopleCount 73 against the prior 72-person run."],
-      "tags": ["infocenter", "work-rhythm", "aggregate", "planning"]
+      "followups": [
+        "Check whether peopleCount changes after the next readable live run."
+      ],
+      "tags": [
+        "infocenter",
+        "work-rhythm",
+        "aggregate",
+        "planning"
+      ]
     },
     {
-      "id": "20260701-openai-codex-changelog-controls",
-      "date": "2026-07-01",
+      "id": "20260709-openai-codex-chatgpt-desktop-work",
+      "date": "2026-07-09",
       "topic": "codex_workflow",
-      "title": "Codex changelog keeps moving toward stronger automation control surfaces",
-      "oneLine": "The Codex changelog continues to ship control, installation, and runtime fixes that matter for repeatable automation work.",
+      "title": "Codex joins the ChatGPT desktop work surface",
+      "oneLine": "OpenAI says Codex is now part of the ChatGPT desktop app, with direct editing, PR review, multi-repo projects, and clearer task progress.",
       "facts": [
-        "OpenAI's Codex changelog is the primary source for CLI and remote-control behavior changes.",
-        "Recent entries continue to emphasize operational reliability and safe control of local/remote work surfaces."
+        "The Codex changelog lists the July 9 update: Codex joins the ChatGPT desktop app on macOS and Windows.",
+        "The same changelog calls out Markdown/code editing, inline annotations, GitHub PR review in the sidebar, and work across repositories in one project.",
+        "OpenAI also describes ChatGPT Work as a long-running agent that can gather information across apps and workflows and produce finished materials."
       ],
       "yourTake": [
-        "Kevin's recurring automations should treat Codex version/source mode as part of the run evidence when behavior changes.",
-        "The practical change is to log source surface, approval mode, and blocker labels rather than relying on a generic success note."
+        "This reinforces Kevin’s need for durable task state: source surface, changed files, approval gates, and proof should be first-class in automation closeouts.",
+        "Desktop app unification may reduce context switching, but it also makes it easier to blur read-only observation and write actions unless run logs stay explicit."
       ],
       "actions": [
-        "Add the Codex changelog to next week's automation source scan.",
-        "Keep source-mode and approval-boundary notes in every browser/account-backed run."
+        "Keep blocker labels and source-access notes in automation JSON.",
+        "Check next week whether desktop/browser changes improve visible Google evidence capture."
       ],
       "sources": [
         {
-          "label": "OpenAI Developers - Codex changelog",
+          "label": "OpenAI Codex changelog",
           "url": "https://developers.openai.com/codex/changelog",
-          "publishedAt": "2026-07-01"
+          "publishedAt": "2026-07-09"
+        },
+        {
+          "label": "OpenAI - ChatGPT Work announcement",
+          "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/",
+          "publishedAt": "2026-07-09"
         }
       ],
-      "credibility": { "level": "high", "reason": "Primary OpenAI documentation source." },
+      "credibility": {
+        "level": "high",
+        "reason": "Primary OpenAI product and changelog sources."
+      },
       "status": "new",
-      "followups": ["Check whether any Codex CLI/browser-control change affects Google-account-backed automation evidence capture."],
-      "tags": ["codex", "automation", "approval", "source-mode"]
+      "followups": [
+        "Review next Codex changelog for browser/account evidence capture improvements."
+      ],
+      "tags": [
+        "codex",
+        "desktop",
+        "automation",
+        "approval"
+      ]
     },
     {
-      "id": "20260702-anthropic-agent-safeguards-jailbreak-framework",
-      "date": "2026-07-02",
+      "id": "20260706-anthropic-claude-code-government-security",
+      "date": "2026-07-06",
       "topic": "global_ai",
-      "title": "Anthropic jailbreak framework is a useful agent-safety review lens",
-      "oneLine": "Anthropic's jailbreak/safeguards framing is directly reusable as an audit lens for local agent workflows that read private systems.",
+      "title": "Government security case study shows agentic code review at public-sector scale",
+      "oneLine": "Anthropic says Alberta used Claude Code to scan 466 million lines in 20 hours and remediate security gaps, a useful benchmark for audit-first modernization workflows.",
       "facts": [
-        "Anthropic published a safeguards/jailbreak framework note in early July 2026.",
-        "The relevant lesson for Kevin is not model benchmarking; it is separating trusted user instructions from untrusted page, email, spreadsheet, and event-list content."
+        "Anthropic published the Alberta government case study on July 6, 2026.",
+        "The case study says a government team scanned 466 million lines of code in 20 hours and used Claude Code with Opus and Sonnet models for vulnerability review and fixes.",
+        "The same post frames technical debt and security vulnerabilities as common public-sector modernization problems."
       ],
       "yourTake": [
-        "This matches the current browser-safety requirement: web pages and spreadsheets provide facts, but they cannot override the automation prompt or approval gates.",
-        "Work-rhythm and Google workbook reads should keep this boundary explicit because both surfaces contain untrusted content."
+        "The relevant takeaway for Kevin is not scale envy; it is workflow design: separate scan, remediation, verification, and reusable tooling.",
+        "For InfoCenter or FamilyFin internal tools, start with read-only audit packets before allowing write or deploy actions."
       ],
       "actions": [
-        "Add an untrusted-content check to future automation closeouts when browser pages or spreadsheets are used as evidence.",
-        "Keep raw private page text out of public outputs unless the workflow explicitly approves a safe aggregate."
+        "Use scan-remediate-verify as a pattern for future internal tool hardening.",
+        "Require proof artifacts before promoting any automated fixer into a write-capable workflow."
       ],
       "sources": [
         {
-          "label": "Anthropic News - Fable safeguards jailbreak framework",
-          "url": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
-          "publishedAt": "2026-07-02"
+          "label": "Anthropic - Government of Alberta Claude cybersecurity case study",
+          "url": "https://www.anthropic.com/news/alberta-government-claude-cybersecurity",
+          "publishedAt": "2026-07-06"
         }
       ],
-      "credibility": { "level": "high", "reason": "Primary Anthropic source." },
+      "credibility": {
+        "level": "high",
+        "reason": "Primary Anthropic case-study source."
+      },
       "status": "new",
-      "followups": ["Turn the lesson into a short automation audit checklist if repeated blockers continue."],
-      "tags": ["ai-safety", "agents", "browser", "workflow"]
+      "followups": [
+        "Extract a small audit-first modernization checklist if this pattern repeats."
+      ],
+      "tags": [
+        "ai-agents",
+        "security",
+        "public-sector",
+        "workflow"
+      ]
     },
     {
-      "id": "20260630-tw-fin-ed-virtual-asset-supervision",
-      "date": "2026-06-30",
-      "topic": "tw_fin_ed",
-      "title": "Taiwan virtual-asset supervision deserves a consumer checklist",
-      "oneLine": "Virtual-asset supervision movement is now a practical financial-education signal for ordinary users who need to distinguish license, custody, fraud, and investment-risk claims.",
-      "facts": [
-        "FSC public news and law-supervision discussion in this window point to stronger virtual-asset oversight.",
-        "The consumer education risk is misunderstanding regulation as a guarantee of investment safety."
-      ],
-      "yourTake": [
-        "FamilyFin-style education should avoid crypto hype and focus on verification habits: platform license status, custody, scams, and complaint channels.",
-        "This is a good candidate for a one-page checklist after confirming the exact FSC wording."
-      ],
-      "actions": [
-        "Collect the latest FSC virtual-asset explanatory source before drafting.",
-        "Draft a checklist that separates legal platform status from investment-risk protection."
-      ],
-      "sources": [
-        {
-          "label": "FSC news center",
-          "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2",
-          "publishedAt": "2026-06-30"
-        }
-      ],
-      "credibility": { "level": "medium", "reason": "Primary FSC news center; exact FAQ wording should be rechecked before publishing user advice." },
-      "status": "new",
-      "followups": ["Find the latest FSC virtual-asset FAQ or bill explainer before drafting public copy."],
-      "tags": ["financial-education", "taiwan", "virtual-assets", "consumer-risk"]
-    },
-    {
-      "id": "20260703-growth-weekly-challenge-experiment",
-      "date": "2026-07-03",
+      "id": "20260706-patreon-policy-feedback-loop",
+      "date": "2026-07-06",
       "topic": "growth_gamification",
-      "title": "Reward-loop watch should move into one manual weekly challenge",
-      "oneLine": "No higher-confidence growth pattern displaced last week's reward-loop watch, so the next useful step is a small manual challenge experiment.",
+      "title": "Patreon policy preview is a useful community trust pattern",
+      "oneLine": "Patreon’s mid-year policy update uses creator feedback, advance questions, and an extended Discord Q&A window before finalizing guideline changes.",
       "facts": [
-        "The prior Discord rewards watch remains the clearest current product-pattern source in this lane.",
-        "This week's actionable value is not another platform scan; it is testing repeat participation with one low-friction challenge."
+        "Patreon updated its mid-year 2026 policy-development post on July 6, 2026.",
+        "The post says Patreon shares proposed guideline updates early through its Creator Policy Engagement Program.",
+        "The July cycle includes pre-submitted questions and a two-week Q&A window in the Patreon Creator Community Discord server."
       ],
       "yourTake": [
-        "For FamilyFin or member education, a non-monetary status signal is safer than points, cash, or complex badges.",
-        "Manual proof should come before any UI build."
+        "For FamilyFin or member growth features, trust-building matters more than decorative gamification.",
+        "Before launching challenges, badges, or visible status, use a small feedback window so users can object to pressure, privacy, or fairness problems."
       ],
       "actions": [
-        "Write one weekly challenge with a completion proof, reply prompt, and visible non-monetary status.",
-        "Choose one success metric: repeat participation, reply rate, saved checklist, or consultation click."
+        "Draft one challenge-feedback prompt before any new reward loop.",
+        "Keep community mechanics non-monetary and opt-in until there is manual proof."
       ],
       "sources": [
         {
-          "label": "Discord - Nitro Rewards",
-          "url": "https://discord.com/blog/nitro-rewards",
-          "publishedAt": "2026-06-18"
+          "label": "Patreon Help Center - Mid-year 2026 developments",
+          "url": "https://support.patreon.com/hc/en-us/articles/47183697249037-Mid-year-2026-developments-from-Patreon-s-policy-team",
+          "publishedAt": "2026-07-06"
         }
       ],
-      "credibility": { "level": "medium", "reason": "Prior primary product-pattern source; this item is a follow-through experiment, not a new announcement." },
+      "credibility": {
+        "level": "high",
+        "reason": "Primary Patreon Help Center source."
+      },
       "status": "new",
-      "followups": ["Decide whether to run one manual challenge during the next content cycle."],
-      "tags": ["gamification", "retention", "manual-prototype", "community"]
+      "followups": [
+        "Create one feedback-first challenge prototype for the next content cycle."
+      ],
+      "tags": [
+        "community",
+        "trust",
+        "feedback",
+        "growth"
+      ]
+    },
+    {
+      "id": "20260710-tw-social-finance-source-watch",
+      "date": "2026-07-10",
+      "topic": "tw_fin_ed",
+      "title": "Taiwan public-source watch points to practical finance and staffing follow-ups",
+      "oneLine": "FSC consumer education pages keep virtual-asset and scam-prevention materials visible, while MOHW job listings show ongoing social-work-related staffing demand.",
+      "facts": [
+        "FSC’s consumer video page lists scam-prevention and virtual-asset education materials, including a virtual-asset service provider awareness video.",
+        "MOHW job listings in this window include Social Assistance and Social Work Department research and acting-researcher openings with July deadlines.",
+        "These are source-watch signals, not direct policy-change proof."
+      ],
+      "yourTake": [
+        "The finance-education path should remain practical: platform verification, scam prevention, and complaint channels before any investment discussion.",
+        "The staffing signal is useful for workforce radar but should not be overread without comparing longer-term hiring history."
+      ],
+      "actions": [
+        "Use FSC materials as source links for a virtual-asset consumer checklist.",
+        "Keep MOHW staffing listings in the tracking backlog for social-work capacity watch."
+      ],
+      "sources": [
+        {
+          "label": "FSC consumer education videos",
+          "url": "https://www.fsc.gov.tw/ch/home.jsp?id=853&parentpath=0%2C5",
+          "publishedAt": "2026-07-10"
+        },
+        {
+          "label": "MOHW job listings",
+          "url": "https://www.mohw.gov.tw/sp-SUOList-1.html",
+          "publishedAt": "2026-07-10"
+        }
+      ],
+      "credibility": {
+        "level": "medium",
+        "reason": "Primary official pages, but the item is a source-watch interpretation rather than a single new policy announcement."
+      },
+      "status": "new",
+      "followups": [
+        "Confirm newest FSC virtual-asset explainer before publishing reader-facing advice."
+      ],
+      "tags": [
+        "taiwan",
+        "financial-education",
+        "social-work",
+        "source-watch"
+      ]
     }
   ],
   "dashboard": {
@@ -238,12 +312,12 @@
       "growth_gamification": 1
     },
     "trackingItems": [
-      "tracking-20260703-google-workbook-browser-blocked",
-      "tracking-20260703-infocenter-rhythm-people-count",
-      "tracking-20260703-codex-source-mode-controls",
-      "tracking-20260703-anthropic-agent-safety-checklist",
-      "tracking-20260703-fsc-virtual-assets-checklist",
-      "tracking-20260703-manual-challenge-experiment"
+      "tracking-20260710-google-workbook-browser-blocked",
+      "tracking-20260710-infocenter-rhythm-people-count",
+      "tracking-20260710-codex-desktop-work-evidence",
+      "tracking-20260710-anthropic-audit-first-modernization",
+      "tracking-20260710-patreon-feedback-first-growth",
+      "tracking-20260710-fsc-virtual-asset-checklist"
     ]
   }
 }

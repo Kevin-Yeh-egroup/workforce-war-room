@@ -1,64 +1,77 @@
 {
   "items": [
     {
-      "id": "tracking-20260703-google-workbook-browser-blocked",
-      "createdAt": "2026-07-03",
+      "id": "tracking-20260710-google-workbook-browser-blocked",
+      "createdAt": "2026-07-10",
       "topic": "codex_workflow",
       "title": "Restore visible Google workbook evidence",
       "status": "open",
-      "nextCheck": "2026-07-04",
+      "nextCheck": "2026-07-11",
       "question": "Can the in-app Browser show egroup.kevin@gmail.com, the workbook title, and a successful XLSX export without connector fallback?",
-      "links": ["https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600"]
+      "links": [
+        "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600"
+      ]
     },
     {
-      "id": "tracking-20260703-infocenter-rhythm-people-count",
-      "createdAt": "2026-07-03",
+      "id": "tracking-20260710-infocenter-rhythm-people-count",
+      "createdAt": "2026-07-10",
       "topic": "tw_social_work",
-      "title": "Check work-rhythm peopleCount increase",
-      "status": "open",
-      "nextCheck": "2026-07-10",
-      "question": "Does the move from 72 to 73 people reflect a real new planning signal or a parsing/category shift?",
-      "links": ["https://www.egroup-infocenter.com/me/event/events"]
-    },
-    {
-      "id": "tracking-20260703-codex-source-mode-controls",
-      "createdAt": "2026-07-03",
-      "topic": "codex_workflow",
-      "title": "Keep Codex source-mode notes current",
-      "status": "open",
-      "nextCheck": "2026-07-10",
-      "question": "Did any Codex changelog item change the evidence capture path for browser, approval, remote, or automation runs?",
-      "links": ["https://developers.openai.com/codex/changelog"]
-    },
-    {
-      "id": "tracking-20260703-anthropic-agent-safety-checklist",
-      "createdAt": "2026-07-03",
-      "topic": "global_ai",
-      "title": "Extract one agent-safety checklist",
+      "title": "Check stable 73-person rhythm count",
       "status": "open",
       "nextCheck": "2026-07-17",
-      "question": "Can Anthropic's jailbreak/safeguards framing become a short untrusted-content checklist for Kevin's browser/account automations?",
-      "links": ["https://www.anthropic.com/news/fable-safeguards-jailbreak-framework"]
+      "question": "Does the 73-person count remain stable, and can a future live delta explain the prior increase from 72?",
+      "links": [
+        "https://www.egroup-infocenter.com/me/event/events"
+      ]
     },
     {
-      "id": "tracking-20260703-fsc-virtual-assets-checklist",
-      "createdAt": "2026-07-03",
-      "topic": "tw_fin_ed",
-      "title": "Find FSC virtual-asset consumer explainer",
+      "id": "tracking-20260710-codex-desktop-work-evidence",
+      "createdAt": "2026-07-10",
+      "topic": "codex_workflow",
+      "title": "Watch Codex desktop evidence capture",
       "status": "open",
-      "nextCheck": "2026-07-10",
-      "question": "Has FSC published a clear FAQ or explainer suitable for a consumer checklist on virtual-asset platform risk?",
-      "links": ["https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2"]
+      "nextCheck": "2026-07-17",
+      "question": "Do the July Codex desktop/app changes improve browser/account evidence capture or task-state reporting for automations?",
+      "links": [
+        "https://developers.openai.com/codex/changelog",
+        "https://openai.com/index/chatgpt-for-your-most-ambitious-work/"
+      ]
     },
     {
-      "id": "tracking-20260703-manual-challenge-experiment",
-      "createdAt": "2026-07-03",
+      "id": "tracking-20260710-anthropic-audit-first-modernization",
+      "createdAt": "2026-07-10",
+      "topic": "global_ai",
+      "title": "Extract audit-first modernization checklist",
+      "status": "open",
+      "nextCheck": "2026-07-24",
+      "question": "Can the Alberta Claude Code case become a small scan-remediate-verify checklist for internal tools?",
+      "links": [
+        "https://www.anthropic.com/news/alberta-government-claude-cybersecurity"
+      ]
+    },
+    {
+      "id": "tracking-20260710-patreon-feedback-first-growth",
+      "createdAt": "2026-07-10",
       "topic": "growth_gamification",
-      "title": "Design one manual challenge loop",
+      "title": "Prototype feedback-first challenge loop",
       "status": "open",
-      "nextCheck": "2026-07-10",
-      "question": "Can one weekly challenge plus a non-monetary status signal test repeat participation before any gamification UI is built?",
-      "links": ["https://discord.com/blog/nitro-rewards"]
+      "nextCheck": "2026-07-17",
+      "question": "Can a manual challenge include a short objection/feedback window before any status or badge mechanic is added?",
+      "links": [
+        "https://support.patreon.com/hc/en-us/articles/47183697249037-Mid-year-2026-developments-from-Patreon-s-policy-team"
+      ]
+    },
+    {
+      "id": "tracking-20260710-fsc-virtual-asset-checklist",
+      "createdAt": "2026-07-10",
+      "topic": "tw_fin_ed",
+      "title": "Confirm FSC virtual-asset explainer",
+      "status": "open",
+      "nextCheck": "2026-07-17",
+      "question": "Which FSC source is best for a plain-language virtual-asset and scam-prevention checklist?",
+      "links": [
+        "https://www.fsc.gov.tw/ch/home.jsp?id=853&parentpath=0%2C5"
+      ]
     }
   ]
 }
