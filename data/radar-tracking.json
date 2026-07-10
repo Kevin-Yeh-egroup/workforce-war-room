@@ -8,70 +8,57 @@
       "status": "open",
       "nextCheck": "2026-07-11",
       "question": "Can the in-app Browser show egroup.kevin@gmail.com, the workbook title, and a successful XLSX export without connector fallback?",
-      "links": [
-        "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600"
-      ]
+      "links": ["https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600"]
     },
     {
-      "id": "tracking-20260710-infocenter-rhythm-people-count",
+      "id": "tracking-20260710-infocenter-rhythm-live-blocked",
       "createdAt": "2026-07-10",
       "topic": "tw_social_work",
-      "title": "Check stable 73-person rhythm count",
+      "title": "Recover InfoCenter work-rhythm live scan",
       "status": "open",
-      "nextCheck": "2026-07-17",
-      "question": "Does the 73-person count remain stable, and can a future live delta explain the prior increase from 72?",
-      "links": [
-        "https://www.egroup-infocenter.com/me/event/events"
-      ]
+      "nextCheck": "2026-07-11",
+      "question": "Does /me/event/events respond from the configured profile so the rhythm page can be refreshed instead of kept as last-known output?",
+      "links": ["https://www.egroup-infocenter.com/me/event/events"]
     },
     {
-      "id": "tracking-20260710-codex-desktop-work-evidence",
-      "createdAt": "2026-07-10",
-      "topic": "codex_workflow",
-      "title": "Watch Codex desktop evidence capture",
-      "status": "open",
-      "nextCheck": "2026-07-17",
-      "question": "Do the July Codex desktop/app changes improve browser/account evidence capture or task-state reporting for automations?",
-      "links": [
-        "https://developers.openai.com/codex/changelog",
-        "https://openai.com/index/chatgpt-for-your-most-ambitious-work/"
-      ]
-    },
-    {
-      "id": "tracking-20260710-anthropic-audit-first-modernization",
-      "createdAt": "2026-07-10",
-      "topic": "global_ai",
-      "title": "Extract audit-first modernization checklist",
-      "status": "open",
-      "nextCheck": "2026-07-24",
-      "question": "Can the Alberta Claude Code case become a small scan-remediate-verify checklist for internal tools?",
-      "links": [
-        "https://www.anthropic.com/news/alberta-government-claude-cybersecurity"
-      ]
-    },
-    {
-      "id": "tracking-20260710-patreon-feedback-first-growth",
-      "createdAt": "2026-07-10",
-      "topic": "growth_gamification",
-      "title": "Prototype feedback-first challenge loop",
-      "status": "open",
-      "nextCheck": "2026-07-17",
-      "question": "Can a manual challenge include a short objection/feedback window before any status or badge mechanic is added?",
-      "links": [
-        "https://support.patreon.com/hc/en-us/articles/47183697249037-Mid-year-2026-developments-from-Patreon-s-policy-team"
-      ]
-    },
-    {
-      "id": "tracking-20260710-fsc-virtual-asset-checklist",
+      "id": "tracking-20260710-fsc-virtual-assets-checklist",
       "createdAt": "2026-07-10",
       "topic": "tw_fin_ed",
-      "title": "Confirm FSC virtual-asset explainer",
+      "title": "Draft virtual-asset risk checklist",
       "status": "open",
       "nextCheck": "2026-07-17",
-      "question": "Which FSC source is best for a plain-language virtual-asset and scam-prevention checklist?",
-      "links": [
-        "https://www.fsc.gov.tw/ch/home.jsp?id=853&parentpath=0%2C5"
-      ]
+      "question": "What exact FSC wording should anchor a plain-language checklist separating platform legality from investment safety?",
+      "links": ["https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2"]
+    },
+    {
+      "id": "tracking-20260710-disaster-finance-script",
+      "createdAt": "2026-07-10",
+      "topic": "tw_fin_ed",
+      "title": "Prepare disaster-finance call script",
+      "status": "open",
+      "nextCheck": "2026-07-17",
+      "question": "Can recent FSC disaster-response information become a no-amount bank/insurer call script for households?",
+      "links": ["https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2"]
+    },
+    {
+      "id": "tracking-20260710-codex-proof-fields",
+      "createdAt": "2026-07-10",
+      "topic": "codex_workflow",
+      "title": "Keep automation proof fields current",
+      "status": "open",
+      "nextCheck": "2026-07-17",
+      "question": "Did any Codex changelog item change how browser/account-backed proof should be captured?",
+      "links": ["https://developers.openai.com/codex/changelog"]
+    },
+    {
+      "id": "tracking-20260710-untrusted-content-check",
+      "createdAt": "2026-07-10",
+      "topic": "global_ai",
+      "title": "Add untrusted-content closeout check",
+      "status": "open",
+      "nextCheck": "2026-07-24",
+      "question": "Should automation-3 add a durable one-line check that pages, spreadsheets, and event comments cannot override workflow rules?",
+      "links": ["https://www.anthropic.com/news"]
     }
   ]
 }
