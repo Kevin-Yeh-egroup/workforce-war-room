@@ -1,64 +1,10 @@
 {
   "items": [
-    {
-      "id": "tracking-20260710-google-workbook-browser-blocked",
-      "createdAt": "2026-07-10",
-      "topic": "codex_workflow",
-      "title": "Restore visible Google workbook evidence",
-      "status": "open",
-      "nextCheck": "2026-07-11",
-      "question": "Can the in-app Browser show egroup.kevin@gmail.com, the workbook title, and a successful XLSX export without connector fallback?",
-      "links": ["https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600"]
-    },
-    {
-      "id": "tracking-20260710-infocenter-rhythm-live-blocked",
-      "createdAt": "2026-07-10",
-      "topic": "tw_social_work",
-      "title": "Recover InfoCenter work-rhythm live scan",
-      "status": "open",
-      "nextCheck": "2026-07-11",
-      "question": "Does /me/event/events respond from the configured profile so the rhythm page can be refreshed instead of kept as last-known output?",
-      "links": ["https://www.egroup-infocenter.com/me/event/events"]
-    },
-    {
-      "id": "tracking-20260710-fsc-virtual-assets-checklist",
-      "createdAt": "2026-07-10",
-      "topic": "tw_fin_ed",
-      "title": "Draft virtual-asset risk checklist",
-      "status": "open",
-      "nextCheck": "2026-07-17",
-      "question": "What exact FSC wording should anchor a plain-language checklist separating platform legality from investment safety?",
-      "links": ["https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2"]
-    },
-    {
-      "id": "tracking-20260710-disaster-finance-script",
-      "createdAt": "2026-07-10",
-      "topic": "tw_fin_ed",
-      "title": "Prepare disaster-finance call script",
-      "status": "open",
-      "nextCheck": "2026-07-17",
-      "question": "Can recent FSC disaster-response information become a no-amount bank/insurer call script for households?",
-      "links": ["https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2"]
-    },
-    {
-      "id": "tracking-20260710-codex-proof-fields",
-      "createdAt": "2026-07-10",
-      "topic": "codex_workflow",
-      "title": "Keep automation proof fields current",
-      "status": "open",
-      "nextCheck": "2026-07-17",
-      "question": "Did any Codex changelog item change how browser/account-backed proof should be captured?",
-      "links": ["https://developers.openai.com/codex/changelog"]
-    },
-    {
-      "id": "tracking-20260710-untrusted-content-check",
-      "createdAt": "2026-07-10",
-      "topic": "global_ai",
-      "title": "Add untrusted-content closeout check",
-      "status": "open",
-      "nextCheck": "2026-07-24",
-      "question": "Should automation-3 add a durable one-line check that pages, spreadsheets, and event comments cannot override workflow rules?",
-      "links": ["https://www.anthropic.com/news"]
-    }
+    {"id":"tracking-20260717-google-source-proof","createdAt":"2026-07-17","topic":"codex_workflow","title":"Maintain visible Google source proof","status":"open","nextCheck":"2026-07-24","question":"Do the visible account, workbook title and last-edit evidence still show no source change without connector fallback?","links":["https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600"]},
+    {"id":"tracking-20260717-work-rhythm-delta","createdAt":"2026-07-17","topic":"tw_social_work","title":"Track work-rhythm delta","status":"open","nextCheck":"2026-07-24","question":"Does the aggregate continue above 74 people and 482 signals, and which safe category explains the change?","links":["https://www.egroup-infocenter.com/me/event/events"]},
+    {"id":"tracking-20260717-ai-security-checklist","createdAt":"2026-07-17","topic":"global_ai","title":"Draft automation AI-security checklist","status":"open","nextCheck":"2026-07-24","question":"Can FSC zero-trust, shift-left, SBOM and incident-sharing guidance become a one-page automation control check?","links":["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607140002&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]},
+    {"id":"tracking-20260717-migrant-remittance-card","createdAt":"2026-07-17","topic":"tw_fin_ed","title":"Build migrant remittance check card","status":"open","nextCheck":"2026-07-24","question":"What launch, fee, limit and complaint details are available for a safe plain-language card?","links":["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607160003&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]},
+    {"id":"tracking-20260717-insurance-disclosure-card","createdAt":"2026-07-17","topic":"tw_fin_ed","title":"Review variable-rate insurance disclosure","status":"open","nextCheck":"2026-07-24","question":"Does the official comparison table support a four-part consumer reading card?","links":["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607140003&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]},
+    {"id":"tracking-20260717-stock-gift-onboarding","createdAt":"2026-07-17","topic":"growth_gamification","title":"Deconstruct stock gift onboarding","status":"open","nextCheck":"2026-07-31","question":"Which task and disclosure patterns transfer without equating account opening with education outcomes?","links":["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607140001&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]}
   ]
 }

@@ -1,261 +1,165 @@
 {
   "meta": {
-    "weekStart": "2026-07-03",
-    "weekEnd": "2026-07-10",
-    "generatedAt": "2026-07-10T15:05:00+08:00",
+    "weekStart": "2026-07-10",
+    "weekEnd": "2026-07-17",
+    "generatedAt": "2026-07-17T15:06:53+08:00",
     "timezone": "Asia/Taipei",
     "notes": [
       "Coverage is the last 7 days in Asia/Taipei.",
-      "Google-account-backed workbook observation attempted through Codex in-app Browser only; Browser webview attach timed out twice, so intern workbook freshness is marked google_browser_blocked and prior intern/talent outputs were kept.",
-      "InfoCenter work-rhythm live read timed out while waiting for the event-list response; previous aggregate work-rhythm output was kept.",
-      "Items are deduplicated against the previous radar by id and source URL; this week contains six new radar items."
+      "Google-account-backed workbook observation used Codex in-app Browser only; visible account was egroup.kevin@gmail.com and no Google connector/API fallback was used.",
+      "The main intern workbook and configured 2026-01 through 2026-05 reimbursement sheets showed no newer visible edit date, so intern and talent outputs correctly remained unchanged.",
+      "Items are deduplicated against the previous radar by id and exact source URL; this week contains six new items."
     ],
     "sourceAccess": {
       "googleWorkbook": {
-        "status": "google_browser_blocked",
-        "attemptedUrl": "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600",
-        "attemptedSurface": "Codex in-app Browser",
+        "status": "completed_verified",
+        "surface": "Codex in-app Browser",
+        "account": "egroup.kevin@gmail.com",
+        "url": "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600",
+        "visibleTitle": "4月先博薪資彙整",
+        "visibleLastModified": "2026-05-13",
+        "historicalVisibleLastEdits": {
+          "2026-01": "2026-02-06",
+          "2026-02": "2026-03-09",
+          "2026-03": "2026-04-08",
+          "2026-04": "2026-05-06",
+          "2026-05": "2026-06-06"
+        },
         "fallbackUsed": false,
         "lastVerifiedSourceModifiedAt": "2026-06-01T12:20:24.844Z",
-        "nextAction": "Open the workbook in the in-app Browser with egroup.kevin@gmail.com visible, then rerun the intern export/update path."
+        "updateResult": "no-change: intern spreadsheet and history unchanged"
       },
       "infocenterWorkRhythm": {
-        "status": "live_access_blocked",
-        "fallbackUsed": false,
-        "blocker": "Timed out waiting for InfoCenter search/events response",
-        "keptPreviousOutput": true,
-        "lastKnown": {
-          "scannedEvents": 500,
-          "peopleCount": 73,
-          "totalSignals": 480,
-          "highConfidenceSignals": 0,
-          "mediumConfidenceSignals": 480
-        },
-        "nextAction": "Rerun update_work_rhythm.ps1 when InfoCenter /me/event/events responds from the configured profile."
+        "status": "completed_verified",
+        "mode": "event-list-readonly",
+        "url": "https://www.egroup-infocenter.com/me/event/events",
+        "scannedEvents": 500,
+        "peopleCount": 74,
+        "totalSignals": 482,
+        "highConfidenceSignals": 0,
+        "mediumConfidenceSignals": 482,
+        "fallbackUsed": false
       }
     }
   },
   "highlights": [
     {
-      "title": "This run has two live-source blockers, so the safe publish is radar-only",
-      "why": "Google Sheets could not attach in the in-app Browser, and InfoCenter event-list collection timed out. Both are correctly reported as blocked instead of switching to frozen connectors or fabricating rhythm data.",
-      "next": "Use the updated radar/work checklist now; rerun intern and rhythm refresh after the visible Google workbook and InfoCenter event list are reachable."
+      "title": "前沿 AI 已把資安修補速度變成治理問題",
+      "why": "金管會明確要求零信任、持續監控、資安左移、SBOM 與跨機構通報，這套框架也適合檢查 Kevin 的瀏覽器與代理自動化。",
+      "next": "用 30 分鐘把 automation-3 的依賴、回退、阻擋與證據欄位對照成一張最小檢查表。"
     },
     {
-      "title": "Taiwan virtual-asset law movement is ready for plain-language education",
-      "why": "FSC's latest virtual-asset bill signal is concrete enough to prepare a user checklist around licensing, custody, fraud, complaints, and the limit of regulatory protection.",
-      "next": "Draft one checklist that separates platform legality from investment-safety claims before publishing public advice."
+      "title": "移工跨境小額匯兌擴大普惠金融接觸點",
+      "why": "首家電子支付機構獲准服務越南、菲律賓與印尼移工，對新住民／移工財務教育與社福轉介都有直接意義。",
+      "next": "整理一張不含費率承諾的匯款前核對卡：合法業者、收款人資料、費用、到帳與申訴。"
     },
     {
-      "title": "Agent-work trends keep pointing back to source proof and approval gates",
-      "why": "Codex workflow changes and agent-safety discussions keep reinforcing the same operational rule: account-backed automation needs visible source evidence, blocker labels, and no silent fallback.",
-      "next": "Keep source URL, account/context proof, fallbackUsed, and nextAction fields in every weekly automation closeout."
+      "title": "本週資料來源恢復可驗證，intern 維持 no-op、rhythm 有新訊號",
+      "why": "Google 主表與 1–5 月報帳表均有可見帳號與檔案證據且無更新；InfoCenter 則從 73 人／480 訊號增至 74 人／482 訊號。",
+      "next": "保留 intern 快照不重建，僅發布 work-rhythm 與本週雷達的實質差異。"
     }
   ],
   "items": [
     {
-      "id": "20260710-google-workbook-browser-blocked",
-      "date": "2026-07-10",
-      "topic": "codex_workflow",
-      "title": "Google workbook freshness remains blocked by in-app Browser attach timeout",
-      "oneLine": "The weekly run tried the intern workbook through the approved browser surface, but the Browser webview timed out twice before visible account or file context could be captured.",
-      "facts": [
-        "The attempted workbook URL was https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600.",
-        "No Google Drive, Sheets, or Google connector/API fallback was used because of the 2026-06-26 freeze.",
-        "update_interns.ps1 returned no-change using the last verified sourceModifiedAt, 2026-06-01T12:20:24.844Z."
-      ],
-      "yourTake": [
-        "This is not proof that the workbook is still current; it is a correct blocked state under the browser-only rule.",
-        "The public intern snapshot and talent-pool pages should stay as-is until the workbook can be opened visibly."
-      ],
-      "actions": [
-        "Open the workbook in the in-app Browser with egroup.kevin@gmail.com visible before the next intern refresh.",
-        "Keep using last verified intern counts only as stale-safe carry-forward, not fresh evidence."
-      ],
-      "sources": [
-        {
-          "label": "Attempted visible Google Sheets workbook",
-          "url": "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600",
-          "publishedAt": "2026-07-10"
-        }
-      ],
-      "credibility": { "level": "high", "reason": "Direct approved-surface attempts failed, and frozen connector fallback was not used." },
-      "status": "new",
-      "followups": ["Rerun only after the workbook is visible in the signed-in in-app Browser."],
-      "tags": ["google-browser", "automation", "blocked", "interns"]
-    },
-    {
-      "id": "20260710-infocenter-work-rhythm-live-blocked",
-      "date": "2026-07-10",
+      "id": "20260717-infocenter-work-rhythm-refresh",
+      "date": "2026-07-17",
       "topic": "tw_social_work",
-      "title": "InfoCenter work-rhythm refresh timed out and kept prior aggregate output",
-      "oneLine": "The read-only work-rhythm helper could not complete the live event-list scan, so the repo keeps the previous aggregate-only rhythm data.",
-      "facts": [
-        "update_work_rhythm.ps1 failed with: Timed out waiting for InfoCenter search/events response.",
-        "No InfoCenter writes were attempted.",
-        "The previous published aggregate remains scannedEvents=500, peopleCount=73, totalSignals=480, highConfidenceSignals=0, mediumConfidenceSignals=480."
-      ],
-      "yourTake": [
-        "This preserves the correct privacy boundary: no raw titles/comments and no fabricated rhythm update.",
-        "The rhythm page is still usable as last-known planning context, but it should not be described as refreshed this week."
-      ],
-      "actions": [
-        "Rerun the work-rhythm helper when InfoCenter /me/event/events responds from the configured profile.",
-        "Label the current rhythm counts as last-known until a live scan succeeds."
-      ],
-      "sources": [
-        {
-          "label": "InfoCenter event list - configured read-only source",
-          "url": "https://www.egroup-infocenter.com/me/event/events",
-          "publishedAt": "2026-07-10"
-        }
-      ],
-      "credibility": { "level": "high", "reason": "The helper failed before producing a new live aggregate; previous output was intentionally retained." },
+      "title": "InfoCenter 工作節奏恢復只讀更新",
+      "oneLine": "本輪成功掃描 500 筆事件，聚合為 74 人、482 個中信心訊號。",
+      "facts": ["只讀來源為 /me/event/events。", "高信心訊號 0、中信心訊號 482。", "原始事件快照留在 repo 外，公開檔不含標題、留言或薪資資料。"],
+      "yourTake": ["較上週增加 1 人與 2 個訊號，可作為派工與關心節奏的弱訊號，不是工時或薪資證據。"],
+      "actions": ["下週比較新增人員與訊號類別是否持續。", "會議前只使用聚合類別與信心標籤。"],
+      "sources": [{"label": "InfoCenter event list (read-only)", "url": "https://www.egroup-infocenter.com/me/event/events", "publishedAt": "2026-07-17"}],
+      "credibility": {"level": "high", "reason": "Live read-only helper completed and generated aggregate-only output."},
       "status": "new",
-      "followups": ["Try the event-list helper again after confirming InfoCenter session health."],
-      "tags": ["infocenter", "work-rhythm", "blocked", "aggregate"]
+      "followups": ["Recheck person and signal deltas next week."],
+      "tags": ["infocenter", "work-rhythm", "aggregate", "privacy"]
     },
     {
-      "id": "20260710-fsc-virtual-asset-bill-education",
-      "date": "2026-07-10",
-      "topic": "tw_fin_ed",
-      "title": "Virtual-asset bill movement should become a user-risk checklist",
-      "oneLine": "FSC's virtual-asset supervision updates are now practical enough to translate into a consumer checklist for platform status, custody, fraud, and complaint channels.",
-      "facts": [
-        "FSC's recent news center items include virtual-asset supervision movement during this monitoring cycle.",
-        "The education risk is that ordinary users may mistake regulation or licensing discussion for investment safety."
-      ],
-      "yourTake": [
-        "A useful FamilyFin-style explainer should focus on verification habits, not coin selection or investment opinion.",
-        "The checklist should say clearly that legal platform status does not remove price, fraud, custody, or liquidity risk."
-      ],
-      "actions": [
-        "Draft a one-page checklist after checking the latest FSC wording.",
-        "Separate 'is this platform allowed' from 'is this product safe for me'."
-      ],
-      "sources": [
-        {
-          "label": "FSC news center",
-          "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2",
-          "publishedAt": "2026-07-10"
-        }
-      ],
-      "credibility": { "level": "medium", "reason": "Primary FSC source index; exact explainer wording should be rechecked before public copy." },
-      "status": "new",
-      "followups": ["Find the newest FSC FAQ or bill explainer before drafting public education content."],
-      "tags": ["financial-education", "taiwan", "virtual-assets", "consumer-risk"]
-    },
-    {
-      "id": "20260710-fsc-disaster-finance-plain-language",
-      "date": "2026-07-10",
-      "topic": "tw_fin_ed",
-      "title": "Disaster-related financial relief needs a plain-language reminder format",
-      "oneLine": "Recent FSC disaster-response news is a reminder that financial education should include how to ask banks or insurers for relief without turning it into legal or payment advice.",
-      "facts": [
-        "FSC news in the current window includes financial-sector response information tied to recent weather disruption.",
-        "The operationally useful angle is a checklist of documents, contact points, and what to ask, not amounts or bank-specific promises."
-      ],
-      "yourTake": [
-        "For vulnerable households, the best format is a short call script plus document checklist.",
-        "Avoid claiming eligibility; ask the institution to confirm case-specific relief options."
-      ],
-      "actions": [
-        "Prepare a reusable 'call your bank/insurer' script with no promised amount.",
-        "Add a reminder to separate disaster relief, repayment adjustment, and insurance claim steps."
-      ],
-      "sources": [
-        {
-          "label": "FSC news center",
-          "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2",
-          "publishedAt": "2026-07-10"
-        }
-      ],
-      "credibility": { "level": "medium", "reason": "Primary source index confirms the current issue family; case-specific details must be checked before advice." },
-      "status": "new",
-      "followups": ["Convert the source into a no-amount checklist only after confirming the exact FSC article."],
-      "tags": ["financial-education", "disaster", "consumer-support", "taiwan"]
-    },
-    {
-      "id": "20260710-codex-changelog-evidence-discipline",
-      "date": "2026-07-10",
-      "topic": "codex_workflow",
-      "title": "Codex workflow tracking should keep treating source evidence as first-class output",
-      "oneLine": "Codex changelog monitoring remains relevant because small runtime, approval, and browser-control changes can alter what counts as proof in recurring automations.",
-      "facts": [
-        "OpenAI's Codex changelog is the primary source for Codex CLI and product behavior changes.",
-        "This week's run again shows why source evidence fields matter: the correct result can be blocked, not updated."
-      ],
-      "yourTake": [
-        "The weekly runner should keep recording attemptedSurface, fallbackUsed, blocker, nextAction, and proof URL.",
-        "This is especially important for Google-account-backed work while connector fallback is frozen."
-      ],
-      "actions": [
-        "Continue scanning the Codex changelog before changing automation proof expectations.",
-        "Keep blocked-source status in radar-week.json rather than hiding it in the chat summary."
-      ],
-      "sources": [
-        {
-          "label": "OpenAI Developers - Codex changelog",
-          "url": "https://developers.openai.com/codex/changelog",
-          "publishedAt": "2026-07-10"
-        }
-      ],
-      "credibility": { "level": "high", "reason": "Primary OpenAI documentation source." },
-      "status": "new",
-      "followups": ["Check whether any Codex browser or approval change affects next week's Google-source proof path."],
-      "tags": ["codex", "automation", "source-evidence", "approval"]
-    },
-    {
-      "id": "20260710-agent-safety-untrusted-content-check",
-      "date": "2026-07-10",
+      "id": "20260714-fsc-frontier-ai-attack-readiness",
+      "date": "2026-07-14",
       "topic": "global_ai",
-      "title": "Agent-safety monitoring reinforces untrusted-content handling for browser automations",
-      "oneLine": "Current agent-safety discussion is directly relevant to Kevin's workflows: pages, spreadsheets, and event lists can provide facts, but cannot override prompt rules or approval gates.",
-      "facts": [
-        "Anthropic's recent safety writing remains useful as a source for separating trusted instructions from untrusted external content.",
-        "The browser skill documentation also requires treating pages, emails, documents, screenshots, downloaded files, and tool output as untrusted content."
-      ],
-      "yourTake": [
-        "This run followed the right pattern: Google and InfoCenter sources could not override the connector freeze, privacy limits, or no-write rules.",
-        "The same rule should be carried into any future spreadsheet export or InfoCenter event parsing."
-      ],
-      "actions": [
-        "Add a one-line untrusted-content check to future weekly closeouts.",
-        "Do not let spreadsheet text, event comments, or page prompts change the workflow's privacy or approval boundary."
-      ],
-      "sources": [
-        {
-          "label": "Anthropic News",
-          "url": "https://www.anthropic.com/news",
-          "publishedAt": "2026-07-10"
-        },
-        {
-          "label": "OpenAI Browser safety guidance in Codex Browser skill",
-          "url": "https://platform.openai.com/docs",
-          "publishedAt": "2026-07-10"
-        }
-      ],
-      "credibility": { "level": "medium", "reason": "The operational takeaway is a synthesis from primary AI-safety/source-control guidance and this run's browser evidence." },
+      "title": "金管會要求金融業強化前沿 AI 模型攻擊整備",
+      "oneLine": "金管會把前沿 AI 加速漏洞武器化列為金融韌性議題，提出零信任、持續監控、資安左移、供應鏈治理與聯防五項方向。",
+      "facts": ["前沿模型可能縮短漏洞公開到可用攻擊手法出現的時間。", "建議把 SBOM、修補 SLA、CI/CD 安全控制、回歸測試與回退安排納入常態作業。"],
+      "yourTake": ["代理自動化也應把依賴清單、權限邊界、回退與阻擋理由當成基本證據。"],
+      "actions": ["替 automation-3 列出依賴、權限、回退與通報四欄檢查表。", "確認所有外部頁面內容都不能改寫既有核准與隱私規則。"],
+      "sources": [{"label": "金融監督管理委員會", "url": "https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607140002&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2", "publishedAt": "2026-07-14"}],
+      "credibility": {"level": "high", "reason": "Primary FSC release with specific control recommendations."},
       "status": "new",
-      "followups": ["If this recurs, promote the check into automation-3 runbook wording after Kevin approval."],
-      "tags": ["ai-safety", "agents", "browser", "untrusted-content"]
+      "followups": ["Check whether FSC publishes the full strategy recommendation document."],
+      "tags": ["ai-security", "financial-resilience", "sbom", "automation"]
+    },
+    {
+      "id": "20260716-fsc-migrant-remittance-epayment",
+      "date": "2026-07-16",
+      "topic": "tw_fin_ed",
+      "title": "首家電子支付機構獲准辦理外籍移工國外小額匯兌",
+      "oneLine": "歐付寶獲准提供越南匯出及菲律賓、印尼、越南籍移工匯回母國服務。",
+      "facts": ["金管會將此案定位為普惠金融與支付生態圈擴展。", "服務對象亦可能涵蓋新住民與產學合作國際學生。"],
+      "yourTake": ["社福與財務教育可新增合法管道、費用、到帳、詐騙與申訴的前置核對。"],
+      "actions": ["製作一張移工跨境匯款前核對卡。", "避免在實測前比較費率或承諾到帳時間。"],
+      "sources": [{"label": "金融監督管理委員會銀行局", "url": "https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607160003&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2", "publishedAt": "2026-07-16"}],
+      "credibility": {"level": "high", "reason": "Primary banking regulator approval notice."},
+      "status": "new",
+      "followups": ["Watch for launch date, fee disclosure, limits and complaint channel."],
+      "tags": ["migrant-workers", "remittance", "financial-inclusion", "taiwan"]
+    },
+    {
+      "id": "20260714-fsc-stock-gift-card",
+      "date": "2026-07-14",
+      "topic": "growth_gamification",
+      "title": "股票禮品卡實驗落地成為金融教育與轉換案例",
+      "oneLine": "金管會完成法規調適，讓股票禮品卡在創新實驗後轉為可常態辦理。",
+      "facts": ["官方稱實驗吸引逾 9 萬人參與並帶動近 5 萬戶開戶。", "場景涵蓋便利商店、企業贈品、親子理財教育與投資體驗。"],
+      "yourTake": ["這是把抽象投資知識轉成低門檻任務入口的成長案例，但教育內容必須先講風險與費用。"],
+      "actions": ["拆解其 onboarding、贈送、兌換、教育提示與風險揭露五段流程。", "只借用任務設計，不把開戶數當成理財教育成效。"],
+      "sources": [{"label": "金融監督管理委員會", "url": "https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607140001&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2", "publishedAt": "2026-07-14"}],
+      "credibility": {"level": "high", "reason": "Primary FSC innovation-experiment result."},
+      "status": "new",
+      "followups": ["Find the self-regulatory disclosure rules before adapting the pattern."],
+      "tags": ["gamification", "onboarding", "financial-education", "conversion"]
+    },
+    {
+      "id": "20260714-fsc-variable-rate-insurance-disclosure",
+      "date": "2026-07-14",
+      "topic": "tw_fin_ed",
+      "title": "利率變動型保單將強化非存款警語與年度通知",
+      "oneLine": "金管會修正規定，要求明示宣告利率非固定或保證利率、解約金可能低於保費，並建立年度重要資訊通知。",
+      "facts": ["新規定自 2027-01-01 生效。", "建議書需呈現不同宣告利率情境與保單利益示範。"],
+      "yourTake": ["這提供很好的消費者教育模板：把非保證、費用、解約與情境差異放在同一頁。"],
+      "actions": ["把四項警語轉成一張保單閱讀檢查卡。", "核對現有保險工具是否清楚區分宣告利率與保證利率。"],
+      "sources": [{"label": "金融監督管理委員會保險局", "url": "https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607140003&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2", "publishedAt": "2026-07-14"}],
+      "credibility": {"level": "high", "reason": "Primary regulator notice describing amendments and effective date."},
+      "status": "new",
+      "followups": ["Review the attached comparison table before publishing consumer copy."],
+      "tags": ["insurance", "disclosure", "consumer-protection", "financial-education"]
+    },
+    {
+      "id": "20260716-codex-dangerous-command-detection",
+      "date": "2026-07-16",
+      "topic": "codex_workflow",
+      "title": "Codex 0.144.5 擴充危險指令偵測與拒絕理由",
+      "oneLine": "Codex 0.144.5 改善危險指令偵測，涵蓋更多強制 rm 形式，並提供較清楚的拒絕理由。",
+      "facts": ["版本於 2026-07-16 發布。", "這是安全修正，不是一般功能擴充。"],
+      "yourTake": ["自動化 closeout 應保留被拒絕的目標、理由與安全替代動作，而不是把拒絕視為無資訊失敗。"],
+      "actions": ["確認本機 Codex 版本後再判斷是否需要升級；本輪不自行安裝。", "在檔案清理工作中繼續先解析精確路徑並優先採可復原操作。"],
+      "sources": [{"label": "openai/codex GitHub Releases", "url": "https://github.com/openai/codex/releases/tag/rust-v0.144.5", "publishedAt": "2026-07-16"}],
+      "credibility": {"level": "high", "reason": "Primary OpenAI Codex release notes."},
+      "status": "new",
+      "followups": ["Check whether the desktop runtime incorporates the same detection change."],
+      "tags": ["codex", "safety", "destructive-actions", "release"]
     }
   ],
   "dashboard": {
-    "countsByTopic": {
-      "tw_social_work": 1,
-      "tw_fin_ed": 2,
-      "global_ai": 1,
-      "codex_workflow": 2,
-      "growth_gamification": 0
-    },
+    "countsByTopic": {"tw_social_work": 1, "tw_fin_ed": 2, "global_ai": 1, "codex_workflow": 1, "growth_gamification": 1},
     "trackingItems": [
-      "tracking-20260710-google-workbook-browser-blocked",
-      "tracking-20260710-infocenter-rhythm-live-blocked",
-      "tracking-20260710-fsc-virtual-assets-checklist",
-      "tracking-20260710-disaster-finance-script",
-      "tracking-20260710-codex-proof-fields",
-      "tracking-20260710-untrusted-content-check"
+      "tracking-20260717-google-source-proof",
+      "tracking-20260717-work-rhythm-delta",
+      "tracking-20260717-ai-security-checklist",
+      "tracking-20260717-migrant-remittance-card",
+      "tracking-20260717-insurance-disclosure-card",
+      "tracking-20260717-stock-gift-onboarding"
     ]
   }
 }

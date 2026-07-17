@@ -1,22 +1,22 @@
-# Weekly Work Items: 2026-07-03 to 2026-07-10
-> Checklist-only. No salary amounts, bank data, or payment execution. Each item is intended to be doable within 30 minutes.
+# 每週工作清單（2026-07-10～2026-07-17）
 
-## A. Dispatch / Follow-Up
+> 每項 30 分鐘內可完成；派薪／派工只記提醒、狀態與下一步，不含金額、帳號或銀行資料。
 
-- [ ] Reopen the Google workbook in the in-app Browser and confirm visible account/file title. Owner: Kevin. Due: 2026-07-11.
-- [ ] Rerun `update_work_rhythm.ps1` after confirming InfoCenter `/me/event/events` responds. Owner: Kevin. Due: 2026-07-11.
-- [ ] Draft the FSC virtual-asset consumer checklist outline without investment advice. Owner: Kevin. Due: 2026-07-17.
-- [ ] Draft a disaster-finance bank/insurer call script with no promised eligibility or amount. Owner: Kevin. Due: 2026-07-17.
-- [ ] Keep the previous manual challenge-loop experiment open, but do not build UI until one manual proof exists. Owner: Kevin. Due: 2026-07-17.
+## A. 新聞雷達 → 本週可行動
 
-## B. Dispatch / Pay Reminders
+- [ ] 建立 automation-3 的依賴／權限／回退／通報四欄檢查表｜owner: Kevin｜due: 2026-07-20｜來源：金管會 AI 攻擊整備
+- [ ] 草擬移工跨境匯款前核對卡（合法業者、資料、費用、到帳、申訴）｜owner: Kevin｜due: 2026-07-21｜來源：金管會移工匯兌許可
+- [ ] 把利變型保單四項警語轉為一頁閱讀檢查卡｜owner: Kevin｜due: 2026-07-22｜來源：金管會保險揭露修正
+- [ ] 拆解股票禮品卡的 onboarding、兌換與風險提示流程｜owner: Kevin｜due: 2026-07-23｜來源：金管會創新實驗
+- [ ] 確認本機 Codex 版本並記錄是否含 0.144.5 安全修正（不自行安裝）｜owner: Kevin｜due: 2026-07-20｜來源：openai/codex Releases
+- [ ] 檢視本週新增的 1 人／2 訊號是否集中在同一工作類別｜owner: Kevin｜due: 2026-07-21｜來源：InfoCenter work-rhythm
 
-- [ ] Check public intern pay status only as `paid/due/n-a`; do not expose amounts or bank data. Owner: Kevin. Due: 2026-07-11.
-- [ ] If any intern status changes after the workbook is visible, rerun the redacted public snapshot and talent-pool generator. Owner: Kevin. Due: 2026-07-11.
-- [ ] Treat current talent-pool and work-rhythm counts as last-known until the blocked sources are refreshed. Owner: Kevin. Due: 2026-07-11.
+## B. 工讀生派薪 / 結帳提醒
 
-## C. Tracking / Workflow
+- [ ] 工讀生群組｜狀態：paid 25 / due 0（不含金額）｜owner: Kevin｜due: 2026-07-20｜下一步：僅確認有無新補件或狀態異動
+- [ ] 暫停人力群組｜狀態：paused 7｜owner: Kevin｜due: 2026-07-21｜下一步：確認是否需要更新聯繫或可接案狀態
 
-- [ ] Add a short untrusted-content note to the next automation closeout if browser/account sources are used again. Owner: Kevin. Due: 2026-07-24.
-- [ ] Check the Codex changelog before changing automation proof fields. Owner: Kevin. Due: 2026-07-17.
-- [ ] Verify production data endpoints after publishing and confirm `data/dashboard.json` remains untouched. Owner: Kevin. Due: 2026-07-10.
+## C. 追蹤中
+
+- [ ] 下週再次取得 Google 主表與 1–5 月報帳表的可見帳號／修改日期證據｜owner: Kevin｜due: 2026-07-24｜上次更新：2026-07-17
+- [ ] 比較下週 work-rhythm 是否持續高於 74 人／482 訊號｜owner: Kevin｜due: 2026-07-24｜上次更新：2026-07-17

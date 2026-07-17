@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generatedAt": "2026-07-03T07:11:08.706Z",
+    "generatedAt": "2026-07-17T07:06:06.127Z",
     "source": {
       "system": "InfoCenter",
       "mode": "event-list-readonly",
       "eventListUrl": "https://www.egroup-infocenter.com/me/event/events",
       "organizationId": "awK6cKwQTlatT2CbaK8d0Q",
       "organizationLabel": "馴錢師星展專案",
-      "totalAvailable": 1611,
+      "totalAvailable": 1632,
       "fetchedEvents": 500
     },
     "privacy": "Aggregate-only internal view. Raw event titles, salary amounts, bank data, ID numbers, full addresses, and comment bodies are excluded.",
@@ -17,30 +17,26 @@
       "low": "目前未納入正式判讀。"
     },
     "coverage": {
-      "firstSignalAt": "2026-01-20T10:29:52.000Z",
-      "latestSignalAt": "2026-07-02T13:25:08.000Z"
+      "firstSignalAt": "2026-01-26T10:30:28.000Z",
+      "latestSignalAt": "2026-07-16T01:52:09.000Z"
     }
   },
   "summary": {
-    "peopleCount": 73,
-    "totalSignals": 480,
+    "peopleCount": 74,
+    "totalSignals": 482,
     "scannedEvents": 500,
     "highConfidenceSignals": 0,
-    "mediumConfidenceSignals": 480,
-    "eveningSignals": 101,
+    "mediumConfidenceSignals": 482,
+    "eveningSignals": 82,
     "weekendSignals": 3,
     "hourBuckets": [
       {
+        "key": "17",
+        "count": 93
+      },
+      {
         "key": "11",
         "count": 86
-      },
-      {
-        "key": "17",
-        "count": 83
-      },
-      {
-        "key": "18",
-        "count": 55
       },
       {
         "key": "15",
@@ -51,20 +47,20 @@
         "count": 46
       },
       {
+        "key": "18",
+        "count": 46
+      },
+      {
         "key": "09",
-        "count": 34
+        "count": 39
       },
       {
         "key": "16",
-        "count": 31
+        "count": 36
       },
       {
         "key": "14",
         "count": 30
-      },
-      {
-        "key": "23",
-        "count": 16
       },
       {
         "key": "21",
@@ -75,8 +71,8 @@
         "count": 14
       },
       {
-        "key": "00",
-        "count": 5
+        "key": "23",
+        "count": 11
       },
       {
         "key": "02",
@@ -92,13 +88,13 @@
       },
       {
         "key": "08",
-        "count": 1
+        "count": 2
       }
     ],
     "weekdayBuckets": [
       {
         "key": "1",
-        "count": 129
+        "count": 125
       },
       {
         "key": "3",
@@ -106,7 +102,7 @@
       },
       {
         "key": "2",
-        "count": 83
+        "count": 89
       },
       {
         "key": "4",
@@ -124,11 +120,351 @@
     "confidenceBreakdown": [
       {
         "key": "medium",
-        "count": 480
+        "count": 482
       }
     ]
   },
   "people": [
+    {
+      "name": "李怡霖",
+      "signalCount": 32,
+      "eventCount": 32,
+      "activeDayCount": 8,
+      "latestSignalAt": "2026-07-16T01:52:09.000Z",
+      "firstSignalAt": "2026-02-03T07:47:07.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "17",
+          "count": 15
+        },
+        {
+          "key": "09",
+          "count": 6
+        },
+        {
+          "key": "11",
+          "count": 6
+        },
+        {
+          "key": "15",
+          "count": 5
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 10
+        },
+        {
+          "key": "4",
+          "count": 10
+        },
+        {
+          "key": "1",
+          "count": 6
+        },
+        {
+          "key": "5",
+          "count": 5
+        },
+        {
+          "key": "3",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 32
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 32
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 23
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 5
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 4
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 32
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 32
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "yachu Zhang",
+      "signalCount": 72,
+      "eventCount": 72,
+      "activeDayCount": 18,
+      "latestSignalAt": "2026-07-14T08:38:43.000Z",
+      "firstSignalAt": "2026-01-30T00:56:09.000Z",
+      "eveningShare": 0.222,
+      "weekendShare": 0.014,
+      "hourBuckets": [
+        {
+          "key": "17",
+          "count": 19
+        },
+        {
+          "key": "18",
+          "count": 16
+        },
+        {
+          "key": "09",
+          "count": 11
+        },
+        {
+          "key": "11",
+          "count": 8
+        },
+        {
+          "key": "12",
+          "count": 5
+        },
+        {
+          "key": "15",
+          "count": 5
+        },
+        {
+          "key": "16",
+          "count": 5
+        },
+        {
+          "key": "08",
+          "count": 1
+        },
+        {
+          "key": "10",
+          "count": 1
+        },
+        {
+          "key": "14",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 28
+        },
+        {
+          "key": "2",
+          "count": 15
+        },
+        {
+          "key": "5",
+          "count": 12
+        },
+        {
+          "key": "4",
+          "count": 10
+        },
+        {
+          "key": "1",
+          "count": 6
+        },
+        {
+          "key": "6",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 72
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 72
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 35
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 25
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 9
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 3
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 72
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 72
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "張凱雯",
+      "signalCount": 10,
+      "eventCount": 10,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-07-07T09:46:27.000Z",
+      "firstSignalAt": "2026-07-02T05:59:17.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "17",
+          "count": 5
+        },
+        {
+          "key": "13",
+          "count": 3
+        },
+        {
+          "key": "14",
+          "count": 2
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 5
+        },
+        {
+          "key": "4",
+          "count": 5
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 10
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 10
+        }
+      ],
+      "categories": [
+        {
+          "key": "自定義名詞修正",
+          "count": 10
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 10
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 10
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "委員會議15",
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
+      "latestSignalAt": "2026-07-06T00:52:21.000Z",
+      "firstSignalAt": "2026-07-06T00:52:21.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "08",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 1
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
     {
       "name": "張梓康",
       "signalCount": 20,
@@ -326,186 +662,6 @@
         {
           "key": "(空白)",
           "count": 35
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "張凱雯",
-      "signalCount": 5,
-      "eventCount": 5,
-      "activeDayCount": 1,
-      "latestSignalAt": "2026-07-02T06:00:29.000Z",
-      "firstSignalAt": "2026-07-02T05:59:17.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "13",
-          "count": 3
-        },
-        {
-          "key": "14",
-          "count": 2
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "4",
-          "count": 5
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 5
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 5
-        }
-      ],
-      "categories": [
-        {
-          "key": "自定義名詞修正",
-          "count": 5
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 5
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 5
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "yachu Zhang",
-      "signalCount": 62,
-      "eventCount": 62,
-      "activeDayCount": 16,
-      "latestSignalAt": "2026-07-01T10:11:26.000Z",
-      "firstSignalAt": "2026-01-30T00:56:09.000Z",
-      "eveningShare": 0.258,
-      "weekendShare": 0.016,
-      "hourBuckets": [
-        {
-          "key": "18",
-          "count": 16
-        },
-        {
-          "key": "17",
-          "count": 14
-        },
-        {
-          "key": "09",
-          "count": 11
-        },
-        {
-          "key": "11",
-          "count": 8
-        },
-        {
-          "key": "12",
-          "count": 5
-        },
-        {
-          "key": "15",
-          "count": 5
-        },
-        {
-          "key": "08",
-          "count": 1
-        },
-        {
-          "key": "10",
-          "count": 1
-        },
-        {
-          "key": "14",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "3",
-          "count": 28
-        },
-        {
-          "key": "5",
-          "count": 12
-        },
-        {
-          "key": "4",
-          "count": 10
-        },
-        {
-          "key": "1",
-          "count": 6
-        },
-        {
-          "key": "2",
-          "count": 5
-        },
-        {
-          "key": "6",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 62
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 62
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 35
-        },
-        {
-          "key": "自定義名詞修正",
-          "count": 15
-        },
-        {
-          "key": "會議紀錄/資料整理",
-          "count": 9
-        },
-        {
-          "key": "家庭財務/社福資料",
-          "count": 3
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 62
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 62
         }
       ],
       "notes": [
@@ -2479,17 +2635,17 @@
     },
     {
       "name": "施妤臻",
-      "signalCount": 8,
-      "eventCount": 8,
-      "activeDayCount": 4,
+      "signalCount": 7,
+      "eventCount": 7,
+      "activeDayCount": 3,
       "latestSignalAt": "2026-06-10T03:51:59.000Z",
-      "firstSignalAt": "2026-01-20T10:37:36.000Z",
-      "eveningShare": 0.75,
+      "firstSignalAt": "2026-01-26T10:34:00.000Z",
+      "eveningShare": 0.714,
       "weekendShare": 0,
       "hourBuckets": [
         {
           "key": "18",
-          "count": 6
+          "count": 5
         },
         {
           "key": "09",
@@ -2508,32 +2664,24 @@
         {
           "key": "3",
           "count": 2
-        },
-        {
-          "key": "2",
-          "count": 1
         }
       ],
       "confidenceBreakdown": [
         {
           "key": "medium",
-          "count": 8
+          "count": 7
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 8
+          "count": 7
         }
       ],
       "categories": [
         {
           "key": "一般事件",
           "count": 6
-        },
-        {
-          "key": "自定義名詞修正",
-          "count": 1
         },
         {
           "key": "家庭財務/社福資料",
@@ -2543,13 +2691,13 @@
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 8
+          "count": 7
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 8
+          "count": 7
         }
       ],
       "notes": [
@@ -3418,94 +3566,6 @@
       ]
     },
     {
-      "name": "李怡霖",
-      "signalCount": 27,
-      "eventCount": 27,
-      "activeDayCount": 7,
-      "latestSignalAt": "2026-04-21T09:35:38.000Z",
-      "firstSignalAt": "2026-02-03T07:47:07.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "17",
-          "count": 15
-        },
-        {
-          "key": "11",
-          "count": 6
-        },
-        {
-          "key": "15",
-          "count": 5
-        },
-        {
-          "key": "09",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "2",
-          "count": 10
-        },
-        {
-          "key": "1",
-          "count": 6
-        },
-        {
-          "key": "4",
-          "count": 5
-        },
-        {
-          "key": "5",
-          "count": 5
-        },
-        {
-          "key": "3",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 27
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 27
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 23
-        },
-        {
-          "key": "會議紀錄/資料整理",
-          "count": 4
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 27
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 27
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
       "name": "Alicia Hsu",
       "signalCount": 6,
       "eventCount": 6,
@@ -3695,21 +3755,21 @@
     },
     {
       "name": "葉宥辰",
-      "signalCount": 17,
-      "eventCount": 17,
-      "activeDayCount": 4,
+      "signalCount": 12,
+      "eventCount": 12,
+      "activeDayCount": 3,
       "latestSignalAt": "2026-04-15T04:05:56.000Z",
-      "firstSignalAt": "2026-01-26T10:24:31.000Z",
-      "eveningShare": 0.588,
+      "firstSignalAt": "2026-03-24T03:37:36.000Z",
+      "eveningShare": 0.417,
       "weekendShare": 0,
       "hourBuckets": [
         {
-          "key": "18",
-          "count": 10
-        },
-        {
           "key": "11",
           "count": 6
+        },
+        {
+          "key": "18",
+          "count": 5
         },
         {
           "key": "12",
@@ -3717,10 +3777,6 @@
         }
       ],
       "weekdayBuckets": [
-        {
-          "key": "1",
-          "count": 5
-        },
         {
           "key": "2",
           "count": 5
@@ -3737,39 +3793,31 @@
       "confidenceBreakdown": [
         {
           "key": "medium",
-          "count": 17
+          "count": 12
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 17
+          "count": 12
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 13
-        },
-        {
-          "key": "家庭財務/社福資料",
-          "count": 2
-        },
-        {
-          "key": "會議紀錄/資料整理",
-          "count": 2
+          "count": 12
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 17
+          "count": 12
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 17
+          "count": 12
         }
       ],
       "notes": [
@@ -4279,28 +4327,20 @@
     },
     {
       "name": "陳郁淇",
-      "signalCount": 4,
-      "eventCount": 4,
-      "activeDayCount": 2,
+      "signalCount": 1,
+      "eventCount": 1,
+      "activeDayCount": 1,
       "latestSignalAt": "2026-03-30T09:47:24.000Z",
-      "firstSignalAt": "2026-01-20T10:29:52.000Z",
-      "eveningShare": 0.75,
+      "firstSignalAt": "2026-03-30T09:47:24.000Z",
+      "eveningShare": 0,
       "weekendShare": 0,
       "hourBuckets": [
-        {
-          "key": "18",
-          "count": 3
-        },
         {
           "key": "17",
           "count": 1
         }
       ],
       "weekdayBuckets": [
-        {
-          "key": "2",
-          "count": 3
-        },
         {
           "key": "1",
           "count": 1
@@ -4309,35 +4349,31 @@
       "confidenceBreakdown": [
         {
           "key": "medium",
-          "count": 4
+          "count": 1
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 4
+          "count": 1
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 2
-        },
-        {
-          "key": "會議紀錄/資料整理",
-          "count": 2
+          "count": 1
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 4
+          "count": 1
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 4
+          "count": 1
         }
       ],
       "notes": [
@@ -4459,18 +4495,14 @@
     },
     {
       "name": "林弈妏",
-      "signalCount": 11,
-      "eventCount": 11,
-      "activeDayCount": 3,
+      "signalCount": 6,
+      "eventCount": 6,
+      "activeDayCount": 2,
       "latestSignalAt": "2026-03-24T03:34:35.000Z",
-      "firstSignalAt": "2026-01-21T16:35:35.000Z",
-      "eveningShare": 0.455,
+      "firstSignalAt": "2026-03-09T01:22:49.000Z",
+      "eveningShare": 0,
       "weekendShare": 0,
       "hourBuckets": [
-        {
-          "key": "00",
-          "count": 5
-        },
         {
           "key": "11",
           "count": 5
@@ -4486,10 +4518,6 @@
           "count": 5
         },
         {
-          "key": "4",
-          "count": 5
-        },
-        {
           "key": "1",
           "count": 1
         }
@@ -4497,19 +4525,19 @@
       "confidenceBreakdown": [
         {
           "key": "medium",
-          "count": 11
+          "count": 6
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 11
+          "count": 6
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 9
+          "count": 4
         },
         {
           "key": "會議紀錄/資料整理",
@@ -4519,13 +4547,13 @@
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 11
+          "count": 6
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 11
+          "count": 6
         }
       ],
       "notes": [
@@ -4671,28 +4699,20 @@
     },
     {
       "name": "陳昱兆",
-      "signalCount": 7,
-      "eventCount": 7,
-      "activeDayCount": 2,
+      "signalCount": 2,
+      "eventCount": 2,
+      "activeDayCount": 1,
       "latestSignalAt": "2026-03-13T01:43:15.000Z",
-      "firstSignalAt": "2026-01-20T15:13:56.000Z",
-      "eveningShare": 0.714,
+      "firstSignalAt": "2026-03-13T01:41:59.000Z",
+      "eveningShare": 0,
       "weekendShare": 0,
       "hourBuckets": [
-        {
-          "key": "23",
-          "count": 5
-        },
         {
           "key": "09",
           "count": 2
         }
       ],
       "weekdayBuckets": [
-        {
-          "key": "2",
-          "count": 5
-        },
         {
           "key": "5",
           "count": 2
@@ -4701,39 +4721,31 @@
       "confidenceBreakdown": [
         {
           "key": "medium",
-          "count": 7
+          "count": 2
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 7
+          "count": 2
         }
       ],
       "categories": [
         {
-          "key": "一般事件",
-          "count": 3
-        },
-        {
           "key": "家庭財務/社福資料",
-          "count": 3
-        },
-        {
-          "key": "會議紀錄/資料整理",
-          "count": 1
+          "count": 2
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 7
+          "count": 2
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 7
+          "count": 2
         }
       ],
       "notes": [
@@ -5040,6 +5052,279 @@
   ],
   "recentSignals": [
     {
+      "person": "李怡霖",
+      "at": "2026-07-16T09:52:09+08:00",
+      "day": "2026-07-16",
+      "hour": 9,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "李怡霖",
+      "at": "2026-07-16T09:51:55+08:00",
+      "day": "2026-07-16",
+      "hour": 9,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "李怡霖",
+      "at": "2026-07-16T09:51:40+08:00",
+      "day": "2026-07-16",
+      "hour": 9,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "李怡霖",
+      "at": "2026-07-16T09:51:24+08:00",
+      "day": "2026-07-16",
+      "hour": 9,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "李怡霖",
+      "at": "2026-07-16T09:51:07+08:00",
+      "day": "2026-07-16",
+      "hour": 9,
+      "weekday": 4,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-07-14T16:38:43+08:00",
+      "day": "2026-07-14",
+      "hour": 16,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-07-14T16:38:29+08:00",
+      "day": "2026-07-14",
+      "hour": 16,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-07-14T16:38:12+08:00",
+      "day": "2026-07-14",
+      "hour": 16,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-07-14T16:37:56+08:00",
+      "day": "2026-07-14",
+      "hour": 16,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-07-14T16:37:20+08:00",
+      "day": "2026-07-14",
+      "hour": 16,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "張凱雯",
+      "at": "2026-07-07T17:46:27+08:00",
+      "day": "2026-07-07",
+      "hour": 17,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "張凱雯",
+      "at": "2026-07-07T17:46:14+08:00",
+      "day": "2026-07-07",
+      "hour": 17,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "張凱雯",
+      "at": "2026-07-07T17:45:53+08:00",
+      "day": "2026-07-07",
+      "hour": 17,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "張凱雯",
+      "at": "2026-07-07T17:45:40+08:00",
+      "day": "2026-07-07",
+      "hour": 17,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "張凱雯",
+      "at": "2026-07-07T17:45:25+08:00",
+      "day": "2026-07-07",
+      "hour": 17,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-07-07T17:43:18+08:00",
+      "day": "2026-07-07",
+      "hour": 17,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-07-07T17:43:05+08:00",
+      "day": "2026-07-07",
+      "hour": 17,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-07-07T17:42:55+08:00",
+      "day": "2026-07-07",
+      "hour": 17,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-07-07T17:42:43+08:00",
+      "day": "2026-07-07",
+      "hour": 17,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "yachu Zhang",
+      "at": "2026-07-07T17:42:28+08:00",
+      "day": "2026-07-07",
+      "hour": 17,
+      "weekday": 2,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "委員會議15",
+      "at": "2026-07-06T08:52:21+08:00",
+      "day": "2026-07-06",
+      "hour": 8,
+      "weekday": 1,
+      "signalType": "事件建立",
+      "confidence": "medium",
+      "sourceField": "createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "會議紀錄/資料整理"
+    },
+    {
       "person": "張梓康",
       "at": "2026-07-02T21:25:08+08:00",
       "day": "2026-07-02",
@@ -5279,279 +5564,6 @@
       "day": "2026-07-01",
       "hour": 18,
       "weekday": 3,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "yachu Zhang",
-      "at": "2026-07-01T18:10:48+08:00",
-      "day": "2026-07-01",
-      "hour": 18,
-      "weekday": 3,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "吳婷宇",
-      "at": "2026-06-29T17:17:54+08:00",
-      "day": "2026-06-29",
-      "hour": 17,
-      "weekday": 1,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "吳婷宇",
-      "at": "2026-06-29T17:17:42+08:00",
-      "day": "2026-06-29",
-      "hour": 17,
-      "weekday": 1,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "吳婷宇",
-      "at": "2026-06-29T17:17:14+08:00",
-      "day": "2026-06-29",
-      "hour": 17,
-      "weekday": 1,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "吳婷宇",
-      "at": "2026-06-29T17:17:00+08:00",
-      "day": "2026-06-29",
-      "hour": 17,
-      "weekday": 1,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "吳婷宇",
-      "at": "2026-06-29T17:16:44+08:00",
-      "day": "2026-06-29",
-      "hour": 17,
-      "weekday": 1,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "la Ro",
-      "at": "2026-06-29T17:13:30+08:00",
-      "day": "2026-06-29",
-      "hour": 17,
-      "weekday": 1,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "la Ro",
-      "at": "2026-06-29T17:13:16+08:00",
-      "day": "2026-06-29",
-      "hour": 17,
-      "weekday": 1,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "la Ro",
-      "at": "2026-06-29T17:13:04+08:00",
-      "day": "2026-06-29",
-      "hour": 17,
-      "weekday": 1,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "la Ro",
-      "at": "2026-06-29T17:12:29+08:00",
-      "day": "2026-06-29",
-      "hour": 17,
-      "weekday": 1,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "la Ro",
-      "at": "2026-06-29T17:12:14+08:00",
-      "day": "2026-06-29",
-      "hour": 17,
-      "weekday": 1,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "yachu Zhang",
-      "at": "2026-06-24T18:23:53+08:00",
-      "day": "2026-06-24",
-      "hour": 18,
-      "weekday": 3,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "yachu Zhang",
-      "at": "2026-06-24T18:23:38+08:00",
-      "day": "2026-06-24",
-      "hour": 18,
-      "weekday": 3,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "yachu Zhang",
-      "at": "2026-06-24T18:23:23+08:00",
-      "day": "2026-06-24",
-      "hour": 18,
-      "weekday": 3,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "yachu Zhang",
-      "at": "2026-06-24T18:23:10+08:00",
-      "day": "2026-06-24",
-      "hour": 18,
-      "weekday": 3,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "yachu Zhang",
-      "at": "2026-06-24T18:22:59+08:00",
-      "day": "2026-06-24",
-      "hour": 18,
-      "weekday": 3,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "委員會議14",
-      "at": "2026-06-22T11:07:05+08:00",
-      "day": "2026-06-22",
-      "hour": 11,
-      "weekday": 1,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "會議紀錄/資料整理"
-    },
-    {
-      "person": "陳資旻",
-      "at": "2026-06-19T23:24:30+08:00",
-      "day": "2026-06-19",
-      "hour": 23,
-      "weekday": 5,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "陳資旻",
-      "at": "2026-06-19T23:23:28+08:00",
-      "day": "2026-06-19",
-      "hour": 23,
-      "weekday": 5,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "陳資旻",
-      "at": "2026-06-19T23:23:07+08:00",
-      "day": "2026-06-19",
-      "hour": 23,
-      "weekday": 5,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "陳資旻",
-      "at": "2026-06-19T23:22:45+08:00",
-      "day": "2026-06-19",
-      "hour": 23,
-      "weekday": 5,
       "signalType": "事件建立",
       "confidence": "medium",
       "sourceField": "createdAt",
