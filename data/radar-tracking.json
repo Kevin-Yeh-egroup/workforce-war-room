@@ -1,10 +1,64 @@
 {
   "items": [
-    {"id":"tracking-20260717-google-source-proof","createdAt":"2026-07-17","topic":"codex_workflow","title":"Maintain visible Google source proof","status":"open","nextCheck":"2026-07-24","question":"Do the visible account, workbook title and last-edit evidence still show no source change without connector fallback?","links":["https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600"]},
-    {"id":"tracking-20260717-work-rhythm-delta","createdAt":"2026-07-17","topic":"tw_social_work","title":"Track work-rhythm delta","status":"open","nextCheck":"2026-07-24","question":"Does the aggregate continue above 74 people and 482 signals, and which safe category explains the change?","links":["https://www.egroup-infocenter.com/me/event/events"]},
-    {"id":"tracking-20260717-ai-security-checklist","createdAt":"2026-07-17","topic":"global_ai","title":"Draft automation AI-security checklist","status":"open","nextCheck":"2026-07-24","question":"Can FSC zero-trust, shift-left, SBOM and incident-sharing guidance become a one-page automation control check?","links":["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607140002&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]},
-    {"id":"tracking-20260717-migrant-remittance-card","createdAt":"2026-07-17","topic":"tw_fin_ed","title":"Build migrant remittance check card","status":"open","nextCheck":"2026-07-24","question":"What launch, fee, limit and complaint details are available for a safe plain-language card?","links":["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607160003&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]},
-    {"id":"tracking-20260717-insurance-disclosure-card","createdAt":"2026-07-17","topic":"tw_fin_ed","title":"Review variable-rate insurance disclosure","status":"open","nextCheck":"2026-07-24","question":"Does the official comparison table support a four-part consumer reading card?","links":["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607140003&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]},
-    {"id":"tracking-20260717-stock-gift-onboarding","createdAt":"2026-07-17","topic":"growth_gamification","title":"Deconstruct stock gift onboarding","status":"open","nextCheck":"2026-07-31","question":"Which task and disclosure patterns transfer without equating account opening with education outcomes?","links":["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607140001&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]}
+    {
+      "id": "tracking-20260724-ai-eval-containment",
+      "createdAt": "2026-07-24",
+      "topic": "global_ai",
+      "title": "Track AI evaluation containment guidance",
+      "status": "open",
+      "nextCheck": "2026-07-31",
+      "question": "Does the fuller incident report add reusable controls for network, identity, monitoring and emergency shutdown?",
+      "links": ["https://openai.com/index/hugging-face-model-evaluation-security-incident/"]
+    },
+    {
+      "id": "tracking-20260724-sensitive-data-permissions",
+      "createdAt": "2026-07-24",
+      "topic": "global_ai",
+      "title": "Audit sensitive-data permission design",
+      "status": "open",
+      "nextCheck": "2026-07-31",
+      "question": "Do talent and rhythm pages make source, allowed use, withdrawal and external-action confirmation explicit?",
+      "links": ["https://openai.com/index/health-in-chatgpt/"]
+    },
+    {
+      "id": "tracking-20260724-travel-insurance-card",
+      "createdAt": "2026-07-24",
+      "topic": "tw_fin_ed",
+      "title": "Draft travel insurance check card",
+      "status": "open",
+      "nextCheck": "2026-07-31",
+      "question": "Can the card distinguish accident, overseas medical, inconvenience and exclusions without implying coverage?",
+      "links": ["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607230001&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]
+    },
+    {
+      "id": "tracking-20260724-micro-ev-insurance-card",
+      "createdAt": "2026-07-24",
+      "topic": "tw_fin_ed",
+      "title": "Draft micro-EV insurance reminder",
+      "status": "open",
+      "nextCheck": "2026-07-31",
+      "question": "Can a three-step reminder route users to the official policy lookup without collecting vehicle data?",
+      "links": ["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607230002&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]
+    },
+    {
+      "id": "tracking-20260724-futures-risk-card",
+      "createdAt": "2026-07-24",
+      "topic": "tw_fin_ed",
+      "title": "Clarify futures night-session alerts",
+      "status": "open",
+      "nextCheck": "2026-07-31",
+      "question": "Can the card clearly separate real-time status, simulated risk information and actual execution outcomes?",
+      "links": ["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607210002&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]
+    },
+    {
+      "id": "tracking-20260724-social-procurement-path",
+      "createdAt": "2026-07-24",
+      "topic": "tw_social_work",
+      "title": "Review social procurement conversion path",
+      "status": "open",
+      "nextCheck": "2026-07-31",
+      "question": "Does the official marketplace make product, organization and accessibility information sufficient for a respectful purchase decision?",
+      "links": ["https://www.mohw.gov.tw/cp-7401-87199-1.html"]
+    }
   ]
 }
