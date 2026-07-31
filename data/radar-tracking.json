@@ -1,64 +1,76 @@
 {
   "items": [
     {
-      "id": "tracking-20260724-ai-eval-containment",
-      "createdAt": "2026-07-24",
+      "id": "tracking-20260731-gpt56-price-performance",
+      "createdAt": "2026-07-31",
+      "topic": "codex_workflow",
+      "title": "挑一個低風險週任務，記錄 Sol→Luna 分工前後的完成率、人工覆核時間與成本。",
+      "status": "open",
+      "nextCheck": "2026-08-07",
+      "question": "下週檢查既有自動化是否有可安全降階的明確步驟。",
+      "links": [
+        "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
+      ]
+    },
+    {
+      "id": "tracking-20260731-retained-reasoning-compaction",
+      "createdAt": "2026-07-31",
+      "topic": "codex_workflow",
+      "title": "替 automation-3 的 checkpoint 寫一張小卡：保留哪些已驗證狀態、何時壓縮、哪些資料不得進入長期上下文。",
+      "status": "open",
+      "nextCheck": "2026-08-07",
+      "question": "用一個可重現的 automation case 比較 rolling truncation 與 checkpoint/compaction。",
+      "links": [
+        "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/"
+      ]
+    },
+    {
+      "id": "tracking-20260731-work-task-crossover",
+      "createdAt": "2026-07-31",
       "topic": "global_ai",
-      "title": "Track AI evaluation containment guidance",
+      "title": "從本週人才庫選三種常見任務，標記可由本人完成、需覆核、需轉交的邊界。",
       "status": "open",
-      "nextCheck": "2026-07-31",
-      "question": "Does the fuller incident report add reusable controls for network, identity, monitoring and emergency shutdown?",
-      "links": ["https://openai.com/index/hugging-face-model-evaluation-security-incident/"]
+      "nextCheck": "2026-08-07",
+      "question": "觀察工作範本是否能呈現跨職務能力而不造成過度授權。",
+      "links": [
+        "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/"
+      ]
     },
     {
-      "id": "tracking-20260724-sensitive-data-permissions",
-      "createdAt": "2026-07-24",
-      "topic": "global_ai",
-      "title": "Audit sensitive-data permission design",
-      "status": "open",
-      "nextCheck": "2026-07-31",
-      "question": "Do talent and rhythm pages make source, allowed use, withdrawal and external-action confirmation explicit?",
-      "links": ["https://openai.com/index/health-in-chatgpt/"]
-    },
-    {
-      "id": "tracking-20260724-travel-insurance-card",
-      "createdAt": "2026-07-24",
-      "topic": "tw_fin_ed",
-      "title": "Draft travel insurance check card",
-      "status": "open",
-      "nextCheck": "2026-07-31",
-      "question": "Can the card distinguish accident, overseas medical, inconvenience and exclusions without implying coverage?",
-      "links": ["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607230001&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]
-    },
-    {
-      "id": "tracking-20260724-micro-ev-insurance-card",
-      "createdAt": "2026-07-24",
-      "topic": "tw_fin_ed",
-      "title": "Draft micro-EV insurance reminder",
-      "status": "open",
-      "nextCheck": "2026-07-31",
-      "question": "Can a three-step reminder route users to the official policy lookup without collecting vehicle data?",
-      "links": ["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607230002&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]
-    },
-    {
-      "id": "tracking-20260724-futures-risk-card",
-      "createdAt": "2026-07-24",
-      "topic": "tw_fin_ed",
-      "title": "Clarify futures night-session alerts",
-      "status": "open",
-      "nextCheck": "2026-07-31",
-      "question": "Can the card clearly separate real-time status, simulated risk information and actual execution outcomes?",
-      "links": ["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202607210002&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]
-    },
-    {
-      "id": "tracking-20260724-social-procurement-path",
-      "createdAt": "2026-07-24",
+      "id": "tracking-20260731-pneumococcal-one-dose",
+      "createdAt": "2026-07-31",
       "topic": "tw_social_work",
-      "title": "Review social procurement conversion path",
+      "title": "做一張不蒐集病史的轉介卡，只列適用對象、需帶文件、官方院所查詢與「由醫師判定」提醒。",
       "status": "open",
-      "nextCheck": "2026-07-31",
-      "question": "Does the official marketplace make product, organization and accessibility information sufficient for a respectful purchase decision?",
-      "links": ["https://www.mohw.gov.tw/cp-7401-87199-1.html"]
+      "nextCheck": "2026-08-07",
+      "question": "8 月 10 日後確認官方院所地圖與現場說明是否一致。",
+      "links": [
+        "https://www.mohw.gov.tw/cp-7401-87276-1.html"
+      ]
+    },
+    {
+      "id": "tracking-20260731-covid-vaccine-extension",
+      "createdAt": "2026-07-31",
+      "topic": "tw_social_work",
+      "title": "在下次關懷提醒中加入「是否已接種本季疫苗」的自我確認句與官方查詢連結，不蒐集健康資料。",
+      "status": "open",
+      "nextCheck": "2026-08-07",
+      "question": "追蹤 9 月前是否調整接種期限或高風險提醒。",
+      "links": [
+        "https://www.mohw.gov.tw/cp-2704-87261-1.html"
+      ]
+    },
+    {
+      "id": "tracking-20260731-food-safety-digital-governance",
+      "createdAt": "2026-07-31",
+      "topic": "tw_fin_ed",
+      "title": "替三個公開資料檔各補一列來源→轉換→驗證→發布責任人清單，先不改正式頁面。",
+      "status": "open",
+      "nextCheck": "2026-08-07",
+      "question": "追蹤食安法修法文字是否落實數位紀錄與異常通報責任。",
+      "links": [
+        "https://www.mohw.gov.tw/cp-7401-87263-1.html"
+      ]
     }
   ]
 }
