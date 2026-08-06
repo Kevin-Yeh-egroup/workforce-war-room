@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "updatedAt": "2026-08-06T18:25:00+08:00",
+    "status": "active",
+    "source": "InfoCenter 功能盤點與既有 workforce-war-room 資料結構",
+    "liveWorkFeedConnected": true,
+    "privacy": "不含原始事件標題、聯絡資料、薪資金額、銀行或身分資料"
+  },
+  "stages": [
+    {
+      "id": "candidate",
+      "name": "工作候選",
+      "owner": "Kevin / Codex",
+      "record": "每週工作清單",
+      "doneWhen": "目的、交付物與風險已寫清楚",
+      "connection": "connected"
+    },
+    {
+      "id": "dispatch",
+      "name": "待派工作",
+      "owner": "Kevin",
+      "record": "InfoCenter 工作",
+      "doneWhen": "主責、期限與工作範本已確認",
+      "connection": "connected"
+    },
+    {
+      "id": "active",
+      "name": "執行中",
+      "owner": "工讀生",
+      "record": "InfoCenter 工作階段與事件",
+      "doneWhen": "事件已提交成果、工時與證據",
+      "connection": "connected"
+    },
+    {
+      "id": "review",
+      "name": "待驗收",
+      "owner": "主管 / 初審者",
+      "record": "InfoCenter 事件審核",
+      "doneWhen": "通過、補件或退回結果明確",
+      "connection": "connected"
+    },
+    {
+      "id": "done",
+      "name": "已完成",
+      "owner": "工作負責人",
+      "record": "InfoCenter 工作完成度",
+      "doneWhen": "工作完成且交付可追溯",
+      "connection": "connected"
+    },
+    {
+      "id": "payroll",
+      "name": "待結算",
+      "owner": "Kevin",
+      "record": "InfoCenter 薪資",
+      "doneWhen": "薪資項目連回已驗收事件",
+      "connection": "connected"
+    }
+  ],
+  "domains": [
+    {
+      "id": "TRANSCRIPT_QA",
+      "name": "逐字稿與名詞校正",
+      "description": "將語音轉文字結果校正成可閱讀、可搜尋的內容。",
+      "templates": ["語音轉文字初校", "專有名詞校正", "修正後抽查"],
+      "skills": ["中文理解", "細心", "上下文判讀"],
+      "payBasis": "時薪或驗收段落"
+    },
+    {
+      "id": "TOOL_QA",
+      "name": "工具與網頁測試",
+      "description": "依測試情境操作工具，留下問題重現步驟、截圖與結果。",
+      "templates": ["桌機功能測試", "手機版測試", "問題修正後重測"],
+      "skills": ["邏輯", "問題描述", "裝置操作"],
+      "payBasis": "時薪或合格案例"
+    },
+    {
+      "id": "KNOWLEDGE_OPS",
+      "name": "資源與知識庫整理",
+      "description": "整理來源、分類、標籤、重複項目與缺少欄位。",
+      "templates": ["資源整理", "知識文章分類", "來源與重複資料核對"],
+      "skills": ["分類", "來源查核", "檔案管理"],
+      "payBasis": "驗收筆數或時薪"
+    },
+    {
+      "id": "EVENT_ADMIN",
+      "name": "活動行政與資料回填",
+      "description": "協助場次資料、出席、附件與活動後紀錄整理。",
+      "templates": ["活動前資料準備", "出席資料回填", "活動附件歸檔"],
+      "skills": ["時效", "資料正確性", "個資意識"],
+      "payBasis": "事件實際工時"
+    },
+    {
+      "id": "REPORT_QA",
+      "name": "報表資料核對",
+      "description": "比對來源與報表數字，整理差異與待確認事項。",
+      "templates": ["報表來源核對", "差異清單", "發布前檢查"],
+      "skills": ["數字敏感度", "來源判斷", "核對紀錄"],
+      "payBasis": "時薪"
+    },
+    {
+      "id": "ASSET_OPS",
+      "name": "檔案與素材整理",
+      "description": "依命名及版本規則整理檔案、素材與缺件清單。",
+      "templates": ["檔案命名與歸檔", "素材版本確認", "缺件盤點"],
+      "skills": ["檔案管理", "規則遵循", "版本意識"],
+      "payBasis": "驗收批次或時薪"
+    }
+  ],
+  "assignmentRules": {
+    "fitWeights": {
+      "skill": 40,
+      "capacity": 30,
+      "history": 20,
+      "backup": 10
+    },
+    "requiredFields": ["預估工時", "能力門檻", "每週可用工時"],
+    "humanApproval": ["正式派工", "驗收結果", "薪資結算", "派薪"]
+  }
+}

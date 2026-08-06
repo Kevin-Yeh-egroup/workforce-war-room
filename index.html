@@ -4,1252 +4,257 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <title>人力戰情系統</title>
-  <style>
-    :root {
-      --ink: #17202a;
-      --muted: #667085;
-      --line: #d8dee8;
-      --panel: #ffffff;
-      --bg: #f6f8fb;
-      --blue: #1f6feb;
-      --cyan: #008c95;
-      --green: #17833b;
-      --amber: #b7791f;
-      --red: #c2410c;
-      --soft-blue: #eaf2ff;
-      --soft-green: #eaf7ef;
-      --soft-amber: #fff4db;
-      --soft-red: #fff0e8;
-      --shadow: 0 10px 26px rgba(20, 31, 48, .08);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--bg);
-      font-family: "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif;
-      letter-spacing: 0;
-    }
-
-    .app {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 240px minmax(0, 1fr);
-    }
-
-    aside {
-      background: #102033;
-      color: #f8fafc;
-      padding: 24px 18px;
-    }
-
-    .brand {
-      font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 28px;
-    }
-
-    .nav {
-      display: grid;
-      gap: 8px;
-    }
-
-    .nav button {
-      width: 100%;
-      min-height: 42px;
-      border: 0;
-      border-radius: 6px;
-      padding: 10px 12px;
-      background: transparent;
-      color: #cbd5e1;
-      text-align: left;
-      font: inherit;
-      cursor: pointer;
-    }
-
-    .nav button[aria-selected="true"] {
-      background: #223853;
-      color: #fff;
-    }
-
-    main {
-      padding: 24px;
-      overflow: auto;
-    }
-
-    header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      margin: 0 0 6px;
-      font-size: 26px;
-      line-height: 1.25;
-    }
-
-    .subtitle {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 14px;
-    }
-
-    .toolbar {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .tool {
-      border: 1px solid var(--line);
-      background: var(--panel);
-      color: var(--ink);
-      border-radius: 6px;
-      padding: 9px 12px;
-      min-height: 38px;
-      font: inherit;
-    }
-
-    a.tool {
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .tool.primary {
-      background: var(--blue);
-      border-color: var(--blue);
-      color: #fff;
-    }
-
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(130px, 1fr));
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .metric,
-    .panel,
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-    }
-
-    .metric {
-      padding: 14px;
-      min-height: 96px;
-    }
-
-    .metric .label {
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 8px;
-    }
-
-    .metric .value {
-      font-size: 28px;
-      font-weight: 800;
-      line-height: 1;
-    }
-
-    .metric .hint {
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(320px, .8fr);
-      gap: 16px;
-      align-items: start;
-    }
-
-    .panel {
-      overflow: hidden;
-    }
-
-    main > .panel {
-      margin-bottom: 16px;
-    }
-
-    .panel h2 {
-      margin: 0;
-      padding: 16px 18px;
-      font-size: 17px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .panel-body {
-      padding: 16px 18px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
-    }
-
-    th,
-    td {
-      padding: 11px 10px;
-      border-bottom: 1px solid var(--line);
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th {
-      color: var(--muted);
-      background: #f1f4f8;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    tr:last-child td {
-      border-bottom: 0;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      min-height: 24px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .badge.green {
-      color: var(--green);
-      background: var(--soft-green);
-    }
-
-    .badge.blue {
-      color: var(--blue);
-      background: var(--soft-blue);
-    }
-
-    .badge.amber {
-      color: var(--amber);
-      background: var(--soft-amber);
-    }
-
-    .badge.red {
-      color: var(--red);
-      background: var(--soft-red);
-    }
-
-    .stack {
-      display: grid;
-      gap: 12px;
-    }
-
-    .card {
-      padding: 14px;
-    }
-
-    .person {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 8px;
-      align-items: start;
-    }
-
-    .person h3,
-    .card h3 {
-      margin: 0 0 4px;
-      font-size: 15px;
-    }
-
-    .meta {
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.5;
-    }
-
-    .bar {
-      height: 8px;
-      background: #e8edf4;
-      border-radius: 999px;
-      overflow: hidden;
-      margin-top: 10px;
-    }
-
-    .bar span {
-      display: block;
-      height: 100%;
-      background: var(--cyan);
-      width: var(--width);
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 16px;
-    }
-
-    .list {
-      display: grid;
-      gap: 10px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .list li {
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 10px;
-      line-height: 1.5;
-    }
-
-    .list li:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .notice {
-      display: grid;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    .notice strong {
-      font-size: 15px;
-    }
-
-    .notice .row {
-      display: grid;
-      grid-template-columns: 120px minmax(0, 1fr) auto;
-      gap: 12px;
-      align-items: start;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .notice .row:last-child {
-      border-bottom: 0;
-    }
-
-    .automation-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(180px, 1fr));
-      gap: 12px;
-    }
-
-    .automation-card {
-      display: grid;
-      gap: 8px;
-      min-height: 132px;
-    }
-
-    .automation-card .value {
-      font-size: 24px;
-      font-weight: 800;
-    }
-
-    .automation-card a {
-      justify-self: start;
-    }
-
-    .talent-overview .panel-body {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
-      gap: 16px;
-      align-items: stretch;
-    }
-
-    .talent-lead {
-      display: grid;
-      gap: 12px;
-      align-content: start;
-    }
-
-    .talent-lead h3 {
-      margin: 0;
-      font-size: 22px;
-      line-height: 1.35;
-    }
-
-    .talent-stats {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .talent-stat {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 12px;
-      background: #fbfcff;
-    }
-
-    .talent-stat strong {
-      display: block;
-      font-size: 24px;
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-
-    .text-clamp {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .compact-people-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .mini-profile {
-      display: grid;
-      gap: 12px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 14px;
-      background: #fbfcff;
-    }
-
-    .mini-profile .top {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: flex-start;
-    }
-
-    .mini-profile h3 {
-      margin: 0 0 4px;
-      font-size: 16px;
-    }
-
-    .mini-facts {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .mini-fact {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 8px 10px;
-      background: #fff;
-      min-height: 54px;
-    }
-
-    .mini-fact .label {
-      color: var(--muted);
-      font-size: 12px;
-      margin-bottom: 4px;
-    }
-
-    .mini-fact .value {
-      font-size: 13px;
-      line-height: 1.45;
-      overflow-wrap: anywhere;
-    }
-
-    .month-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .month-chip {
-      display: inline-flex;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 3px 8px;
-      background: #fff;
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    @media (max-width: 1100px) {
-      .app {
-        grid-template-columns: 1fr;
-      }
-
-      aside {
-        position: sticky;
-        top: 0;
-        z-index: 5;
-        padding: 14px 16px;
-      }
-
-      .brand {
-        margin-bottom: 12px;
-      }
-
-      .nav {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-      }
-
-      .nav button {
-        text-align: center;
-      }
-
-      .metrics {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .grid,
-      .split,
-      .automation-grid,
-      .talent-overview .panel-body,
-      .compact-people-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      main {
-        padding: 16px;
-      }
-
-      header {
-        display: block;
-      }
-
-      .toolbar {
-        justify-content: flex-start;
-        margin-top: 12px;
-      }
-
-      .metrics {
-        grid-template-columns: 1fr;
-      }
-
-      table {
-        font-size: 13px;
-      }
-
-      th,
-      td {
-        padding: 9px 8px;
-      }
-
-      .notice .row {
-        grid-template-columns: 1fr;
-      }
-
-      .mini-facts {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#153f39">
+  <title>總工作藍圖｜Workforce War Room</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23153f39'/%3E%3Cpath d='M15 18h9l5 26h6l5-26h9L41 51H23z' fill='%23cddd85'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./dashboard.css">
+  <script src="./dashboard.js" defer></script>
 </head>
 <body>
-  <div class="app">
-    <aside>
-      <div class="brand">人力戰情系統</div>
-      <nav class="nav" aria-label="戰情視圖">
-        <button type="button" aria-selected="true" data-view="overview">總覽</button>
-        <button type="button" aria-selected="false" data-view="reviews">名詞審核</button>
-        <button type="button" aria-selected="false" data-view="people">人才庫</button>
-        <button type="button" aria-selected="false" data-view="assignments">派工建議</button>
+  <a class="skip-link" href="#mainContent">跳到主要內容</a>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="主要導覽">
+      <a class="brand" href="#overview" aria-label="總工作藍圖首頁">
+        <span class="brand-mark" aria-hidden="true">W</span>
+        <span>
+          <strong>總工作藍圖</strong>
+          <small>Workforce War Room</small>
+        </span>
+      </a>
+
+      <nav class="primary-nav" role="tablist" aria-label="管理視圖">
+        <button class="nav-item is-active" id="tab-overview" type="button" role="tab" aria-selected="true" aria-controls="overview" data-view="overview">
+          <span class="nav-dot" aria-hidden="true"></span>
+          <span>總覽</span>
+        </button>
+        <button class="nav-item" id="tab-dispatch" type="button" role="tab" aria-selected="false" aria-controls="dispatch" data-view="dispatch">
+          <span class="nav-dot" aria-hidden="true"></span>
+          <span>工作盤面</span>
+          <span class="nav-count" id="navDispatchCount">—</span>
+        </button>
+        <button class="nav-item" id="tab-people" type="button" role="tab" aria-selected="false" aria-controls="people" data-view="people">
+          <span class="nav-dot" aria-hidden="true"></span>
+          <span>工讀生狀態</span>
+        </button>
+        <button class="nav-item" id="tab-blueprint" type="button" role="tab" aria-selected="false" aria-controls="blueprint" data-view="blueprint">
+          <span class="nav-dot" aria-hidden="true"></span>
+          <span>工作藍圖</span>
+        </button>
+        <button class="nav-item" id="tab-recommendations" type="button" role="tab" aria-selected="false" aria-controls="recommendations" data-view="recommendations">
+          <span class="nav-dot" aria-hidden="true"></span>
+          <span>工作建議</span>
+          <span class="nav-count nav-count-alert" id="navRecommendationCount">—</span>
+        </button>
       </nav>
+
+      <div class="sidebar-footer">
+        <p class="eyebrow">正式作業系統</p>
+        <a class="sidebar-link" href="https://www.egroup-infocenter.com/me/work?tab=list" target="_blank" rel="noreferrer">開啟 InfoCenter 工作管理</a>
+        <p>本頁只讀取彙整資料，不直接派工、驗收或派薪。</p>
+      </div>
     </aside>
 
-    <main>
-      <header>
+    <main id="mainContent" class="main-content">
+      <header class="page-header">
         <div>
-          <h1>本週人力與審核戰情</h1>
-          <p class="subtitle">主要指標改讀最新人才庫、工時歷史、派薪狀態與資訊雷達；舊 dashboard snapshot 只保留作為下方審核範例區塊。</p>
-          <p class="subtitle" id="sourceStatus">資料來源：讀取中</p>
+          <p class="eyebrow">馴錢師星展專案 · 管理視圖</p>
+          <h1>總工作藍圖</h1>
+          <p class="page-summary">先看待派、逾期與覆蓋缺口，再回到 InfoCenter 完成派工、事件驗收與派薪。</p>
         </div>
-        <div class="toolbar">
-          <a class="tool primary" href="/talent-pool/index.html">打開人才庫總覽</a>
-          <a class="tool" href="/intern-interviews/index.html">工讀生會談</a>
-          <a class="tool" href="/radar-addon/index.html">資訊雷達</a>
-          <button class="tool" type="button" id="toggleSeed">切換示範資料</button>
-          <button class="tool primary" type="button" id="nextAction">產生本週確認摘要</button>
+        <div class="header-actions">
+          <button class="button button-secondary" type="button" id="copyBriefButton">複製管理摘要</button>
+          <button class="button button-primary" type="button" id="reloadButton">重新讀取</button>
         </div>
       </header>
 
-      <section class="metrics" id="metrics"></section>
+      <div class="source-strip" id="sourceStrip" aria-live="polite">
+        <span class="source-pulse" aria-hidden="true"></span>
+        <span>正在讀取資料來源…</span>
+      </div>
 
-      <article class="panel talent-overview">
-        <h2>人才庫總覽</h2>
-        <div class="panel-body" id="talentOverview">
-          <div class="meta">讀取人才庫資料中…</div>
-        </div>
-      </article>
-
-      <article class="panel">
-        <h2>最新自動化資料</h2>
-        <div class="panel-body">
-          <div class="automation-grid" id="automationCards"></div>
-        </div>
-      </article>
-
-      <article class="panel">
-        <h2>待確認事項</h2>
-        <div class="panel-body">
-          <div class="notice" id="confirmationRows"></div>
-        </div>
-      </article>
-
-      <section data-section="overview">
-        <div class="grid">
-          <article class="panel">
-            <h2>進行中案件</h2>
-            <div class="panel-body">
-              <table>
-                <thead>
-                  <tr>
-                    <th>事件</th>
-                    <th>工讀生</th>
-                    <th>分鐘</th>
-                    <th>狀態</th>
-                    <th>風險</th>
-                  </tr>
-                </thead>
-                <tbody id="caseRows"></tbody>
-              </table>
-            </div>
-          </article>
-
-          <article class="panel">
-            <h2>人力負載</h2>
-            <div class="panel-body stack" id="personCards"></div>
-          </article>
-        </div>
-
-        <div class="split">
-          <article class="panel">
-            <h2>詞庫判斷摘要</h2>
-            <div class="panel-body">
-              <table>
-                <thead>
-                  <tr>
-                    <th>錯誤文字</th>
-                    <th>正確文字</th>
-                    <th>判斷</th>
-                    <th>原因</th>
-                  </tr>
-                </thead>
-                <tbody id="dictionaryRows"></tbody>
-              </table>
-            </div>
-          </article>
-
-          <article class="panel">
-            <h2>下週派工提醒</h2>
-            <div class="panel-body">
-              <ul class="list" id="assignmentList"></ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="hidden" data-section="reviews">
-        <article class="panel">
-          <h2>自訂義名詞審核清單</h2>
-          <div class="panel-body">
-            <table>
-              <thead>
-                <tr>
-                  <th>事件 ID</th>
-                  <th>事件標題</th>
-                  <th>候選詞</th>
-                  <th>預計動作</th>
-                  <th>派薪狀態</th>
-                </tr>
-              </thead>
-              <tbody id="reviewRows"></tbody>
-            </table>
+      <section id="overview" class="view-section" role="tabpanel" aria-labelledby="tab-overview">
+        <section class="priority-banner" id="priorityBanner" aria-live="polite">
+          <div>
+            <p class="eyebrow">今天先處理</p>
+            <h2>正在整理優先事項</h2>
+            <p>系統會依逾期工作、資料日期與追蹤狀態排序。</p>
           </div>
-        </article>
-      </section>
+          <button class="button button-light" type="button" data-go-view="recommendations">查看全部建議</button>
+        </section>
 
-      <section class="hidden" data-section="people">
-        <article class="panel">
-          <h2>人才庫</h2>
-          <div class="panel-body compact-people-grid" id="peopleRows"></div>
-        </article>
-      </section>
+        <section class="metric-grid" id="metricGrid" aria-label="核心指標"></section>
 
-      <section class="hidden" data-section="assignments">
-        <article class="panel">
-          <h2>派工池</h2>
-          <div class="panel-body">
-            <table>
-              <thead>
-                <tr>
-                  <th>任務</th>
-                  <th>適合人選</th>
-                  <th>原因</th>
-                  <th>確認點</th>
-                </tr>
-              </thead>
-              <tbody id="assignmentRows"></tbody>
-            </table>
+        <section class="coverage-board" aria-labelledby="coverageTitle">
+          <div class="coverage-board-copy">
+            <p class="eyebrow">派工準備度</p>
+            <h2 id="coverageTitle">三個分母，避免只憑感覺派工</h2>
+            <p>人員標記與工時估算已由 InfoCenter 唯讀彙整；每位工讀生本週可用工時仍需回填。</p>
           </div>
+          <div class="coverage-grid" id="coverageGrid"></div>
+        </section>
+
+        <div class="overview-grid">
+          <article class="panel panel-wide">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">工作流程</p>
+                <h2>從工作候選到薪資結算</h2>
+              </div>
+              <button class="text-button" type="button" data-go-view="blueprint">查看完整藍圖</button>
+            </div>
+            <div class="workflow-lane" id="overviewWorkflow"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">資料狀態</p>
+                <h2>來源新鮮度</h2>
+              </div>
+            </div>
+            <div class="source-list" id="sourceList"></div>
+          </article>
+
+          <article class="panel panel-wide">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">工作盤面</p>
+                <h2>優先處理的未完成工作</h2>
+              </div>
+              <button class="text-button" type="button" data-go-view="dispatch">查看全部</button>
+            </div>
+            <div class="task-list" id="overviewTaskList"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">工讀生狀態</p>
+                <h2>可分配線索</h2>
+              </div>
+              <button class="text-button" type="button" data-go-view="people">查看成員</button>
+            </div>
+            <div id="peopleSnapshot"></div>
+          </article>
+
+          <article class="panel panel-full">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">工作建議</p>
+                <h2>依目前資料建議的管理動作</h2>
+              </div>
+              <button class="text-button" type="button" data-go-view="recommendations">查看判斷依據</button>
+            </div>
+            <div class="recommendation-grid" id="overviewRecommendations"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="dispatch" class="view-section is-hidden" role="tabpanel" aria-labelledby="tab-dispatch">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">InfoCenter 唯讀工作盤面</p>
+            <h2>依覆蓋缺口、期限與工時信心排序</h2>
+            <p>標題以工作類型與匿名代碼顯示；實際標題、主責與派工異動請回到 InfoCenter 確認。</p>
+          </div>
+          <a class="button button-primary" href="https://www.egroup-infocenter.com/me/work?tab=list" target="_blank" rel="noreferrer">到 InfoCenter 派工</a>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="待派工作篩選">
+          <button class="filter-chip is-active" type="button" data-task-filter="active">未完成</button>
+          <button class="filter-chip" type="button" data-task-filter="unassigned">待派</button>
+          <button class="filter-chip" type="button" data-task-filter="overdue">已逾期</button>
+          <button class="filter-chip" type="button" data-task-filter="in_progress">進行中</button>
+          <button class="filter-chip" type="button" data-task-filter="completed">已完成</button>
+        </div>
+
+        <div class="task-list task-list-expanded" id="dispatchTaskList"></div>
+      </section>
+
+      <section id="people" class="view-section is-hidden" role="tabpanel" aria-labelledby="tab-people">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">工讀生狀態</p>
+            <h2>以公開安全快照掌握人力</h2>
+            <p>主頁只顯示遮罩姓名、狀態、歷史工時與派薪狀態；「本週可用工時」尚未接通，不能由歷史工時推定。</p>
+          </div>
+          <a class="button button-secondary" href="/talent-pool/index.html">開啟人才庫</a>
+        </div>
+
+        <div class="people-toolbar">
+          <label class="search-field">
+            <span>搜尋成員</span>
+            <input id="peopleSearch" type="search" autocomplete="off" placeholder="輸入遮罩姓名">
+          </label>
+          <label class="select-field">
+            <span>狀態</span>
+            <select id="peopleStatusFilter">
+              <option value="all">全部</option>
+              <option value="active">可聯繫</option>
+              <option value="paused">暫停</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="people-summary-grid" id="peopleSummaryGrid"></div>
+        <div class="people-grid" id="peopleGrid"></div>
+      </section>
+
+      <section id="blueprint" class="view-section is-hidden" role="tabpanel" aria-labelledby="tab-blueprint">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">完整工作藍圖</p>
+            <h2>工作、事件、驗收與薪資的共用骨架</h2>
+            <p>藍圖定義每一階段的正式紀錄位置、完成條件與目前資料接通狀態。</p>
+          </div>
+          <div class="header-actions">
+            <a class="button button-secondary" href="https://www.egroup-infocenter.com/me/work?tab=templates" target="_blank" rel="noreferrer">工作範本</a>
+            <a class="button button-secondary" href="https://www.egroup-infocenter.com/me/event/events?tab=dynamicColumnTemplate" target="_blank" rel="noreferrer">事件範本</a>
+          </div>
+        </div>
+
+        <div class="workflow-lane workflow-lane-detailed" id="blueprintWorkflow"></div>
+
+        <div class="section-heading compact-heading">
+          <div>
+            <p class="eyebrow">工作域</p>
+            <h2>可建立的標準工作範本</h2>
+          </div>
+        </div>
+        <div class="domain-grid" id="domainGrid"></div>
+      </section>
+
+      <section id="recommendations" class="view-section is-hidden" role="tabpanel" aria-labelledby="tab-recommendations">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">工作建議</p>
+            <h2>只處理需要判斷的例外</h2>
+            <p>建議依 InfoCenter 工作狀態、逾期、派工覆蓋與評論工時樣本產生；不會自動建立或修改資料。</p>
+          </div>
+          <button class="button button-primary" type="button" id="copyRecommendationButton">複製建議清單</button>
+        </div>
+
+        <div class="recommendation-list" id="recommendationList"></div>
+
+        <article class="panel approval-panel">
+          <div>
+            <p class="eyebrow">寫入邊界</p>
+            <h2>建議先審核，再到正式系統操作</h2>
+            <p>Codex可以盤點、推薦與整理草稿；建立工作、派工、驗收、結算與派薪仍由你逐批核准。</p>
+          </div>
+          <a class="button button-primary" href="https://www.egroup-infocenter.com/me/work?tab=list" target="_blank" rel="noreferrer">開啟正式工作管理</a>
         </article>
       </section>
+
+      <footer class="page-footer">
+        <p>唯讀管理視圖；工作標題與人員皆去識別，薪資只呈現 paid / due，不顯示金額、銀行或身分資料。</p>
+        <p id="footerTimestamp">尚未完成資料讀取</p>
+      </footer>
     </main>
   </div>
 
-  <script>
-    const data = {
-      cases: [
-        {
-          id: "2uqNjm7gRiOWb8RdccVwIg",
-          title: "115519-1150518 財務相談室-17-孫瑜",
-          person: "孫瑜",
-          minutes: 65,
-          status: "已完成",
-          risk: "低",
-          salary: "已建立（不顯示金額）",
-          dictionaryAction: "新增 3 筆，已存在 2 筆，排除 1 筆"
-        },
-        {
-          id: "pending-example-1",
-          title: "待審核案件範例（尚未接入真實資料）",
-          person: "yachu Zhang",
-          minutes: 0,
-          status: "示範資料",
-          risk: "待接入",
-          salary: "待確認",
-          dictionaryAction: "等待每週自動化擷取"
-        }
-      ],
-      dictionary: [
-        { wrong: "袁家中心", correct: "原家中心", decision: "可納入", reason: "社福服務脈絡中的專有/機構用語" },
-        { wrong: "袁民", correct: "原民", decision: "可納入", reason: "原民為社福界常用詞" },
-        { wrong: "袁銘", correct: "原民", decision: "可納入", reason: "同批脈絡中明確指向原民" },
-        { wrong: "魚鱗", correct: "雲林", decision: "不納入", reason: "左詞有正常語意，可能造成全域誤替換" }
-      ],
-      people: [
-        {
-          name: "孫瑜",
-          template: "初級工讀生薪資計算",
-          work: "逐字稿名詞修正、資料整理",
-          quality: "舊審核 snapshot：曾完成 1 案，需接入真實週報後才作為本週判斷",
-          load: 42,
-          suggestion: "可持續安排詞庫修正與標準化任務"
-        },
-        {
-          name: "yachu Zhang",
-          template: "認證實習生薪資計算",
-          work: "進階校對、資料判讀、課程支援",
-          quality: "適合承接規則較多的審核任務",
-          load: 28,
-          suggestion: "可優先測試好理家在內容優化任務"
-        },
-        {
-          name: "李怡霖",
-          template: "怡霖薪資計算",
-          work: "行政流程、內容整理、專案協作",
-          quality: "需獨立薪資範本追蹤",
-          load: 34,
-          suggestion: "適合擔任流程型任務的固定窗口"
-        }
-      ],
-      assignments: [
-        {
-          task: "每週自訂義名詞審核",
-          person: "孫瑜 / yachu Zhang",
-          reason: "已累積逐字稿與名詞修正脈絡",
-          gate: "低信心詞先交 Kevin 判斷"
-        },
-        {
-          task: "好理家在文章與工具優化",
-          person: "yachu Zhang",
-          reason: "適合較高判讀與整理能力任務",
-          gate: "先以一篇文章或一個頁面試做"
-        },
-        {
-          task: "馴錢師活動資料整理",
-          person: "李怡霖",
-          reason: "流程與行政型工作可標準化",
-          gate: "需定義輸出格式與截止時間"
-        }
-      ],
-      confirmations: [
-        {
-          type: "系統狀態",
-          title: "目前沒有真實待確認資料",
-          detail: "這個 v0.1 dashboard 尚未接每週五自動化輸出的真實 JSON，因此正式待確認數量應為 0。",
-          status: "已釐清"
-        },
-        {
-          type: "示範資料",
-          title: "待審核案件範例",
-          detail: "這筆只是用來示範未來每週自動化會顯示的欄位，不代表現在 InfoCenter 真的有一案等待你確認。",
-          status: "示範"
-        },
-        {
-          type: "下一步",
-          title: "接入每週審核報告",
-          detail: "週五 13:30 自動化會先產生候選詞、事件、分鐘數與薪資預覽；之後這裡會顯示需要你確認的批次。",
-          status: "待接入"
-        }
-      ],
-      source: {
-        mode: "fallback",
-        updatedAt: "2026-05-29T17:10:00+08:00",
-        sources: ["HTML fallback seed data"],
-        publicNote: "目前顯示的是備援示範資料；正式資料會由 Codex 更新 data/dashboard.json。"
-      }
-    };
-
-    const $ = (selector) => document.querySelector(selector);
-    const $$ = (selector) => Array.from(document.querySelectorAll(selector));
-
-    const addon = {
-      interns: null,
-      talent: null,
-      radar: null,
-      workItems: "",
-      errors: []
-    };
-
-    function badgeClass(value) {
-      if (value === "已完成" || value === "可納入" || value === "低") return "green";
-      if (value === "待確認" || value === "示範" || value === "待接入" || value === "示範資料") return "amber";
-      if (value === "已釐清") return "blue";
-      if (value === "不納入" || value === "高") return "red";
-      return "blue";
-    }
-
-    function badge(value) {
-      return `<span class="badge ${badgeClass(value)}">${value}</span>`;
-    }
-
-    function escapeHtml(value) {
-      return String(value ?? "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
-
-    function formatSourceTime(value) {
-      if (!value) return "尚未產生";
-      const date = new Date(value);
-      if (Number.isNaN(date.getTime())) return value;
-      return date.toLocaleString("zh-TW", {
-        timeZone: "Asia/Taipei",
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit"
-      });
-    }
-
-    async function loadLatestData() {
-      try {
-        const response = await fetch("data/dashboard.json", { cache: "no-store" });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const latest = await response.json();
-        Object.assign(data, latest);
-        data.source = {
-          mode: "snapshot",
-          ...latest.source,
-          publicNote: latest.source?.publicNote || "這份資料由 Codex 依 dashboard 需求讀取來源後更新。"
-        };
-      } catch (error) {
-        data.source = {
-          ...data.source,
-          loadError: error.message
-        };
-      }
-    }
-
-    async function fetchJson(path) {
-      const response = await fetch(path, { cache: "no-store" });
-      if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
-      return response.json();
-    }
-
-    async function fetchText(path) {
-      const response = await fetch(path, { cache: "no-store" });
-      if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
-      return response.text();
-    }
-
-    async function loadAddonData() {
-      const tasks = [
-        fetchJson("data/interns.public.json")
-          .then((value) => { addon.interns = value; })
-          .catch((error) => { addon.errors.push(error.message); }),
-        fetchJson("data/talent-pool.internal.json")
-          .then((value) => { addon.talent = value; })
-          .catch((error) => { addon.errors.push(error.message); }),
-        fetchJson("data/radar-week.json")
-          .then((value) => { addon.radar = value; })
-          .catch((error) => { addon.errors.push(error.message); }),
-        fetchText("data/radar-work-items.md")
-          .then((value) => { addon.workItems = value; })
-          .catch((error) => { addon.errors.push(error.message); })
-      ];
-      await Promise.all(tasks);
-    }
-
-    function renderSourceStatus() {
-      const talentUpdatedAt = addon.talent?.meta?.sourceModifiedAt || addon.talent?.meta?.generatedAt;
-      const internsUpdatedAt = addon.interns?.meta?.sourceModifiedAt || addon.interns?.meta?.generatedAt;
-      const radarMeta = addon.radar?.meta || {};
-      const radarReady = radarMeta.weekStart && !isPlaceholderWeek(radarMeta.weekStart);
-      const sources = [
-        addon.talent ? `人才庫 ${formatSourceTime(talentUpdatedAt)}` : "",
-        addon.interns ? `派薪狀態 ${formatSourceTime(internsUpdatedAt)}` : "",
-        radarReady ? `資訊雷達 ${radarMeta.weekStart}～${radarMeta.weekEnd}` : "資訊雷達待產生"
-      ].filter(Boolean);
-      const fallback = data.source?.updatedAt ? `舊審核 snapshot ${formatSourceTime(data.source.updatedAt)}` : "尚未取得資料";
-      $("#sourceStatus").textContent = `資料來源：${sources.join("｜") || fallback}`;
-    }
-
-    function renderMetrics() {
-      const talentPeople = Array.isArray(addon.talent?.people) ? addon.talent.people : [];
-      const talentCounts = addon.talent?.meta?.counts || {};
-      const internCounts = addon.interns?.meta?.counts || {};
-      const total = talentCounts.total ?? talentPeople.length;
-      const active = talentCounts.active ?? internCounts.active ?? 0;
-      const paused = talentCounts.paused ?? internCounts.paused ?? 0;
-      const historyOnly = talentCounts.historyOnly ?? 0;
-      const withPhone = talentCounts.withPhone ?? talentPeople.filter((person) => person.phone).length;
-      const withEmail = talentCounts.withEmail ?? talentPeople.filter((person) => person.email).length;
-      const withResidence = talentCounts.withResidence ?? talentPeople.filter((person) => person.residence).length;
-      const missing = talentCounts.missingAnyRequired ?? talentPeople.filter((person) => (person.missingRequiredFields || []).length).length;
-      const historyHours = Number(talentCounts.historyTotalHours || 0);
-      const historyHoursLabel = historyHours
-        ? historyHours.toLocaleString("zh-TW", { maximumFractionDigits: 1 })
-        : "—";
-      const dictionaryMinutes = talentCounts.dictionaryWorkMinutes ?? addon.interns?.meta?.history?.dictionaryWorkMinutes ?? 0;
-      const coveredMonths = addon.talent?.meta?.coveredMonths || addon.interns?.meta?.history?.coveredMonths || [];
-      const historyMetricLabel = coveredMonths.length
-        ? `${coveredMonths[0].slice(5)}–${coveredMonths[coveredMonths.length - 1].slice(5)} 月工時`
-        : "逐月工時";
-      const radarMeta = addon.radar?.meta || {};
-      const radarReady = radarMeta.weekStart && !isPlaceholderWeek(radarMeta.weekStart);
-      const highlights = Array.isArray(addon.radar?.highlights) ? addon.radar.highlights.length : 0;
-      const hasWorkItems = addon.workItems && !addon.workItems.includes("尚未產生");
-      $("#metrics").innerHTML = [
-        ["人才總數", total || "—", `active ${active}｜paused ${paused}｜history-only ${historyOnly}`],
-        ["待補資料", missing || 0, `缺電話 ${Math.max(0, total - withPhone)}｜缺 Email ${Math.max(0, total - withEmail)}｜缺居住地 ${Math.max(0, total - withResidence)}`],
-        [historyMetricLabel, historyHoursLabel, `${talentCounts.withHistory ?? 0} 人有歷史工時｜名詞庫 ${dictionaryMinutes} 分鐘`],
-        ["派薪狀態", `${internCounts.paid ?? "—"} / ${internCounts.due ?? "—"}`, "paid / due｜不含金額與銀行資料"],
-        ["本週雷達", radarReady ? highlights : "待產生", hasWorkItems ? "工作清單已產生" : "新聞摘要與派工清單待產生"]
-      ].map(([label, value, hint]) => `
-        <article class="metric">
-          <div class="label">${escapeHtml(label)}</div>
-          <div class="value">${escapeHtml(value)}</div>
-          <div class="hint">${escapeHtml(hint)}</div>
-        </article>
-      `).join("");
-    }
-
-    function isPlaceholderWeek(value) {
-      return !value || String(value).includes("YYYY");
-    }
-
-    function renderAutomationCards() {
-      const counts = addon.interns?.meta?.counts || {};
-      const talentCounts = addon.talent?.meta?.counts || {};
-      const sourceModifiedAt = addon.interns?.meta?.sourceModifiedAt || addon.interns?.meta?.generatedAt;
-      const talentUpdatedAt = addon.talent?.meta?.sourceModifiedAt || addon.talent?.meta?.generatedAt;
-      const weekStart = addon.radar?.meta?.weekStart;
-      const weekEnd = addon.radar?.meta?.weekEnd;
-      const highlights = Array.isArray(addon.radar?.highlights) ? addon.radar.highlights.length : 0;
-      const hasWorkItems = addon.workItems && !addon.workItems.includes("尚未產生");
-      const radarPeriod = isPlaceholderWeek(weekStart) ? "等待本週雷達" : `${weekStart}～${weekEnd}`;
-
-      $("#automationCards").innerHTML = [
-        {
-          title: "人才庫資料更新",
-          value: `${counts.active ?? "—"} / ${counts.total ?? "—"}`,
-          meta: `後台快照比對用｜paid ${counts.paid ?? "—"}｜due ${counts.due ?? "—"}｜${formatSourceTime(sourceModifiedAt)}`,
-          href: "/talent-pool/index.html",
-          cta: "查看人才庫"
-        },
-        {
-          title: "人才庫追蹤",
-          value: `${talentCounts.withHistory ?? "—"} / ${talentCounts.total ?? "—"}`,
-          meta: `有歷史工時 / total｜電話 ${talentCounts.withPhone ?? "—"}｜Email ${talentCounts.withEmail ?? "—"}｜${formatSourceTime(talentUpdatedAt)}`,
-          href: "/talent-pool/index.html",
-          cta: "打開人才庫"
-        },
-        {
-          title: "15 分鐘工讀生會談",
-          value: "會談表",
-          meta: "了解近況、任務意願、可投入時間，會後收斂一個小任務",
-          href: "/intern-interviews/index.html",
-          cta: "打開會談工具"
-        },
-        {
-          title: "每週資訊雷達",
-          value: highlights,
-          meta: `${radarPeriod}｜highlights`,
-          href: "/radar-addon/index.html",
-          cta: "打開資訊雷達"
-        },
-        {
-          title: "工作清單",
-          value: hasWorkItems ? "已產生" : "待產生",
-          meta: addon.errors.length ? addon.errors.join("｜") : "新聞摘要與派薪提醒會在每週排程後更新",
-          href: "/data/radar-work-items.md",
-          cta: "查看工作清單"
-        }
-      ].map((item) => `
-        <article class="card automation-card">
-          <div>
-            <h3>${item.title}</h3>
-            <div class="value">${item.value}</div>
-            <div class="meta">${item.meta}</div>
-          </div>
-          <a class="tool" href="${item.href}">${item.cta}</a>
-        </article>
-      `).join("");
-    }
-
-    function renderTalentOverview() {
-      const people = Array.isArray(addon.talent?.people) ? addon.talent.people : [];
-      const counts = addon.talent?.meta?.counts || {};
-      const total = counts.total ?? people.length;
-      const withPhone = counts.withPhone ?? people.filter((person) => person.phone).length;
-      const withEmail = counts.withEmail ?? people.filter((person) => person.email).length;
-      const withResidence = counts.withResidence ?? people.filter((person) => person.residence).length;
-      const missing = counts.missingAnyRequired ?? people.filter((person) => (person.missingRequiredFields || []).length).length;
-      const updatedAt = formatSourceTime(addon.talent?.meta?.sourceModifiedAt || addon.talent?.meta?.generatedAt);
-      const coveredMonths = (addon.talent?.meta?.coveredMonths || []).join("、") || "尚未標示";
-
-      $("#talentOverview").innerHTML = `
-        <div class="talent-lead">
-          <h3>工讀生基本資料、履歷連結與每月工作情況都集中在人才庫。</h3>
-          <p class="subtitle">首頁只保留入口與追蹤摘要；後台快照繼續給自動化比對新增、補件與派薪狀態，不再當成主要頁面。</p>
-          <div class="toolbar" style="justify-content:flex-start;margin-top:4px">
-            <a class="tool primary" href="/talent-pool/index.html">打開完整人才庫</a>
-            <a class="tool" href="/intern-interviews/index.html">開 15 分鐘會談表</a>
-            <button class="tool" type="button" data-view-shortcut="people">查看首頁人才表</button>
-          </div>
-          <div class="meta">更新時間：${updatedAt}｜月份：${escapeHtml(coveredMonths)}｜薪資金額與銀行資料仍不顯示</div>
-        </div>
-        <div class="talent-stats">
-          <div class="talent-stat"><strong>${escapeHtml(total)}</strong><span class="meta">人才總數</span></div>
-          <div class="talent-stat"><strong>${escapeHtml(withPhone)} / ${escapeHtml(withEmail)}</strong><span class="meta">電話 / Email 已建檔</span></div>
-          <div class="talent-stat"><strong>${escapeHtml(withResidence)}</strong><span class="meta">已有居住地（縣市/區）</span></div>
-          <div class="talent-stat"><strong>${escapeHtml(missing)}</strong><span class="meta">仍缺必要欄位</span></div>
-        </div>
-      `;
-
-      const shortcut = document.querySelector("[data-view-shortcut='people']");
-      if (shortcut) shortcut.addEventListener("click", () => switchView("people"));
-    }
-
-    function renderConfirmations() {
-      $("#confirmationRows").innerHTML = data.confirmations.map((item) => `
-        <div class="row">
-          <div>${badge(item.status)}</div>
-          <div>
-            <strong>${item.title}</strong>
-            <div class="meta">${item.detail}</div>
-          </div>
-          <div class="meta">${item.type}</div>
-        </div>
-      `).join("");
-    }
-
-    function renderCases() {
-      $("#caseRows").innerHTML = data.cases.map((item) => `
-        <tr>
-          <td><strong>${item.title}</strong><div class="meta">${item.id}</div></td>
-          <td>${item.person}</td>
-          <td>${item.minutes}</td>
-          <td>${badge(item.status)}</td>
-          <td>${badge(item.risk)}</td>
-        </tr>
-      `).join("");
-
-      $("#reviewRows").innerHTML = data.cases.map((item) => `
-        <tr>
-          <td>${item.id}</td>
-          <td>${item.title}</td>
-          <td>${item.dictionaryAction}</td>
-          <td>${item.status === "已完成" ? "已完成三步驗證" : "等待 Kevin 確認"}</td>
-          <td>${item.salary ? "已建立（不顯示金額）" : "待確認"}</td>
-        </tr>
-      `).join("");
-    }
-
-    function renderDictionary() {
-      $("#dictionaryRows").innerHTML = data.dictionary.map((item) => `
-        <tr>
-          <td>${item.wrong}</td>
-          <td>${item.correct}</td>
-          <td>${badge(item.decision)}</td>
-          <td>${item.reason}</td>
-        </tr>
-      `).join("");
-    }
-
-    function renderPeople() {
-      const talentPeople = Array.isArray(addon.talent?.people) ? addon.talent.people : null;
-      const peopleForCards = talentPeople
-        ? talentPeople.slice().sort((a, b) => (b.historyTotalHours || 0) - (a.historyTotalHours || 0)).slice(0, 6)
-        : data.people;
-
-      $("#personCards").innerHTML = peopleForCards.map((person) => {
-        const name = person.name;
-        const humanIntel = (person.humanIntelNotes || []).join("｜");
-        const work = talentPeople
-          ? [person.currentRole, person.educationOrJob, person.workStatus, humanIntel].filter(Boolean).join("｜") || "尚未填基本背景"
-          : person.work;
-        const load = talentPeople
-          ? Math.min(100, Math.max(2, Math.round((person.historyTotalHours || 0) / 2)))
-          : person.load;
-        return `
-        <article class="card">
-          <div class="person">
-            <div>
-              <h3>${escapeHtml(name)}</h3>
-              <div class="meta">${escapeHtml(work)}</div>
-            </div>
-            ${badge(`${load}%`)}
-          </div>
-          <div class="bar" aria-label="${escapeHtml(name)} 負載 ${load}%"><span style="--width: ${load}%"></span></div>
-        </article>
-      `;
-      }).join("");
-
-      if (talentPeople) {
-        $("#peopleRows").innerHTML = talentPeople.map((person) => {
-          const resume = person.resume?.url
-            ? `<a href="${escapeHtml(person.resume.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(person.resume.label || "履歷")}</a>`
-            : escapeHtml(person.resume?.label || "待補履歷連結");
-          const info = [person.currentRole, person.educationOrJob, person.workStatus]
-            .filter(Boolean)
-            .map(escapeHtml)
-            .join("｜") || "尚未填基本背景";
-          const humanIntel = (person.humanIntelNotes || []).join("｜");
-          const months = (person.monthlyWork || []).map((month) => {
-            const label = String(month.month || "").slice(5) || month.month;
-            return `<span class="month-chip">${escapeHtml(label)}月 ${escapeHtml(month.hours)}h</span>`;
-          }).join("");
-          const signals = (person.topWorkSignals || [])
-            .slice(0, 3)
-            .map((signal) => `<span class="month-chip">${escapeHtml(signal.label)} ${escapeHtml(signal.hours)}h</span>`)
-            .join("") || '<span class="meta">尚無分類訊號</span>';
-          const phone = person.phone ? `<a href="tel:${escapeHtml(person.phone)}">${escapeHtml(person.phone)}</a>` : "待補電話";
-          const email = person.email ? `<a href="mailto:${escapeHtml(person.email)}">${escapeHtml(person.email)}</a>` : "待補 Email";
-          return `
-        <article class="mini-profile">
-          <div class="top">
-            <div>
-              <h3>${escapeHtml(person.name)}</h3>
-              <div class="meta text-clamp">${info}</div>
-            </div>
-            ${badge(person.status)}
-          </div>
-          <div class="mini-facts">
-            <div class="mini-fact"><div class="label">聯絡</div><div class="value">${phone}<br>${email}</div></div>
-            <div class="mini-fact"><div class="label">居住地</div><div class="value">${escapeHtml(person.residence || "待補")}</div></div>
-            <div class="mini-fact"><div class="label">工作範本</div><div class="value text-clamp">${escapeHtml(person.workLevel || "待補")}</div></div>
-            <div class="mini-fact"><div class="label">履歷</div><div class="value">${resume}</div></div>
-            ${humanIntel ? `<div class="mini-fact"><div class="label">人力情報</div><div class="value text-clamp">${escapeHtml(humanIntel)}</div></div>` : ""}
-          </div>
-          <div>
-            <strong>${escapeHtml(person.historyTotalHours || 0)}h</strong>
-            <div class="month-chips" style="margin-top:8px">${months || '<span class="meta">尚無逐月紀錄</span>'}</div>
-          </div>
-          <div class="month-chips">${signals}</div>
-          <div class="meta"><a href="/talent-pool/${encodeURIComponent(person.slug)}/index.html">個人追蹤頁</a></div>
-        </article>`;
-        }).join("");
-        return;
-      }
-
-      $("#peopleRows").innerHTML = data.people.map((person) => `
-        <article class="mini-profile">
-          <div class="top">
-            <div>
-              <h3>${escapeHtml(person.name)}</h3>
-              <div class="meta text-clamp">${escapeHtml(person.work)}</div>
-            </div>
-            ${badge(`${person.load}%`)}
-          </div>
-          <div class="mini-facts">
-            <div class="mini-fact"><div class="label">履歷</div><div class="value">待補履歷連結</div></div>
-            <div class="mini-fact"><div class="label">建議</div><div class="value text-clamp">${escapeHtml(person.suggestion)}</div></div>
-          </div>
-        </article>
-      `).join("");
-    }
-
-    function renderAssignments() {
-      $("#assignmentList").innerHTML = data.assignments.map((item) => `
-        <li><strong>${item.task}</strong><br><span class="meta">${item.person}｜${item.reason}</span></li>
-      `).join("");
-
-      $("#assignmentRows").innerHTML = data.assignments.map((item) => `
-        <tr>
-          <td>${item.task}</td>
-          <td>${item.person}</td>
-          <td>${item.reason}</td>
-          <td>${item.gate}</td>
-        </tr>
-      `).join("");
-    }
-
-    function switchView(view) {
-      $$("[data-view]").forEach((button) => {
-        button.setAttribute("aria-selected", String(button.dataset.view === view));
-      });
-      $$("[data-section]").forEach((section) => {
-        section.classList.toggle("hidden", section.dataset.section !== view);
-      });
-    }
-
-    function render() {
-      renderSourceStatus();
-      renderMetrics();
-      renderTalentOverview();
-      renderAutomationCards();
-      renderConfirmations();
-      renderCases();
-      renderDictionary();
-      renderPeople();
-      renderAssignments();
-    }
-
-    $$("[data-view]").forEach((button) => {
-      button.addEventListener("click", () => switchView(button.dataset.view));
-    });
-
-    $("#nextAction").addEventListener("click", () => {
-      alert("目前沒有真實待確認資料。這個 dashboard 下一步要接入每週五自動化產出的真實審核報告。");
-    });
-
-    $("#toggleSeed").addEventListener("click", () => {
-      data.cases.reverse();
-      render();
-    });
-
-    Promise.all([loadLatestData(), loadAddonData()]).finally(render);
-  </script>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
