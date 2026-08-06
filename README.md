@@ -9,6 +9,7 @@
 - 工讀生狀態：使用公開安全快照，只呈現遮罩姓名、狀態、歷史工時與 paid / due。
 - 工作藍圖：工作候選、待派、執行、驗收、完成及結算六個階段。
 - 工作建議：依人員涵蓋、逾期、評論工時樣本與可用工時缺口產生管理建議。
+- 設定審核中心：以意圖導引方式審核 9 個欄位、3 組工作／事件範本、13 個計算規格與執行證據狀態；不直接寫入 InfoCenter。
 
 ## 資料來源
 
@@ -44,7 +45,11 @@ python -m http.server 8765 --bind 127.0.0.1
 
 正式站：[https://workforce-war-room.vercel.app](https://workforce-war-room.vercel.app)
 
+設定審核中心：[https://workforce-war-room.vercel.app/local-spec/](https://workforce-war-room.vercel.app/local-spec/)
+
 本專案使用 Vercel 靜態託管，且以 `vercel.json`、頁面 robots meta 與 `robots.txt` 阻擋搜尋索引。正式 push 或部署需 Kevin 核准。
+
+`noindex` 只降低被搜尋引擎索引的機會，不是存取控制；因此公開版本只包含匿名規格，不包含原始工作標題、姓名、評論、聯絡資料或 InfoCenter ID。
 
 ## 設計文件
 

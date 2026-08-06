@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "status": "local-draft",
+    "externalWriteApproved": false,
+    "templatePairCount": 3,
+    "purpose": "InfoCenter 工作與事件範本建立前的本地審核版本"
+  },
+  "templatePairs": [
+    {
+      "id": "TOOL_QA",
+      "name": "工具與網頁測試",
+      "estimatePolicy": {
+        "p50Hours": 2,
+        "p80Hours": 3,
+        "source": "planning-baseline",
+        "currentEvidence": {"sampleCount": 2, "confidence": "low", "observedP50Hours": 1, "observedP80Hours": 1},
+        "promotionRule": "累積至少 3 筆後才以評論樣本取代規劃基準"
+      },
+      "workTemplate": {
+        "name": "【工讀】工具與網頁測試",
+        "minimumLevel": "L2",
+        "requiredSkills": ["情境測試", "問題重現", "條理回報"],
+        "purpose": "依指定情境操作網站或工具，找出可重現問題並留下可驗收證據。",
+        "requiredInputs": ["測試網址與版本", "測試帳號或假資料規則", "裝置／瀏覽器範圍", "測試情境清單"],
+        "deliverables": ["測試結果清單", "問題重現步驟", "必要截圖或錄影", "實際耗時"],
+        "doneWhen": "每個測試情境都有通過、失敗或無法測試的結果；問題具備重現步驟與證據。",
+        "fieldValues": {"work_category": "TOOL_QA", "estimated_hours_p50": 2, "estimated_hours_p80": 3, "minimum_level": "L2", "required_skills": ["情境測試", "問題重現", "條理回報"]}
+      },
+      "eventTemplate": {
+        "name": "【事件】工具測試回報",
+        "instructions": ["依測試情境逐項操作", "每發現一個問題就記錄重現步驟", "不得輸入真實個案資料", "完成後附上成果並送出審核"],
+        "requiredFields": ["deliverable_evidence", "actual_minutes"],
+        "conditionalFields": ["blocker_note"],
+        "checklist": ["測試範圍完整", "通過與失敗有區分", "問題可重現", "證據可開啟", "耗時格式正確"],
+        "commentFormat": "完成工具測試，實際耗時 {actual_minutes} 分鐘；成果：{deliverable_evidence}"
+      }
+    },
+    {
+      "id": "TRANSCRIPT_QA",
+      "name": "逐字稿與名詞校正",
+      "estimatePolicy": {
+        "p50Hours": 2,
+        "p80Hours": 3,
+        "source": "event-comments",
+        "currentEvidence": {"sampleCount": 108, "confidence": "high", "observedP50Hours": 2, "observedP80Hours": 3},
+        "promotionRule": "每週滾動更新最近 180 天 P50／P80"
+      },
+      "workTemplate": {
+        "name": "【工讀】逐字稿與名詞校正",
+        "minimumLevel": "L1",
+        "requiredSkills": ["文字校對", "專有名詞辨識", "上下文判讀"],
+        "purpose": "將語音轉文字結果校正為可閱讀、可搜尋且保留原意的逐字稿。",
+        "requiredInputs": ["原始音檔或錄影", "待校正逐字稿", "專有名詞表", "段落或時間範圍"],
+        "deliverables": ["校正後逐字稿", "待確認名詞清單", "修正摘要", "實際耗時"],
+        "doneWhen": "指定範圍已逐段核對；不確定內容有標記；專有名詞依規則統一。",
+        "fieldValues": {"work_category": "TRANSCRIPT_QA", "estimated_hours_p50": 2, "estimated_hours_p80": 3, "minimum_level": "L1", "required_skills": ["文字校對", "專有名詞辨識", "上下文判讀"]}
+      },
+      "eventTemplate": {
+        "name": "【事件】逐字稿校正回報",
+        "instructions": ["先確認本次負責範圍", "依音檔核對文字與人名／專有名詞", "不確定內容以待確認標記，不自行猜測", "完成後附上文件並送出審核"],
+        "requiredFields": ["deliverable_evidence", "actual_minutes"],
+        "conditionalFields": ["blocker_note"],
+        "checklist": ["指定範圍完成", "格式一致", "名詞已校正", "不確定處已標示", "成果可開啟", "耗時格式正確"],
+        "commentFormat": "完成逐字稿與名詞校正，實際耗時 {actual_minutes} 分鐘；成果：{deliverable_evidence}"
+      }
+    },
+    {
+      "id": "KNOWLEDGE_OPS",
+      "name": "資料與知識庫整理",
+      "estimatePolicy": {
+        "p50Hours": 2,
+        "p80Hours": 4,
+        "source": "planning-baseline",
+        "currentEvidence": {"sampleCount": 1, "confidence": "low", "observedP50Hours": 1.75, "observedP80Hours": 1.75},
+        "promotionRule": "累積至少 3 筆後才以評論樣本取代規劃基準"
+      },
+      "workTemplate": {
+        "name": "【工讀】資料與知識庫整理",
+        "minimumLevel": "L2",
+        "requiredSkills": ["資料分類", "來源查核", "結構化摘要"],
+        "purpose": "把來源資料整理成可查找、可追溯且欄位一致的知識項目。",
+        "requiredInputs": ["來源範圍", "欄位規則", "分類與標籤規則", "重複資料處理規則"],
+        "deliverables": ["整理後資料表或知識項目", "來源連結", "重複／缺件清單", "實際耗時"],
+        "doneWhen": "必要欄位完整；來源可追溯；重複與缺件已標示；抽查結果符合規則。",
+        "fieldValues": {"work_category": "KNOWLEDGE_OPS", "estimated_hours_p50": 2, "estimated_hours_p80": 4, "minimum_level": "L2", "required_skills": ["資料分類", "來源查核", "結構化摘要"]}
+      },
+      "eventTemplate": {
+        "name": "【事件】資料整理回報",
+        "instructions": ["依欄位與分類規則整理", "每筆保留來源", "遇到重複或不確定資料不要自行刪除", "完成後附成果與例外清單並送出審核"],
+        "requiredFields": ["deliverable_evidence", "actual_minutes"],
+        "conditionalFields": ["blocker_note"],
+        "checklist": ["必要欄位完整", "來源可追溯", "分類一致", "重複與缺件已標示", "成果可開啟", "耗時格式正確"],
+        "commentFormat": "完成資料與知識庫整理，實際耗時 {actual_minutes} 分鐘；成果：{deliverable_evidence}"
+      }
+    }
+  ]
+}

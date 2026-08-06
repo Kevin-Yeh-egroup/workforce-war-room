@@ -1,0 +1,38 @@
+# InfoCenter 設定審核中心
+
+這個資料夾是「尚未寫入 InfoCenter」的審核版本，用來先確認欄位、範本、公式與 AI 判斷邊界。頁面可隨 Workforce War Room 發布供審核，但所有 JSON 仍維持 `externalWriteApproved: false`。
+
+## 使用方式
+
+頁面先呈現四種管理意圖；點選後才展開單一工作區：
+
+1. 欄位要怎麼存：工作、事件、人員週容量及只計算不回寫的衍生欄位。
+2. 先看 3 組範本：工作需求與事件交付的配對，以及 P50／P80 樣本信心。
+3. 數字要怎麼算：13 個指標的分子、分母、空值與限制。
+4. 如何確認真的有執行：可操作的證據模擬器、9 種狀態與 AI／人工邊界。
+
+頁面下方的 4 項核准只保存在目前瀏覽器的 `sessionStorage`，不會呼叫 InfoCenter API。
+
+## 檔案
+
+- `fields.json`：9 個欄位、能力等級與建議存放位置。
+- `templates.json`：3 組工作／事件範本配對。
+- `dashboard-calculations.json`：13 個儀表板分母、公式、空值與警示規則。
+- `execution-verification.json`：執行證據狀態機，以及 AI 可做與不可做的事。
+- `validate.js`：確認 JSON 關聯、範本數量、公式與外部寫入旗標。
+
+## 本地開啟
+
+在 repo 根目錄執行：
+
+```powershell
+python -m http.server 8765 --bind 127.0.0.1
+```
+
+開啟 `http://127.0.0.1:8765/local-spec/`。
+
+## 寫入邊界
+
+公開頁面只包含匿名規格，不包含原始工作標題、姓名、評論、聯絡資料或 InfoCenter ID。`noindex` 不是存取控制；任何敏感資料都不得進入此資料夾。
+
+真正新增 InfoCenter 欄位或範本時，仍要另外取得 Kevin 核准，並先建立 1 組範本與 1 筆測試工作，讀回驗證後才批次執行。

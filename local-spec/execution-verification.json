@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "status": "local-draft",
+    "externalWriteApproved": false,
+    "principle": "規則先判定是否有執行證據，AI 再檢查交付內容，人員才做最終驗收。"
+  },
+  "evidenceSources": [
+    {"id": "assignment", "source": "InfoCenter 工作人員標記", "proves": "已派給誰", "doesNotProve": "已開始或已完成"},
+    {"id": "work_progress", "source": "工作狀態與進度", "proves": "系統紀錄的進度變化", "doesNotProve": "成果品質或真實完成"},
+    {"id": "event_activity", "source": "工作下事件建立／更新時間", "proves": "派工後有活動", "doesNotProve": "活動內容符合要求"},
+    {"id": "comment_time_report", "source": "事件評論中的實際耗時", "proves": "有人回報投入時間", "doesNotProve": "交付物存在或合格"},
+    {"id": "deliverable", "source": "事件附件或成果連結", "proves": "有可檢查的交付物", "doesNotProve": "交付物符合範本"},
+    {"id": "submission", "source": "事件送審狀態", "proves": "工讀生主張已完成並送驗", "doesNotProve": "主管已接受"},
+    {"id": "human_review", "source": "InfoCenter 事件審核結果", "proves": "人員已完成驗收決定", "doesNotProve": "後續薪資已建立或已派薪"}
+  ],
+  "states": [
+    {
+      "id": "not_assigned",
+      "label": "尚未派工",
+      "deterministicRule": "assigned_count = 0",
+      "aiNeeded": false,
+      "nextAction": "確認工作有效性、能力門檻與容量後派工"
+    },
+    {
+      "id": "assigned_no_evidence",
+      "label": "已派但尚無執行證據",
+      "deterministicRule": "assigned_count > 0 and no post-assignment event/comment/deliverable",
+      "aiNeeded": false,
+      "nextAction": "確認是否已收到任務；超過 72 小時則提醒或重派"
+    },
+    {
+      "id": "started",
+      "label": "已有開始證據",
+      "deterministicRule": "post-assignment activity exists and submission is false",
+      "aiNeeded": false,
+      "nextAction": "依期限追蹤；有 blocker_note 時優先排除卡點"
+    },
+    {
+      "id": "submitted",
+      "label": "已提交待驗收",
+      "deterministicRule": "submission = true and deliverable exists and human review pending",
+      "aiNeeded": true,
+      "nextAction": "AI 先依範本檢查完整性，再交由人員驗收"
+    },
+    {
+      "id": "submitted_missing_evidence",
+      "label": "已送審但證據不足",
+      "deterministicRule": "submission = true and deliverable is missing",
+      "aiNeeded": false,
+      "nextAction": "退回補成果連結／附件與實際耗時"
+    },
+    {
+      "id": "needs_revision",
+      "label": "需補件或修正",
+      "deterministicRule": "human review = rejected/revision or AI finds required checklist failure",
+      "aiNeeded": true,
+      "nextAction": "列出缺少證據與範本條款；由人員決定是否退回"
+    },
+    {
+      "id": "human_verified",
+      "label": "人工驗證完成",
+      "deterministicRule": "human review = approved and deliverable exists",
+      "aiNeeded": false,
+      "nextAction": "可進入工作完成與薪資結算；仍需 Kevin 核准"
+    },
+    {
+      "id": "blocked",
+      "label": "卡關",
+      "deterministicRule": "blocker_note exists or explicit blocked signal",
+      "aiNeeded": false,
+      "nextAction": "指定卡點負責人與下一個檢查時間"
+    },
+    {
+      "id": "stale",
+      "label": "可能停滯",
+      "deterministicRule": "assigned and active but no evidence update for 72 hours before due date, or overdue with no update",
+      "aiNeeded": false,
+      "nextAction": "先人工確認仍需執行、改期或結案"
+    }
+  ],
+  "decisionOrder": ["blocked", "human_verified", "needs_revision", "submitted_missing_evidence", "submitted", "stale", "started", "assigned_no_evidence", "not_assigned"],
+  "aiReview": {
+    "runsOnlyWhen": "有可讀取的交付物，且事件已提交或管理者要求預檢",
+    "inputs": ["核准範本的目的、交付物與 checklist", "InfoCenter 工作與事件唯讀資料", "交付文件／附件內容", "實際耗時與來源日期"],
+    "tasks": ["逐項檢查必要交付是否存在", "比對成果是否符合範本完成條件", "找出缺件、矛盾與無法驗證處", "產生附證據來源的驗收建議"],
+    "outputSchema": {
+      "recommendedState": "submitted | needs_revision | review_ready",
+      "confidence": "low | medium | high",
+      "checklistResults": [{"item": "範本檢查項", "result": "pass | fail | unknown", "evidence": "來源與位置"}],
+      "missingEvidence": ["缺少的資料"],
+      "riskFlags": ["風險或矛盾"],
+      "recommendedAction": "給主管的下一步",
+      "humanApprovalRequired": true
+    },
+    "mustNotDo": ["只依工作狀態宣告完成", "只依耗時評論宣告完成", "把 AI 建議當成人工驗收", "自動評定人格或整體績效", "自動關閉工作", "自動建立薪資或派薪"]
+  },
+  "recommendedAutomation": {
+    "mode": "read-only proposal",
+    "schedule": "可與 automation-3 每週摘要一起執行，或每日一次只掃描有變化工作",
+    "dedupeKey": "work_alias + latest_evidence_at + template_version",
+    "noOpRule": "證據時間與範本版本均未變時沿用前次判斷，不重跑 AI",
+    "approvalGate": "產生待驗收清單後，由 Kevin 在 InfoCenter 逐批核准"
+  }
+}

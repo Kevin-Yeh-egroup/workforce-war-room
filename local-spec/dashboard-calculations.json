@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "status": "local-draft",
+    "externalWriteApproved": false,
+    "timezone": "Asia/Taipei",
+    "rounding": "顯示百分比取整數；工時顯示到小數一位；原始 JSON 保留到小數三位"
+  },
+  "populationRules": {
+    "activeWork": "status in [pending, in_progress, revision]",
+    "completedWork": "status = completed",
+    "cancelledWork": "status = cancelled；不進入需求與覆蓋率分母",
+    "activeIntern": "公開人員快照 status = active；不等於本週有空",
+    "currentWeekCapacity": "week_start 對應本週且 updated_at 未逾 7 天的 weekly_available_hours"
+  },
+  "metrics": [
+    {
+      "id": "active_work_count",
+      "label": "未完成工作",
+      "formula": "count(activeWork)",
+      "numerator": "未完成工作數",
+      "denominator": null,
+      "emptyState": 0,
+      "drilldown": "所有 pending、in_progress、revision 工作"
+    },
+    {
+      "id": "unassigned_count",
+      "label": "待派工作",
+      "formula": "count(activeWork where assigned_count = 0)",
+      "numerator": "尚無人員標記的未完成工作",
+      "denominator": null,
+      "emptyState": 0,
+      "drilldown": "待派篩選"
+    },
+    {
+      "id": "in_progress_count",
+      "label": "進行中",
+      "formula": "count(activeWork where status = in_progress)",
+      "numerator": "進行中工作",
+      "denominator": null,
+      "emptyState": 0,
+      "drilldown": "進行中篩選"
+    },
+    {
+      "id": "completed_count",
+      "label": "已完成",
+      "formula": "count(work where status = completed)",
+      "numerator": "完成工作",
+      "denominator": null,
+      "emptyState": 0,
+      "drilldown": "已完成篩選"
+    },
+    {
+      "id": "overdue_count",
+      "label": "逾期未完成",
+      "formula": "count(activeWork where due_date < today in Asia/Taipei)",
+      "numerator": "逾期的未完成工作",
+      "denominator": null,
+      "emptyState": 0,
+      "caveat": "舊案需先確認續做、改期或結案，不得直接等同本週需求"
+    },
+    {
+      "id": "assignment_coverage_rate",
+      "label": "人員涵蓋率",
+      "formula": "count(activeWork where assigned_count > 0) / count(activeWork)",
+      "numerator": "至少一位人員標記的未完成工作",
+      "denominator": "所有未完成工作",
+      "emptyState": null,
+      "thresholds": {"good": 0.95, "warning": 0.8, "dangerBelow": 0.8}
+    },
+    {
+      "id": "estimate_evidence_coverage_rate",
+      "label": "工時依據覆蓋率",
+      "formula": "count(activeWork where estimate_sample_count > 0) / count(activeWork)",
+      "numerator": "工作本身或同類型有實際耗時樣本的未完成工作",
+      "denominator": "所有未完成工作",
+      "emptyState": null,
+      "caveat": "有樣本不等於高信心；需另外顯示樣本數與 low / medium / high"
+    },
+    {
+      "id": "capacity_coverage_rate",
+      "label": "本週容量覆蓋率",
+      "formula": "count(activeIntern with currentWeekCapacity) / count(activeIntern)",
+      "numerator": "本週可用工時已更新的 active 人員",
+      "denominator": "所有 active 人員",
+      "emptyState": null,
+      "caveat": "不得用歷史工時、事件數或評論數替代"
+    },
+    {
+      "id": "estimated_demand_p80_hours",
+      "label": "未完成工作 P80 需求",
+      "formula": "sum(activeWork.estimated_hours_p80)",
+      "numerator": "各未完成工作 P80 加總",
+      "denominator": null,
+      "emptyState": 0,
+      "caveat": "是規劃需求，不是核定工時或薪資"
+    },
+    {
+      "id": "available_capacity_hours",
+      "label": "本週可用容量",
+      "formula": "sum(activeIntern.current_week_available_hours)",
+      "numerator": "本週有效可用工時加總",
+      "denominator": null,
+      "emptyState": null,
+      "caveat": "資料未齊時顯示待接，不顯示 0 小時"
+    },
+    {
+      "id": "capacity_gap_hours",
+      "label": "容量缺口",
+      "formula": "estimated_demand_p80_hours - available_capacity_hours",
+      "numerator": "P80 需求減本週可用容量",
+      "denominator": null,
+      "emptyState": null,
+      "interpretation": "正數代表缺口；負數代表尚有容量；任一來源缺失時顯示待確認"
+    },
+    {
+      "id": "execution_evidence_coverage_rate",
+      "label": "執行證據覆蓋率",
+      "formula": "count(assigned activeWork where execution_state in [started, submitted, needs_revision, human_verified]) / count(assigned activeWork)",
+      "numerator": "已有開始、提交、修正或人工驗證證據的已派工作",
+      "denominator": "所有已派且未取消工作",
+      "emptyState": null,
+      "caveat": "僅有指派或期限不算執行證據"
+    },
+    {
+      "id": "verified_completion_rate",
+      "label": "人工驗證完成率",
+      "formula": "count(work where execution_state = human_verified) / count(work where execution_state in [submitted, needs_revision, human_verified])",
+      "numerator": "已由人員核准的交付",
+      "denominator": "已提交或進入驗收的交付",
+      "emptyState": null,
+      "caveat": "AI 建議通過不可列入分子"
+    }
+  ],
+  "confidenceRules": {
+    "high": "同工作或同類型最近 180 天有 8 筆以上有效實際耗時",
+    "medium": "3 至 7 筆",
+    "low": "1 至 2 筆",
+    "baseline": "0 筆，使用已核准範本基準值",
+    "p50": "有效分鐘數升冪排序後第 ceil(0.5 × n) 筆",
+    "p80": "有效分鐘數升冪排序後第 ceil(0.8 × n) 筆"
+  }
+}

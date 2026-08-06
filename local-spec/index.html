@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#102e2a">
+  <title>InfoCenter 設定審核中心</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23102e2a'/%3E%3Cpath d='M18 31l9 9 19-20' fill='none' stroke='%23d9e28f' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+
+  <header class="topbar">
+    <a href="../" class="brand" aria-label="回到總工作藍圖">
+      <span class="brand-arrow" aria-hidden="true">←</span>
+      <span>總工作藍圖</span>
+    </a>
+    <div class="write-state"><span aria-hidden="true"></span>InfoCenter 尚未寫入</div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow light">馴錢師星展專案 · 設定審核</p>
+        <h1 id="heroTitle">先決定，<br>再寫入。</h1>
+        <p class="hero-lead">從你此刻的管理意圖開始；一次只看一組決策，不必讀完整份規格。</p>
+        <div class="hero-actions">
+          <button class="button button-primary" type="button" data-open-intent="templates">先審核 3 組範本</button>
+          <button class="button button-ghost" type="button" data-open-intent="verification">試算執行證據</button>
+        </div>
+      </div>
+
+      <div class="hero-signal" aria-label="目前為零外部寫入，四項設定待核准">
+        <div class="signal-orbit" aria-hidden="true">
+          <span class="orbit orbit-one"></span>
+          <span class="orbit orbit-two"></span>
+          <span class="signal-dot dot-one"></span>
+          <span class="signal-dot dot-two"></span>
+          <div class="signal-core">
+            <strong>0</strong>
+            <span>外部寫入</span>
+          </div>
+        </div>
+        <p><strong id="decisionCount">4</strong> 項設定待你決定</p>
+      </div>
+    </section>
+
+    <div class="source-state" id="sourceState" role="status" aria-live="polite">
+      <span class="pulse" aria-hidden="true"></span>
+      <span>正在讀取本地規格…</span>
+    </div>
+
+    <section class="glance" aria-label="審核包摘要">
+      <div><strong id="fieldCount">—</strong><span>欄位</span></div>
+      <div><strong id="templateCount">—</strong><span>範本組</span></div>
+      <div><strong id="metricCount">—</strong><span>計算規則</span></div>
+      <div><strong id="stateCount">—</strong><span>證據狀態</span></div>
+    </section>
+
+    <section class="intent-hub" id="intentHub" aria-labelledby="intentTitle">
+      <div class="section-intro">
+        <p class="eyebrow">選擇意圖</p>
+        <h2 id="intentTitle">你現在想確認什麼？</h2>
+      </div>
+
+      <div class="intent-grid">
+        <button class="intent-card" type="button" data-open-intent="fields">
+          <span class="intent-number">01</span>
+          <span class="intent-visual visual-fields" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="intent-copy"><strong>欄位要怎麼存</strong><small>9 個欄位、3 種資料範圍</small></span>
+          <span class="intent-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="intent-card intent-featured" type="button" data-open-intent="templates">
+          <span class="intent-number">02 · 建議先看</span>
+          <span class="intent-visual visual-template" aria-hidden="true"><i></i><b>→</b><i></i></span>
+          <span class="intent-copy"><strong>先看 3 組範本</strong><small>工作定義 → 事件交付</small></span>
+          <span class="intent-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="intent-card" type="button" data-open-intent="calculations">
+          <span class="intent-number">03</span>
+          <span class="intent-visual visual-metric" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="intent-copy"><strong>數字要怎麼算</strong><small>分母、空值、信心一併確認</small></span>
+          <span class="intent-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="intent-card" type="button" data-open-intent="verification">
+          <span class="intent-number">04</span>
+          <span class="intent-visual visual-proof" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="intent-copy"><strong>如何確認真的有執行</strong><small>規則 → AI 預檢 → 人工驗收</small></span>
+          <span class="intent-arrow" aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="focus-shell" id="focusShell" aria-labelledby="focusTitle" hidden>
+      <div class="focus-toolbar">
+        <button class="back-button" id="backToIntents" type="button"><span aria-hidden="true">←</span> 回到選擇</button>
+        <nav class="focus-tabs" aria-label="設定審核類別" role="tablist">
+          <button type="button" role="tab" data-intent-tab="fields">欄位</button>
+          <button type="button" role="tab" data-intent-tab="templates">範本</button>
+          <button type="button" role="tab" data-intent-tab="calculations">計算</button>
+          <button type="button" role="tab" data-intent-tab="verification">執行證據</button>
+        </nav>
+      </div>
+
+      <div class="focus-heading">
+        <div>
+          <p class="eyebrow" id="focusEyebrow">設定審核</p>
+          <h2 id="focusTitle">選擇一項設定</h2>
+        </div>
+        <p id="focusDescription"></p>
+      </div>
+
+      <div id="focusContent" class="focus-content" aria-live="polite"></div>
+    </section>
+
+    <section class="approval-dock" id="approval" aria-labelledby="approvalTitle">
+      <div class="approval-progress" aria-hidden="true">
+        <svg viewBox="0 0 92 92">
+          <circle class="progress-track" cx="46" cy="46" r="38"></circle>
+          <circle class="progress-value" id="approvalRing" cx="46" cy="46" r="38"></circle>
+        </svg>
+        <div><strong id="approvalCount">0/4</strong><span>本機確認</span></div>
+      </div>
+      <div class="approval-copy">
+        <p class="eyebrow light">核准閘門</p>
+        <h2 id="approvalTitle">準備好，再讓設定進入 InfoCenter</h2>
+        <p>這裡的勾選只保留在目前瀏覽器，不會建立欄位、關閉工作或派薪。</p>
+      </div>
+      <div class="approval-actions">
+        <button class="button button-soft" id="reviewChecklist" type="button">檢視 4 項核准</button>
+        <button class="button button-lime" id="copyApproval" type="button">複製核准摘要</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>唯讀設定審核中心</span>
+    <span aria-hidden="true">·</span>
+    <span>資料來自 local-spec JSON</span>
+    <span aria-hidden="true">·</span>
+    <span>不呼叫 InfoCenter API</span>
+  </footer>
+
+  <dialog class="detail-dialog" id="detailDialog">
+    <div class="dialog-head">
+      <div><p class="eyebrow" id="dialogEyebrow">詳細資料</p><h2 id="dialogTitle">內容</h2></div>
+      <button class="icon-button" type="button" data-close-dialog aria-label="關閉">×</button>
+    </div>
+    <div class="dialog-body" id="dialogBody"></div>
+  </dialog>
+
+  <dialog class="detail-dialog approval-dialog" id="approvalDialog">
+    <div class="dialog-head">
+      <div><p class="eyebrow">本機核准</p><h2>進入 InfoCenter 前的 4 個決定</h2></div>
+      <button class="icon-button" type="button" data-close-dialog aria-label="關閉">×</button>
+    </div>
+    <div class="dialog-body">
+      <div class="check-stack" id="approvalChecks"></div>
+      <p class="dialog-note">核准進度只儲存在這個瀏覽器；真正新增 InfoCenter 欄位或範本仍需另行執行。</p>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
