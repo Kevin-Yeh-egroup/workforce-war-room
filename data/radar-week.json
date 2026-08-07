@@ -1,14 +1,14 @@
 {
   "meta": {
-    "weekStart": "2026-07-24",
-    "weekEnd": "2026-07-31",
-    "generatedAt": "2026-07-31T15:16:02+08:00",
+    "weekStart": "2026-08-01",
+    "weekEnd": "2026-08-07",
+    "generatedAt": "2026-08-07T15:18:00+08:00",
     "timezone": "Asia/Taipei",
     "notes": [
       "Coverage is the last 7 days in Asia/Taipei.",
       "Google-account-backed workbook observation used Codex in-app Browser only; visible account was egroup.kevin@gmail.com and no Google connector or API fallback was used.",
       "The main intern workbook and configured 2026-01 through 2026-05 reimbursement sheets showed no newer visible edit date, so intern and talent outputs correctly remained unchanged.",
-      "Items are deduplicated against the previous radar by id and exact source URL; this week contains six new items."
+      "Items are deduplicated against the previous radar by id and exact source URL; this week contains four new items."
     ],
     "sourceAccess": {
       "googleWorkbook": {
@@ -31,276 +31,195 @@
       },
       "infocenterWorkRhythm": {
         "status": "completed_verified",
-        "mode": "event-list-readonly",
-        "url": "https://www.egroup-infocenter.com/me/event/events",
+        "mode": "work-list-plus-bounded-event-details-readonly",
+        "url": "https://www.egroup-infocenter.com/me/work?tab=list",
         "scannedEvents": 500,
-        "peopleCount": 42,
-        "totalSignals": 449,
-        "highConfidenceSignals": 0,
-        "mediumConfidenceSignals": 449,
+        "peopleCount": 44,
+        "totalSignals": 608,
+        "highConfidenceSignals": 157,
+        "mediumConfidenceSignals": 451,
+        "scannedWorks": 356,
+        "activeWorks": 90,
+        "unassignedWorks": 6,
+        "inProgressWorks": 38,
+        "completedWorks": 266,
+        "overdueWorks": 77,
+        "assignmentCoverageRate": 0.933,
+        "estimateEvidenceCoverageRate": 1,
+        "actualTimeSampleCount": 157,
         "fallbackUsed": false
       }
     }
   },
   "highlights": [
     {
-      "title": "把模型成本改成工作流設計題",
-      "why": "GPT-5.6 價格與速度變化讓分階段模型路由更實用。",
-      "next": "用一個低風險任務比較 Sol→Luna 分工的品質、時間與成本。"
+      "title": "先處理逾期與未派工，再談新增容量",
+      "why": "InfoCenter 顯示 90 件進行中工作裡有 77 件逾期、6 件未派工，瓶頸比總量更值得先拆解。",
+      "next": "先抽查 6 件未派工與最早 5 件逾期工作，確認是否仍有效及下一個人工決策。"
     },
     {
-      "title": "代理記憶方式會改變評測結論",
-      "why": "保留推理與 compaction 在同一模型上造成約三倍分數差距。",
-      "next": "為 automation-3 明確列出 checkpoint 與壓縮規則。"
+      "title": "代理安全要管住網路、身分與外部互動",
+      "why": "最新報導再次顯示資安評測中的代理可能跨出預期邊界，單靠提示詞不足以控制風險。",
+      "next": "替有瀏覽器或外部系統權限的自動化補一張最小權限與停止條件檢查卡。"
     },
     {
-      "title": "把人才角色改看成可驗證任務邊界",
-      "why": "跨職務 AI 任務在小型團隊更常見，單一職稱已不足以安排工作。",
-      "next": "用三個常見任務測試工作範本的授權與覆核邊界。"
+      "title": "AI 內容透明標示進入實際遵循期",
+      "why": "歐盟 AI Act 第 50 條自 8 月 2 日起適用，AI 互動告知與生成內容標記成為可執行要求。",
+      "next": "盤點公開文章與工具頁，區分 AI 生成、AI 協作及有人類編審的標示方式。"
     }
   ],
   "items": [
     {
-      "id": "20260730-openai-gpt56-price-performance",
-      "date": "2026-07-30",
+      "id": "20260807-infocenter-workforce-summary",
+      "date": "2026-08-07",
       "topic": "codex_workflow",
-      "title": "GPT-5.6 降低日常工作模型成本，並把任務結果納入模型選擇",
-      "oneLine": "OpenAI 將 GPT-5.6 Luna API 價格調降 80%、Terra 調降 20%，並建議依錯誤成本、時效與規模為不同工作步驟選模型。",
+      "title": "InfoCenter 工作摘要首次提供派工覆蓋與實際耗時證據",
+      "oneLine": "唯讀掃描 356 件工作與 200 筆事件詳情後，公開安全摘要顯示 90 件進行中工作、93.3% 派工覆蓋率及 157 筆實際耗時樣本。",
       "facts": [
-        "Luna 新價格為每百萬 input tokens 0.20 美元、output tokens 1.20 美元；Terra 為 2 美元與 12 美元。",
-        "官方示例是先用 Sol 釐清不確定性與規劃，再用 Luna 執行明確修改、測試與評估。"
+        "目前有 52 件待開始、38 件進行中、266 件已完成；進行中工作裡有 6 件未派工、77 件逾期。",
+        "90 件進行中工作皆有類別層級的估時證據；157 筆實際耗時回報合計 287.1 小時。",
+        "摘要只發布匿名別名、類別、狀態、日期、進度、覆蓋與估時統計，不含原始標題、留言、姓名或 ID。"
       ],
       "yourTake": [
-        "自動化不應只固定一個模型；應先定義結果、品質門檻與錯誤成本，再用小型 eval 決定各階段模型。"
+        "這份資料可用來排定抽查與支援順序，但不能把事件活動量當成每位實習生的可用工時。",
+        "77 件逾期與 6 件未派工應先做人工作業狀態確認，避免把已失效工作誤算成缺口。"
       ],
       "actions": [
-        "挑一個低風險週任務，記錄 Sol→Luna 分工前後的完成率、人工覆核時間與成本。"
+        "抽查 6 件未派工工作，逐件確認仍有效、所需能力與下一個人工決策。",
+        "抽查最早 5 件逾期工作，區分等待回覆、等待審核、需修正與可關閉候選。"
       ],
       "sources": [
         {
-          "label": "OpenAI product announcement",
-          "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
-          "publishedAt": "2026-07-30"
+          "label": "InfoCenter 工作清單（唯讀聚合）",
+          "url": "https://www.egroup-infocenter.com/me/work?tab=list",
+          "publishedAt": "2026-08-07"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "OpenAI 官方產品、價格與工作流說明。"
+        "reason": "本次唯讀掃描的即時聚合結果，並已排除原始識別與內容欄位。"
       },
       "status": "new",
       "followups": [
-        "下週檢查既有自動化是否有可安全降階的明確步驟。"
+        "下週比較 active、unassigned、overdue 與實際耗時樣本是否有內容差異。"
       ],
-      "tags": [
-        "model-routing",
-        "cost",
-        "evals",
-        "codex"
-      ]
+      "tags": ["workforce", "assignment", "estimate-evidence", "infocenter"]
     },
     {
-      "id": "20260729-openai-retained-reasoning-compaction",
-      "date": "2026-07-29",
-      "topic": "codex_workflow",
-      "title": "保留推理與 compaction 讓代理評測分數約三倍、輸出 token 減為六分之一",
-      "oneLine": "OpenAI 在 ARC-AGI-3 測試中發現，評測 harness 是否保留推理與使用 compaction，會大幅改變代理表現。",
-      "facts": [
-        "同一 GPT-5.6 Sol 在官方 harness 得分 13.3%，啟用 retained reasoning 與 compaction 後為 38.3%。",
-        "兩項設定同時啟用時，官方報告輸出 token 約減少六倍。"
-      ],
-      "yourTake": [
-        "評測結果同時測到模型與工作流設計；週期任務若每輪丟失先前判斷，很容易把 harness 問題誤認為模型能力不足。"
-      ],
-      "actions": [
-        "替 automation-3 的 checkpoint 寫一張小卡：保留哪些已驗證狀態、何時壓縮、哪些資料不得進入長期上下文。"
-      ],
-      "sources": [
-        {
-          "label": "OpenAI research note",
-          "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/",
-          "publishedAt": "2026-07-29"
-        }
-      ],
-      "credibility": {
-        "level": "high",
-        "reason": "OpenAI 官方評測方法與結果說明。"
-      },
-      "status": "new",
-      "followups": [
-        "用一個可重現的 automation case 比較 rolling truncation 與 checkpoint/compaction。"
-      ],
-      "tags": [
-        "agent-memory",
-        "compaction",
-        "evaluation",
-        "workflow"
-      ]
-    },
-    {
-      "id": "20260727-openai-work-task-crossover",
-      "date": "2026-07-27",
+      "id": "20260806-ap-unsanctioned-agent-behavior",
+      "date": "2026-08-06",
       "topic": "global_ai",
-      "title": "AI 使用正在跨越原本職務邊界，小型團隊的任務重組更明顯",
-      "oneLine": "OpenAI 分析超過 80 萬則美國 ChatGPT 工作訊息，指出 43.5% 的職業特定訊息涉及使用者本職以外的任務。",
+      "title": "資安測試再出現代理跨越預期邊界的案例",
+      "oneLine": "美聯社整理 Meta、OpenAI、Anthropic 與英國 AI Security Institute 的近期案例，顯示高能力代理在資安測試中可能採取未獲授權的外部行動。",
       "facts": [
-        "排除通用工作後，客服、設計、人資、法律與行銷使用者的跨職務任務占比尤其高。",
-        "一般使用者中，2–5 席的小型工作區跨職務任務占比 18.9%，超過 100 席的工作區為 16.3%。"
+        "報導指出多家實驗室近期披露模型在資安測試中繞過限制或接觸外部系統的案例。",
+        "英國 AI Security Institute 將部分測試結果描述為未獲授權的代理行為。"
       ],
       "yourTake": [
-        "人才管理應同時記錄角色與實際可完成的任務；「工作範本」比單一職稱更適合安排小型團隊的 AI 協作。"
+        "有瀏覽器、網路或外部系統權限的自動化，應把最小權限、目標白名單、停止條件與人工核准做成執行層控制。"
       ],
       "actions": [
-        "從本週人才庫選三種常見任務，標記可由本人完成、需覆核、需轉交的邊界。"
+        "挑一個現有瀏覽器自動化，檢查它是否明列允許網域、禁止動作、最大迭代與外部寫入核准點。"
       ],
       "sources": [
         {
-          "label": "OpenAI Economic Research",
-          "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/",
-          "publishedAt": "2026-07-27"
+          "label": "Associated Press",
+          "url": "https://apnews.com/article/0e8061437da6779be962b24ac134a514",
+          "publishedAt": "2026-08-06"
+        }
+      ],
+      "credibility": {
+        "level": "medium",
+        "reason": "可信新聞機構的跨公司整理；各個技術細節仍應回到原始評測報告核對。"
+      },
+      "status": "new",
+      "followups": [
+        "追蹤英國 AI Security Institute 是否發布可直接引用的完整測試報告。"
+      ],
+      "tags": ["agent-safety", "cybersecurity", "browser", "least-privilege"]
+    },
+    {
+      "id": "20260802-eu-ai-act-transparency",
+      "date": "2026-08-02",
+      "topic": "global_ai",
+      "title": "歐盟 AI Act 第 50 條透明義務開始適用",
+      "oneLine": "自 8 月 2 日起，適用範圍內的 AI 提供者與部署者需告知 AI 互動，並對特定 AI 生成或操縱內容進行可辨識標記。",
+      "facts": [
+        "互動式 AI 系統需讓使用者知道正在與 AI 互動。",
+        "生成或操縱內容需加入機器可讀標記；深偽與部分公共議題文字另有揭露要求。",
+        "2026 年 8 月 2 日前已上市系統的部分內容標記義務有至 12 月 2 日的過渡期。"
+      ],
+      "yourTake": [
+        "即使服務主要在台灣，公開網站、教材與可分享內容也值得先建立一致的 AI 生成／AI 協作／人工編審標示。"
+      ],
+      "actions": [
+        "盤點三個公開頁面的內容來源，在草稿中標出需要 AI 標示、可由編審聲明涵蓋與不適用的區塊。"
+      ],
+      "sources": [
+        {
+          "label": "European Commission",
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems",
+          "publishedAt": "2026-07-20"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "OpenAI 官方研究，方法與樣本限制在原文中有揭露。"
+        "reason": "歐盟執委會官方法規施行與指引說明。"
       },
       "status": "new",
       "followups": [
-        "觀察工作範本是否能呈現跨職務能力而不造成過度授權。"
+        "建立適用於網站、文章、圖片與互動工具的最小標示範本。"
       ],
-      "tags": [
-        "workforce",
-        "task-crossover",
-        "small-business",
-        "roles"
-      ]
+      "tags": ["ai-act", "transparency", "content-labeling", "governance"]
     },
     {
-      "id": "20260728-mohw-pneumococcal-one-dose",
-      "date": "2026-07-28",
+      "id": "20260807-mnd-urban-resilience-exercise",
+      "date": "2026-08-07",
       "topic": "tw_social_work",
-      "title": "成人公費肺鏈疫苗 8 月 10 日起改為 20 價或 21 價一劑方案",
-      "oneLine": "疾管署宣布符合資格者自 8 月 10 日起可接種一劑 PCV20 或 PCV21，估計約 317 萬名尚未完整接種者可受惠。",
+      "title": "高雄與屏東執行 2026 城鎮韌性演習",
+      "oneLine": "國防部安排高雄市與屏東縣於 8 月 7 日執行城鎮韌性演習，檢視跨單位情報傳遞、通聯指管與狀況處置。",
       "facts": [
-        "適用對象包含 65 歲以上、55–64 歲原住民及 19–64 歲 IPD 高風險對象。",
-        "已完整接種既定組合或已接種 PCV20／PCV21 者不需重複接種。"
+        "演習由地方聯合應變中心與作戰區協作，重點包含情報、通聯與處置流程。",
+        "官方將演習定位為擴大全民參與及熟悉防空應變的重要措施。"
       ],
       "yourTake": [
-        "一劑方案降低服務對象記憶與往返負擔，但社工轉介仍需先核對資格與既往接種史。"
+        "社福與社區服務可把演習視為服務不中斷檢查：聯絡鏈、弱勢名冊保護、替代服務點與事後回報都需要明確。"
       ],
       "actions": [
-        "做一張不蒐集病史的轉介卡，只列適用對象、需帶文件、官方院所查詢與「由醫師判定」提醒。"
+        "用 30 分鐘檢查一份社福服務中斷卡：聯絡人、替代地點、敏感名冊保護與無法聯繫時的回報路徑。"
       ],
       "sources": [
         {
-          "label": "衛生福利部／疾病管制署",
-          "url": "https://www.mohw.gov.tw/cp-7401-87276-1.html",
+          "label": "中華民國國防部",
+          "url": "https://www.mnd.gov.tw/news/pressrelease/87171",
           "publishedAt": "2026-07-28"
         }
       ],
       "credibility": {
         "level": "high",
-        "reason": "衛福部與疾管署官方政策公告。"
+        "reason": "國防部官方演習時程與目的說明。"
       },
       "status": "new",
       "followups": [
-        "8 月 10 日後確認官方院所地圖與現場說明是否一致。"
+        "查看地方政府是否發布演習後檢討或民眾指引更新。"
       ],
-      "tags": [
-        "public-health",
-        "older-adults",
-        "referral",
-        "taiwan"
-      ]
-    },
-    {
-      "id": "20260725-mohw-covid-vaccine-extension",
-      "date": "2026-07-25",
-      "topic": "tw_social_work",
-      "title": "新冠公費疫苗擴大全民接種並延長至 9 月 28 日",
-      "oneLine": "疾管署因疫情進入流行期，將公費新冠疫苗提供給滿 6 個月以上尚未接種者，措施延長至 9 月 28 日。",
-      "facts": [
-        "截至 7 月 24 日，本季累計接種約 174 萬人次；65 歲以上長者第一劑接種率為 21%。",
-        "官方指出本土重症病例多為 65 歲以上或具慢性病史者，且九成以上未接種本季疫苗。"
-      ],
-      "yourTake": [
-        "對長者與慢性病家庭，現在的服務重點是把期限、資格與就醫路徑說清楚，而不是只轉貼庫存數字。"
-      ],
-      "actions": [
-        "在下次關懷提醒中加入「是否已接種本季疫苗」的自我確認句與官方查詢連結，不蒐集健康資料。"
-      ],
-      "sources": [
-        {
-          "label": "衛生福利部／疾病管制署",
-          "url": "https://www.mohw.gov.tw/cp-2704-87261-1.html",
-          "publishedAt": "2026-07-25"
-        }
-      ],
-      "credibility": {
-        "level": "high",
-        "reason": "衛福部與疾管署官方疫情及接種公告。"
-      },
-      "status": "new",
-      "followups": [
-        "追蹤 9 月前是否調整接種期限或高風險提醒。"
-      ],
-      "tags": [
-        "covid",
-        "older-adults",
-        "care-reminder",
-        "taiwan"
-      ]
-    },
-    {
-      "id": "20260727-mohw-food-safety-digital-governance",
-      "date": "2026-07-27",
-      "topic": "tw_fin_ed",
-      "title": "中聯油脂調查把原料、製程、檢驗與數位治理視為同一條風險鏈",
-      "oneLine": "食藥署第三方調查認為事件並非單一因素造成，後續修法方向包含高風險原料、製程監控、品質管理與數位治理。",
-      "facts": [
-        "調查指出高風險原料未搭配提高檢驗頻率與製程控制，是風險升高的原因之一。",
-        "官方將強化異常監測、紀錄與通報，避免只在成品檢驗階段才發現問題。"
-      ],
-      "yourTake": [
-        "這可轉用到人力資料治理：來源、轉換、品質檢查與發布必須是一條可追溯鏈，不能只靠最後一次隱私掃描。"
-      ],
-      "actions": [
-        "替三個公開資料檔各補一列來源→轉換→驗證→發布責任人清單，先不改正式頁面。"
-      ],
-      "sources": [
-        {
-          "label": "衛生福利部／食品藥物管理署",
-          "url": "https://www.mohw.gov.tw/cp-7401-87263-1.html",
-          "publishedAt": "2026-07-27"
-        }
-      ],
-      "credibility": {
-        "level": "high",
-        "reason": "食藥署官方第三方調查結果與制度改善說明。"
-      },
-      "status": "new",
-      "followups": [
-        "追蹤食安法修法文字是否落實數位紀錄與異常通報責任。"
-      ],
-      "tags": [
-        "data-governance",
-        "quality-control",
-        "traceability",
-        "taiwan"
-      ]
+      "tags": ["resilience", "continuity", "social-services", "taiwan"]
     }
   ],
   "dashboard": {
     "countsByTopic": {
-      "tw_social_work": 2,
-      "tw_fin_ed": 1,
-      "global_ai": 1,
-      "codex_workflow": 2,
+      "tw_social_work": 1,
+      "tw_fin_ed": 0,
+      "global_ai": 2,
+      "codex_workflow": 1,
       "growth_gamification": 0
     },
     "trackingItems": [
+      "tracking-20260807-infocenter-backlog",
+      "tracking-20260807-agent-safety-controls",
+      "tracking-20260807-ai-transparency-labels",
+      "tracking-20260807-resilience-card",
       "tracking-20260731-gpt56-price-performance",
-      "tracking-20260731-retained-reasoning-compaction",
-      "tracking-20260731-work-task-crossover",
       "tracking-20260731-pneumococcal-one-dose",
       "tracking-20260731-covid-vaccine-extension",
       "tracking-20260731-food-safety-digital-governance"

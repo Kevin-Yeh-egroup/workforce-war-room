@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-08-06T10:26:46.254Z",
+    "generatedAt": "2026-08-07T07:03:22.911Z",
     "source": {
       "system": "InfoCenter",
       "mode": "read-only work list plus numeric event-comment signals",
@@ -29,7 +29,7 @@
     "revision": 0,
     "completed": 266,
     "unassigned": 6,
-    "overdue": 76,
+    "overdue": 77,
     "assignmentCoverageCount": 84,
     "assignmentCoverageRate": 0.933,
     "estimateEvidenceCoverageCount": 90,
@@ -2232,6 +2232,34 @@
       "coverageStatus": "covered"
     },
     {
+      "id": "W-2A47A809",
+      "label": "逐字稿與名詞校正 · #2A47",
+      "categoryId": "TRANSCRIPT_QA",
+      "categoryName": "逐字稿與名詞校正",
+      "status": "in_progress",
+      "statusLabel": "進行中",
+      "stage": "執行中",
+      "createdDate": "2026-07-23",
+      "dueDate": "2026-08-06",
+      "overdue": true,
+      "progress": 40,
+      "assignedCount": 1,
+      "eventCount": 5,
+      "completedEventCount": 2,
+      "estimatedHoursP50": 2,
+      "estimatedHoursP80": 2.33,
+      "estimateSampleCount": 2,
+      "estimateConfidence": "low",
+      "estimateSource": "linked-event-comments",
+      "minimumLevel": "L1",
+      "skills": [
+        "文字校對",
+        "專有名詞辨識",
+        "耐心"
+      ],
+      "coverageStatus": "covered"
+    },
+    {
       "id": "W-1847E6E9",
       "label": "逐字稿與名詞校正 · #1847",
       "categoryId": "TRANSCRIPT_QA",
@@ -2564,34 +2592,6 @@
         "情境測試",
         "問題重現",
         "條理回報"
-      ],
-      "coverageStatus": "covered"
-    },
-    {
-      "id": "W-2A47A809",
-      "label": "逐字稿與名詞校正 · #2A47",
-      "categoryId": "TRANSCRIPT_QA",
-      "categoryName": "逐字稿與名詞校正",
-      "status": "in_progress",
-      "statusLabel": "進行中",
-      "stage": "執行中",
-      "createdDate": "2026-07-23",
-      "dueDate": "2026-08-06",
-      "overdue": false,
-      "progress": 40,
-      "assignedCount": 1,
-      "eventCount": 5,
-      "completedEventCount": 2,
-      "estimatedHoursP50": 2,
-      "estimatedHoursP80": 2.33,
-      "estimateSampleCount": 2,
-      "estimateConfidence": "low",
-      "estimateSource": "linked-event-comments",
-      "minimumLevel": "L1",
-      "skills": [
-        "文字校對",
-        "專有名詞辨識",
-        "耐心"
       ],
       "coverageStatus": "covered"
     },

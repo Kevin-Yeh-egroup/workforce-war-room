@@ -1,76 +1,84 @@
 {
   "items": [
     {
+      "id": "tracking-20260807-infocenter-backlog",
+      "createdAt": "2026-08-07",
+      "topic": "codex_workflow",
+      "title": "抽查未派工與最早逾期工作，確認仍有效及下一個人工決策。",
+      "status": "open",
+      "nextCheck": "2026-08-14",
+      "question": "active、unassigned、overdue 與實際耗時樣本是否有內容差異？",
+      "links": ["https://www.egroup-infocenter.com/me/work?tab=list"]
+    },
+    {
+      "id": "tracking-20260807-agent-safety-controls",
+      "createdAt": "2026-08-07",
+      "topic": "global_ai",
+      "title": "檢查一個瀏覽器自動化的最小權限與停止條件。",
+      "status": "open",
+      "nextCheck": "2026-08-14",
+      "question": "是否已明列允許網域、禁止動作、最大迭代與外部寫入核准點？",
+      "links": ["https://apnews.com/article/0e8061437da6779be962b24ac134a514"]
+    },
+    {
+      "id": "tracking-20260807-ai-transparency-labels",
+      "createdAt": "2026-08-07",
+      "topic": "global_ai",
+      "title": "盤點公開內容的 AI 生成、AI 協作與人工編審標示。",
+      "status": "open",
+      "nextCheck": "2026-08-14",
+      "question": "網站、文章、圖片與互動工具是否需要不同標示？",
+      "links": ["https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems"]
+    },
+    {
+      "id": "tracking-20260807-resilience-card",
+      "createdAt": "2026-08-07",
+      "topic": "tw_social_work",
+      "title": "檢查社福服務中斷卡的聯絡鏈、替代地點與敏感名冊保護。",
+      "status": "open",
+      "nextCheck": "2026-08-14",
+      "question": "地方演習後是否有新的民眾指引或檢討？",
+      "links": ["https://www.mnd.gov.tw/news/pressrelease/87171"]
+    },
+    {
       "id": "tracking-20260731-gpt56-price-performance",
       "createdAt": "2026-07-31",
       "topic": "codex_workflow",
-      "title": "挑一個低風險週任務，記錄 Sol→Luna 分工前後的完成率、人工覆核時間與成本。",
+      "title": "比較一個低風險任務採 Sol→Luna 分工前後的完成率、人工時間與成本。",
       "status": "open",
-      "nextCheck": "2026-08-07",
-      "question": "下週檢查既有自動化是否有可安全降階的明確步驟。",
-      "links": [
-        "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
-      ]
-    },
-    {
-      "id": "tracking-20260731-retained-reasoning-compaction",
-      "createdAt": "2026-07-31",
-      "topic": "codex_workflow",
-      "title": "替 automation-3 的 checkpoint 寫一張小卡：保留哪些已驗證狀態、何時壓縮、哪些資料不得進入長期上下文。",
-      "status": "open",
-      "nextCheck": "2026-08-07",
-      "question": "用一個可重現的 automation case 比較 rolling truncation 與 checkpoint/compaction。",
-      "links": [
-        "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/"
-      ]
-    },
-    {
-      "id": "tracking-20260731-work-task-crossover",
-      "createdAt": "2026-07-31",
-      "topic": "global_ai",
-      "title": "從本週人才庫選三種常見任務，標記可由本人完成、需覆核、需轉交的邊界。",
-      "status": "open",
-      "nextCheck": "2026-08-07",
-      "question": "觀察工作範本是否能呈現跨職務能力而不造成過度授權。",
-      "links": [
-        "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/"
-      ]
+      "nextCheck": "2026-08-14",
+      "question": "是否有可安全降階且品質門檻清楚的步驟？",
+      "links": ["https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"]
     },
     {
       "id": "tracking-20260731-pneumococcal-one-dose",
       "createdAt": "2026-07-31",
       "topic": "tw_social_work",
-      "title": "做一張不蒐集病史的轉介卡，只列適用對象、需帶文件、官方院所查詢與「由醫師判定」提醒。",
+      "title": "建立不蒐集病史的成人公費肺鏈疫苗轉介卡。",
       "status": "open",
-      "nextCheck": "2026-08-07",
-      "question": "8 月 10 日後確認官方院所地圖與現場說明是否一致。",
-      "links": [
-        "https://www.mohw.gov.tw/cp-7401-87276-1.html"
-      ]
+      "nextCheck": "2026-08-14",
+      "question": "8 月 10 日後官方院所資訊與現場說明是否一致？",
+      "links": ["https://www.mohw.gov.tw/cp-7401-87276-1.html"]
     },
     {
       "id": "tracking-20260731-covid-vaccine-extension",
       "createdAt": "2026-07-31",
       "topic": "tw_social_work",
-      "title": "在下次關懷提醒中加入「是否已接種本季疫苗」的自我確認句與官方查詢連結，不蒐集健康資料。",
+      "title": "保留不蒐集健康資料的新冠疫苗自我確認提醒。",
       "status": "open",
-      "nextCheck": "2026-08-07",
-      "question": "追蹤 9 月前是否調整接種期限或高風險提醒。",
-      "links": [
-        "https://www.mohw.gov.tw/cp-2704-87261-1.html"
-      ]
+      "nextCheck": "2026-08-14",
+      "question": "9 月前是否調整接種期限或高風險提醒？",
+      "links": ["https://www.mohw.gov.tw/cp-2704-87261-1.html"]
     },
     {
       "id": "tracking-20260731-food-safety-digital-governance",
       "createdAt": "2026-07-31",
       "topic": "tw_fin_ed",
-      "title": "替三個公開資料檔各補一列來源→轉換→驗證→發布責任人清單，先不改正式頁面。",
+      "title": "整理公開資料檔的來源、轉換、驗證與發布責任人。",
       "status": "open",
-      "nextCheck": "2026-08-07",
-      "question": "追蹤食安法修法文字是否落實數位紀錄與異常通報責任。",
-      "links": [
-        "https://www.mohw.gov.tw/cp-7401-87263-1.html"
-      ]
+      "nextCheck": "2026-08-14",
+      "question": "是否已從末端掃描前移到來源與轉換階段？",
+      "links": ["https://www.mohw.gov.tw/cp-7401-87263-1.html"]
     }
   ]
 }

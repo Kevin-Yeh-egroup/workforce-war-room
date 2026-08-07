@@ -1,22 +1,22 @@
-# 每週工作清單（2026-07-24～2026-07-31）
+# 每週工作清單（2026-08-01～2026-08-07）
 
 > 每項可在 30 分鐘內完成；薪資僅列 paid/due 狀態，不含金額或銀行資料。
 
 ## A. 本週可執行
 
-- [ ] 比較一個低風險任務採 Sol→Luna 分工前後的品質、人工覆核時間與成本。（Owner: Kevin｜Due: 2026-08-03）
-- [ ] 寫出 automation-3 的 checkpoint、compaction 與敏感資料排除規則小卡。（Owner: Kevin｜Due: 2026-08-03）
-- [ ] 從人才庫選三種常見任務，標記可自行完成、需覆核與需轉交的邊界。（Owner: Kevin｜Due: 2026-08-04）
-- [ ] 草擬成人公費肺鏈疫苗轉介卡，僅列資格、文件與官方查詢路徑。（Owner: Kevin｜Due: 2026-08-04）
-- [ ] 為公開資料檔整理來源→轉換→驗證→發布責任人清單。（Owner: Kevin｜Due: 2026-08-05）
-- [ ] 在關懷提醒中草擬「是否已接種本季疫苗」自我確認句，不蒐集健康資料。（Owner: Kevin｜Due: 2026-08-05）
+- [ ] 抽查 6 件未派工工作，確認仍有效、所需能力與下一個人工決策。（Owner: Kevin｜Due: 2026-08-10）
+- [ ] 抽查最早 5 件逾期工作，分成等待回覆、等待審核、需修正與可關閉候選。（Owner: Kevin｜Due: 2026-08-10）
+- [ ] 替一個瀏覽器自動化檢查允許網域、禁止動作、最大迭代與外部寫入核准點。（Owner: Kevin｜Due: 2026-08-11）
+- [ ] 盤點三個公開頁面的 AI 生成、AI 協作與人工編審標示需求。（Owner: Kevin｜Due: 2026-08-11）
+- [ ] 檢查一份社福服務中斷卡是否含聯絡人、替代地點、敏感名冊保護與回報路徑。（Owner: Kevin｜Due: 2026-08-12）
+- [ ] 比較一個低風險任務採 Sol→Luna 分工前後的品質、人工覆核時間與成本。（Owner: Kevin｜Due: 2026-08-12）
 
 ## B. 派工與薪資狀態
 
-- [ ] 檢查 34 位 active 實習生本週是否都有一個 30 分鐘內可完成的下一步。（Status: dispatch-check｜Owner: Kevin｜Due: 2026-08-03）
-- [ ] 核對公開薪資狀態為 paid 25、due 0；只確認狀態，不記錄金額或銀行資料。（Status: paid/due-check｜Owner: Kevin｜Due: 2026-08-03）
+- [ ] 檢查 34 位 active 實習生是否都有一個 30 分鐘內可完成的下一步；正式派工仍由 Kevin 在 InfoCenter 核准。（Status: dispatch-check｜Owner: Kevin｜Due: 2026-08-10）
+- [ ] 核對公開薪資狀態為 paid 25、due 0；只確認狀態，不記錄金額或銀行資料。（Status: paid/due-check｜Owner: Kevin｜Due: 2026-08-10）
 
 ## C. 下週追蹤
 
-- [ ] 檢查模型路由小測是否同時記錄完成率、人工時間與成本。（Owner: Kevin｜Due: 2026-08-07）
-- [ ] 檢查 InfoCenter 聚合是否仍為 42 人、449 個訊號；若無內容差異則記錄 no-op。（Owner: Kevin｜Due: 2026-08-07）
+- [ ] 比較 InfoCenter 的 active、unassigned、overdue 與 157 筆實際耗時樣本是否有內容差異。（Owner: Kevin｜Due: 2026-08-14）
+- [ ] 檢查 8 月 10 日後成人公費肺鏈疫苗院所資訊與現場說明是否一致。（Owner: Kevin｜Due: 2026-08-14）
