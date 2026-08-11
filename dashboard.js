@@ -6,6 +6,8 @@ const DATA_PATHS = {
   workSummary: "./data/infocenter-work-summary.json",
   rhythm: "./data/work-rhythm.internal.json",
   blueprint: "./data/work-blueprint.json",
+  capacity: "./data/capacity-week.public.json",
+  notifications: "./data/reminders.public.json",
 };
 
 const state = {
@@ -18,6 +20,8 @@ const state = {
   recommendations: [],
   sources: [],
   errors: [],
+  activeTaskId: null,
+  activeRecommendationIndex: null,
 };
 
 const numberFormat = new Intl.NumberFormat("zh-TW", { maximumFractionDigits: 1 });
@@ -57,6 +61,8 @@ async function loadDashboard() {
     workSummary: fetchJson(DATA_PATHS.workSummary),
     rhythm: fetchJson(DATA_PATHS.rhythm),
     blueprint: fetchJson(DATA_PATHS.blueprint),
+    capacity: fetchJson(DATA_PATHS.capacity),
+    notifications: fetchJson(DATA_PATHS.notifications),
   };
 
   const entries = Object.entries(loaders);
@@ -100,6 +106,7 @@ function renderAll() {
   renderPeopleGrid();
   renderDomains();
   renderRecommendations();
+  renderNotifications();
   updateNavigationCounts();
   updateFooter();
   document.querySelector("#reloadButton").disabled = false;
@@ -115,7 +122,7 @@ function bindNavigation() {
   });
 
   const requestedView = window.location.hash.replace("#", "");
-  if (["overview", "dispatch", "people", "blueprint", "recommendations"].includes(requestedView)) {
+  if (["overview", "dispatch", "people", "blueprint", "recommendations", "notifications"].includes(requestedView)) {
     showView(requestedView, false);
   }
 }
@@ -124,14 +131,22 @@ function bindControls() {
   document.querySelector("#reloadButton").addEventListener("click", loadDashboard);
   document.querySelector("#copyBriefButton").addEventListener("click", copyManagementBrief);
   document.querySelector("#copyRecommendationButton").addEventListener("click", copyRecommendationList);
+  document.querySelector("#copyNotificationButton").addEventListener("click", copyNotificationList);
+  document.querySelector("#closeTaskDetail").addEventListener("click", () => document.querySelector("#taskDetailDialog").close());
+  document.querySelector("#copyTaskLocator").addEventListener("click", copyActiveTaskLocator);
+  document.querySelector("#taskDetailDialog").addEventListener("click", (event) => {
+    if (event.target === event.currentTarget) event.currentTarget.close();
+  });
+  document.querySelector("#closeRecommendationDetail").addEventListener("click", () => document.querySelector("#recommendationDetailDialog").close());
+  document.querySelector("#copyRecommendationDetail").addEventListener("click", copyActiveRecommendationDetail);
+  document.querySelector("#goToRecommendationTasks").addEventListener("click", goToActiveRecommendationTasks);
+  document.querySelector("#recommendationDetailDialog").addEventListener("click", (event) => {
+    if (event.target === event.currentTarget) event.currentTarget.close();
+  });
 
   document.querySelectorAll("[data-task-filter]").forEach((button) => {
     button.addEventListener("click", () => {
-      state.taskFilter = button.dataset.taskFilter;
-      document.querySelectorAll("[data-task-filter]").forEach((item) => {
-        item.classList.toggle("is-active", item === button);
-      });
-      renderTasks();
+      setTaskFilter(button.dataset.taskFilter);
     });
   });
 
@@ -144,6 +159,14 @@ function bindControls() {
     state.peopleStatus = event.target.value;
     renderPeopleGrid();
   });
+}
+
+function setTaskFilter(filter) {
+  state.taskFilter = filter;
+  document.querySelectorAll("[data-task-filter]").forEach((item) => {
+    item.classList.toggle("is-active", item.dataset.taskFilter === filter);
+  });
+  renderTasks();
 }
 
 function showView(view, updateHash = true) {
@@ -188,6 +211,8 @@ function normalizeInfoCenterWorkItems(summary) {
     estimateConfidence: item.estimateConfidence || "baseline",
     estimateSource: item.estimateSource || "planning-baseline",
     coverageStatus: item.coverageStatus || "unassigned",
+    eventCount: Number(item.eventCount || 0),
+    completedEventCount: Number(item.completedEventCount || 0),
     delegation: item.assignedCount > 0
       ? { type: "covered", label: "已有人員標記", className: "good" }
       : { type: "unassigned", label: "待派", className: "danger" },
@@ -261,6 +286,7 @@ function buildSourceStates() {
   const rhythm = state.datasets.rhythm;
   const blueprint = state.datasets.blueprint;
   const workSummary = state.datasets.workSummary;
+  const capacity = state.datasets.capacity;
 
   return [
     createSourceState("InfoCenter 工作摘要", workSummary?.meta?.generatedAt, Boolean(workSummary)),
@@ -268,6 +294,7 @@ function buildSourceStates() {
     createSourceState("每週工作與雷達", radar?.meta?.generatedAt, Boolean(radar)),
     createSourceState("InfoCenter 工作節奏", rhythm?.meta?.generatedAt, Boolean(rhythm)),
     createSourceState("工作藍圖規格", blueprint?.meta?.updatedAt, Boolean(blueprint)),
+    createSourceState("本週可用工時", capacity?.meta?.generatedAt, Boolean(capacity)),
   ];
 }
 
@@ -285,12 +312,93 @@ function createSourceState(name, rawDate, loaded) {
   return { name, date, ageDays, status: "danger", label: `${ageDays} 天前` };
 }
 
+function getTaskIssueType(task) {
+  if (!task.done && task.statusKey === "in_progress" && task.assignedCount === 0) return "owner_conflict";
+  if (!task.done && task.statusKey === "pending" && task.assignedCount > 0 && task.eventCount > 0) return "status_review";
+  return null;
+}
+
+function getCurrentWeekStart(date = new Date()) {
+  const local = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  const day = local.getDay() || 7;
+  local.setDate(local.getDate() - day + 1);
+  const year = local.getFullYear();
+  const month = String(local.getMonth() + 1).padStart(2, "0");
+  const dateOfMonth = String(local.getDate()).padStart(2, "0");
+  return `${year}-${month}-${dateOfMonth}`;
+}
+
+function getCapacityMap() {
+  const capacity = state.datasets.capacity;
+  if (capacity?.meta?.weekStart !== getCurrentWeekStart()) return new Map();
+  const activeIds = new Set((state.datasets.interns?.interns || [])
+    .filter((person) => person.status === "active")
+    .map((person) => String(person.id)));
+  const entries = (capacity?.entries || []).filter((entry) => {
+    const hours = Number(entry.availableHours);
+    return activeIds.has(String(entry.personId))
+      && Number.isFinite(hours)
+      && hours >= 0
+      && hours <= 40
+      && ["L1", "L2", "L3"].includes(entry.level);
+  });
+  return new Map(entries.map((entry) => [String(entry.personId), { ...entry, availableHours: Number(entry.availableHours) }]));
+}
+
+function getCapacityStats() {
+  const activeCount = (state.datasets.interns?.interns || []).filter((person) => person.status === "active").length;
+  const capacityMap = getCapacityMap();
+  return {
+    activeCount,
+    covered: capacityMap.size,
+    availableHours: [...capacityMap.values()].reduce((sum, entry) => sum + entry.availableHours, 0),
+    coverageRate: activeCount ? capacityMap.size / activeCount : 0,
+  };
+}
+
+function buildTaskRecommendationDetail(task, change) {
+  return {
+    key: task.id,
+    title: task.title,
+    meta: [
+      `狀態：${task.status}`,
+      task.owner,
+      `期限：${task.due || "未設定"}`,
+      `事件：${task.eventCount} 筆`,
+      `P80：${numberFormat.format(task.estimatedHoursP80)} 小時`,
+    ],
+    change,
+  };
+}
+
+function buildPersonRecommendationDetail(person, change) {
+  return {
+    key: person.id,
+    title: maskName(person.displayName || "未命名"),
+    meta: [
+      `目前狀態：${person.status === "active" ? "active" : "paused"}`,
+      person.currentRole ? `角色：${person.currentRole}` : "角色：未設定",
+      person.workLevel ? `既有等級：${person.workLevel}` : "既有等級：未設定",
+    ],
+    change,
+  };
+}
+
 function buildRecommendations() {
   const items = [];
   const interns = state.datasets.interns;
   const workSummary = state.datasets.workSummary;
   const tracking = state.datasets.tracking;
   const staleSources = state.sources.filter((source) => source.status === "danger");
+  const ownerConflictTasks = state.tasks.filter((task) => getTaskIssueType(task) === "owner_conflict");
+  const unassignedTasks = state.tasks.filter((task) => !task.done && task.assignedCount === 0);
+  const overdueTasks = state.tasks.filter((task) => !task.done && task.overdue);
+  const statusReviewTasks = state.tasks.filter((task) => getTaskIssueType(task) === "status_review");
+  const capacityMap = getCapacityMap();
+  const activePeople = (interns?.interns || []).filter((person) => person.status === "active");
+  const missingCapacityPeople = activePeople.filter((person) => !capacityMap.has(String(person.id)));
+  const pausedPeople = (interns?.interns || []).filter((person) => person.status === "paused");
+  const openTrackingItems = (tracking?.items || []).filter((item) => item.status !== "resolved");
 
   if (state.errors.length) {
     items.push({
@@ -299,6 +407,12 @@ function buildRecommendations() {
       description: `${state.errors.length} 個資料來源讀取失敗，部分數字目前不能作為派工依據。`,
       action: "檢查靜態資料檔與發布狀態",
       reason: state.errors.join("；"),
+      details: state.errors.map((error, index) => ({
+        key: `SOURCE-${index + 1}`,
+        title: `資料來源錯誤 ${index + 1}`,
+        meta: [error],
+        change: "檢查檔案是否存在、JSON 是否有效，以及發布版本是否包含該來源。",
+      })),
     });
   }
 
@@ -312,7 +426,23 @@ function buildRecommendations() {
     });
   }
 
-  const unassigned = workSummary?.summary?.unassigned || 0;
+  const hardConflicts = ownerConflictTasks.length;
+  if (hardConflicts) {
+    items.push({
+      priority: "high",
+      title: `先確認 ${hardConflicts} 筆「進行中但無人員標記」工作`,
+      description: "這些工作不能直接當成一般待派；可能是主責遺失、狀態未更新或工作已失效。",
+      action: "逐筆確認主責與實際狀態，再決定補派或結案",
+      reason: "若直接重派，可能產生重複執行與責任不清",
+      taskFilter: "conflict",
+      details: ownerConflictTasks.map((task) => buildTaskRecommendationDetail(
+        task,
+        "先確認實際主責；續做則補上人員標記並校正進度，已失效則結案。",
+      )),
+    });
+  }
+
+  const unassigned = unassignedTasks.length;
   if (unassigned) {
     items.push({
       priority: "high",
@@ -320,10 +450,17 @@ function buildRecommendations() {
       description: "先確認工作仍有效，再依能力門檻、P80 工時與本週可用工時選人。",
       action: "回到 InfoCenter 補主責與期限",
       reason: "沒有主責的工作無法形成可追蹤的交付責任",
+      taskFilter: "unassigned",
+      details: unassignedTasks.map((task) => buildTaskRecommendationDetail(
+        task,
+        task.statusKey === "in_progress"
+          ? "先確認正在執行的人；續做則補主責，已失效則結案，不要直接重派。"
+          : "先確認工作仍有效；續做則補主責、期限與工作範本，失效則結案。",
+      )),
     });
   }
 
-  const overdue = workSummary?.summary?.overdue || 0;
+  const overdue = overdueTasks.length;
   if (overdue) {
     items.push({
       priority: "high",
@@ -331,6 +468,27 @@ function buildRecommendations() {
       description: "這批工作可能包含舊案，不應直接視為本週需求；請分成續做、改期與結案三類。",
       action: "先批次確認有效性，再派工",
       reason: "逾期舊案會放大看板需求量並造成錯誤派工",
+      taskFilter: "overdue",
+      details: overdueTasks.map((task) => buildTaskRecommendationDetail(
+        task,
+        "在 InfoCenter 選擇：仍有效則更新期限；已完成則補驗收並結案；不再執行則取消或結案。",
+      )),
+    });
+  }
+
+  const statusReview = statusReviewTasks.length;
+  if (statusReview) {
+    items.push({
+      priority: "medium",
+      title: `釐清 ${statusReview} 筆已有主責與事件、但仍顯示待開始的工作`,
+      description: "事件可能只是事前建立，也可能代表工作狀態未隨執行更新；目前不能一律判定已開始。",
+      action: "抽查事件內容後，統一工作與事件的狀態語意",
+      reason: "避免把已執行工作重複派出，或把空事件誤當成執行證據",
+      taskFilter: "conflict",
+      details: statusReviewTasks.map((task) => buildTaskRecommendationDetail(
+        task,
+        "抽查事件內容；有執行證據則更新工作為進行中，只有事前空事件則保留待開始並補註記。",
+      )),
     });
   }
 
@@ -342,6 +500,17 @@ function buildRecommendations() {
       description: `${weakCategories.map((item) => item.categoryName).join("、")}目前樣本不足，P80 只能作暫估。`,
       action: "請工讀生在事件評論固定回報實際耗時",
       reason: "至少 3 筆才有中信心，8 筆以上才列高信心",
+      systemTarget: "event",
+      details: weakCategories.map((category) => ({
+        key: category.categoryId,
+        title: category.categoryName,
+        meta: [
+          `樣本：${category.sampleCount} 筆`,
+          `目前信心：${estimateConfidenceLabel(category.confidence)}`,
+          `P50 / P80：${numberFormat.format(category.p50Hours)} / ${numberFormat.format(category.p80Hours)} 小時`,
+        ],
+        change: "要求事件完成評論固定填寫實際耗時；累積至少 3 筆後再更新估時信心。",
+      })),
     });
   }
 
@@ -352,16 +521,30 @@ function buildRecommendations() {
       description: `此來源停留在 ${formatDate(source.date)}，已超過 30 天。`,
       action: "先重新產生安全快照，再做分工",
       reason: "過期狀態不能代表目前可投入情形",
+      details: [{
+        key: source.name,
+        title: source.name,
+        meta: [`資料日期：${formatDate(source.date)}`, `距今：${source.ageDays} 天`],
+        change: "重新產生公開安全快照，確認來源日期與人員狀態後再進行派工。",
+      }],
     });
   });
 
-  items.push({
-    priority: "medium",
-    title: "建立每週可用工時回填",
-    description: "目前已有工作 P50/P80 與能力門檻，但仍缺每位工讀生本週能投入幾小時。",
-    action: "每週一回填可用時數，派工後扣除已承諾 P80",
-    reason: "沒有容量分母，只能知道適不適合，不能判斷會不會過載",
-  });
+  const capacityStats = getCapacityStats();
+  if (capacityStats.covered < capacityStats.activeCount) {
+    items.push({
+      priority: "medium",
+      title: `補齊 ${capacityStats.activeCount - capacityStats.covered} 位 active 成員的本週容量與等級`,
+      description: `目前只有 ${capacityStats.covered}/${capacityStats.activeCount} 位同時具備本週可用工時與 L1–L3 等級。`,
+      action: "每週一回填可用時數與等級，派工後扣除已承諾 P80",
+      reason: "沒有容量分母，只能知道適不適合，不能判斷會不會過載",
+      systemTarget: "people",
+      details: missingCapacityPeople.map((person) => buildPersonRecommendationDetail(
+        person,
+        "補填本週可用工時、L1–L3 與能力標籤；未填完前維持不可派。",
+      )),
+    });
+  }
 
   const paused = interns?.meta?.counts?.paused || 0;
   if (paused > 0) {
@@ -371,10 +554,15 @@ function buildRecommendations() {
       description: "將暫停原因、可恢復日期與是否保留聯繫分開處理。",
       action: "安排簡短近況確認，不直接派新工作",
       reason: "避免把暫停成員列入可分配人力",
+      systemTarget: "people",
+      details: pausedPeople.map((person) => buildPersonRecommendationDetail(
+        person,
+        "確認本月狀態、暫停原因與預計恢復日期；未恢復前不派新工作。",
+      )),
     });
   }
 
-  const openTracking = (tracking?.items || []).filter((item) => item.status !== "resolved").length;
+  const openTracking = openTrackingItems.length;
   if (openTracking) {
     items.push({
       priority: "low",
@@ -382,6 +570,12 @@ function buildRecommendations() {
       description: "只保留有下一個檢查日期或明確問題的項目。",
       action: "完成、改期或移出本週視圖",
       reason: "避免追蹤清單長期累積成第二個待辦箱",
+      details: openTrackingItems.map((item) => ({
+        key: item.id,
+        title: item.title,
+        meta: [`狀態：${item.status}`, `下次檢查：${item.nextCheck || "未設定"}`, item.question || "尚無檢查問題"],
+        change: "在追蹤清單標記完成、設定新的檢查日期，或移出本週視圖。",
+      })),
     });
   }
 
@@ -430,6 +624,7 @@ function renderMetrics() {
 
 function renderCoverage() {
   const summary = state.datasets.workSummary?.summary || {};
+  const capacity = getCapacityStats();
   const cards = [
     {
       label: "人員涵蓋率",
@@ -447,10 +642,12 @@ function renderCoverage() {
     },
     {
       label: "本週容量覆蓋率",
-      value: 0,
-      fraction: "尚未接入可用工時回填",
-      note: "不可用歷史工時或事件數替代",
-      tone: "missing",
+      value: Math.round(capacity.coverageRate * 100),
+      fraction: `${capacity.covered} / ${capacity.activeCount} 位 active 成員`,
+      note: capacity.covered
+        ? `已登錄 ${numberFormat.format(capacity.availableHours)} 小時；不可用歷史工時替代`
+        : "本週尚無有效回填；不可用歷史工時或事件數替代",
+      tone: capacity.covered === 0 ? "missing" : capacity.coverageRate >= 0.9 ? "good" : "warning",
     },
   ];
 
@@ -516,27 +713,36 @@ function renderTasks() {
   const overview = document.querySelector("#overviewTaskList");
   const dispatch = document.querySelector("#dispatchTaskList");
   const active = state.tasks.filter((task) => !task.done);
-  const priority = [...active].sort((a, b) => Number(b.overdue) - Number(a.overdue)
+  const priority = [...active].sort((a, b) => Number(Boolean(getTaskIssueType(b))) - Number(Boolean(getTaskIssueType(a)))
+    || Number(b.overdue) - Number(a.overdue)
     || a.assignedCount - b.assignedCount
     || String(a.due || "9999").localeCompare(String(b.due || "9999")));
   const filtered = state.tasks.filter((task) => {
     if (state.taskFilter === "active") return !task.done;
+    if (state.taskFilter === "conflict") return Boolean(getTaskIssueType(task));
     if (state.taskFilter === "unassigned") return !task.done && task.assignedCount === 0;
-    if (state.taskFilter === "overdue") return task.overdue;
+    if (state.taskFilter === "overdue") return !task.done && task.overdue;
     if (state.taskFilter === "in_progress") return task.statusKey === "in_progress";
     if (state.taskFilter === "completed") return task.statusKey === "completed";
     return !task.done;
-  });
+  }).sort((a, b) => Number(Boolean(getTaskIssueType(b))) - Number(Boolean(getTaskIssueType(a)))
+    || Number(b.overdue) - Number(a.overdue)
+    || a.assignedCount - b.assignedCount
+    || String(a.due || "9999").localeCompare(String(b.due || "9999")));
 
   overview.innerHTML = renderTaskRows(priority.slice(0, 6));
   dispatch.innerHTML = renderTaskRows(filtered);
+  bindTaskDetailButtons();
 }
 
 function renderTaskRows(tasks) {
   if (!tasks.length) return '<div class="empty-state">這個篩選條件下沒有待處理工作。</div>';
 
-  return tasks.map((task) => `
-    <article class="task-row ${task.overdue ? "is-overdue" : ""}">
+  return tasks.map((task) => {
+    const issueType = getTaskIssueType(task);
+    const issueLabel = issueType === "owner_conflict" ? "狀態矛盾" : issueType === "status_review" ? "待確認狀態" : "";
+    return `
+    <article class="task-row ${task.overdue ? "is-overdue" : ""} ${issueType ? "is-conflict" : ""}">
       <span class="task-signal" aria-hidden="true"></span>
       <div>
         <div class="task-title">${escapeHtml(task.title)}</div>
@@ -550,12 +756,71 @@ function renderTaskRows(tasks) {
         ${task.source === "infocenter" ? `<div class="task-evidence"><span>${escapeHtml(estimateConfidenceLabel(task.estimateConfidence))}</span><span>${task.estimateSampleCount} 筆耗時樣本</span><span>${escapeHtml(task.skills.join("、"))}</span></div>` : ""}
       </div>
       <div class="task-side">
+        ${issueLabel ? `<span class="task-label warning">${escapeHtml(issueLabel)}</span>` : ""}
         <span class="task-label ${task.delegation.className}">${escapeHtml(task.delegation.label)}</span>
         ${task.progress > 0 ? `<span class="task-label neutral">進度 ${numberFormat.format(task.progress)}%</span>` : ""}
         ${task.overdue ? '<span class="task-label danger">已逾期</span>' : ""}
+        <button class="task-action" type="button" data-task-detail-id="${escapeHtml(task.id)}">查看處理方式</button>
       </div>
     </article>
-  `).join("");
+  `;
+  }).join("");
+}
+
+function bindTaskDetailButtons() {
+  document.querySelectorAll("[data-task-detail-id]").forEach((button) => {
+    button.addEventListener("click", () => openTaskDetail(button.dataset.taskDetailId));
+  });
+}
+
+function openTaskDetail(id) {
+  const task = state.tasks.find((item) => String(item.id) === String(id));
+  if (!task) return;
+  state.activeTaskId = task.id;
+  const issueType = getTaskIssueType(task);
+  const triage = issueType === "owner_conflict"
+    ? "狀態為進行中但沒有任何人員標記。先確認實際主責，再決定補派、更新狀態或結案。"
+    : issueType === "status_review"
+      ? "已有主責與事件，但工作仍顯示待開始。先抽查事件是否含實際執行證據，再統一狀態。"
+      : task.overdue
+        ? "先判斷這筆工作要續做、改期或結案；確認仍有效後才進行派工。"
+        : task.assignedCount === 0
+          ? "工作仍有效時，依能力門檻與 P80 工時補上主責；沒有容量資料前不做自動指派。"
+          : "主責已標記；下一步應確認事件中的活動、成果連結、送審與人工驗收。";
+  document.querySelector("#taskDetailTitle").textContent = task.title;
+  document.querySelector("#taskDetailBody").innerHTML = `
+    <div class="task-detail-grid">
+      <div><span>公開代碼</span><strong>${escapeHtml(task.id)}</strong></div>
+      <div><span>目前狀態</span><strong>${escapeHtml(task.status)}</strong></div>
+      <div><span>人員標記</span><strong>${escapeHtml(task.owner)}</strong></div>
+      <div><span>期限</span><strong>${task.due ? escapeHtml(task.due) : "未設定"}</strong></div>
+      <div><span>能力門檻</span><strong>${escapeHtml(task.minimumLevel || "待確認")}</strong></div>
+      <div><span>預估 P50 / P80</span><strong>${numberFormat.format(task.estimatedHoursP50)} / ${numberFormat.format(task.estimatedHoursP80)} 小時</strong></div>
+    </div>
+    <div class="task-triage-note"><span>建議處理</span><p>${escapeHtml(triage)}</p></div>
+    <div class="task-detail-evidence">
+      <span>事件 ${task.eventCount} 筆</span>
+      <span>完成事件 ${task.completedEventCount} 筆</span>
+      ${(task.skills || []).map((skill) => `<span>${escapeHtml(skill)}</span>`).join("")}
+    </div>
+    <p class="task-dialog-boundary">公開摘要不保存原始工作標題或 InfoCenter 原始 ID，因此無法安全產生精確深層連結。請以公開代碼與狀態在一般工作清單中查找，並由人員確認後才變更。</p>`;
+  document.querySelector("#taskDetailDialog").showModal();
+}
+
+async function copyActiveTaskLocator() {
+  const task = state.tasks.find((item) => String(item.id) === String(state.activeTaskId));
+  if (!task) return;
+  const issueType = getTaskIssueType(task);
+  const text = [
+    `工作：${task.title}`,
+    `公開代碼：${task.id}`,
+    `狀態：${task.status}`,
+    `人員標記：${task.owner}`,
+    `期限：${task.due || "未設定"}`,
+    `需確認：${issueType === "owner_conflict" ? "進行中但無人員標記" : issueType === "status_review" ? "已有主責與事件但仍待開始" : task.overdue ? "逾期有效性" : "無"}`,
+    "注意：公開摘要沒有 InfoCenter 原始 ID，請在一般工作清單人工確認後再變更。",
+  ].join("\n");
+  await copyText(text, "工作查找摘要已複製");
 }
 
 function estimateConfidenceLabel(value) {
@@ -571,6 +836,7 @@ function renderPeopleSnapshot() {
   const paused = counts.paused || 0;
   const activePercent = total ? Math.round((active / total) * 100) : 0;
   const signalPeople = rhythm?.summary?.peopleCount || 0;
+  const capacity = getCapacityStats();
 
   document.querySelector("#peopleSnapshot").innerHTML = `
     <div class="snapshot-number"><strong>${numberFormat.format(active)}</strong><span>位 active 成員</span></div>
@@ -584,19 +850,18 @@ function renderPeopleSnapshot() {
         <div class="progress-track"><div class="progress-fill warning" style="width:${total ? clamp((paused / total) * 100, 0, 100) : 0}%"></div></div>
       </div>
     </div>
-    <p class="metric-hint">工作節奏資料涵蓋 ${signalPeople} 人；這是歷史訊號，不代表本週可用時數。</p>`;
+    <p class="metric-hint">本週容量已回填 ${capacity.covered}/${capacity.activeCount} 位；工作節奏資料涵蓋 ${signalPeople} 人，但歷史訊號不代表本週可用時數。</p>`;
 }
 
 function renderPeopleSummary() {
   const interns = state.datasets.interns;
-  const rhythm = state.datasets.rhythm;
   const counts = interns?.meta?.counts || {};
-  const totalHours = (interns?.interns || []).reduce((sum, person) => sum + toNumber(person.workHoursThisMonth), 0);
+  const capacity = getCapacityStats();
   const cards = [
     { label: "成員總數", value: counts.total || 0, hint: "公開安全快照" },
     { label: "Active", value: counts.active || 0, hint: "可聯繫，不等於本週有空" },
-    { label: "快照工時", value: numberFormat.format(totalHours), hint: "來源月份的歷史合計" },
-    { label: "工作訊號", value: rhythm?.summary?.totalSignals || 0, hint: `${rhythm?.summary?.peopleCount || 0} 人的聚合訊號` },
+    { label: "容量已回填", value: `${capacity.covered}/${capacity.activeCount}`, hint: "同時具備本週工時與 L1–L3" },
+    { label: "本週可用", value: `${numberFormat.format(capacity.availableHours)}h`, hint: capacity.covered ? "有效回填合計" : "尚無有效回填" },
   ];
 
   document.querySelector("#peopleSummaryGrid").innerHTML = cards.map((card) => `
@@ -608,14 +873,18 @@ function renderPeopleSummary() {
 }
 
 function renderPeopleGrid() {
+  const capacityMap = getCapacityMap();
   const people = [...(state.datasets.interns?.interns || [])]
     .map((person) => ({
       ...person,
       safeName: maskName(person.displayName || "未命名"),
+      safeEmail: person.maskedEmail || "Email 未提供",
       hours: toNumber(person.workHoursThisMonth),
+      capacity: capacityMap.get(String(person.id)) || null,
     }))
     .filter((person) => state.peopleStatus === "all" || person.status === state.peopleStatus)
-    .filter((person) => !state.peopleSearch || person.safeName.toLowerCase().includes(state.peopleSearch))
+    .filter((person) => !state.peopleSearch || [person.safeName, person.safeEmail]
+      .some((value) => value.toLowerCase().includes(state.peopleSearch)))
     .sort((a, b) => {
       if (a.status !== b.status) return a.status === "active" ? -1 : 1;
       return a.hours - b.hours;
@@ -629,21 +898,26 @@ function renderPeopleGrid() {
 
   target.innerHTML = people.map((person) => {
     const active = person.status === "active";
-    const paid = person.payStatusThisMonth === "paid";
+    const canEvaluate = active && Boolean(person.capacity);
+    const skills = Array.isArray(person.capacity?.skills) ? person.capacity.skills : [];
     return `
       <article class="person-card">
         <div class="person-card-top">
           <div class="person-identity">
             <div class="person-avatar" aria-hidden="true">${escapeHtml(person.safeName.slice(0, 1))}</div>
-            <div><h3>${escapeHtml(person.safeName)}</h3><p>${escapeHtml(person.currentRole || "工讀生")}</p></div>
+            <div>
+              <div class="person-name-line"><h3>${escapeHtml(person.safeName)}</h3><span>${escapeHtml(person.safeEmail)}</span></div>
+              <p>${escapeHtml(person.currentRole || "工讀生")}</p>
+            </div>
           </div>
-          <span class="status-pill ${active ? "good" : "warning"}">${active ? "可聯繫" : "暫停"}</span>
+          <span class="status-pill ${canEvaluate ? "good" : active ? "neutral" : "warning"}">${canEvaluate ? "可評估" : active ? "待補資料" : "暫停"}</span>
         </div>
         <div class="person-facts">
-          <div class="person-fact"><span>快照工時</span><strong>${numberFormat.format(person.hours)} 小時</strong></div>
-          <div class="person-fact"><span>派薪狀態</span><strong>${paid ? "paid" : escapeHtml(person.payStatusThisMonth || "n/a")}</strong></div>
+          <div class="person-fact"><span>本週可用</span><strong>${person.capacity ? `${numberFormat.format(person.capacity.availableHours)} 小時` : "待回填"}</strong></div>
+          <div class="person-fact"><span>能力等級</span><strong>${escapeHtml(person.capacity?.level || "待回填")}</strong></div>
         </div>
-        <p>${active ? "可列入候選，但仍需確認本週可用時數與能力門檻。" : "目前不建議派新工作，先確認何時可恢復。"}</p>
+        <div class="person-tags">${skills.length ? skills.map((skill) => `<span>${escapeHtml(skill)}</span>`).join("") : "<span>能力標籤待補</span>"}</div>
+        <p>${canEvaluate ? "可依工作門檻與 P80 工時進入人工派工評估。" : active ? "尚不能列入可派名單；請先補本週可用時數與 L1–L3。" : "目前不建議派新工作，先確認何時可恢復。"}</p>
       </article>`;
   }).join("");
 }
@@ -679,12 +953,13 @@ function renderRecommendations() {
     return;
   }
 
-  overview.innerHTML = state.recommendations.slice(0, 3).map((item) => `
+  overview.innerHTML = state.recommendations.slice(0, 3).map((item, index) => `
     <article class="recommendation-card">
       <span class="status-pill ${priorityClass(item.priority)}">${priorityLabel(item.priority)}</span>
       <h3>${escapeHtml(item.title)}</h3>
       <p>${escapeHtml(item.description)}</p>
       <div class="recommendation-action">下一步：${escapeHtml(item.action)}</div>
+      ${item.details?.length ? `<button class="recommendation-detail-button" type="button" data-recommendation-detail="${index}">查看 ${item.details.length} 筆明細</button>` : ""}
     </article>`).join("");
 
   full.innerHTML = state.recommendations.map((item, index) => `
@@ -694,15 +969,136 @@ function renderRecommendations() {
         <h3>${escapeHtml(item.title)}</h3>
         <p>${escapeHtml(item.description)}</p>
         <div class="recommendation-reason">原因：${escapeHtml(item.reason)}</div>
+        ${item.details?.length ? `<button class="recommendation-detail-button" type="button" data-recommendation-detail="${index}">查看 ${item.details.length} 筆明細</button>` : ""}
       </div>
       <span class="status-pill ${priorityClass(item.priority)}">${priorityLabel(item.priority)}</span>
     </article>`).join("");
+
+  document.querySelectorAll("[data-recommendation-detail]").forEach((button) => {
+    button.addEventListener("click", () => openRecommendationDetail(Number(button.dataset.recommendationDetail)));
+  });
+}
+
+function renderNotifications() {
+  const summary = document.querySelector("#notificationSummary");
+  const target = document.querySelector("#notificationList");
+  const dataset = state.datasets.notifications;
+  const items = Array.isArray(dataset?.items) ? dataset.items : [];
+  const openItems = items.filter((item) => item.status !== "resolved");
+  const urgentItems = openItems.filter((item) => item.severity === "urgent");
+
+  summary.innerHTML = `
+    <article><span>未結提醒</span><strong>${openItems.length}</strong><small>仍需追蹤或確認</small></article>
+    <article><span>優先處理</span><strong>${urgentItems.length}</strong><small>影響本週工作判斷</small></article>
+    <article><span>固定提醒</span><strong>${escapeHtml(dataset?.meta?.scheduleLabel || "未設定")}</strong><small>${escapeHtml(dataset?.meta?.timezone || "Asia/Taipei")}</small></article>`;
+
+  if (!items.length) {
+    target.innerHTML = '<div class="empty-state">目前沒有可用的提醒資料。</div>';
+    return;
+  }
+
+  target.innerHTML = items.map((item) => `
+    <article class="notification-item ${escapeHtml(item.severity || "info")}">
+      <div class="notification-marker" aria-hidden="true"></div>
+      <div class="notification-content">
+        <div class="notification-head">
+          <div>
+            <span class="notification-category">${escapeHtml(item.category || "一般通知")}</span>
+            <h3>${escapeHtml(item.title || "未命名提醒")}</h3>
+          </div>
+          <span class="status-pill ${notificationStatusClass(item.status)}">${escapeHtml(notificationStatusLabel(item.status))}</span>
+        </div>
+        <p>${escapeHtml(item.summary || "")}</p>
+        <dl class="notification-meta">
+          <div><dt>時間</dt><dd>${escapeHtml(item.when || "未設定")}</dd></div>
+          <div><dt>下一步</dt><dd>${escapeHtml(item.nextAction || "持續觀察")}</dd></div>
+        </dl>
+        ${item.link ? `<a class="text-button notification-link" href="${escapeHtml(item.link)}" target="_blank" rel="noreferrer">${escapeHtml(item.linkLabel || "開啟處理頁面")}</a>` : ""}
+      </div>
+    </article>`).join("");
+}
+
+function notificationStatusLabel(status) {
+  return status === "resolved" ? "已完成" : status === "scheduled" ? "已排程" : status === "approval" ? "待核准" : "待處理";
+}
+
+function notificationStatusClass(status) {
+  return status === "resolved" ? "good" : status === "scheduled" ? "neutral" : status === "approval" ? "warning" : "danger";
+}
+
+function openRecommendationDetail(index) {
+  const item = state.recommendations[index];
+  if (!item?.details?.length) return;
+  state.activeRecommendationIndex = index;
+  document.querySelector("#recommendationDetailTitle").textContent = item.title;
+  const detailBoundary = item.taskFilter
+    ? "公開摘要不保存原始工作標題或 InfoCenter 原始 ID；請用公開代碼、類型、期限、狀態與人員標記交叉查找，確認後再修改。"
+    : "人員只顯示匿名代碼；請先確認來源與目前狀態，再到對應系統修改。";
+  document.querySelector("#recommendationDetailSummary").textContent = `共 ${item.details.length} 筆。${detailBoundary}`;
+  document.querySelector("#recommendationDetailBody").innerHTML = item.details.map((detail, detailIndex) => `
+    <article class="recommendation-detail-row">
+      <div class="recommendation-detail-index">${detailIndex + 1}</div>
+      <div class="recommendation-detail-content">
+        <div class="recommendation-detail-head">
+          <h3>${escapeHtml(detail.title)}</h3>
+          <span>${escapeHtml(detail.key)}</span>
+        </div>
+        <div class="recommendation-detail-meta">${(detail.meta || []).map((meta) => `<span>${escapeHtml(meta)}</span>`).join("")}</div>
+        <div class="recommendation-change"><span>建議確認／修改</span><p>${escapeHtml(detail.change)}</p></div>
+      </div>
+    </article>`).join("");
+
+  const goToTasks = document.querySelector("#goToRecommendationTasks");
+  goToTasks.hidden = !item.taskFilter;
+  const systemLink = document.querySelector("#recommendationSystemLink");
+  const target = item.taskFilter ? "work" : item.systemTarget;
+  const targetMap = {
+    work: { href: "https://www.egroup-infocenter.com/me/work?tab=list", label: "開啟 InfoCenter 工作清單" },
+    people: { href: "https://www.egroup-infocenter.com/me/crm/users", label: "開啟 InfoCenter 人員清單" },
+    event: { href: "https://www.egroup-infocenter.com/me/event/events", label: "開啟 InfoCenter 事件清單" },
+  };
+  const destination = targetMap[target];
+  systemLink.hidden = !destination;
+  if (destination) {
+    systemLink.href = destination.href;
+    systemLink.textContent = destination.label;
+  }
+  document.querySelector("#recommendationDetailDialog").showModal();
+}
+
+async function copyActiveRecommendationDetail() {
+  const item = state.recommendations[state.activeRecommendationIndex];
+  if (!item?.details?.length) return;
+  const lines = [
+    `# ${item.title}`,
+    `- 原因：${item.reason}`,
+    `- 建議：${item.action}`,
+    `- 明細：${item.details.length} 筆`,
+    "- 查找限制：公開摘要沒有 InfoCenter 原始 ID，請用代碼、類型、期限與狀態交叉確認。",
+    "",
+    ...item.details.flatMap((detail, index) => [
+      `- [ ] ${index + 1}. ${detail.title}（${detail.key}）`,
+      `  - 現況：${(detail.meta || []).join("；")}`,
+      `  - 建議確認／修改：${detail.change}`,
+    ]),
+  ];
+  await copyText(lines.join("\n"), `${item.details.length} 筆修正明細已複製`);
+}
+
+function goToActiveRecommendationTasks() {
+  const item = state.recommendations[state.activeRecommendationIndex];
+  if (!item?.taskFilter) return;
+  document.querySelector("#recommendationDetailDialog").close();
+  setTaskFilter(item.taskFilter);
+  showView("dispatch");
 }
 
 function updateNavigationCounts() {
   document.querySelector("#navDispatchCount").textContent = String(state.datasets.workSummary?.summary?.unassigned
     ?? state.tasks.filter((task) => !task.done).length);
   document.querySelector("#navRecommendationCount").textContent = String(state.recommendations.length);
+  const notifications = state.datasets.notifications?.items || [];
+  document.querySelector("#navNotificationCount").textContent = String(notifications.filter((item) => item.status !== "resolved").length);
 }
 
 function updateFooter() {
@@ -718,22 +1114,27 @@ function updateFooter() {
 async function copyManagementBrief() {
   const interns = state.datasets.interns?.meta?.counts || {};
   const summary = state.datasets.workSummary?.summary || {};
+  const capacity = getCapacityStats();
+  const ownerConflicts = state.tasks.filter((task) => getTaskIssueType(task) === "owner_conflict").length;
+  const statusReviews = state.tasks.filter((task) => getTaskIssueType(task) === "status_review").length;
   const brief = [
     "# 工讀生總工作藍圖摘要",
     `- InfoCenter 掃描：${summary.scannedWorks || 0} 筆工作`,
     `- 未完成：${summary.active || 0} 筆（待派 ${summary.unassigned || 0}、進行中 ${summary.inProgress || 0}）`,
     `- 已完成：${summary.completed || 0} 筆`,
     `- 逾期未完成：${summary.overdue || 0} 筆`,
+    `- 狀態需確認：進行中但無人員 ${ownerConflicts} 筆；已有主責與事件但仍待開始 ${statusReviews} 筆`,
     `- 人員涵蓋率：${Math.round(toNumber(summary.assignmentCoverageRate) * 100)}%`,
     `- 工時依據：${summary.timeReportCount || 0} 筆評論回報，未完成工作 P80 約 ${numberFormat.format(summary.totalEstimatedHoursP80 || 0)} 小時`,
     `- Active 成員：${interns.active || 0} 位`,
+    `- 本週容量：${capacity.covered}/${capacity.activeCount} 位已回填，合計 ${numberFormat.format(capacity.availableHours)} 小時`,
     `- 暫停成員：${interns.paused || 0} 位`,
     `- 建議事項：${state.recommendations.length} 筆`,
     "",
     "## 優先建議",
     ...state.recommendations.slice(0, 5).map((item) => `- ${item.title}：${item.action}`),
     "",
-    "注意：本週可用工時尚未接入；正式派工、驗收與派薪請回到 InfoCenter。",
+    "注意：未回填本週容量與等級的人員不列入可派候選；正式派工、驗收與派薪請回到 InfoCenter。",
   ].join("\n");
   await copyText(brief, "管理摘要已複製");
 }
@@ -741,6 +1142,12 @@ async function copyManagementBrief() {
 async function copyRecommendationList() {
   const text = state.recommendations.map((item, index) => `${index + 1}. ${item.title}\n   下一步：${item.action}\n   原因：${item.reason}`).join("\n\n");
   await copyText(text || "目前沒有建議事項。", "建議清單已複製");
+}
+
+async function copyNotificationList() {
+  const items = state.datasets.notifications?.items || [];
+  const text = items.map((item) => `- [${notificationStatusLabel(item.status)}] ${item.title}\n  時間：${item.when || "未設定"}\n  下一步：${item.nextAction || "持續觀察"}`).join("\n\n");
+  await copyText(text || "目前沒有提醒與通知。", "提醒摘要已複製");
 }
 
 async function copyText(text, successMessage) {
@@ -796,6 +1203,7 @@ function formatDateTime(date) {
 function maskName(value) {
   const name = String(value || "").trim();
   if (!name) return "未命名";
+  if (/^Member-[A-Z0-9]{4,}$/i.test(name)) return name;
   if (/[○＊*]/.test(name)) return name;
   if (/^[\u3400-\u9fff]+$/.test(name)) return `${name.slice(0, 1)}○○`;
   return `${name.slice(0, 1).toUpperCase()}***`;

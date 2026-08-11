@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.0.0",
-    "updatedAt": "2026-08-06T18:25:00+08:00",
+    "version": "1.1.0",
+    "updatedAt": "2026-08-07T10:00:00+08:00",
     "status": "active",
     "source": "InfoCenter 功能盤點與既有 workforce-war-room 資料結構",
     "liveWorkFeedConnected": true,
@@ -30,7 +30,7 @@
       "owner": "工讀生",
       "record": "InfoCenter 工作階段與事件",
       "doneWhen": "事件已提交成果、工時與證據",
-      "connection": "connected"
+      "connection": "partial"
     },
     {
       "id": "review",
@@ -38,7 +38,7 @@
       "owner": "主管 / 初審者",
       "record": "InfoCenter 事件審核",
       "doneWhen": "通過、補件或退回結果明確",
-      "connection": "connected"
+      "connection": "missing"
     },
     {
       "id": "done",
@@ -46,7 +46,7 @@
       "owner": "工作負責人",
       "record": "InfoCenter 工作完成度",
       "doneWhen": "工作完成且交付可追溯",
-      "connection": "connected"
+      "connection": "partial"
     },
     {
       "id": "payroll",
@@ -54,7 +54,7 @@
       "owner": "Kevin",
       "record": "InfoCenter 薪資",
       "doneWhen": "薪資項目連回已驗收事件",
-      "connection": "connected"
+      "connection": "partial"
     }
   ],
   "domains": [

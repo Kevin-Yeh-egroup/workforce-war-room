@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "status": "local-draft",
+    "generatedAt": "2026-08-07T10:00:00+08:00",
+    "weekStart": "2026-08-03",
+    "timezone": "Asia/Taipei",
+    "externalWriteApproved": false,
+    "privacy": "Public-safe capacity scaffold using existing hashed person IDs only; no names, contacts, salary or bank data.",
+    "source": "Manual weekly capacity intake pending",
+    "rule": "A row is valid only when personId matches a public intern id, availableHours is 0-40, level is L1/L2/L3, and the entry belongs to the current week."
+  },
+  "entries": []
+}

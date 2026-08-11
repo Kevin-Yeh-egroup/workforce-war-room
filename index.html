@@ -47,6 +47,11 @@
           <span>工作建議</span>
           <span class="nav-count nav-count-alert" id="navRecommendationCount">—</span>
         </button>
+        <button class="nav-item" id="tab-notifications" type="button" role="tab" aria-selected="false" aria-controls="notifications" data-view="notifications">
+          <span class="nav-dot" aria-hidden="true"></span>
+          <span>提醒與通知</span>
+          <span class="nav-count nav-count-alert" id="navNotificationCount">—</span>
+        </button>
       </nav>
 
       <div class="sidebar-footer">
@@ -67,6 +72,7 @@
           <p class="page-summary">先看待派、逾期與覆蓋缺口，再回到 InfoCenter 完成派工、事件驗收與派薪。</p>
         </div>
         <div class="header-actions">
+          <a class="button button-secondary" href="./local-spec/">設定審核中心</a>
           <button class="button button-secondary" type="button" id="copyBriefButton">複製管理摘要</button>
           <button class="button button-primary" type="button" id="reloadButton">重新讀取</button>
         </div>
@@ -167,6 +173,7 @@
 
         <div class="filter-bar" role="group" aria-label="待派工作篩選">
           <button class="filter-chip is-active" type="button" data-task-filter="active">未完成</button>
+          <button class="filter-chip" type="button" data-task-filter="conflict">需確認</button>
           <button class="filter-chip" type="button" data-task-filter="unassigned">待派</button>
           <button class="filter-chip" type="button" data-task-filter="overdue">已逾期</button>
           <button class="filter-chip" type="button" data-task-filter="in_progress">進行中</button>
@@ -181,7 +188,7 @@
           <div>
             <p class="eyebrow">工讀生狀態</p>
             <h2>以公開安全快照掌握人力</h2>
-            <p>主頁只顯示遮罩姓名、狀態、歷史工時與派薪狀態；「本週可用工時」尚未接通，不能由歷史工時推定。</p>
+            <p>主頁只顯示遮罩姓名、遮罩 Email 與營運狀態；「本週可用工時」尚未接通，不能由歷史工時推定。</p>
           </div>
           <a class="button button-secondary" href="/talent-pool/index.html">開啟人才庫</a>
         </div>
@@ -189,7 +196,7 @@
         <div class="people-toolbar">
           <label class="search-field">
             <span>搜尋成員</span>
-            <input id="peopleSearch" type="search" autocomplete="off" placeholder="輸入遮罩姓名">
+            <input id="peopleSearch" type="search" autocomplete="off" placeholder="輸入遮罩姓名或 Email">
           </label>
           <label class="select-field">
             <span>狀態</span>
@@ -251,12 +258,69 @@
         </article>
       </section>
 
+      <section id="notifications" class="view-section is-hidden" role="tabpanel" aria-labelledby="tab-notifications">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">提醒與通知</p>
+            <h2>先看需要追蹤的營運例外</h2>
+            <p>集中顯示逾期提醒、資料回填、隱私與發布風險；公開頁只呈現彙總與遮罩身分，不公開完整姓名、原始工作標題或薪資資訊。</p>
+          </div>
+          <button class="button button-primary" type="button" id="copyNotificationButton">複製提醒摘要</button>
+        </div>
+
+        <div class="notification-summary" id="notificationSummary" aria-live="polite"></div>
+        <div class="notification-list" id="notificationList"></div>
+
+        <article class="panel notification-boundary">
+          <div>
+            <p class="eyebrow">公開邊界</p>
+            <h2>人員與工作明細留在私有報告</h2>
+            <p>每週提醒可列出未完成人員與工作標題，但不會把這些明細放上公開戰情室；正式修改仍回到 InfoCenter。</p>
+          </div>
+          <a class="button button-primary" href="https://www.egroup-infocenter.com/me/work?tab=list" target="_blank" rel="noreferrer">開啟 InfoCenter 工作管理</a>
+        </article>
+      </section>
+
       <footer class="page-footer">
         <p>唯讀管理視圖；工作標題與人員皆去識別，薪資只呈現 paid / due，不顯示金額、銀行或身分資料。</p>
         <p id="footerTimestamp">尚未完成資料讀取</p>
       </footer>
     </main>
   </div>
+
+  <dialog class="task-dialog" id="taskDetailDialog">
+    <div class="task-dialog-head">
+      <div>
+        <p class="eyebrow">安全處理指引</p>
+        <h2 id="taskDetailTitle">工作摘要</h2>
+      </div>
+      <button class="task-dialog-close" id="closeTaskDetail" type="button" aria-label="關閉">×</button>
+    </div>
+    <div class="task-dialog-body" id="taskDetailBody"></div>
+    <div class="task-dialog-actions">
+      <button class="button button-secondary" id="copyTaskLocator" type="button">複製查找摘要</button>
+      <a class="button button-primary" href="https://www.egroup-infocenter.com/me/work?tab=list" target="_blank" rel="noreferrer">開啟 InfoCenter 工作清單</a>
+    </div>
+  </dialog>
+
+  <dialog class="task-dialog recommendation-dialog" id="recommendationDetailDialog">
+    <div class="task-dialog-head">
+      <div>
+        <p class="eyebrow">系統修正明細</p>
+        <h2 id="recommendationDetailTitle">工作建議</h2>
+      </div>
+      <button class="task-dialog-close" id="closeRecommendationDetail" type="button" aria-label="關閉">×</button>
+    </div>
+    <div class="task-dialog-body">
+      <p class="recommendation-detail-summary" id="recommendationDetailSummary"></p>
+      <div class="recommendation-detail-list" id="recommendationDetailBody"></div>
+    </div>
+    <div class="task-dialog-actions">
+      <button class="button button-secondary" id="goToRecommendationTasks" type="button">到工作盤面篩選</button>
+      <button class="button button-secondary" id="copyRecommendationDetail" type="button">複製修正清單</button>
+      <a class="button button-primary" id="recommendationSystemLink" href="https://www.egroup-infocenter.com/me/work?tab=list" target="_blank" rel="noreferrer">開啟 InfoCenter 工作清單</a>
+    </div>
+  </dialog>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>

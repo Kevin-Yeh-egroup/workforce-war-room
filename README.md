@@ -5,10 +5,10 @@
 ## 主要視圖
 
 - 總覽：InfoCenter 待派、進行中、已完成、逾期及三種覆蓋率。
-- 工作盤面：讀取匿名化 InfoCenter 工作摘要，依待派、逾期、進行中及已完成篩選。
-- 工讀生狀態：使用公開安全快照，只呈現遮罩姓名、狀態、歷史工時與 paid / due。
+- 工作盤面：讀取匿名化 InfoCenter 工作摘要，優先辨識「進行中但無主責」與「已有主責／事件卻仍待開始」，並提供單筆安全處理指引。
+- 工讀生狀態：使用遮罩姓名與遮罩 Email；只有同時具備本週可用工時與 L1–L3 等級者才列為可評估。
 - 工作藍圖：工作候選、待派、執行、驗收、完成及結算六個階段。
-- 工作建議：依人員涵蓋、逾期、評論工時樣本與可用工時缺口產生管理建議。
+- 工作建議：依人員涵蓋、逾期、評論工時樣本與可用工時缺口產生管理建議；每則建議可展開逐筆明細、複製修正清單，再由管理者到 InfoCenter 人工確認與修改。
 - 設定審核中心：以意圖導引方式審核 9 個欄位、3 組工作／事件範本、13 個計算規格與執行證據狀態；不直接寫入 InfoCenter。
 
 ## 資料來源
@@ -17,17 +17,18 @@
 
 - `data/interns.public.json`
 - `data/infocenter-work-summary.json`（匿名工作、狀態、P50 / P80 與覆蓋率）
-- `data/work-rhythm.internal.json`（人員使用穩定匿名代碼，不顯示姓名）
+- `data/work-rhythm.internal.json`（人員使用穩定匿名代碼；公開人員卡片另由安全快照提供遮罩姓名與 Email）
 - `data/radar-week.json`
 - `data/radar-tracking.json`
 - `data/radar-work-items.md`
 - `data/work-blueprint.json`
+- `data/capacity-week.public.json`（本週容量本地骨架；不填假資料，僅接受匿名人員 ID）
 
 `data/dashboard.json` 保留作為舊流程相容資料，不應用於新版首頁指標。
 
 ## 隱私邊界
 
-首頁不得顯示電話、Email、地址、銀行資料、身分資料、薪資金額、原始事件標題或個人長篇備註。薪資只顯示 `paid / due` 狀態。
+首頁只顯示遮罩姓名與遮罩 Email，不得顯示電話、完整 Email、地址、銀行資料、身分資料、薪資金額、原始事件標題或個人長篇備註。薪資只顯示 `paid / due` 狀態。
 
 InfoCenter 評論只抽取「實際耗時」數字；公開摘要不保存工作標題、評論原文、姓名、原始工作／事件／組織 ID。工時信心以樣本數標示，無樣本時明確使用規劃基準。
 
@@ -49,7 +50,7 @@ python -m http.server 8765 --bind 127.0.0.1
 
 本專案使用 Vercel 靜態託管，且以 `vercel.json`、頁面 robots meta 與 `robots.txt` 阻擋搜尋索引。正式 push 或部署需 Kevin 核准。
 
-`noindex` 只降低被搜尋引擎索引的機會，不是存取控制；因此公開版本只包含匿名規格，不包含原始工作標題、姓名、評論、聯絡資料或 InfoCenter ID。
+`noindex` 只降低被搜尋引擎索引的機會，不是存取控制；因此公開版本只包含去識別資料，不包含原始工作標題、完整姓名、完整 Email、電話、評論或 InfoCenter ID。
 
 ## 設計文件
 

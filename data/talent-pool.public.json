@@ -1,301 +1,342 @@
 {
-  "meta": {
-    "generatedAt": "2026-08-11T16:10:00+08:00",
-    "source": "Existing redacted intern roster",
-    "privacy": "Public-safe aliases and aggregate status only. Names, phone, email, residence, notes, work history, salary state and account data are excluded.",
-    "counts": {
-      "total": 41,
-      "active": 34,
-      "paused": 7
-    }
-  },
-  "people": [
-    {
-      "id": "05e0794df6ed",
-      "slug": "05e0794df6ed",
-      "displayName": "Member-05E0",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "07279789e47e",
-      "slug": "07279789e47e",
-      "displayName": "Member-0727",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "244c0faa6865",
-      "slug": "244c0faa6865",
-      "displayName": "Member-244C",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "268aa0c527a7",
-      "slug": "268aa0c527a7",
-      "displayName": "Member-268A",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "2b6bf0c24658",
-      "slug": "2b6bf0c24658",
-      "displayName": "Member-2B6B",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "2cc0a19a66f6",
-      "slug": "2cc0a19a66f6",
-      "displayName": "Member-2CC0",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "2f4884d2f85c",
-      "slug": "2f4884d2f85c",
-      "displayName": "Member-2F48",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "367814eda832",
-      "slug": "367814eda832",
-      "displayName": "Member-3678",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "37e5b2f31223",
-      "slug": "37e5b2f31223",
-      "displayName": "Member-37E5",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "383dd21d83d1",
-      "slug": "383dd21d83d1",
-      "displayName": "Member-383D",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "3a9e70d04b82",
-      "slug": "3a9e70d04b82",
-      "displayName": "Member-3A9E",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "43273957ea20",
-      "slug": "43273957ea20",
-      "displayName": "Member-4327",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "4402a377709e",
-      "slug": "4402a377709e",
-      "displayName": "Member-4402",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "45214b121411",
-      "slug": "45214b121411",
-      "displayName": "Member-4521",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "4cda6db65f17",
-      "slug": "4cda6db65f17",
-      "displayName": "Member-4CDA",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "5a8cad415c12",
-      "slug": "5a8cad415c12",
-      "displayName": "Member-5A8C",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "615a9eb66f18",
-      "slug": "615a9eb66f18",
-      "displayName": "Member-615A",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "659b0588a539",
-      "slug": "659b0588a539",
-      "displayName": "Member-659B",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "7b630a5c0e44",
-      "slug": "7b630a5c0e44",
-      "displayName": "Member-7B63",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "85247e815ae3",
-      "slug": "85247e815ae3",
-      "displayName": "Member-8524",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "8c22f2fd8016",
-      "slug": "8c22f2fd8016",
-      "displayName": "Member-8C22",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "9c57f621e2d4",
-      "slug": "9c57f621e2d4",
-      "displayName": "Member-9C57",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "a3032b04952d",
-      "slug": "a3032b04952d",
-      "displayName": "Member-A303",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "b78661d6dcf4",
-      "slug": "b78661d6dcf4",
-      "displayName": "Member-B786",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "c4c55e13a311",
-      "slug": "c4c55e13a311",
-      "displayName": "Member-C4C5",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "c6957afc2fb7",
-      "slug": "c6957afc2fb7",
-      "displayName": "Member-C695",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "d7f1864e3dd0",
-      "slug": "d7f1864e3dd0",
-      "displayName": "Member-D7F1",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "dca79e5089ab",
-      "slug": "dca79e5089ab",
-      "displayName": "Member-DCA7",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "e6c8249bb53e",
-      "slug": "e6c8249bb53e",
-      "displayName": "Member-E6C8",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "edab786ed607",
-      "slug": "edab786ed607",
-      "displayName": "Member-EDAB",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "f1b469bd0f1e",
-      "slug": "f1b469bd0f1e",
-      "displayName": "Member-F1B4",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "f279f22c9ded",
-      "slug": "f279f22c9ded",
-      "displayName": "Member-F279",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "f75ea28ada4d",
-      "slug": "f75ea28ada4d",
-      "displayName": "Member-F75E",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "ff864aedde4f",
-      "slug": "ff864aedde4f",
-      "displayName": "Member-FF86",
-      "status": "active",
-      "workLevel": ""
-    },
-    {
-      "id": "2f3a8886190d",
-      "slug": "2f3a8886190d",
-      "displayName": "Member-2F3A",
-      "status": "paused",
-      "workLevel": ""
-    },
-    {
-      "id": "5b708760e94e",
-      "slug": "5b708760e94e",
-      "displayName": "Member-5B70",
-      "status": "paused",
-      "workLevel": ""
-    },
-    {
-      "id": "5e46a77fde6d",
-      "slug": "5e46a77fde6d",
-      "displayName": "Member-5E46",
-      "status": "paused",
-      "workLevel": ""
-    },
-    {
-      "id": "8d7e15e10b36",
-      "slug": "8d7e15e10b36",
-      "displayName": "Member-8D7E",
-      "status": "paused",
-      "workLevel": ""
-    },
-    {
-      "id": "b52f6fcb3078",
-      "slug": "b52f6fcb3078",
-      "displayName": "Member-B52F",
-      "status": "paused",
-      "workLevel": ""
-    },
-    {
-      "id": "e381878c3c96",
-      "slug": "e381878c3c96",
-      "displayName": "Member-E381",
-      "status": "paused",
-      "workLevel": ""
-    },
-    {
-      "id": "eda751ff0e7a",
-      "slug": "eda751ff0e7a",
-      "displayName": "Member-EDA7",
-      "status": "paused",
-      "workLevel": ""
-    }
-  ]
+    "meta":  {
+                 "generatedAt":  "2026-08-11T16:15:09+08:00",
+                 "source":  "Existing redacted intern roster",
+                 "privacy":  "Public-safe masked identity: names use ○ substitution and emails expose only the first two local-part characters plus domain. Phone, address, salary, banking, raw notes and full email remain excluded.",
+                 "counts":  {
+                                "total":  41,
+                                "active":  34,
+                                "paused":  7
+                            }
+             },
+    "people":  [
+                   {
+                       "id":  "05e0794df6ed",
+                       "slug":  "05e0794df6ed",
+                       "displayName":  "曾○叡",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***x@gmail.com"
+                   },
+                   {
+                       "id":  "07279789e47e",
+                       "slug":  "07279789e47e",
+                       "displayName":  "蔡○妤",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***l@gmail.com"
+                   },
+                   {
+                       "id":  "244c0faa6865",
+                       "slug":  "244c0faa6865",
+                       "displayName":  "劉○瑋",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***i@gmail.com"
+                   },
+                   {
+                       "id":  "268aa0c527a7",
+                       "slug":  "268aa0c527a7",
+                       "displayName":  "陳○安",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***n@gmail.com"
+                   },
+                   {
+                       "id":  "2b6bf0c24658",
+                       "slug":  "2b6bf0c24658",
+                       "displayName":  "陳○凌",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***e@gmail.com"
+                   },
+                   {
+                       "id":  "2cc0a19a66f6",
+                       "slug":  "2cc0a19a66f6",
+                       "displayName":  "張○康",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***8@gmail.com"
+                   },
+                   {
+                       "id":  "2f4884d2f85c",
+                       "slug":  "2f4884d2f85c",
+                       "displayName":  "陳○旻",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***a@gmail.com"
+                   },
+                   {
+                       "id":  "367814eda832",
+                       "slug":  "367814eda832",
+                       "displayName":  "賴○均",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***i@gmail.com"
+                   },
+                   {
+                       "id":  "37e5b2f31223",
+                       "slug":  "37e5b2f31223",
+                       "displayName":  "林○恩",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***n@gmail.com"
+                   },
+                   {
+                       "id":  "383dd21d83d1",
+                       "slug":  "383dd21d83d1",
+                       "displayName":  "洪○緯",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***n@gmail.com"
+                   },
+                   {
+                       "id":  "3a9e70d04b82",
+                       "slug":  "3a9e70d04b82",
+                       "displayName":  "黃○宇",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***n@gmail.com"
+                   },
+                   {
+                       "id":  "43273957ea20",
+                       "slug":  "43273957ea20",
+                       "displayName":  "陳○兆",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***o@gmail.com"
+                   },
+                   {
+                       "id":  "4402a377709e",
+                       "slug":  "4402a377709e",
+                       "displayName":  "曾○沁",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***n@gmail.com"
+                   },
+                   {
+                       "id":  "45214b121411",
+                       "slug":  "45214b121411",
+                       "displayName":  "吳○宇",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***a@gmail.com"
+                   },
+                   {
+                       "id":  "4cda6db65f17",
+                       "slug":  "4cda6db65f17",
+                       "displayName":  "許○媜",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***a@gmail.com"
+                   },
+                   {
+                       "id":  "5a8cad415c12",
+                       "slug":  "5a8cad415c12",
+                       "displayName":  "張○筑",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***u@gmail.com"
+                   },
+                   {
+                       "id":  "615a9eb66f18",
+                       "slug":  "615a9eb66f18",
+                       "displayName":  "楊○涵",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***7@gmail.com"
+                   },
+                   {
+                       "id":  "659b0588a539",
+                       "slug":  "659b0588a539",
+                       "displayName":  "陳○淇",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***y@gmail.com"
+                   },
+                   {
+                       "id":  "7b630a5c0e44",
+                       "slug":  "7b630a5c0e44",
+                       "displayName":  "柯○恩",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***a@gmail.com"
+                   },
+                   {
+                       "id":  "85247e815ae3",
+                       "slug":  "85247e815ae3",
+                       "displayName":  "謝○妤",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***y@gmail.com"
+                   },
+                   {
+                       "id":  "8c22f2fd8016",
+                       "slug":  "8c22f2fd8016",
+                       "displayName":  "李○蓁",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***y@gmail.com"
+                   },
+                   {
+                       "id":  "9c57f621e2d4",
+                       "slug":  "9c57f621e2d4",
+                       "displayName":  "陳○",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***y@gmail.com"
+                   },
+                   {
+                       "id":  "a3032b04952d",
+                       "slug":  "a3032b04952d",
+                       "displayName":  "王○廷",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***g@gmail.com"
+                   },
+                   {
+                       "id":  "b78661d6dcf4",
+                       "slug":  "b78661d6dcf4",
+                       "displayName":  "劉○真",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***a@gmail.com"
+                   },
+                   {
+                       "id":  "c4c55e13a311",
+                       "slug":  "c4c55e13a311",
+                       "displayName":  "劉○柔",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***e@gmail.com"
+                   },
+                   {
+                       "id":  "c6957afc2fb7",
+                       "slug":  "c6957afc2fb7",
+                       "displayName":  "葉○辰",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***n@gmail.com"
+                   },
+                   {
+                       "id":  "d7f1864e3dd0",
+                       "slug":  "d7f1864e3dd0",
+                       "displayName":  "孫○",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***a@gmail.com"
+                   },
+                   {
+                       "id":  "dca79e5089ab",
+                       "slug":  "dca79e5089ab",
+                       "displayName":  "陳○儒",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***u@gmail.com"
+                   },
+                   {
+                       "id":  "e6c8249bb53e",
+                       "slug":  "e6c8249bb53e",
+                       "displayName":  "許○瑋",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***n@gmail.com"
+                   },
+                   {
+                       "id":  "edab786ed607",
+                       "slug":  "edab786ed607",
+                       "displayName":  "施○臻",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***u@gmail.com"
+                   },
+                   {
+                       "id":  "f1b469bd0f1e",
+                       "slug":  "f1b469bd0f1e",
+                       "displayName":  "林○妏",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***y@gmail.com"
+                   },
+                   {
+                       "id":  "f279f22c9ded",
+                       "slug":  "f279f22c9ded",
+                       "displayName":  "施○廷",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***r@gmail.com"
+                   },
+                   {
+                       "id":  "f75ea28ada4d",
+                       "slug":  "f75ea28ada4d",
+                       "displayName":  "詹○瑄",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***n@gmail.com"
+                   },
+                   {
+                       "id":  "ff864aedde4f",
+                       "slug":  "ff864aedde4f",
+                       "displayName":  "李○霖",
+                       "status":  "active",
+                       "workLevel":  "",
+                       "maskedEmail":  ""
+                   },
+                   {
+                       "id":  "2f3a8886190d",
+                       "slug":  "2f3a8886190d",
+                       "displayName":  "張○鈞",
+                       "status":  "paused",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***o@gmail.com"
+                   },
+                   {
+                       "id":  "5b708760e94e",
+                       "slug":  "5b708760e94e",
+                       "displayName":  "張○雯",
+                       "status":  "paused",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***h@gmail.com"
+                   },
+                   {
+                       "id":  "5e46a77fde6d",
+                       "slug":  "5e46a77fde6d",
+                       "displayName":  "施○捷",
+                       "status":  "paused",
+                       "workLevel":  "",
+                       "maskedEmail":  ""
+                   },
+                   {
+                       "id":  "8d7e15e10b36",
+                       "slug":  "8d7e15e10b36",
+                       "displayName":  "杜○○緯",
+                       "status":  "paused",
+                       "workLevel":  "",
+                       "maskedEmail":  ""
+                   },
+                   {
+                       "id":  "b52f6fcb3078",
+                       "slug":  "b52f6fcb3078",
+                       "displayName":  "甘○平",
+                       "status":  "paused",
+                       "workLevel":  "",
+                       "maskedEmail":  ""
+                   },
+                   {
+                       "id":  "e381878c3c96",
+                       "slug":  "e381878c3c96",
+                       "displayName":  "陳○婷",
+                       "status":  "paused",
+                       "workLevel":  "",
+                       "maskedEmail":  "eg***e@gmail.com"
+                   },
+                   {
+                       "id":  "eda751ff0e7a",
+                       "slug":  "eda751ff0e7a",
+                       "displayName":  "陳○汶",
+                       "status":  "paused",
+                       "workLevel":  "",
+                       "maskedEmail":  ""
+                   }
+               ]
 }

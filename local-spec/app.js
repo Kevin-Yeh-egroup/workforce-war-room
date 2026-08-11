@@ -35,11 +35,15 @@ const approvalItems = [
   { id: "verification", title: "核准 AI 與人工邊界", detail: "AI 只能預檢；不可自動驗收、關閉工作或派薪。" },
 ];
 
+const APPROVAL_STORAGE_KEY = "workforce-local-spec-approval-v0.1.0";
+const APPROVAL_VERSION = "0.1.0";
+
 const app = {
   data: null,
   intent: null,
   templateId: "TOOL_QA",
   approvals: new Set(),
+  approvalUpdatedAt: null,
   evidence: {
     assigned: false,
     activity: false,
@@ -47,6 +51,8 @@ const app = {
     submitted: false,
     blocked: false,
     humanApproved: false,
+    needsRevision: false,
+    stale: false,
   },
 };
 
@@ -89,6 +95,13 @@ function bindStaticControls() {
     dialog.addEventListener("click", (event) => {
       if (event.target === dialog) dialog.close();
     });
+  });
+  window.addEventListener("storage", (event) => {
+    if (event.key !== APPROVAL_STORAGE_KEY) return;
+    restoreApprovals();
+    renderApprovalState();
+    if (document.querySelector("#approvalDialog").open) openApprovalDialog();
+    showToast("核准進度已從另一個分頁同步");
   });
 }
 
@@ -345,6 +358,8 @@ function renderVerification() {
             ["submitted", "事件已送審"],
             ["blocked", "有明確卡關訊號"],
             ["humanApproved", "人員已核准交付"],
+            ["needsRevision", "人工要求補件／修正"],
+            ["stale", "超過 72 小時沒有新證據"],
           ].map(([id, label]) => `<label class="evidence-toggle"><input type="checkbox" data-evidence="${id}" ${app.evidence[id] ? "checked" : ""}><span class="toggle-mark" aria-hidden="true"></span><span>${label}</span></label>`).join("")}
         </div>
       </section>
@@ -361,6 +376,8 @@ function renderVerification() {
   document.querySelectorAll("[data-evidence]").forEach((input) => {
     input.addEventListener("change", () => {
       app.evidence[input.dataset.evidence] = input.checked;
+      normalizeEvidenceDependencies(input.dataset.evidence, input.checked);
+      syncEvidenceControls();
       renderEvidenceResult();
     });
   });
@@ -371,13 +388,56 @@ function renderVerification() {
   renderEvidenceResult();
 }
 
+function normalizeEvidenceDependencies(changedId, checked) {
+  const evidence = app.evidence;
+  const autoCompleted = [];
+  const enable = (id) => {
+    if (!evidence[id]) autoCompleted.push(id);
+    evidence[id] = true;
+  };
+
+  if (checked) {
+    if (["activity", "deliverable", "submitted", "blocked", "stale"].includes(changedId)) enable("assigned");
+    if (changedId === "deliverable") enable("activity");
+    if (changedId === "submitted") enable("activity");
+    if (changedId === "humanApproved") {
+      ["assigned", "activity", "deliverable", "submitted"].forEach(enable);
+      evidence.needsRevision = false;
+    }
+    if (changedId === "needsRevision") {
+      ["assigned", "activity", "submitted"].forEach(enable);
+      evidence.humanApproved = false;
+    }
+  }
+
+  if (!evidence.assigned) {
+    ["activity", "deliverable", "submitted", "blocked", "humanApproved", "needsRevision", "stale"].forEach((id) => {
+      evidence[id] = false;
+    });
+  }
+  if (!evidence.submitted) {
+    evidence.humanApproved = false;
+    evidence.needsRevision = false;
+  }
+
+  if (autoCompleted.length) showToast(`已自動補齊 ${autoCompleted.length} 個必要前置訊號`);
+}
+
+function syncEvidenceControls() {
+  document.querySelectorAll("[data-evidence]").forEach((input) => {
+    input.checked = Boolean(app.evidence[input.dataset.evidence]);
+  });
+}
+
 function deriveEvidenceState() {
   const evidence = app.evidence;
   if (evidence.blocked) return "blocked";
-  if (evidence.humanApproved && evidence.deliverable) return "human_verified";
+  if (evidence.assigned && evidence.submitted && evidence.deliverable && evidence.humanApproved) return "human_verified";
+  if (evidence.assigned && evidence.submitted && evidence.needsRevision) return "needs_revision";
   if (evidence.submitted && !evidence.deliverable) return "submitted_missing_evidence";
   if (evidence.submitted && evidence.deliverable) return "submitted";
-  if (evidence.activity) return "started";
+  if (evidence.assigned && evidence.stale) return "stale";
+  if (evidence.assigned && evidence.activity) return "started";
   if (evidence.assigned) return "assigned_no_evidence";
   return "not_assigned";
 }
@@ -386,8 +446,8 @@ function renderEvidenceResult() {
   const stateId = deriveEvidenceState();
   const state = app.data.verification.states.find((item) => item.id === stateId);
   if (!state) return;
-  const aiReady = stateId === "submitted";
-  const colors = { blocked: "#f0c7bc", human_verified: "#cce4d9", submitted: "#d9e28f", submitted_missing_evidence: "#f4d6a8", started: "#c9deda", assigned_no_evidence: "#e3e3d8", not_assigned: "#e8e7e0" };
+  const aiReady = state.aiNeeded && app.evidence.deliverable && app.evidence.submitted;
+  const colors = { blocked: "#f0c7bc", human_verified: "#cce4d9", needs_revision: "#f4d6a8", submitted: "#d9e28f", submitted_missing_evidence: "#f4d6a8", stale: "#f6e1ba", started: "#c9deda", assigned_no_evidence: "#e3e3d8", not_assigned: "#e8e7e0" };
   const stage = document.querySelector("#resultStage");
   stage.style.setProperty("--result-color", colors[stateId] || "#dcebe5");
   stage.innerHTML = `
@@ -395,7 +455,7 @@ function renderEvidenceResult() {
     <h3 class="result-state">${escapeHtml(state.label)}</h3>
     <p class="result-rule">${escapeHtml(state.deterministicRule)}</p>
     <div class="result-next"><span>下一個管理動作</span><strong>${escapeHtml(state.nextAction)}</strong></div>
-    <span class="ai-gate ${aiReady ? "is-ready" : ""}">${aiReady ? "AI 預檢條件已成立" : "目前不需要啟動 AI"}</span>`;
+    <span class="ai-gate ${aiReady ? "is-ready" : ""}">${aiReady ? "AI 預檢條件已成立" : state.aiNeeded ? app.evidence.submitted ? "需先補齊交付物" : "需先補齊交付物與送審訊號" : "目前不需要啟動 AI"}</span>`;
   document.querySelectorAll("[data-state-id]").forEach((button) => button.classList.toggle("is-current", button.dataset.stateId === stateId));
 }
 
@@ -447,18 +507,34 @@ function openApprovalDialog() {
       renderApprovalState();
     });
   });
-  document.querySelector("#approvalDialog").showModal();
+  const dialog = document.querySelector("#approvalDialog");
+  if (!dialog.open) dialog.showModal();
 }
 
 function restoreApprovals() {
   try {
-    const saved = JSON.parse(sessionStorage.getItem("workforce-local-spec-approvals") || "[]");
-    if (Array.isArray(saved)) app.approvals = new Set(saved.filter((id) => approvalItems.some((item) => item.id === id)));
-  } catch { app.approvals = new Set(); }
+    const saved = JSON.parse(localStorage.getItem(APPROVAL_STORAGE_KEY) || "null");
+    const checked = Array.isArray(saved) ? saved : saved?.checked;
+    app.approvals = new Set((Array.isArray(checked) ? checked : []).filter((id) => approvalItems.some((item) => item.id === id)));
+    app.approvalUpdatedAt = app.approvals.size && !Array.isArray(saved) ? saved?.updatedAt || null : null;
+  } catch {
+    app.approvals = new Set();
+    app.approvalUpdatedAt = null;
+  }
 }
 
 function persistApprovals() {
-  sessionStorage.setItem("workforce-local-spec-approvals", JSON.stringify([...app.approvals]));
+  if (app.approvals.size === 0) {
+    app.approvalUpdatedAt = null;
+    localStorage.removeItem(APPROVAL_STORAGE_KEY);
+    return;
+  }
+  app.approvalUpdatedAt = new Date().toISOString();
+  localStorage.setItem(APPROVAL_STORAGE_KEY, JSON.stringify({
+    version: APPROVAL_VERSION,
+    checked: [...app.approvals],
+    updatedAt: app.approvalUpdatedAt,
+  }));
 }
 
 function renderApprovalState() {
@@ -466,6 +542,12 @@ function renderApprovalState() {
   document.querySelector("#approvalCount").textContent = `${count}/4`;
   document.querySelector("#decisionCount").textContent = String(4 - count);
   document.querySelector("#approvalRing").style.strokeDashoffset = String(239 - (239 * count / 4));
+  const meta = document.querySelector("#approvalMeta");
+  if (meta) {
+    meta.textContent = app.approvalUpdatedAt
+      ? `規格 v${APPROVAL_VERSION} · 更新於 ${formatDateTime(app.approvalUpdatedAt)} · 同瀏覽器同步`
+      : `規格 v${APPROVAL_VERSION} · 尚未確認`;
+  }
 }
 
 async function copyApprovalSummary() {
@@ -475,6 +557,8 @@ async function copyApprovalSummary() {
   }
   const lines = [
     "# InfoCenter 工讀生管理核准摘要",
+    `- 規格版本：${APPROVAL_VERSION}`,
+    `- 核准更新：${app.approvalUpdatedAt ? formatDateTime(app.approvalUpdatedAt) : "尚未確認"}`,
     ...approvalItems.map((item) => `- [${app.approvals.has(item.id) ? "x" : " "}] ${item.title}`),
     "- [ ] 先建立 1 組範本與 1 筆測試工作，讀回驗證後再批次建立",
     "- [ ] AI 僅做內容預檢，不自動驗收、關閉工作、建立薪資或派薪",
@@ -543,6 +627,19 @@ function formatValue(value) {
 
 function formatTime(date) {
   return new Intl.DateTimeFormat("zh-TW", { hour: "2-digit", minute: "2-digit", hour12: false }).format(date);
+}
+
+function formatDateTime(value) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return "時間不明";
+  return new Intl.DateTimeFormat("zh-TW", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).format(date);
 }
 
 function showToast(message) {

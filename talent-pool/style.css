@@ -161,4 +161,24 @@ input, select {
   .wrap { padding: 14px; }
   .metrics, .filters, .month-grid { grid-template-columns: 1fr; }
   .kv { grid-template-columns: 1fr; }
+  .filters input, .filters select { min-height: 44px; }
+}
+.person-name-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  min-width: 0;
+}
+
+.person-name-line h2,
+.person-name-line h3 {
+  margin: 0;
+}
+
+.person-name-line span {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  color: var(--muted);
+  font-size: 13px;
 }
