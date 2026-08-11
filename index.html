@@ -188,27 +188,43 @@
           <div>
             <p class="eyebrow">工讀生狀態</p>
             <h2>以公開安全快照掌握人力</h2>
-            <p>主頁只顯示遮罩姓名、遮罩 Email 與營運狀態；「本週可用工時」尚未接通，不能由歷史工時推定。</p>
+            <p>只顯示 active 成員的遮罩姓名、遮罩 Email 與營運狀態；暫停成員不列入本頁或派工建議。</p>
           </div>
           <a class="button button-secondary" href="/talent-pool/index.html">開啟人才庫</a>
         </div>
 
-        <div class="people-toolbar">
+        <div class="people-toolbar people-toolbar-search-only">
           <label class="search-field">
             <span>搜尋成員</span>
             <input id="peopleSearch" type="search" autocomplete="off" placeholder="輸入遮罩姓名或 Email">
           </label>
-          <label class="select-field">
-            <span>狀態</span>
-            <select id="peopleStatusFilter">
-              <option value="all">全部</option>
-              <option value="active">可聯繫</option>
-              <option value="paused">暫停</option>
-            </select>
-          </label>
         </div>
 
         <div class="people-summary-grid" id="peopleSummaryGrid"></div>
+        <section class="level-guide" aria-labelledby="levelGuideTitle">
+          <div class="level-guide-heading">
+            <div>
+              <p class="eyebrow">四軸知能框架</p>
+              <h3 id="levelGuideTitle">以四類知能指數比對工作與人員</h3>
+            </div>
+            <p>社工、財務、AI 與馴錢師知能各自累積證據；指數協助產生適配候選，正式派工仍需確認成果品質與本週容量。</p>
+          </div>
+          <div class="level-guide-grid" id="levelGuideGrid"></div>
+          <div class="capability-evidence-note" id="capabilityEvidenceNote"></div>
+          <div class="experience-policy-grid" id="experiencePolicyGrid"></div>
+          <div class="capability-rules-grid">
+            <article class="speech-classification" aria-labelledby="speechClassificationTitle">
+              <span class="section-kicker">語音轉文字</span>
+              <h4 id="speechClassificationTitle">主能力與內容輔助證據</h4>
+              <div id="speechClassification"></div>
+            </article>
+            <div class="capability-policy-grid" id="capabilityPolicyGrid"></div>
+          </div>
+          <div class="capacity-method-note">
+            <strong>歷史資料可以估工作需求，不能直接等同本週有空。</strong>
+            <p>已完成事件的實際耗時可產生工作類型 P50／P80；個人本週可用工時仍應由本人或管理者每週回填。若要使用歷史資料，只能另列為「歷史投入參考」，不可自動變成可派容量。</p>
+          </div>
+        </section>
         <div class="people-grid" id="peopleGrid"></div>
       </section>
 

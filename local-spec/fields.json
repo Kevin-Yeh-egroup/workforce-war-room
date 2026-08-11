@@ -9,20 +9,20 @@
   },
   "levelDefinitions": [
     {
-      "id": "L1",
-      "name": "依範本執行",
+      "id": "基礎執行",
+      "name": "依範本與檢查表",
       "definition": "輸入、步驟與完成條件清楚；能依檢查表操作並回報異常。",
       "humanReview": "抽查或批次驗收"
     },
     {
-      "id": "L2",
-      "name": "情境判斷與整理",
+      "id": "獨立判斷",
+      "name": "情境判讀與查核",
       "definition": "需判讀情境、分類問題、整理證據，能說明判斷理由。",
       "humanReview": "逐案驗收關鍵判斷"
     },
     {
-      "id": "L3",
-      "name": "規劃與品質把關",
+      "id": "規劃覆核",
+      "name": "規則設計與品質把關",
       "definition": "可拆解任務、訂定規則、處理例外並覆核他人交付。",
       "humanReview": "主管核准或共同決策"
     }
@@ -68,8 +68,8 @@
       "type": "single_select",
       "requiredAt": "before_assignment",
       "storageProposal": "InfoCenter 工作範本固定值",
-      "options": ["L1", "L2", "L3"],
-      "example": "L2",
+      "options": ["基礎執行", "獨立判斷", "規劃覆核"],
+      "example": "獨立判斷",
       "approvalRequired": true
     },
     {

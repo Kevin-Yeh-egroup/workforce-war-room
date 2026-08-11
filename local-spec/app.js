@@ -198,7 +198,7 @@ function renderFields() {
       <strong>只計算，不回寫</strong>
       ${data.derivedFields.map((field) => `<span class="derived-pill">${escapeHtml(field.label)}</span>`).join("")}
     </div>
-    <div class="level-ribbon" aria-label="能力等級">
+    <div class="level-ribbon" aria-label="能力階段">
       ${data.levelDefinitions.map((level) => `<article class="level-item">
         <strong>${escapeHtml(level.id)}</strong><span>${escapeHtml(level.name)}</span><small>${escapeHtml(level.definition)}</small>
       </article>`).join("")}

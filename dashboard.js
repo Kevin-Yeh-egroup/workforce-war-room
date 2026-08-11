@@ -8,13 +8,14 @@ const DATA_PATHS = {
   blueprint: "./data/work-blueprint.json",
   capacity: "./data/capacity-week.public.json",
   notifications: "./data/reminders.public.json",
+  fields: "./local-spec/fields.json",
+  capabilities: "./data/capability-framework.public.json",
 };
 
 const state = {
   currentView: "overview",
   taskFilter: "active",
   peopleSearch: "",
-  peopleStatus: "all",
   datasets: {},
   tasks: [],
   recommendations: [],
@@ -63,6 +64,8 @@ async function loadDashboard() {
     blueprint: fetchJson(DATA_PATHS.blueprint),
     capacity: fetchJson(DATA_PATHS.capacity),
     notifications: fetchJson(DATA_PATHS.notifications),
+    fields: fetchJson(DATA_PATHS.fields),
+    capabilities: fetchJson(DATA_PATHS.capabilities),
   };
 
   const entries = Object.entries(loaders);
@@ -103,6 +106,7 @@ function renderAll() {
   renderTasks();
   renderPeopleSnapshot();
   renderPeopleSummary();
+  renderCapabilityFramework();
   renderPeopleGrid();
   renderDomains();
   renderRecommendations();
@@ -155,10 +159,6 @@ function bindControls() {
     renderPeopleGrid();
   });
 
-  document.querySelector("#peopleStatusFilter").addEventListener("change", (event) => {
-    state.peopleStatus = event.target.value;
-    renderPeopleGrid();
-  });
 }
 
 function setTaskFilter(filter) {
@@ -203,6 +203,7 @@ function normalizeInfoCenterWorkItems(summary) {
     overdue: Boolean(item.overdue),
     progress: Number(item.progress || 0),
     category: item.categoryName || "一般營運支援",
+    categoryId: item.categoryId || "GENERAL_OPS",
     minimumLevel: item.minimumLevel || "待確認",
     skills: Array.isArray(item.skills) ? item.skills : [],
     estimatedHoursP50: toNumber(item.estimatedHoursP50),
@@ -340,7 +341,7 @@ function getCapacityMap() {
       && Number.isFinite(hours)
       && hours >= 0
       && hours <= 40
-      && ["L1", "L2", "L3"].includes(entry.level);
+      && (!entry.capabilities || typeof entry.capabilities === "object");
   });
   return new Map(entries.map((entry) => [String(entry.personId), { ...entry, availableHours: Number(entry.availableHours) }]));
 }
@@ -397,7 +398,6 @@ function buildRecommendations() {
   const capacityMap = getCapacityMap();
   const activePeople = (interns?.interns || []).filter((person) => person.status === "active");
   const missingCapacityPeople = activePeople.filter((person) => !capacityMap.has(String(person.id)));
-  const pausedPeople = (interns?.interns || []).filter((person) => person.status === "paused");
   const openTrackingItems = (tracking?.items || []).filter((item) => item.status !== "resolved");
 
   if (state.errors.length) {
@@ -534,30 +534,14 @@ function buildRecommendations() {
   if (capacityStats.covered < capacityStats.activeCount) {
     items.push({
       priority: "medium",
-      title: `補齊 ${capacityStats.activeCount - capacityStats.covered} 位 active 成員的本週容量與等級`,
-      description: `目前只有 ${capacityStats.covered}/${capacityStats.activeCount} 位同時具備本週可用工時與 L1–L3 等級。`,
-      action: "每週一回填可用時數與等級，派工後扣除已承諾 P80",
+      title: `補齊 ${capacityStats.activeCount - capacityStats.covered} 位 active 成員的本週可用工時`,
+      description: `目前只有 ${capacityStats.covered}/${capacityStats.activeCount} 位具備有效的本週可用工時。能力證據與容量分開審查。`,
+      action: "每週一回填可用時數；派工時再比對四類知能證據與工作需求",
       reason: "沒有容量分母，只能知道適不適合，不能判斷會不會過載",
       systemTarget: "people",
       details: missingCapacityPeople.map((person) => buildPersonRecommendationDetail(
         person,
-        "補填本週可用工時、L1–L3 與能力標籤；未填完前維持不可派。",
-      )),
-    });
-  }
-
-  const paused = interns?.meta?.counts?.paused || 0;
-  if (paused > 0) {
-    items.push({
-      priority: "low",
-      title: `確認 ${paused} 位暫停成員的後續狀態`,
-      description: "將暫停原因、可恢復日期與是否保留聯繫分開處理。",
-      action: "安排簡短近況確認，不直接派新工作",
-      reason: "避免把暫停成員列入可分配人力",
-      systemTarget: "people",
-      details: pausedPeople.map((person) => buildPersonRecommendationDetail(
-        person,
-        "確認本月狀態、暫停原因與預計恢復日期；未恢復前不派新工作。",
+        "補填本週可用工時；能力證據候選由已驗收工作產生，仍需人工確認。",
       )),
     });
   }
@@ -748,7 +732,7 @@ function renderTaskRows(tasks) {
         <div class="task-title">${escapeHtml(task.title)}</div>
         <div class="task-meta">
           <span>${escapeHtml(task.owner)}</span>
-          ${task.minimumLevel ? `<span>門檻：${escapeHtml(task.minimumLevel)}</span>` : ""}
+          ${task.minimumLevel ? `<span>門檻：${escapeHtml(capabilityStageLabel(task.minimumLevel))}</span>` : ""}
           <span>期限：${task.due ? escapeHtml(task.due) : "未設定"}</span>
           <span>狀態：${escapeHtml(task.status)}</span>
           ${task.estimatedHoursP80 ? `<span>工時 P50 / P80：${numberFormat.format(task.estimatedHoursP50)} / ${numberFormat.format(task.estimatedHoursP80)} 小時</span>` : ""}
@@ -787,6 +771,7 @@ function openTaskDetail(id) {
         : task.assignedCount === 0
           ? "工作仍有效時，依能力門檻與 P80 工時補上主責；沒有容量資料前不做自動指派。"
           : "主責已標記；下一步應確認事件中的活動、成果連結、送審與人工驗收。";
+  const matchPanel = renderTaskCapabilityMatches(task);
   document.querySelector("#taskDetailTitle").textContent = task.title;
   document.querySelector("#taskDetailBody").innerHTML = `
     <div class="task-detail-grid">
@@ -794,10 +779,11 @@ function openTaskDetail(id) {
       <div><span>目前狀態</span><strong>${escapeHtml(task.status)}</strong></div>
       <div><span>人員標記</span><strong>${escapeHtml(task.owner)}</strong></div>
       <div><span>期限</span><strong>${task.due ? escapeHtml(task.due) : "未設定"}</strong></div>
-      <div><span>能力門檻</span><strong>${escapeHtml(task.minimumLevel || "待確認")}</strong></div>
+      <div><span>判斷門檻</span><strong>${escapeHtml(capabilityStageLabel(task.minimumLevel))}</strong></div>
       <div><span>預估 P50 / P80</span><strong>${numberFormat.format(task.estimatedHoursP50)} / ${numberFormat.format(task.estimatedHoursP80)} 小時</strong></div>
     </div>
     <div class="task-triage-note"><span>建議處理</span><p>${escapeHtml(triage)}</p></div>
+    ${matchPanel}
     <div class="task-detail-evidence">
       <span>事件 ${task.eventCount} 筆</span>
       <span>完成事件 ${task.completedEventCount} 筆</span>
@@ -831,23 +817,17 @@ function renderPeopleSnapshot() {
   const interns = state.datasets.interns;
   const rhythm = state.datasets.rhythm;
   const counts = interns?.meta?.counts || {};
-  const total = counts.total || 0;
   const active = counts.active || 0;
-  const paused = counts.paused || 0;
-  const activePercent = total ? Math.round((active / total) * 100) : 0;
   const signalPeople = rhythm?.summary?.peopleCount || 0;
   const capacity = getCapacityStats();
+  const capacityPercent = capacity.activeCount ? Math.round((capacity.covered / capacity.activeCount) * 100) : 0;
 
   document.querySelector("#peopleSnapshot").innerHTML = `
     <div class="snapshot-number"><strong>${numberFormat.format(active)}</strong><span>位 active 成員</span></div>
     <div class="snapshot-bars">
       <div>
-        <div class="snapshot-bar-head"><span>Active 比例</span><strong>${activePercent}%</strong></div>
-        <div class="progress-track"><div class="progress-fill" style="width:${clamp(activePercent, 0, 100)}%"></div></div>
-      </div>
-      <div>
-        <div class="snapshot-bar-head"><span>暫停成員</span><strong>${paused}</strong></div>
-        <div class="progress-track"><div class="progress-fill warning" style="width:${total ? clamp((paused / total) * 100, 0, 100) : 0}%"></div></div>
+        <div class="snapshot-bar-head"><span>本週容量已回填</span><strong>${capacity.covered}/${capacity.activeCount}</strong></div>
+        <div class="progress-track"><div class="progress-fill" style="width:${clamp(capacityPercent, 0, 100)}%"></div></div>
       </div>
     </div>
     <p class="metric-hint">本週容量已回填 ${capacity.covered}/${capacity.activeCount} 位；工作節奏資料涵蓋 ${signalPeople} 人，但歷史訊號不代表本週可用時數。</p>`;
@@ -857,10 +837,12 @@ function renderPeopleSummary() {
   const interns = state.datasets.interns;
   const counts = interns?.meta?.counts || {};
   const capacity = getCapacityStats();
+  const activePeople = (interns?.interns || []).filter((person) => person.status === "active");
+  const emailCount = activePeople.filter((person) => person.maskedEmail).length;
   const cards = [
-    { label: "成員總數", value: counts.total || 0, hint: "公開安全快照" },
-    { label: "Active", value: counts.active || 0, hint: "可聯繫，不等於本週有空" },
-    { label: "容量已回填", value: `${capacity.covered}/${capacity.activeCount}`, hint: "同時具備本週工時與 L1–L3" },
+    { label: "可聯繫成員", value: counts.active || 0, hint: "本頁只呈現 active" },
+    { label: "遮罩 Email", value: `${emailCount}/${counts.active || 0}`, hint: "完整 Email 不公開" },
+    { label: "容量已回填", value: `${capacity.covered}/${capacity.activeCount}`, hint: "只計有效的本週可用工時" },
     { label: "本週可用", value: `${numberFormat.format(capacity.availableHours)}h`, hint: capacity.covered ? "有效回填合計" : "尚無有效回填" },
   ];
 
@@ -872,9 +854,235 @@ function renderPeopleSummary() {
     </article>`).join("");
 }
 
+function renderCapabilityFramework() {
+  const framework = state.datasets.capabilities;
+  const domains = framework?.domains || [];
+  const stages = framework?.stages || [];
+  const target = document.querySelector("#levelGuideGrid");
+  if (!domains.length || !stages.length) {
+    target.innerHTML = '<div class="empty-state">能力框架尚未讀取。</div>';
+    return;
+  }
+
+  target.innerHTML = domains.map((domain) => `
+    <article class="capability-domain-card">
+      <span>能力面向</span>
+      <h4>${escapeHtml(domain.name)}</h4>
+      <div class="capability-stage-list">
+        ${stages.map((stage) => `
+          <div>
+            <strong>${escapeHtml(stage.name)}</strong>
+            <p>${escapeHtml(domain.stages?.[stage.id] || stage.summary)}</p>
+          </div>`).join("")}
+      </div>
+    </article>`).join("");
+
+  const coveredMonths = state.datasets.interns?.meta?.history?.coveredMonths || [];
+  const firstMonth = coveredMonths[0];
+  const lastMonth = coveredMonths[coveredMonths.length - 1];
+  const evidenceRange = firstMonth && lastMonth ? `${firstMonth} 至 ${lastMonth}` : "目前公開快照";
+  document.querySelector("#capabilityEvidenceNote").innerHTML = `
+    <strong>目前是候選證據，不是完整能力盤點。</strong>
+    <p>個人卡只使用 ${escapeHtml(evidenceRange)} 工時報帳中的主要工作分類；尚未納入一次通過率、返工、任務複雜度與覆核紀錄。</p>`;
+
+  renderCapabilityRules(framework);
+}
+
+function renderCapabilityRules(framework) {
+  const speech = framework.speechToText || {};
+  const progression = framework.progressionRules || {};
+  const salary = framework.salaryReviewRules || {};
+  const speechTarget = document.querySelector("#speechClassification");
+  const policyTarget = document.querySelector("#capabilityPolicyGrid");
+  const experienceTarget = document.querySelector("#experiencePolicyGrid");
+
+  experienceTarget.innerHTML = renderExperiencePolicy(framework);
+
+  speechTarget.innerHTML = `
+    <div class="rule-card-head"><span>主要歸類</span><strong>${escapeHtml(speech.primaryDomain || "待確認")}</strong></div>
+    <div class="rule-step-list">${(speech.rules || []).map((item) => `
+      <div><strong>${escapeHtml(item.stage)}</strong><p>${escapeHtml(item.classification)}</p></div>`).join("")}</div>
+    <p class="rule-footnote">${escapeHtml(speech.secondaryEvidence || "")}</p>`;
+
+  policyTarget.innerHTML = `
+    <article class="policy-card">
+      <span>能力進階</span>
+      <h4>通過門檻才列為候選</h4>
+      <p>${escapeHtml(progression.principle || "")}</p>
+      <ul>${(progression.gates || []).map((gate) => `<li><strong>${escapeHtml(gate.stage)}：</strong>${escapeHtml(gate.rule)}</li>`).join("")}</ul>
+      <small>現有資料仍缺：${escapeHtml((progression.currentlyMissing || []).join("、"))}</small>
+    </article>
+    <article class="policy-card salary-policy-card">
+      <span>薪資級距</span>
+      <h4>符合資格後再人工審查</h4>
+      <p>${escapeHtml(salary.principle || "")}</p>
+      <ul>${(salary.paths || []).map((path) => `<li>${escapeHtml(path)}</li>`).join("")}</ul>
+      <small>${escapeHtml(salary.humanDecision || "")}</small>
+    </article>`;
+}
+
+function renderExperiencePolicy(framework) {
+  const xp = framework.experiencePolicy || {};
+  const salaryPolicy = framework.salaryStagePolicy || {};
+  const stages = framework.salaryStages || [];
+  return `
+    <article class="experience-policy-card">
+      <span>經驗值 XP</span>
+      <h4>工作累積與能力證據分開計算</h4>
+      <p>每 1 小時可追溯工作暫估 10 XP；各知能再依工作關聯權重累積領域 XP。</p>
+      <small>${escapeHtml(xp.meaning || "")}</small>
+    </article>
+    <article class="experience-policy-card salary-ladder-card">
+      <span>薪資進階階梯</span>
+      <h4>綜合門檻須同時達標</h4>
+      <div class="salary-stage-list">${stages.slice(1).map((stage) => `
+        <div><strong>${escapeHtml(stage.name)}</strong><small>${stage.totalXp} XP · 主能力 ${stage.minimumPrimaryIndex} · AI ${stage.minimumIndexes?.ai || 0} · 馴錢師 ${stage.minimumIndexes?.xunqianshi || 0}</small></div>`).join("")}</div>
+      <p>${escapeHtml(salaryPolicy.principle || "")}</p>
+    </article>`;
+}
+
+function capabilityStageLabel(value) {
+  return ({ L1: "基礎執行", L2: "獨立判斷", L3: "規劃覆核" })[value] || value || "待確認";
+}
+
+function deriveCapabilityEvidence(person) {
+  const domains = state.datasets.capabilities?.domains || [];
+  const hoursFor100 = toNumber(state.datasets.capabilities?.scoringPolicy?.hoursFor100) || 40;
+  const result = [];
+  for (const domain of domains) {
+    const signalWeights = new Map((domain.evidenceSignals || []).map((signal) => (
+      typeof signal === "string" ? [signal, 1] : [signal.category, toNumber(signal.weight) || 1]
+    )));
+    const weightedMinutes = (person.history?.topWorkSignals || []).reduce((sum, signal) => (
+      sum + (toNumber(signal.minutes) * (signalWeights.get(signal.category) || 0))
+    ), 0);
+    const weightedHours = weightedMinutes / 60;
+    const index = weightedHours > 0
+      ? Math.round(Math.min(100, Math.sqrt(weightedHours / hoursFor100) * 100))
+      : 0;
+    result.push({
+      id: domain.id,
+      name: domain.name,
+      minutes: weightedMinutes,
+      index,
+      evidenceLabel: capabilityEvidenceLabel(index),
+      xp: Math.round(weightedHours * 10),
+    });
+  }
+  return result;
+}
+
+function getExperienceProfile(person, evidence = deriveCapabilityEvidence(person)) {
+  const framework = state.datasets.capabilities || {};
+  const stages = framework.salaryStages || [];
+  const policy = framework.salaryStagePolicy || {};
+  const indexMap = new Map(evidence.map((item) => [item.id, item.index]));
+  const primaryIds = policy.primaryDomains || ["social_work", "finance", "xunqianshi"];
+  const primary = primaryIds
+    .map((id) => evidence.find((item) => item.id === id))
+    .filter(Boolean)
+    .sort((a, b) => b.index - a.index)[0] || { id: "", name: "待累積", index: 0 };
+  const totalXp = Math.round(toNumber(person.history?.totalHours) * 10);
+  const meetsStage = (stage) => {
+    const domainRule = stage.minimumDomainCount || { threshold: 0, count: 0 };
+    const domainCount = evidence.filter((item) => item.index >= toNumber(domainRule.threshold)).length;
+    return totalXp >= toNumber(stage.totalXp)
+      && primary.index >= toNumber(stage.minimumPrimaryIndex)
+      && Object.entries(stage.minimumIndexes || {}).every(([id, minimum]) => toNumber(indexMap.get(id)) >= toNumber(minimum))
+      && domainCount >= toNumber(domainRule.count);
+  };
+  const candidateStageIndex = Math.max(0, ...stages.map((stage, index) => meetsStage(stage) ? index : -1));
+  const candidateStage = stages[candidateStageIndex] || { name: "經驗累積期" };
+  const nextStage = stages[candidateStageIndex + 1] || null;
+  return {
+    totalXp,
+    primary,
+    candidateStage,
+    nextStage,
+    gap: nextStage ? buildSalaryStageGap(nextStage, totalXp, primary.index, evidence) : "已達最高量化審查階段",
+  };
+}
+
+function buildSalaryStageGap(stage, totalXp, primaryIndex, evidence) {
+  const indexMap = new Map(evidence.map((item) => [item.id, item.index]));
+  const domainNames = new Map((state.datasets.capabilities?.domains || []).map((domain) => [domain.id, domain.name]));
+  const gaps = [];
+  if (totalXp < toNumber(stage.totalXp)) gaps.push(`XP 尚差 ${toNumber(stage.totalXp) - totalXp}`);
+  if (primaryIndex < toNumber(stage.minimumPrimaryIndex)) gaps.push(`主能力尚差 ${toNumber(stage.minimumPrimaryIndex) - primaryIndex}`);
+  Object.entries(stage.minimumIndexes || {}).forEach(([id, minimum]) => {
+    const current = toNumber(indexMap.get(id));
+    if (current < toNumber(minimum)) gaps.push(`${domainNames.get(id) || id}尚差 ${toNumber(minimum) - current}`);
+  });
+  const domainRule = stage.minimumDomainCount || { threshold: 0, count: 0 };
+  const domainCount = evidence.filter((item) => item.index >= toNumber(domainRule.threshold)).length;
+  if (domainCount < toNumber(domainRule.count)) gaps.push(`達 ${domainRule.threshold} 分的知能尚差 ${toNumber(domainRule.count) - domainCount} 類`);
+  return gaps.length ? gaps.join("、") : "量化門檻已達；品質閘門待人工確認";
+}
+
+function capabilityEvidenceLabel(index) {
+  const labels = state.datasets.capabilities?.scoringPolicy?.labels || [];
+  return [...labels]
+    .sort((a, b) => toNumber(b.minimum) - toNumber(a.minimum))
+    .find((item) => index >= toNumber(item.minimum))?.label || "尚無證據";
+}
+
+function getTaskCapabilityProfile(task) {
+  return state.datasets.capabilities?.jobProfiles?.[task.categoryId] || null;
+}
+
+function rankPeopleForTask(task) {
+  const profile = getTaskCapabilityProfile(task);
+  if (!profile) return [];
+  const capacityMap = getCapacityMap();
+  return (state.datasets.interns?.interns || [])
+    .filter((person) => person.status === "active")
+    .map((person) => {
+      const evidence = deriveCapabilityEvidence(person);
+      const indexMap = new Map(evidence.map((item) => [item.id, item.index]));
+      const score = Math.round(Object.entries(profile.weights || {})
+        .reduce((sum, [domainId, weight]) => sum + (toNumber(indexMap.get(domainId)) * toNumber(weight)), 0));
+      return {
+        id: person.id,
+        safeName: maskName(person.displayName || "未命名"),
+        safeEmail: person.maskedEmail || "Email 未提供",
+        score,
+        capacity: capacityMap.get(String(person.id)) || null,
+      };
+    })
+    .filter((person) => person.score > 0)
+    .sort((a, b) => b.score - a.score || toNumber(b.capacity?.availableHours) - toNumber(a.capacity?.availableHours))
+    .slice(0, 3);
+}
+
+function renderTaskCapabilityMatches(task) {
+  const profile = getTaskCapabilityProfile(task);
+  if (!profile) return `
+    <section class="task-match-panel">
+      <div class="task-match-head"><span>知能適配</span><strong>需先補工作知能標籤</strong></div>
+      <p>此工作類型尚無安全的知能權重，不自動產生人選排序。</p>
+    </section>`;
+  const domains = new Map((state.datasets.capabilities?.domains || []).map((domain) => [domain.id, domain.name]));
+  const candidates = rankPeopleForTask(task);
+  return `
+    <section class="task-match-panel">
+      <div class="task-match-head"><span>知能適配候選</span><strong>${escapeHtml(profile.name)}</strong></div>
+      <div class="task-match-requirements">${Object.entries(profile.weights || {}).map(([domainId, weight]) => `
+        <span>${escapeHtml(domains.get(domainId) || domainId)} ${Math.round(toNumber(weight) * 100)}%</span>`).join("")}</div>
+      <div class="task-match-list">${candidates.length ? candidates.map((person, index) => `
+        <div>
+          <strong>${index + 1}. ${escapeHtml(person.safeName)}</strong>
+          <span>${escapeHtml(person.safeEmail)}</span>
+          <b>適配 ${person.score}</b>
+          <small>${person.capacity ? `本週可用 ${numberFormat.format(person.capacity.availableHours)} 小時` : "本週容量待確認"}</small>
+        </div>`).join("") : "<p>目前沒有可追溯的相關工作證據。</p>"}</div>
+      <p>${escapeHtml(profile.note || "")} 指數只供人工選人前比較，不會自動派工。</p>
+    </section>`;
+}
+
 function renderPeopleGrid() {
   const capacityMap = getCapacityMap();
   const people = [...(state.datasets.interns?.interns || [])]
+    .filter((person) => person.status === "active")
     .map((person) => ({
       ...person,
       safeName: maskName(person.displayName || "未命名"),
@@ -882,11 +1090,9 @@ function renderPeopleGrid() {
       hours: toNumber(person.workHoursThisMonth),
       capacity: capacityMap.get(String(person.id)) || null,
     }))
-    .filter((person) => state.peopleStatus === "all" || person.status === state.peopleStatus)
     .filter((person) => !state.peopleSearch || [person.safeName, person.safeEmail]
       .some((value) => value.toLowerCase().includes(state.peopleSearch)))
     .sort((a, b) => {
-      if (a.status !== b.status) return a.status === "active" ? -1 : 1;
       return a.hours - b.hours;
     });
 
@@ -897,9 +1103,10 @@ function renderPeopleGrid() {
   }
 
   target.innerHTML = people.map((person) => {
-    const active = person.status === "active";
-    const canEvaluate = active && Boolean(person.capacity);
-    const skills = Array.isArray(person.capacity?.skills) ? person.capacity.skills : [];
+    const canEvaluate = Boolean(person.capacity);
+    const evidence = deriveCapabilityEvidence(person);
+    const evidencedCount = evidence.filter((item) => item.index > 0).length;
+    const experience = getExperienceProfile(person, evidence);
     return `
       <article class="person-card">
         <div class="person-card-top">
@@ -910,14 +1117,25 @@ function renderPeopleGrid() {
               <p>${escapeHtml(person.currentRole || "工讀生")}</p>
             </div>
           </div>
-          <span class="status-pill ${canEvaluate ? "good" : active ? "neutral" : "warning"}">${canEvaluate ? "可評估" : active ? "待補資料" : "暫停"}</span>
+          <span class="status-pill ${evidencedCount ? "good" : "neutral"}">${evidencedCount ? `${evidencedCount}/4 類有證據` : "證據待補"}</span>
         </div>
         <div class="person-facts">
           <div class="person-fact"><span>本週可用</span><strong>${person.capacity ? `${numberFormat.format(person.capacity.availableHours)} 小時` : "待回填"}</strong></div>
-          <div class="person-fact"><span>能力等級</span><strong>${escapeHtml(person.capacity?.level || "待回填")}</strong></div>
+          <div class="person-fact"><span>能力判定</span><strong>待人工確認</strong></div>
         </div>
-        <div class="person-tags">${skills.length ? skills.map((skill) => `<span>${escapeHtml(skill)}</span>`).join("") : "<span>能力標籤待補</span>"}</div>
-        <p>${canEvaluate ? "可依工作門檻與 P80 工時進入人工派工評估。" : active ? "尚不能列入可派名單；請先補本週可用時數與 L1–L3。" : "目前不建議派新工作，先確認何時可恢復。"}</p>
+        <div class="experience-summary">
+          <div><span>總經驗值</span><strong>${numberFormat.format(experience.totalXp)} XP</strong></div>
+          <div><span>主能力證據</span><strong>${escapeHtml(experience.primary.name)} ${experience.primary.index}</strong></div>
+          <div><span>量化候選</span><strong>${escapeHtml(experience.candidateStage.name)}</strong></div>
+          <small>下一階段：${escapeHtml(experience.gap)}</small>
+        </div>
+        <div class="capability-index-grid">${evidence.map((item) => `
+          <div class="capability-index-item">
+            <div><span>${escapeHtml(item.name)}</span><strong>${item.index}</strong></div>
+            <div class="capability-index-track" aria-label="${escapeHtml(item.name)}知能證據指數 ${item.index}"><i style="width:${item.index}%"></i></div>
+            <small>${escapeHtml(item.evidenceLabel)} · ${numberFormat.format(item.xp)} XP</small>
+          </div>`).join("")}</div>
+        <p>${canEvaluate ? "容量已回填；可搭配工作知能權重進入人工選人。" : "量化候選不等於調薪核准；本週容量與品質閘門仍需另行確認。"}</p>
       </article>`;
   }).join("");
 }
@@ -1128,13 +1346,12 @@ async function copyManagementBrief() {
     `- 工時依據：${summary.timeReportCount || 0} 筆評論回報，未完成工作 P80 約 ${numberFormat.format(summary.totalEstimatedHoursP80 || 0)} 小時`,
     `- Active 成員：${interns.active || 0} 位`,
     `- 本週容量：${capacity.covered}/${capacity.activeCount} 位已回填，合計 ${numberFormat.format(capacity.availableHours)} 小時`,
-    `- 暫停成員：${interns.paused || 0} 位`,
     `- 建議事項：${state.recommendations.length} 筆`,
     "",
     "## 優先建議",
     ...state.recommendations.slice(0, 5).map((item) => `- ${item.title}：${item.action}`),
     "",
-    "注意：未回填本週容量與等級的人員不列入可派候選；正式派工、驗收與派薪請回到 InfoCenter。",
+    "注意：未回填本週容量或能力證據尚未人工確認的人員，不列入可派候選；正式派工、驗收與派薪請回到 InfoCenter。",
   ].join("\n");
   await copyText(brief, "管理摘要已複製");
 }

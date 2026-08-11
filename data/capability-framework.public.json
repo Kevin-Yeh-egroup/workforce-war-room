@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "version": "0.2.0",
+    "status": "review-draft",
+    "updatedAt": "2026-08-11T18:30:00+08:00",
+    "externalWriteApproved": false,
+    "privacy": "Public-safe framework only. Individual evidence remains a review candidate and is never an automatic performance or salary decision."
+  },
+  "stages": [
+    {
+      "id": "foundation",
+      "name": "基礎執行",
+      "summary": "能依範本與檢查表完成工作，遇到不確定處會標記並回報。"
+    },
+    {
+      "id": "independent",
+      "name": "獨立判斷",
+      "summary": "能判讀情境、查核來源、說明理由並處理常見例外。"
+    },
+    {
+      "id": "advanced",
+      "name": "規劃覆核",
+      "summary": "能訂定規則、處理高風險例外、覆核他人交付並改善流程。"
+    }
+  ],
+  "domains": [
+    {
+      "id": "social_work",
+      "name": "社工知能",
+      "evidenceSignals": ["social_welfare_resources"],
+      "stages": {
+        "foundation": "能辨識常見社福服務、方案與轉介用語，依來源整理資料。",
+        "independent": "能判讀服務情境、分類需求、查核資格與資源，並保留依據。",
+        "advanced": "能處理倫理與例外風險、設計查核規則，並覆核社福內容品質。"
+      }
+    },
+    {
+      "id": "finance",
+      "name": "財務知能",
+      "evidenceSignals": ["financial_education"],
+      "stages": {
+        "foundation": "能依範本處理基礎財務教育名詞、資料與內容格式。",
+        "independent": "能區分預算、債務、保險與財務諮詢情境，查核並說明判斷。",
+        "advanced": "能辨識誤導與風險、整合跨來源內容，並設計或覆核財務教育規則。"
+      }
+    },
+    {
+      "id": "ai",
+      "name": "AI知能",
+      "evidenceSignals": [
+        {"category": "transcript_and_meeting", "weight": 0.4},
+        {"category": "dictionary", "weight": 0.6}
+      ],
+      "stages": {
+        "foundation": "能依流程操作 AI 工具，辨識輸入、輸出與不確定內容。",
+        "independent": "能測試工具、判讀錯誤、調整操作方式並說明理由。",
+        "advanced": "能分析失敗模式、設計安全規則與工作流程，並覆核 AI 產出品質。"
+      }
+    },
+    {
+      "id": "xunqianshi",
+      "name": "馴錢師知能",
+      "evidenceSignals": [
+        {"category": "transcript_and_meeting", "weight": 1},
+        {"category": "dictionary", "weight": 1.2}
+      ],
+      "stages": {
+        "foundation": "能理解馴錢師常用詞彙，依音檔完成語音轉文字與逐字稿校正。",
+        "independent": "能依上下文辨識馴錢師專有名詞、整理安全的自定義名詞候選並說明理由。",
+        "advanced": "能歸納馴錢師語料與辨識錯誤模式，制定名詞庫規則並覆核校正品質。"
+      }
+    }
+  ],
+  "scoringPolicy": {
+    "name": "知能證據指數",
+    "range": "0-100",
+    "formula": "sqrt(weightedEvidenceHours / 40) * 100, capped at 100",
+    "hoursFor100": 40,
+    "meaning": "只表示目前可追溯的相關工作證據量，不代表績效、人格、正式能力等級或薪資。",
+    "labels": [
+      {"minimum": 0, "label": "尚無證據"},
+      {"minimum": 1, "label": "初步證據"},
+      {"minimum": 40, "label": "部分證據"},
+      {"minimum": 70, "label": "持續證據"},
+      {"minimum": 90, "label": "較多證據"}
+    ]
+  },
+  "experiencePolicy": {
+    "name": "經驗值（XP）",
+    "personFormula": "1 hour of traceable completed work = 10 XP",
+    "domainFormula": "1 weighted evidence hour = 10 domain XP",
+    "currentDataStatus": "estimated",
+    "meaning": "目前由工時報帳與主要工作分類暫估；事件人工驗收資料接通後，只有驗收通過的工作才能成為正式 XP。",
+    "qualityGate": ["人工驗收通過", "沒有未解決的重大返工", "成果可追溯", "主管確認薪資階段"]
+  },
+  "salaryStages": [
+    {
+      "id": "accumulating",
+      "name": "經驗累積期",
+      "totalXp": 0,
+      "minimumPrimaryIndex": 0,
+      "minimumIndexes": {},
+      "minimumDomainCount": {"threshold": 0, "count": 0}
+    },
+    {
+      "id": "independent_review",
+      "name": "獨立執行級距審查",
+      "totalXp": 300,
+      "minimumPrimaryIndex": 40,
+      "minimumIndexes": {"ai": 20, "xunqianshi": 30},
+      "minimumDomainCount": {"threshold": 40, "count": 2}
+    },
+    {
+      "id": "cross_domain_review",
+      "name": "跨域承接級距審查",
+      "totalXp": 800,
+      "minimumPrimaryIndex": 70,
+      "minimumIndexes": {"ai": 40, "xunqianshi": 60},
+      "minimumDomainCount": {"threshold": 60, "count": 2}
+    },
+    {
+      "id": "quality_lead_review",
+      "name": "規劃覆核級距審查",
+      "totalXp": 1500,
+      "minimumPrimaryIndex": 85,
+      "minimumIndexes": {"ai": 60, "xunqianshi": 80},
+      "minimumDomainCount": {"threshold": 70, "count": 3}
+    }
+  ],
+  "salaryStagePolicy": {
+    "primaryDomains": ["social_work", "finance", "xunqianshi"],
+    "principle": "總 XP、主能力、AI、馴錢師及跨域門檻必須同時達標；平均分數不能抵銷任一必要能力不足。",
+    "decision": "量化門檻只產生審查候選；品質閘門未通過前維持原薪資階段。"
+  },
+  "jobProfiles": {
+    "TRANSCRIPT_QA": {
+      "name": "逐字稿與名詞校正",
+      "weights": {"xunqianshi": 0.7, "ai": 0.3},
+      "note": "馴錢師語境與專有名詞是主能力；AI 工具與錯誤判讀是輔助能力。"
+    },
+    "TOOL_QA": {
+      "name": "工具與網頁測試",
+      "weights": {"ai": 1},
+      "note": "目前僅能依 AI／工具相關證據初步比對，仍須確認實際測試經驗。"
+    },
+    "KNOWLEDGE_OPS": {
+      "name": "資料與知識庫整理",
+      "weights": {"xunqianshi": 0.4, "social_work": 0.3, "finance": 0.3},
+      "note": "需再依每筆工作內容調整社工或財務權重；目前只作初步候選排序。"
+    }
+  },
+  "speechToText": {
+    "primaryDomain": "馴錢師知能",
+    "rules": [
+      {"stage": "基礎執行", "classification": "操作轉錄、依音檔校正、標示不確定內容"},
+      {"stage": "獨立判斷", "classification": "辨識上下文錯誤、整理安全的名詞候選、說明修正理由"},
+      {"stage": "規劃覆核", "classification": "分析辨識失敗模式、制定名詞庫規則、抽查與改善流程"}
+    ],
+    "secondaryEvidence": "語音轉文字與自定義名詞同時提供 AI 知能的輔助證據；內容涉及社福或財務時，再增加對應領域的輔助證據。只有工時，不能證明正式能力階段。"
+  },
+  "progressionRules": {
+    "principle": "以核准品質、情境跨度與持續表現判斷，不以單一時數或件數自動升級。",
+    "gates": [
+      {"stage": "基礎執行候選", "rule": "同一領域至少 3 筆已驗收成果，沒有未解決的重大返工。"},
+      {"stage": "獨立判斷候選", "rule": "最近 180 天至少 8 筆已驗收成果，涵蓋至少 2 種工作情境，並有判斷理由或例外處理證據。"},
+      {"stage": "規劃覆核候選", "rule": "最近 180 天至少 12 筆已驗收成果，含至少 3 筆複雜例外，以及 2 筆規則設計、覆核或帶領證據。"}
+    ],
+    "requiredEvidence": ["事件已完成且人工驗收通過", "成果或來源可追溯", "返工與例外有紀錄", "跨情境證據", "主管人工確認"],
+    "currentlyMissing": ["一次通過率", "返工次數", "任務複雜度", "例外處理結果", "覆核或帶領紀錄"]
+  },
+  "salaryReviewRules": {
+    "principle": "經驗值與綜合知能門檻只產生薪資級距審查資格，不自動調薪。",
+    "eligibleWhen": ["總 XP 達到該階段門檻", "主能力、AI、馴錢師與跨域門檻同時達標", "工作範圍或責任確實擴大", "品質與可靠度在觀察期內持續符合", "沒有未完成的重大驗收或返工"],
+    "paths": [
+      "達到 300 XP、主能力 40、AI 20、馴錢師 30，且至少兩項知能達 40，才列入獨立執行級距審查。",
+      "達到 800 XP、主能力 70、AI 40、馴錢師 60，且至少兩項知能達 60，才列入跨域承接級距審查。",
+      "達到 1500 XP、主能力 85、AI 60、馴錢師 80，且至少三項知能達 70，才列入規劃覆核級距審查。"
+    ],
+    "humanDecision": "由 Kevin 或指定主管核准；公開頁只顯示未符合、可審查、已核准，不顯示金額。"
+  }
+}

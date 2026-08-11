@@ -17,7 +17,7 @@
 
 ## 檔案
 
-- `fields.json`：9 個欄位、能力等級與建議存放位置。
+- `fields.json`：9 個欄位、能力階段與建議存放位置。
 - `templates.json`：3 組工作／事件範本配對。
 - `dashboard-calculations.json`：13 個儀表板分母、公式、空值與警示規則。
 - `execution-verification.json`：執行證據狀態機，以及 AI 可做與不可做的事。

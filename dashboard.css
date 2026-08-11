@@ -1204,6 +1204,284 @@ select:focus-visible {
   margin-bottom: 16px;
 }
 
+.people-toolbar-search-only {
+  grid-template-columns: minmax(260px, 560px);
+}
+
+.level-guide {
+  margin-bottom: 16px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface-strong);
+}
+
+.level-guide-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.level-guide-heading h3,
+.level-guide-grid h4 {
+  margin: 0;
+}
+
+.level-guide-heading > p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.level-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.level-guide-grid article {
+  padding: 14px;
+  border-left: 3px solid var(--forest-2);
+  background: var(--forest-soft);
+}
+
+.level-guide-grid span {
+  color: var(--forest-2);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.level-guide-grid h4 {
+  margin-top: 2px;
+  font-size: 15px;
+}
+
+.level-guide-grid p,
+.level-guide-grid small,
+.capacity-method-note p {
+  color: var(--ink-soft);
+}
+
+.level-guide-grid p {
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.level-guide-grid small {
+  font-size: 11px;
+}
+
+.capability-domain-card {
+  min-width: 0;
+}
+
+.capability-stage-list {
+  display: grid;
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.capability-stage-list > div {
+  padding-top: 9px;
+  border-top: 1px solid rgba(24, 93, 70, 0.16);
+}
+
+.capability-stage-list strong {
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.capability-stage-list p {
+  margin-bottom: 0;
+}
+
+.capability-rules-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.7fr);
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.capability-evidence-note {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-left: 3px solid var(--forest-2);
+  background: var(--surface-muted);
+}
+
+.capability-evidence-note p {
+  margin: 3px 0 0;
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+.experience-policy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.experience-policy-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-muted);
+}
+
+.experience-policy-card > span {
+  color: var(--forest-2);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+}
+
+.experience-policy-card h4 {
+  margin: 3px 0 8px;
+  font-size: 15px;
+}
+
+.experience-policy-card p,
+.experience-policy-card small {
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.experience-policy-card p {
+  margin: 0 0 8px;
+}
+
+.salary-ladder-card {
+  border-color: #ead29e;
+  background: var(--amber-soft);
+}
+
+.salary-stage-list {
+  display: grid;
+  gap: 7px;
+  margin: 10px 0;
+}
+
+.salary-stage-list > div {
+  display: grid;
+  gap: 1px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.salary-stage-list strong {
+  font-size: 12px;
+}
+
+.speech-classification,
+.policy-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-muted);
+}
+
+.speech-classification h4,
+.policy-card h4 {
+  margin: 3px 0 10px;
+  font-size: 15px;
+}
+
+.section-kicker,
+.policy-card > span,
+.rule-card-head span {
+  color: var(--forest-2);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+}
+
+.rule-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.rule-step-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.rule-step-list div {
+  display: grid;
+  gap: 2px;
+}
+
+.rule-step-list strong {
+  font-size: 12px;
+}
+
+.rule-step-list p,
+.rule-footnote,
+.policy-card p,
+.policy-card li,
+.policy-card small {
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.rule-step-list p,
+.rule-footnote,
+.policy-card p {
+  margin: 0;
+}
+
+.rule-footnote {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line-strong);
+}
+
+.capability-policy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.policy-card ul {
+  margin: 10px 0;
+  padding-left: 18px;
+}
+
+.policy-card li + li {
+  margin-top: 6px;
+}
+
+.salary-policy-card {
+  background: var(--amber-soft);
+  border-color: #ead29e;
+}
+
+.capacity-method-note {
+  margin-top: 12px;
+  padding: 14px 16px;
+  border: 1px solid #ead29e;
+  border-radius: 13px;
+  background: var(--amber-soft);
+}
+
+.capacity-method-note p {
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+
 .search-field,
 .select-field {
   display: grid;
@@ -1333,6 +1611,164 @@ select:focus-visible {
   color: var(--forest-2);
   background: var(--forest-soft);
   font-size: 11px;
+}
+
+.capability-index-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.experience-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #ead29e;
+  border-radius: 13px;
+  background: var(--amber-soft);
+}
+
+.experience-summary > div {
+  min-width: 0;
+}
+
+.experience-summary span,
+.experience-summary strong {
+  display: block;
+}
+
+.experience-summary span,
+.experience-summary small {
+  color: var(--ink-soft);
+  font-size: 10px;
+}
+
+.experience-summary strong {
+  margin-top: 3px;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.experience-summary small {
+  grid-column: 1 / -1;
+  padding-top: 7px;
+  border-top: 1px dashed #d8b96f;
+  line-height: 1.55;
+}
+
+.capability-index-item {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-muted);
+}
+
+.capability-index-item > div:first-child {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.capability-index-item span,
+.capability-index-item small {
+  color: var(--ink-soft);
+  font-size: 10px;
+}
+
+.capability-index-item strong {
+  font-size: 17px;
+}
+
+.capability-index-track {
+  height: 5px;
+  margin: 7px 0 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.capability-index-track i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--forest-2);
+}
+
+.task-match-panel {
+  display: grid;
+  gap: 11px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-muted);
+}
+
+.task-match-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.task-match-head span {
+  color: var(--forest-2);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.task-match-requirements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.task-match-requirements span {
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: var(--forest-2);
+  background: var(--forest-soft);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.task-match-list {
+  display: grid;
+  gap: 7px;
+}
+
+.task-match-list > div {
+  display: grid;
+  grid-template-columns: minmax(110px, 1fr) minmax(130px, 1.2fr) auto;
+  gap: 4px 10px;
+  align-items: baseline;
+  padding: 9px 10px;
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.task-match-list span,
+.task-match-list small {
+  color: var(--ink-soft);
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.task-match-list b {
+  color: var(--forest-2);
+  font-size: 12px;
+}
+
+.task-match-list small {
+  grid-column: 1 / -1;
+}
+
+.task-match-panel > p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 12px;
 }
 
 .domain-grid {
@@ -1862,6 +2298,20 @@ select:focus-visible {
   .people-toolbar {
     grid-template-columns: 1fr;
   }
+
+  .level-guide-heading {
+    display: grid;
+  }
+
+  .level-guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-rules-grid,
+  .capability-policy-grid,
+  .experience-policy-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 430px) {
@@ -1935,6 +2385,23 @@ select:focus-visible {
 
   .person-facts {
     grid-template-columns: 1fr;
+  }
+
+  .capability-index-grid,
+  .task-match-list > div {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-summary small {
+    grid-column: auto;
+  }
+
+  .task-match-list small {
+    grid-column: auto;
   }
 
   .source-strip {

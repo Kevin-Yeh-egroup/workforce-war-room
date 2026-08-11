@@ -38,7 +38,7 @@
       "title": "本週可用工時尚未回填",
       "summary": "capacity-week.public.json 是每週容量輸入骨架；目前週次已過期且沒有有效人員資料，不能用歷史工時推定可派量。",
       "when": "每週派工前更新",
-      "nextAction": "回填 active 成員的本週可用時數與 L1–L3 能力等級。"
+      "nextAction": "回填 active 成員的本週可用時數，並人工確認社工、財務、AI、馴錢師四類知能證據。"
     },
     {
       "id": "public-privacy-boundary",

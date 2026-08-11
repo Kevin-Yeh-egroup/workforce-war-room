@@ -19,13 +19,13 @@
       },
       "workTemplate": {
         "name": "【工讀】工具與網頁測試",
-        "minimumLevel": "L2",
+        "minimumLevel": "獨立判斷",
         "requiredSkills": ["情境測試", "問題重現", "條理回報"],
         "purpose": "依指定情境操作網站或工具，找出可重現問題並留下可驗收證據。",
         "requiredInputs": ["測試網址與版本", "測試帳號或假資料規則", "裝置／瀏覽器範圍", "測試情境清單"],
         "deliverables": ["測試結果清單", "問題重現步驟", "必要截圖或錄影", "實際耗時"],
         "doneWhen": "每個測試情境都有通過、失敗或無法測試的結果；問題具備重現步驟與證據。",
-        "fieldValues": {"work_category": "TOOL_QA", "estimated_hours_p50": 2, "estimated_hours_p80": 3, "minimum_level": "L2", "required_skills": ["情境測試", "問題重現", "條理回報"]}
+        "fieldValues": {"work_category": "TOOL_QA", "estimated_hours_p50": 2, "estimated_hours_p80": 3, "minimum_level": "獨立判斷", "required_skills": ["情境測試", "問題重現", "條理回報"]}
       },
       "eventTemplate": {
         "name": "【事件】工具測試回報",
@@ -48,13 +48,13 @@
       },
       "workTemplate": {
         "name": "【工讀】逐字稿與名詞校正",
-        "minimumLevel": "L1",
+        "minimumLevel": "基礎執行",
         "requiredSkills": ["文字校對", "專有名詞辨識", "上下文判讀"],
         "purpose": "將語音轉文字結果校正為可閱讀、可搜尋且保留原意的逐字稿。",
         "requiredInputs": ["原始音檔或錄影", "待校正逐字稿", "專有名詞表", "段落或時間範圍"],
         "deliverables": ["校正後逐字稿", "待確認名詞清單", "修正摘要", "實際耗時"],
         "doneWhen": "指定範圍已逐段核對；不確定內容有標記；專有名詞依規則統一。",
-        "fieldValues": {"work_category": "TRANSCRIPT_QA", "estimated_hours_p50": 2, "estimated_hours_p80": 3, "minimum_level": "L1", "required_skills": ["文字校對", "專有名詞辨識", "上下文判讀"]}
+        "fieldValues": {"work_category": "TRANSCRIPT_QA", "estimated_hours_p50": 2, "estimated_hours_p80": 3, "minimum_level": "基礎執行", "required_skills": ["文字校對", "專有名詞辨識", "上下文判讀"]}
       },
       "eventTemplate": {
         "name": "【事件】逐字稿校正回報",
@@ -77,13 +77,13 @@
       },
       "workTemplate": {
         "name": "【工讀】資料與知識庫整理",
-        "minimumLevel": "L2",
+        "minimumLevel": "獨立判斷",
         "requiredSkills": ["資料分類", "來源查核", "結構化摘要"],
         "purpose": "把來源資料整理成可查找、可追溯且欄位一致的知識項目。",
         "requiredInputs": ["來源範圍", "欄位規則", "分類與標籤規則", "重複資料處理規則"],
         "deliverables": ["整理後資料表或知識項目", "來源連結", "重複／缺件清單", "實際耗時"],
         "doneWhen": "必要欄位完整；來源可追溯；重複與缺件已標示；抽查結果符合規則。",
-        "fieldValues": {"work_category": "KNOWLEDGE_OPS", "estimated_hours_p50": 2, "estimated_hours_p80": 4, "minimum_level": "L2", "required_skills": ["資料分類", "來源查核", "結構化摘要"]}
+        "fieldValues": {"work_category": "KNOWLEDGE_OPS", "estimated_hours_p50": 2, "estimated_hours_p80": 4, "minimum_level": "獨立判斷", "required_skills": ["資料分類", "來源查核", "結構化摘要"]}
       },
       "eventTemplate": {
         "name": "【事件】資料整理回報",
