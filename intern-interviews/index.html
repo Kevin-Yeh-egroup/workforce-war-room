@@ -447,11 +447,11 @@
         </div>
       </div>
       <div class="notice">
-        <strong>內部使用提醒</strong>
+        <strong>公開安全版提醒</strong>
         <ul>
-          <li>這頁會讀取內部人才庫，可能顯示電話、Email、居住地與工作紀錄摘要。</li>
-          <li>不適合公開分享；這是內部會談輔助頁。</li>
-          <li>速記只存在本機瀏覽器，離開前請先複製到工作紀錄或人才庫備註。</li>
+          <li>這頁只讀取匿名別名、合作狀態與工作層級，不會載入內部人才庫。</li>
+          <li>請勿在公開或共用裝置輸入姓名、電話、Email、地址或其他敏感資料。</li>
+          <li>速記只存在本機瀏覽器；如需正式留存，請移至受控的內部工作紀錄。</li>
         </ul>
       </div>
     </section>
@@ -798,7 +798,7 @@
         tasks.push(categoryPrompts.dictionary_and_quality.task);
       }
 
-      tasks.push("順手補齊基本資訊：電話、Email、居住地、目前狀態");
+      tasks.push("確認下一個小任務與回報時間");
       return Array.from(new Set(tasks)).slice(0, 5);
     }
 
@@ -806,7 +806,7 @@
       const monthlyWork = Array.isArray(person?.monthlyWork) ? person.monthlyWork : [];
       const latest = monthlyWork.filter((item) => Number(item.hours || 0) > 0).slice(-1)[0];
       const latestText = latest ? `${latest.month} ${formatHours(latest.hours)}` : "近期工時待確認";
-      return `${latestText}；累計 ${formatHours(person?.historyTotalHours)}；有紀錄月份 ${person?.monthsWithHours || 0} 個月`;
+      return "公開安全版不顯示個人工時紀錄。";
     }
 
     function renderTalentCard(person) {
@@ -828,16 +828,16 @@
       talentCard.innerHTML = `
         <div class="profile-head">
           <div>
-            <h3>${escapeHtml(person.name || "未命名")}</h3>
-            <p class="muted">${escapeHtml(person.notes || person.referrer || "沒有額外備註")}</p>
+            <h3>${escapeHtml(person.displayName || "匿名成員")}</h3>
+            <p class="muted">公開識別碼：${escapeHtml(person.slug || "未提供")}</p>
           </div>
           <span class="badge ${person.status === "paused" ? "amber" : "green"}">${escapeHtml(statusLabel(person))}</span>
         </div>
         <div class="mini-grid">
-          <div class="mini"><strong>電話</strong>${escapeHtml(person.phone || "待補")}</div>
-          <div class="mini"><strong>Email</strong>${escapeHtml(person.email || "待補")}</div>
-          <div class="mini"><strong>居住地</strong>${escapeHtml(person.residence || "待補")}</div>
-          <div class="mini"><strong>目前狀態</strong>${escapeHtml(person.employmentOrStudy || person.currentRole || "待補")}</div>
+          <div class="mini"><strong>合作狀態</strong>${escapeHtml(statusLabel(person))}</div>
+          <div class="mini"><strong>工作層級</strong>${escapeHtml(person.workLevel || "未公開")}</div>
+          <div class="mini"><strong>個人資料</strong>未載入</div>
+          <div class="mini"><strong>工時／薪資</strong>未載入</div>
         </div>
         <div class="prompt-grid">
           <div class="prompt">
@@ -873,26 +873,26 @@
       talentState.people.forEach((person, index) => {
         const option = document.createElement("option");
         option.value = String(index);
-        option.textContent = `${person.name || "未命名"}｜${statusLabel(person)}｜${formatHours(person.historyTotalHours)}`;
+        option.textContent = `${person.displayName || "匿名成員"}｜${statusLabel(person)}`;
         talentSelect.append(option);
       });
     }
 
     async function loadTalentPool() {
       try {
-        const response = await fetch(new URL("../data/talent-pool.internal.json", window.location.href), { cache: "no-store" });
+        const response = await fetch(new URL("../data/talent-pool.public.json", window.location.href), { cache: "no-store" });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
         const people = Array.isArray(data.people) ? data.people : Array.isArray(data.items) ? data.items : [];
         talentState.people = people.sort((left, right) => {
           const statusScore = (person) => person.status === "active" ? 0 : person.status === "paused" ? 1 : 2;
-          return statusScore(left) - statusScore(right) || String(left.name || "").localeCompare(String(right.name || ""), "zh-Hant");
+          return statusScore(left) - statusScore(right) || String(left.displayName || "").localeCompare(String(right.displayName || ""), "zh-Hant");
         });
         populateTalentSelect();
         renderTalentCard(null);
       } catch (error) {
         talentSelect.innerHTML = `<option value="">人才庫讀取失敗</option>`;
-        talentCard.innerHTML = `<p class="muted">讀不到人才庫資料，請先確認 <code>data/talent-pool.internal.json</code> 是否已部署。錯誤：${escapeHtml(error.message)}</p>`;
+        talentCard.innerHTML = `<p class="muted">讀不到公開安全資料，請確認 <code>data/talent-pool.public.json</code> 是否可用。錯誤：${escapeHtml(error.message)}</p>`;
       }
     }
 
@@ -977,8 +977,8 @@
       const person = talentState.people[Number(talentSelect.value)];
       renderTalentCard(person);
       if (person) {
-        form.elements.name.value = person.name || "";
-        form.elements.status.value = person.employmentOrStudy || person.currentRole || statusLabel(person);
+        form.elements.name.value = person.displayName || "";
+        form.elements.status.value = statusLabel(person);
         form.elements.startedFrom.value = buildOpening(person);
         save();
       }

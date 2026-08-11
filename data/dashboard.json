@@ -1,15 +1,15 @@
 {
   "source": {
     "mode": "snapshot",
-    "updatedAt": "2026-08-11T14:47:00+08:00",
+    "updatedAt": "2026-08-11T16:10:00+08:00",
     "sources": [
       "InfoCenter 2026-06-12 dictionary approval batch",
       "InfoCenter 2026-06-12 review SUCCESS + event close batch",
       "InfoCenter 2026-06-12 salary create verification",
       "InfoCenter 2026-08-11 dictionary and PENDING verification",
       "InfoCenter 2026-08-11 salary, review SUCCESS and event-close verification",
-      "Workforce aggregate source generated 2026-08-07",
-      "automation-11 local execution artifacts"
+      "automation-11 local execution artifacts",
+      "InfoCenter workforce read-only snapshot 2026-08-11T07:38:59.848Z"
     ],
     "publicNote": "本 snapshot 已移除薪資金額、salaryId、直接個資與低信心評語；只保留公開營運摘要。",
     "latestRun": {
@@ -29,11 +29,14 @@
         "remainingNonDictionaryProcessing": 1
       },
       "workforce": {
-        "active": 90,
-        "inProgress": 38,
-        "unassigned": 6,
-        "overdue": 77,
-        "sourceGeneratedAt": "2026-08-07T07:03:22.911Z"
+        "active": 36,
+        "pending": 22,
+        "inProgress": 14,
+        "unassigned": 0,
+        "overdue": 21,
+        "assignmentCoverageRate": 1,
+        "estimatedHoursP80": 90,
+        "sourceGeneratedAt": "2026-08-11T07:38:59.848Z"
       },
       "talentPool": {
         "newInternSource": false,

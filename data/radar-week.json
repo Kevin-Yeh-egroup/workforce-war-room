@@ -6,7 +6,7 @@
     "timezone": "Asia/Taipei",
     "notes": [
       "Coverage is the last 7 days in Asia/Taipei.",
-      "Google-account-backed workbook observation used Codex in-app Browser only; visible account was egroup.kevin@gmail.com and no Google connector or API fallback was used.",
+      "Google-account-backed workbook observation used the authorized Codex in-app Browser; the account identifier is omitted from this public snapshot.",
       "The main intern workbook and configured 2026-01 through 2026-05 reimbursement sheets showed no newer visible edit date, so intern and talent outputs correctly remained unchanged.",
       "Items are deduplicated against the previous radar by id and exact source URL; this week contains four new items."
     ],
@@ -14,7 +14,6 @@
       "googleWorkbook": {
         "status": "completed_verified",
         "surface": "Codex in-app Browser",
-        "account": "egroup.kevin@gmail.com",
         "url": "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600",
         "visibleTitle": "4月先博薪資彙整",
         "visibleLastModified": "2026-05-13",
@@ -38,16 +37,17 @@
         "totalSignals": 608,
         "highConfidenceSignals": 157,
         "mediumConfidenceSignals": 451,
-        "scannedWorks": 356,
-        "activeWorks": 90,
-        "unassignedWorks": 6,
-        "inProgressWorks": 38,
-        "completedWorks": 266,
-        "overdueWorks": 77,
-        "assignmentCoverageRate": 0.933,
+        "scannedWorks": 359,
+        "activeWorks": 36,
+        "unassignedWorks": 0,
+        "inProgressWorks": 14,
+        "completedWorks": 323,
+        "overdueWorks": 21,
+        "assignmentCoverageRate": 1,
         "estimateEvidenceCoverageRate": 1,
         "actualTimeSampleCount": 157,
-        "fallbackUsed": false
+        "fallbackUsed": false,
+        "snapshotCheckedAt": "2026-08-11T07:38:59.848Z"
       }
     }
   },
@@ -103,7 +103,12 @@
       "followups": [
         "下週比較 active、unassigned、overdue 與實際耗時樣本是否有內容差異。"
       ],
-      "tags": ["workforce", "assignment", "estimate-evidence", "infocenter"]
+      "tags": [
+        "workforce",
+        "assignment",
+        "estimate-evidence",
+        "infocenter"
+      ]
     },
     {
       "id": "20260806-ap-unsanctioned-agent-behavior",
@@ -136,7 +141,12 @@
       "followups": [
         "追蹤英國 AI Security Institute 是否發布可直接引用的完整測試報告。"
       ],
-      "tags": ["agent-safety", "cybersecurity", "browser", "least-privilege"]
+      "tags": [
+        "agent-safety",
+        "cybersecurity",
+        "browser",
+        "least-privilege"
+      ]
     },
     {
       "id": "20260802-eu-ai-act-transparency",
@@ -170,7 +180,12 @@
       "followups": [
         "建立適用於網站、文章、圖片與互動工具的最小標示範本。"
       ],
-      "tags": ["ai-act", "transparency", "content-labeling", "governance"]
+      "tags": [
+        "ai-act",
+        "transparency",
+        "content-labeling",
+        "governance"
+      ]
     },
     {
       "id": "20260807-mnd-urban-resilience-exercise",
@@ -203,7 +218,12 @@
       "followups": [
         "查看地方政府是否發布演習後檢討或民眾指引更新。"
       ],
-      "tags": ["resilience", "continuity", "social-services", "taiwan"]
+      "tags": [
+        "resilience",
+        "continuity",
+        "social-services",
+        "taiwan"
+      ]
     }
   ],
   "dashboard": {

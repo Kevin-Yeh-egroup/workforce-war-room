@@ -66,7 +66,7 @@ InfoCenter 保持為工作、事件、驗收與薪資的正式紀錄；本頁只
 ## 驗收條件
 
 - 首頁不再讀取 `data/dashboard.json`，並優先使用 `data/infocenter-work-summary.json`。
-- 不呈現 `talent-pool.internal.json` 的聯絡資訊或個人備註。
+- 公開頁只讀取 `talent-pool.public.json`；`talent-pool.internal.json` 不得部署或由公開頁載入。
 - 資料讀取失敗時有清楚的空狀態，不顯示 `undefined`。
 - 可從總覽切換到四個主要管理面向。
 - 390px 與桌面尺寸無水平溢位，主要按鈕可操作。

@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-11T16:10:00+08:00",
+    "source": "Existing redacted intern roster",
+    "privacy": "Public-safe aliases and aggregate status only. Names, phone, email, residence, notes, work history, salary state and account data are excluded.",
+    "counts": {
+      "total": 41,
+      "active": 34,
+      "paused": 7
+    }
+  },
+  "people": [
+    {
+      "id": "05e0794df6ed",
+      "slug": "05e0794df6ed",
+      "displayName": "Member-05E0",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "07279789e47e",
+      "slug": "07279789e47e",
+      "displayName": "Member-0727",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "244c0faa6865",
+      "slug": "244c0faa6865",
+      "displayName": "Member-244C",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "268aa0c527a7",
+      "slug": "268aa0c527a7",
+      "displayName": "Member-268A",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "2b6bf0c24658",
+      "slug": "2b6bf0c24658",
+      "displayName": "Member-2B6B",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "2cc0a19a66f6",
+      "slug": "2cc0a19a66f6",
+      "displayName": "Member-2CC0",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "2f4884d2f85c",
+      "slug": "2f4884d2f85c",
+      "displayName": "Member-2F48",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "367814eda832",
+      "slug": "367814eda832",
+      "displayName": "Member-3678",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "37e5b2f31223",
+      "slug": "37e5b2f31223",
+      "displayName": "Member-37E5",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "383dd21d83d1",
+      "slug": "383dd21d83d1",
+      "displayName": "Member-383D",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "3a9e70d04b82",
+      "slug": "3a9e70d04b82",
+      "displayName": "Member-3A9E",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "43273957ea20",
+      "slug": "43273957ea20",
+      "displayName": "Member-4327",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "4402a377709e",
+      "slug": "4402a377709e",
+      "displayName": "Member-4402",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "45214b121411",
+      "slug": "45214b121411",
+      "displayName": "Member-4521",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "4cda6db65f17",
+      "slug": "4cda6db65f17",
+      "displayName": "Member-4CDA",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "5a8cad415c12",
+      "slug": "5a8cad415c12",
+      "displayName": "Member-5A8C",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "615a9eb66f18",
+      "slug": "615a9eb66f18",
+      "displayName": "Member-615A",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "659b0588a539",
+      "slug": "659b0588a539",
+      "displayName": "Member-659B",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "7b630a5c0e44",
+      "slug": "7b630a5c0e44",
+      "displayName": "Member-7B63",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "85247e815ae3",
+      "slug": "85247e815ae3",
+      "displayName": "Member-8524",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "8c22f2fd8016",
+      "slug": "8c22f2fd8016",
+      "displayName": "Member-8C22",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "9c57f621e2d4",
+      "slug": "9c57f621e2d4",
+      "displayName": "Member-9C57",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "a3032b04952d",
+      "slug": "a3032b04952d",
+      "displayName": "Member-A303",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "b78661d6dcf4",
+      "slug": "b78661d6dcf4",
+      "displayName": "Member-B786",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "c4c55e13a311",
+      "slug": "c4c55e13a311",
+      "displayName": "Member-C4C5",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "c6957afc2fb7",
+      "slug": "c6957afc2fb7",
+      "displayName": "Member-C695",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "d7f1864e3dd0",
+      "slug": "d7f1864e3dd0",
+      "displayName": "Member-D7F1",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "dca79e5089ab",
+      "slug": "dca79e5089ab",
+      "displayName": "Member-DCA7",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "e6c8249bb53e",
+      "slug": "e6c8249bb53e",
+      "displayName": "Member-E6C8",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "edab786ed607",
+      "slug": "edab786ed607",
+      "displayName": "Member-EDAB",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "f1b469bd0f1e",
+      "slug": "f1b469bd0f1e",
+      "displayName": "Member-F1B4",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "f279f22c9ded",
+      "slug": "f279f22c9ded",
+      "displayName": "Member-F279",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "f75ea28ada4d",
+      "slug": "f75ea28ada4d",
+      "displayName": "Member-F75E",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "ff864aedde4f",
+      "slug": "ff864aedde4f",
+      "displayName": "Member-FF86",
+      "status": "active",
+      "workLevel": ""
+    },
+    {
+      "id": "2f3a8886190d",
+      "slug": "2f3a8886190d",
+      "displayName": "Member-2F3A",
+      "status": "paused",
+      "workLevel": ""
+    },
+    {
+      "id": "5b708760e94e",
+      "slug": "5b708760e94e",
+      "displayName": "Member-5B70",
+      "status": "paused",
+      "workLevel": ""
+    },
+    {
+      "id": "5e46a77fde6d",
+      "slug": "5e46a77fde6d",
+      "displayName": "Member-5E46",
+      "status": "paused",
+      "workLevel": ""
+    },
+    {
+      "id": "8d7e15e10b36",
+      "slug": "8d7e15e10b36",
+      "displayName": "Member-8D7E",
+      "status": "paused",
+      "workLevel": ""
+    },
+    {
+      "id": "b52f6fcb3078",
+      "slug": "b52f6fcb3078",
+      "displayName": "Member-B52F",
+      "status": "paused",
+      "workLevel": ""
+    },
+    {
+      "id": "e381878c3c96",
+      "slug": "e381878c3c96",
+      "displayName": "Member-E381",
+      "status": "paused",
+      "workLevel": ""
+    },
+    {
+      "id": "eda751ff0e7a",
+      "slug": "eda751ff0e7a",
+      "displayName": "Member-EDA7",
+      "status": "paused",
+      "workLevel": ""
+    }
+  ]
+}
