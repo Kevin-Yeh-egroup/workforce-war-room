@@ -1,7 +1,7 @@
 {
   "source": {
     "mode": "snapshot",
-    "updatedAt": "2026-08-11T14:42:00+08:00",
+    "updatedAt": "2026-08-11T14:47:00+08:00",
     "sources": [
       "InfoCenter 2026-06-12 dictionary approval batch",
       "InfoCenter 2026-06-12 review SUCCESS + event close batch",
@@ -676,9 +676,9 @@
     },
     {
       "type": "publish_gate",
-      "title": "GitHub / Vercel 尚未發布",
-      "detail": "目前只完成本地 dashboard snapshot；尚未 push、deploy 或做 production readback。",
-      "status": "pending_approval"
+      "title": "6/12 本地發布閘門已由 8/11 發布取代",
+      "detail": "原本僅在本地的快照已併入 2026-08-11 核准發布批次。",
+      "status": "superseded"
     },
     {
       "type": "execution",
@@ -688,9 +688,9 @@
     },
     {
       "type": "publish_gate",
-      "title": "8/11 公開戰情室更新已獲核准",
-      "detail": "只發布去識別化彙總；保留 noindex、robots.txt 與 X-Robots-Tag。",
-      "status": "approved"
+      "title": "8/11 公開戰情室已發布並驗證",
+      "detail": "去識別化彙總已推送至 main 並部署至 Production；noindex、robots.txt 與 X-Robots-Tag 均保留。",
+      "status": "done_verified"
     }
   ]
 }
