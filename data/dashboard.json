@@ -1,19 +1,50 @@
 {
   "source": {
     "mode": "snapshot",
-    "updatedAt": "2026-06-05T15:20:00+08:00",
+    "updatedAt": "2026-08-11T14:42:00+08:00",
     "sources": [
-      "InfoCenter dictionary write batch",
-      "InfoCenter pending dictionary rejection batch",
-      "InfoCenter review SUCCESS + event close batch",
-      "InfoCenter salary create batch"
+      "InfoCenter 2026-06-12 dictionary approval batch",
+      "InfoCenter 2026-06-12 review SUCCESS + event close batch",
+      "InfoCenter 2026-06-12 salary create verification",
+      "InfoCenter 2026-08-11 dictionary and PENDING verification",
+      "InfoCenter 2026-08-11 salary, review SUCCESS and event-close verification",
+      "Workforce aggregate source generated 2026-08-07",
+      "automation-11 local execution artifacts"
     ],
-    "publicNote": "本 snapshot 已移除薪資金額與個資，只保留公開營運摘要。"
+    "publicNote": "本 snapshot 已移除薪資金額、salaryId、直接個資與低信心評語；只保留公開營運摘要。",
+    "latestRun": {
+      "runDate": "2026-08-11",
+      "dictionary": {
+        "active": 4261,
+        "pending": 0,
+        "rejected": 3921,
+        "newActiveRules": 38
+      },
+      "eventCompletion": {
+        "completedCases": 10,
+        "approvedMinutes": 1618,
+        "salaryRecordsVerified": 10,
+        "reviewSuccessVerified": 10,
+        "closedEventsVerified": 10,
+        "remainingNonDictionaryProcessing": 1
+      },
+      "workforce": {
+        "active": 90,
+        "inProgress": 38,
+        "unassigned": 6,
+        "overdue": 77,
+        "sourceGeneratedAt": "2026-08-07T07:03:22.911Z"
+      },
+      "talentPool": {
+        "newInternSource": false,
+        "newProfileUpdate": false
+      }
+    }
   },
   "cases": [
     {
       "id": "XAMMFq0VSzyn0JqaAObXMA",
-      "title": "115526-1130824 債務工作坊-初階梯次1-2-吳婷宇",
+      "title": "115526-1130824 債務工作坊-初階梯次1-2-吳○○",
       "person": "吳○○",
       "minutes": 230,
       "status": "已完成",
@@ -25,7 +56,7 @@
     },
     {
       "id": "0P0Yue6MVSbKnMPj3CumwQ",
-      "title": "115520-1130911主管班第二梯：如何協助社工進行經濟輔導-yachu Zhang",
+      "title": "115520-1130911主管班第二梯：如何協助社工進行經濟輔導-Y***",
       "person": "Y***",
       "minutes": 215,
       "status": "已完成",
@@ -34,109 +65,631 @@
       "dictionaryAction": "已完成",
       "review": "SUCCESS",
       "eventClosed": true
+    },
+    {
+      "id": "PVG4DPPzR8S5E4W6oXdqAg",
+      "title": "11568-自定義名詞修正-1130606 信扶專案 線上第4場財務課程Sunny-L***",
+      "person": "L***",
+      "minutes": 160,
+      "status": "已完成",
+      "risk": "低",
+      "salary": "已建立（細節隱去）",
+      "dictionaryAction": "已完成",
+      "review": "SUCCESS",
+      "eventClosed": true,
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "id": "0qfJQxi9RlKTa8wEtrKDtQ",
+      "title": "11568-自定義名詞修正-1130606（瑜君）諮詢師系統教學 線上-L***",
+      "person": "L***",
+      "minutes": 195,
+      "status": "已完成",
+      "risk": "低",
+      "salary": "已建立（細節隱去）",
+      "dictionaryAction": "已完成",
+      "review": "SUCCESS",
+      "eventClosed": true,
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "id": "mTwROSz5ShCS607hYKiO1g",
+      "title": "11564-自定義名詞修正-1130614 線上113諮詢師大團督2-Y***",
+      "person": "Y***",
+      "minutes": 125,
+      "status": "已完成",
+      "risk": "低",
+      "salary": "已建立（細節隱去）",
+      "dictionaryAction": "已完成",
+      "review": "SUCCESS",
+      "eventClosed": true,
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "id": "04P9533IQCu4WlxG1ywHrg",
+      "title": "11564-自定義名詞修正-1130613 信扶專案線上課 談保險Sunny-Y***",
+      "person": "Y***",
+      "minutes": 140,
+      "status": "已完成",
+      "risk": "低",
+      "salary": "已建立（細節隱去）",
+      "dictionaryAction": "已完成",
+      "review": "SUCCESS",
+      "eventClosed": true,
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "id": "0yde5sMqqRUWdNPbmdxZgA",
+      "title": "115520-1130904 113年脫貧網絡合作 主管班1 如何協助社工進行經濟輔導-陳○○",
+      "person": "陳○○",
+      "minutes": 240,
+      "status": "已完成",
+      "risk": "低",
+      "salary": "已建立（細節隱去）",
+      "dictionaryAction": "已完成",
+      "review": "SUCCESS",
+      "eventClosed": true,
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "id": "Mk5FqaMVSQekD1EXIU3A4Q",
+      "title": "115420-1131209 星展策略會議～社工在經扶業務上的需求 4-曾○○",
+      "person": "曾○○",
+      "minutes": 75,
+      "status": "已完成",
+      "risk": "低",
+      "salary": "已建立（細節隱去）",
+      "dictionaryAction": "已完成",
+      "review": "SUCCESS",
+      "eventClosed": true,
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "id": "TbGqmyFjTcmTLWPip63idg",
+      "title": "115415-1131217衛福部兒發帳戶成發研討會4-M***",
+      "person": "M***",
+      "minutes": 90,
+      "status": "已完成",
+      "risk": "低",
+      "salary": "已建立（細節隱去）",
+      "dictionaryAction": "已完成",
+      "review": "SUCCESS",
+      "eventClosed": true,
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "id": "0YdYeCtWS6E7EZhOZfqQ",
+      "title": "115415-1131221上午-M***",
+      "person": "M***",
+      "minutes": 80,
+      "status": "已完成",
+      "risk": "低",
+      "salary": "已建立（細節隱去）",
+      "dictionaryAction": "已完成",
+      "review": "SUCCESS",
+      "eventClosed": true,
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "id": "A11-20260811-AGGREGATE",
+      "title": "2026-08-11 自定義名詞修正批次（公開彙總）",
+      "person": "6 位協作者（去識別）",
+      "minutes": 1618,
+      "status": "已完成",
+      "risk": "低",
+      "salary": "10 筆已建立並驗證（細節隱去）",
+      "dictionaryAction": "38 筆新增、283 筆 PENDING 已處理",
+      "review": "SUCCESS × 10",
+      "eventClosed": true,
+      "sourceBatch": "2026-08-11"
     }
   ],
   "dictionary": [
     {
       "wrong": "聊去自營",
       "correct": "療癒自己",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "decision": "可納入",
+      "reason": "前次已完成並保留於 dashboard snapshot。"
     },
     {
       "wrong": "粹家",
       "correct": "脆家",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "decision": "可納入",
+      "reason": "前次已完成並保留於 dashboard snapshot。"
     },
     {
       "wrong": "不務對象",
       "correct": "服務對象",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "decision": "可納入",
+      "reason": "前次已完成並保留於 dashboard snapshot。"
     },
     {
       "wrong": "事親",
       "correct": "事情",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "decision": "可納入",
+      "reason": "前次已完成並保留於 dashboard snapshot。"
     },
     {
       "wrong": "代真工",
       "correct": "代振工",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "decision": "可納入",
+      "reason": "前次已完成並保留於 dashboard snapshot。"
     },
     {
       "wrong": "熱工",
       "correct": "社工",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "decision": "可納入",
+      "reason": "前次已完成並保留於 dashboard snapshot。"
     },
     {
       "wrong": "產補式",
       "correct": "殘補式",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "decision": "可納入",
+      "reason": "前次已完成並保留於 dashboard snapshot。"
     },
     {
       "wrong": "入股浮出",
       "correct": "入不敷出",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "decision": "可納入",
+      "reason": "前次已完成並保留於 dashboard snapshot。"
     },
     {
       "wrong": "按材理",
       "correct": "按常理",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "decision": "可納入",
+      "reason": "前次已完成並保留於 dashboard snapshot。"
     },
     {
       "wrong": "按行",
       "correct": "案型",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "decision": "可納入",
+      "reason": "前次已完成並保留於 dashboard snapshot。"
     },
     {
       "wrong": "字品原因",
       "correct": "致貧原因",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "decision": "可納入",
+      "reason": "前次已完成並保留於 dashboard snapshot。"
     },
     {
       "wrong": "中國新貨13基金會",
       "correct": "中國信託慈善基金會",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "decision": "可納入",
+      "reason": "前次已完成並保留於 dashboard snapshot。"
+    },
+    {
+      "wrong": "幸福抓",
+      "correct": "信扶專案",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "幸福渣",
+      "correct": "信扶專案",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "信錢師",
+      "correct": "馴錢師",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "個人材目標",
+      "correct": "個人財務目標",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "資金設備購買用圖表",
+      "correct": "資金設備購買用途表",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "性服務服務",
+      "correct": "信扶服務",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "低身分",
+      "correct": "低收身分",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "遞收身分",
+      "correct": "低收身分",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "服務書",
+      "correct": "服務同意書",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "寄帳",
+      "correct": "記帳",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "影燈",
+      "correct": "營登",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "自平",
+      "correct": "致貧",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "字品",
+      "correct": "致貧",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "字評評",
+      "correct": "致貧",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "意義申訴",
+      "correct": "異議申訴",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "和少法人帳戶",
+      "correct": "兒少發展帳戶",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "讀房中心",
+      "correct": "毒防中心",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "幸福站神功脫貧儲蓄知能",
+      "correct": "信扶專案社工脫貧儲蓄知能",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "尋前師研究中心",
+      "correct": "馴錢師研究中心",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "循權施",
+      "correct": "馴錢師",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "巡犬施",
+      "correct": "馴錢師",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "代徵工",
+      "correct": "代賑工",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "以供代徵",
+      "correct": "以工代賑",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "代政宮",
+      "correct": "代賑工",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "代真功",
+      "correct": "代賑工",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "執業生涯發展",
+      "correct": "職業生涯發展",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "法夫",
+      "correct": "法扶",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "經落式家庭",
+      "correct": "經濟弱勢家庭",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "牌句心",
+      "correct": "排拒心",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "究窮",
+      "correct": "救窮",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "後內加載",
+      "correct": "好理家在",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "後家宅",
+      "correct": "好理家在",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "羅斯維火難學習促進協會",
+      "correct": "羅四維夥伴學習促進協會",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "耳梢方案帳戶",
+      "correct": "兒少發展帳戶",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "聖宮智慧決策平台",
+      "correct": "社工智慧決策平台",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "食物泥行",
+      "correct": "食物銀行",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "蒙福搜尋",
+      "correct": "模糊搜尋",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "危機百科",
+      "correct": "維基百科",
+      "decision": "可納入",
+      "reason": "2026-06-15 已寫入 ACTIVE；屬 2026-06-12 安全批次。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
+    },
+    {
+      "wrong": "找鳥",
+      "correct": "早療",
+      "decision": "可納入",
+      "reason": "2026-06-15 已由 PENDING 升為 ACTIVE。",
+      "status": "ACTIVE",
+      "sourceBatch": "2026-06-12"
     }
   ],
   "people": [
     {
-      "name": "吳○○",
+      "name": "L***",
       "work": "自定義名詞庫修正",
       "template": "初級工讀生薪資計算",
-      "status": "completed"
+      "status": "completed",
+      "sourceBatch": "2026-06-12",
+      "completedCases": 2,
+      "minutes": 355
     },
     {
       "name": "Y***",
       "work": "自定義名詞庫修正",
       "template": "認證實習生薪資計算",
-      "status": "completed"
+      "status": "completed",
+      "sourceBatch": "2026-06-12",
+      "completedCases": 2,
+      "minutes": 265
+    },
+    {
+      "name": "陳○○",
+      "work": "自定義名詞庫修正",
+      "template": "認證實習生薪資計算",
+      "status": "completed",
+      "sourceBatch": "2026-06-12",
+      "completedCases": 1,
+      "minutes": 240
+    },
+    {
+      "name": "曾○○",
+      "work": "自定義名詞庫修正",
+      "template": "初級工讀生薪資計算",
+      "status": "completed",
+      "sourceBatch": "2026-06-12",
+      "completedCases": 1,
+      "minutes": 75
+    },
+    {
+      "name": "M***",
+      "work": "自定義名詞庫修正",
+      "template": "初級工讀生薪資計算",
+      "status": "completed",
+      "sourceBatch": "2026-06-12",
+      "completedCases": 2,
+      "minutes": 170
+    },
+    {
+      "name": "6 位協作者（去識別）",
+      "work": "自定義名詞庫修正",
+      "template": "依成員規則套用（細節隱去）",
+      "status": "completed",
+      "sourceBatch": "2026-08-11",
+      "completedCases": 10,
+      "minutes": 1618
     }
   ],
   "assignments": [
     {
-      "task": "本週 InfoCenter dictionary/salary batch",
-      "person": "Kevin",
+      "task": "2026-06-12 InfoCenter dictionary/salary batch",
+      "person": "Kevin / Codex",
       "status": "completed_local",
-      "note": "外部執行已完成，本地發布待決策"
+      "reason": "已完成詞庫、review SUCCESS、結案與派薪，本地 dashboard snapshot 已更新。",
+      "note": "GitHub/Vercel 發布仍需另行確認。"
+    },
+    {
+      "task": "6 筆暫緩詞庫規則",
+      "person": "Kevin",
+      "status": "pending_decision",
+      "reason": "較高風險或需更多上下文，未寫入 ACTIVE。",
+      "note": "治平、要贏、Google Center、爛在、崔家、究極仍暫緩。"
+    },
+    {
+      "task": "2026-08-11 InfoCenter dictionary/salary batch",
+      "person": "Kevin / Codex",
+      "status": "completed_verified",
+      "reason": "38 筆新名詞、283 筆 PENDING、10 筆派薪與事件結案均已完成並讀回驗證。",
+      "note": "公開資料僅保留彙總；薪資金額、salaryId、直接個資與低信心評語均未寫入。"
     }
   ],
   "confirmations": [
     {
       "type": "dictionary",
-      "title": "待審核 33 筆已拒絕",
-      "detail": "本輪待審核已清空。",
+      "title": "6/12 詞庫批次已完成",
+      "detail": "38 筆新規則已建立，1 筆 PENDING（找鳥 -> 早療）已升為 ACTIVE，6 筆暫緩。",
       "status": "done_local"
     },
     {
       "type": "execution",
-      "title": "2 事件已結案與派薪",
-      "detail": "兩筆事件皆為 SUCCESS、closed、salaryCount=1。",
+      "title": "8 事件已結案與派薪",
+      "detail": "8 筆事件皆為 SUCCESS、closed、salaryCount=1；薪資狀態皆為 UNSETTLED。",
       "status": "done_local"
     },
     {
       "type": "publish_gate",
-      "title": "GitHub / Vercel 發布已批准",
-      "detail": "本輪 dashboard 已完成並準備推送至公開站。",
+      "title": "GitHub / Vercel 尚未發布",
+      "detail": "目前只完成本地 dashboard snapshot；尚未 push、deploy 或做 production readback。",
+      "status": "pending_approval"
+    },
+    {
+      "type": "execution",
+      "title": "8/11 名詞庫與事件批次已驗證",
+      "detail": "38 筆新規則 ACTIVE；283 筆 PENDING 已歸零；10 筆事件皆為 SUCCESS、closed、salaryCount=1。",
+      "status": "done_verified"
+    },
+    {
+      "type": "publish_gate",
+      "title": "8/11 公開戰情室更新已獲核准",
+      "detail": "只發布去識別化彙總；保留 noindex、robots.txt 與 X-Robots-Tag。",
       "status": "approved"
     }
   ]
