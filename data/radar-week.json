@@ -2,20 +2,20 @@
   "meta": {
     "weekStart": "2026-08-07",
     "weekEnd": "2026-08-14",
-    "generatedAt": "2026-08-14T15:08:41+08:00",
+    "generatedAt": "2026-08-14T16:27:50+08:00",
     "timezone": "Asia/Taipei",
     "notes": [
       "Coverage is the last 7 days in Asia/Taipei.",
-      "Google-account-backed workbook observation used Codex in-app Browser only; visible account was egroup.kevin@gmail.com and no Google connector or API fallback was used.",
+      "Google-account-backed workbook observation used Codex in-app Browser only; the expected Kevin account was visibly verified and no Google connector or API fallback was used.",
       "The main intern workbook and configured 2026-01 through 2026-05 reimbursement sheets showed the same visible edit dates as the previous run, so no browser download was repeated.",
-      "InfoCenter helper did not produce a 2026-08-14 artifact; the last good aggregate snapshots are preserved and freshness is explicitly limited.",
+      "The 2026-08-14 rerun timed out while waiting for the InfoCenter search/events response; the last good aggregate snapshots are preserved and freshness is explicitly limited.",
       "Items are deduplicated against the previous radar by id and exact source URL; this week contains four new items."
     ],
     "sourceAccess": {
       "googleWorkbook": {
         "status": "completed_verified_no_change",
         "surface": "Codex in-app Browser",
-        "account": "egroup.kevin@gmail.com",
+        "account": "verified_expected_account",
         "url": "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600",
         "visibleTitle": "4月先博薪資彙整",
         "visibleLastModified": "2026-05-13",
@@ -28,10 +28,10 @@
         },
         "fallbackUsed": false,
         "lastVerifiedSourceModifiedAt": "2026-06-01T12:20:24.844Z",
-        "updateResult": "rebuilt from unchanged verified local source"
+        "updateResult": "helper reran against unchanged verified local source; run-created stale site output was reverted"
       },
       "infocenterWorkRhythm": {
-        "status": "live_refresh_no_fresh_artifact",
+        "status": "live_refresh_blocked_timeout",
         "mode": "read-only aggregate; last good snapshot preserved",
         "url": "https://www.egroup-infocenter.com/me/event/events",
         "lastGoodGeneratedAt": "2026-08-06T10:26:46.249Z",
@@ -41,7 +41,7 @@
         "highConfidenceSignals": 157,
         "mediumConfidenceSignals": 451,
         "fallbackUsed": true,
-        "fallbackReason": "update_work_rhythm.ps1 returned without a fresh work-rhythm artifact"
+        "fallbackReason": "update_work_rhythm.ps1 timed out waiting for the InfoCenter search/events response"
       },
       "infocenterWorkSummary": {
         "status": "last_good_preserved",
@@ -57,15 +57,16 @@
         "assignmentCoverageRate": 1,
         "estimateEvidenceCoverageRate": 1,
         "actualTimeSampleCount": 157,
-        "fallbackUsed": true
+        "fallbackUsed": true,
+        "fallbackReason": "2026-08-14 live refresh timed out; last good public summary preserved"
       }
     }
   },
   "highlights": [
     {
-      "title": "InfoCenter 待辦量下降，但本日刷新仍需修復",
-      "why": "8 月 11 日最後良好快照顯示 active 由上週 90 降至 36、逾期由 77 降至 21、未派工為 0；但今天 helper 沒有產生新快照。",
-      "next": "先查明 helper 為何沒有更新檔案，再抽查 5 件逾期工作確認下降不是狀態口徑改變。"
+      "title": "InfoCenter 待辦量下降，但本日重跑仍逾時",
+      "why": "8 月 11 日最後良好快照顯示 active 由上週 90 降至 36、逾期由 77 降至 21、未派工為 0；但今天重跑在等待 search/events 回應時逾時。",
+      "next": "先修正或診斷 InfoCenter search/events 等待條件，再抽查 5 件逾期工作確認下降不是狀態口徑改變。"
     },
     {
       "title": "長照 3.0 開始把返家能力放進住院復健",
