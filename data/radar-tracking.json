@@ -1,24 +1,54 @@
 {
   "items": [
     {
-      "id": "tracking-20260807-infocenter-backlog",
-      "createdAt": "2026-08-07",
+      "id": "tracking-20260814-infocenter-freshness",
+      "createdAt": "2026-08-14",
       "topic": "codex_workflow",
-      "title": "抽查未派工與最早逾期工作，確認仍有效及下一個人工決策。",
+      "title": "修復 InfoCenter helper 未產生本日新快照，並抽查逾期下降口徑。",
       "status": "open",
-      "nextCheck": "2026-08-14",
-      "question": "active、unassigned、overdue 與實際耗時樣本是否有內容差異？",
+      "nextCheck": "2026-08-21",
+      "question": "active、unassigned、overdue 與實際耗時樣本是否有 8 月 14 日之後的新證據？",
       "links": ["https://www.egroup-infocenter.com/me/work?tab=list"]
     },
     {
-      "id": "tracking-20260807-agent-safety-controls",
-      "createdAt": "2026-08-07",
-      "topic": "global_ai",
-      "title": "檢查一個瀏覽器自動化的最小權限與停止條件。",
+      "id": "tracking-20260814-rehab-transition-card",
+      "createdAt": "2026-08-14",
+      "topic": "tw_social_work",
+      "title": "建立不含病人個資的返家轉銜檢核卡草稿。",
       "status": "open",
-      "nextCheck": "2026-08-14",
-      "question": "是否已明列允許網域、禁止動作、最大迭代與外部寫入核准點？",
-      "links": ["https://apnews.com/article/0e8061437da6779be962b24ac134a514"]
+      "nextCheck": "2026-08-21",
+      "question": "是否涵蓋生活功能、環境、照顧者負荷、福利資源與追蹤窗口？",
+      "links": ["https://www.mohw.gov.tw/cp-16-87457-1.html"]
+    },
+    {
+      "id": "tracking-20260814-nhi-phishing-card",
+      "createdAt": "2026-08-14",
+      "topic": "tw_fin_ed",
+      "title": "把健保卡釣魚案例轉成三步驟防詐提醒。",
+      "status": "open",
+      "nextCheck": "2026-08-21",
+      "question": "是否能讓長者在 30 秒內找到官方查證路徑？",
+      "links": ["https://www.mohw.gov.tw/cp-16-87425-1.html"]
+    },
+    {
+      "id": "tracking-20260814-virtual-asset-consumer-checklist",
+      "createdAt": "2026-08-14",
+      "topic": "tw_fin_ed",
+      "title": "整理虛擬資產專法的消費者查證欄位。",
+      "status": "open",
+      "nextCheck": "2026-08-21",
+      "question": "施行日期、合法業者查詢、資產保管與申訴管道是否已有官方配套？",
+      "links": ["https://www.fsc.gov.tw/ch/home.jsp?id=97&parentpath=0,2&mcustomize=multimessage_view.jsp&dataserno=202608130001&aplistdn=ou=newslaw,ou=chlaw,ou=ap_root,o=fsc,c=tw&dtable=NewsLaw"]
+    },
+    {
+      "id": "tracking-20260814-codex-0147-approval-guard",
+      "createdAt": "2026-08-14",
+      "topic": "codex_workflow",
+      "title": "用低風險唯讀流程測試 Codex 自動核准邊界。",
+      "status": "open",
+      "nextCheck": "2026-08-21",
+      "question": "allowlist 外、高風險或外部寫入動作是否仍被拒絕或要求人工確認？",
+      "links": ["https://github.com/openai/codex/releases/tag/rust-v0.147.0"]
     },
     {
       "id": "tracking-20260807-ai-transparency-labels",
@@ -26,19 +56,9 @@
       "topic": "global_ai",
       "title": "盤點公開內容的 AI 生成、AI 協作與人工編審標示。",
       "status": "open",
-      "nextCheck": "2026-08-14",
+      "nextCheck": "2026-08-21",
       "question": "網站、文章、圖片與互動工具是否需要不同標示？",
       "links": ["https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems"]
-    },
-    {
-      "id": "tracking-20260807-resilience-card",
-      "createdAt": "2026-08-07",
-      "topic": "tw_social_work",
-      "title": "檢查社福服務中斷卡的聯絡鏈、替代地點與敏感名冊保護。",
-      "status": "open",
-      "nextCheck": "2026-08-14",
-      "question": "地方演習後是否有新的民眾指引或檢討？",
-      "links": ["https://www.mnd.gov.tw/news/pressrelease/87171"]
     },
     {
       "id": "tracking-20260731-gpt56-price-performance",
@@ -46,19 +66,9 @@
       "topic": "codex_workflow",
       "title": "比較一個低風險任務採 Sol→Luna 分工前後的完成率、人工時間與成本。",
       "status": "open",
-      "nextCheck": "2026-08-14",
+      "nextCheck": "2026-08-21",
       "question": "是否有可安全降階且品質門檻清楚的步驟？",
       "links": ["https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"]
-    },
-    {
-      "id": "tracking-20260731-pneumococcal-one-dose",
-      "createdAt": "2026-07-31",
-      "topic": "tw_social_work",
-      "title": "建立不蒐集病史的成人公費肺鏈疫苗轉介卡。",
-      "status": "open",
-      "nextCheck": "2026-08-14",
-      "question": "8 月 10 日後官方院所資訊與現場說明是否一致？",
-      "links": ["https://www.mohw.gov.tw/cp-7401-87276-1.html"]
     },
     {
       "id": "tracking-20260731-covid-vaccine-extension",
@@ -66,19 +76,9 @@
       "topic": "tw_social_work",
       "title": "保留不蒐集健康資料的新冠疫苗自我確認提醒。",
       "status": "open",
-      "nextCheck": "2026-08-14",
+      "nextCheck": "2026-08-21",
       "question": "9 月前是否調整接種期限或高風險提醒？",
       "links": ["https://www.mohw.gov.tw/cp-2704-87261-1.html"]
-    },
-    {
-      "id": "tracking-20260731-food-safety-digital-governance",
-      "createdAt": "2026-07-31",
-      "topic": "tw_fin_ed",
-      "title": "整理公開資料檔的來源、轉換、驗證與發布責任人。",
-      "status": "open",
-      "nextCheck": "2026-08-14",
-      "question": "是否已從末端掃描前移到來源與轉換階段？",
-      "links": ["https://www.mohw.gov.tw/cp-7401-87263-1.html"]
     }
   ]
 }

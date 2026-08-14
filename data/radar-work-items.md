@@ -1,22 +1,22 @@
-# 每週工作清單（2026-08-01～2026-08-07）
+# 每週工作清單（2026-08-07～2026-08-14）
 
 > 每項可在 30 分鐘內完成；薪資僅列 paid/due 狀態，不含金額或銀行資料。
 
 ## A. 本週可執行
 
-- [ ] 抽查 6 件未派工工作，確認仍有效、所需能力與下一個人工決策。（Owner: Kevin｜Due: 2026-08-10）
-- [ ] 抽查最早 5 件逾期工作，分成等待回覆、等待審核、需修正與可關閉候選。（Owner: Kevin｜Due: 2026-08-10）
-- [ ] 替一個瀏覽器自動化檢查允許網域、禁止動作、最大迭代與外部寫入核准點。（Owner: Kevin｜Due: 2026-08-11）
-- [ ] 盤點三個公開頁面的 AI 生成、AI 協作與人工編審標示需求。（Owner: Kevin｜Due: 2026-08-11）
-- [ ] 檢查一份社福服務中斷卡是否含聯絡人、替代地點、敏感名冊保護與回報路徑。（Owner: Kevin｜Due: 2026-08-12）
-- [ ] 比較一個低風險任務採 Sol→Luna 分工前後的品質、人工覆核時間與成本。（Owner: Kevin｜Due: 2026-08-12）
+- [ ] 檢查 `update_work_rhythm.ps1` 為何沒有寫出 2026-08-14 新快照。（Owner: Kevin｜Due: 2026-08-17）
+- [ ] 抽查 5 件最早逾期工作，確認仍有效、等待對象與下一個人工決策。（Owner: Kevin｜Due: 2026-08-17）
+- [ ] 草擬一張返家轉銜檢核卡，含生活功能、居家環境、照顧者負荷、福利資源與追蹤窗口。（Owner: Kevin｜Due: 2026-08-18）
+- [ ] 把健保卡 LINE 釣魚案例改成「不點連結／官方查證／通知支持者」三步驟提醒。（Owner: Kevin｜Due: 2026-08-18）
+- [ ] 整理虛擬資產專法的五個待確認欄位：施行日、合法業者、資產保管、風險揭露、申訴。（Owner: Kevin｜Due: 2026-08-19）
+- [ ] 選一個本機唯讀流程測試 Codex 自動核准是否嚴守 allowlist。（Owner: Kevin｜Due: 2026-08-19）
 
 ## B. 派工與薪資狀態
 
-- [ ] 檢查 34 位 active 實習生是否都有一個 30 分鐘內可完成的下一步；正式派工仍由 Kevin 在 InfoCenter 核准。（Status: dispatch-check｜Owner: Kevin｜Due: 2026-08-10）
-- [ ] 核對公開薪資狀態為 paid 25、due 0；只確認狀態，不記錄金額或銀行資料。（Status: paid/due-check｜Owner: Kevin｜Due: 2026-08-10）
+- [ ] 檢查 34 位 active 工讀生是否都有一個 30 分鐘內可完成的下一步；正式派工仍由 Kevin 在 InfoCenter 核准。（Status: dispatch-check｜Owner: Kevin｜Due: 2026-08-17）
+- [ ] 核對公開薪資狀態為 paid 25、due 0；只確認狀態，不記錄金額或銀行資料。（Status: paid/due-check｜Owner: Kevin｜Due: 2026-08-17）
 
 ## C. 下週追蹤
 
-- [ ] 比較 InfoCenter 的 active、unassigned、overdue 與 157 筆實際耗時樣本是否有內容差異。（Owner: Kevin｜Due: 2026-08-14）
-- [ ] 檢查 8 月 10 日後成人公費肺鏈疫苗院所資訊與現場說明是否一致。（Owner: Kevin｜Due: 2026-08-14）
+- [ ] 比較新的 InfoCenter active、unassigned、overdue 與 157 筆實際耗時樣本是否出現內容差異。（Owner: Kevin｜Due: 2026-08-21）
+- [ ] 檢查虛擬資產專法是否已公布施行日期、子法、合法業者查詢或申訴配套。（Owner: Kevin｜Due: 2026-08-21）

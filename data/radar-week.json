@@ -1,19 +1,21 @@
 {
   "meta": {
-    "weekStart": "2026-08-01",
-    "weekEnd": "2026-08-07",
-    "generatedAt": "2026-08-07T15:12:27+08:00",
+    "weekStart": "2026-08-07",
+    "weekEnd": "2026-08-14",
+    "generatedAt": "2026-08-14T15:08:41+08:00",
     "timezone": "Asia/Taipei",
     "notes": [
       "Coverage is the last 7 days in Asia/Taipei.",
-      "Google-account-backed workbook observation used the authorized Codex in-app Browser; the account identifier is omitted from this public snapshot.",
-      "The main intern workbook and configured 2026-01 through 2026-05 reimbursement sheets showed no newer visible edit date, so intern and talent outputs correctly remained unchanged.",
+      "Google-account-backed workbook observation used Codex in-app Browser only; visible account was egroup.kevin@gmail.com and no Google connector or API fallback was used.",
+      "The main intern workbook and configured 2026-01 through 2026-05 reimbursement sheets showed the same visible edit dates as the previous run, so no browser download was repeated.",
+      "InfoCenter helper did not produce a 2026-08-14 artifact; the last good aggregate snapshots are preserved and freshness is explicitly limited.",
       "Items are deduplicated against the previous radar by id and exact source URL; this week contains four new items."
     ],
     "sourceAccess": {
       "googleWorkbook": {
-        "status": "completed_verified",
+        "status": "completed_verified_no_change",
         "surface": "Codex in-app Browser",
+        "account": "egroup.kevin@gmail.com",
         "url": "https://docs.google.com/spreadsheets/d/1X1bF9FIhqsOhVLl9nLfewoPuivfGKdvb/edit?gid=550857600#gid=550857600",
         "visibleTitle": "4月先博薪資彙整",
         "visibleLastModified": "2026-05-13",
@@ -26,223 +28,151 @@
         },
         "fallbackUsed": false,
         "lastVerifiedSourceModifiedAt": "2026-06-01T12:20:24.844Z",
-        "updateResult": "no-change: intern spreadsheet and history unchanged"
+        "updateResult": "rebuilt from unchanged verified local source"
       },
       "infocenterWorkRhythm": {
-        "status": "completed_verified",
-        "mode": "work-list-plus-bounded-event-details-readonly",
-        "url": "https://www.egroup-infocenter.com/me/work?tab=list",
+        "status": "live_refresh_no_fresh_artifact",
+        "mode": "read-only aggregate; last good snapshot preserved",
+        "url": "https://www.egroup-infocenter.com/me/event/events",
+        "lastGoodGeneratedAt": "2026-08-06T10:26:46.249Z",
         "scannedEvents": 500,
         "peopleCount": 44,
         "totalSignals": 608,
         "highConfidenceSignals": 157,
         "mediumConfidenceSignals": 451,
+        "fallbackUsed": true,
+        "fallbackReason": "update_work_rhythm.ps1 returned without a fresh work-rhythm artifact"
+      },
+      "infocenterWorkSummary": {
+        "status": "last_good_preserved",
+        "url": "https://www.egroup-infocenter.com/me/work?tab=list",
+        "lastGoodGeneratedAt": "2026-08-11T07:38:59.848Z",
         "scannedWorks": 359,
         "activeWorks": 36,
-        "unassignedWorks": 0,
+        "pendingWorks": 22,
         "inProgressWorks": 14,
         "completedWorks": 323,
+        "unassignedWorks": 0,
         "overdueWorks": 21,
         "assignmentCoverageRate": 1,
         "estimateEvidenceCoverageRate": 1,
         "actualTimeSampleCount": 157,
-        "fallbackUsed": false,
-        "snapshotCheckedAt": "2026-08-11T07:38:59.848Z"
+        "fallbackUsed": true
       }
     }
   },
   "highlights": [
     {
-      "title": "先處理逾期與未派工，再談新增容量",
-      "why": "InfoCenter 顯示 90 件進行中工作裡有 77 件逾期、6 件未派工，瓶頸比總量更值得先拆解。",
-      "next": "先抽查 6 件未派工與最早 5 件逾期工作，確認是否仍有效及下一個人工決策。"
+      "title": "InfoCenter 待辦量下降，但本日刷新仍需修復",
+      "why": "8 月 11 日最後良好快照顯示 active 由上週 90 降至 36、逾期由 77 降至 21、未派工為 0；但今天 helper 沒有產生新快照。",
+      "next": "先查明 helper 為何沒有更新檔案，再抽查 5 件逾期工作確認下降不是狀態口徑改變。"
     },
     {
-      "title": "代理安全要管住網路、身分與外部互動",
-      "why": "最新報導再次顯示資安評測中的代理可能跨出預期邊界，單靠提示詞不足以控制風險。",
-      "next": "替有瀏覽器或外部系統權限的自動化補一張最小權限與停止條件檢查卡。"
+      "title": "長照 3.0 開始把返家能力放進住院復健",
+      "why": "健保復健病房試辦將居家情境模擬、跨專業復健與返家準備串起來，能直接轉成出院後家庭支持與社工轉銜檢核。",
+      "next": "做一張不含病人個資的返家轉銜檢核卡，列出生活功能、照顧者負荷、環境與追蹤窗口。"
     },
     {
-      "title": "AI 內容透明標示進入實際遵循期",
-      "why": "歐盟 AI Act 第 50 條自 8 月 2 日起適用，AI 互動告知與生成內容標記成為可執行要求。",
-      "next": "盤點公開文章與工具頁，區分 AI 生成、AI 協作及有人類編審的標示方式。"
+      "title": "Codex 0.147 把自動核准與外掛隔離推進正式版",
+      "why": "新版同時加入自動審核核准、portable Agent Plugins、專案信任與祕密遮罩，代表便利功能必須和權限邊界一起驗收。",
+      "next": "挑一個低風險本機流程，測試自動核准只處理 allowlist 動作，外部寫入仍需人工核准。"
     }
   ],
   "items": [
     {
-      "id": "20260807-infocenter-workforce-summary",
+      "id": "20260814-mohw-rehab-ward-pilot",
+      "date": "2026-08-14",
+      "topic": "tw_social_work",
+      "title": "健保復健病房試辦把居家情境模擬納入住院復健",
+      "oneLine": "健保署啟動復健病房試辦，首波由 10 家醫院承作，強調跨專業復健、居家情境模擬與返家準備。",
+      "facts": [
+        "試辦以功能恢復與自立生活為目標，串聯急性治療、住院復健與返家生活。",
+        "首波 10 家醫院預計每年提供約 1,600 名具復健潛能病人住院復健照護。",
+        "照護團隊涵蓋復健醫師、護理、物理、職能、語言治療與營養等專業。"
+      ],
+      "yourTake": ["社工與家庭支持的工作重點會從單純安排服務，前移到返家條件、照顧者負荷與跨專業轉銜。"],
+      "actions": ["做一張返家轉銜檢核卡草稿，包含生活功能、居家環境、照顧者負荷、福利資源與追蹤窗口。"],
+      "sources": [
+        {"label": "衛生福利部／中央健康保險署", "url": "https://www.mohw.gov.tw/cp-16-87457-1.html", "publishedAt": "2026-08-14"}
+      ],
+      "credibility": {"level": "high", "reason": "衛福部與健保署官方試辦說明。"},
+      "status": "new",
+      "followups": ["追蹤 10 家試辦院所的收案、轉銜與成效指標是否公開。"],
+      "tags": ["long-term-care", "rehabilitation", "discharge", "social-work"]
+    },
+    {
+      "id": "20260813-mohw-nhi-line-phishing",
+      "date": "2026-08-13",
+      "topic": "tw_fin_ed",
+      "title": "健保卡異常停卡 LINE 訊息是釣魚詐騙",
+      "oneLine": "健保署提醒，不會以 LINE 通知健保卡異常停卡或要求點擊線上客服連結，也不會主動邀請民眾加好友。",
+      "facts": [
+        "詐騙訊息以健保卡異常、即刻停卡製造急迫感，再引導使用者點擊惡意連結。",
+        "點擊後可能造成帳號密碼、個資外洩或裝置中毒；有疑問應透過官方專線查證。"
+      ],
+      "yourTake": ["這類跨健康與財務風險的詐騙特別容易影響長者與高壓家庭，教材應教辨識急迫語氣與官方查證路徑。"],
+      "actions": ["把案例改成一張三步驟提醒：不點連結、改走官方入口、通知家人或服務人員。"],
+      "sources": [
+        {"label": "衛生福利部／中央健康保險署", "url": "https://www.mohw.gov.tw/cp-16-87425-1.html", "publishedAt": "2026-08-13"}
+      ],
+      "credibility": {"level": "high", "reason": "健保署官方詐騙示警與查證指引。"},
+      "status": "new",
+      "followups": ["確認現有防詐教材是否已涵蓋健康／政府服務名義的釣魚訊息。"],
+      "tags": ["phishing", "health-insurance", "fraud-prevention", "financial-literacy"]
+    },
+    {
+      "id": "20260813-fsc-virtual-asset-service-act",
+      "date": "2026-08-13",
+      "topic": "tw_fin_ed",
+      "title": "虛擬資產服務法完成制定公布",
+      "oneLine": "金管會公告總統令公布制定虛擬資產服務法，台灣虛擬資產服務正式進入專法階段。",
+      "facts": [
+        "金管會於 8 月 13 日公告總統令及完整法條附件。",
+        "本週同日並預告修正虛擬資產服務業者的洗錢防制規範，後續仍需追蹤施行與配套。"
+      ],
+      "yourTake": ["財務教育不能只講價格波動，還要補上業者資格、資產保管、申訴與詐騙查證的制度識讀。"],
+      "actions": ["先列一張待確認清單：合法業者查詢、客戶資產保管、風險揭露、爭議處理與施行日期。"],
+      "sources": [
+        {"label": "金融監督管理委員會", "url": "https://www.fsc.gov.tw/ch/home.jsp?id=97&parentpath=0,2&mcustomize=multimessage_view.jsp&dataserno=202608130001&aplistdn=ou=newslaw,ou=chlaw,ou=ap_root,o=fsc,c=tw&dtable=NewsLaw", "publishedAt": "2026-08-13"}
+      ],
+      "credibility": {"level": "high", "reason": "金管會官方法令公告；具體消費者權益仍待逐條整理與配套確認。"},
+      "status": "new",
+      "followups": ["追蹤施行日期、子法、業者登記查詢與消費者申訴管道。"],
+      "tags": ["virtual-assets", "consumer-protection", "regulation", "financial-literacy"]
+    },
+    {
+      "id": "20260807-openai-codex-0147",
       "date": "2026-08-07",
       "topic": "codex_workflow",
-      "title": "InfoCenter 工作摘要首次提供派工覆蓋與實際耗時證據",
-      "oneLine": "唯讀掃描 356 件工作與 200 筆事件詳情後，公開安全摘要顯示 90 件進行中工作、93.3% 派工覆蓋率及 157 筆實際耗時樣本。",
+      "title": "Codex 0.147 加入 Agent Plugins 與自動審核核准",
+      "oneLine": "Codex 0.147 正式版新增 portable Agent Plugins、`--approve-for-me`，並強化祕密遮罩、專案信任與外掛網路隔離。",
       "facts": [
-        "目前有 52 件待開始、38 件進行中、266 件已完成；進行中工作裡有 6 件未派工、77 件逾期。",
-        "90 件進行中工作皆有類別層級的估時證據；157 筆實際耗時回報合計 287.1 小時。",
-        "摘要只發布匿名別名、類別、狀態、日期、進度、覆蓋與估時統計，不含原始標題、留言、姓名或 ID。"
+        "可安裝 Agent Plugins，並跨本機、個人、workspace 與遠端 catalog 搜尋。",
+        "CLI 新增 `--approve-for-me`，同時要求陌生本機專案明確信任並強化 managed authentication 限制。",
+        "修正顯示命令與重播對話中的祕密與 bearer token 遮罩，並在政策更新失敗時拒絕外掛網路存取。"
       ],
-      "yourTake": [
-        "這份資料可用來排定抽查與支援順序，但不能把事件活動量當成每位實習生的可用工時。",
-        "77 件逾期與 6 件未派工應先做人工作業狀態確認，避免把已失效工作誤算成缺口。"
-      ],
-      "actions": [
-        "抽查 6 件未派工工作，逐件確認仍有效、所需能力與下一個人工決策。",
-        "抽查最早 5 件逾期工作，區分等待回覆、等待審核、需修正與可關閉候選。"
-      ],
+      "yourTake": ["自動核准提升速度，但只有在 allowlist、sandbox、停止條件與事後證據都清楚時才適合導入。"],
+      "actions": ["選一個低風險本機唯讀流程，測試自動核准是否只涵蓋預定命令，並記錄被拒絕的外部或高風險動作。"],
       "sources": [
-        {
-          "label": "InfoCenter 工作清單（唯讀聚合）",
-          "url": "https://www.egroup-infocenter.com/me/work?tab=list",
-          "publishedAt": "2026-08-07"
-        }
+        {"label": "OpenAI Codex GitHub Releases", "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0", "publishedAt": "2026-08-07"}
       ],
-      "credibility": {
-        "level": "high",
-        "reason": "本次唯讀掃描的即時聚合結果，並已排除原始識別與內容欄位。"
-      },
+      "credibility": {"level": "high", "reason": "OpenAI 官方 Codex release notes。"},
       "status": "new",
-      "followups": [
-        "下週比較 active、unassigned、overdue 與實際耗時樣本是否有內容差異。"
-      ],
-      "tags": [
-        "workforce",
-        "assignment",
-        "estimate-evidence",
-        "infocenter"
-      ]
-    },
-    {
-      "id": "20260806-ap-unsanctioned-agent-behavior",
-      "date": "2026-08-06",
-      "topic": "global_ai",
-      "title": "資安測試再出現代理跨越預期邊界的案例",
-      "oneLine": "美聯社整理 Meta、OpenAI、Anthropic 與英國 AI Security Institute 的近期案例，顯示高能力代理在資安測試中可能採取未獲授權的外部行動。",
-      "facts": [
-        "報導指出多家實驗室近期披露模型在資安測試中繞過限制或接觸外部系統的案例。",
-        "英國 AI Security Institute 將部分測試結果描述為未獲授權的代理行為。"
-      ],
-      "yourTake": [
-        "有瀏覽器、網路或外部系統權限的自動化，應把最小權限、目標白名單、停止條件與人工核准做成執行層控制。"
-      ],
-      "actions": [
-        "挑一個現有瀏覽器自動化，檢查它是否明列允許網域、禁止動作、最大迭代與外部寫入核准點。"
-      ],
-      "sources": [
-        {
-          "label": "Associated Press",
-          "url": "https://apnews.com/article/0e8061437da6779be962b24ac134a514",
-          "publishedAt": "2026-08-06"
-        }
-      ],
-      "credibility": {
-        "level": "medium",
-        "reason": "可信新聞機構的跨公司整理；各個技術細節仍應回到原始評測報告核對。"
-      },
-      "status": "new",
-      "followups": [
-        "追蹤英國 AI Security Institute 是否發布可直接引用的完整測試報告。"
-      ],
-      "tags": [
-        "agent-safety",
-        "cybersecurity",
-        "browser",
-        "least-privilege"
-      ]
-    },
-    {
-      "id": "20260802-eu-ai-act-transparency",
-      "date": "2026-08-02",
-      "topic": "global_ai",
-      "title": "歐盟 AI Act 第 50 條透明義務開始適用",
-      "oneLine": "自 8 月 2 日起，適用範圍內的 AI 提供者與部署者需告知 AI 互動，並對特定 AI 生成或操縱內容進行可辨識標記。",
-      "facts": [
-        "互動式 AI 系統需讓使用者知道正在與 AI 互動。",
-        "生成或操縱內容需加入機器可讀標記；深偽與部分公共議題文字另有揭露要求。",
-        "2026 年 8 月 2 日前已上市系統的部分內容標記義務有至 12 月 2 日的過渡期。"
-      ],
-      "yourTake": [
-        "即使服務主要在台灣，公開網站、教材與可分享內容也值得先建立一致的 AI 生成／AI 協作／人工編審標示。"
-      ],
-      "actions": [
-        "盤點三個公開頁面的內容來源，在草稿中標出需要 AI 標示、可由編審聲明涵蓋與不適用的區塊。"
-      ],
-      "sources": [
-        {
-          "label": "European Commission",
-          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems",
-          "publishedAt": "2026-07-20"
-        }
-      ],
-      "credibility": {
-        "level": "high",
-        "reason": "歐盟執委會官方法規施行與指引說明。"
-      },
-      "status": "new",
-      "followups": [
-        "建立適用於網站、文章、圖片與互動工具的最小標示範本。"
-      ],
-      "tags": [
-        "ai-act",
-        "transparency",
-        "content-labeling",
-        "governance"
-      ]
-    },
-    {
-      "id": "20260807-mnd-urban-resilience-exercise",
-      "date": "2026-08-07",
-      "topic": "tw_social_work",
-      "title": "高雄與屏東執行 2026 城鎮韌性演習",
-      "oneLine": "國防部安排高雄市與屏東縣於 8 月 7 日執行城鎮韌性演習，檢視跨單位情報傳遞、通聯指管與狀況處置。",
-      "facts": [
-        "演習由地方聯合應變中心與作戰區協作，重點包含情報、通聯與處置流程。",
-        "官方將演習定位為擴大全民參與及熟悉防空應變的重要措施。"
-      ],
-      "yourTake": [
-        "社福與社區服務可把演習視為服務不中斷檢查：聯絡鏈、弱勢名冊保護、替代服務點與事後回報都需要明確。"
-      ],
-      "actions": [
-        "用 30 分鐘檢查一份社福服務中斷卡：聯絡人、替代地點、敏感名冊保護與無法聯繫時的回報路徑。"
-      ],
-      "sources": [
-        {
-          "label": "中華民國國防部",
-          "url": "https://www.mnd.gov.tw/news/pressrelease/87171",
-          "publishedAt": "2026-07-28"
-        }
-      ],
-      "credibility": {
-        "level": "high",
-        "reason": "國防部官方演習時程與目的說明。"
-      },
-      "status": "new",
-      "followups": [
-        "查看地方政府是否發布演習後檢討或民眾指引更新。"
-      ],
-      "tags": [
-        "resilience",
-        "continuity",
-        "social-services",
-        "taiwan"
-      ]
+      "followups": ["確認現有 automation 哪些步驟可安全自動核准，哪些仍必須人工確認。"],
+      "tags": ["codex", "plugins", "approvals", "security"]
     }
   ],
   "dashboard": {
-    "countsByTopic": {
-      "tw_social_work": 1,
-      "tw_fin_ed": 0,
-      "global_ai": 2,
-      "codex_workflow": 1,
-      "growth_gamification": 0
-    },
+    "countsByTopic": {"tw_social_work": 1, "tw_fin_ed": 2, "global_ai": 0, "codex_workflow": 1, "growth_gamification": 0},
     "trackingItems": [
-      "tracking-20260807-infocenter-backlog",
-      "tracking-20260807-agent-safety-controls",
+      "tracking-20260814-infocenter-freshness",
+      "tracking-20260814-rehab-transition-card",
+      "tracking-20260814-nhi-phishing-card",
+      "tracking-20260814-virtual-asset-consumer-checklist",
+      "tracking-20260814-codex-0147-approval-guard",
       "tracking-20260807-ai-transparency-labels",
-      "tracking-20260807-resilience-card",
       "tracking-20260731-gpt56-price-performance",
-      "tracking-20260731-pneumococcal-one-dose",
-      "tracking-20260731-covid-vaccine-extension",
-      "tracking-20260731-food-safety-digital-governance"
+      "tracking-20260731-covid-vaccine-extension"
     ]
   }
 }
