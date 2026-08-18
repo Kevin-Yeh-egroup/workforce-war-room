@@ -1,0 +1,311 @@
+{
+  "meta": {
+    "version": "0.3.0",
+    "status": "verified",
+    "generatedAt": "2026-08-18T08:35:10.542Z",
+    "sourceFetchedAt": "2026-08-18T01:47:40.308Z",
+    "source": "InfoCenter 事件管理",
+    "organizationLabel": "馴錢師星展專案",
+    "snapshotFingerprint": "bcfb4fc1fd1947737cc97d02408ab8f53162965f6c1047d0a191a7783f690ef5",
+    "rosterFingerprint": "a318eb710448045c53b1699e6d625ac5c67f497c0e24871aa4ee6f9ae0394fc7",
+    "overrideFingerprint": "1d7b98771be56817dedfdf313a88f1d6424cf3defc4637e7ca5b662f33a7fbfa",
+    "rosterSourceModifiedAt": null,
+    "rosterSourceFingerprint": "sha256:280d6093daf456e208c4e85763b75102ae1d3b88ea4100972ddf31eb37869125",
+    "activeRosterCount": 36,
+    "coverageStatus": "complete",
+    "coverage": {
+      "status": "complete",
+      "totalAvailable": 1703,
+      "scannedEvents": 1703,
+      "scannedEventDetails": 1703,
+      "detailErrors": 0,
+      "duplicateEventIds": 0,
+      "eventIdMismatches": 0,
+      "qualifyingEvents": 997,
+      "excludedEvents": 706,
+      "unmatchedPeople": 112,
+      "conflictingMinutes": 69,
+      "exclusionCounts": {
+        "ambiguous_member_count": 8,
+        "conflicting_minutes": 69,
+        "event_open": 3,
+        "inactive_person": 61,
+        "missing_minutes": 49,
+        "review_not_success": 404,
+        "unmatched_person": 112
+      }
+    },
+    "privacy": "Public-safe aggregate keyed only by hashed personId. Raw event titles, event IDs, comments, member names, contact data, salary data, banking data and private review notes are excluded.",
+    "decisionBoundary": "Read-only XP evidence. It does not assign work, change events, approve reviews, change salaries, determine capacity or change capability stages.",
+    "qualification": [
+      "reviewStatus must be SUCCESS",
+      "eventClosed must be true",
+      "approved minutes must resolve to one unambiguous value",
+      "one non-admin member must map exactly to one active stable personId",
+      "each raw eventId is counted once in the private ledger and removed from public output"
+    ],
+    "currentLimitation": "Full configured event-detail coverage completed for this snapshot."
+  },
+  "entries": [
+    {
+      "personId": "268aa0c527a7",
+      "verifiedMinutes": 618,
+      "xp": 103,
+      "qualifyingEventCount": 20,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-11-04",
+      "lastQualifiedAt": "2026-04-07"
+    },
+    {
+      "personId": "2cc0a19a66f6",
+      "verifiedMinutes": 4640,
+      "xp": 773,
+      "qualifyingEventCount": 34,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-12-01",
+      "lastQualifiedAt": "2026-08-11"
+    },
+    {
+      "personId": "2f4884d2f85c",
+      "verifiedMinutes": 6835,
+      "xp": 1139,
+      "qualifyingEventCount": 57,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-08-27",
+      "lastQualifiedAt": "2026-07-31"
+    },
+    {
+      "personId": "367814eda832",
+      "verifiedMinutes": 290,
+      "xp": 48,
+      "qualifyingEventCount": 5,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-11-24",
+      "lastQualifiedAt": "2026-04-07"
+    },
+    {
+      "personId": "383dd21d83d1",
+      "verifiedMinutes": 3344,
+      "xp": 557,
+      "qualifyingEventCount": 55,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-12-08",
+      "lastQualifiedAt": "2026-04-07"
+    },
+    {
+      "personId": "3a9e70d04b82",
+      "verifiedMinutes": 322,
+      "xp": 54,
+      "qualifyingEventCount": 3,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2026-04-23",
+      "lastQualifiedAt": "2026-06-01"
+    },
+    {
+      "personId": "43273957ea20",
+      "verifiedMinutes": 1023,
+      "xp": 171,
+      "qualifyingEventCount": 14,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-12-15",
+      "lastQualifiedAt": "2026-01-26"
+    },
+    {
+      "personId": "4402a377709e",
+      "verifiedMinutes": 3062,
+      "xp": 510,
+      "qualifyingEventCount": 39,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-08-18",
+      "lastQualifiedAt": "2026-07-20"
+    },
+    {
+      "personId": "45214b121411",
+      "verifiedMinutes": 6910,
+      "xp": 1152,
+      "qualifyingEventCount": 38,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-10-01",
+      "lastQualifiedAt": "2026-06-29"
+    },
+    {
+      "personId": "5a8cad415c12",
+      "verifiedMinutes": 23539,
+      "xp": 3923,
+      "qualifyingEventCount": 201,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-08-13",
+      "lastQualifiedAt": "2026-08-01"
+    },
+    {
+      "personId": "5b708760e94e",
+      "verifiedMinutes": 282,
+      "xp": 47,
+      "qualifyingEventCount": 3,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2026-07-20",
+      "lastQualifiedAt": "2026-07-20"
+    },
+    {
+      "personId": "659b0588a539",
+      "verifiedMinutes": 120,
+      "xp": 20,
+      "qualifyingEventCount": 1,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2026-01-26",
+      "lastQualifiedAt": "2026-01-26"
+    },
+    {
+      "personId": "85247e815ae3",
+      "verifiedMinutes": 855,
+      "xp": 143,
+      "qualifyingEventCount": 8,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2026-03-06",
+      "lastQualifiedAt": "2026-05-29"
+    },
+    {
+      "personId": "8c22f2fd8016",
+      "verifiedMinutes": 1829,
+      "xp": 305,
+      "qualifyingEventCount": 15,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2026-03-06",
+      "lastQualifiedAt": "2026-08-11"
+    },
+    {
+      "personId": "9c57f621e2d4",
+      "verifiedMinutes": 4374,
+      "xp": 729,
+      "qualifyingEventCount": 37,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-12-29",
+      "lastQualifiedAt": "2026-07-20"
+    },
+    {
+      "personId": "b40258e6dc5f",
+      "verifiedMinutes": 360,
+      "xp": 60,
+      "qualifyingEventCount": 2,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2026-07-20",
+      "lastQualifiedAt": "2026-07-31"
+    },
+    {
+      "personId": "c6957afc2fb7",
+      "verifiedMinutes": 14919,
+      "xp": 2487,
+      "qualifyingEventCount": 141,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-09-25",
+      "lastQualifiedAt": "2026-07-31"
+    },
+    {
+      "personId": "ce2a2435683f",
+      "verifiedMinutes": 900,
+      "xp": 150,
+      "qualifyingEventCount": 5,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2026-07-31",
+      "lastQualifiedAt": "2026-08-11"
+    },
+    {
+      "personId": "d7f1864e3dd0",
+      "verifiedMinutes": 2205,
+      "xp": 368,
+      "qualifyingEventCount": 19,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2026-04-23",
+      "lastQualifiedAt": "2026-06-01"
+    },
+    {
+      "personId": "dca79e5089ab",
+      "verifiedMinutes": 1212,
+      "xp": 202,
+      "qualifyingEventCount": 11,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2026-01-05",
+      "lastQualifiedAt": "2026-04-07"
+    },
+    {
+      "personId": "e6c8249bb53e",
+      "verifiedMinutes": 2548,
+      "xp": 425,
+      "qualifyingEventCount": 10,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2026-01-26",
+      "lastQualifiedAt": "2026-04-02"
+    },
+    {
+      "personId": "e9316145dd31",
+      "verifiedMinutes": 2071,
+      "xp": 345,
+      "qualifyingEventCount": 16,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2026-06-15",
+      "lastQualifiedAt": "2026-08-11"
+    },
+    {
+      "personId": "edab786ed607",
+      "verifiedMinutes": 11150,
+      "xp": 1858,
+      "qualifyingEventCount": 68,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-08-26",
+      "lastQualifiedAt": "2026-03-06"
+    },
+    {
+      "personId": "f1b469bd0f1e",
+      "verifiedMinutes": 12744,
+      "xp": 2124,
+      "qualifyingEventCount": 134,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-08-18",
+      "lastQualifiedAt": "2026-05-29"
+    },
+    {
+      "personId": "f279f22c9ded",
+      "verifiedMinutes": 610,
+      "xp": 102,
+      "qualifyingEventCount": 8,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-11-17",
+      "lastQualifiedAt": "2026-01-26"
+    },
+    {
+      "personId": "ff864aedde4f",
+      "verifiedMinutes": 3984,
+      "xp": 664,
+      "qualifyingEventCount": 53,
+      "reviewStatus": "SUCCESS",
+      "eventClosed": true,
+      "firstQualifiedAt": "2025-12-08",
+      "lastQualifiedAt": "2026-08-11"
+    }
+  ]
+}

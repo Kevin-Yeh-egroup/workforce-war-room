@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://workforce-war-room.vercel.app/local-spec/event-experience.public.schema.json",
+  "title": "Public verified InfoCenter event experience",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "entries"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "version",
+        "status",
+        "generatedAt",
+        "sourceFetchedAt",
+        "source",
+        "organizationLabel",
+        "snapshotFingerprint",
+        "rosterFingerprint",
+        "overrideFingerprint",
+        "rosterSourceModifiedAt",
+        "rosterSourceFingerprint",
+        "activeRosterCount",
+        "coverageStatus",
+        "coverage",
+        "privacy",
+        "decisionBoundary",
+        "qualification",
+        "currentLimitation"
+      ],
+      "properties": {
+        "version": { "const": "0.3.0" },
+        "status": { "const": "verified" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "sourceFetchedAt": { "type": "string", "format": "date-time" },
+        "source": { "const": "InfoCenter 事件管理" },
+        "organizationLabel": { "type": "string", "minLength": 1 },
+        "snapshotFingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "rosterFingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "overrideFingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "rosterSourceModifiedAt": {
+          "oneOf": [
+            { "type": "string", "format": "date-time" },
+            { "type": "null" }
+          ]
+        },
+        "rosterSourceFingerprint": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+        "activeRosterCount": { "type": "integer", "minimum": 1 },
+        "coverageStatus": { "const": "complete" },
+        "coverage": {
+          "type": "object",
+          "required": [
+            "status",
+            "totalAvailable",
+            "scannedEvents",
+            "scannedEventDetails",
+            "detailErrors",
+            "duplicateEventIds",
+            "eventIdMismatches",
+            "qualifyingEvents",
+            "excludedEvents",
+            "unmatchedPeople",
+            "conflictingMinutes",
+            "exclusionCounts"
+          ],
+          "properties": {
+            "status": { "const": "complete" },
+            "totalAvailable": { "type": "integer", "minimum": 1 },
+            "scannedEvents": { "type": "integer", "minimum": 1 },
+            "scannedEventDetails": { "type": "integer", "minimum": 1 },
+            "detailErrors": { "const": 0 },
+            "duplicateEventIds": { "const": 0 },
+            "eventIdMismatches": { "const": 0 },
+            "qualifyingEvents": { "type": "integer", "minimum": 0 },
+            "excludedEvents": { "type": "integer", "minimum": 0 },
+            "unmatchedPeople": { "type": "integer", "minimum": 0 },
+            "conflictingMinutes": { "type": "integer", "minimum": 0 },
+            "exclusionCounts": {
+              "type": "object",
+              "additionalProperties": { "type": "integer", "minimum": 1 }
+            }
+          },
+          "additionalProperties": false
+        },
+        "privacy": { "type": "string", "minLength": 1 },
+        "decisionBoundary": { "type": "string", "minLength": 1 },
+        "qualification": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "currentLimitation": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "personId",
+          "verifiedMinutes",
+          "xp",
+          "qualifyingEventCount",
+          "reviewStatus",
+          "eventClosed",
+          "firstQualifiedAt",
+          "lastQualifiedAt"
+        ],
+        "properties": {
+          "personId": { "type": "string", "pattern": "^[a-f0-9]{12}$" },
+          "verifiedMinutes": { "type": "number", "exclusiveMinimum": 0 },
+          "xp": { "type": "integer", "minimum": 0 },
+          "qualifyingEventCount": { "type": "integer", "minimum": 1 },
+          "reviewStatus": { "const": "SUCCESS" },
+          "eventClosed": { "const": true },
+          "firstQualifiedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "lastQualifiedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+        }
+      }
+    }
+  }
+}

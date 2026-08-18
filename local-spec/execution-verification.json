@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "0.1.0",
+    "version": "0.2.0",
     "status": "local-draft",
     "externalWriteApproved": false,
     "principle": "規則先判定是否有執行證據，AI 再檢查交付內容，人員才做最終驗收。"
@@ -12,7 +12,8 @@
     {"id": "comment_time_report", "source": "事件評論中的實際耗時", "proves": "有人回報投入時間", "doesNotProve": "交付物存在或合格"},
     {"id": "deliverable", "source": "事件附件或成果連結", "proves": "有可檢查的交付物", "doesNotProve": "交付物符合範本"},
     {"id": "submission", "source": "事件送審狀態", "proves": "工讀生主張已完成並送驗", "doesNotProve": "主管已接受"},
-    {"id": "human_review", "source": "InfoCenter 事件審核結果", "proves": "人員已完成驗收決定", "doesNotProve": "後續薪資已建立或已派薪"}
+    {"id": "human_review", "source": "InfoCenter 事件審核結果", "proves": "人員已完成驗收決定", "doesNotProve": "後續薪資已建立或已派薪"},
+    {"id": "xp_credit", "source": "InfoCenter SUCCESS 且已關閉事件的核准分鐘；公開彙總 coverageStatus 必須為 complete", "proves": "完整對帳範圍內，該事件可依核准分鐘計入正式 XP", "doesNotProve": "人員已升級、已調薪、具有本週容量或具備完整能力"}
   ],
   "states": [
     {
@@ -80,6 +81,16 @@
     }
   ],
   "decisionOrder": ["blocked", "human_verified", "needs_revision", "submitted_missing_evidence", "submitted", "stale", "started", "assigned_no_evidence", "not_assigned"],
+  "xpPublicationGate": {
+    "provenance": "version 0.3.0、status verified、合法 sourceFetchedAt、InfoCenter 事件管理來源、非空組織標籤與有效 snapshot/roster/override fingerprints",
+    "rosterBinding": "active roster 數量與 sourceFingerprint 完全相符；personId 唯一且全部屬 active roster",
+    "exactCoverage": "外層與內層 coverage 完整，total > 0，scannedEvents = scannedEventDetails = total，qualifying + excluded = total",
+    "zeroErrors": "detailErrors = duplicateEventIds = eventIdMismatches = 0",
+    "entryIntegrity": "verifiedMinutes > 0、XP = Math.round(minutes / 6)、qualifyingEventCount > 0、SUCCESS、closed、日期合法且事件件數加總一致",
+    "keepLastGood": "partial、error、舊快照、錯名冊、畸形資料或原子寫入失敗時，同時保留上一版 public 與 private ledger",
+    "completeZero": "完整核對但沒有合格事件是 verified zero；partial 或錯誤不是 zero",
+    "humanDecisionBoundary": "XP 只證明核對範圍內的已驗收工時，不代表能力、容量、派工、級距核准、薪資或付款決定"
+  },
   "aiReview": {
     "runsOnlyWhen": "有可讀取的交付物，且事件已提交或管理者要求預檢",
     "inputs": ["核准範本的目的、交付物與 checklist", "InfoCenter 工作與事件唯讀資料", "交付文件／附件內容", "實際耗時與來源日期"],

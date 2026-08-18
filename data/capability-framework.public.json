@@ -1,8 +1,8 @@
 {
   "meta": {
-    "version": "0.2.0",
+    "version": "0.3.0",
     "status": "review-draft",
-    "updatedAt": "2026-08-11T18:30:00+08:00",
+    "updatedAt": "2026-08-18T16:30:00+08:00",
     "externalWriteApproved": false,
     "privacy": "Public-safe framework only. Individual evidence remains a review candidate and is never an automatic performance or salary decision."
   },
@@ -87,10 +87,21 @@
   },
   "experiencePolicy": {
     "name": "經驗值（XP）",
-    "personFormula": "1 hour of traceable completed work = 10 XP",
+    "personFormula": "Math.round(verifiedMinutes / 6)；同一 eventId 只計一次。",
     "domainFormula": "1 weighted evidence hour = 10 domain XP",
-    "currentDataStatus": "estimated",
-    "meaning": "目前由工時報帳與主要工作分類暫估；事件人工驗收資料接通後，只有驗收通過的工作才能成為正式 XP。",
+    "officialSource": "InfoCenter 事件管理",
+    "currentDataStatus": "verified_complete_snapshot",
+    "meaning": "只有 review SUCCESS、事件已關閉、成員可對應且完成分鐘可解析的事件，才能成為正式 XP；事件建立、留言、PROCESSING、未關閉或分鐘不明都不計入。工時報帳只保留為歷史投入參考。",
+    "dedupeKey": "eventId",
+    "unconfirmedHandling": "只有事件資料通過 verified complete publication gate 才顯示正式 XP；部分、畸形、舊版或名冊不符時顯示待事件核對，不以歷史工時替代正式 XP。完整核對後無合格事件則顯示 0 XP／尚無合格事件。",
+    "publicationGate": [
+      "version 0.3.0、status verified，且 sourceFetchedAt 與三個 fingerprint 有效",
+      "外層與內層 coverage 都是 complete；events 與 details 精確等於 total",
+      "detailErrors、duplicateEventIds、eventIdMismatches 全部為 0，qualifying 加 excluded 等於 total",
+      "active roster 人數與 sourceFingerprint 相符；personId 唯一且全部屬 active roster",
+      "分鐘為正數、XP 等於 Math.round(minutes / 6)、事件件數加總一致",
+      "任何失敗均保留 last-good，且不把 pending 當成 0"
+    ],
     "qualityGate": ["人工驗收通過", "沒有未解決的重大返工", "成果可追溯", "主管確認薪資階段"]
   },
   "salaryStages": [

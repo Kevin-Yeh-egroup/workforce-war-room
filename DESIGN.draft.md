@@ -2,12 +2,12 @@
 status: implementation-note
 project: workforce-war-room
 audience: Kevin 與馴錢師星展專案工作管理者
-updated: 2026-08-06
+updated: 2026-08-18
 ---
 
 # Workforce War Room 設計決策紀錄
 
-> 本文件不是硬性 UI 規格。介面可依實際 InfoCenter 資料、管理決策效率與行動版可讀性調整；目前實作以 2026-08-06 的唯讀工作摘要版本為準。
+> 本文件不是硬性 UI 規格。介面可依實際 InfoCenter 資料、管理決策效率與行動版可讀性調整；目前實作以 2026-08-18 的公開安全 roster 與事件 XP 驗證版本為準。
 
 ## 產品目的
 
@@ -58,7 +58,9 @@ InfoCenter 保持為工作、事件、驗收與薪資的正式紀錄；本頁只
 - 設定審核中心提供證據模擬器，讓管理者直接測試「指派、活動、交付、送審、卡關、人工核准」如何形成狀態；AI 只在交付物可讀且已送審時提供預檢。
 - 能力資訊使用社工、財務、AI、馴錢師四個獨立面向；每人固定顯示四項「知能證據指數」，不把時數直接包裝成績效或正式能力評等。
 - 工作詳情可顯示知能適配候選與權重，但必須同時揭露本週容量是否已確認，且不得自動派工。
-- 每張人員卡顯示總 XP、主能力證據、量化薪資階段候選與下一階段差距；量化候選不得使用「已升級」或「可調薪」等定論語氣。
+- 每張人員卡顯示事件確認 XP、主能力證據、量化薪資階段候選與下一階段差距；正式 XP 只採 review SUCCESS、已關閉且核准分鐘可解析的 InfoCenter 事件，同一 eventId 只計一次。
+- 正式 XP 必須同時通過 `status=verified`、外層與內層 coverage 完整、事件與明細數均等於 total、qualifying 加 excluded 等於 total、detail errors／duplicate IDs／ID mismatch 均為 0、名冊人數與 `sourceFingerprint` 相符、entries 唯一且只屬 active roster。任一條件不符即 fail closed。
+- `sourceModifiedAt` 可為 `null`；來源版本由 `sourceFingerprint` 證明，不得把 hash 當日期顯示。gate 未通過顯示「待事件核對」且不計入級距；gate 已通過但該人沒有 entry，顯示「0 XP／尚無合格事件」，不視為資料缺漏。
 - 薪資區只說明審查資格與人工核准邊界，不呈現金額或自動升級承諾。
 
 ## 響應式規則
@@ -71,6 +73,7 @@ InfoCenter 保持為工作、事件、驗收與薪資的正式紀錄；本頁只
 
 - 首頁不再讀取 `data/dashboard.json`，並優先使用 `data/infocenter-work-summary.json`。
 - 公開頁只讀取 `talent-pool.public.json`；`talent-pool.internal.json` 不得部署或由公開頁載入。
+- `event-experience-policy.js` 與 `local-spec/event-experience.public.schema.json` 必須共同驗證公開 XP；來源狀態顯示 `total/scanned、0 errors、verified`，任一不一致均停在待核對。
 - 資料讀取失敗時有清楚的空狀態，不顯示 `undefined`。
 - 可從總覽切換到四個主要管理面向。
 - 390px 與桌面尺寸無水平溢位，主要按鈕可操作。

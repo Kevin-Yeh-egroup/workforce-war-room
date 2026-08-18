@@ -8,6 +8,7 @@ const DATA_PATHS = {
   blueprint: "./data/work-blueprint.json",
   capacity: "./data/capacity-week.public.json",
   notifications: "./data/reminders.public.json",
+  eventExperience: "./data/event-experience.public.json",
   fields: "./local-spec/fields.json",
   capabilities: "./data/capability-framework.public.json",
 };
@@ -64,6 +65,7 @@ async function loadDashboard() {
     blueprint: fetchJson(DATA_PATHS.blueprint),
     capacity: fetchJson(DATA_PATHS.capacity),
     notifications: fetchJson(DATA_PATHS.notifications),
+    eventExperience: fetchJson(DATA_PATHS.eventExperience),
     fields: fetchJson(DATA_PATHS.fields),
     capabilities: fetchJson(DATA_PATHS.capabilities),
   };
@@ -288,6 +290,7 @@ function buildSourceStates() {
   const blueprint = state.datasets.blueprint;
   const workSummary = state.datasets.workSummary;
   const capacity = state.datasets.capacity;
+  const eventExperience = state.datasets.eventExperience;
 
   return [
     createSourceState("InfoCenter 工作摘要", workSummary?.meta?.generatedAt, Boolean(workSummary)),
@@ -296,7 +299,20 @@ function buildSourceStates() {
     createSourceState("InfoCenter 工作節奏", rhythm?.meta?.generatedAt, Boolean(rhythm)),
     createSourceState("工作藍圖規格", blueprint?.meta?.updatedAt, Boolean(blueprint)),
     createSourceState("本週可用工時", capacity?.meta?.generatedAt, Boolean(capacity)),
+    createEventExperienceSourceState(eventExperience),
   ];
+}
+
+function createEventExperienceSourceState(dataset) {
+  const readiness = getEventExperienceReadiness();
+  const base = createSourceState("InfoCenter 事件 XP", dataset?.meta?.sourceFetchedAt, Boolean(dataset));
+  if (!dataset) return base;
+  return {
+    ...base,
+    status: readiness.ready ? base.status : "warning",
+    label: readiness.sourceLabel,
+    blocking: !readiness.ready,
+  };
 }
 
 function createSourceState(name, rawDate, loaded) {
@@ -344,6 +360,24 @@ function getCapacityMap() {
       && (!entry.capabilities || typeof entry.capabilities === "object");
   });
   return new Map(entries.map((entry) => [String(entry.personId), { ...entry, availableHours: Number(entry.availableHours) }]));
+}
+
+function getEventExperienceMap() {
+  return getEventExperienceReadiness().map;
+}
+
+function getEventExperienceReadiness() {
+  const activeIds = new Set((state.datasets.interns?.interns || [])
+    .filter((person) => person.status === "active")
+    .map((person) => String(person.id)));
+  const policy = window.EventExperiencePolicy;
+  if (!policy || typeof policy.inspect !== "function") {
+    return { ready: false, reason: "policy_missing", sourceLabel: "待事件核對・驗證器未讀取", map: new Map() };
+  }
+  return policy.inspect(state.datasets.eventExperience, activeIds, {
+    sourceModifiedAt: state.datasets.interns?.meta?.sourceModifiedAt || "",
+    sourceFingerprint: state.datasets.interns?.meta?.sourceFingerprint || "",
+  });
 }
 
 function getCapacityStats() {
@@ -569,11 +603,18 @@ function buildRecommendations() {
 function renderSourceStrip() {
   const strip = document.querySelector("#sourceStrip");
   const errors = state.sources.filter((source) => source.status === "error");
+  const blocked = state.sources.filter((source) => source.blocking);
   const stale = state.sources.filter((source) => source.status === "danger");
 
   if (errors.length) {
     strip.className = "source-strip is-error";
     strip.innerHTML = `<span class="source-pulse" aria-hidden="true"></span><span>${errors.length} 個來源讀取失敗；目前畫面只顯示成功讀取的資料。</span>`;
+    return;
+  }
+
+  if (blocked.length) {
+    strip.className = "source-strip is-warning";
+    strip.innerHTML = `<span class="source-pulse" aria-hidden="true"></span><span>${blocked.length} 個來源尚未通過完整性驗證；對應指標已停在待核對狀態。</span>`;
     return;
   }
 
@@ -883,7 +924,7 @@ function renderCapabilityFramework() {
   const evidenceRange = firstMonth && lastMonth ? `${firstMonth} 至 ${lastMonth}` : "目前公開快照";
   document.querySelector("#capabilityEvidenceNote").innerHTML = `
     <strong>目前是候選證據，不是完整能力盤點。</strong>
-    <p>個人卡只使用 ${escapeHtml(evidenceRange)} 工時報帳中的主要工作分類；尚未納入一次通過率、返工、任務複雜度與覆核紀錄。</p>`;
+    <p>知能指數目前使用 ${escapeHtml(evidenceRange)} 工時報帳中的主要工作分類；正式 XP 改由 InfoCenter 事件的 SUCCESS、已關閉狀態與核准分鐘確認。尚未完成事件對帳者只顯示歷史投入參考，不列入級距。</p>`;
 
   renderCapabilityRules(framework);
 }
@@ -928,8 +969,8 @@ function renderExperiencePolicy(framework) {
   return `
     <article class="experience-policy-card">
       <span>經驗值 XP</span>
-      <h4>工作累積與能力證據分開計算</h4>
-      <p>每 1 小時可追溯工作暫估 10 XP；各知能再依工作關聯權重累積領域 XP。</p>
+      <h4>只計入事件管理已驗收成果</h4>
+      <p>${escapeHtml(xp.personFormula || "")}</p>
       <small>${escapeHtml(xp.meaning || "")}</small>
     </article>
     <article class="experience-policy-card salary-ladder-card">
@@ -982,7 +1023,11 @@ function getExperienceProfile(person, evidence = deriveCapabilityEvidence(person
     .map((id) => evidence.find((item) => item.id === id))
     .filter(Boolean)
     .sort((a, b) => b.index - a.index)[0] || { id: "", name: "待累積", index: 0 };
-  const totalXp = Math.round(toNumber(person.history?.totalHours) * 10);
+  const eventReadiness = getEventExperienceReadiness();
+  const eventRecord = eventReadiness.map.get(String(person.id)) || null;
+  const xpReady = eventReadiness.ready;
+  const totalXp = eventRecord ? Math.round(eventRecord.verifiedMinutes / 6) : 0;
+  const historicalReferenceXp = Math.round(toNumber(person.history?.totalHours) * 10);
   const meetsStage = (stage) => {
     const domainRule = stage.minimumDomainCount || { threshold: 0, count: 0 };
     const domainCount = evidence.filter((item) => item.index >= toNumber(domainRule.threshold)).length;
@@ -991,11 +1036,26 @@ function getExperienceProfile(person, evidence = deriveCapabilityEvidence(person
       && Object.entries(stage.minimumIndexes || {}).every(([id, minimum]) => toNumber(indexMap.get(id)) >= toNumber(minimum))
       && domainCount >= toNumber(domainRule.count);
   };
+  if (!xpReady) {
+    return {
+      totalXp,
+      historicalReferenceXp,
+      eventRecord,
+      xpReady,
+      primary,
+      candidateStage: { name: "待事件核對" },
+      nextStage: null,
+      gap: "事件全量對帳完成後才計算",
+    };
+  }
   const candidateStageIndex = Math.max(0, ...stages.map((stage, index) => meetsStage(stage) ? index : -1));
   const candidateStage = stages[candidateStageIndex] || { name: "經驗累積期" };
   const nextStage = stages[candidateStageIndex + 1] || null;
   return {
     totalXp,
+    historicalReferenceXp,
+    eventRecord,
+    xpReady,
     primary,
     candidateStage,
     nextStage,
@@ -1124,10 +1184,18 @@ function renderPeopleGrid() {
           <div class="person-fact"><span>能力判定</span><strong>待人工確認</strong></div>
         </div>
         <div class="experience-summary">
-          <div><span>總經驗值</span><strong>${numberFormat.format(experience.totalXp)} XP</strong></div>
+          <div><span>事件確認 XP</span><strong>${!experience.xpReady
+            ? "待事件核對"
+            : experience.eventRecord
+              ? `${numberFormat.format(experience.totalXp)} XP`
+              : "0 XP／尚無合格事件"}</strong></div>
           <div><span>主能力證據</span><strong>${escapeHtml(experience.primary.name)} ${experience.primary.index}</strong></div>
           <div><span>量化候選</span><strong>${escapeHtml(experience.candidateStage.name)}</strong></div>
-          <small>下一階段：${escapeHtml(experience.gap)}</small>
+          <small>${!experience.xpReady
+            ? `歷史投入參考：${numberFormat.format(experience.historicalReferenceXp)} XP（不列入級距）`
+            : experience.eventRecord
+              ? `下一階段：${escapeHtml(experience.gap)}`
+              : "完整對帳已完成；目前尚無符合 SUCCESS、已關閉且分鐘可解析的事件。"}</small>
         </div>
         <div class="capability-index-grid">${evidence.map((item) => `
           <div class="capability-index-item">
