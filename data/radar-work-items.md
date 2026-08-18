@@ -1,22 +1,24 @@
-# 每週工作清單（2026-08-07～2026-08-14）
+# 每週工作清單（2026-08-12～2026-08-18）
 
-> 每項可在 30 分鐘內完成；薪資僅列 paid/due 狀態，不含金額或銀行資料。
+> 每項可在 30 分鐘內完成；派工與薪資只列狀態及下一步，不含薪資金額、銀行或帳號資料。
 
-## A. 本週可執行
+## A. 新聞雷達 → 本週可行動
 
-- [ ] 檢查 `update_work_rhythm.ps1` 為何沒有寫出 2026-08-14 新快照。（Owner: Kevin｜Due: 2026-08-17）
-- [ ] 抽查 5 件最早逾期工作，確認仍有效、等待對象與下一個人工決策。（Owner: Kevin｜Due: 2026-08-17）
-- [ ] 草擬一張返家轉銜檢核卡，含生活功能、居家環境、照顧者負荷、福利資源與追蹤窗口。（Owner: Kevin｜Due: 2026-08-18）
-- [ ] 把健保卡 LINE 釣魚案例改成「不點連結／官方查證／通知支持者」三步驟提醒。（Owner: Kevin｜Due: 2026-08-18）
-- [ ] 整理虛擬資產專法的五個待確認欄位：施行日、合法業者、資產保管、風險揭露、申訴。（Owner: Kevin｜Due: 2026-08-19）
-- [ ] 選一個本機唯讀流程測試 Codex 自動核准是否嚴守 allowlist。（Owner: Kevin｜Due: 2026-08-19）
+- [ ] 草擬職災法律扶助四欄轉介卡：事故類型／程序階段／窗口／生效日。｜owner: Kevin｜due: 2026-08-20｜來源：勞動部
+- [ ] 建立兒少未來帳戶狀態卡，明示目前不得當成已可申請制度。｜owner: Kevin｜due: 2026-08-19｜來源：衛福部／立法院
+- [ ] 在 AI 內容標示規範補入「浮水印是輔助證據，不是作者判定」。｜owner: Kevin｜due: 2026-08-20｜來源：Anthropic
+- [ ] 為 automation-3 畫出 `state / evidence / blocker / nextApproval` 四格狀態草稿。｜owner: Kevin｜due: 2026-08-21｜來源：GitHub agentic canvas
+- [ ] 對首頁、interns、talent-pool 做鍵盤-only 焦點順序檢查並記錄一個最小修正。｜owner: Kevin｜due: 2026-08-21｜來源：勞動部無障礙案例
+- [ ] 整理 FHIR／SMART on FHIR／CQL 的用途、限制與專業確認點三欄表。｜owner: Kevin｜due: 2026-08-24｜來源：衛生福利部
 
 ## B. 派工與薪資狀態
 
-- [ ] 檢查 34 位 active 工讀生是否都有一個 30 分鐘內可完成的下一步；正式派工仍由 Kevin 在 InfoCenter 核准。（Status: dispatch-check｜Owner: Kevin｜Due: 2026-08-17）
-- [ ] 核對公開薪資狀態為 paid 25、due 0；只確認狀態，不記錄金額或銀行資料。（Status: paid/due-check｜Owner: Kevin｜Due: 2026-08-17）
+- [ ] 核對 36 位 active roster 的下一個可交辦項；正式派工仍由 Kevin 在 InfoCenter 核准。｜status: dispatch-check｜owner: Kevin｜due: 2026-08-20
+- [ ] 核對公開薪資狀態 paid 21、due 0；只確認狀態，不記錄金額或銀行資料。｜status: paid/due-check｜owner: Kevin｜due: 2026-08-20
+- [ ] 抽查 5 件最早的 20 件逾期工作，確認仍有效、等待對象與下一個人工決策。｜status: overdue-review｜owner: Kevin｜due: 2026-08-21
 
-## C. 下週追蹤
+## C. 追蹤中
 
-- [ ] 比較新的 InfoCenter active、unassigned、overdue 與 157 筆實際耗時樣本是否出現內容差異。（Owner: Kevin｜Due: 2026-08-21）
-- [ ] 檢查虛擬資產專法是否已公布施行日期、子法、合法業者查詢或申訴配套。（Owner: Kevin｜Due: 2026-08-21）
+- [ ] 完成返家轉銜檢核卡第一版，保留生活功能、環境、照顧者負荷、資源與窗口。｜owner: Kevin｜due: 2026-08-21｜上次更新：2026-08-14
+- [ ] 續查虛擬資產專法的施行日、合法業者入口與申訴配套。｜owner: Kevin｜due: 2026-08-21｜上次更新：2026-08-14
+- [ ] 在正確 InfoCenter 組織的可見 Browser context 補 organization ID hash 證明；未完成前不啟用 live Event XP。｜owner: Kevin｜due: 2026-08-21｜上次更新：2026-08-18

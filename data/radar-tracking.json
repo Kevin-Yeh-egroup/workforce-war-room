@@ -5,9 +5,9 @@
       "createdAt": "2026-08-14",
       "topic": "codex_workflow",
       "title": "修復 InfoCenter helper 未產生本日新快照，並抽查逾期下降口徑。",
-      "status": "open",
-      "nextCheck": "2026-08-21",
-      "question": "active、unassigned、overdue 與實際耗時樣本是否有 8 月 14 日之後的新證據？",
+      "status": "done",
+      "nextCheck": "2026-08-18",
+      "question": "2026-08-18 唯讀刷新已成功；work 與 event-list aggregate 都有新 generatedAt。",
       "links": ["https://www.egroup-infocenter.com/me/work?tab=list"]
     },
     {
@@ -54,11 +54,14 @@
       "id": "tracking-20260807-ai-transparency-labels",
       "createdAt": "2026-08-07",
       "topic": "global_ai",
-      "title": "盤點公開內容的 AI 生成、AI 協作與人工編審標示。",
+      "title": "盤點公開內容的 AI 生成、AI 協作、浮水印與人工編審標示。",
       "status": "open",
       "nextCheck": "2026-08-21",
-      "question": "網站、文章、圖片與互動工具是否需要不同標示？",
-      "links": ["https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems"]
+      "question": "是否已明示浮水印只能當輔助證據，不能作作者、所有權或責任判定？",
+      "links": [
+        "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems",
+        "https://www.anthropic.com/news/claude-text-watermark"
+      ]
     },
     {
       "id": "tracking-20260731-gpt56-price-performance",
@@ -79,6 +82,66 @@
       "nextCheck": "2026-08-21",
       "question": "9 月前是否調整接種期限或高風險提醒？",
       "links": ["https://www.mohw.gov.tw/cp-2704-87261-1.html"]
+    },
+    {
+      "id": "tracking-20260818-occupational-injury-legal-aid",
+      "createdAt": "2026-08-18",
+      "topic": "tw_social_work",
+      "title": "建立職災法律扶助分段生效轉介卡。",
+      "status": "open",
+      "nextCheck": "2026-08-20",
+      "question": "是否清楚區分程序階段、生效日、查詢窗口與非法律意見邊界？",
+      "links": ["https://www.mol.gov.tw/1607/1632/1633/96643/post"]
+    },
+    {
+      "id": "tracking-20260818-child-future-account-status",
+      "createdAt": "2026-08-18",
+      "topic": "tw_fin_ed",
+      "title": "追蹤兒少成長及未來帳戶的正式生效狀態。",
+      "status": "open",
+      "nextCheck": "2026-08-21",
+      "question": "目前是三讀、公布、生效、暫停或其他程序狀態？是否已有可執行規則？",
+      "links": ["https://www.mohw.gov.tw/cp-16-87470-1.html"]
+    },
+    {
+      "id": "tracking-20260818-digital-health-standards",
+      "createdAt": "2026-08-18",
+      "topic": "tw_social_work",
+      "title": "整理數位健康互通標準的安全用途表。",
+      "status": "open",
+      "nextCheck": "2026-08-24",
+      "question": "FHIR、SMART on FHIR 與 CQL 的用途、限制與專業確認點是否區分清楚？",
+      "links": ["https://www.mohw.gov.tw/cp-16-87472-1.html"]
+    },
+    {
+      "id": "tracking-20260818-agent-state-surface",
+      "createdAt": "2026-08-18",
+      "topic": "codex_workflow",
+      "title": "試作 automation-3 四格持久狀態摘要。",
+      "status": "open",
+      "nextCheck": "2026-08-21",
+      "question": "currentState、evidenceFreshness、blocker、nextApproval 是否能降低覆核時間？",
+      "links": ["https://github.blog/ai-and-ml/github-copilot/how-canvases-make-agentic-workflows-visible-steerable-and-cost-efficient/"]
+    },
+    {
+      "id": "tracking-20260818-keyboard-accessibility",
+      "createdAt": "2026-08-18",
+      "topic": "codex_workflow",
+      "title": "把鍵盤與焦點驗證納入公開頁回歸。",
+      "status": "open",
+      "nextCheck": "2026-08-21",
+      "question": "首頁、interns、talent-pool 的焦點順序、搜尋、重新讀取與返回是否都可純鍵盤完成？",
+      "links": ["https://www.mol.gov.tw/1607/1632/1633/96629/post"]
+    },
+    {
+      "id": "tracking-20260818-event-xp-live-proof",
+      "createdAt": "2026-08-18",
+      "topic": "codex_workflow",
+      "title": "補齊 Event XP 未來 live read 的可見組織 ID 證明。",
+      "status": "blocked",
+      "nextCheck": "2026-08-21",
+      "question": "能否在正確組織的可見 Browser context 取得並驗證 organization ID SHA-256，再重跑全量 1,704 事件？",
+      "links": ["https://www.egroup-infocenter.com/me/event/events"]
     }
   ]
 }
