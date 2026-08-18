@@ -1,1888 +1,1848 @@
 {
-    "meta":  {
-                 "generatedAt":  "2026-08-11T16:15:09+08:00",
-                 "sourceModifiedAt":  "2026-06-01T12:20:24.844Z",
-                 "source":  "intern spreadsheet (redacted)",
-                 "privacy":  "Public-safe masked identity: names use ○ substitution and emails expose only the first two local-part characters plus domain. Phone, address, salary, banking, raw notes and full email remain excluded.",
-                 "history":  {
-                                 "source":  "2026-01 起工讀生工時報帳表（內部解析；薪資金額排除）",
-                                 "coveredMonths":  [
-                                                       "2026-01",
-                                                       "2026-02",
-                                                       "2026-03",
-                                                       "2026-04",
-                                                       "2026-05"
-                                                   ],
-                                 "salaryAmountsExcluded":  true,
-                                 "peopleWithHistory":  37,
-                                 "dictionaryWorkMinutes":  330
-                             },
-                 "counts":  {
-                                "total":  41,
-                                "active":  34,
-                                "paused":  7,
-                                "paid":  25,
-                                "due":  0
-                            }
-             },
-    "interns":  [
-                    {
-                        "id":  "05e0794df6ed",
-                        "slug":  "05e0794df6ed",
-                        "displayName":  "曾○叡",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  7.5,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  3.167,
-                                                             "2026-02":  6.067,
-                                                             "2026-03":  7.05,
-                                                             "2026-04":  7.5,
-                                                             "2026-05":  6.083
-                                                         },
-                                        "totalHours":  29.867,
-                                        "monthsWithHours":  5,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  724,
-                                                                   "hours":  12.07
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  603,
-                                                                   "hours":  10.05
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***x@gmail.com"
-                    },
-                    {
-                        "id":  "07279789e47e",
-                        "slug":  "07279789e47e",
-                        "displayName":  "蔡○妤",
-                        "status":  "active",
-                        "currentRole":  "社工",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  1.5,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  11.0,
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  0.0,
-                                                             "2026-04":  1.5,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  12.5,
-                                        "monthsWithHours":  2,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  90,
-                                                                   "hours":  1.5
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***l@gmail.com"
-                    },
-                    {
-                        "id":  "244c0faa6865",
-                        "slug":  "244c0faa6865",
-                        "displayName":  "劉○瑋",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "新夥伴",
-                        "workHoursThisMonth":  35.55,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-04":  35.55,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  35.55,
-                                        "monthsWithHours":  1,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  1208,
-                                                                   "hours":  20.13
-                                                               },
-                                                               {
-                                                                   "category":  "content_and_course",
-                                                                   "minutes":  385,
-                                                                   "hours":  6.42
-                                                               },
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  146,
-                                                                   "hours":  2.43
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***i@gmail.com"
-                    },
-                    {
-                        "id":  "268aa0c527a7",
-                        "slug":  "268aa0c527a7",
-                        "displayName":  "陳○安",
-                        "status":  "active",
-                        "currentRole":  "學生",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  22.533,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  13.3,
-                                                             "2026-02":  8.333,
-                                                             "2026-03":  2.0,
-                                                             "2026-04":  22.533,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  46.166,
-                                        "monthsWithHours":  4,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  1382,
-                                                                   "hours":  23.03
-                                                               },
-                                                               {
-                                                                   "category":  "social_welfare_resources",
-                                                                   "minutes":  1200,
-                                                                   "hours":  20.0
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***n@gmail.com"
-                    },
-                    {
-                        "id":  "2b6bf0c24658",
-                        "slug":  "2b6bf0c24658",
-                        "displayName":  "陳○凌",
-                        "status":  "active",
-                        "currentRole":  "學生",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  1.0,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  3.783,
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  1.25,
-                                                             "2026-04":  1.0,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  6.033,
-                                        "monthsWithHours":  3,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  135,
-                                                                   "hours":  2.25
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***e@gmail.com"
-                    },
-                    {
-                        "id":  "2cc0a19a66f6",
-                        "slug":  "2cc0a19a66f6",
-                        "displayName":  "張○康",
-                        "status":  "active",
-                        "currentRole":  "學生",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  8.333,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  3.0,
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  0.0,
-                                                             "2026-04":  8.333,
-                                                             "2026-05":  15.0
-                                                         },
-                                        "totalHours":  26.333,
-                                        "monthsWithHours":  3,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  1040,
-                                                                   "hours":  17.33
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***8@gmail.com"
-                    },
-                    {
-                        "id":  "2f4884d2f85c",
-                        "slug":  "2f4884d2f85c",
-                        "displayName":  "陳○旻",
-                        "status":  "active",
-                        "currentRole":  "學生",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  20.333,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  11.0,
-                                                             "2026-02":  7.167,
-                                                             "2026-03":  5.833,
-                                                             "2026-04":  20.333,
-                                                             "2026-05":  35.6
-                                                         },
-                                        "totalHours":  79.933,
-                                        "monthsWithHours":  5,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "social_welfare_resources",
-                                                                   "minutes":  1615,
-                                                                   "hours":  26.92
-                                                               },
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  1530,
-                                                                   "hours":  25.5
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  1040,
-                                                                   "hours":  17.33
-                                                               },
-                                                               {
-                                                                   "category":  "content_and_course",
-                                                                   "minutes":  130,
-                                                                   "hours":  2.17
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***a@gmail.com"
-                    },
-                    {
-                        "id":  "367814eda832",
-                        "slug":  "367814eda832",
-                        "displayName":  "賴○均",
-                        "status":  "active",
-                        "currentRole":  "社工",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  1.0,
-                                                             "2026-04":  0.0,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  1.0,
-                                        "monthsWithHours":  1,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  60,
-                                                                   "hours":  1.0
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***i@gmail.com"
-                    },
-                    {
-                        "id":  "37e5b2f31223",
-                        "slug":  "37e5b2f31223",
-                        "displayName":  "林○恩",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-03":  1.417,
-                                                             "2026-04":  0.0,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  1.417,
-                                        "monthsWithHours":  1,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  85,
-                                                                   "hours":  1.42
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***n@gmail.com"
-                    },
-                    {
-                        "id":  "383dd21d83d1",
-                        "slug":  "383dd21d83d1",
-                        "displayName":  "洪○緯",
-                        "status":  "active",
-                        "currentRole":  "待業",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  48.933,
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  3.05,
-                                                             "2026-04":  0.0,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  51.983,
-                                        "monthsWithHours":  2,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "social_welfare_resources",
-                                                                   "minutes":  1260,
-                                                                   "hours":  21.0
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  183,
-                                                                   "hours":  3.05
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***n@gmail.com"
-                    },
-                    {
-                        "id":  "3a9e70d04b82",
-                        "slug":  "3a9e70d04b82",
-                        "displayName":  "黃○宇",
-                        "status":  "active",
-                        "currentRole":  "研究生",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "新夥伴",
-                        "workHoursThisMonth":  5.7,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-04":  5.7,
-                                                             "2026-05":  5.933
-                                                         },
-                                        "totalHours":  11.633,
-                                        "monthsWithHours":  2,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  191,
-                                                                   "hours":  3.18
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  146,
-                                                                   "hours":  2.43
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***n@gmail.com"
-                    },
-                    {
-                        "id":  "43273957ea20",
-                        "slug":  "43273957ea20",
-                        "displayName":  "陳○兆",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  10.767,
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  0.0,
-                                                             "2026-04":  0.0,
-                                                             "2026-05":  5.233
-                                                         },
-                                        "totalHours":  16.0,
-                                        "monthsWithHours":  2,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***o@gmail.com"
-                    },
-                    {
-                        "id":  "4402a377709e",
-                        "slug":  "4402a377709e",
-                        "displayName":  "曾○沁",
-                        "status":  "active",
-                        "currentRole":  "學生",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  6.17,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  6.08,
-                                                             "2026-02":  18.42,
-                                                             "2026-03":  31.72,
-                                                             "2026-04":  6.17,
-                                                             "2026-05":  6.33
-                                                         },
-                                        "totalHours":  68.72,
-                                        "monthsWithHours":  5,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  1515,
-                                                                   "hours":  25.25
-                                                               },
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  60,
-                                                                   "hours":  1.0
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***n@gmail.com"
-                    },
-                    {
-                        "id":  "45214b121411",
-                        "slug":  "45214b121411",
-                        "displayName":  "吳○宇",
-                        "status":  "active",
-                        "currentRole":  "學生",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  28.416,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  8.333,
-                                                             "2026-02":  6.917,
-                                                             "2026-03":  2.25,
-                                                             "2026-04":  28.416,
-                                                             "2026-05":  35.333
-                                                         },
-                                        "totalHours":  81.249,
-                                        "monthsWithHours":  5,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  1240,
-                                                                   "hours":  20.67
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  590,
-                                                                   "hours":  9.83
-                                                               },
-                                                               {
-                                                                   "category":  "content_and_course",
-                                                                   "minutes":  135,
-                                                                   "hours":  2.25
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***a@gmail.com"
-                    },
-                    {
-                        "id":  "4cda6db65f17",
-                        "slug":  "4cda6db65f17",
-                        "displayName":  "許○媜",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "新夥伴",
-                        "workHoursThisMonth":  1.0,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-04":  1.0,
-                                                             "2026-05":  2.5
-                                                         },
-                                        "totalHours":  3.5,
-                                        "monthsWithHours":  2,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "social_welfare_resources",
-                                                                   "minutes":  150,
-                                                                   "hours":  2.5
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  60,
-                                                                   "hours":  1.0
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***a@gmail.com"
-                    },
-                    {
-                        "id":  "5a8cad415c12",
-                        "slug":  "5a8cad415c12",
-                        "displayName":  "張○筑",
-                        "status":  "active",
-                        "currentRole":  "學生",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  55.683,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  32.283,
-                                                             "2026-02":  28.067,
-                                                             "2026-03":  28.067,
-                                                             "2026-04":  55.683,
-                                                             "2026-05":  54.683
-                                                         },
-                                        "totalHours":  198.783,
-                                        "monthsWithHours":  5,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  2303,
-                                                                   "hours":  38.38
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  1884,
-                                                                   "hours":  31.4
-                                                               },
-                                                               {
-                                                                   "category":  "content_and_course",
-                                                                   "minutes":  1829,
-                                                                   "hours":  30.48
-                                                               },
-                                                               {
-                                                                   "category":  "social_welfare_resources",
-                                                                   "minutes":  197,
-                                                                   "hours":  3.28
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***u@gmail.com"
-                    },
-                    {
-                        "id":  "615a9eb66f18",
-                        "slug":  "615a9eb66f18",
-                        "displayName":  "楊○涵",
-                        "status":  "active",
-                        "currentRole":  "學生",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  0.0,
-                                                             "2026-04":  0.0,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  0.0,
-                                        "monthsWithHours":  0,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***7@gmail.com"
-                    },
-                    {
-                        "id":  "659b0588a539",
-                        "slug":  "659b0588a539",
-                        "displayName":  "陳○淇",
-                        "status":  "active",
-                        "currentRole":  "社工",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  2.0,
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  2.33,
-                                                             "2026-04":  0.0,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  4.33,
-                                        "monthsWithHours":  2,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "social_welfare_resources",
-                                                                   "minutes":  140,
-                                                                   "hours":  2.33
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***y@gmail.com"
-                    },
-                    {
-                        "id":  "7b630a5c0e44",
-                        "slug":  "7b630a5c0e44",
-                        "displayName":  "柯○恩",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "新夥伴",
-                        "workHoursThisMonth":  2.0,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-04"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-04":  2.0
-                                                         },
-                                        "totalHours":  2.0,
-                                        "monthsWithHours":  1,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  120,
-                                                                   "hours":  2.0
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***a@gmail.com"
-                    },
-                    {
-                        "id":  "85247e815ae3",
-                        "slug":  "85247e815ae3",
-                        "displayName":  "謝○妤",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  4.5,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-02":  4.25,
-                                                             "2026-03":  5.5,
-                                                             "2026-04":  4.5,
-                                                             "2026-05":  4.5
-                                                         },
-                                        "totalHours":  18.75,
-                                        "monthsWithHours":  4,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  370,
-                                                                   "hours":  6.17
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  60,
-                                                                   "hours":  1.0
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***y@gmail.com"
-                    },
-                    {
-                        "id":  "8c22f2fd8016",
-                        "slug":  "8c22f2fd8016",
-                        "displayName":  "李○蓁",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  5.516,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-02":  3.883,
-                                                             "2026-03":  8.617,
-                                                             "2026-04":  5.516,
-                                                             "2026-05":  2.75
-                                                         },
-                                        "totalHours":  20.766,
-                                        "monthsWithHours":  4,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  766,
-                                                                   "hours":  12.77
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  181,
-                                                                   "hours":  3.02
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***y@gmail.com"
-                    },
-                    {
-                        "id":  "9c57f621e2d4",
-                        "slug":  "9c57f621e2d4",
-                        "displayName":  "陳○",
-                        "status":  "active",
-                        "currentRole":  "學生",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  15.433,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  2.167,
-                                                             "2026-02":  20.367,
-                                                             "2026-03":  16.8,
-                                                             "2026-04":  15.433,
-                                                             "2026-05":  6.1
-                                                         },
-                                        "totalHours":  60.867,
-                                        "monthsWithHours":  5,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  1564,
-                                                                   "hours":  26.07
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  772,
-                                                                   "hours":  12.87
-                                                               },
-                                                               {
-                                                                   "category":  "social_welfare_resources",
-                                                                   "minutes":  260,
-                                                                   "hours":  4.33
-                                                               },
-                                                               {
-                                                                   "category":  "content_and_course",
-                                                                   "minutes":  198,
-                                                                   "hours":  3.3
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***y@gmail.com"
-                    },
-                    {
-                        "id":  "a3032b04952d",
-                        "slug":  "a3032b04952d",
-                        "displayName":  "王○廷",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  1.0,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  1.5,
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  1.0,
-                                                             "2026-04":  1.0,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  3.5,
-                                        "monthsWithHours":  3,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  90,
-                                                                   "hours":  1.5
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***g@gmail.com"
-                    },
-                    {
-                        "id":  "b78661d6dcf4",
-                        "slug":  "b78661d6dcf4",
-                        "displayName":  "劉○真",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.5,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  3.667,
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  1.0,
-                                                             "2026-04":  0.5,
-                                                             "2026-05":  1.0
-                                                         },
-                                        "totalHours":  6.167,
-                                        "monthsWithHours":  4,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  150,
-                                                                   "hours":  2.5
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***a@gmail.com"
-                    },
-                    {
-                        "id":  "c4c55e13a311",
-                        "slug":  "c4c55e13a311",
-                        "displayName":  "劉○柔",
-                        "status":  "active",
-                        "currentRole":  "社工",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  1.0,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  15.083,
-                                                             "2026-02":  3.333,
-                                                             "2026-03":  1.0,
-                                                             "2026-04":  1.0,
-                                                             "2026-05":  1.0
-                                                         },
-                                        "totalHours":  21.416,
-                                        "monthsWithHours":  5,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "social_welfare_resources",
-                                                                   "minutes":  760,
-                                                                   "hours":  12.67
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  180,
-                                                                   "hours":  3.0
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***e@gmail.com"
-                    },
-                    {
-                        "id":  "c6957afc2fb7",
-                        "slug":  "c6957afc2fb7",
-                        "displayName":  "葉○辰",
-                        "status":  "active",
-                        "currentRole":  "求職中",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  8.917,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  3.7,
-                                                             "2026-02":  22.133,
-                                                             "2026-03":  32.13,
-                                                             "2026-04":  8.917,
-                                                             "2026-05":  18.5
-                                                         },
-                                        "totalHours":  85.38,
-                                        "monthsWithHours":  5,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  2023,
-                                                                   "hours":  33.72
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  885,
-                                                                   "hours":  14.75
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***n@gmail.com"
-                    },
-                    {
-                        "id":  "d7f1864e3dd0",
-                        "slug":  "d7f1864e3dd0",
-                        "displayName":  "孫○",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "新夥伴",
-                        "workHoursThisMonth":  20.216,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-04":  20.216,
-                                                             "2026-05":  17.183
-                                                         },
-                                        "totalHours":  37.399,
-                                        "monthsWithHours":  2,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  725,
-                                                                   "hours":  12.08
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  615,
-                                                                   "hours":  10.25
-                                                               },
-                                                               {
-                                                                   "category":  "social_welfare_resources",
-                                                                   "minutes":  185,
-                                                                   "hours":  3.08
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***a@gmail.com"
-                    },
-                    {
-                        "id":  "dca79e5089ab",
-                        "slug":  "dca79e5089ab",
-                        "displayName":  "陳○儒",
-                        "status":  "active",
-                        "currentRole":  "學生",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  13.5,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  9.167,
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  23.367,
-                                                             "2026-04":  13.5,
-                                                             "2026-05":  3.95
-                                                         },
-                                        "totalHours":  49.984,
-                                        "monthsWithHours":  4,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  824,
-                                                                   "hours":  13.73
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  248,
-                                                                   "hours":  4.13
-                                                               },
-                                                               {
-                                                                   "category":  "content_and_course",
-                                                                   "minutes":  236,
-                                                                   "hours":  3.93
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***u@gmail.com"
-                    },
-                    {
-                        "id":  "e6c8249bb53e",
-                        "slug":  "e6c8249bb53e",
-                        "displayName":  "許○瑋",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  3.933,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  14.55,
-                                                             "2026-02":  16.483,
-                                                             "2026-03":  20.3,
-                                                             "2026-04":  3.933,
-                                                             "2026-05":  2.467
-                                                         },
-                                        "totalHours":  57.733,
-                                        "monthsWithHours":  5,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  1763,
-                                                                   "hours":  29.38
-                                                               },
-                                                               {
-                                                                   "category":  "social_welfare_resources",
-                                                                   "minutes":  645,
-                                                                   "hours":  10.75
-                                                               },
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  253,
-                                                                   "hours":  4.22
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***n@gmail.com"
-                    },
-                    {
-                        "id":  "edab786ed607",
-                        "slug":  "edab786ed607",
-                        "displayName":  "施○臻",
-                        "status":  "active",
-                        "currentRole":  "學生",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  44.167,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  41.83,
-                                                             "2026-02":  51.75,
-                                                             "2026-03":  28.5,
-                                                             "2026-04":  44.167,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  166.247,
-                                        "monthsWithHours":  4,
-                                        "dictionaryWorkMinutes":  330,
-                                        "dictionaryWorkHours":  5.5,
-                                        "dictionaryWorkMonths":  [
-                                                                     "2026-01"
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "social_welfare_resources",
-                                                                   "minutes":  8560,
-                                                                   "hours":  142.67
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  575,
-                                                                   "hours":  9.58
-                                                               },
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  510,
-                                                                   "hours":  8.5
-                                                               },
-                                                               {
-                                                                   "category":  "dictionary",
-                                                                   "minutes":  330,
-                                                                   "hours":  5.5
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***u@gmail.com"
-                    },
-                    {
-                        "id":  "f1b469bd0f1e",
-                        "slug":  "f1b469bd0f1e",
-                        "displayName":  "林○妏",
-                        "status":  "active",
-                        "currentRole":  "行銷業助",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  26.4,
-                                                             "2026-02":  11.567,
-                                                             "2026-03":  16.35,
-                                                             "2026-04":  0.0,
-                                                             "2026-05":  3.017
-                                                         },
-                                        "totalHours":  57.334,
-                                        "monthsWithHours":  4,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  1494,
-                                                                   "hours":  24.9
-                                                               },
-                                                               {
-                                                                   "category":  "social_welfare_resources",
-                                                                   "minutes":  665,
-                                                                   "hours":  11.08
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  329,
-                                                                   "hours":  5.48
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***y@gmail.com"
-                    },
-                    {
-                        "id":  "f279f22c9ded",
-                        "slug":  "f279f22c9ded",
-                        "displayName":  "施○廷",
-                        "status":  "active",
-                        "currentRole":  "系統櫃業務",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  2.667,
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  0.0,
-                                                             "2026-04":  0.0,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  2.667,
-                                        "monthsWithHours":  1,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***r@gmail.com"
-                    },
-                    {
-                        "id":  "f75ea28ada4d",
-                        "slug":  "f75ea28ada4d",
-                        "displayName":  "詹○瑄",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  0.0,
-                                                             "2026-04":  0.0,
-                                                             "2026-05":  0.0
-                                                         },
-                                        "totalHours":  0.0,
-                                        "monthsWithHours":  0,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***n@gmail.com"
-                    },
-                    {
-                        "id":  "ff864aedde4f",
-                        "slug":  "ff864aedde4f",
-                        "displayName":  "李○霖",
-                        "status":  "active",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  8.983,
-                        "payStatusThisMonth":  "paid",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02",
-                                                              "2026-03",
-                                                              "2026-04",
-                                                              "2026-05"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  15.533,
-                                                             "2026-02":  13.843,
-                                                             "2026-03":  9.95,
-                                                             "2026-04":  8.983,
-                                                             "2026-05":  3.883
-                                                         },
-                                        "totalHours":  52.192,
-                                        "monthsWithHours":  5,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  1381,
-                                                                   "hours":  23.02
-                                                               },
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  632,
-                                                                   "hours":  10.53
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  ""
-                    },
-                    {
-                        "id":  "2f3a8886190d",
-                        "slug":  "2f3a8886190d",
-                        "displayName":  "張○鈞",
-                        "status":  "paused",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  7.917,
-                                                             "2026-02":  0.0
-                                                         },
-                                        "totalHours":  7.917,
-                                        "monthsWithHours":  1,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***o@gmail.com"
-                    },
-                    {
-                        "id":  "5b708760e94e",
-                        "slug":  "5b708760e94e",
-                        "displayName":  "張○雯",
-                        "status":  "paused",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-02",
-                                                              "2026-03"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-02":  0.0,
-                                                             "2026-03":  0.0
-                                                         },
-                                        "totalHours":  0.0,
-                                        "monthsWithHours":  0,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***h@gmail.com"
-                    },
-                    {
-                        "id":  "5e46a77fde6d",
-                        "slug":  "5e46a77fde6d",
-                        "displayName":  "施○捷",
-                        "status":  "paused",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "maskedEmail":  ""
-                    },
-                    {
-                        "id":  "8d7e15e10b36",
-                        "slug":  "8d7e15e10b36",
-                        "displayName":  "杜○○緯",
-                        "status":  "paused",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "maskedEmail":  ""
-                    },
-                    {
-                        "id":  "b52f6fcb3078",
-                        "slug":  "b52f6fcb3078",
-                        "displayName":  "甘○平",
-                        "status":  "paused",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "maskedEmail":  ""
-                    },
-                    {
-                        "id":  "e381878c3c96",
-                        "slug":  "e381878c3c96",
-                        "displayName":  "陳○婷",
-                        "status":  "paused",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "history":  {
-                                        "coveredMonths":  [
-                                                              "2026-01",
-                                                              "2026-02"
-                                                          ],
-                                        "monthlyHours":  {
-                                                             "2026-01":  5.05,
-                                                             "2026-02":  4.783
-                                                         },
-                                        "totalHours":  9.833,
-                                        "monthsWithHours":  2,
-                                        "dictionaryWorkMinutes":  0,
-                                        "dictionaryWorkHours":  0.0,
-                                        "dictionaryWorkMonths":  [
-
-                                                                 ],
-                                        "topWorkSignals":  [
-                                                               {
-                                                                   "category":  "transcript_and_meeting",
-                                                                   "minutes":  255,
-                                                                   "hours":  4.25
-                                                               },
-                                                               {
-                                                                   "category":  "financial_education",
-                                                                   "minutes":  208,
-                                                                   "hours":  3.47
-                                                               }
-                                                           ]
-                                    },
-                        "maskedEmail":  "eg***e@gmail.com"
-                    },
-                    {
-                        "id":  "eda751ff0e7a",
-                        "slug":  "eda751ff0e7a",
-                        "displayName":  "陳○汶",
-                        "status":  "paused",
-                        "currentRole":  "",
-                        "educationOrJob":  "",
-                        "workStatus":  "",
-                        "contactStatus":  "",
-                        "workLevel":  "",
-                        "referrer":  "",
-                        "notes":  "",
-                        "workHoursThisMonth":  0.0,
-                        "payStatusThisMonth":  "n/a",
-                        "maskedEmail":  ""
-                    }
-                ]
+  "meta": {
+    "generatedAt": "2026-08-18T16:31:53+08:00",
+    "sourceModifiedAt": null,
+    "sourceFingerprint": "sha256:280d6093daf456e208c4e85763b75102ae1d3b88ea4100972ddf31eb37869125",
+    "source": "intern spreadsheet (redacted)",
+    "privacy": "Public-safe masked identity: names use ○ substitution; masked emails expose the first two and last local-part characters plus domain. Phone, address, salary, banking, raw notes and full email remain excluded.",
+    "history": {
+      "source": "2026-01 起工讀生工時報帳表（內部解析；薪資金額排除）",
+      "coveredMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05"
+      ],
+      "salaryAmountsExcluded": true,
+      "peopleWithHistory": 37,
+      "dictionaryWorkMinutes": 330
+    },
+    "counts": {
+      "total": 44,
+      "active": 36,
+      "paused": 8,
+      "paid": 21,
+      "due": 0
+    }
+  },
+  "interns": [
+    {
+      "id": "05e0794df6ed",
+      "slug": "05e0794df6ed",
+      "displayName": "曾○叡",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 7.167,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***x@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 3.167,
+          "2026-02": 6.067,
+          "2026-03": 7.05,
+          "2026-04": 7.5,
+          "2026-05": 6.083
+        },
+        "totalHours": 29.867,
+        "monthsWithHours": 5,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 724,
+            "hours": 12.07
+          },
+          {
+            "category": "financial_education",
+            "minutes": 603,
+            "hours": 10.05
+          }
+        ]
+      }
+    },
+    {
+      "id": "07279789e47e",
+      "slug": "07279789e47e",
+      "displayName": "蔡○妤",
+      "status": "active",
+      "currentRole": "社工",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***l@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 11.0,
+          "2026-02": 0.0,
+          "2026-03": 0.0,
+          "2026-04": 1.5,
+          "2026-05": 0.0
+        },
+        "totalHours": 12.5,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 90,
+            "hours": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "268aa0c527a7",
+      "slug": "268aa0c527a7",
+      "displayName": "陳○安",
+      "status": "active",
+      "currentRole": "學生",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***n@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 13.3,
+          "2026-02": 8.333,
+          "2026-03": 2.0,
+          "2026-04": 22.533,
+          "2026-05": 0.0
+        },
+        "totalHours": 46.166,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 1382,
+            "hours": 23.03
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 1200,
+            "hours": 20.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "2b6bf0c24658",
+      "slug": "2b6bf0c24658",
+      "displayName": "陳○凌",
+      "status": "active",
+      "currentRole": "學生",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 2.417,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***e@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 3.783,
+          "2026-02": 0.0,
+          "2026-03": 1.25,
+          "2026-04": 1.0,
+          "2026-05": 0.0
+        },
+        "totalHours": 6.033,
+        "monthsWithHours": 3,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 135,
+            "hours": 2.25
+          }
+        ]
+      }
+    },
+    {
+      "id": "2cc0a19a66f6",
+      "slug": "2cc0a19a66f6",
+      "displayName": "張○康",
+      "status": "active",
+      "currentRole": "學生",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 9.0,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***8@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 3.0,
+          "2026-02": 0.0,
+          "2026-03": 0.0,
+          "2026-04": 8.333,
+          "2026-05": 15.0
+        },
+        "totalHours": 26.333,
+        "monthsWithHours": 3,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 1040,
+            "hours": 17.33
+          }
+        ]
+      }
+    },
+    {
+      "id": "2f4884d2f85c",
+      "slug": "2f4884d2f85c",
+      "displayName": "陳○旻",
+      "status": "active",
+      "currentRole": "學生",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 21.167,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***a@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 11.0,
+          "2026-02": 7.167,
+          "2026-03": 5.833,
+          "2026-04": 20.333,
+          "2026-05": 35.6
+        },
+        "totalHours": 79.933,
+        "monthsWithHours": 5,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "social_welfare_resources",
+            "minutes": 1615,
+            "hours": 26.92
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 1530,
+            "hours": 25.5
+          },
+          {
+            "category": "financial_education",
+            "minutes": 1040,
+            "hours": 17.33
+          },
+          {
+            "category": "content_and_course",
+            "minutes": 130,
+            "hours": 2.17
+          }
+        ]
+      }
+    },
+    {
+      "id": "367814eda832",
+      "slug": "367814eda832",
+      "displayName": "賴○均",
+      "status": "active",
+      "currentRole": "社工",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***i@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-02": 0.0,
+          "2026-03": 1.0,
+          "2026-04": 0.0,
+          "2026-05": 0.0
+        },
+        "totalHours": 1.0,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 60,
+            "hours": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "383dd21d83d1",
+      "slug": "383dd21d83d1",
+      "displayName": "洪○緯",
+      "status": "active",
+      "currentRole": "待業",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***n@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 48.933,
+          "2026-02": 0.0,
+          "2026-03": 3.05,
+          "2026-04": 0.0,
+          "2026-05": 0.0
+        },
+        "totalHours": 51.983,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "social_welfare_resources",
+            "minutes": 1260,
+            "hours": 21.0
+          },
+          {
+            "category": "financial_education",
+            "minutes": 183,
+            "hours": 3.05
+          }
+        ]
+      }
+    },
+    {
+      "id": "3a9e70d04b82",
+      "slug": "3a9e70d04b82",
+      "displayName": "黃○宇",
+      "status": "active",
+      "currentRole": "研究生",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 2.5,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***n@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-04": 5.7,
+          "2026-05": 5.933
+        },
+        "totalHours": 11.633,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 191,
+            "hours": 3.18
+          },
+          {
+            "category": "financial_education",
+            "minutes": 146,
+            "hours": 2.43
+          }
+        ]
+      }
+    },
+    {
+      "id": "43273957ea20",
+      "slug": "43273957ea20",
+      "displayName": "陳○兆",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***o@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 10.767,
+          "2026-02": 0.0,
+          "2026-03": 0.0,
+          "2026-04": 0.0,
+          "2026-05": 5.233
+        },
+        "totalHours": 16.0,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
+    },
+    {
+      "id": "4402a377709e",
+      "slug": "4402a377709e",
+      "displayName": "曾○沁",
+      "status": "active",
+      "currentRole": "學生",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 8.083,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***n@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 6.08,
+          "2026-02": 18.42,
+          "2026-03": 31.72,
+          "2026-04": 6.17,
+          "2026-05": 6.33
+        },
+        "totalHours": 68.72,
+        "monthsWithHours": 5,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 1515,
+            "hours": 25.25
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 60,
+            "hours": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "45214b121411",
+      "slug": "45214b121411",
+      "displayName": "吳○宇",
+      "status": "active",
+      "currentRole": "學生",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***a@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 8.333,
+          "2026-02": 6.917,
+          "2026-03": 2.25,
+          "2026-04": 28.416,
+          "2026-05": 35.333
+        },
+        "totalHours": 81.249,
+        "monthsWithHours": 5,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 1240,
+            "hours": 20.67
+          },
+          {
+            "category": "financial_education",
+            "minutes": 590,
+            "hours": 9.83
+          },
+          {
+            "category": "content_and_course",
+            "minutes": 135,
+            "hours": 2.25
+          }
+        ]
+      }
+    },
+    {
+      "id": "4cda6db65f17",
+      "slug": "4cda6db65f17",
+      "displayName": "許○媜",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***a@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-04": 1.0,
+          "2026-05": 2.5
+        },
+        "totalHours": 3.5,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "social_welfare_resources",
+            "minutes": 150,
+            "hours": 2.5
+          },
+          {
+            "category": "financial_education",
+            "minutes": 60,
+            "hours": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "5a8cad415c12",
+      "slug": "5a8cad415c12",
+      "displayName": "張○筑",
+      "status": "active",
+      "currentRole": "學生",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 48.6,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***u@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 32.283,
+          "2026-02": 28.067,
+          "2026-03": 28.067,
+          "2026-04": 55.683,
+          "2026-05": 54.683
+        },
+        "totalHours": 198.783,
+        "monthsWithHours": 5,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 2303,
+            "hours": 38.38
+          },
+          {
+            "category": "financial_education",
+            "minutes": 1884,
+            "hours": 31.4
+          },
+          {
+            "category": "content_and_course",
+            "minutes": 1829,
+            "hours": 30.48
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 197,
+            "hours": 3.28
+          }
+        ]
+      }
+    },
+    {
+      "id": "5b708760e94e",
+      "slug": "5b708760e94e",
+      "displayName": "張○雯",
+      "status": "active",
+      "currentRole": "編輯",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 4.7,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***h@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-02",
+          "2026-03"
+        ],
+        "monthlyHours": {
+          "2026-02": 0.0,
+          "2026-03": 0.0
+        },
+        "totalHours": 0.0,
+        "monthsWithHours": 0,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
+    },
+    {
+      "id": "615a9eb66f18",
+      "slug": "615a9eb66f18",
+      "displayName": "楊○涵",
+      "status": "active",
+      "currentRole": "學生",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***7@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-02": 0.0,
+          "2026-03": 0.0,
+          "2026-04": 0.0,
+          "2026-05": 0.0
+        },
+        "totalHours": 0.0,
+        "monthsWithHours": 0,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
+    },
+    {
+      "id": "659b0588a539",
+      "slug": "659b0588a539",
+      "displayName": "陳○淇",
+      "status": "active",
+      "currentRole": "社工",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***y@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 2.0,
+          "2026-02": 0.0,
+          "2026-03": 2.33,
+          "2026-04": 0.0,
+          "2026-05": 0.0
+        },
+        "totalHours": 4.33,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "social_welfare_resources",
+            "minutes": 140,
+            "hours": 2.33
+          }
+        ]
+      }
+    },
+    {
+      "id": "85247e815ae3",
+      "slug": "85247e815ae3",
+      "displayName": "謝○妤",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***y@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-02": 4.25,
+          "2026-03": 5.5,
+          "2026-04": 4.5,
+          "2026-05": 4.5
+        },
+        "totalHours": 18.75,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 370,
+            "hours": 6.17
+          },
+          {
+            "category": "financial_education",
+            "minutes": 60,
+            "hours": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "8c22f2fd8016",
+      "slug": "8c22f2fd8016",
+      "displayName": "李○蓁",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 2.283,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***y@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-02": 3.883,
+          "2026-03": 8.617,
+          "2026-04": 5.516,
+          "2026-05": 2.75
+        },
+        "totalHours": 20.766,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 766,
+            "hours": 12.77
+          },
+          {
+            "category": "financial_education",
+            "minutes": 181,
+            "hours": 3.02
+          }
+        ]
+      }
+    },
+    {
+      "id": "9c57f621e2d4",
+      "slug": "9c57f621e2d4",
+      "displayName": "陳○",
+      "status": "active",
+      "currentRole": "學生",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 6.383,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***y@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 2.167,
+          "2026-02": 20.367,
+          "2026-03": 16.8,
+          "2026-04": 15.433,
+          "2026-05": 6.1
+        },
+        "totalHours": 60.867,
+        "monthsWithHours": 5,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 1564,
+            "hours": 26.07
+          },
+          {
+            "category": "financial_education",
+            "minutes": 772,
+            "hours": 12.87
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 260,
+            "hours": 4.33
+          },
+          {
+            "category": "content_and_course",
+            "minutes": 198,
+            "hours": 3.3
+          }
+        ]
+      }
+    },
+    {
+      "id": "a9753d207b2f",
+      "slug": "a9753d207b2f",
+      "displayName": "蔡○妤",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***e@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-05": 3.2
+        },
+        "totalHours": 3.2,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
+    },
+    {
+      "id": "b40258e6dc5f",
+      "slug": "b40258e6dc5f",
+      "displayName": "古○毓",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 6.0,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***u@gmail.com"
+    },
+    {
+      "id": "b78661d6dcf4",
+      "slug": "b78661d6dcf4",
+      "displayName": "劉○真",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 1.0,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***a@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 3.667,
+          "2026-02": 0.0,
+          "2026-03": 1.0,
+          "2026-04": 0.5,
+          "2026-05": 1.0
+        },
+        "totalHours": 6.167,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 150,
+            "hours": 2.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "c4c55e13a311",
+      "slug": "c4c55e13a311",
+      "displayName": "劉○柔",
+      "status": "active",
+      "currentRole": "社工",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 2.167,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***e@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 15.083,
+          "2026-02": 3.333,
+          "2026-03": 1.0,
+          "2026-04": 1.0,
+          "2026-05": 1.0
+        },
+        "totalHours": 21.416,
+        "monthsWithHours": 5,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "social_welfare_resources",
+            "minutes": 760,
+            "hours": 12.67
+          },
+          {
+            "category": "financial_education",
+            "minutes": 180,
+            "hours": 3.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "c6957afc2fb7",
+      "slug": "c6957afc2fb7",
+      "displayName": "葉○辰",
+      "status": "active",
+      "currentRole": "求職中",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 12.167,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***n@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 3.7,
+          "2026-02": 22.133,
+          "2026-03": 32.13,
+          "2026-04": 8.917,
+          "2026-05": 18.5
+        },
+        "totalHours": 85.38,
+        "monthsWithHours": 5,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 2023,
+            "hours": 33.72
+          },
+          {
+            "category": "financial_education",
+            "minutes": 885,
+            "hours": 14.75
+          }
+        ]
+      }
+    },
+    {
+      "id": "ce2a2435683f",
+      "slug": "ce2a2435683f",
+      "displayName": "宋○嘉",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "新夥伴",
+      "workHoursThisMonth": 5.0,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***y@gmail.com"
+    },
+    {
+      "id": "d7f1864e3dd0",
+      "slug": "d7f1864e3dd0",
+      "displayName": "孫○",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***a@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-04": 20.216,
+          "2026-05": 17.183
+        },
+        "totalHours": 37.399,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 725,
+            "hours": 12.08
+          },
+          {
+            "category": "financial_education",
+            "minutes": 615,
+            "hours": 10.25
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 185,
+            "hours": 3.08
+          }
+        ]
+      }
+    },
+    {
+      "id": "dca79e5089ab",
+      "slug": "dca79e5089ab",
+      "displayName": "陳○儒",
+      "status": "active",
+      "currentRole": "學生",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***u@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 9.167,
+          "2026-02": 0.0,
+          "2026-03": 23.367,
+          "2026-04": 13.5,
+          "2026-05": 3.95
+        },
+        "totalHours": 49.984,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 824,
+            "hours": 13.73
+          },
+          {
+            "category": "financial_education",
+            "minutes": 248,
+            "hours": 4.13
+          },
+          {
+            "category": "content_and_course",
+            "minutes": 236,
+            "hours": 3.93
+          }
+        ]
+      }
+    },
+    {
+      "id": "e6c8249bb53e",
+      "slug": "e6c8249bb53e",
+      "displayName": "許○瑋",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.717,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***n@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 14.55,
+          "2026-02": 16.483,
+          "2026-03": 20.3,
+          "2026-04": 3.933,
+          "2026-05": 2.467
+        },
+        "totalHours": 57.733,
+        "monthsWithHours": 5,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 1763,
+            "hours": 29.38
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 645,
+            "hours": 10.75
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 253,
+            "hours": 4.22
+          }
+        ]
+      }
+    },
+    {
+      "id": "e9316145dd31",
+      "slug": "e9316145dd31",
+      "displayName": "李○璇",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 8.0,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***a@gmail.com"
+    },
+    {
+      "id": "edab786ed607",
+      "slug": "edab786ed607",
+      "displayName": "施○臻",
+      "status": "active",
+      "currentRole": "學生",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 24.25,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***u@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 41.83,
+          "2026-02": 51.75,
+          "2026-03": 28.5,
+          "2026-04": 44.167,
+          "2026-05": 0.0
+        },
+        "totalHours": 166.247,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 330,
+        "dictionaryWorkHours": 5.5,
+        "dictionaryWorkMonths": [
+          "2026-01"
+        ],
+        "topWorkSignals": [
+          {
+            "category": "social_welfare_resources",
+            "minutes": 8560,
+            "hours": 142.67
+          },
+          {
+            "category": "financial_education",
+            "minutes": 575,
+            "hours": 9.58
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 510,
+            "hours": 8.5
+          },
+          {
+            "category": "dictionary",
+            "minutes": 330,
+            "hours": 5.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "ee42e15d628c",
+      "slug": "ee42e15d628c",
+      "displayName": "黃○綸",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 10.0,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***n@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-05": 4.5
+        },
+        "totalHours": 4.5,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 180,
+            "hours": 3.0
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 90,
+            "hours": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "f1b469bd0f1e",
+      "slug": "f1b469bd0f1e",
+      "displayName": "林○妏",
+      "status": "active",
+      "currentRole": "行銷業助",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 7.9,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "eg***y@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 26.4,
+          "2026-02": 11.567,
+          "2026-03": 16.35,
+          "2026-04": 0.0,
+          "2026-05": 3.017
+        },
+        "totalHours": 57.334,
+        "monthsWithHours": 4,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 1494,
+            "hours": 24.9
+          },
+          {
+            "category": "social_welfare_resources",
+            "minutes": 665,
+            "hours": 11.08
+          },
+          {
+            "category": "financial_education",
+            "minutes": 329,
+            "hours": 5.48
+          }
+        ]
+      }
+    },
+    {
+      "id": "f279f22c9ded",
+      "slug": "f279f22c9ded",
+      "displayName": "施○廷",
+      "status": "active",
+      "currentRole": "系統櫃業務",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***r@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 2.667,
+          "2026-02": 0.0,
+          "2026-03": 0.0,
+          "2026-04": 0.0,
+          "2026-05": 0.0
+        },
+        "totalHours": 2.667,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
+    },
+    {
+      "id": "f75ea28ada4d",
+      "slug": "f75ea28ada4d",
+      "displayName": "詹○瑄",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***n@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-02": 0.0,
+          "2026-03": 0.0,
+          "2026-04": 0.0,
+          "2026-05": 0.0
+        },
+        "totalHours": 0.0,
+        "monthsWithHours": 0,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
+    },
+    {
+      "id": "ff864aedde4f",
+      "slug": "ff864aedde4f",
+      "displayName": "李○霖",
+      "status": "active",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 9.25,
+      "payStatusThisMonth": "paid",
+      "maskedEmail": "",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 15.533,
+          "2026-02": 13.843,
+          "2026-03": 9.95,
+          "2026-04": 8.983,
+          "2026-05": 3.883
+        },
+        "totalHours": 52.192,
+        "monthsWithHours": 5,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 1381,
+            "hours": 23.02
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 632,
+            "hours": 10.53
+          }
+        ]
+      }
+    },
+    {
+      "id": "244c0faa6865",
+      "slug": "244c0faa6865",
+      "displayName": "劉○瑋",
+      "status": "paused",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***i@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-04": 35.55,
+          "2026-05": 0.0
+        },
+        "totalHours": 35.55,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 1208,
+            "hours": 20.13
+          },
+          {
+            "category": "content_and_course",
+            "minutes": 385,
+            "hours": 6.42
+          },
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 146,
+            "hours": 2.43
+          }
+        ]
+      }
+    },
+    {
+      "id": "2f3a8886190d",
+      "slug": "2f3a8886190d",
+      "displayName": "張○鈞",
+      "status": "paused",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***o@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02"
+        ],
+        "monthlyHours": {
+          "2026-01": 7.917,
+          "2026-02": 0.0
+        },
+        "totalHours": 7.917,
+        "monthsWithHours": 1,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": []
+      }
+    },
+    {
+      "id": "5e46a77fde6d",
+      "slug": "5e46a77fde6d",
+      "displayName": "施○捷",
+      "status": "paused",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": ""
+    },
+    {
+      "id": "8d7e15e10b36",
+      "slug": "8d7e15e10b36",
+      "displayName": "杜○○緯",
+      "status": "paused",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": ""
+    },
+    {
+      "id": "a3032b04952d",
+      "slug": "a3032b04952d",
+      "displayName": "王○廷",
+      "status": "paused",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***g@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05"
+        ],
+        "monthlyHours": {
+          "2026-01": 1.5,
+          "2026-02": 0.0,
+          "2026-03": 1.0,
+          "2026-04": 1.0,
+          "2026-05": 0.0
+        },
+        "totalHours": 3.5,
+        "monthsWithHours": 3,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "financial_education",
+            "minutes": 90,
+            "hours": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "b52f6fcb3078",
+      "slug": "b52f6fcb3078",
+      "displayName": "甘○平",
+      "status": "paused",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": ""
+    },
+    {
+      "id": "e381878c3c96",
+      "slug": "e381878c3c96",
+      "displayName": "陳○婷",
+      "status": "paused",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": "eg***e@gmail.com",
+      "history": {
+        "coveredMonths": [
+          "2026-01",
+          "2026-02"
+        ],
+        "monthlyHours": {
+          "2026-01": 5.05,
+          "2026-02": 4.783
+        },
+        "totalHours": 9.833,
+        "monthsWithHours": 2,
+        "dictionaryWorkMinutes": 0,
+        "dictionaryWorkHours": 0.0,
+        "dictionaryWorkMonths": [],
+        "topWorkSignals": [
+          {
+            "category": "transcript_and_meeting",
+            "minutes": 255,
+            "hours": 4.25
+          },
+          {
+            "category": "financial_education",
+            "minutes": 208,
+            "hours": 3.47
+          }
+        ]
+      }
+    },
+    {
+      "id": "eda751ff0e7a",
+      "slug": "eda751ff0e7a",
+      "displayName": "陳○汶",
+      "status": "paused",
+      "currentRole": "",
+      "educationOrJob": "",
+      "workStatus": "",
+      "contactStatus": "",
+      "workLevel": "",
+      "referrer": "",
+      "notes": "",
+      "workHoursThisMonth": 0.0,
+      "payStatusThisMonth": "n/a",
+      "maskedEmail": ""
+    }
+  ]
 }
