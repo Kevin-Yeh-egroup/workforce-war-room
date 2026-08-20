@@ -1,25 +1,13 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generatedAt": "2026-08-11T16:01:31+08:00",
+    "generatedAt": "2026-08-20T10:23:10+08:00",
     "timezone": "Asia/Taipei",
     "scheduleLabel": "週一 15:00",
     "privacy": "Public-safe reminders only. Full names, full emails, raw work titles, salary details, phone numbers and private evaluation notes are excluded; masked names and masked emails may appear on the people surfaces.",
     "decisionBoundary": "Read-only notification surface. It does not change InfoCenter, Git history or deployments."
   },
   "items": [
-    {
-      "id": "overdue-work-review",
-      "category": "逾期工作",
-      "severity": "urgent",
-      "status": "open",
-      "title": "21 筆逾期未完成待確認",
-      "summary": "目前未完成工作均已有人員標記；公開戰情室只顯示彙總，人員與原始工作標題留在每週私有報告。",
-      "when": "每週一 15:00 重新檢查",
-      "nextAction": "逐筆確認是否仍有效、是否需要改期或結案。",
-      "link": "https://www.egroup-infocenter.com/me/work?tab=list",
-      "linkLabel": "到 InfoCenter 查看工作"
-    },
     {
       "id": "weekly-reminder-automation",
       "category": "固定提醒",
@@ -36,7 +24,7 @@
       "severity": "attention",
       "status": "open",
       "title": "本週可用工時尚未回填",
-      "summary": "capacity-week.public.json 是每週容量輸入骨架；目前週次已過期且沒有有效人員資料，不能用歷史工時推定可派量。",
+      "summary": "capacity-week.public.json 已切到 2026-08-17 起始週，但仍沒有有效人員資料；不能用歷史工時推定可派量。",
       "when": "每週派工前更新",
       "nextAction": "回填 active 成員的本週可用時數，並人工確認社工、財務、AI、馴錢師四類知能證據。"
     },
@@ -47,18 +35,8 @@
       "status": "resolved",
       "title": "公開人才資料已切換為匿名安全版",
       "summary": "公開端只保留匿名代碼與營運狀態；舊 internal 資料端點目前無法由網站存取。",
-      "when": "2026-08-11 已驗證",
+      "when": "2026-08-18 已驗證",
       "nextAction": "後續更新持續使用 public-safe 欄位。"
-    },
-    {
-      "id": "git-history-privacy",
-      "category": "版本歷史",
-      "severity": "attention",
-      "status": "approval",
-      "title": "舊內部人才檔仍存在 Git 歷史",
-      "summary": "目前正式網站已不提供該檔案，但公開儲存庫的舊提交仍可能保留歷史內容；清理需要改寫歷史與強制推送。",
-      "when": "等待 Kevin 另批核准",
-      "nextAction": "先確認協作者影響與復原方案，再決定是否進行歷史清理。"
     }
   ]
 }

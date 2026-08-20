@@ -2,8 +2,8 @@
   "meta": {
     "version": "0.1.0",
     "status": "local-draft",
-    "generatedAt": "2026-08-07T10:00:00+08:00",
-    "weekStart": "2026-08-03",
+    "generatedAt": "2026-08-20T10:23:10+08:00",
+    "weekStart": "2026-08-17",
     "timezone": "Asia/Taipei",
     "externalWriteApproved": false,
     "privacy": "Public-safe capacity scaffold using existing hashed person IDs only; no names, contacts, salary or bank data.",

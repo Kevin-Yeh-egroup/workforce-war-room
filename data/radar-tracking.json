@@ -15,9 +15,9 @@
       "createdAt": "2026-08-14",
       "topic": "tw_social_work",
       "title": "建立不含病人個資的返家轉銜檢核卡草稿。",
-      "status": "open",
-      "nextCheck": "2026-08-21",
-      "question": "是否涵蓋生活功能、環境、照顧者負荷、福利資源與追蹤窗口？",
+      "status": "done",
+      "nextCheck": "2026-08-20",
+      "question": "2026-08-20 已完成去識別化流程草稿，涵蓋生活功能、環境、照顧者負荷、福利資源與追蹤窗口；正式採用仍需醫療／長照 owner 覆核。",
       "links": ["https://www.mohw.gov.tw/cp-16-87457-1.html"]
     },
     {
@@ -25,9 +25,9 @@
       "createdAt": "2026-08-14",
       "topic": "tw_fin_ed",
       "title": "把健保卡釣魚案例轉成三步驟防詐提醒。",
-      "status": "open",
-      "nextCheck": "2026-08-21",
-      "question": "是否能讓長者在 30 秒內找到官方查證路徑？",
+      "status": "done",
+      "nextCheck": "2026-08-20",
+      "question": "2026-08-20 已完成三步防詐卡：先停下、自行找官方管道、誤觸後止損通報；不蒐集個資。",
       "links": ["https://www.mohw.gov.tw/cp-16-87425-1.html"]
     },
     {
@@ -36,8 +36,8 @@
       "topic": "tw_fin_ed",
       "title": "整理虛擬資產專法的消費者查證欄位。",
       "status": "open",
-      "nextCheck": "2026-08-21",
-      "question": "施行日期、合法業者查詢、資產保管與申訴管道是否已有官方配套？",
+      "nextCheck": "2026-08-27",
+      "question": "2026-08-20 已完成消費者核對欄位；《虛擬資產服務法》施行日仍待行政院另定，正式發布當日須重查許可制、過渡期與官方名單。",
       "links": ["https://www.fsc.gov.tw/ch/home.jsp?id=97&parentpath=0,2&mcustomize=multimessage_view.jsp&dataserno=202608130001&aplistdn=ou=newslaw,ou=chlaw,ou=ap_root,o=fsc,c=tw&dtable=NewsLaw"]
     },
     {
@@ -45,9 +45,9 @@
       "createdAt": "2026-08-14",
       "topic": "codex_workflow",
       "title": "用低風險唯讀流程測試 Codex 自動核准邊界。",
-      "status": "open",
-      "nextCheck": "2026-08-21",
-      "question": "allowlist 外、高風險或外部寫入動作是否仍被拒絕或要求人工確認？",
+      "status": "done",
+      "nextCheck": "2026-08-20",
+      "question": "2026-08-20 decision-level 唯讀評估通過：外部發布、live Event XP、刪除與全域變更均維持人工批准；未用真實高風險命令製造提示。",
       "links": ["https://github.com/openai/codex/releases/tag/rust-v0.147.0"]
     },
     {
@@ -56,8 +56,8 @@
       "topic": "global_ai",
       "title": "盤點公開內容的 AI 生成、AI 協作、浮水印與人工編審標示。",
       "status": "open",
-      "nextCheck": "2026-08-21",
-      "question": "是否已明示浮水印只能當輔助證據，不能作作者、所有權或責任判定？",
+      "nextCheck": "2026-08-27",
+      "question": "2026-08-20 已完成 guard wording 與三個反例；正式納入規範仍待內容 owner 採用，且不得由偵測結果推定作者、所有權或責任。",
       "links": [
         "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems",
         "https://www.anthropic.com/news/claude-text-watermark"
@@ -79,8 +79,8 @@
       "topic": "tw_social_work",
       "title": "保留不蒐集健康資料的新冠疫苗自我確認提醒。",
       "status": "open",
-      "nextCheck": "2026-08-21",
-      "question": "9 月前是否調整接種期限或高風險提醒？",
+      "nextCheck": "2026-09-29",
+      "question": "2026-08-20 已完成零健康資料提醒；現行措施預定至 2026-09-28，2026-09-29 必須轉為 needs_recheck，不得自動推定延長或結束。",
       "links": ["https://www.mohw.gov.tw/cp-2704-87261-1.html"]
     },
     {
@@ -88,9 +88,9 @@
       "createdAt": "2026-08-18",
       "topic": "tw_social_work",
       "title": "建立職災法律扶助分段生效轉介卡。",
-      "status": "open",
+      "status": "done",
       "nextCheck": "2026-08-20",
-      "question": "是否清楚區分程序階段、生效日、查詢窗口與非法律意見邊界？",
+      "question": "2026-08-20 已完成四欄轉介卡草稿，區分程序、資料、窗口與非法律意見邊界；正式採用仍需法務／勞動權益 owner 覆核。",
       "links": ["https://www.mol.gov.tw/1607/1632/1633/96643/post"]
     },
     {
@@ -108,9 +108,9 @@
       "createdAt": "2026-08-18",
       "topic": "tw_social_work",
       "title": "整理數位健康互通標準的安全用途表。",
-      "status": "open",
-      "nextCheck": "2026-08-24",
-      "question": "FHIR、SMART on FHIR 與 CQL 的用途、限制與專業確認點是否區分清楚？",
+      "status": "done",
+      "nextCheck": "2026-08-20",
+      "question": "2026-08-20 已完成用途、限制與專業確認點三欄表；若作系統設計依據，仍需醫療資訊、資安與臨床 owner 覆核版本及情境。",
       "links": ["https://www.mohw.gov.tw/cp-16-87472-1.html"]
     },
     {
@@ -128,9 +128,9 @@
       "createdAt": "2026-08-18",
       "topic": "codex_workflow",
       "title": "把鍵盤與焦點驗證納入公開頁回歸。",
-      "status": "open",
-      "nextCheck": "2026-08-21",
-      "question": "首頁、interns、talent-pool 的焦點順序、搜尋、重新讀取與返回是否都可純鍵盤完成？",
+      "status": "done",
+      "nextCheck": "2026-08-20",
+      "question": "2026-08-20 桌面 1440px 與手機 390px 驗證通過：焦點順序、搜尋、重新讀取、個人頁與返回均可純鍵盤完成，無鍵盤陷阱或文件級 overflow。",
       "links": ["https://www.mol.gov.tw/1607/1632/1633/96629/post"]
     },
     {
@@ -138,9 +138,9 @@
       "createdAt": "2026-08-18",
       "topic": "codex_workflow",
       "title": "補齊 Event XP 未來 live read 的可見組織 ID 證明。",
-      "status": "blocked",
+      "status": "open",
       "nextCheck": "2026-08-21",
-      "question": "能否在正確組織的可見 Browser context 取得並驗證 organization ID SHA-256，再重跑全量 1,704 事件？",
+      "question": "2026-08-20 已在正確組織雙次驗證 organization ID SHA-256，並完成 repo 外 5,000/5,000 上限的全量候選：1,705/1,705、0 errors、1,013 qualifying、112,799 minutes、18,803 XP。待另批 automation hardening 與正式 promotion；live publish 仍停用，repo last-good 未改。",
       "links": ["https://www.egroup-infocenter.com/me/event/events"]
     }
   ]
