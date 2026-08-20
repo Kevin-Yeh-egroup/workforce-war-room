@@ -554,6 +554,39 @@ select:focus-visible {
   gap: 10px;
 }
 
+.coverage-board-data {
+  display: grid;
+  gap: 10px;
+}
+
+.capacity-advisory {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.7fr) minmax(0, 1.3fr);
+  gap: 16px;
+  align-items: center;
+  padding: 14px 15px;
+  border: 1px dashed var(--line-strong);
+  border-radius: 14px;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.capacity-advisory div {
+  display: grid;
+  gap: 4px;
+}
+
+.capacity-advisory strong {
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.capacity-advisory p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
 .coverage-card {
   min-width: 0;
   padding: 15px;
@@ -2241,6 +2274,10 @@ select:focus-visible {
   .domain-grid,
   .recommendation-grid,
   .notification-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .capacity-advisory {
     grid-template-columns: 1fr;
   }
 

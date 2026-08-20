@@ -2,7 +2,6 @@ const DATA_PATHS = {
   interns: "./data/interns.public.json",
   radar: "./data/radar-week.json",
   tracking: "./data/radar-tracking.json",
-  workItems: "./data/radar-work-items.md",
   workSummary: "./data/infocenter-work-summary.json",
   rhythm: "./data/work-rhythm.internal.json",
   blueprint: "./data/work-blueprint.json",
@@ -24,6 +23,8 @@ const state = {
   errors: [],
   activeTaskId: null,
   activeRecommendationIndex: null,
+  workSummaryReadiness: { ready: false, reason: "missing", label: "尚未讀取" },
+  workModel: null,
 };
 
 const numberFormat = new Intl.NumberFormat("zh-TW", { maximumFractionDigits: 1 });
@@ -33,22 +34,18 @@ const dateFormat = new Intl.DateTimeFormat("zh-TW", {
   day: "2-digit",
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  bindNavigation();
-  bindControls();
-  loadDashboard();
-});
+if (typeof document !== "undefined") {
+  document.addEventListener("DOMContentLoaded", () => {
+    bindNavigation();
+    bindControls();
+    loadDashboard();
+  });
+}
 
 async function fetchJson(path) {
   const response = await fetch(path, { cache: "no-store" });
   if (!response.ok) throw new Error(`${path} 讀取失敗（${response.status}）`);
   return response.json();
-}
-
-async function fetchText(path) {
-  const response = await fetch(path, { cache: "no-store" });
-  if (!response.ok) throw new Error(`${path} 讀取失敗（${response.status}）`);
-  return response.text();
 }
 
 async function loadDashboard() {
@@ -59,7 +56,6 @@ async function loadDashboard() {
     interns: fetchJson(DATA_PATHS.interns),
     radar: fetchJson(DATA_PATHS.radar),
     tracking: fetchJson(DATA_PATHS.tracking),
-    workItems: fetchText(DATA_PATHS.workItems),
     workSummary: fetchJson(DATA_PATHS.workSummary),
     rhythm: fetchJson(DATA_PATHS.rhythm),
     blueprint: fetchJson(DATA_PATHS.blueprint),
@@ -83,8 +79,13 @@ async function loadDashboard() {
     }
   });
 
-  state.tasks = normalizeInfoCenterWorkItems(state.datasets.workSummary)
-    || parseWorkItems(state.datasets.workItems || "");
+  state.workSummaryReadiness = inspectInfoCenterWorkSummary(state.datasets.workSummary);
+  state.workModel = state.workSummaryReadiness.ready
+    ? projectInfoCenterWorkSummary(state.datasets.workSummary)
+    : null;
+  state.tasks = state.workSummaryReadiness.ready
+    ? normalizeInfoCenterWorkItems(state.datasets.workSummary)
+    : [];
   state.sources = buildSourceStates();
   state.recommendations = buildRecommendations();
   renderAll();
@@ -188,99 +189,421 @@ function showView(view, updateHash = true) {
   document.querySelector("#mainContent").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function normalizeInfoCenterWorkItems(summary) {
-  if (!Array.isArray(summary?.workItems)) return null;
-  return summary.workItems.map((item) => ({
-    id: item.id,
-    title: item.label || item.categoryName || "匿名工作",
-    source: "infocenter",
-    done: ["completed", "cancelled"].includes(item.status),
-    statusKey: item.status,
-    status: item.statusLabel || "待確認",
-    stage: item.stage || "待確認",
-    owner: item.assignedCount > 0 ? `${item.assignedCount} 位人員已標記` : "尚無人員標記",
-    assignedCount: Number(item.assignedCount || 0),
-    due: item.dueDate || "",
-    dueDate: parseDate(item.dueDate),
-    overdue: Boolean(item.overdue),
-    progress: Number(item.progress || 0),
-    category: item.categoryName || "一般營運支援",
-    categoryId: item.categoryId || "GENERAL_OPS",
-    minimumLevel: item.minimumLevel || "待確認",
-    skills: Array.isArray(item.skills) ? item.skills : [],
-    estimatedHoursP50: toNumber(item.estimatedHoursP50),
-    estimatedHoursP80: toNumber(item.estimatedHoursP80),
-    estimateSampleCount: Number(item.estimateSampleCount || 0),
-    estimateConfidence: item.estimateConfidence || "baseline",
-    estimateSource: item.estimateSource || "planning-baseline",
-    coverageStatus: item.coverageStatus || "unassigned",
-    eventCount: Number(item.eventCount || 0),
-    completedEventCount: Number(item.completedEventCount || 0),
-    delegation: item.assignedCount > 0
-      ? { type: "covered", label: "已有人員標記", className: "good" }
-      : { type: "unassigned", label: "待派", className: "danger" },
-  }));
+const REQUIRED_LEGACY_WORK_SUMMARY_COUNTS = [
+  "scannedWorks",
+  "active",
+  "pending",
+  "inProgress",
+  "completed",
+  "unassigned",
+  "overdue",
+  "assignmentCoverageCount",
+  "assignmentCoverageRate",
+  "estimateEvidenceCoverageCount",
+  "estimateEvidenceCoverageRate",
+  "timeReportCount",
+  "totalEstimatedHoursP80",
+];
+
+const V2_READY_PUBLICATION_STATUSES = new Set(["ready_complete", "ready_partial_result_evidence"]);
+const V2_COVERAGE_STATUSES = new Set(["complete", "partial", "none"]);
+const V2_WORK_STATUSES = new Set(["pending", "in_progress", "revision", "completed", "cancelled"]);
+const V2_ASSIGNMENT_STATES = new Set(["assigned", "unassigned", "not_applicable"]);
+const V2_OUTCOME_STATES = new Set([
+  "work_completed", "cancelled", "needs_revision", "in_review", "accepted_event_visible",
+  "activity_visible", "outside_observed_window", "no_linked_events", "unknown",
+]);
+
+function isV2InfoCenterWorkSummary(dataset) {
+  return dataset?.meta?.schemaVersion === "2.0.0";
 }
 
-function parseWorkItems(markdown) {
-  return markdown
-    .split(/\r?\n/)
-    .map((line) => line.trim())
-    .filter((line) => /^- \[[ xX]\]/.test(line))
-    .map((line, index) => {
-      const done = /^- \[[xX]\]/.test(line);
-      let content = line.replace(/^- \[[ xX]\]\s*/, "");
-      let metadata = "";
-      const metadataMatch = content.match(/（([^）]+)）\s*$/);
-      if (metadataMatch) {
-        metadata = metadataMatch[1];
-        content = content.slice(0, metadataMatch.index).trim();
-      }
-
-      const meta = {};
-      metadata.split("｜").forEach((part) => {
-        const [rawKey, ...rawValue] = part.split(":");
-        if (!rawKey || !rawValue.length) return;
-        meta[rawKey.trim().toLowerCase()] = rawValue.join(":").trim();
-      });
-
-      const due = meta.due || "";
-      const dueDate = parseDate(due);
-      const overdue = Boolean(!done && dueDate && startOfDay(dueDate) < startOfDay(new Date()));
-      const delegation = inferDelegation(content);
-
-      return {
-        id: `work-${index + 1}`,
-        title: content,
-        source: "radar",
-        done,
-        statusKey: done ? "completed" : "pending",
-        owner: meta.owner || "未指定",
-        assignedCount: 0,
-        status: meta.status || "待確認",
-        due,
-        dueDate,
-        overdue,
-        delegation,
-      };
-    });
+function inspectInfoCenterWorkSummary(dataset) {
+  if (!dataset || typeof dataset !== "object") {
+    return { ready: false, reason: "missing", label: "InfoCenter 工作摘要未讀取" };
+  }
+  return isV2InfoCenterWorkSummary(dataset)
+    ? inspectV2InfoCenterWorkSummary(dataset)
+    : inspectLegacyInfoCenterWorkSummary(dataset);
 }
 
-function inferDelegation(title) {
-  const decisionTerms = ["派薪", "權限", "發布", "核准", "正式", "健康資料"];
-  const reviewTerms = ["疫苗", "資格", "官方", "薪資", "公開資料", "責任人"];
-  const preparationTerms = ["整理", "比較", "標記", "草擬", "核對", "檢查", "盤點"];
+function inspectLegacyInfoCenterWorkSummary(dataset) {
+  if (dataset.meta?.source?.liveWorkFeedConnected === false) {
+    return { ready: false, reason: "disconnected", label: "最近一次 InfoCenter 快照擷取未連線" };
+  }
+  if (!dataset.summary || typeof dataset.summary !== "object" || !Array.isArray(dataset.workItems)) {
+    return { ready: false, reason: "invalid", label: "InfoCenter 工作摘要格式不完整" };
+  }
+  const invalidCount = REQUIRED_LEGACY_WORK_SUMMARY_COUNTS.find((key) => {
+    const value = Number(dataset.summary[key]);
+    return !Number.isFinite(value) || value < 0;
+  });
+  if (invalidCount) {
+    return { ready: false, reason: "invalid", label: `InfoCenter 工作摘要欄位 ${invalidCount} 無效` };
+  }
+  const scannedWorks = Number(dataset.summary.scannedWorks);
+  const active = Number(dataset.summary.active);
+  const pending = Number(dataset.summary.pending);
+  const inProgress = Number(dataset.summary.inProgress);
+  const completed = Number(dataset.summary.completed);
+  const unassigned = Number(dataset.summary.unassigned);
+  const overdue = Number(dataset.summary.overdue);
+  const assignmentCoverageCount = Number(dataset.summary.assignmentCoverageCount);
+  const assignmentCoverageRate = Number(dataset.summary.assignmentCoverageRate);
+  const estimateEvidenceCoverageCount = Number(dataset.summary.estimateEvidenceCoverageCount);
+  const estimateEvidenceCoverageRate = Number(dataset.summary.estimateEvidenceCoverageRate);
+  const revision = Number(dataset.summary.revision || 0);
+  if (!Number.isFinite(revision) || revision < 0
+    || active !== pending + inProgress + revision
+    || scannedWorks !== active + completed
+    || dataset.workItems.length !== scannedWorks
+    || unassigned + assignmentCoverageCount !== active
+    || overdue > active
+    || estimateEvidenceCoverageCount > active
+    || assignmentCoverageRate > 1
+    || estimateEvidenceCoverageRate > 1) {
+    return { ready: false, reason: "invalid", label: "InfoCenter 工作摘要筆數或狀態加總不一致" };
+  }
+  const publicIds = dataset.workItems.map((item) => String(item?.id || "").trim());
+  if (publicIds.some((id) => !id) || new Set(publicIds).size !== publicIds.length) {
+    return { ready: false, reason: "invalid", label: "InfoCenter 工作摘要含空白或重複公開代碼" };
+  }
+  const workStatusCounts = dataset.workItems.reduce((counts, item) => {
+    const status = String(item?.status || "");
+    if (["completed", "cancelled"].includes(status)) counts.completed += 1;
+    if (status === "pending") counts.pending += 1;
+    if (status === "in_progress") counts.inProgress += 1;
+    if (status === "revision") counts.revision += 1;
+    return counts;
+  }, { completed: 0, pending: 0, inProgress: 0, revision: 0 });
+  if (workStatusCounts.completed !== completed
+    || workStatusCounts.pending !== pending
+    || workStatusCounts.inProgress !== inProgress
+    || workStatusCounts.revision !== revision) {
+    return { ready: false, reason: "invalid", label: "InfoCenter 工作明細與摘要狀態不一致" };
+  }
+  if (!dataset.meta?.generatedAt || !parseDate(dataset.meta.generatedAt)) {
+    return { ready: false, reason: "invalid", label: "InfoCenter 工作摘要缺少有效截止時間" };
+  }
+  return {
+    ready: true,
+    reason: "ready",
+    label: "最近一次 InfoCenter 已驗證快照可用",
+    generatedAt: dataset.meta.generatedAt,
+    organizationMarker: "已核對組織",
+    schemaFamily: "legacy-v1",
+  };
+}
 
-  if (decisionTerms.some((term) => title.includes(term))) {
-    return { type: "decision", label: "需主管決定", className: "danger" };
+function inspectV2InfoCenterWorkSummary(dataset) {
+  const meta = dataset.meta;
+  const summary = dataset.summary;
+  if (!V2_READY_PUBLICATION_STATUSES.has(meta?.publicationStatus)) {
+    return { ready: false, reason: "blocked", label: "InfoCenter v2 快照尚未通過發布閘門" };
   }
-  if (reviewTerms.some((term) => title.includes(term))) {
-    return { type: "review", label: "可準備，需覆核", className: "warning" };
+  if (!parseDate(meta.sourceFetchedAt)
+    || meta.source?.system !== "InfoCenter"
+    || meta.source?.organizationProof?.labelMatched !== true
+    || meta.source?.organizationProof?.idHashMatched !== true
+    || meta.source?.workCoverage?.status !== "complete"
+    || !isNonNegativeInteger(meta.source?.workCoverage?.scannedWorks)
+    || !isNonNegativeInteger(meta.source?.workCoverage?.uniqueWorkIds)
+    || meta.source?.workCoverage?.duplicateWorkIds !== 0
+    || meta.source?.workCoverage?.missingWorkIds !== 0
+    || !isNonNegativeInteger(meta.source?.workCoverage?.unknownLifecycleStatuses)
+    || meta.source?.workCoverage?.unknownLifecycleStatuses !== 0
+    || !isNonNegativeInteger(meta.source?.workCoverage?.assignmentEvidenceErrors)
+    || meta.source?.workCoverage?.assignmentEvidenceErrors !== 0) {
+    return { ready: false, reason: "invalid", label: "InfoCenter v2 來源或組織證明不完整" };
   }
-  if (preparationTerms.some((term) => title.includes(term))) {
-    return { type: "delegable", label: "可交辦準備", className: "good" };
+  if (!summary || !Array.isArray(dataset.workItems)
+    || !isNonNegativeInteger(summary.scannedWorks)
+    || !isNonNegativeInteger(summary.active)
+    || !isNonNegativeInteger(summary.pending)
+    || !isNonNegativeInteger(summary.inProgress)
+    || !isNonNegativeInteger(summary.revision)
+    || !isNonNegativeInteger(summary.completed)
+    || !isNonNegativeInteger(summary.cancelled)
+    || !isNonNegativeInteger(summary.overdue)
+    || !isNonNegativeInteger(summary.timeReportCount)) {
+    return { ready: false, reason: "invalid", label: "InfoCenter v2 摘要格式不完整" };
   }
-  return { type: "decision", label: "先確認邊界", className: "neutral" };
+  if (summary.active !== summary.pending + summary.inProgress + summary.revision
+    || summary.scannedWorks !== summary.active + summary.completed + summary.cancelled
+    || summary.overdue > summary.active
+    || dataset.workItems.length !== summary.scannedWorks
+    || meta.source.workCoverage.scannedWorks !== summary.scannedWorks
+    || meta.source.workCoverage.uniqueWorkIds !== summary.scannedWorks) {
+    return { ready: false, reason: "invalid", label: "InfoCenter v2 工作筆數或生命週期加總不一致" };
+  }
+
+  const assignment = summary.assignment;
+  const resultEvidence = summary.resultEvidence;
+  const estimateEvidence = summary.estimateEvidence;
+  if (!assignment
+    || assignment.provenance !== "infocenter_assignment_tag"
+    || assignment.provisional !== true
+    || !isNonNegativeInteger(assignment.applicable)
+    || !isNonNegativeInteger(assignment.assigned)
+    || !isNonNegativeInteger(assignment.unassigned)
+    || assignment.assigned + assignment.unassigned !== assignment.applicable
+    || assignment.applicable !== summary.active
+    || !isRateOrNull(assignment.coverageRate)
+    || !rateMatches(assignment.coverageRate, assignment.assigned, assignment.applicable)) {
+    return { ready: false, reason: "invalid", label: "InfoCenter v2 人力標記摘要不一致" };
+  }
+  if (!resultEvidence
+    || !V2_COVERAGE_STATUSES.has(resultEvidence.coverageStatus)
+    || !isNonNegativeInteger(resultEvidence.worksComplete)
+    || !isNonNegativeInteger(resultEvidence.worksPartial)
+    || !isNonNegativeInteger(resultEvidence.worksNone)
+    || resultEvidence.worksComplete + resultEvidence.worksPartial + resultEvidence.worksNone !== summary.scannedWorks
+    || !isRateOrNull(resultEvidence.coverageRate)
+    || !rateMatches(resultEvidence.coverageRate, resultEvidence.worksComplete, summary.scannedWorks)) {
+    return { ready: false, reason: "invalid", label: "InfoCenter v2 工作結果證據摘要不一致" };
+  }
+  if (!estimateEvidence
+    || !isNonNegativeInteger(estimateEvidence.covered)
+    || !isNonNegativeInteger(estimateEvidence.applicable)
+    || estimateEvidence.covered > estimateEvidence.applicable
+    || estimateEvidence.applicable !== summary.active
+    || !isRateOrNull(estimateEvidence.coverageRate)
+    || !rateMatches(estimateEvidence.coverageRate, estimateEvidence.covered, estimateEvidence.applicable)) {
+    return { ready: false, reason: "invalid", label: "InfoCenter v2 估時證據摘要不一致" };
+  }
+
+  const aliases = new Set();
+  const lifecycleCounts = { pending: 0, in_progress: 0, revision: 0, completed: 0, cancelled: 0 };
+  const assignmentCounts = { assigned: 0, unassigned: 0, applicable: 0 };
+  const resultCounts = { complete: 0, partial: 0, none: 0 };
+  for (const item of dataset.workItems) {
+    const alias = String(item?.alias || "").trim();
+    const lifecycle = item?.lifecycle;
+    const itemAssignment = item?.assignment;
+    const outcome = item?.outcome;
+    if (!/^W-[A-F0-9]{8}$/.test(alias) || aliases.has(alias)
+      || !lifecycle || lifecycle.provenance !== "infocenter_work_status" || !V2_WORK_STATUSES.has(lifecycle.status)
+      || !itemAssignment || !V2_ASSIGNMENT_STATES.has(itemAssignment.state)
+      || itemAssignment.provenance !== "infocenter_assignment_tag"
+      || itemAssignment.provisional !== true
+      || !isNonNegativeInteger(itemAssignment.observedTagCount)
+      || typeof itemAssignment.appliesToDispatch !== "boolean"
+      || !outcome || !V2_OUTCOME_STATES.has(outcome.state) || !V2_COVERAGE_STATUSES.has(outcome.coverage)
+      || !isNullableNonNegativeInteger(outcome.declaredEventCount)
+      || !isNullableNonNegativeInteger(outcome.observedEventCount)
+      || !isNullableInteger(outcome.eventCountDelta)
+      || typeof outcome.lowerBound !== "boolean"
+      || !item.estimate
+      || !isNullableFiniteNonNegative(item.estimate.p50Hours)
+      || !isNullableFiniteNonNegative(item.estimate.p80Hours)
+      || !isNonNegativeInteger(item.estimate.sampleCount)
+      || !item.requirements || !Array.isArray(item.requirements.skills)) {
+      return { ready: false, reason: "invalid", label: "InfoCenter v2 工作明細格式無效" };
+    }
+    if ((!itemAssignment.appliesToDispatch && itemAssignment.state !== "not_applicable")
+      || (itemAssignment.appliesToDispatch && itemAssignment.state === "not_applicable")
+      || (itemAssignment.state === "assigned" && itemAssignment.observedTagCount < 1)
+      || (itemAssignment.state === "unassigned" && itemAssignment.observedTagCount !== 0)
+      || (outcome.coverage === "none" && outcome.counts !== null)
+      || (outcome.counts !== null && (!isV2OutcomeCounts(outcome.counts)
+        || outcome.counts.observedEvents !== outcome.observedEventCount))
+      || (outcome.declaredEventCount !== null && outcome.observedEventCount !== null
+        && outcome.eventCountDelta !== outcome.declaredEventCount - outcome.observedEventCount)) {
+      return { ready: false, reason: "invalid", label: "InfoCenter v2 派案或成果證據語意無效" };
+    }
+    aliases.add(alias);
+    lifecycleCounts[lifecycle.status] += 1;
+    if (itemAssignment.appliesToDispatch) {
+      assignmentCounts.applicable += 1;
+      assignmentCounts[itemAssignment.state] += 1;
+    }
+    resultCounts[outcome.coverage] += 1;
+  }
+  if (lifecycleCounts.pending !== summary.pending
+    || lifecycleCounts.in_progress !== summary.inProgress
+    || lifecycleCounts.revision !== summary.revision
+    || lifecycleCounts.completed !== summary.completed
+    || lifecycleCounts.cancelled !== summary.cancelled
+    || assignmentCounts.applicable !== assignment.applicable
+    || assignmentCounts.assigned !== assignment.assigned
+    || assignmentCounts.unassigned !== assignment.unassigned
+    || resultCounts.complete !== resultEvidence.worksComplete
+    || resultCounts.partial !== resultEvidence.worksPartial
+    || resultCounts.none !== resultEvidence.worksNone) {
+    return { ready: false, reason: "invalid", label: "InfoCenter v2 摘要與工作明細無法對帳" };
+  }
+  return {
+    ready: true,
+    reason: "ready",
+    label: "最近一次 InfoCenter v2 已驗證快照可用",
+    generatedAt: meta.sourceFetchedAt,
+    organizationMarker: "已核對組織",
+    schemaFamily: "v2",
+    resultCoverageStatus: resultEvidence.coverageStatus,
+  };
+}
+
+function isNonNegativeInteger(value) {
+  return Number.isInteger(value) && value >= 0;
+}
+
+function isNullableNonNegativeInteger(value) {
+  return value === null || isNonNegativeInteger(value);
+}
+
+function isNullableInteger(value) {
+  return value === null || Number.isInteger(value);
+}
+
+function isRateOrNull(value) {
+  return value === null || Number.isFinite(value) && value >= 0 && value <= 1;
+}
+
+function rateMatches(rate, numerator, denominator) {
+  if (denominator === 0) return rate === null;
+  return Number.isFinite(rate) && Math.abs(rate - numerator / denominator) <= 0.001;
+}
+
+function isNullableFiniteNonNegative(value) {
+  return value === null || Number.isFinite(value) && value >= 0;
+}
+
+function isV2OutcomeCounts(counts) {
+  return ["observedEvents", "reviewSuccess", "reviewReject", "reviewProcessing", "unreviewed", "open", "closed", "unknownLifecycle"]
+    .every((key) => isNonNegativeInteger(counts[key]));
+}
+
+function projectInfoCenterWorkSummary(dataset) {
+  if (!inspectInfoCenterWorkSummary(dataset).ready) return null;
+  if (!isV2InfoCenterWorkSummary(dataset)) return dataset;
+  const summary = dataset.summary;
+  return {
+    meta: dataset.meta,
+    summary: {
+      scannedWorks: summary.scannedWorks,
+      active: summary.active,
+      pending: summary.pending,
+      inProgress: summary.inProgress,
+      revision: summary.revision,
+      completed: summary.completed,
+      cancelled: summary.cancelled,
+      unassigned: summary.assignment.unassigned,
+      overdue: summary.overdue,
+      assignmentCoverageCount: summary.assignment.assigned,
+      assignmentCoverageRate: summary.assignment.coverageRate,
+      estimateEvidenceCoverageCount: summary.estimateEvidence.covered,
+      estimateEvidenceCoverageRate: summary.estimateEvidence.coverageRate,
+      resultEvidenceCoverageStatus: summary.resultEvidence.coverageStatus,
+      resultEvidenceCoverageRate: summary.resultEvidence.coverageRate,
+      timeReportCount: summary.timeReportCount,
+      reportedHours: summary.reportedHours,
+      totalEstimatedHoursP80: summary.totalEstimatedHoursP80,
+      categoryCounts: summary.categoryCounts,
+    },
+    estimationByCategory: dataset.estimationByCategory,
+    workItems: dataset.workItems.map(projectV2WorkItemForDashboard),
+  };
+}
+
+function projectV2WorkItemForDashboard(item) {
+  return {
+    id: item.alias,
+    label: item.label,
+    categoryId: item.categoryId,
+    categoryName: item.categoryName,
+    status: item.lifecycle.status,
+    statusLabel: item.lifecycle.statusLabel,
+    stage: item.lifecycle.stage,
+    createdDate: item.lifecycle.createdDate,
+    dueDate: item.lifecycle.dueDate,
+    overdue: item.lifecycle.overdue,
+    progress: item.lifecycle.progress,
+    assignedCount: item.assignment.observedTagCount,
+    assignmentState: item.assignment.state,
+    assignmentAppliesToDispatch: item.assignment.appliesToDispatch,
+    assignmentProvenance: item.assignment.provenance,
+    outcome: item.outcome,
+    eventCount: item.outcome.declaredEventCount,
+    completedEventCount: item.outcome.counts?.reviewSuccess ?? null,
+    estimatedHoursP50: item.estimate.p50Hours,
+    estimatedHoursP80: item.estimate.p80Hours,
+    estimateSampleCount: item.estimate.sampleCount,
+    estimateConfidence: item.estimate.confidence,
+    estimateSource: item.estimate.source,
+    minimumLevel: item.requirements.minimumLevel,
+    skills: item.requirements.skills,
+  };
+}
+
+function normalizeInfoCenterWorkItems(dataset) {
+  const model = projectInfoCenterWorkSummary(dataset);
+  if (!model) return [];
+  return model.workItems.map((item) => {
+    const outcome = item.outcome && typeof item.outcome === "object" ? item.outcome : {};
+    const outcomeCounts = outcome.counts && typeof outcome.counts === "object" ? outcome.counts : {};
+    const done = ["completed", "cancelled"].includes(item.status);
+    const assignmentState = item.assignmentState || (done ? "not_applicable" : item.assignedCount > 0 ? "assigned" : "unassigned");
+    const assignedCount = Number(item.assignedCount || 0);
+    return {
+      id: item.id,
+      title: item.label || item.categoryName || "匿名工作",
+      source: "infocenter",
+      done,
+      statusKey: item.status,
+      status: item.statusLabel || "待確認",
+      stage: item.stage || "待確認",
+      owner: assignmentState === "not_applicable"
+        ? "InfoCenter 人力標記不適用"
+        : assignedCount > 0 ? `InfoCenter 人力標記 ${assignedCount} 筆` : "未見 InfoCenter 人力標記",
+      assignedCount,
+      assignmentState,
+      due: item.dueDate || "",
+      dueDate: parseDate(item.dueDate),
+      overdue: Boolean(item.overdue),
+      progress: Number(item.progress || 0),
+      category: item.categoryName || "一般營運支援",
+      categoryId: item.categoryId || "GENERAL_OPS",
+      minimumLevel: item.minimumLevel || "待確認",
+      skills: Array.isArray(item.skills) ? item.skills : [],
+      estimatedHoursP50: nullableNumber(item.estimatedHoursP50),
+      estimatedHoursP80: nullableNumber(item.estimatedHoursP80),
+      estimateSampleCount: nullableCount(item.estimateSampleCount),
+      estimateConfidence: item.estimateConfidence || "baseline",
+      estimateSource: item.estimateSource || "planning-baseline",
+      eventCount: nullableCount(item.eventCount),
+      completedEventCount: nullableCount(item.completedEventCount),
+      resultState: typeof outcome.state === "string" ? outcome.state : typeof item.resultState === "string" ? item.resultState : "unknown",
+      resultEvidenceCoverage: V2_COVERAGE_STATUSES.has(outcome.coverage)
+        ? outcome.coverage
+        : V2_COVERAGE_STATUSES.has(item.resultEvidenceCoverage) ? item.resultEvidenceCoverage : "none",
+      observedEventCount: nullableCount(outcome.observedEventCount ?? item.observedEventCount),
+      reviewSuccessCount: nullableCount(outcomeCounts.reviewSuccess ?? outcomeCounts.success ?? item.reviewSuccessCount),
+      reviewProcessingCount: nullableCount(outcomeCounts.reviewProcessing ?? outcomeCounts.processing ?? item.reviewProcessingCount),
+      reviewRejectCount: nullableCount(outcomeCounts.reviewReject ?? outcomeCounts.reject ?? item.reviewRejectCount),
+      delegation: assignmentState === "not_applicable"
+        ? { type: "not_applicable", label: "工作已結束", className: "neutral" }
+        : assignmentState === "assigned"
+          ? { type: "covered", label: "已見人力標記", className: "good" }
+          : { type: "unassigned", label: "未見人力標記", className: "danger" },
+    };
+  });
+}
+
+function nullableNumber(value) {
+  return value === null || value === undefined || value === "" ? null : Number.isFinite(Number(value)) ? Number(value) : null;
+}
+
+function nullableCount(value) {
+  const number = nullableNumber(value);
+  return number !== null && Number.isInteger(number) && number >= 0 ? number : null;
+}
+
+function formatNullableCount(value) {
+  return value === null || value === undefined ? "—" : `${numberFormat.format(value)} 筆`;
+}
+
+function formatNullableHours(value) {
+  return value === null || value === undefined ? "—" : `${numberFormat.format(value)} 小時`;
 }
 
 function buildSourceStates() {
@@ -293,7 +616,7 @@ function buildSourceStates() {
   const eventExperience = state.datasets.eventExperience;
 
   return [
-    createSourceState("InfoCenter 工作摘要", workSummary?.meta?.generatedAt, Boolean(workSummary)),
+    createInfoCenterWorkSourceState(workSummary),
     createSourceState("工讀生公開狀態", interns?.meta?.sourceModifiedAt || interns?.meta?.generatedAt, Boolean(interns)),
     createSourceState("每週工作與雷達", radar?.meta?.generatedAt, Boolean(radar)),
     createSourceState("InfoCenter 工作節奏", rhythm?.meta?.generatedAt, Boolean(rhythm)),
@@ -301,6 +624,27 @@ function buildSourceStates() {
     createSourceState("本週可用工時", capacity?.meta?.generatedAt, Boolean(capacity)),
     createEventExperienceSourceState(eventExperience),
   ];
+}
+
+function createInfoCenterWorkSourceState(dataset) {
+  const readiness = inspectInfoCenterWorkSummary(dataset);
+  const date = parseDate(dataset?.meta?.generatedAt);
+  if (!readiness.ready) {
+    return {
+      name: "InfoCenter 派案與工作結果",
+      date,
+      ageDays: null,
+      status: "error",
+      label: readiness.label,
+      blocking: true,
+    };
+  }
+  const base = createSourceState("InfoCenter 派案與工作結果", dataset.meta.generatedAt, true);
+  return {
+    ...base,
+    organizationMarker: readiness.organizationMarker,
+    label: `最近一次已驗證快照・${base.label}`,
+  };
 }
 
 function createEventExperienceSourceState(dataset) {
@@ -330,7 +674,7 @@ function createSourceState(name, rawDate, loaded) {
 }
 
 function getTaskIssueType(task) {
-  if (!task.done && task.statusKey === "in_progress" && task.assignedCount === 0) return "owner_conflict";
+  if (!task.done && task.statusKey === "in_progress" && task.assignedCount === 0) return "marker_conflict";
   if (!task.done && task.statusKey === "pending" && task.assignedCount > 0 && task.eventCount > 0) return "status_review";
   return null;
 }
@@ -399,8 +743,8 @@ function buildTaskRecommendationDetail(task, change) {
       `狀態：${task.status}`,
       task.owner,
       `期限：${task.due || "未設定"}`,
-      `事件：${task.eventCount} 筆`,
-      `P80：${numberFormat.format(task.estimatedHoursP80)} 小時`,
+      `事件：${formatNullableCount(task.eventCount)}`,
+      `P80：${formatNullableHours(task.estimatedHoursP80)}`,
     ],
     change,
   };
@@ -422,17 +766,19 @@ function buildPersonRecommendationDetail(person, change) {
 function buildRecommendations() {
   const items = [];
   const interns = state.datasets.interns;
-  const workSummary = state.datasets.workSummary;
+  const workSummary = state.workModel;
   const tracking = state.datasets.tracking;
   const staleSources = state.sources.filter((source) => source.status === "danger");
-  const ownerConflictTasks = state.tasks.filter((task) => getTaskIssueType(task) === "owner_conflict");
+  const markerConflictTasks = state.tasks.filter((task) => getTaskIssueType(task) === "marker_conflict");
   const unassignedTasks = state.tasks.filter((task) => !task.done && task.assignedCount === 0);
   const overdueTasks = state.tasks.filter((task) => !task.done && task.overdue);
   const statusReviewTasks = state.tasks.filter((task) => getTaskIssueType(task) === "status_review");
   const capacityMap = getCapacityMap();
   const activePeople = (interns?.interns || []).filter((person) => person.status === "active");
   const missingCapacityPeople = activePeople.filter((person) => !capacityMap.has(String(person.id)));
-  const openTrackingItems = (tracking?.items || []).filter((item) => item.status !== "resolved");
+  const openTrackingItems = (tracking?.items || []).filter(
+    (item) => !["done", "resolved"].includes(String(item.status || "").toLowerCase()),
+  );
 
   if (state.errors.length) {
     items.push({
@@ -450,28 +796,28 @@ function buildRecommendations() {
     });
   }
 
-  if (workSummary && workSummary.meta?.source?.liveWorkFeedConnected === false) {
+  if (!state.workSummaryReadiness.ready) {
     items.push({
       priority: "high",
       title: "恢復 InfoCenter 工作摘要",
-      description: "本次唯讀工作清單未成功取得，不應使用舊數字安排新一輪派工。",
+      description: "InfoCenter 派案與工作結果目前不可用；核心數字維持未知，也不改用每週清單替代。",
       action: "檢查登入狀態並重新執行 automation-3",
-      reason: "正式工作狀態必須由 InfoCenter 讀回",
+      reason: state.workSummaryReadiness.label,
     });
   }
 
-  const hardConflicts = ownerConflictTasks.length;
+  const hardConflicts = markerConflictTasks.length;
   if (hardConflicts) {
     items.push({
       priority: "high",
-      title: `先確認 ${hardConflicts} 筆「進行中但無人員標記」工作`,
-      description: "這些工作不能直接當成一般待派；可能是主責遺失、狀態未更新或工作已失效。",
-      action: "逐筆確認主責與實際狀態，再決定補派或結案",
-      reason: "若直接重派，可能產生重複執行與責任不清",
+      title: `先確認 ${hardConflicts} 筆「進行中但未見人力標記」工作`,
+      description: "InfoCenter 人力標記不是正式主責證明；請回到平台確認實際派案與工作狀態。",
+      action: "逐筆確認正式派案與實際狀態，再決定補標記或結案",
+      reason: "若只靠標記推定主責，可能產生重複執行與責任不清",
       taskFilter: "conflict",
-      details: ownerConflictTasks.map((task) => buildTaskRecommendationDetail(
+      details: markerConflictTasks.map((task) => buildTaskRecommendationDetail(
         task,
-        "先確認實際主責；續做則補上人員標記並校正進度，已失效則結案。",
+        "先在 InfoCenter 確認正式派案；續做則補齊人力標記並校正進度，已失效則結案。",
       )),
     });
   }
@@ -480,16 +826,16 @@ function buildRecommendations() {
   if (unassigned) {
     items.push({
       priority: "high",
-      title: `處理 ${unassigned} 筆尚無人員標記的工作`,
-      description: "先確認工作仍有效，再依能力門檻、P80 工時與本週可用工時選人。",
-      action: "回到 InfoCenter 補主責與期限",
-      reason: "沒有主責的工作無法形成可追蹤的交付責任",
+      title: `處理 ${unassigned} 筆未見 InfoCenter 人力標記的工作`,
+      description: "先確認工作仍有效與正式派案狀態，再把能力、估時與人工容量當作輔助資訊。",
+      action: "回到 InfoCenter 確認派案、人力標記與期限",
+      reason: "公開摘要只有人力標記計數，不能自行推定正式主責",
       taskFilter: "unassigned",
       details: unassignedTasks.map((task) => buildTaskRecommendationDetail(
         task,
         task.statusKey === "in_progress"
-          ? "先確認正在執行的人；續做則補主責，已失效則結案，不要直接重派。"
-          : "先確認工作仍有效；續做則補主責、期限與工作範本，失效則結案。",
+          ? "先確認正在執行的人與正式派案；續做則補齊標記，已失效則結案，不要直接重派。"
+          : "先確認工作仍有效與正式派案；續做則補齊標記、期限與工作範本，失效則結案。",
       )),
     });
   }
@@ -514,7 +860,7 @@ function buildRecommendations() {
   if (statusReview) {
     items.push({
       priority: "medium",
-      title: `釐清 ${statusReview} 筆已有主責與事件、但仍顯示待開始的工作`,
+      title: `釐清 ${statusReview} 筆已見人力標記與事件、但仍顯示待開始的工作`,
       description: "事件可能只是事前建立，也可能代表工作狀態未隨執行更新；目前不能一律判定已開始。",
       action: "抽查事件內容後，統一工作與事件的狀態語意",
       reason: "避免把已執行工作重複派出，或把空事件誤當成執行證據",
@@ -526,7 +872,9 @@ function buildRecommendations() {
     });
   }
 
-  const weakCategories = (workSummary?.estimationByCategory || []).filter((item) => ["low", "baseline"].includes(item.confidence));
+  const weakCategories = state.workSummaryReadiness.ready
+    ? (workSummary?.estimationByCategory || []).filter((item) => ["low", "baseline"].includes(item.confidence))
+    : [];
   if (weakCategories.length) {
     items.push({
       priority: "medium",
@@ -602,13 +950,20 @@ function buildRecommendations() {
 
 function renderSourceStrip() {
   const strip = document.querySelector("#sourceStrip");
+  const workReadiness = state.workSummaryReadiness;
   const errors = state.sources.filter((source) => source.status === "error");
   const blocked = state.sources.filter((source) => source.blocking);
   const stale = state.sources.filter((source) => source.status === "danger");
 
-  if (errors.length) {
+  if (!workReadiness.ready) {
     strip.className = "source-strip is-error";
-    strip.innerHTML = `<span class="source-pulse" aria-hidden="true"></span><span>${errors.length} 個來源讀取失敗；目前畫面只顯示成功讀取的資料。</span>`;
+    strip.innerHTML = `<span class="source-pulse" aria-hidden="true"></span><span>${escapeHtml(workReadiness.label)}；派案、工作結果與平台例外維持「—」，不改用每週清單替代。</span>`;
+    return;
+  }
+
+  if (errors.length) {
+    strip.className = "source-strip is-warning";
+    strip.innerHTML = `<span class="source-pulse" aria-hidden="true"></span><span>InfoCenter 派案來源可用，但另有 ${errors.length} 個輔助來源讀取失敗。</span>`;
     return;
   }
 
@@ -625,64 +980,85 @@ function renderSourceStrip() {
   }
 
   strip.className = "source-strip";
-  strip.innerHTML = '<span class="source-pulse" aria-hidden="true"></span><span>資料已讀取完成；所有數字均附有來源日期。</span>';
+  strip.innerHTML = `<span class="source-pulse" aria-hidden="true"></span><span>最近一次 InfoCenter 已驗證快照（${escapeHtml(workReadiness.organizationMarker)}）可用；截止 ${escapeHtml(formatDateTime(parseDate(workReadiness.generatedAt)))}。這不是瀏覽器即時狀態。</span>`;
 }
 
 function renderMetrics() {
-  const summary = state.datasets.workSummary?.summary || {};
+  const ready = state.workSummaryReadiness.ready;
+  const summary = ready ? state.workModel.summary : null;
 
   const metrics = [
-    { label: "待派工作", value: summary.unassigned || 0, hint: `未完成 ${summary.active || 0} 筆中`, icon: "派" },
-    { label: "進行中", value: summary.inProgress || 0, hint: "依工作進度唯讀判定", icon: "進" },
-    { label: "已完成", value: summary.completed || 0, hint: `本次掃描 ${summary.scannedWorks || 0} 筆`, icon: "完" },
-    { label: "逾期未完成", value: summary.overdue || 0, hint: "需先確認是否仍有效", icon: "期" },
+    { label: "未見人力標記", value: ready ? summary.unassigned : null, hint: ready ? `未完成 ${summary.active} 筆中；不等同正式未派案` : state.workSummaryReadiness.label, icon: "派" },
+    { label: "進行中", value: ready ? summary.inProgress : null, hint: ready ? "依 InfoCenter 工作進度唯讀判定" : "InfoCenter 來源不可用", icon: "進" },
+    { label: "已完成", value: ready ? summary.completed : null, hint: ready ? `本次掃描 ${summary.scannedWorks} 筆；不推定事件驗收結果` : "InfoCenter 來源不可用", icon: "完" },
+    { label: "逾期未完成", value: ready ? summary.overdue : null, hint: ready ? "由同一份 InfoCenter 摘要產生例外" : "InfoCenter 來源不可用", icon: "期" },
   ];
 
   document.querySelector("#metricGrid").innerHTML = metrics.map((metric) => `
     <article class="metric-card">
       <div class="metric-top"><span>${escapeHtml(metric.label)}</span><span class="metric-icon">${escapeHtml(metric.icon)}</span></div>
-      <div class="metric-value">${numberFormat.format(metric.value)}</div>
+      <div class="metric-value">${metric.value === null ? "—" : numberFormat.format(metric.value)}</div>
       <div class="metric-hint">${escapeHtml(metric.hint)}</div>
     </article>
   `).join("");
 }
 
 function renderCoverage() {
-  const summary = state.datasets.workSummary?.summary || {};
+  const ready = state.workSummaryReadiness.ready;
+  const summary = ready ? state.workModel.summary : null;
   const capacity = getCapacityStats();
+  const assignmentRate = ready ? nullableNumber(summary.assignmentCoverageRate) : null;
+  const estimateRate = ready ? nullableNumber(summary.estimateEvidenceCoverageRate) : null;
+  const resultRate = ready ? nullableNumber(summary.resultEvidenceCoverageRate) : null;
+  const resultCoverage = ready ? summary.resultEvidenceCoverageStatus : null;
   const cards = [
     {
-      label: "人員涵蓋率",
-      value: Math.round(toNumber(summary.assignmentCoverageRate) * 100),
-      fraction: `${summary.assignmentCoverageCount || 0} / ${summary.active || 0} 筆未完成工作`,
-      note: `${summary.unassigned || 0} 筆尚無工讀生標記`,
-      tone: toNumber(summary.assignmentCoverageRate) >= 0.9 ? "good" : "warning",
+      label: "InfoCenter 人力標記覆蓋",
+      value: assignmentRate === null ? null : Math.round(assignmentRate * 100),
+      fraction: ready ? `${summary.assignmentCoverageCount} / ${summary.active} 筆未完成工作` : "InfoCenter 來源不可用",
+      note: ready ? `${summary.unassigned} 筆未見人力標記；標記不等同正式主責` : "不以其他清單補值",
+      tone: assignmentRate === null ? "missing" : assignmentRate >= 0.9 ? "good" : "warning",
     },
     {
       label: "工時依據覆蓋率",
-      value: Math.round(toNumber(summary.estimateEvidenceCoverageRate) * 100),
-      fraction: `${summary.timeReportCount || 0} 筆評論耗時回報`,
-      note: `未完成工作 P80 合計約 ${numberFormat.format(summary.totalEstimatedHoursP80 || 0)} 小時`,
-      tone: toNumber(summary.estimateEvidenceCoverageRate) >= 0.8 ? "good" : "warning",
+      value: estimateRate === null ? null : Math.round(estimateRate * 100),
+      fraction: ready ? `${summary.timeReportCount || 0} 筆評論耗時回報` : "InfoCenter 來源不可用",
+      note: ready ? `未完成工作 P80 合計約 ${numberFormat.format(summary.totalEstimatedHoursP80 || 0)} 小時` : "不以規劃基準冒充實際成果",
+      tone: estimateRate === null ? "missing" : estimateRate >= 0.8 ? "good" : "warning",
     },
     {
-      label: "本週容量覆蓋率",
-      value: Math.round(capacity.coverageRate * 100),
-      fraction: `${capacity.covered} / ${capacity.activeCount} 位 active 成員`,
-      note: capacity.covered
-        ? `已登錄 ${numberFormat.format(capacity.availableHours)} 小時；不可用歷史工時替代`
-        : "本週尚無有效回填；不可用歷史工時或事件數替代",
-      tone: capacity.covered === 0 ? "missing" : capacity.coverageRate >= 0.9 ? "good" : "warning",
+      label: "工作結果證據覆蓋",
+      value: resultRate === null ? null : Math.round(resultRate * 100),
+      fraction: !ready
+        ? "InfoCenter 來源不可用"
+        : resultCoverage ? `證據狀態：${resultCoverageLabel(resultCoverage)}` : "目前 v1 快照尚無工作結果覆蓋欄位",
+      note: resultCoverage === "partial"
+        ? "事件證據僅為部分觀測；缺少紀錄不代表沒有成果"
+        : resultCoverage === "complete" ? "事件證據觀測範圍完整，仍不取代人工驗收" : "維持未知，不顯示假零值",
+      tone: resultRate === null ? "missing" : resultCoverage === "complete" ? "good" : "warning",
     },
   ];
 
   document.querySelector("#coverageGrid").innerHTML = cards.map((card) => `
     <article class="coverage-card ${card.tone}">
-      <div class="coverage-card-head"><span>${escapeHtml(card.label)}</span><strong>${card.tone === "missing" ? "待接" : `${card.value}%`}</strong></div>
-      <div class="coverage-track" aria-hidden="true"><span style="width:${clamp(card.value, 0, 100)}%"></span></div>
+      <div class="coverage-card-head"><span>${escapeHtml(card.label)}</span><strong>${card.value === null ? "—" : `${card.value}%`}</strong></div>
+      <div class="coverage-track" aria-hidden="true"><span style="width:${card.value === null ? 0 : clamp(card.value, 0, 100)}%"></span></div>
       <p>${escapeHtml(card.fraction)}</p>
       <small>${escapeHtml(card.note)}</small>
     </article>`).join("");
+
+  document.querySelector("#capacityAdvisory").innerHTML = `
+    <div>
+      <span class="section-kicker">人工人力補充・非派案紀錄</span>
+      <strong>${capacity.covered}/${capacity.activeCount} 位已回填</strong>
+    </div>
+    <p>${capacity.covered
+      ? `本週人工可用工時合計 ${numberFormat.format(capacity.availableHours)} 小時，只供人工選人時複核。`
+      : "本週尚無有效容量回填；不從歷史工時、事件數或活動訊號推定可用時數。"}</p>`;
+}
+
+function resultCoverageLabel(value) {
+  return value === "complete" ? "完整" : value === "partial" ? "部分觀測" : value === "none" ? "未觀測" : "未知";
 }
 
 function renderPriorityBanner() {
@@ -690,8 +1066,8 @@ function renderPriorityBanner() {
   const banner = document.querySelector("#priorityBanner");
   if (!top) {
     banner.innerHTML = `
-      <div><p class="eyebrow">今天先處理</p><h2>目前沒有明顯例外</h2><p>可進入待派工作，確認下一批可交辦項目。</p></div>
-      <button class="button button-light" type="button" data-go-view="dispatch">查看待派工作</button>`;
+      <div><p class="eyebrow">今天先處理</p><h2>目前沒有明顯例外</h2><p>可進入 InfoCenter 工作盤面，確認下一批工作。</p></div>
+      <button class="button button-light" type="button" data-go-view="dispatch">查看工作盤面</button>`;
   } else {
     banner.innerHTML = `
       <div><p class="eyebrow">今天先處理</p><h2>${escapeHtml(top.title)}</h2><p>${escapeHtml(top.description)}</p></div>
@@ -737,6 +1113,12 @@ function renderSourceList() {
 function renderTasks() {
   const overview = document.querySelector("#overviewTaskList");
   const dispatch = document.querySelector("#dispatchTaskList");
+  if (!state.workSummaryReadiness.ready) {
+    const unavailable = `<div class="empty-state">${escapeHtml(state.workSummaryReadiness.label)}。派案與工作結果不以雷達待辦或其他來源替代。</div>`;
+    overview.innerHTML = unavailable;
+    dispatch.innerHTML = unavailable;
+    return;
+  }
   const active = state.tasks.filter((task) => !task.done);
   const priority = [...active].sort((a, b) => Number(Boolean(getTaskIssueType(b))) - Number(Boolean(getTaskIssueType(a)))
     || Number(b.overdue) - Number(a.overdue)
@@ -761,11 +1143,11 @@ function renderTasks() {
 }
 
 function renderTaskRows(tasks) {
-  if (!tasks.length) return '<div class="empty-state">這個篩選條件下沒有待處理工作。</div>';
+  if (!tasks.length) return '<div class="empty-state">這個 InfoCenter 篩選條件下沒有工作。</div>';
 
   return tasks.map((task) => {
     const issueType = getTaskIssueType(task);
-    const issueLabel = issueType === "owner_conflict" ? "狀態矛盾" : issueType === "status_review" ? "待確認狀態" : "";
+    const issueLabel = issueType === "marker_conflict" ? "標記與狀態待確認" : issueType === "status_review" ? "待確認狀態" : "";
     return `
     <article class="task-row ${task.overdue ? "is-overdue" : ""} ${issueType ? "is-conflict" : ""}">
       <span class="task-signal" aria-hidden="true"></span>
@@ -776,9 +1158,9 @@ function renderTaskRows(tasks) {
           ${task.minimumLevel ? `<span>門檻：${escapeHtml(capabilityStageLabel(task.minimumLevel))}</span>` : ""}
           <span>期限：${task.due ? escapeHtml(task.due) : "未設定"}</span>
           <span>狀態：${escapeHtml(task.status)}</span>
-          ${task.estimatedHoursP80 ? `<span>工時 P50 / P80：${numberFormat.format(task.estimatedHoursP50)} / ${numberFormat.format(task.estimatedHoursP80)} 小時</span>` : ""}
+          ${task.estimatedHoursP80 !== null ? `<span>工時 P50 / P80：${escapeHtml(formatNullableHours(task.estimatedHoursP50))} / ${escapeHtml(formatNullableHours(task.estimatedHoursP80))}</span>` : ""}
         </div>
-        ${task.source === "infocenter" ? `<div class="task-evidence"><span>${escapeHtml(estimateConfidenceLabel(task.estimateConfidence))}</span><span>${task.estimateSampleCount} 筆耗時樣本</span><span>${escapeHtml(task.skills.join("、"))}</span></div>` : ""}
+          ${task.source === "infocenter" ? `<div class="task-evidence"><span>${escapeHtml(estimateConfidenceLabel(task.estimateConfidence))}</span><span>${escapeHtml(formatNullableCount(task.estimateSampleCount))}耗時樣本</span><span>${escapeHtml(resultEvidenceLabel(task))}</span>${task.skills.length ? `<span>${escapeHtml(task.skills.join("、"))}</span>` : ""}</div>` : ""}
       </div>
       <div class="task-side">
         ${issueLabel ? `<span class="task-label warning">${escapeHtml(issueLabel)}</span>` : ""}
@@ -792,6 +1174,27 @@ function renderTaskRows(tasks) {
   }).join("");
 }
 
+function resultEvidenceLabel(task) {
+  if (["unavailable", "none"].includes(task.resultEvidenceCoverage)) return "成果證據未觀測・不推定驗收";
+  const labels = {
+    accepted_event: "已有事件驗收證據",
+    accepted_event_visible: "曾見事件驗收通過・不等同整項工作驗收",
+    in_review: "曾見送審處理紀錄・最新狀態待確認",
+    needs_revision: "曾見退回紀錄・最新狀態待確認",
+    activity_only: "有活動・未見驗收證據",
+    activity_visible: "曾見事件活動・未推定驗收",
+    outside_observed_window: "成果超出目前觀測窗",
+    no_event: "目前觀測窗未見事件",
+    no_linked_events: "未連結事件・不推定無成果",
+    completed_work: "工作狀態已完成・驗收另核對",
+    work_completed: "工作狀態已完成・驗收另核對",
+    cancelled: "工作已取消・成果證據不適用",
+    unknown: "成果狀態未分類",
+  };
+  const stateLabel = labels[task.resultState] || "成果狀態未分類";
+  return task.resultEvidenceCoverage === "partial" ? `${stateLabel}・部分觀測` : stateLabel;
+}
+
 function bindTaskDetailButtons() {
   document.querySelectorAll("[data-task-detail-id]").forEach((button) => {
     button.addEventListener("click", () => openTaskDetail(button.dataset.taskDetailId));
@@ -803,31 +1206,32 @@ function openTaskDetail(id) {
   if (!task) return;
   state.activeTaskId = task.id;
   const issueType = getTaskIssueType(task);
-  const triage = issueType === "owner_conflict"
-    ? "狀態為進行中但沒有任何人員標記。先確認實際主責，再決定補派、更新狀態或結案。"
+  const triage = issueType === "marker_conflict"
+    ? "狀態為進行中但未見 InfoCenter 人力標記。先在平台確認正式派案，再決定補標記、更新狀態或結案。"
     : issueType === "status_review"
-      ? "已有主責與事件，但工作仍顯示待開始。先抽查事件是否含實際執行證據，再統一狀態。"
+      ? "已見人力標記與事件，但工作仍顯示待開始。先抽查事件是否含實際執行證據，再統一狀態。"
       : task.overdue
         ? "先判斷這筆工作要續做、改期或結案；確認仍有效後才進行派工。"
         : task.assignedCount === 0
-          ? "工作仍有效時，依能力門檻與 P80 工時補上主責；沒有容量資料前不做自動指派。"
-          : "主責已標記；下一步應確認事件中的活動、成果連結、送審與人工驗收。";
+          ? "工作仍有效時，回到 InfoCenter 確認正式派案與人力標記；人工容量只供複核。"
+          : "已見 InfoCenter 人力標記，但仍需另行確認正式主責、成果送審與人工驗收。";
   const matchPanel = renderTaskCapabilityMatches(task);
   document.querySelector("#taskDetailTitle").textContent = task.title;
   document.querySelector("#taskDetailBody").innerHTML = `
     <div class="task-detail-grid">
       <div><span>公開代碼</span><strong>${escapeHtml(task.id)}</strong></div>
       <div><span>目前狀態</span><strong>${escapeHtml(task.status)}</strong></div>
-      <div><span>人員標記</span><strong>${escapeHtml(task.owner)}</strong></div>
+      <div><span>InfoCenter 人力標記</span><strong>${escapeHtml(task.owner)}</strong></div>
       <div><span>期限</span><strong>${task.due ? escapeHtml(task.due) : "未設定"}</strong></div>
       <div><span>判斷門檻</span><strong>${escapeHtml(capabilityStageLabel(task.minimumLevel))}</strong></div>
-      <div><span>預估 P50 / P80</span><strong>${numberFormat.format(task.estimatedHoursP50)} / ${numberFormat.format(task.estimatedHoursP80)} 小時</strong></div>
+      <div><span>預估 P50 / P80</span><strong>${escapeHtml(formatNullableHours(task.estimatedHoursP50))} / ${escapeHtml(formatNullableHours(task.estimatedHoursP80))}</strong></div>
     </div>
     <div class="task-triage-note"><span>建議處理</span><p>${escapeHtml(triage)}</p></div>
     ${matchPanel}
     <div class="task-detail-evidence">
-      <span>事件 ${task.eventCount} 筆</span>
-      <span>完成事件 ${task.completedEventCount} 筆</span>
+      <span>事件 ${escapeHtml(formatNullableCount(task.eventCount))}</span>
+      <span>驗收通過事件 ${escapeHtml(formatNullableCount(task.completedEventCount))}</span>
+      <span>${escapeHtml(resultEvidenceLabel(task))}</span>
       ${(task.skills || []).map((skill) => `<span>${escapeHtml(skill)}</span>`).join("")}
     </div>
     <p class="task-dialog-boundary">公開摘要不保存原始工作標題或 InfoCenter 原始 ID，因此無法安全產生精確深層連結。請以公開代碼與狀態在一般工作清單中查找，並由人員確認後才變更。</p>`;
@@ -844,7 +1248,8 @@ async function copyActiveTaskLocator() {
     `狀態：${task.status}`,
     `人員標記：${task.owner}`,
     `期限：${task.due || "未設定"}`,
-    `需確認：${issueType === "owner_conflict" ? "進行中但無人員標記" : issueType === "status_review" ? "已有主責與事件但仍待開始" : task.overdue ? "逾期有效性" : "無"}`,
+    `需確認：${issueType === "marker_conflict" ? "進行中但未見 InfoCenter 人力標記" : issueType === "status_review" ? "已見人力標記與事件但仍待開始" : task.overdue ? "逾期有效性" : "無"}`,
+    `工作結果證據：${resultEvidenceLabel(task)}`,
     "注意：公開摘要沒有 InfoCenter 原始 ID，請在一般工作清單人工確認後再變更。",
   ].join("\n");
   await copyText(text, "工作查找摘要已複製");
@@ -1110,8 +1515,12 @@ function rankPeopleForTask(task) {
       };
     })
     .filter((person) => person.score > 0)
-    .sort((a, b) => b.score - a.score || toNumber(b.capacity?.availableHours) - toNumber(a.capacity?.availableHours))
+    .sort(compareTaskCandidates)
     .slice(0, 3);
+}
+
+function compareTaskCandidates(a, b) {
+  return b.score - a.score || String(a.id || "").localeCompare(String(b.id || ""));
 }
 
 function renderTaskCapabilityMatches(task) {
@@ -1133,7 +1542,7 @@ function renderTaskCapabilityMatches(task) {
           <strong>${index + 1}. ${escapeHtml(person.safeName)}</strong>
           <span>${escapeHtml(person.safeEmail)}</span>
           <b>適配 ${person.score}</b>
-          <small>${person.capacity ? `本週可用 ${numberFormat.format(person.capacity.availableHours)} 小時` : "本週容量待確認"}</small>
+          <small>${person.capacity ? `人工容量參考：本週可用 ${numberFormat.format(person.capacity.availableHours)} 小時` : "人工容量參考：待確認"}</small>
         </div>`).join("") : "<p>目前沒有可追溯的相關工作證據。</p>"}</div>
       <p>${escapeHtml(profile.note || "")} 指數只供人工選人前比較，不會自動派工。</p>
     </section>`;
@@ -1269,7 +1678,7 @@ function renderNotifications() {
   const summary = document.querySelector("#notificationSummary");
   const target = document.querySelector("#notificationList");
   const dataset = state.datasets.notifications;
-  const items = Array.isArray(dataset?.items) ? dataset.items : [];
+  const items = getNotificationItems();
   const openItems = items.filter((item) => item.status !== "resolved");
   const urgentItems = openItems.filter((item) => item.severity === "urgent");
 
@@ -1302,6 +1711,84 @@ function renderNotifications() {
         ${item.link ? `<a class="text-button notification-link" href="${escapeHtml(item.link)}" target="_blank" rel="noreferrer">${escapeHtml(item.linkLabel || "開啟處理頁面")}</a>` : ""}
       </div>
     </article>`).join("");
+}
+
+function buildPlatformNotifications(workSummary, tasks = []) {
+  const readiness = inspectInfoCenterWorkSummary(workSummary);
+  if (!readiness.ready) {
+    return [{
+      id: "infocenter-work-source-unavailable",
+      category: "InfoCenter 來源",
+      severity: "urgent",
+      status: "open",
+      title: "派案與工作結果目前不可用",
+      summary: `${readiness.label}；核心數字維持未知，不改用每週清單或人工提醒替代。`,
+      when: "重新讀取後確認",
+      nextAction: "檢查正確組織、登入與唯讀摘要產生流程。",
+      link: "https://www.egroup-infocenter.com/me/work?tab=list",
+      linkLabel: "到 InfoCenter 查看工作",
+      source: "infocenter-summary",
+    }];
+  }
+
+  const model = projectInfoCenterWorkSummary(workSummary);
+  const summary = model.summary;
+  const items = [];
+  if (summary.overdue > 0) {
+    items.push({
+      id: "infocenter-overdue-work",
+      category: "平台例外",
+      severity: "urgent",
+      status: "open",
+      title: `${summary.overdue} 筆逾期未完成待確認`,
+      summary: "此數字直接取自同一份 InfoCenter 工作摘要；請在平台逐筆確認續做、改期或結案。",
+      when: `InfoCenter 截止 ${formatDateTime(parseDate(readiness.generatedAt))}`,
+      nextAction: "回到 InfoCenter 確認工作有效性與期限。",
+      link: "https://www.egroup-infocenter.com/me/work?tab=list",
+      linkLabel: "到 InfoCenter 查看工作",
+      source: "infocenter-summary",
+    });
+  }
+  if (summary.unassigned > 0) {
+    items.push({
+      id: "infocenter-marker-gap",
+      category: "平台例外",
+      severity: "attention",
+      status: "open",
+      title: `${summary.unassigned} 筆未完成工作未見 InfoCenter 人力標記`,
+      summary: "人力標記只代表公開摘要觀測到的標記，不等同正式未派案或正式主責。",
+      when: `InfoCenter 截止 ${formatDateTime(parseDate(readiness.generatedAt))}`,
+      nextAction: "回到 InfoCenter 確認正式派案與人力標記。",
+      link: "https://www.egroup-infocenter.com/me/work?tab=list",
+      linkLabel: "到 InfoCenter 查看工作",
+      source: "infocenter-summary",
+    });
+  }
+  const markerConflicts = tasks.filter((task) => getTaskIssueType(task) === "marker_conflict").length;
+  if (markerConflicts > 0) {
+    items.push({
+      id: "infocenter-marker-status-conflict",
+      category: "平台例外",
+      severity: "attention",
+      status: "open",
+      title: `${markerConflicts} 筆進行中工作未見 InfoCenter 人力標記`,
+      summary: "請以平台上的正式派案與工作狀態為準，公開摘要不自行推定主責。",
+      when: `InfoCenter 截止 ${formatDateTime(parseDate(readiness.generatedAt))}`,
+      nextAction: "在 InfoCenter 確認正式派案後再調整標記或狀態。",
+      link: "https://www.egroup-infocenter.com/me/work?tab=list",
+      linkLabel: "到 InfoCenter 查看工作",
+      source: "infocenter-summary",
+    });
+  }
+  return items;
+}
+
+function getNotificationItems() {
+  const platformItems = buildPlatformNotifications(state.datasets.workSummary, state.tasks);
+  const staticItems = Array.isArray(state.datasets.notifications?.items)
+    ? state.datasets.notifications.items.filter((item) => item.id !== "overdue-work-review" && item.category !== "逾期工作")
+    : [];
+  return [...platformItems, ...staticItems];
 }
 
 function notificationStatusLabel(status) {
@@ -1380,46 +1867,62 @@ function goToActiveRecommendationTasks() {
 }
 
 function updateNavigationCounts() {
-  document.querySelector("#navDispatchCount").textContent = String(state.datasets.workSummary?.summary?.unassigned
-    ?? state.tasks.filter((task) => !task.done).length);
+  document.querySelector("#navDispatchCount").textContent = state.workSummaryReadiness.ready
+    ? String(state.workModel.summary.unassigned)
+    : "—";
   document.querySelector("#navRecommendationCount").textContent = String(state.recommendations.length);
-  const notifications = state.datasets.notifications?.items || [];
+  const notifications = getNotificationItems();
   document.querySelector("#navNotificationCount").textContent = String(notifications.filter((item) => item.status !== "resolved").length);
 }
 
 function updateFooter() {
-  const latest = state.sources
+  const otherLatest = state.sources
+    .filter((source) => source.name !== "InfoCenter 派案與工作結果")
     .map((source) => source.date)
     .filter(Boolean)
     .sort((a, b) => b - a)[0];
-  document.querySelector("#footerTimestamp").textContent = latest
-    ? `最新來源日期：${formatDate(latest)}｜頁面讀取：${formatDateTime(new Date())}`
-    : `頁面讀取：${formatDateTime(new Date())}`;
+  const cutoff = state.workSummaryReadiness.ready
+    ? `${state.workSummaryReadiness.organizationMarker}・${formatDateTime(parseDate(state.workSummaryReadiness.generatedAt))}（最近一次已驗證快照）`
+    : `不可用（${state.workSummaryReadiness.label}）`;
+  document.querySelector("#footerTimestamp").textContent = `InfoCenter 截止：${cutoff}｜其他來源最新：${otherLatest ? formatDate(otherLatest) : "無"}｜頁面讀取：${formatDateTime(new Date())}`;
 }
 
 async function copyManagementBrief() {
   const interns = state.datasets.interns?.meta?.counts || {};
-  const summary = state.datasets.workSummary?.summary || {};
+  if (!state.workSummaryReadiness.ready) {
+    const unavailableBrief = [
+      "# 工讀生總工作藍圖摘要",
+      `- InfoCenter 派案與工作結果：—（${state.workSummaryReadiness.label}）`,
+      "- 核心工作數字：—",
+      "- 平台例外：—",
+      "",
+      "注意：不以每週雷達、人工提醒或容量檔替代 InfoCenter 派案與工作結果。",
+    ].join("\n");
+    await copyText(unavailableBrief, "管理摘要已複製");
+    return;
+  }
+  const summary = state.workModel.summary;
   const capacity = getCapacityStats();
-  const ownerConflicts = state.tasks.filter((task) => getTaskIssueType(task) === "owner_conflict").length;
+  const markerConflicts = state.tasks.filter((task) => getTaskIssueType(task) === "marker_conflict").length;
   const statusReviews = state.tasks.filter((task) => getTaskIssueType(task) === "status_review").length;
   const brief = [
     "# 工讀生總工作藍圖摘要",
-    `- InfoCenter 掃描：${summary.scannedWorks || 0} 筆工作`,
-    `- 未完成：${summary.active || 0} 筆（待派 ${summary.unassigned || 0}、進行中 ${summary.inProgress || 0}）`,
-    `- 已完成：${summary.completed || 0} 筆`,
-    `- 逾期未完成：${summary.overdue || 0} 筆`,
-    `- 狀態需確認：進行中但無人員 ${ownerConflicts} 筆；已有主責與事件但仍待開始 ${statusReviews} 筆`,
-    `- 人員涵蓋率：${Math.round(toNumber(summary.assignmentCoverageRate) * 100)}%`,
+    `- InfoCenter 截止：${state.workSummaryReadiness.organizationMarker}・${formatDateTime(parseDate(state.workSummaryReadiness.generatedAt))}（最近一次已驗證快照，不是瀏覽器即時狀態）`,
+    `- InfoCenter 掃描：${summary.scannedWorks} 筆工作`,
+    `- 未完成：${summary.active} 筆（未見人力標記 ${summary.unassigned}、進行中 ${summary.inProgress}）`,
+    `- 已完成工作狀態：${summary.completed} 筆（不推定事件驗收結果）`,
+    `- 逾期未完成：${summary.overdue} 筆`,
+    `- 狀態需確認：進行中但未見人力標記 ${markerConflicts} 筆；已見標記與事件但仍待開始 ${statusReviews} 筆`,
+    `- InfoCenter 人力標記覆蓋率：${Math.round(toNumber(summary.assignmentCoverageRate) * 100)}%（不等同正式主責）`,
     `- 工時依據：${summary.timeReportCount || 0} 筆評論回報，未完成工作 P80 約 ${numberFormat.format(summary.totalEstimatedHoursP80 || 0)} 小時`,
     `- Active 成員：${interns.active || 0} 位`,
-    `- 本週容量：${capacity.covered}/${capacity.activeCount} 位已回填，合計 ${numberFormat.format(capacity.availableHours)} 小時`,
+    `- 人工容量補充（非派案紀錄）：${capacity.covered}/${capacity.activeCount} 位已回填，合計 ${numberFormat.format(capacity.availableHours)} 小時`,
     `- 建議事項：${state.recommendations.length} 筆`,
     "",
     "## 優先建議",
     ...state.recommendations.slice(0, 5).map((item) => `- ${item.title}：${item.action}`),
     "",
-    "注意：未回填本週容量或能力證據尚未人工確認的人員，不列入可派候選；正式派工、驗收與派薪請回到 InfoCenter。",
+    "注意：候選排序不使用人工容量作為平手判斷；正式派工、驗收與派薪請回到 InfoCenter。",
   ].join("\n");
   await copyText(brief, "管理摘要已複製");
 }
@@ -1430,7 +1933,7 @@ async function copyRecommendationList() {
 }
 
 async function copyNotificationList() {
-  const items = state.datasets.notifications?.items || [];
+  const items = getNotificationItems();
   const text = items.map((item) => `- [${notificationStatusLabel(item.status)}] ${item.title}\n  時間：${item.when || "未設定"}\n  下一步：${item.nextAction || "持續觀察"}`).join("\n\n");
   await copyText(text || "目前沒有提醒與通知。", "提醒摘要已複製");
 }
@@ -1510,4 +2013,15 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    inspectInfoCenterWorkSummary,
+    projectInfoCenterWorkSummary,
+    normalizeInfoCenterWorkItems,
+    buildPlatformNotifications,
+    compareTaskCandidates,
+    resultEvidenceLabel,
+  };
 }

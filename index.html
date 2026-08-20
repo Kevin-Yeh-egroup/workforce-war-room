@@ -70,7 +70,7 @@
         <div>
           <p class="eyebrow">馴錢師星展專案 · 管理視圖</p>
           <h1>總工作藍圖</h1>
-          <p class="page-summary">先看待派、逾期與覆蓋缺口，再回到 InfoCenter 完成派工、事件驗收與派薪。</p>
+          <p class="page-summary">以 InfoCenter 的派案與工作狀態為準，戰情室只做唯讀彙整、例外提示與人工決策輔助。</p>
         </div>
         <div class="header-actions">
           <a class="button button-secondary" href="./local-spec/">設定審核中心</a>
@@ -98,11 +98,14 @@
 
         <section class="coverage-board" aria-labelledby="coverageTitle">
           <div class="coverage-board-copy">
-            <p class="eyebrow">派工準備度</p>
-            <h2 id="coverageTitle">三個分母，避免只憑感覺派工</h2>
-            <p>人員標記與工時估算已由 InfoCenter 唯讀彙整；每位工讀生本週可用工時仍需回填。</p>
+            <p class="eyebrow">InfoCenter 派案現況</p>
+            <h2 id="coverageTitle">平台紀錄與人工容量分開看</h2>
+            <p>派案、工作狀態與平台例外只讀 InfoCenter；人工容量是另一份輔助輸入，不會改寫平台結果。</p>
           </div>
-          <div class="coverage-grid" id="coverageGrid"></div>
+          <div class="coverage-board-data">
+            <div class="coverage-grid" id="coverageGrid"></div>
+            <aside class="capacity-advisory" id="capacityAdvisory" aria-label="人工人力補充"></aside>
+          </div>
         </section>
 
         <div class="overview-grid">
@@ -166,16 +169,16 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">InfoCenter 唯讀工作盤面</p>
-            <h2>依覆蓋缺口、期限與工時信心排序</h2>
-            <p>標題以工作類型與匿名代碼顯示；實際標題、主責與派工異動請回到 InfoCenter 確認。</p>
+            <h2>依 InfoCenter 狀態、標記缺口、期限與工時信心排序</h2>
+            <p>標題以工作類型與匿名代碼顯示；目前摘要只有人力標記計數，不等同正式主責。派案與工作結果請回到 InfoCenter 確認。</p>
           </div>
           <a class="button button-primary" href="https://www.egroup-infocenter.com/me/work?tab=list" target="_blank" rel="noreferrer">到 InfoCenter 派工</a>
         </div>
 
-        <div class="filter-bar" role="group" aria-label="待派工作篩選">
+        <div class="filter-bar" role="group" aria-label="InfoCenter 工作篩選">
           <button class="filter-chip is-active" type="button" data-task-filter="active">未完成</button>
           <button class="filter-chip" type="button" data-task-filter="conflict">需確認</button>
-          <button class="filter-chip" type="button" data-task-filter="unassigned">待派</button>
+          <button class="filter-chip" type="button" data-task-filter="unassigned">未見人力標記</button>
           <button class="filter-chip" type="button" data-task-filter="overdue">已逾期</button>
           <button class="filter-chip" type="button" data-task-filter="in_progress">進行中</button>
           <button class="filter-chip" type="button" data-task-filter="completed">已完成</button>
