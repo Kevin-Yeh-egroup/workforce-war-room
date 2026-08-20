@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generatedAt": "2026-08-18T08:41:17.084Z",
+    "generatedAt": "2026-08-20T07:33:43.483Z",
     "source": {
       "system": "InfoCenter",
       "mode": "event-list-readonly",
       "eventListUrl": "https://www.egroup-infocenter.com/me/event/events",
-      "organizationLabel": "馴錢師星展專案",
-      "totalAvailable": 1704,
-      "fetchedEvents": 500
+      "totalAvailable": 1705,
+      "fetchedEvents": 1705,
+      "organizationContext": "configured-target"
     },
     "privacy": "Public-safe aggregate. Person names are replaced by stable short aliases; raw event titles, salary amounts, bank data, ID numbers, full addresses, and comment bodies are excluded.",
     "confidenceGuide": {
@@ -16,287 +16,627 @@
       "low": "目前未納入正式判讀。"
     },
     "coverage": {
-      "firstSignalAt": "2026-03-03T10:10:27.000Z",
-      "latestSignalAt": "2026-08-18T03:33:00.000Z"
+      "firstSignalAt": "2025-08-13T01:56:29.000Z",
+      "latestSignalAt": "2026-08-20T06:00:36.000Z"
     }
   },
   "summary": {
-    "peopleCount": 44,
-    "totalSignals": 626,
-    "scannedEvents": 500,
-    "highConfidenceSignals": 160,
-    "mediumConfidenceSignals": 466,
-    "eveningSignals": 158,
-    "weekendSignals": 28,
+    "peopleCount": 50,
+    "totalSignals": 3402,
+    "scannedEvents": 1705,
+    "highConfidenceSignals": 1787,
+    "mediumConfidenceSignals": 1615,
+    "eveningSignals": 1226,
+    "weekendSignals": 372,
     "hourBuckets": [
       {
-        "key": "11",
-        "count": 91
-      },
-      {
         "key": "17",
-        "count": 77
-      },
-      {
-        "key": "10",
-        "count": 75
-      },
-      {
-        "key": "15",
-        "count": 55
-      },
-      {
-        "key": "09",
-        "count": 48
+        "count": 475
       },
       {
         "key": "18",
-        "count": 46
-      },
-      {
-        "key": "14",
-        "count": 40
+        "count": 387
       },
       {
         "key": "16",
-        "count": 39
+        "count": 381
       },
       {
-        "key": "12",
-        "count": 28
+        "key": "15",
+        "count": 298
       },
       {
-        "key": "23",
-        "count": 23
+        "key": "11",
+        "count": 254
       },
       {
-        "key": "21",
-        "count": 21
+        "key": "14",
+        "count": 238
       },
       {
-        "key": "00",
-        "count": 16
+        "key": "10",
+        "count": 203
       },
       {
         "key": "22",
-        "count": 14
+        "count": 154
+      },
+      {
+        "key": "21",
+        "count": 141
+      },
+      {
+        "key": "09",
+        "count": 136
+      },
+      {
+        "key": "00",
+        "count": 126
+      },
+      {
+        "key": "23",
+        "count": 122
+      },
+      {
+        "key": "12",
+        "count": 117
       },
       {
         "key": "19",
-        "count": 12
-      },
-      {
-        "key": "13",
-        "count": 11
-      },
-      {
-        "key": "02",
-        "count": 9
+        "count": 110
       },
       {
         "key": "20",
-        "count": 9
+        "count": 93
+      },
+      {
+        "key": "13",
+        "count": 65
       },
       {
         "key": "01",
-        "count": 5
+        "count": 43
       },
       {
-        "key": "08",
-        "count": 4
+        "key": "02",
+        "count": 30
       },
       {
         "key": "04",
-        "count": 2
+        "count": 10
+      },
+      {
+        "key": "08",
+        "count": 9
+      },
+      {
+        "key": "03",
+        "count": 6
       },
       {
         "key": "05",
-        "count": 1
+        "count": 2
+      },
+      {
+        "key": "07",
+        "count": 2
       }
     ],
     "weekdayBuckets": [
       {
-        "key": "1",
-        "count": 135
+        "key": "2",
+        "count": 686
       },
       {
-        "key": "2",
-        "count": 125
+        "key": "1",
+        "count": 661
       },
       {
         "key": "3",
-        "count": 124
+        "count": 637
       },
       {
         "key": "4",
-        "count": 111
+        "count": 543
       },
       {
         "key": "5",
-        "count": 103
-      },
-      {
-        "key": "6",
-        "count": 15
+        "count": 503
       },
       {
         "key": "0",
-        "count": 13
+        "count": 204
+      },
+      {
+        "key": "6",
+        "count": 168
       }
     ],
     "confidenceBreakdown": [
       {
-        "key": "medium",
-        "count": 466
+        "key": "high",
+        "count": 1787
       },
       {
-        "key": "high",
-        "count": 160
+        "key": "medium",
+        "count": 1615
       }
     ]
   },
   "people": [
     {
-      "name": "成員 #2F48",
-      "signalCount": 62,
-      "eventCount": 40,
-      "activeDayCount": 25,
-      "latestSignalAt": "2026-08-18T03:33:00.000Z",
-      "firstSignalAt": "2026-03-09T01:14:22.000Z",
-      "eveningShare": 0.581,
-      "weekendShare": 0.081,
+      "name": "成員 #6E59",
+      "signalCount": 16,
+      "eventCount": 10,
+      "activeDayCount": 8,
+      "latestSignalAt": "2026-08-20T06:00:36.000Z",
+      "firstSignalAt": "2026-07-24T07:54:58.000Z",
+      "eveningShare": 0,
+      "weekendShare": 0,
       "hourBuckets": [
         {
-          "key": "18",
-          "count": 8
-        },
-        {
-          "key": "21",
-          "count": 8
-        },
-        {
-          "key": "11",
-          "count": 7
-        },
-        {
-          "key": "23",
-          "count": 7
+          "key": "12",
+          "count": 6
         },
         {
           "key": "15",
           "count": 6
         },
         {
-          "key": "22",
+          "key": "14",
+          "count": 2
+        },
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "11",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
           "count": 6
         },
+        {
+          "key": "5",
+          "count": 6
+        },
+        {
+          "key": "4",
+          "count": 2
+        },
+        {
+          "key": "1",
+          "count": 1
+        },
+        {
+          "key": "3",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 10
+        },
+        {
+          "key": "high",
+          "count": 6
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 10
+        },
+        {
+          "key": "評論/留言",
+          "count": 6
+        }
+      ],
+      "categories": [
+        {
+          "key": "自定義名詞修正",
+          "count": 16
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 16
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 16
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #EE42",
+      "signalCount": 4,
+      "eventCount": 1,
+      "activeDayCount": 4,
+      "latestSignalAt": "2026-08-20T04:12:00.000Z",
+      "firstSignalAt": "2026-08-06T03:03:59.000Z",
+      "eveningShare": 0.5,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "11",
+          "count": 1
+        },
+        {
+          "key": "12",
+          "count": 1
+        },
+        {
+          "key": "19",
+          "count": 1
+        },
+        {
+          "key": "21",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 3
+        },
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "high",
+          "count": 3
+        },
+        {
+          "key": "medium",
+          "count": 1
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "評論/留言",
+          "count": 3
+        },
+        {
+          "key": "事件建立",
+          "count": 1
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 4
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 4
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 4
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #3A9E",
+      "signalCount": 35,
+      "eventCount": 12,
+      "activeDayCount": 21,
+      "latestSignalAt": "2026-08-19T07:15:35.000Z",
+      "firstSignalAt": "2026-04-08T06:10:44.000Z",
+      "eveningShare": 0.114,
+      "weekendShare": 0.029,
+      "hourBuckets": [
         {
           "key": "10",
           "count": 5
         },
         {
-          "key": "17",
+          "key": "14",
           "count": 5
         },
         {
-          "key": "20",
+          "key": "09",
+          "count": 4
+        },
+        {
+          "key": "15",
+          "count": 4
+        },
+        {
+          "key": "11",
           "count": 3
         },
         {
-          "key": "00",
-          "count": 2
+          "key": "13",
+          "count": 3
         },
         {
-          "key": "09",
-          "count": 2
-        },
-        {
-          "key": "19",
-          "count": 2
+          "key": "16",
+          "count": 3
         },
         {
           "key": "12",
+          "count": 2
+        },
+        {
+          "key": "17",
+          "count": 2
+        },
+        {
+          "key": "21",
+          "count": 2
+        },
+        {
+          "key": "20",
+          "count": 1
+        },
+        {
+          "key": "22",
           "count": 1
         }
       ],
       "weekdayBuckets": [
         {
           "key": "3",
-          "count": 15
-        },
-        {
-          "key": "4",
-          "count": 14
+          "count": 11
         },
         {
           "key": "5",
-          "count": 13
+          "count": 11
         },
         {
-          "key": "2",
-          "count": 9
+          "key": "4",
+          "count": 8
         },
         {
           "key": "1",
-          "count": 6
+          "count": 2
+        },
+        {
+          "key": "2",
+          "count": 2
         },
         {
           "key": "6",
-          "count": 3
-        },
-        {
-          "key": "0",
-          "count": 2
+          "count": 1
         }
       ],
       "confidenceBreakdown": [
         {
-          "key": "medium",
-          "count": 40
+          "key": "high",
+          "count": 23
         },
         {
-          "key": "high",
-          "count": 22
+          "key": "medium",
+          "count": 12
         }
       ],
       "signalTypes": [
         {
-          "key": "事件建立",
-          "count": 40
+          "key": "評論/留言",
+          "count": 23
         },
         {
-          "key": "評論/留言",
-          "count": 22
+          "key": "事件建立",
+          "count": 12
         }
       ],
       "categories": [
         {
-          "key": "自定義名詞修正",
-          "count": 40
-        },
-        {
           "key": "一般事件",
-          "count": 16
-        },
-        {
-          "key": "會議紀錄/資料整理",
-          "count": 4
+          "count": 24
         },
         {
           "key": "家庭財務/社福資料",
+          "count": 9
+        },
+        {
+          "key": "會議紀錄/資料整理",
           "count": 2
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 62
+          "count": 35
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 62
+          "count": 35
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #2F48",
+      "signalCount": 176,
+      "eventCount": 83,
+      "activeDayCount": 84,
+      "latestSignalAt": "2026-08-18T03:33:00.000Z",
+      "firstSignalAt": "2025-08-13T02:38:55.000Z",
+      "eveningShare": 0.557,
+      "weekendShare": 0.182,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 33
+        },
+        {
+          "key": "11",
+          "count": 18
+        },
+        {
+          "key": "22",
+          "count": 18
+        },
+        {
+          "key": "14",
+          "count": 12
+        },
+        {
+          "key": "21",
+          "count": 12
+        },
+        {
+          "key": "17",
+          "count": 11
+        },
+        {
+          "key": "23",
+          "count": 11
+        },
+        {
+          "key": "16",
+          "count": 10
+        },
+        {
+          "key": "15",
+          "count": 9
+        },
+        {
+          "key": "00",
+          "count": 8
+        },
+        {
+          "key": "10",
+          "count": 8
+        },
+        {
+          "key": "19",
+          "count": 7
+        },
+        {
+          "key": "20",
+          "count": 6
+        },
+        {
+          "key": "13",
+          "count": 5
+        },
+        {
+          "key": "09",
+          "count": 3
+        },
+        {
+          "key": "02",
+          "count": 2
+        },
+        {
+          "key": "12",
+          "count": 2
+        },
+        {
+          "key": "07",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 47
+        },
+        {
+          "key": "2",
+          "count": 29
+        },
+        {
+          "key": "4",
+          "count": 27
+        },
+        {
+          "key": "1",
+          "count": 23
+        },
+        {
+          "key": "0",
+          "count": 19
+        },
+        {
+          "key": "5",
+          "count": 18
+        },
+        {
+          "key": "6",
+          "count": 13
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "high",
+          "count": 93
+        },
+        {
+          "key": "medium",
+          "count": 83
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "評論/留言",
+          "count": 93
+        },
+        {
+          "key": "事件建立",
+          "count": 83
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 114
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 40
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 14
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 8
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 176
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 176
         }
       ],
       "notes": [
@@ -386,89 +726,113 @@
     },
     {
       "name": "成員 #FF86",
-      "signalCount": 27,
-      "eventCount": 22,
-      "activeDayCount": 9,
+      "signalCount": 116,
+      "eventCount": 58,
+      "activeDayCount": 43,
       "latestSignalAt": "2026-08-17T11:11:20.000Z",
-      "firstSignalAt": "2026-03-09T01:26:11.000Z",
-      "eveningShare": 0.074,
-      "weekendShare": 0,
+      "firstSignalAt": "2025-12-05T02:08:45.000Z",
+      "eveningShare": 0.138,
+      "weekendShare": 0.017,
       "hourBuckets": [
         {
           "key": "17",
-          "count": 10
+          "count": 25
         },
         {
-          "key": "09",
-          "count": 6
-        },
-        {
-          "key": "11",
-          "count": 6
+          "key": "15",
+          "count": 23
         },
         {
           "key": "14",
-          "count": 2
+          "count": 13
+        },
+        {
+          "key": "11",
+          "count": 9
         },
         {
           "key": "16",
-          "count": 1
+          "count": 9
         },
         {
-          "key": "19",
-          "count": 1
+          "key": "09",
+          "count": 7
+        },
+        {
+          "key": "10",
+          "count": 7
+        },
+        {
+          "key": "18",
+          "count": 7
         },
         {
           "key": "20",
-          "count": 1
+          "count": 5
+        },
+        {
+          "key": "12",
+          "count": 4
+        },
+        {
+          "key": "19",
+          "count": 4
+        },
+        {
+          "key": "13",
+          "count": 3
         }
       ],
       "weekdayBuckets": [
         {
-          "key": "1",
-          "count": 9
+          "key": "2",
+          "count": 30
         },
         {
           "key": "5",
-          "count": 7
+          "count": 30
         },
         {
-          "key": "2",
-          "count": 5
+          "key": "1",
+          "count": 25
         },
         {
           "key": "4",
-          "count": 5
+          "count": 17
         },
         {
           "key": "3",
-          "count": 1
+          "count": 12
+        },
+        {
+          "key": "6",
+          "count": 2
         }
       ],
       "confidenceBreakdown": [
         {
-          "key": "medium",
-          "count": 22
+          "key": "high",
+          "count": 58
         },
         {
-          "key": "high",
-          "count": 5
+          "key": "medium",
+          "count": 58
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 22
+          "count": 58
         },
         {
           "key": "評論/留言",
-          "count": 5
+          "count": 58
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 14
+          "count": 99
         },
         {
           "key": "自定義名詞修正",
@@ -476,19 +840,19 @@
         },
         {
           "key": "會議紀錄/資料整理",
-          "count": 3
+          "count": 7
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 27
+          "count": 116
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 27
+          "count": 116
         }
       ],
       "notes": [
@@ -498,21 +862,49 @@
     },
     {
       "name": "成員 #ABAA",
-      "signalCount": 8,
-      "eventCount": 7,
-      "activeDayCount": 4,
+      "signalCount": 35,
+      "eventCount": 23,
+      "activeDayCount": 16,
       "latestSignalAt": "2026-08-17T10:23:31.000Z",
-      "firstSignalAt": "2026-03-09T01:18:55.000Z",
-      "eveningShare": 0.125,
-      "weekendShare": 0,
+      "firstSignalAt": "2025-12-19T03:41:15.000Z",
+      "eveningShare": 0.057,
+      "weekendShare": 0.086,
       "hourBuckets": [
+        {
+          "key": "17",
+          "count": 13
+        },
         {
           "key": "10",
           "count": 5
         },
         {
+          "key": "11",
+          "count": 5
+        },
+        {
+          "key": "16",
+          "count": 5
+        },
+        {
           "key": "09",
           "count": 2
+        },
+        {
+          "key": "00",
+          "count": 1
+        },
+        {
+          "key": "13",
+          "count": 1
+        },
+        {
+          "key": "14",
+          "count": 1
+        },
+        {
+          "key": "15",
+          "count": 1
         },
         {
           "key": "18",
@@ -521,62 +913,78 @@
       ],
       "weekdayBuckets": [
         {
-          "key": "4",
-          "count": 5
-        },
-        {
-          "key": "1",
-          "count": 2
+          "key": "2",
+          "count": 10
         },
         {
           "key": "5",
+          "count": 7
+        },
+        {
+          "key": "4",
+          "count": 6
+        },
+        {
+          "key": "1",
+          "count": 5
+        },
+        {
+          "key": "3",
+          "count": 4
+        },
+        {
+          "key": "0",
+          "count": 2
+        },
+        {
+          "key": "6",
           "count": 1
         }
       ],
       "confidenceBreakdown": [
         {
           "key": "medium",
-          "count": 7
+          "count": 23
         },
         {
           "key": "high",
-          "count": 1
+          "count": 12
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 7
+          "count": 23
         },
         {
           "key": "評論/留言",
-          "count": 1
+          "count": 12
         }
       ],
       "categories": [
+        {
+          "key": "一般事件",
+          "count": 25
+        },
         {
           "key": "自定義名詞修正",
           "count": 6
         },
         {
-          "key": "一般事件",
-          "count": 1
-        },
-        {
           "key": "家庭財務/社福資料",
-          "count": 1
+          "count": 4
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 8
+          "count": 35
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 8
+          "count": 35
         }
       ],
       "notes": [
@@ -586,109 +994,165 @@
     },
     {
       "name": "成員 #EDAB",
-      "signalCount": 12,
-      "eventCount": 2,
-      "activeDayCount": 11,
+      "signalCount": 236,
+      "eventCount": 79,
+      "activeDayCount": 138,
       "latestSignalAt": "2026-08-17T08:07:27.000Z",
-      "firstSignalAt": "2026-06-10T03:51:59.000Z",
-      "eveningShare": 0.25,
-      "weekendShare": 0.5,
+      "firstSignalAt": "2025-08-13T02:28:55.000Z",
+      "eveningShare": 0.347,
+      "weekendShare": 0.097,
       "hourBuckets": [
         {
-          "key": "15",
-          "count": 3
-        },
-        {
           "key": "16",
-          "count": 2
+          "count": 42
         },
         {
-          "key": "18",
-          "count": 2
+          "key": "15",
+          "count": 31
         },
         {
-          "key": "00",
-          "count": 1
+          "key": "14",
+          "count": 22
+        },
+        {
+          "key": "21",
+          "count": 17
         },
         {
           "key": "09",
-          "count": 1
+          "count": 16
         },
         {
-          "key": "10",
-          "count": 1
+          "key": "18",
+          "count": 14
         },
         {
-          "key": "11",
-          "count": 1
+          "key": "00",
+          "count": 13
+        },
+        {
+          "key": "22",
+          "count": 12
         },
         {
           "key": "17",
-          "count": 1
+          "count": 11
+        },
+        {
+          "key": "10",
+          "count": 10
+        },
+        {
+          "key": "13",
+          "count": 9
+        },
+        {
+          "key": "23",
+          "count": 9
+        },
+        {
+          "key": "02",
+          "count": 7
+        },
+        {
+          "key": "12",
+          "count": 7
+        },
+        {
+          "key": "11",
+          "count": 6
+        },
+        {
+          "key": "01",
+          "count": 5
+        },
+        {
+          "key": "20",
+          "count": 3
+        },
+        {
+          "key": "19",
+          "count": 2
         }
       ],
       "weekdayBuckets": [
         {
-          "key": "0",
-          "count": 5
-        },
-        {
-          "key": "1",
-          "count": 2
-        },
-        {
           "key": "4",
-          "count": 2
+          "count": 56
         },
         {
           "key": "3",
-          "count": 1
+          "count": 48
+        },
+        {
+          "key": "2",
+          "count": 41
         },
         {
           "key": "5",
-          "count": 1
+          "count": 36
+        },
+        {
+          "key": "1",
+          "count": 32
+        },
+        {
+          "key": "0",
+          "count": 15
         },
         {
           "key": "6",
-          "count": 1
+          "count": 8
         }
       ],
       "confidenceBreakdown": [
         {
           "key": "high",
-          "count": 10
+          "count": 157
         },
         {
           "key": "medium",
-          "count": 2
+          "count": 79
         }
       ],
       "signalTypes": [
         {
           "key": "評論/留言",
-          "count": 10
+          "count": 157
         },
         {
           "key": "事件建立",
-          "count": 2
+          "count": 79
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 12
+          "count": 216
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 10
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 6
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 4
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 12
+          "count": 236
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 12
+          "count": 236
         }
       ],
       "notes": [
@@ -698,21 +1162,21 @@
     },
     {
       "name": "成員 #4364",
-      "signalCount": 47,
+      "signalCount": 55,
       "eventCount": 23,
-      "activeDayCount": 20,
+      "activeDayCount": 23,
       "latestSignalAt": "2026-08-16T16:17:40.000Z",
       "firstSignalAt": "2026-06-08T03:14:07.000Z",
-      "eveningShare": 0.383,
-      "weekendShare": 0.043,
+      "eveningShare": 0.418,
+      "weekendShare": 0.036,
       "hourBuckets": [
         {
           "key": "17",
-          "count": 13
+          "count": 16
         },
         {
           "key": "00",
-          "count": 5
+          "count": 6
         },
         {
           "key": "10",
@@ -735,6 +1199,10 @@
           "count": 3
         },
         {
+          "key": "20",
+          "count": 3
+        },
+        {
           "key": "19",
           "count": 2
         },
@@ -745,6 +1213,10 @@
         {
           "key": "23",
           "count": 2
+        },
+        {
+          "key": "03",
+          "count": 1
         },
         {
           "key": "09",
@@ -766,11 +1238,11 @@
       "weekdayBuckets": [
         {
           "key": "1",
-          "count": 13
+          "count": 16
         },
         {
           "key": "2",
-          "count": 11
+          "count": 14
         },
         {
           "key": "3",
@@ -778,7 +1250,7 @@
         },
         {
           "key": "5",
-          "count": 7
+          "count": 9
         },
         {
           "key": "4",
@@ -796,7 +1268,7 @@
       "confidenceBreakdown": [
         {
           "key": "high",
-          "count": 24
+          "count": 32
         },
         {
           "key": "medium",
@@ -806,7 +1278,7 @@
       "signalTypes": [
         {
           "key": "評論/留言",
-          "count": 24
+          "count": 32
         },
         {
           "key": "事件建立",
@@ -816,7 +1288,7 @@
       "categories": [
         {
           "key": "自定義名詞修正",
-          "count": 35
+          "count": 43
         },
         {
           "key": "一般事件",
@@ -826,13 +1298,101 @@
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 47
+          "count": 55
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 47
+          "count": 55
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #04CA",
+      "signalCount": 11,
+      "eventCount": 6,
+      "activeDayCount": 5,
+      "latestSignalAt": "2026-08-16T16:15:25.000Z",
+      "firstSignalAt": "2026-04-20T02:22:42.000Z",
+      "eveningShare": 0.364,
+      "weekendShare": 0.273,
+      "hourBuckets": [
+        {
+          "key": "10",
+          "count": 6
+        },
+        {
+          "key": "23",
+          "count": 3
+        },
+        {
+          "key": "00",
+          "count": 1
+        },
+        {
+          "key": "17",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 7
+        },
+        {
+          "key": "0",
+          "count": 3
+        },
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 6
+        },
+        {
+          "key": "high",
+          "count": 5
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 6
+        },
+        {
+          "key": "評論/留言",
+          "count": 5
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 6
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 5
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 11
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 11
         }
       ],
       "notes": [
@@ -842,200 +1402,56 @@
     },
     {
       "name": "成員 #5A8C",
-      "signalCount": 6,
-      "eventCount": 2,
-      "activeDayCount": 4,
+      "signalCount": 46,
+      "eventCount": 21,
+      "activeDayCount": 22,
       "latestSignalAt": "2026-08-16T12:38:01.000Z",
-      "firstSignalAt": "2026-04-23T08:49:40.000Z",
-      "eveningShare": 0.5,
-      "weekendShare": 0.667,
+      "firstSignalAt": "2025-08-13T02:33:36.000Z",
+      "eveningShare": 0.174,
+      "weekendShare": 0.109,
       "hourBuckets": [
         {
           "key": "16",
+          "count": 8
+        },
+        {
+          "key": "17",
+          "count": 8
+        },
+        {
+          "key": "14",
+          "count": 7
+        },
+        {
+          "key": "12",
+          "count": 6
+        },
+        {
+          "key": "15",
+          "count": 3
+        },
+        {
+          "key": "10",
           "count": 2
         },
         {
-          "key": "20",
+          "key": "11",
           "count": 2
-        },
-        {
-          "key": "09",
-          "count": 1
         },
         {
           "key": "18",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "0",
           "count": 2
-        },
-        {
-          "key": "6",
-          "count": 2
-        },
-        {
-          "key": "2",
-          "count": 1
-        },
-        {
-          "key": "4",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "high",
-          "count": 4
-        },
-        {
-          "key": "medium",
-          "count": 2
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "評論/留言",
-          "count": 4
-        },
-        {
-          "key": "事件建立",
-          "count": 2
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 5
-        },
-        {
-          "key": "家庭財務/社福資料",
-          "count": 1
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 6
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 6
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #4327",
-      "signalCount": 6,
-      "eventCount": 4,
-      "activeDayCount": 5,
-      "latestSignalAt": "2026-08-14T16:39:55.000Z",
-      "firstSignalAt": "2026-03-13T01:41:59.000Z",
-      "eveningShare": 0.333,
-      "weekendShare": 0.167,
-      "hourBuckets": [
-        {
-          "key": "09",
-          "count": 3
-        },
-        {
-          "key": "00",
-          "count": 1
-        },
-        {
-          "key": "11",
-          "count": 1
         },
         {
           "key": "20",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "5",
-          "count": 3
-        },
-        {
-          "key": "1",
-          "count": 1
-        },
-        {
-          "key": "4",
-          "count": 1
-        },
-        {
-          "key": "6",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 4
-        },
-        {
-          "key": "high",
           "count": 2
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 4
         },
         {
-          "key": "評論/留言",
-          "count": 2
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 4
+          "key": "09",
+          "count": 1
         },
         {
-          "key": "家庭財務/社福資料",
-          "count": 2
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 6
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 6
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #EE42",
-      "signalCount": 3,
-      "eventCount": 1,
-      "activeDayCount": 3,
-      "latestSignalAt": "2026-08-14T11:46:39.000Z",
-      "firstSignalAt": "2026-08-06T03:03:59.000Z",
-      "eveningShare": 0.667,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "11",
+          "key": "13",
           "count": 1
         },
         {
@@ -1045,11 +1461,39 @@
         {
           "key": "21",
           "count": 1
+        },
+        {
+          "key": "22",
+          "count": 1
+        },
+        {
+          "key": "23",
+          "count": 1
         }
       ],
       "weekdayBuckets": [
         {
+          "key": "1",
+          "count": 12
+        },
+        {
           "key": "4",
+          "count": 11
+        },
+        {
+          "key": "3",
+          "count": 10
+        },
+        {
+          "key": "2",
+          "count": 7
+        },
+        {
+          "key": "6",
+          "count": 3
+        },
+        {
+          "key": "0",
           "count": 2
         },
         {
@@ -1060,39 +1504,47 @@
       "confidenceBreakdown": [
         {
           "key": "high",
-          "count": 2
+          "count": 25
         },
         {
           "key": "medium",
-          "count": 1
+          "count": 21
         }
       ],
       "signalTypes": [
         {
           "key": "評論/留言",
-          "count": 2
+          "count": 25
         },
         {
           "key": "事件建立",
-          "count": 1
+          "count": 21
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 3
+          "count": 39
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 5
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 2
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 3
+          "count": 46
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 3
+          "count": 46
         }
       ],
       "notes": [
@@ -1101,90 +1553,126 @@
       ]
     },
     {
-      "name": "成員 #3A9E",
-      "signalCount": 19,
-      "eventCount": 12,
-      "activeDayCount": 8,
-      "latestSignalAt": "2026-08-14T04:08:31.000Z",
-      "firstSignalAt": "2026-04-08T06:10:44.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
+      "name": "成員 #4327",
+      "signalCount": 63,
+      "eventCount": 27,
+      "activeDayCount": 27,
+      "latestSignalAt": "2026-08-14T16:39:55.000Z",
+      "firstSignalAt": "2025-12-03T09:36:11.000Z",
+      "eveningShare": 0.587,
+      "weekendShare": 0.063,
       "hourBuckets": [
         {
-          "key": "10",
+          "key": "17",
+          "count": 15
+        },
+        {
+          "key": "23",
+          "count": 10
+        },
+        {
+          "key": "19",
+          "count": 8
+        },
+        {
+          "key": "18",
           "count": 5
         },
         {
-          "key": "14",
+          "key": "20",
           "count": 5
         },
         {
           "key": "09",
+          "count": 4
+        },
+        {
+          "key": "21",
+          "count": 4
+        },
+        {
+          "key": "10",
           "count": 3
         },
         {
-          "key": "11",
-          "count": 2
-        },
-        {
           "key": "15",
+          "count": 3
+        },
+        {
+          "key": "00",
           "count": 2
         },
         {
-          "key": "12",
+          "key": "22",
+          "count": 2
+        },
+        {
+          "key": "02",
           "count": 1
         },
         {
-          "key": "16",
+          "key": "11",
           "count": 1
         }
       ],
       "weekdayBuckets": [
         {
+          "key": "1",
+          "count": 24
+        },
+        {
           "key": "3",
+          "count": 13
+        },
+        {
+          "key": "2",
+          "count": 10
+        },
+        {
+          "key": "4",
           "count": 7
         },
         {
           "key": "5",
-          "count": 7
+          "count": 5
         },
         {
-          "key": "4",
-          "count": 4
+          "key": "0",
+          "count": 2
         },
         {
-          "key": "2",
-          "count": 1
+          "key": "6",
+          "count": 2
         }
       ],
       "confidenceBreakdown": [
         {
-          "key": "medium",
-          "count": 12
+          "key": "high",
+          "count": 36
         },
         {
-          "key": "high",
-          "count": 7
+          "key": "medium",
+          "count": 27
         }
       ],
       "signalTypes": [
         {
-          "key": "事件建立",
-          "count": 12
+          "key": "評論/留言",
+          "count": 36
         },
         {
-          "key": "評論/留言",
-          "count": 7
+          "key": "事件建立",
+          "count": 27
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 15
+          "count": 53
         },
         {
           "key": "家庭財務/社福資料",
-          "count": 3
+          "count": 9
         },
         {
           "key": "會議紀錄/資料整理",
@@ -1194,13 +1682,177 @@
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 19
+          "count": 63
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 19
+          "count": 63
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #C695",
+      "signalCount": 300,
+      "eventCount": 151,
+      "activeDayCount": 73,
+      "latestSignalAt": "2026-08-14T09:21:12.000Z",
+      "firstSignalAt": "2025-09-18T13:12:06.000Z",
+      "eveningShare": 0.413,
+      "weekendShare": 0.107,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 70
+        },
+        {
+          "key": "17",
+          "count": 44
+        },
+        {
+          "key": "15",
+          "count": 36
+        },
+        {
+          "key": "11",
+          "count": 27
+        },
+        {
+          "key": "16",
+          "count": 23
+        },
+        {
+          "key": "10",
+          "count": 15
+        },
+        {
+          "key": "22",
+          "count": 14
+        },
+        {
+          "key": "12",
+          "count": 13
+        },
+        {
+          "key": "14",
+          "count": 11
+        },
+        {
+          "key": "19",
+          "count": 9
+        },
+        {
+          "key": "21",
+          "count": 9
+        },
+        {
+          "key": "00",
+          "count": 7
+        },
+        {
+          "key": "13",
+          "count": 6
+        },
+        {
+          "key": "23",
+          "count": 6
+        },
+        {
+          "key": "20",
+          "count": 5
+        },
+        {
+          "key": "01",
+          "count": 3
+        },
+        {
+          "key": "02",
+          "count": 1
+        },
+        {
+          "key": "09",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "5",
+          "count": 66
+        },
+        {
+          "key": "2",
+          "count": 61
+        },
+        {
+          "key": "3",
+          "count": 60
+        },
+        {
+          "key": "1",
+          "count": 49
+        },
+        {
+          "key": "4",
+          "count": 32
+        },
+        {
+          "key": "6",
+          "count": 20
+        },
+        {
+          "key": "0",
+          "count": 12
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 151
+        },
+        {
+          "key": "high",
+          "count": 149
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 151
+        },
+        {
+          "key": "評論/留言",
+          "count": 149
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 290
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 6
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 4
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 300
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 300
         }
       ],
       "notes": [
@@ -1210,36 +1862,64 @@
     },
     {
       "name": "成員 #C61E",
-      "signalCount": 116,
-      "eventCount": 82,
-      "activeDayCount": 35,
+      "signalCount": 441,
+      "eventCount": 219,
+      "activeDayCount": 152,
       "latestSignalAt": "2026-08-14T01:48:31.000Z",
-      "firstSignalAt": "2026-03-03T10:19:03.000Z",
-      "eveningShare": 0.233,
-      "weekendShare": 0.009,
+      "firstSignalAt": "2025-08-14T04:13:22.000Z",
+      "eveningShare": 0.388,
+      "weekendShare": 0.125,
       "hourBuckets": [
         {
           "key": "17",
-          "count": 26
+          "count": 86
         },
         {
           "key": "18",
-          "count": 21
-        },
-        {
-          "key": "09",
-          "count": 13
-        },
-        {
-          "key": "15",
-          "count": 13
+          "count": 69
         },
         {
           "key": "16",
-          "count": 12
+          "count": 51
+        },
+        {
+          "key": "15",
+          "count": 43
+        },
+        {
+          "key": "00",
+          "count": 30
+        },
+        {
+          "key": "22",
+          "count": 24
+        },
+        {
+          "key": "09",
+          "count": 23
+        },
+        {
+          "key": "10",
+          "count": 23
+        },
+        {
+          "key": "19",
+          "count": 21
+        },
+        {
+          "key": "14",
+          "count": 20
         },
         {
           "key": "12",
+          "count": 13
+        },
+        {
+          "key": "23",
+          "count": 11
+        },
+        {
+          "key": "21",
           "count": 10
         },
         {
@@ -1247,104 +1927,100 @@
           "count": 8
         },
         {
-          "key": "14",
-          "count": 5
-        },
-        {
-          "key": "22",
+          "key": "01",
           "count": 3
         },
         {
-          "key": "23",
-          "count": 2
+          "key": "20",
+          "count": 3
         },
         {
           "key": "08",
-          "count": 1
+          "count": 2
         },
         {
-          "key": "10",
-          "count": 1
-        },
-        {
-          "key": "20",
+          "key": "13",
           "count": 1
         }
       ],
       "weekdayBuckets": [
         {
           "key": "3",
-          "count": 36
-        },
-        {
-          "key": "2",
-          "count": 27
+          "count": 95
         },
         {
           "key": "4",
-          "count": 25
+          "count": 90
+        },
+        {
+          "key": "2",
+          "count": 88
         },
         {
           "key": "5",
-          "count": 16
+          "count": 57
         },
         {
           "key": "1",
-          "count": 11
+          "count": 56
+        },
+        {
+          "key": "0",
+          "count": 31
         },
         {
           "key": "6",
-          "count": 1
+          "count": 24
         }
       ],
       "confidenceBreakdown": [
         {
-          "key": "medium",
-          "count": 82
+          "key": "high",
+          "count": 222
         },
         {
-          "key": "high",
-          "count": 34
+          "key": "medium",
+          "count": 219
         }
       ],
       "signalTypes": [
         {
-          "key": "事件建立",
-          "count": 82
+          "key": "評論/留言",
+          "count": 222
         },
         {
-          "key": "評論/留言",
-          "count": 34
+          "key": "事件建立",
+          "count": 219
         }
       ],
       "categories": [
         {
-          "key": "自定義名詞修正",
-          "count": 65
+          "key": "一般事件",
+          "count": 311
         },
         {
-          "key": "一般事件",
-          "count": 39
+          "key": "自定義名詞修正",
+          "count": 70
         },
         {
           "key": "會議紀錄/資料整理",
-          "count": 9
+          "count": 36
         },
         {
           "key": "家庭財務/社福資料",
-          "count": 3
+          "count": 24
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 116
+          "count": 441
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 116
+          "count": 441
         }
       ],
       "notes": [
@@ -1354,17 +2030,21 @@
     },
     {
       "name": "成員 #340E",
-      "signalCount": 10,
+      "signalCount": 13,
       "eventCount": 8,
-      "activeDayCount": 4,
+      "activeDayCount": 7,
       "latestSignalAt": "2026-08-14T01:46:41.000Z",
       "firstSignalAt": "2026-04-02T06:17:44.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0.2,
+      "eveningShare": 0.154,
+      "weekendShare": 0.231,
       "hourBuckets": [
         {
           "key": "14",
           "count": 7
+        },
+        {
+          "key": "21",
+          "count": 2
         },
         {
           "key": "09",
@@ -1375,6 +2055,10 @@
           "count": 1
         },
         {
+          "key": "12",
+          "count": 1
+        },
+        {
           "key": "13",
           "count": 1
         }
@@ -1382,7 +2066,7 @@
       "weekdayBuckets": [
         {
           "key": "4",
-          "count": 5
+          "count": 7
         },
         {
           "key": "2",
@@ -1391,6 +2075,10 @@
         {
           "key": "6",
           "count": 2
+        },
+        {
+          "key": "0",
+          "count": 1
         },
         {
           "key": "5",
@@ -1404,7 +2092,7 @@
         },
         {
           "key": "high",
-          "count": 2
+          "count": 5
         }
       ],
       "signalTypes": [
@@ -1414,29 +2102,29 @@
         },
         {
           "key": "評論/留言",
-          "count": 2
+          "count": 5
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 9
+          "count": 11
         },
         {
           "key": "會議紀錄/資料整理",
-          "count": 1
+          "count": 2
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 10
+          "count": 13
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 10
+          "count": 13
         }
       ],
       "notes": [
@@ -1446,31 +2134,63 @@
     },
     {
       "name": "成員 #8524",
-      "signalCount": 5,
-      "eventCount": 5,
-      "activeDayCount": 4,
+      "signalCount": 20,
+      "eventCount": 10,
+      "activeDayCount": 10,
       "latestSignalAt": "2026-08-14T01:42:34.000Z",
-      "firstSignalAt": "2026-03-09T01:15:13.000Z",
-      "eveningShare": 0,
+      "firstSignalAt": "2026-03-03T09:20:09.000Z",
+      "eveningShare": 0.45,
       "weekendShare": 0,
       "hourBuckets": [
+        {
+          "key": "17",
+          "count": 5
+        },
         {
           "key": "10",
           "count": 3
         },
         {
+          "key": "20",
+          "count": 3
+        },
+        {
           "key": "09",
           "count": 2
+        },
+        {
+          "key": "19",
+          "count": 2
+        },
+        {
+          "key": "21",
+          "count": 2
+        },
+        {
+          "key": "14",
+          "count": 1
+        },
+        {
+          "key": "22",
+          "count": 1
+        },
+        {
+          "key": "23",
+          "count": 1
         }
       ],
       "weekdayBuckets": [
         {
+          "key": "2",
+          "count": 11
+        },
+        {
           "key": "3",
-          "count": 2
+          "count": 5
         },
         {
           "key": "1",
-          "count": 1
+          "count": 2
         },
         {
           "key": "4",
@@ -1483,36 +2203,48 @@
       ],
       "confidenceBreakdown": [
         {
+          "key": "high",
+          "count": 10
+        },
+        {
           "key": "medium",
-          "count": 5
+          "count": 10
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 5
+          "count": 10
+        },
+        {
+          "key": "評論/留言",
+          "count": 10
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 3
+          "count": 10
         },
         {
           "key": "家庭財務/社福資料",
-          "count": 2
+          "count": 6
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 4
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 5
+          "count": 20
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 5
+          "count": 20
         }
       ],
       "notes": [
@@ -1522,125 +2254,149 @@
     },
     {
       "name": "成員 #2CC0",
-      "signalCount": 33,
-      "eventCount": 21,
-      "activeDayCount": 15,
+      "signalCount": 74,
+      "eventCount": 37,
+      "activeDayCount": 32,
       "latestSignalAt": "2026-08-13T16:27:27.000Z",
-      "firstSignalAt": "2026-03-30T03:43:05.000Z",
-      "eveningShare": 0.606,
-      "weekendShare": 0.061,
+      "firstSignalAt": "2025-11-14T01:44:02.000Z",
+      "eveningShare": 0.419,
+      "weekendShare": 0.108,
       "hourBuckets": [
         {
+          "key": "17",
+          "count": 12
+        },
+        {
           "key": "23",
-          "count": 7
+          "count": 9
         },
         {
           "key": "21",
-          "count": 6
-        },
-        {
-          "key": "11",
-          "count": 5
+          "count": 8
         },
         {
           "key": "12",
+          "count": 7
+        },
+        {
+          "key": "11",
+          "count": 6
+        },
+        {
+          "key": "01",
+          "count": 5
+        },
+        {
+          "key": "09",
           "count": 5
         },
         {
           "key": "00",
-          "count": 3
+          "count": 4
+        },
+        {
+          "key": "14",
+          "count": 4
+        },
+        {
+          "key": "15",
+          "count": 4
         },
         {
           "key": "16",
-          "count": 2
+          "count": 3
         },
         {
           "key": "22",
-          "count": 2
+          "count": 3
         },
         {
-          "key": "01",
-          "count": 1
+          "key": "10",
+          "count": 2
         },
         {
           "key": "02",
           "count": 1
         },
         {
-          "key": "15",
+          "key": "03",
           "count": 1
         }
       ],
       "weekdayBuckets": [
         {
+          "key": "3",
+          "count": 20
+        },
+        {
           "key": "1",
-          "count": 9
+          "count": 17
         },
         {
           "key": "5",
-          "count": 8
+          "count": 15
         },
         {
           "key": "4",
-          "count": 7
-        },
-        {
-          "key": "3",
-          "count": 6
-        },
-        {
-          "key": "6",
-          "count": 2
+          "count": 8
         },
         {
           "key": "2",
-          "count": 1
+          "count": 6
+        },
+        {
+          "key": "0",
+          "count": 4
+        },
+        {
+          "key": "6",
+          "count": 4
         }
       ],
       "confidenceBreakdown": [
         {
-          "key": "medium",
-          "count": 21
+          "key": "high",
+          "count": 37
         },
         {
-          "key": "high",
-          "count": 12
+          "key": "medium",
+          "count": 37
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 21
+          "count": 37
         },
         {
           "key": "評論/留言",
-          "count": 12
+          "count": 37
         }
       ],
       "categories": [
+        {
+          "key": "一般事件",
+          "count": 46
+        },
         {
           "key": "自定義名詞修正",
           "count": 20
         },
         {
-          "key": "一般事件",
-          "count": 9
-        },
-        {
           "key": "會議紀錄/資料整理",
-          "count": 4
+          "count": 8
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 33
+          "count": 74
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 33
+          "count": 74
         }
       ],
       "notes": [
@@ -1650,105 +2406,173 @@
     },
     {
       "name": "成員 #4402",
-      "signalCount": 12,
-      "eventCount": 8,
-      "activeDayCount": 8,
+      "signalCount": 154,
+      "eventCount": 63,
+      "activeDayCount": 66,
       "latestSignalAt": "2026-08-13T15:48:14.000Z",
-      "firstSignalAt": "2026-03-09T01:26:54.000Z",
-      "eveningShare": 0.083,
-      "weekendShare": 0,
+      "firstSignalAt": "2025-08-13T01:56:29.000Z",
+      "eveningShare": 0.273,
+      "weekendShare": 0.123,
       "hourBuckets": [
         {
-          "key": "10",
-          "count": 5
-        },
-        {
-          "key": "09",
-          "count": 1
-        },
-        {
-          "key": "11",
-          "count": 1
-        },
-        {
-          "key": "12",
-          "count": 1
-        },
-        {
-          "key": "13",
-          "count": 1
-        },
-        {
-          "key": "15",
-          "count": 1
+          "key": "17",
+          "count": 40
         },
         {
           "key": "16",
-          "count": 1
+          "count": 18
+        },
+        {
+          "key": "15",
+          "count": 14
+        },
+        {
+          "key": "10",
+          "count": 12
+        },
+        {
+          "key": "12",
+          "count": 8
+        },
+        {
+          "key": "14",
+          "count": 8
+        },
+        {
+          "key": "21",
+          "count": 8
+        },
+        {
+          "key": "00",
+          "count": 6
+        },
+        {
+          "key": "18",
+          "count": 5
         },
         {
           "key": "23",
+          "count": 5
+        },
+        {
+          "key": "01",
+          "count": 4
+        },
+        {
+          "key": "09",
+          "count": 4
+        },
+        {
+          "key": "11",
+          "count": 4
+        },
+        {
+          "key": "13",
+          "count": 4
+        },
+        {
+          "key": "19",
+          "count": 4
+        },
+        {
+          "key": "02",
+          "count": 3
+        },
+        {
+          "key": "03",
+          "count": 2
+        },
+        {
+          "key": "22",
+          "count": 2
+        },
+        {
+          "key": "04",
+          "count": 1
+        },
+        {
+          "key": "07",
+          "count": 1
+        },
+        {
+          "key": "20",
           "count": 1
         }
       ],
       "weekdayBuckets": [
         {
           "key": "1",
-          "count": 6
-        },
-        {
-          "key": "4",
-          "count": 3
+          "count": 43
         },
         {
           "key": "3",
-          "count": 2
+          "count": 26
         },
         {
           "key": "2",
-          "count": 1
+          "count": 25
+        },
+        {
+          "key": "4",
+          "count": 23
+        },
+        {
+          "key": "5",
+          "count": 18
+        },
+        {
+          "key": "0",
+          "count": 15
+        },
+        {
+          "key": "6",
+          "count": 4
         }
       ],
       "confidenceBreakdown": [
         {
-          "key": "medium",
-          "count": 8
+          "key": "high",
+          "count": 91
         },
         {
-          "key": "high",
-          "count": 4
+          "key": "medium",
+          "count": 63
         }
       ],
       "signalTypes": [
         {
-          "key": "事件建立",
-          "count": 8
+          "key": "評論/留言",
+          "count": 91
         },
         {
-          "key": "評論/留言",
-          "count": 4
+          "key": "事件建立",
+          "count": 63
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 10
+          "count": 142
         },
         {
           "key": "會議紀錄/資料整理",
+          "count": 10
+        },
+        {
+          "key": "家庭財務/社福資料",
           "count": 2
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 12
+          "count": 154
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 12
+          "count": 154
         }
       ],
       "notes": [
@@ -1758,17 +2582,17 @@
     },
     {
       "name": "成員 #F4B0",
-      "signalCount": 16,
+      "signalCount": 17,
       "eventCount": 11,
-      "activeDayCount": 8,
+      "activeDayCount": 9,
       "latestSignalAt": "2026-08-11T08:50:48.000Z",
       "firstSignalAt": "2026-04-14T08:49:23.000Z",
-      "eveningShare": 0.25,
-      "weekendShare": 0.125,
+      "eveningShare": 0.235,
+      "weekendShare": 0.118,
       "hourBuckets": [
         {
           "key": "16",
-          "count": 6
+          "count": 7
         },
         {
           "key": "11",
@@ -1809,6 +2633,10 @@
           "count": 1
         },
         {
+          "key": "4",
+          "count": 1
+        },
+        {
           "key": "5",
           "count": 1
         },
@@ -1824,7 +2652,7 @@
         },
         {
           "key": "high",
-          "count": 5
+          "count": 6
         }
       ],
       "signalTypes": [
@@ -1834,7 +2662,7 @@
         },
         {
           "key": "評論/留言",
-          "count": 5
+          "count": 6
         }
       ],
       "categories": [
@@ -1844,19 +2672,19 @@
         },
         {
           "key": "一般事件",
-          "count": 1
+          "count": 2
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 16
+          "count": 17
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 16
+          "count": 17
         }
       ],
       "notes": [
@@ -1866,9 +2694,9 @@
     },
     {
       "name": "成員 #3C8D",
-      "signalCount": 6,
+      "signalCount": 7,
       "eventCount": 6,
-      "activeDayCount": 2,
+      "activeDayCount": 3,
       "latestSignalAt": "2026-08-11T05:46:36.000Z",
       "firstSignalAt": "2026-03-09T02:08:18.000Z",
       "eveningShare": 0,
@@ -1880,7 +2708,7 @@
         },
         {
           "key": "10",
-          "count": 1
+          "count": 2
         }
       ],
       "weekdayBuckets": [
@@ -1891,18 +2719,30 @@
         {
           "key": "1",
           "count": 1
+        },
+        {
+          "key": "3",
+          "count": 1
         }
       ],
       "confidenceBreakdown": [
         {
           "key": "medium",
           "count": 6
+        },
+        {
+          "key": "high",
+          "count": 1
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
           "count": 6
+        },
+        {
+          "key": "評論/留言",
+          "count": 1
         }
       ],
       "categories": [
@@ -1912,115 +2752,19 @@
         },
         {
           "key": "一般事件",
-          "count": 1
+          "count": 2
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 6
+          "count": 7
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 6
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #6E59",
-      "signalCount": 15,
-      "eventCount": 10,
-      "activeDayCount": 7,
-      "latestSignalAt": "2026-08-11T04:08:35.000Z",
-      "firstSignalAt": "2026-07-24T07:54:58.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "12",
-          "count": 6
-        },
-        {
-          "key": "15",
-          "count": 6
-        },
-        {
-          "key": "09",
-          "count": 1
-        },
-        {
-          "key": "11",
-          "count": 1
-        },
-        {
-          "key": "14",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "2",
-          "count": 6
-        },
-        {
-          "key": "5",
-          "count": 6
-        },
-        {
-          "key": "1",
-          "count": 1
-        },
-        {
-          "key": "3",
-          "count": 1
-        },
-        {
-          "key": "4",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 10
-        },
-        {
-          "key": "high",
-          "count": 5
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 10
-        },
-        {
-          "key": "評論/留言",
-          "count": 5
-        }
-      ],
-      "categories": [
-        {
-          "key": "自定義名詞修正",
-          "count": 15
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 15
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 15
+          "count": 7
         }
       ],
       "notes": [
@@ -2101,17 +2845,153 @@
       ]
     },
     {
+      "name": "成員 #8C22",
+      "signalCount": 35,
+      "eventCount": 16,
+      "activeDayCount": 20,
+      "latestSignalAt": "2026-08-09T09:56:09.000Z",
+      "firstSignalAt": "2026-02-26T09:30:59.000Z",
+      "eveningShare": 0.229,
+      "weekendShare": 0.2,
+      "hourBuckets": [
+        {
+          "key": "17",
+          "count": 14
+        },
+        {
+          "key": "16",
+          "count": 8
+        },
+        {
+          "key": "15",
+          "count": 3
+        },
+        {
+          "key": "18",
+          "count": 3
+        },
+        {
+          "key": "22",
+          "count": 2
+        },
+        {
+          "key": "01",
+          "count": 1
+        },
+        {
+          "key": "11",
+          "count": 1
+        },
+        {
+          "key": "14",
+          "count": 1
+        },
+        {
+          "key": "20",
+          "count": 1
+        },
+        {
+          "key": "21",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 9
+        },
+        {
+          "key": "4",
+          "count": 9
+        },
+        {
+          "key": "1",
+          "count": 6
+        },
+        {
+          "key": "0",
+          "count": 4
+        },
+        {
+          "key": "2",
+          "count": 4
+        },
+        {
+          "key": "6",
+          "count": 3
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "high",
+          "count": 19
+        },
+        {
+          "key": "medium",
+          "count": 16
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "評論/留言",
+          "count": 19
+        },
+        {
+          "key": "事件建立",
+          "count": 16
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 17
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 6
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 6
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 6
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 35
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 35
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
       "name": "成員 #07FB",
-      "signalCount": 6,
-      "eventCount": 6,
-      "activeDayCount": 2,
+      "signalCount": 14,
+      "eventCount": 14,
+      "activeDayCount": 4,
       "latestSignalAt": "2026-08-06T02:33:40.000Z",
-      "firstSignalAt": "2026-03-09T01:21:47.000Z",
+      "firstSignalAt": "2025-12-08T02:59:44.000Z",
       "eveningShare": 0,
       "weekendShare": 0,
       "hourBuckets": [
         {
           "key": "10",
+          "count": 8
+        },
+        {
+          "key": "11",
           "count": 5
         },
         {
@@ -2121,46 +3001,50 @@
       ],
       "weekdayBuckets": [
         {
-          "key": "4",
-          "count": 5
+          "key": "1",
+          "count": 7
         },
         {
-          "key": "1",
-          "count": 1
+          "key": "4",
+          "count": 7
         }
       ],
       "confidenceBreakdown": [
         {
           "key": "medium",
-          "count": 6
+          "count": 14
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 6
+          "count": 14
         }
       ],
       "categories": [
+        {
+          "key": "一般事件",
+          "count": 8
+        },
         {
           "key": "自定義名詞修正",
           "count": 5
         },
         {
-          "key": "一般事件",
+          "key": "家庭財務/社福資料",
           "count": 1
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 6
+          "count": 14
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 6
+          "count": 14
         }
       ],
       "notes": [
@@ -2170,38 +3054,186 @@
     },
     {
       "name": "成員 #268A",
-      "signalCount": 9,
-      "eventCount": 9,
-      "activeDayCount": 4,
+      "signalCount": 138,
+      "eventCount": 45,
+      "activeDayCount": 28,
       "latestSignalAt": "2026-08-06T02:28:25.000Z",
-      "firstSignalAt": "2026-03-09T01:10:51.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
+      "firstSignalAt": "2025-09-25T03:17:03.000Z",
+      "eveningShare": 0.348,
+      "weekendShare": 0.022,
       "hourBuckets": [
         {
-          "key": "10",
-          "count": 7
+          "key": "15",
+          "count": 25
         },
         {
-          "key": "09",
-          "count": 1
+          "key": "21",
+          "count": 23
+        },
+        {
+          "key": "10",
+          "count": 16
+        },
+        {
+          "key": "16",
+          "count": 15
+        },
+        {
+          "key": "11",
+          "count": 11
         },
         {
           "key": "14",
+          "count": 10
+        },
+        {
+          "key": "22",
+          "count": 9
+        },
+        {
+          "key": "12",
+          "count": 7
+        },
+        {
+          "key": "23",
+          "count": 6
+        },
+        {
+          "key": "17",
+          "count": 5
+        },
+        {
+          "key": "18",
+          "count": 4
+        },
+        {
+          "key": "20",
+          "count": 4
+        },
+        {
+          "key": "19",
+          "count": 2
+        },
+        {
+          "key": "09",
           "count": 1
         }
       ],
       "weekdayBuckets": [
         {
           "key": "4",
-          "count": 5
+          "count": 51
         },
         {
           "key": "3",
-          "count": 2
+          "count": 29
+        },
+        {
+          "key": "2",
+          "count": 21
         },
         {
           "key": "1",
+          "count": 19
+        },
+        {
+          "key": "5",
+          "count": 15
+        },
+        {
+          "key": "0",
+          "count": 2
+        },
+        {
+          "key": "6",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "high",
+          "count": 93
+        },
+        {
+          "key": "medium",
+          "count": 45
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "評論/留言",
+          "count": 93
+        },
+        {
+          "key": "事件建立",
+          "count": 45
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 113
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 16
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 5
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 4
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 138
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 138
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #B402",
+      "signalCount": 5,
+      "eventCount": 3,
+      "activeDayCount": 3,
+      "latestSignalAt": "2026-07-30T12:58:55.000Z",
+      "firstSignalAt": "2026-06-01T02:48:08.000Z",
+      "eveningShare": 0.4,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "10",
+          "count": 3
+        },
+        {
+          "key": "20",
+          "count": 1
+        },
+        {
+          "key": "22",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 3
+        },
+        {
+          "key": "4",
           "count": 1
         },
         {
@@ -2212,39 +3244,39 @@
       "confidenceBreakdown": [
         {
           "key": "medium",
-          "count": 9
+          "count": 3
+        },
+        {
+          "key": "high",
+          "count": 2
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 9
+          "count": 3
+        },
+        {
+          "key": "評論/留言",
+          "count": 2
         }
       ],
       "categories": [
         {
           "key": "自定義名詞修正",
           "count": 5
-        },
-        {
-          "key": "一般事件",
-          "count": 3
-        },
-        {
-          "key": "家庭財務/社福資料",
-          "count": 1
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 9
+          "count": 5
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 9
+          "count": 5
         }
       ],
       "notes": [
@@ -2254,20 +3286,32 @@
     },
     {
       "name": "成員 #A1A5",
-      "signalCount": 32,
-      "eventCount": 22,
-      "activeDayCount": 10,
+      "signalCount": 64,
+      "eventCount": 32,
+      "activeDayCount": 26,
       "latestSignalAt": "2026-07-30T10:27:15.000Z",
-      "firstSignalAt": "2026-03-09T02:07:07.000Z",
-      "eveningShare": 0.188,
-      "weekendShare": 0,
+      "firstSignalAt": "2026-01-13T08:53:37.000Z",
+      "eveningShare": 0.359,
+      "weekendShare": 0.063,
       "hourBuckets": [
         {
           "key": "15",
           "count": 10
         },
         {
+          "key": "17",
+          "count": 9
+        },
+        {
+          "key": "04",
+          "count": 7
+        },
+        {
           "key": "10",
+          "count": 6
+        },
+        {
+          "key": "16",
           "count": 6
         },
         {
@@ -2275,16 +3319,24 @@
           "count": 5
         },
         {
-          "key": "08",
-          "count": 3
+          "key": "18",
+          "count": 5
         },
         {
-          "key": "04",
-          "count": 2
+          "key": "08",
+          "count": 4
         },
         {
           "key": "23",
-          "count": 2
+          "count": 4
+        },
+        {
+          "key": "00",
+          "count": 1
+        },
+        {
+          "key": "03",
+          "count": 1
         },
         {
           "key": "05",
@@ -2295,64 +3347,228 @@
           "count": 1
         },
         {
-          "key": "16",
+          "key": "19",
           "count": 1
         },
         {
-          "key": "18",
+          "key": "20",
+          "count": 1
+        },
+        {
+          "key": "21",
+          "count": 1
+        },
+        {
+          "key": "22",
           "count": 1
         }
       ],
       "weekdayBuckets": [
         {
           "key": "2",
-          "count": 12
+          "count": 23
         },
         {
           "key": "3",
-          "count": 7
+          "count": 12
         },
         {
           "key": "5",
-          "count": 6
+          "count": 12
         },
         {
           "key": "4",
-          "count": 5
+          "count": 10
+        },
+        {
+          "key": "0",
+          "count": 4
         },
         {
           "key": "1",
-          "count": 2
+          "count": 3
         }
       ],
       "confidenceBreakdown": [
         {
-          "key": "medium",
-          "count": 22
+          "key": "high",
+          "count": 32
         },
         {
-          "key": "high",
-          "count": 10
+          "key": "medium",
+          "count": 32
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 22
+          "count": 32
         },
         {
           "key": "評論/留言",
-          "count": 10
+          "count": 32
         }
       ],
       "categories": [
+        {
+          "key": "一般事件",
+          "count": 40
+        },
         {
           "key": "自定義名詞修正",
           "count": 20
         },
         {
-          "key": "一般事件",
+          "key": "會議紀錄/資料整理",
+          "count": 4
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 64
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 64
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #E6C8",
+      "signalCount": 43,
+      "eventCount": 16,
+      "activeDayCount": 21,
+      "latestSignalAt": "2026-07-16T15:27:26.000Z",
+      "firstSignalAt": "2026-01-13T08:50:28.000Z",
+      "eveningShare": 0.465,
+      "weekendShare": 0.093,
+      "hourBuckets": [
+        {
+          "key": "11",
+          "count": 7
+        },
+        {
+          "key": "16",
+          "count": 6
+        },
+        {
+          "key": "18",
+          "count": 6
+        },
+        {
+          "key": "10",
+          "count": 5
+        },
+        {
+          "key": "20",
+          "count": 4
+        },
+        {
+          "key": "21",
+          "count": 3
+        },
+        {
+          "key": "09",
+          "count": 2
+        },
+        {
+          "key": "22",
+          "count": 2
+        },
+        {
+          "key": "23",
+          "count": 2
+        },
+        {
+          "key": "00",
+          "count": 1
+        },
+        {
+          "key": "01",
+          "count": 1
+        },
+        {
+          "key": "13",
+          "count": 1
+        },
+        {
+          "key": "15",
+          "count": 1
+        },
+        {
+          "key": "17",
+          "count": 1
+        },
+        {
+          "key": "19",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 14
+        },
+        {
+          "key": "1",
           "count": 10
+        },
+        {
+          "key": "5",
+          "count": 10
+        },
+        {
+          "key": "4",
+          "count": 4
+        },
+        {
+          "key": "0",
+          "count": 3
+        },
+        {
+          "key": "3",
+          "count": 1
+        },
+        {
+          "key": "6",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "high",
+          "count": 27
+        },
+        {
+          "key": "medium",
+          "count": 16
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "評論/留言",
+          "count": 27
+        },
+        {
+          "key": "事件建立",
+          "count": 16
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 33
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 8
         },
         {
           "key": "會議紀錄/資料整理",
@@ -2362,13 +3578,441 @@
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 32
+          "count": 43
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 32
+          "count": 43
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #48D5",
+      "signalCount": 35,
+      "eventCount": 18,
+      "activeDayCount": 20,
+      "latestSignalAt": "2026-07-16T03:29:19.000Z",
+      "firstSignalAt": "2025-12-30T09:15:05.000Z",
+      "eveningShare": 0.171,
+      "weekendShare": 0.2,
+      "hourBuckets": [
+        {
+          "key": "17",
+          "count": 16
+        },
+        {
+          "key": "09",
+          "count": 3
+        },
+        {
+          "key": "13",
+          "count": 3
+        },
+        {
+          "key": "10",
+          "count": 2
+        },
+        {
+          "key": "11",
+          "count": 2
+        },
+        {
+          "key": "14",
+          "count": 2
+        },
+        {
+          "key": "22",
+          "count": 2
+        },
+        {
+          "key": "01",
+          "count": 1
+        },
+        {
+          "key": "02",
+          "count": 1
+        },
+        {
+          "key": "12",
+          "count": 1
+        },
+        {
+          "key": "18",
+          "count": 1
+        },
+        {
+          "key": "19",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 17
+        },
+        {
+          "key": "3",
+          "count": 7
+        },
+        {
+          "key": "0",
+          "count": 4
+        },
+        {
+          "key": "6",
+          "count": 3
+        },
+        {
+          "key": "5",
+          "count": 2
+        },
+        {
+          "key": "1",
+          "count": 1
+        },
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 18
+        },
+        {
+          "key": "high",
+          "count": 17
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 18
+        },
+        {
+          "key": "評論/留言",
+          "count": 17
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 35
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 35
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 35
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #CDA0",
+      "signalCount": 75,
+      "eventCount": 31,
+      "activeDayCount": 38,
+      "latestSignalAt": "2026-07-16T03:25:26.000Z",
+      "firstSignalAt": "2025-11-14T01:17:53.000Z",
+      "eveningShare": 0.413,
+      "weekendShare": 0.16,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 15
+        },
+        {
+          "key": "17",
+          "count": 14
+        },
+        {
+          "key": "09",
+          "count": 10
+        },
+        {
+          "key": "23",
+          "count": 8
+        },
+        {
+          "key": "11",
+          "count": 5
+        },
+        {
+          "key": "15",
+          "count": 4
+        },
+        {
+          "key": "00",
+          "count": 3
+        },
+        {
+          "key": "14",
+          "count": 3
+        },
+        {
+          "key": "22",
+          "count": 3
+        },
+        {
+          "key": "10",
+          "count": 2
+        },
+        {
+          "key": "12",
+          "count": 2
+        },
+        {
+          "key": "13",
+          "count": 2
+        },
+        {
+          "key": "16",
+          "count": 2
+        },
+        {
+          "key": "01",
+          "count": 1
+        },
+        {
+          "key": "21",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 30
+        },
+        {
+          "key": "3",
+          "count": 14
+        },
+        {
+          "key": "5",
+          "count": 9
+        },
+        {
+          "key": "6",
+          "count": 8
+        },
+        {
+          "key": "2",
+          "count": 6
+        },
+        {
+          "key": "0",
+          "count": 4
+        },
+        {
+          "key": "4",
+          "count": 4
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "high",
+          "count": 44
+        },
+        {
+          "key": "medium",
+          "count": 31
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "評論/留言",
+          "count": 44
+        },
+        {
+          "key": "事件建立",
+          "count": 31
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 75
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 75
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 75
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #9C57",
+      "signalCount": 83,
+      "eventCount": 41,
+      "activeDayCount": 38,
+      "latestSignalAt": "2026-07-12T12:10:28.000Z",
+      "firstSignalAt": "2025-11-17T03:55:03.000Z",
+      "eveningShare": 0.518,
+      "weekendShare": 0.157,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 17
+        },
+        {
+          "key": "11",
+          "count": 15
+        },
+        {
+          "key": "17",
+          "count": 9
+        },
+        {
+          "key": "15",
+          "count": 7
+        },
+        {
+          "key": "16",
+          "count": 7
+        },
+        {
+          "key": "02",
+          "count": 5
+        },
+        {
+          "key": "19",
+          "count": 5
+        },
+        {
+          "key": "22",
+          "count": 5
+        },
+        {
+          "key": "20",
+          "count": 4
+        },
+        {
+          "key": "21",
+          "count": 3
+        },
+        {
+          "key": "23",
+          "count": 2
+        },
+        {
+          "key": "00",
+          "count": 1
+        },
+        {
+          "key": "01",
+          "count": 1
+        },
+        {
+          "key": "10",
+          "count": 1
+        },
+        {
+          "key": "13",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 23
+        },
+        {
+          "key": "3",
+          "count": 17
+        },
+        {
+          "key": "2",
+          "count": 15
+        },
+        {
+          "key": "5",
+          "count": 13
+        },
+        {
+          "key": "6",
+          "count": 7
+        },
+        {
+          "key": "0",
+          "count": 6
+        },
+        {
+          "key": "4",
+          "count": 2
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "high",
+          "count": 42
+        },
+        {
+          "key": "medium",
+          "count": 41
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "評論/留言",
+          "count": 42
+        },
+        {
+          "key": "事件建立",
+          "count": 41
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 49
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 20
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 14
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 83
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 83
         }
       ],
       "notes": [
@@ -2378,24 +4022,60 @@
     },
     {
       "name": "成員 #DCA7",
-      "signalCount": 8,
-      "eventCount": 5,
-      "activeDayCount": 7,
+      "signalCount": 53,
+      "eventCount": 26,
+      "activeDayCount": 24,
       "latestSignalAt": "2026-07-08T11:12:55.000Z",
-      "firstSignalAt": "2026-03-09T02:14:28.000Z",
-      "eveningShare": 0.375,
-      "weekendShare": 0.125,
+      "firstSignalAt": "2025-12-10T08:06:12.000Z",
+      "eveningShare": 0.283,
+      "weekendShare": 0.038,
       "hourBuckets": [
         {
+          "key": "17",
+          "count": 11
+        },
+        {
+          "key": "15",
+          "count": 9
+        },
+        {
+          "key": "16",
+          "count": 7
+        },
+        {
+          "key": "20",
+          "count": 6
+        },
+        {
           "key": "10",
-          "count": 2
+          "count": 4
+        },
+        {
+          "key": "14",
+          "count": 3
         },
         {
           "key": "00",
-          "count": 1
+          "count": 2
         },
         {
           "key": "11",
+          "count": 2
+        },
+        {
+          "key": "01",
+          "count": 1
+        },
+        {
+          "key": "02",
+          "count": 1
+        },
+        {
+          "key": "03",
+          "count": 1
+        },
+        {
+          "key": "09",
           "count": 1
         },
         {
@@ -2403,7 +4083,427 @@
           "count": 1
         },
         {
+          "key": "19",
+          "count": 1
+        },
+        {
+          "key": "21",
+          "count": 1
+        },
+        {
+          "key": "22",
+          "count": 1
+        },
+        {
+          "key": "23",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 16
+        },
+        {
+          "key": "2",
+          "count": 15
+        },
+        {
+          "key": "3",
+          "count": 13
+        },
+        {
+          "key": "5",
+          "count": 7
+        },
+        {
+          "key": "0",
+          "count": 2
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "high",
+          "count": 27
+        },
+        {
+          "key": "medium",
+          "count": 26
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "評論/留言",
+          "count": 27
+        },
+        {
+          "key": "事件建立",
+          "count": 26
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 41
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 6
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 6
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 53
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 53
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #5B70",
+      "signalCount": 29,
+      "eventCount": 21,
+      "activeDayCount": 11,
+      "latestSignalAt": "2026-07-07T09:46:27.000Z",
+      "firstSignalAt": "2025-09-25T07:18:14.000Z",
+      "eveningShare": 0.069,
+      "weekendShare": 0.034,
+      "hourBuckets": [
+        {
           "key": "14",
+          "count": 8
+        },
+        {
+          "key": "17",
+          "count": 8
+        },
+        {
+          "key": "13",
+          "count": 4
+        },
+        {
+          "key": "10",
+          "count": 2
+        },
+        {
+          "key": "12",
+          "count": 2
+        },
+        {
+          "key": "15",
+          "count": 2
+        },
+        {
+          "key": "21",
+          "count": 2
+        },
+        {
+          "key": "11",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 12
+        },
+        {
+          "key": "2",
+          "count": 7
+        },
+        {
+          "key": "3",
+          "count": 6
+        },
+        {
+          "key": "1",
+          "count": 3
+        },
+        {
+          "key": "0",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 21
+        },
+        {
+          "key": "high",
+          "count": 8
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 21
+        },
+        {
+          "key": "評論/留言",
+          "count": 8
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 14
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 14
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 29
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 29
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #4521",
+      "signalCount": 128,
+      "eventCount": 59,
+      "activeDayCount": 50,
+      "latestSignalAt": "2026-06-29T09:17:54.000Z",
+      "firstSignalAt": "2025-09-24T07:18:41.000Z",
+      "eveningShare": 0.5,
+      "weekendShare": 0.117,
+      "hourBuckets": [
+        {
+          "key": "14",
+          "count": 19
+        },
+        {
+          "key": "20",
+          "count": 16
+        },
+        {
+          "key": "21",
+          "count": 13
+        },
+        {
+          "key": "16",
+          "count": 12
+        },
+        {
+          "key": "19",
+          "count": 11
+        },
+        {
+          "key": "10",
+          "count": 8
+        },
+        {
+          "key": "15",
+          "count": 8
+        },
+        {
+          "key": "18",
+          "count": 7
+        },
+        {
+          "key": "22",
+          "count": 7
+        },
+        {
+          "key": "23",
+          "count": 7
+        },
+        {
+          "key": "17",
+          "count": 6
+        },
+        {
+          "key": "11",
+          "count": 4
+        },
+        {
+          "key": "12",
+          "count": 3
+        },
+        {
+          "key": "13",
+          "count": 3
+        },
+        {
+          "key": "00",
+          "count": 2
+        },
+        {
+          "key": "01",
+          "count": 1
+        },
+        {
+          "key": "09",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 30
+        },
+        {
+          "key": "1",
+          "count": 29
+        },
+        {
+          "key": "3",
+          "count": 29
+        },
+        {
+          "key": "2",
+          "count": 15
+        },
+        {
+          "key": "0",
+          "count": 11
+        },
+        {
+          "key": "5",
+          "count": 10
+        },
+        {
+          "key": "6",
+          "count": 4
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "high",
+          "count": 69
+        },
+        {
+          "key": "medium",
+          "count": 59
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "評論/留言",
+          "count": 69
+        },
+        {
+          "key": "事件建立",
+          "count": 59
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 95
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 19
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 9
+        },
+        {
+          "key": "自定義名詞修正",
+          "count": 5
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 128
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 128
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #D7F1",
+      "signalCount": 39,
+      "eventCount": 20,
+      "activeDayCount": 19,
+      "latestSignalAt": "2026-06-13T01:37:31.000Z",
+      "firstSignalAt": "2026-03-23T08:44:01.000Z",
+      "eveningShare": 0.308,
+      "weekendShare": 0.128,
+      "hourBuckets": [
+        {
+          "key": "15",
+          "count": 6
+        },
+        {
+          "key": "17",
+          "count": 6
+        },
+        {
+          "key": "23",
+          "count": 6
+        },
+        {
+          "key": "11",
+          "count": 5
+        },
+        {
+          "key": "16",
+          "count": 5
+        },
+        {
+          "key": "09",
+          "count": 2
+        },
+        {
+          "key": "12",
+          "count": 2
+        },
+        {
+          "key": "22",
+          "count": 2
+        },
+        {
+          "key": "01",
+          "count": 1
+        },
+        {
+          "key": "02",
+          "count": 1
+        },
+        {
+          "key": "08",
           "count": 1
         },
         {
@@ -2418,318 +4518,30 @@
       "weekdayBuckets": [
         {
           "key": "3",
-          "count": 5
+          "count": 11
         },
-        {
-          "key": "0",
-          "count": 1
-        },
-        {
-          "key": "1",
-          "count": 1
-        },
-        {
-          "key": "5",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 5
-        },
-        {
-          "key": "high",
-          "count": 3
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 5
-        },
-        {
-          "key": "評論/留言",
-          "count": 3
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 7
-        },
-        {
-          "key": "家庭財務/社福資料",
-          "count": 1
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 8
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 8
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #5B70",
-      "signalCount": 14,
-      "eventCount": 10,
-      "activeDayCount": 4,
-      "latestSignalAt": "2026-07-07T09:46:27.000Z",
-      "firstSignalAt": "2026-07-02T05:59:17.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0.071,
-      "hourBuckets": [
-        {
-          "key": "17",
-          "count": 6
-        },
-        {
-          "key": "13",
-          "count": 4
-        },
-        {
-          "key": "14",
-          "count": 3
-        },
-        {
-          "key": "15",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
         {
           "key": "2",
-          "count": 5
-        },
-        {
-          "key": "4",
-          "count": 5
-        },
-        {
-          "key": "1",
-          "count": 3
-        },
-        {
-          "key": "0",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
           "count": 10
         },
         {
-          "key": "high",
-          "count": 4
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 10
-        },
-        {
-          "key": "評論/留言",
-          "count": 4
-        }
-      ],
-      "categories": [
-        {
-          "key": "自定義名詞修正",
-          "count": 14
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 14
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 14
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #4521",
-      "signalCount": 28,
-      "eventCount": 28,
-      "activeDayCount": 8,
-      "latestSignalAt": "2026-06-29T09:17:54.000Z",
-      "firstSignalAt": "2026-03-09T01:17:29.000Z",
-      "eveningShare": 0.357,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "14",
-          "count": 6
-        },
-        {
-          "key": "10",
-          "count": 5
-        },
-        {
-          "key": "17",
-          "count": 5
-        },
-        {
-          "key": "19",
-          "count": 5
-        },
-        {
-          "key": "21",
-          "count": 5
-        },
-        {
-          "key": "09",
-          "count": 1
-        },
-        {
-          "key": "11",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
           "key": "1",
-          "count": 16
-        },
-        {
-          "key": "2",
-          "count": 5
+          "count": 6
         },
         {
           "key": "4",
           "count": 5
-        },
-        {
-          "key": "3",
-          "count": 1
-        },
-        {
-          "key": "5",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 28
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 28
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 13
-        },
-        {
-          "key": "家庭財務/社福資料",
-          "count": 6
-        },
-        {
-          "key": "自定義名詞修正",
-          "count": 5
-        },
-        {
-          "key": "會議紀錄/資料整理",
-          "count": 4
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 28
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 28
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #D7F1",
-      "signalCount": 20,
-      "eventCount": 20,
-      "activeDayCount": 5,
-      "latestSignalAt": "2026-06-13T01:37:31.000Z",
-      "firstSignalAt": "2026-03-23T08:44:01.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0.05,
-      "hourBuckets": [
-        {
-          "key": "11",
-          "count": 5
-        },
-        {
-          "key": "15",
-          "count": 5
-        },
-        {
-          "key": "17",
-          "count": 5
-        },
-        {
-          "key": "16",
-          "count": 3
-        },
-        {
-          "key": "09",
-          "count": 1
-        },
-        {
-          "key": "12",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "3",
-          "count": 6
-        },
-        {
-          "key": "2",
-          "count": 5
-        },
-        {
-          "key": "4",
-          "count": 5
-        },
-        {
-          "key": "1",
-          "count": 3
         },
         {
           "key": "6",
+          "count": 4
+        },
+        {
+          "key": "5",
+          "count": 2
+        },
+        {
+          "key": "0",
           "count": 1
         }
       ],
@@ -2737,38 +4549,46 @@
         {
           "key": "medium",
           "count": 20
+        },
+        {
+          "key": "high",
+          "count": 19
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
           "count": 20
+        },
+        {
+          "key": "評論/留言",
+          "count": 19
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 15
+          "count": 29
         },
         {
           "key": "會議紀錄/資料整理",
-          "count": 3
+          "count": 6
         },
         {
           "key": "家庭財務/社福資料",
-          "count": 2
+          "count": 4
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 20
+          "count": 39
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 20
+          "count": 39
         }
       ],
       "notes": [
@@ -2778,722 +4598,30 @@
     },
     {
       "name": "成員 #615A",
-      "signalCount": 5,
-      "eventCount": 5,
-      "activeDayCount": 5,
+      "signalCount": 20,
+      "eventCount": 20,
+      "activeDayCount": 9,
       "latestSignalAt": "2026-06-12T07:34:29.000Z",
-      "firstSignalAt": "2026-03-09T01:09:35.000Z",
+      "firstSignalAt": "2025-09-26T04:25:40.000Z",
       "eveningShare": 0,
       "weekendShare": 0,
       "hourBuckets": [
-        {
-          "key": "09",
-          "count": 1
-        },
-        {
-          "key": "10",
-          "count": 1
-        },
-        {
-          "key": "11",
-          "count": 1
-        },
-        {
-          "key": "14",
-          "count": 1
-        },
-        {
-          "key": "15",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "3",
-          "count": 2
-        },
-        {
-          "key": "5",
-          "count": 2
-        },
-        {
-          "key": "1",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 5
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 5
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 5
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 5
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 5
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #CDA0",
-      "signalCount": 4,
-      "eventCount": 4,
-      "activeDayCount": 4,
-      "latestSignalAt": "2026-06-10T03:45:18.000Z",
-      "firstSignalAt": "2026-03-09T01:23:56.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "09",
-          "count": 1
-        },
-        {
-          "key": "10",
-          "count": 1
-        },
-        {
-          "key": "11",
-          "count": 1
-        },
-        {
-          "key": "14",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "3",
-          "count": 2
-        },
-        {
-          "key": "1",
-          "count": 1
-        },
-        {
-          "key": "5",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 4
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 4
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 4
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 4
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 4
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #8C22",
-      "signalCount": 11,
-      "eventCount": 11,
-      "activeDayCount": 3,
-      "latestSignalAt": "2026-06-03T09:11:46.000Z",
-      "firstSignalAt": "2026-03-23T08:40:01.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "16",
-          "count": 5
-        },
-        {
-          "key": "17",
-          "count": 5
-        },
-        {
-          "key": "11",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "3",
-          "count": 6
-        },
-        {
-          "key": "1",
-          "count": 5
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 11
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 11
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 5
-        },
-        {
-          "key": "自定義名詞修正",
-          "count": 3
-        },
-        {
-          "key": "家庭財務/社福資料",
-          "count": 3
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 11
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 11
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #B402",
-      "signalCount": 3,
-      "eventCount": 3,
-      "activeDayCount": 1,
-      "latestSignalAt": "2026-06-01T02:48:37.000Z",
-      "firstSignalAt": "2026-06-01T02:48:08.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "10",
-          "count": 3
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "1",
-          "count": 3
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 3
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 3
-        }
-      ],
-      "categories": [
-        {
-          "key": "自定義名詞修正",
-          "count": 3
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 3
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 3
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #9C57",
-      "signalCount": 25,
-      "eventCount": 25,
-      "activeDayCount": 5,
-      "latestSignalAt": "2026-05-11T07:33:20.000Z",
-      "firstSignalAt": "2026-03-16T18:55:06.000Z",
-      "eveningShare": 0.4,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "11",
-          "count": 10
-        },
-        {
-          "key": "02",
-          "count": 5
-        },
-        {
-          "key": "15",
-          "count": 5
-        },
-        {
-          "key": "18",
-          "count": 5
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "1",
-          "count": 10
-        },
-        {
-          "key": "2",
-          "count": 5
-        },
-        {
-          "key": "3",
-          "count": 5
-        },
-        {
-          "key": "5",
-          "count": 5
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 25
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 25
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 14
-        },
-        {
-          "key": "家庭財務/社福資料",
-          "count": 6
-        },
-        {
-          "key": "會議紀錄/資料整理",
-          "count": 5
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 25
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 25
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #04CA",
-      "signalCount": 6,
-      "eventCount": 6,
-      "activeDayCount": 1,
-      "latestSignalAt": "2026-04-20T02:25:10.000Z",
-      "firstSignalAt": "2026-04-20T02:22:42.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "10",
-          "count": 6
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "1",
-          "count": 6
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 6
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 6
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 3
-        },
-        {
-          "key": "會議紀錄/資料整理",
-          "count": 3
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 6
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 6
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #74A0",
-      "signalCount": 6,
-      "eventCount": 6,
-      "activeDayCount": 2,
-      "latestSignalAt": "2026-04-20T02:21:42.000Z",
-      "firstSignalAt": "2026-03-31T03:22:23.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "11",
-          "count": 4
-        },
-        {
-          "key": "10",
-          "count": 2
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "2",
-          "count": 4
-        },
-        {
-          "key": "1",
-          "count": 2
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 6
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 6
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 4
-        },
-        {
-          "key": "家庭財務/社福資料",
-          "count": 1
-        },
-        {
-          "key": "會議紀錄/資料整理",
-          "count": 1
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 6
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 6
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #F279",
-      "signalCount": 1,
-      "eventCount": 1,
-      "activeDayCount": 1,
-      "latestSignalAt": "2026-04-20T02:17:16.000Z",
-      "firstSignalAt": "2026-04-20T02:17:16.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "10",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "1",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 1
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 1
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 1
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 1
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 1
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #C695",
-      "signalCount": 12,
-      "eventCount": 12,
-      "activeDayCount": 3,
-      "latestSignalAt": "2026-04-15T04:05:56.000Z",
-      "firstSignalAt": "2026-03-24T03:37:36.000Z",
-      "eveningShare": 0.417,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "11",
-          "count": 6
-        },
-        {
-          "key": "18",
-          "count": 5
-        },
         {
           "key": "12",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "2",
-          "count": 5
+          "count": 6
         },
         {
-          "key": "5",
-          "count": 5
+          "key": "14",
+          "count": 6
         },
         {
-          "key": "3",
-          "count": 2
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 12
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 12
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 12
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 12
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 12
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #48D5",
-      "signalCount": 3,
-      "eventCount": 3,
-      "activeDayCount": 3,
-      "latestSignalAt": "2026-04-15T03:16:27.000Z",
-      "firstSignalAt": "2026-03-09T01:25:13.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "09",
-          "count": 1
+          "key": "17",
+          "count": 3
         },
         {
           "key": "11",
-          "count": 1
+          "count": 2
         },
-        {
-          "key": "14",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "1",
-          "count": 1
-        },
-        {
-          "key": "3",
-          "count": 1
-        },
-        {
-          "key": "5",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 3
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 3
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 3
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 3
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 3
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #A303",
-      "signalCount": 3,
-      "eventCount": 3,
-      "activeDayCount": 3,
-      "latestSignalAt": "2026-04-15T02:59:30.000Z",
-      "firstSignalAt": "2026-03-09T01:20:26.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
         {
           "key": "09",
           "count": 1
@@ -3503,244 +4631,60 @@
           "count": 1
         },
         {
-          "key": "14",
+          "key": "15",
           "count": 1
         }
       ],
       "weekdayBuckets": [
         {
-          "key": "1",
-          "count": 1
-        },
-        {
           "key": "3",
-          "count": 1
+          "count": 8
         },
         {
           "key": "5",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 3
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 3
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 3
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 3
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 3
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #3678",
-      "signalCount": 2,
-      "eventCount": 2,
-      "activeDayCount": 2,
-      "latestSignalAt": "2026-04-15T02:58:58.000Z",
-      "firstSignalAt": "2026-03-23T08:38:28.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "10",
-          "count": 1
+          "count": 8
         },
-        {
-          "key": "16",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
         {
           "key": "1",
-          "count": 1
-        },
-        {
-          "key": "3",
-          "count": 1
+          "count": 4
         }
       ],
       "confidenceBreakdown": [
         {
           "key": "medium",
-          "count": 2
+          "count": 20
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 2
+          "count": 20
         }
       ],
       "categories": [
         {
           "key": "一般事件",
+          "count": 17
+        },
+        {
+          "key": "家庭財務/社福資料",
           "count": 2
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 2
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 2
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #383D",
-      "signalCount": 3,
-      "eventCount": 3,
-      "activeDayCount": 3,
-      "latestSignalAt": "2026-04-15T02:56:44.000Z",
-      "firstSignalAt": "2026-03-09T01:13:03.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "09",
-          "count": 1
         },
         {
-          "key": "10",
-          "count": 1
-        },
-        {
-          "key": "14",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "1",
-          "count": 1
-        },
-        {
-          "key": "3",
-          "count": 1
-        },
-        {
-          "key": "5",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 3
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 3
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 3
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 3
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 3
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #659B",
-      "signalCount": 1,
-      "eventCount": 1,
-      "activeDayCount": 1,
-      "latestSignalAt": "2026-03-30T09:47:24.000Z",
-      "firstSignalAt": "2026-03-30T09:47:24.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "17",
-          "count": 1
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "1",
-          "count": 1
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 1
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 1
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
+          "key": "會議紀錄/資料整理",
           "count": 1
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 1
+          "count": 20
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 1
+          "count": 20
         }
       ],
       "notes": [
@@ -3750,20 +4694,984 @@
     },
     {
       "name": "成員 #F1B4",
-      "signalCount": 6,
+      "signalCount": 323,
+      "eventCount": 148,
+      "activeDayCount": 97,
+      "latestSignalAt": "2026-05-24T07:11:43.000Z",
+      "firstSignalAt": "2025-08-13T02:57:02.000Z",
+      "eveningShare": 0.368,
+      "weekendShare": 0.136,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 50
+        },
+        {
+          "key": "17",
+          "count": 48
+        },
+        {
+          "key": "18",
+          "count": 36
+        },
+        {
+          "key": "11",
+          "count": 30
+        },
+        {
+          "key": "15",
+          "count": 25
+        },
+        {
+          "key": "19",
+          "count": 19
+        },
+        {
+          "key": "14",
+          "count": 16
+        },
+        {
+          "key": "12",
+          "count": 15
+        },
+        {
+          "key": "22",
+          "count": 15
+        },
+        {
+          "key": "00",
+          "count": 14
+        },
+        {
+          "key": "10",
+          "count": 12
+        },
+        {
+          "key": "20",
+          "count": 11
+        },
+        {
+          "key": "21",
+          "count": 9
+        },
+        {
+          "key": "01",
+          "count": 7
+        },
+        {
+          "key": "13",
+          "count": 7
+        },
+        {
+          "key": "23",
+          "count": 6
+        },
+        {
+          "key": "02",
+          "count": 2
+        },
+        {
+          "key": "09",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "3",
+          "count": 70
+        },
+        {
+          "key": "1",
+          "count": 68
+        },
+        {
+          "key": "2",
+          "count": 66
+        },
+        {
+          "key": "5",
+          "count": 38
+        },
+        {
+          "key": "4",
+          "count": 37
+        },
+        {
+          "key": "0",
+          "count": 22
+        },
+        {
+          "key": "6",
+          "count": 22
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "high",
+          "count": 175
+        },
+        {
+          "key": "medium",
+          "count": 148
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "評論/留言",
+          "count": 175
+        },
+        {
+          "key": "事件建立",
+          "count": 148
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 309
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 10
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 4
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 323
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 323
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #74A0",
+      "signalCount": 13,
       "eventCount": 6,
-      "activeDayCount": 2,
-      "latestSignalAt": "2026-03-24T03:34:35.000Z",
-      "firstSignalAt": "2026-03-09T01:22:49.000Z",
-      "eveningShare": 0,
+      "activeDayCount": 7,
+      "latestSignalAt": "2026-04-25T04:27:27.000Z",
+      "firstSignalAt": "2026-03-31T03:22:23.000Z",
+      "eveningShare": 0.077,
+      "weekendShare": 0.154,
+      "hourBuckets": [
+        {
+          "key": "11",
+          "count": 6
+        },
+        {
+          "key": "10",
+          "count": 2
+        },
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "12",
+          "count": 1
+        },
+        {
+          "key": "15",
+          "count": 1
+        },
+        {
+          "key": "16",
+          "count": 1
+        },
+        {
+          "key": "19",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 7
+        },
+        {
+          "key": "1",
+          "count": 3
+        },
+        {
+          "key": "6",
+          "count": 2
+        },
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "high",
+          "count": 7
+        },
+        {
+          "key": "medium",
+          "count": 6
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "評論/留言",
+          "count": 7
+        },
+        {
+          "key": "事件建立",
+          "count": 6
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 8
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 3
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 13
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 13
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #A303",
+      "signalCount": 14,
+      "eventCount": 8,
+      "activeDayCount": 8,
+      "latestSignalAt": "2026-04-20T13:32:48.000Z",
+      "firstSignalAt": "2025-12-29T10:07:32.000Z",
+      "eveningShare": 0.5,
+      "weekendShare": 0.286,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 5
+        },
+        {
+          "key": "14",
+          "count": 2
+        },
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "10",
+          "count": 1
+        },
+        {
+          "key": "13",
+          "count": 1
+        },
+        {
+          "key": "15",
+          "count": 1
+        },
+        {
+          "key": "16",
+          "count": 1
+        },
+        {
+          "key": "21",
+          "count": 1
+        },
+        {
+          "key": "22",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 7
+        },
+        {
+          "key": "0",
+          "count": 4
+        },
+        {
+          "key": "2",
+          "count": 1
+        },
+        {
+          "key": "3",
+          "count": 1
+        },
+        {
+          "key": "5",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 8
+        },
+        {
+          "key": "high",
+          "count": 6
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 8
+        },
+        {
+          "key": "評論/留言",
+          "count": 6
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 14
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 14
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 14
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #F279",
+      "signalCount": 30,
+      "eventCount": 22,
+      "activeDayCount": 12,
+      "latestSignalAt": "2026-04-20T02:17:16.000Z",
+      "firstSignalAt": "2025-10-21T03:49:03.000Z",
+      "eveningShare": 0.367,
+      "weekendShare": 0.067,
+      "hourBuckets": [
+        {
+          "key": "11",
+          "count": 16
+        },
+        {
+          "key": "18",
+          "count": 5
+        },
+        {
+          "key": "02",
+          "count": 2
+        },
+        {
+          "key": "04",
+          "count": 2
+        },
+        {
+          "key": "09",
+          "count": 1
+        },
+        {
+          "key": "10",
+          "count": 1
+        },
+        {
+          "key": "17",
+          "count": 1
+        },
+        {
+          "key": "19",
+          "count": 1
+        },
+        {
+          "key": "21",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 11
+        },
+        {
+          "key": "5",
+          "count": 11
+        },
+        {
+          "key": "3",
+          "count": 3
+        },
+        {
+          "key": "1",
+          "count": 2
+        },
+        {
+          "key": "6",
+          "count": 2
+        },
+        {
+          "key": "4",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 22
+        },
+        {
+          "key": "high",
+          "count": 8
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 22
+        },
+        {
+          "key": "評論/留言",
+          "count": 8
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 29
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 1
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 30
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 30
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #3678",
+      "signalCount": 15,
+      "eventCount": 8,
+      "activeDayCount": 10,
+      "latestSignalAt": "2026-04-15T02:58:58.000Z",
+      "firstSignalAt": "2025-11-13T02:59:57.000Z",
+      "eveningShare": 0.267,
+      "weekendShare": 0.067,
+      "hourBuckets": [
+        {
+          "key": "10",
+          "count": 4
+        },
+        {
+          "key": "11",
+          "count": 4
+        },
+        {
+          "key": "16",
+          "count": 2
+        },
+        {
+          "key": "18",
+          "count": 2
+        },
+        {
+          "key": "23",
+          "count": 2
+        },
+        {
+          "key": "09",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 6
+        },
+        {
+          "key": "3",
+          "count": 4
+        },
+        {
+          "key": "1",
+          "count": 2
+        },
+        {
+          "key": "2",
+          "count": 2
+        },
+        {
+          "key": "0",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 8
+        },
+        {
+          "key": "high",
+          "count": 7
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 8
+        },
+        {
+          "key": "評論/留言",
+          "count": 7
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 15
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 15
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 15
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #383D",
+      "signalCount": 137,
+      "eventCount": 70,
+      "activeDayCount": 39,
+      "latestSignalAt": "2026-04-15T02:56:44.000Z",
+      "firstSignalAt": "2025-11-28T16:05:26.000Z",
+      "eveningShare": 0.328,
+      "weekendShare": 0.161,
+      "hourBuckets": [
+        {
+          "key": "14",
+          "count": 25
+        },
+        {
+          "key": "18",
+          "count": 18
+        },
+        {
+          "key": "09",
+          "count": 15
+        },
+        {
+          "key": "16",
+          "count": 14
+        },
+        {
+          "key": "00",
+          "count": 11
+        },
+        {
+          "key": "10",
+          "count": 8
+        },
+        {
+          "key": "17",
+          "count": 8
+        },
+        {
+          "key": "11",
+          "count": 7
+        },
+        {
+          "key": "15",
+          "count": 6
+        },
+        {
+          "key": "22",
+          "count": 6
+        },
+        {
+          "key": "13",
+          "count": 4
+        },
+        {
+          "key": "01",
+          "count": 3
+        },
+        {
+          "key": "12",
+          "count": 3
+        },
+        {
+          "key": "23",
+          "count": 3
+        },
+        {
+          "key": "08",
+          "count": 2
+        },
+        {
+          "key": "20",
+          "count": 2
+        },
+        {
+          "key": "21",
+          "count": 2
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 30
+        },
+        {
+          "key": "1",
+          "count": 29
+        },
+        {
+          "key": "2",
+          "count": 28
+        },
+        {
+          "key": "5",
+          "count": 20
+        },
+        {
+          "key": "6",
+          "count": 17
+        },
+        {
+          "key": "3",
+          "count": 8
+        },
+        {
+          "key": "0",
+          "count": 5
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 70
+        },
+        {
+          "key": "high",
+          "count": 67
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 70
+        },
+        {
+          "key": "評論/留言",
+          "count": 67
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 135
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 137
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 137
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #659B",
+      "signalCount": 13,
+      "eventCount": 11,
+      "activeDayCount": 3,
+      "latestSignalAt": "2026-03-30T13:30:40.000Z",
+      "firstSignalAt": "2026-01-17T16:12:58.000Z",
+      "eveningShare": 0.923,
+      "weekendShare": 0.385,
+      "hourBuckets": [
+        {
+          "key": "00",
+          "count": 5
+        },
+        {
+          "key": "18",
+          "count": 5
+        },
+        {
+          "key": "17",
+          "count": 1
+        },
+        {
+          "key": "21",
+          "count": 1
+        },
+        {
+          "key": "22",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "2",
+          "count": 6
+        },
+        {
+          "key": "0",
+          "count": 5
+        },
+        {
+          "key": "1",
+          "count": 2
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 11
+        },
+        {
+          "key": "high",
+          "count": 2
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 11
+        },
+        {
+          "key": "評論/留言",
+          "count": 2
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 9
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 2
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 2
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 13
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 13
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #944A",
+      "signalCount": 55,
+      "eventCount": 27,
+      "activeDayCount": 17,
+      "latestSignalAt": "2026-03-09T16:18:08.000Z",
+      "firstSignalAt": "2025-12-15T03:31:08.000Z",
+      "eveningShare": 0.2,
       "weekendShare": 0,
       "hourBuckets": [
         {
           "key": "11",
+          "count": 18
+        },
+        {
+          "key": "16",
+          "count": 14
+        },
+        {
+          "key": "18",
+          "count": 10
+        },
+        {
+          "key": "15",
           "count": 5
         },
         {
+          "key": "14",
+          "count": 4
+        },
+        {
           "key": "09",
+          "count": 2
+        },
+        {
+          "key": "00",
+          "count": 1
+        },
+        {
+          "key": "12",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 24
+        },
+        {
+          "key": "5",
+          "count": 16
+        },
+        {
+          "key": "2",
+          "count": 11
+        },
+        {
+          "key": "3",
+          "count": 2
+        },
+        {
+          "key": "4",
+          "count": 2
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "high",
+          "count": 28
+        },
+        {
+          "key": "medium",
+          "count": 27
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "評論/留言",
+          "count": 28
+        },
+        {
+          "key": "事件建立",
+          "count": 27
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 55
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 55
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 55
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #7B63",
+      "signalCount": 6,
+      "eventCount": 6,
+      "activeDayCount": 2,
+      "latestSignalAt": "2026-03-09T02:05:31.000Z",
+      "firstSignalAt": "2026-03-03T10:09:34.000Z",
+      "eveningShare": 0.833,
+      "weekendShare": 0,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 5
+        },
+        {
+          "key": "10",
           "count": 1
         }
       ],
@@ -3795,66 +5703,6 @@
           "count": 4
         },
         {
-          "key": "會議紀錄/資料整理",
-          "count": 2
-        }
-      ],
-      "statusCounts": [
-        {
-          "key": "(空白)",
-          "count": 6
-        }
-      ],
-      "reviewStatusCounts": [
-        {
-          "key": "(空白)",
-          "count": 6
-        }
-      ],
-      "notes": [
-        "此頁用事件時間推估工作節奏，不等同實際工時。",
-        "薪資與報帳仍以既有時數/報帳表為準。"
-      ]
-    },
-    {
-      "name": "成員 #E6C8",
-      "signalCount": 5,
-      "eventCount": 5,
-      "activeDayCount": 1,
-      "latestSignalAt": "2026-03-13T03:53:35.000Z",
-      "firstSignalAt": "2026-03-13T03:52:20.000Z",
-      "eveningShare": 0,
-      "weekendShare": 0,
-      "hourBuckets": [
-        {
-          "key": "11",
-          "count": 5
-        }
-      ],
-      "weekdayBuckets": [
-        {
-          "key": "5",
-          "count": 5
-        }
-      ],
-      "confidenceBreakdown": [
-        {
-          "key": "medium",
-          "count": 5
-        }
-      ],
-      "signalTypes": [
-        {
-          "key": "事件建立",
-          "count": 5
-        }
-      ],
-      "categories": [
-        {
-          "key": "一般事件",
-          "count": 3
-        },
-        {
           "key": "家庭財務/社福資料",
           "count": 1
         },
@@ -3866,13 +5714,13 @@
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 5
+          "count": 6
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 5
+          "count": 6
         }
       ],
       "notes": [
@@ -3881,66 +5729,394 @@
       ]
     },
     {
-      "name": "成員 #7B63",
-      "signalCount": 3,
-      "eventCount": 3,
-      "activeDayCount": 2,
-      "latestSignalAt": "2026-03-09T02:05:31.000Z",
-      "firstSignalAt": "2026-03-03T10:10:27.000Z",
-      "eveningShare": 0.667,
-      "weekendShare": 0,
+      "name": "成員 #E381",
+      "signalCount": 42,
+      "eventCount": 22,
+      "activeDayCount": 19,
+      "latestSignalAt": "2026-02-23T01:55:08.000Z",
+      "firstSignalAt": "2025-10-28T10:55:16.000Z",
+      "eveningShare": 0.357,
+      "weekendShare": 0.167,
       "hourBuckets": [
         {
+          "key": "09",
+          "count": 12
+        },
+        {
           "key": "18",
-          "count": 2
+          "count": 10
+        },
+        {
+          "key": "11",
+          "count": 5
+        },
+        {
+          "key": "16",
+          "count": 4
         },
         {
           "key": "10",
+          "count": 2
+        },
+        {
+          "key": "14",
+          "count": 2
+        },
+        {
+          "key": "00",
+          "count": 1
+        },
+        {
+          "key": "15",
+          "count": 1
+        },
+        {
+          "key": "17",
+          "count": 1
+        },
+        {
+          "key": "20",
+          "count": 1
+        },
+        {
+          "key": "21",
+          "count": 1
+        },
+        {
+          "key": "22",
+          "count": 1
+        },
+        {
+          "key": "23",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "5",
+          "count": 15
+        },
+        {
+          "key": "2",
+          "count": 10
+        },
+        {
+          "key": "0",
+          "count": 5
+        },
+        {
+          "key": "4",
+          "count": 5
+        },
+        {
+          "key": "1",
+          "count": 4
+        },
+        {
+          "key": "6",
+          "count": 2
+        },
+        {
+          "key": "3",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 22
+        },
+        {
+          "key": "high",
+          "count": 20
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 22
+        },
+        {
+          "key": "評論/留言",
+          "count": 20
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 36
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 6
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 42
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 42
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #2F3A",
+      "signalCount": 31,
+      "eventCount": 16,
+      "activeDayCount": 15,
+      "latestSignalAt": "2026-01-19T12:09:56.000Z",
+      "firstSignalAt": "2025-11-18T08:55:34.000Z",
+      "eveningShare": 0.484,
+      "weekendShare": 0.097,
+      "hourBuckets": [
+        {
+          "key": "18",
+          "count": 10
+        },
+        {
+          "key": "16",
+          "count": 9
+        },
+        {
+          "key": "17",
+          "count": 4
+        },
+        {
+          "key": "22",
+          "count": 3
+        },
+        {
+          "key": "10",
+          "count": 2
+        },
+        {
+          "key": "15",
+          "count": 1
+        },
+        {
+          "key": "19",
+          "count": 1
+        },
+        {
+          "key": "20",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 15
+        },
+        {
+          "key": "2",
+          "count": 6
+        },
+        {
+          "key": "3",
+          "count": 4
+        },
+        {
+          "key": "0",
+          "count": 2
+        },
+        {
+          "key": "4",
+          "count": 2
+        },
+        {
+          "key": "5",
+          "count": 1
+        },
+        {
+          "key": "6",
+          "count": 1
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 16
+        },
+        {
+          "key": "high",
+          "count": 15
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 16
+        },
+        {
+          "key": "評論/留言",
+          "count": 15
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 31
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 31
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 31
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #7B22",
+      "signalCount": 103,
+      "eventCount": 37,
+      "activeDayCount": 38,
+      "latestSignalAt": "2026-01-18T09:28:04.000Z",
+      "firstSignalAt": "2025-08-14T04:13:49.000Z",
+      "eveningShare": 0.272,
+      "weekendShare": 0.107,
+      "hourBuckets": [
+        {
+          "key": "16",
+          "count": 37
+        },
+        {
+          "key": "17",
+          "count": 21
+        },
+        {
+          "key": "18",
+          "count": 17
+        },
+        {
+          "key": "14",
+          "count": 10
+        },
+        {
+          "key": "15",
+          "count": 4
+        },
+        {
+          "key": "19",
+          "count": 4
+        },
+        {
+          "key": "20",
+          "count": 3
+        },
+        {
+          "key": "10",
+          "count": 2
+        },
+        {
+          "key": "22",
+          "count": 2
+        },
+        {
+          "key": "00",
+          "count": 1
+        },
+        {
+          "key": "12",
+          "count": 1
+        },
+        {
+          "key": "23",
           "count": 1
         }
       ],
       "weekdayBuckets": [
         {
           "key": "2",
-          "count": 2
+          "count": 31
+        },
+        {
+          "key": "5",
+          "count": 24
+        },
+        {
+          "key": "3",
+          "count": 14
+        },
+        {
+          "key": "4",
+          "count": 12
         },
         {
           "key": "1",
-          "count": 1
+          "count": 11
+        },
+        {
+          "key": "0",
+          "count": 7
+        },
+        {
+          "key": "6",
+          "count": 4
         }
       ],
       "confidenceBreakdown": [
         {
+          "key": "high",
+          "count": 66
+        },
+        {
           "key": "medium",
-          "count": 3
+          "count": 37
         }
       ],
       "signalTypes": [
         {
+          "key": "評論/留言",
+          "count": 66
+        },
+        {
           "key": "事件建立",
-          "count": 3
+          "count": 37
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 2
+          "count": 87
+        },
+        {
+          "key": "家庭財務/社福資料",
+          "count": 10
         },
         {
           "key": "會議紀錄/資料整理",
-          "count": 1
+          "count": 6
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 3
+          "count": 103
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
-          "count": 3
+          "count": 103
         }
       ],
       "notes": [
@@ -3949,54 +6125,254 @@
       ]
     },
     {
-      "name": "成員 #944A",
-      "signalCount": 1,
-      "eventCount": 1,
+      "name": "成員 #F1C4",
+      "signalCount": 5,
+      "eventCount": 5,
       "activeDayCount": 1,
-      "latestSignalAt": "2026-03-09T01:16:29.000Z",
-      "firstSignalAt": "2026-03-09T01:16:29.000Z",
+      "latestSignalAt": "2026-01-08T01:12:50.000Z",
+      "firstSignalAt": "2026-01-08T01:11:54.000Z",
       "eveningShare": 0,
       "weekendShare": 0,
       "hourBuckets": [
         {
           "key": "09",
+          "count": 5
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "4",
+          "count": 5
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 5
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 5
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 5
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 5
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 5
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #EF36",
+      "signalCount": 10,
+      "eventCount": 6,
+      "activeDayCount": 6,
+      "latestSignalAt": "2025-12-08T02:49:25.000Z",
+      "firstSignalAt": "2025-11-05T06:10:39.000Z",
+      "eveningShare": 0.3,
+      "weekendShare": 0.1,
+      "hourBuckets": [
+        {
+          "key": "14",
+          "count": 5
+        },
+        {
+          "key": "00",
+          "count": 1
+        },
+        {
+          "key": "10",
+          "count": 1
+        },
+        {
+          "key": "12",
+          "count": 1
+        },
+        {
+          "key": "22",
+          "count": 1
+        },
+        {
+          "key": "23",
           "count": 1
         }
       ],
       "weekdayBuckets": [
         {
+          "key": "3",
+          "count": 5
+        },
+        {
           "key": "1",
+          "count": 3
+        },
+        {
+          "key": "4",
+          "count": 1
+        },
+        {
+          "key": "6",
           "count": 1
         }
       ],
       "confidenceBreakdown": [
         {
           "key": "medium",
-          "count": 1
+          "count": 6
+        },
+        {
+          "key": "high",
+          "count": 4
         }
       ],
       "signalTypes": [
         {
           "key": "事件建立",
-          "count": 1
+          "count": 6
+        },
+        {
+          "key": "評論/留言",
+          "count": 4
         }
       ],
       "categories": [
         {
           "key": "一般事件",
-          "count": 1
+          "count": 10
         }
       ],
       "statusCounts": [
         {
           "key": "(空白)",
-          "count": 1
+          "count": 10
         }
       ],
       "reviewStatusCounts": [
         {
           "key": "(空白)",
+          "count": 10
+        }
+      ],
+      "notes": [
+        "此頁用事件時間推估工作節奏，不等同實際工時。",
+        "薪資與報帳仍以既有時數/報帳表為準。"
+      ]
+    },
+    {
+      "name": "成員 #8D7E",
+      "signalCount": 19,
+      "eventCount": 11,
+      "activeDayCount": 5,
+      "latestSignalAt": "2025-10-24T15:32:09.000Z",
+      "firstSignalAt": "2025-09-29T14:27:56.000Z",
+      "eveningShare": 0.737,
+      "weekendShare": 0.158,
+      "hourBuckets": [
+        {
+          "key": "22",
+          "count": 8
+        },
+        {
+          "key": "14",
+          "count": 5
+        },
+        {
+          "key": "23",
+          "count": 2
+        },
+        {
+          "key": "00",
           "count": 1
+        },
+        {
+          "key": "01",
+          "count": 1
+        },
+        {
+          "key": "05",
+          "count": 1
+        },
+        {
+          "key": "21",
+          "count": 1
+        }
+      ],
+      "weekdayBuckets": [
+        {
+          "key": "1",
+          "count": 6
+        },
+        {
+          "key": "3",
+          "count": 5
+        },
+        {
+          "key": "5",
+          "count": 5
+        },
+        {
+          "key": "0",
+          "count": 3
+        }
+      ],
+      "confidenceBreakdown": [
+        {
+          "key": "medium",
+          "count": 11
+        },
+        {
+          "key": "high",
+          "count": 8
+        }
+      ],
+      "signalTypes": [
+        {
+          "key": "事件建立",
+          "count": 11
+        },
+        {
+          "key": "評論/留言",
+          "count": 8
+        }
+      ],
+      "categories": [
+        {
+          "key": "一般事件",
+          "count": 15
+        },
+        {
+          "key": "會議紀錄/資料整理",
+          "count": 4
+        }
+      ],
+      "statusCounts": [
+        {
+          "key": "(空白)",
+          "count": 19
+        }
+      ],
+      "reviewStatusCounts": [
+        {
+          "key": "(空白)",
+          "count": 19
         }
       ],
       "notes": [
@@ -4006,6 +6382,45 @@
     }
   ],
   "recentSignals": [
+    {
+      "person": "成員 #6E59",
+      "at": "2026-08-20T14:00:36+08:00",
+      "day": "2026-08-20",
+      "hour": 14,
+      "weekday": 4,
+      "signalType": "評論/留言",
+      "confidence": "high",
+      "sourceField": "comment.createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "自定義名詞修正"
+    },
+    {
+      "person": "成員 #EE42",
+      "at": "2026-08-20T12:12:00+08:00",
+      "day": "2026-08-20",
+      "hour": 12,
+      "weekday": 4,
+      "signalType": "評論/留言",
+      "confidence": "high",
+      "sourceField": "comment.createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "一般事件"
+    },
+    {
+      "person": "成員 #3A9E",
+      "at": "2026-08-19T15:15:35+08:00",
+      "day": "2026-08-19",
+      "hour": 15,
+      "weekday": 3,
+      "signalType": "評論/留言",
+      "confidence": "high",
+      "sourceField": "comment.createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "一般事件"
+    },
     {
       "person": "成員 #2F48",
       "at": "2026-08-18T11:33:00+08:00",
@@ -4137,6 +6552,32 @@
       "category": "一般事件"
     },
     {
+      "person": "成員 #04CA",
+      "at": "2026-08-17T00:15:25+08:00",
+      "day": "2026-08-17",
+      "hour": 0,
+      "weekday": 1,
+      "signalType": "評論/留言",
+      "confidence": "high",
+      "sourceField": "comment.createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "會議紀錄/資料整理"
+    },
+    {
+      "person": "成員 #04CA",
+      "at": "2026-08-16T23:22:53+08:00",
+      "day": "2026-08-16",
+      "hour": 23,
+      "weekday": 0,
+      "signalType": "評論/留言",
+      "confidence": "high",
+      "sourceField": "comment.createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "會議紀錄/資料整理"
+    },
+    {
       "person": "成員 #5A8C",
       "at": "2026-08-16T20:38:01+08:00",
       "day": "2026-08-16",
@@ -4232,6 +6673,19 @@
       "at": "2026-08-14T19:46:39+08:00",
       "day": "2026-08-14",
       "hour": 19,
+      "weekday": 5,
+      "signalType": "評論/留言",
+      "confidence": "high",
+      "sourceField": "comment.createdAt",
+      "status": "",
+      "reviewStatus": "",
+      "category": "一般事件"
+    },
+    {
+      "person": "成員 #C695",
+      "at": "2026-08-14T17:21:12+08:00",
+      "day": "2026-08-14",
+      "hour": 17,
       "weekday": 5,
       "signalType": "評論/留言",
       "confidence": "high",
@@ -4447,84 +6901,6 @@
       "status": "",
       "reviewStatus": "",
       "category": "一般事件"
-    },
-    {
-      "person": "成員 #2CC0",
-      "at": "2026-08-13T15:34:46+08:00",
-      "day": "2026-08-13",
-      "hour": 15,
-      "weekday": 4,
-      "signalType": "評論/留言",
-      "confidence": "high",
-      "sourceField": "comment.createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "一般事件"
-    },
-    {
-      "person": "成員 #4364",
-      "at": "2026-08-12T00:23:36+08:00",
-      "day": "2026-08-12",
-      "hour": 0,
-      "weekday": 3,
-      "signalType": "評論/留言",
-      "confidence": "high",
-      "sourceField": "comment.createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "成員 #4364",
-      "at": "2026-08-11T22:26:21+08:00",
-      "day": "2026-08-11",
-      "hour": 22,
-      "weekday": 2,
-      "signalType": "評論/留言",
-      "confidence": "high",
-      "sourceField": "comment.createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "成員 #4364",
-      "at": "2026-08-11T19:56:35+08:00",
-      "day": "2026-08-11",
-      "hour": 19,
-      "weekday": 2,
-      "signalType": "評論/留言",
-      "confidence": "high",
-      "sourceField": "comment.createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "成員 #F4B0",
-      "at": "2026-08-11T16:50:48+08:00",
-      "day": "2026-08-11",
-      "hour": 16,
-      "weekday": 2,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
-    },
-    {
-      "person": "成員 #F4B0",
-      "at": "2026-08-11T16:50:31+08:00",
-      "day": "2026-08-11",
-      "hour": 16,
-      "weekday": 2,
-      "signalType": "事件建立",
-      "confidence": "medium",
-      "sourceField": "createdAt",
-      "status": "",
-      "reviewStatus": "",
-      "category": "自定義名詞修正"
     }
   ],
   "gaps": [
