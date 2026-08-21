@@ -1,231 +1,89 @@
 {
   "meta": {
-    "weekStart": "2026-08-12",
-    "weekEnd": "2026-08-18",
-    "generatedAt": "2026-08-18T16:41:48+08:00",
+    "weekStart": "2026-08-15",
+    "weekEnd": "2026-08-21",
+    "generatedAt": "2026-08-21T15:15:00+08:00",
     "timezone": "Asia/Taipei",
     "notes": [
       "Coverage is the last 7 days in Asia/Taipei.",
-      "Six items are new after deduplication by stable id and exact source URL against the 2026-08-14 radar.",
+      "Four items are new after deduplication by stable id and exact source URL against the previous radar.",
       "Google-account-backed roster evidence came only from the signed-in Codex in-app Browser; no Google connector or API fallback was used.",
-      "The current workbook was rebuilt with a source fingerprint because no trustworthy visible modified_time was available; public sourceModifiedAt remains null rather than presenting a hash as a date.",
-      "InfoCenter work rhythm and work summary refreshed live in read-only mode. Event XP remains a one-time complete 1,703-event snapshot and is not described as a fresh weekly full read."
+      "The canonical roster workbook fingerprint is unchanged; public sourceModifiedAt remains null because no trustworthy visible modification date was observed.",
+      "InfoCenter work rhythm and work summary refreshed live in read-only mode with complete work and event coverage. Event XP remains the verified one-time 2026-08-18 snapshot and is not described as a fresh weekly read."
     ],
     "sourceAccess": {
       "googleWorkbook": {
-        "status": "completed_verified_changed",
-        "surface": "Codex in-app Browser",
-        "account": "verified_expected_account",
-        "url": null,
-        "visibleTitle": "canonical intern roster workbook",
-        "worksheetContext": "active roster source",
-        "sourceModifiedAt": null,
+        "status": "completed_verified_unchanged", "surface": "Codex in-app Browser", "account": "verified_expected_account", "url": null,
+        "visibleTitle": "canonical intern roster workbook", "worksheetContext": "active roster source", "sourceModifiedAt": null,
         "sourceFingerprint": "sha256:280d6093daf456e208c4e85763b75102ae1d3b88ea4100972ddf31eb37869125",
-        "publicCounts": {"total": 44, "active": 36, "paused": 8, "paid": 21, "due": 0},
-        "fallbackUsed": false
+        "publicCounts": {"total": 44, "active": 36, "paused": 8, "paid": 21, "due": 0}, "fallbackUsed": false
       },
       "infocenterWorkRhythm": {
-        "status": "live_refresh_completed",
-        "mode": "read-only aggregate",
-        "url": "https://www.egroup-infocenter.com/me/event/events",
-        "generatedAt": "2026-08-18T08:41:17.084Z",
-        "totalAvailable": 1704,
-        "scannedEvents": 500,
-        "peopleCount": 44,
-        "totalSignals": 626,
-        "highConfidenceSignals": 160,
-        "mediumConfidenceSignals": 466,
-        "fallbackUsed": false
+        "status": "live_refresh_completed", "mode": "read-only aggregate", "url": "https://www.egroup-infocenter.com/me/event/events",
+        "generatedAt": "2026-08-21T07:07:37.617Z", "totalAvailable": 1720, "scannedEvents": 1720, "peopleCount": 50,
+        "totalSignals": 3419, "highConfidenceSignals": 1789, "mediumConfidenceSignals": 1630, "fallbackUsed": false
       },
       "infocenterWorkSummary": {
-        "status": "live_refresh_completed",
-        "url": "https://www.egroup-infocenter.com/me/work?tab=list",
-        "generatedAt": "2026-08-18T08:41:17.087Z",
-        "scannedWorks": 368,
-        "activeWorks": 43,
-        "pendingWorks": 31,
-        "inProgressWorks": 12,
-        "completedWorks": 325,
-        "unassignedWorks": 0,
-        "overdueWorks": 20,
-        "assignmentCoverageRate": 1,
-        "estimateEvidenceCoverageRate": 1,
-        "actualTimeSampleCount": 160,
-        "fallbackUsed": false
+        "status": "ready_complete", "url": "https://www.egroup-infocenter.com/me/work?tab=list", "sourceFetchedAt": "2026-08-21T07:07:34.706Z",
+        "scannedWorks": 371, "activeWorks": 46, "pendingWorks": 34, "inProgressWorks": 12, "completedWorks": 325,
+        "unassignedWorks": 0, "overdueWorks": 31, "assignmentCoverageRate": 1, "estimateEvidenceCoverageRate": 1,
+        "actualTimeSampleCount": 676, "fallbackUsed": false
       },
       "eventExperience": {
-        "status": "verified_complete_one_time_snapshot_promoted",
-        "sourceFetchedAt": "2026-08-18T01:47:40.308Z",
-        "totalAvailable": 1703,
-        "scannedEvents": 1703,
-        "scannedEventDetails": 1703,
-        "detailErrors": 0,
-        "duplicateEventIds": 0,
-        "eventIdMismatches": 0,
-        "qualifyingEvents": 997,
-        "excludedEvents": 706,
-        "positiveXpPeople": 26,
-        "verifiedZeroActivePeople": 10,
-        "verifiedMinutes": 110746,
-        "xp": 18459,
-        "liveRefreshStatus": "disabled_until_visible_organization_id_hash_is_verified",
-        "freshnessBoundary": "The live event list now reports 1,704 available events; the published XP snapshot remains the independently completed 1,703-event evidence set and will not be relabeled current."
+        "status": "verified_complete_one_time_snapshot_unchanged", "sourceFetchedAt": "2026-08-18T01:47:40.308Z",
+        "totalAvailable": 1703, "scannedEvents": 1703, "scannedEventDetails": 1703, "detailErrors": 0, "duplicateEventIds": 0,
+        "eventIdMismatches": 0, "qualifyingEvents": 997, "excludedEvents": 706, "positiveXpPeople": 26,
+        "verifiedZeroActivePeople": 10, "verifiedMinutes": 110746, "xp": 18459, "liveRefreshStatus": "disabled",
+        "freshnessBoundary": "The weekly live event read contains 1,720 events; the public XP file remains the separately verified 1,703-event snapshot and is not current-week evidence."
       }
     }
   },
   "highlights": [
-    {
-      "title": "政策內容必須區分已發布、未來生效與尚未完成法制程序",
-      "why": "職災法律扶助有分段生效日；兒少未來帳戶仍存在生效程序爭議，不能把新聞標題直接改寫成可申請資格。",
-      "next": "政策卡固定加入 effectiveStatus、effectiveDate、lastVerifiedAt 與 nextCheck。"
-    },
-    {
-      "title": "AI 浮水印不是作者判定器",
-      "why": "機率式文字浮水印在短文、事實文字、輕度修改與程式碼上可能較弱，也不能證明作者身分、所有權或責任。",
-      "next": "更新 AI 內容標示規範，加入一組不得把偵測結果直接改寫成作者結論的回歸案例。"
-    },
-    {
-      "title": "Agent 工作流要把狀態、證據與人工決策移出聊天長卷",
-      "why": "持久狀態面能降低上下文重建成本，並讓 current state、freshness、blocker 與下一個核准點可被快速覆核。",
-      "next": "先在 automation-3 試作四格狀態摘要，不升格為全域 Skill。"
-    }
+    {"title": "醫療 AI 的落地順序是資料標準、治理、在地實證，再談成效", "why": "衛福部的慢性腎病合作以 FHIR、風險分層與真實世界驗證為前提；MOU 與示範場域不等於臨床效益已被證明。", "next": "把醫療／照顧 AI 專案檢核拆成資料契約、驗證族群、人工覆核與成效證據四欄。"},
+    {"title": "金融防詐應把官方直達路徑放在勸告之前", "why": "金管會明確提醒貸款與債務協商應直接找金融機構，代辦不會改善信用評估，反而增加費用、詐騙與個資風險。", "next": "補一張不蒐集個資的貸款求助三步卡：停下、查官方、直接聯絡。"},
+    {"title": "AI 安全與隱私要用可驗證邊界，不靠單一口號", "why": "ZDR 與跨互動安全訊號、青少年預設保護都顯示：資料控制、例外、年齡適切與 Eval 必須同時寫清楚。", "next": "把 retention、human access、exception、age default、eval evidence 納入 AI 工具採用檢核。"}
   ],
   "items": [
     {
-      "id": "20260818-mol-occupational-injury-legal-aid",
-      "date": "2026-08-18",
-      "topic": "tw_social_work",
-      "title": "職災勞工法律扶助將延伸到刑事審判程序",
-      "oneLine": "勞動部修正職災法律扶助規則，刑事審判程序扶助與生活費申請簡化採不同生效時間。",
-      "facts": [
-        "職災勞工或相關權利人可獲得的律師代理與必要費用扶助將延伸至刑事審判程序。",
-        "刑事審判程序擴大扶助預定自 2027-01-01 生效。",
-        "必要生活費用申請流程簡化自修正發布日起實施。"
-      ],
-      "yourTake": ["社工或勞工服務轉介必須分開標示適用程序與生效日，且不得把轉介說明寫成個案法律判斷。"],
-      "actions": ["做一張事故類型／程序階段／可詢問窗口／生效日四欄轉介卡。"],
-      "sources": [{"label": "勞動部", "url": "https://www.mol.gov.tw/1607/1632/1633/96643/post", "publishedAt": "2026-08-18"}],
-      "credibility": {"level": "high", "reason": "勞動部官方修正與生效說明；實際資格仍須依當時法規與專業窗口確認。"},
-      "status": "new",
-      "followups": ["2027-01-01 前確認申請表、承辦窗口與正式施行版本。"],
-      "tags": ["occupational-injury", "legal-aid", "referral", "effective-date"]
+      "id": "20260821-mohw-ckd-ai-mou", "date": "2026-08-21", "topic": "tw_social_work", "title": "衛福部以慢性腎病為首波醫療 AI 在地實證場域",
+      "oneLine": "衛福部與羅氏醫療診斷簽署 MOU，規劃用標準化資料建立慢性腎病風險分層與腎功能惡化預警。",
+      "facts": ["合作以慢性腎臟病照護作為首波示範場域，目標是提早辨識高風險族群。", "衛福部表示已導入 FHIR 與 FHIR Box，並有三家醫學中心完成跨院病歷即時交換。", "目前證據是合作與實證規劃，不代表預警模型已證實改善臨床結果。"],
+      "yourTake": ["照顧科技或醫療 AI 專案應先驗證資料標準、適用族群、人工覆核與真實世界成效，不能把 MOU 當成有效性證明。"],
+      "actions": ["建立資料契約／驗證族群／人工覆核／成效證據四欄檢核卡。"],
+      "sources": [{"label": "衛生福利部", "url": "https://www.mohw.gov.tw/cp-16-87504-1.html", "publishedAt": "2026-08-21"}],
+      "credibility": {"level": "high", "reason": "衛福部官方合作與技術說明；臨床效益仍需後續實證與專業審查。"}, "status": "new",
+      "followups": ["追蹤正式研究設計、驗證指標、資料治理規範與公開成效。"], "tags": ["medical-ai", "FHIR", "CKD", "real-world-evidence"]
     },
     {
-      "id": "20260817-tw-child-future-account-status",
-      "date": "2026-08-17",
-      "topic": "tw_fin_ed",
-      "title": "兒少成長及未來帳戶仍處法制程序爭議",
-      "oneLine": "立法院三讀後，行政院於 8 月 17 日宣布不予副署並說明憲政與財政疑義，制度目前不宜描述為已可申請。",
-      "facts": [
-        "相關法案於 2026-07-24 完成三讀。",
-        "行政院於 2026-08-17 表示不予副署，並提出程序與財政上的理由。",
-        "在法律生效與執行規則明確前，不應對家庭承諾資格、金額或申請時程。"
-      ],
-      "yourTake": ["財務教育與福利資訊需要把 legislativeStatus 與 effectiveStatus 分開，避免把政治或程序新聞誤當可執行制度。"],
-      "actions": ["建立只含 legislativeStatus／effectiveStatus／lastVerifiedAt／nextCheck 的政策追蹤卡。"],
-      "sources": [
-        {"label": "衛生福利部轉載行政院說明", "url": "https://www.mohw.gov.tw/cp-16-87470-1.html", "publishedAt": "2026-08-17"},
-        {"label": "立法院議事紀錄", "url": "https://ppg.ly.gov.tw/ppg/sittings/2026072260/details?departmentCode=null&meetingDate=115%2F07%2F24&meetingTime=09%3A00-18%3A00", "publishedAt": "2026-07-24"}
-      ],
-      "credibility": {"level": "high", "reason": "行政機關與立法院官方來源；狀態高度變動，使用前必須重驗。"},
-      "status": "new",
-      "followups": ["追蹤公布、生效、釋憲或其他正式程序的下一個可驗證節點。"],
-      "tags": ["children", "future-account", "policy-status", "financial-literacy"]
+      "id": "20260820-fsc-loan-broker-warning", "date": "2026-08-20", "topic": "tw_fin_ed", "title": "金管會提醒貸款與債務協商不要交給代辦",
+      "oneLine": "金管會指出貸款仍以信用評估為準，代辦不會改變審核，可能增加費用、詐騙與個資遭不當利用風險。",
+      "facts": ["金融機構的貸款評估不因是否有中間介紹人而改變。", "金管會規定金融機構不得受理代辦貸款業者轉來的案件。", "有需求者應直接找金融機構，並從官方網站確認機構名稱與網址。"],
+      "yourTake": ["財務教育工具應優先給官方查證與直達路徑，並避免蒐集使用者債務、信用或身分資料。"], "actions": ["做一張停下／查官方／直接聯絡的貸款求助三步卡。"],
+      "sources": [{"label": "金融監督管理委員會", "url": "https://www.fsc.gov.tw/ch/home.jsp?dataserno=202608200002&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2", "publishedAt": "2026-08-20"}],
+      "credibility": {"level": "high", "reason": "金管會銀行局官方消費者警示。"}, "status": "new",
+      "followups": ["確認既有財務健檢防詐內容是否已提供官方機構查證入口。"], "tags": ["loan", "debt", "anti-fraud", "data-minimization"]
     },
     {
-      "id": "20260818-mohw-digital-health-certification-lab",
-      "date": "2026-08-18",
-      "topic": "tw_social_work",
-      "title": "衛福部成立國家數位健康互通性與效能認證實驗室",
-      "oneLine": "官方規劃以共同資料標準驗證數位健康軟體、硬體與整體解決方案的互通與效能。",
-      "facts": [
-        "認證範圍涵蓋軟體、硬體與整體解決方案。",
-        "互通性與規則驗證提及 FHIR、SMART on FHIR 與 CQL 等標準。",
-        "成立實驗室不等於任何既有產品已獲認證。"
-      ],
-      "yourTake": ["健康與照顧資料工具應先定資料契約、互通標準與驗證證據，再談 AI 功能。"],
-      "actions": ["整理 FHIR／SMART on FHIR／CQL 的用途、不是什麼、何時需專業確認三欄表。"],
-      "sources": [{"label": "衛生福利部", "url": "https://www.mohw.gov.tw/cp-16-87472-1.html", "publishedAt": "2026-08-18"}],
-      "credibility": {"level": "high", "reason": "衛福部官方成立與技術方向說明。"},
-      "status": "new",
-      "followups": ["追蹤正式認證規格、申請流程與公開合格清單。"],
-      "tags": ["digital-health", "FHIR", "interoperability", "verification"]
+      "id": "20260819-openai-zdr-private-safety-processing", "date": "2026-08-19", "topic": "global_ai", "title": "OpenAI 預告與 ZDR 相容的跨互動安全處理",
+      "oneLine": "OpenAI 預告 Private Safety Processing，以自動化有限訊號辨識跨互動風險，同時維持合格 API 客戶的 Zero Data Retention 邊界。",
+      "facts": ["ZDR 對合格 API 客戶表示請求處理後不保留 prompt 與 response，企業資料也不會在未 opt-in 時用於訓練。", "Private Safety Processing 設計為跨相關互動辨識模式，但不讓 OpenAI 人員取得底層內容。", "文章明載疑似 CSAM 圖像仍有依法保留、人工審查與通報的例外。"],
+      "yourTake": ["隱私說明必須同時列保存邊界、人員存取、跨互動分析、例外與可申訴證據，不能只寫不訓練或不留存。"], "actions": ["把 retention／human access／automated signal／exception／appeal 五欄加入敏感資料 AI 採用檢核。"],
+      "sources": [{"label": "OpenAI", "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models/", "publishedAt": "2026-08-19"}],
+      "credibility": {"level": "high", "reason": "OpenAI 官方產品與安全預告；仍在測試，九月技術白皮書發布後需重驗。"}, "status": "new",
+      "followups": ["技術白皮書發布後核對資料流、客戶金鑰、有限訊號與例外處理。"], "tags": ["ZDR", "privacy", "safety", "data-governance"]
     },
     {
-      "id": "20260814-anthropic-text-watermark",
-      "date": "2026-08-14",
-      "topic": "global_ai",
-      "title": "Claude 文字浮水印只能提供來源機率，不能證明作者身分",
-      "oneLine": "Anthropic 說明機率式文字浮水印的適用與限制，並提醒偵測結果不是作者或所有權判定。",
-      "facts": [
-        "未來模型文字輸出將採類 SynthID-Text 的機率式訊號。",
-        "短文、事實性文字、輕度校訂與程式碼可能較難被可靠偵測。",
-        "偵測到或未偵測到浮水印都不能單獨判定人類作者、所有權或責任。"
-      ],
-      "yourTake": ["AI 內容治理仍需人工揭露、編審紀錄與來源證據，不能把偵測器變成作者裁判。"],
-      "actions": ["在既有 AI 內容標示檢核補上浮水印是輔助證據、不取代人工揭露，也不作作者認定。"],
-      "sources": [{"label": "Anthropic", "url": "https://www.anthropic.com/news/claude-text-watermark", "publishedAt": "2026-08-14"}],
-      "credibility": {"level": "high", "reason": "Anthropic 官方技術與政策說明；實際偵測能力需依版本與文本型態重驗。"},
-      "status": "new",
-      "followups": ["把短文、改寫與程式碼的誤判情境加入 AI 透明度 Eval。"],
-      "tags": ["watermark", "ai-transparency", "authorship", "evaluation"]
-    },
-    {
-      "id": "20260817-github-agentic-canvas-state",
-      "date": "2026-08-17",
-      "topic": "codex_workflow",
-      "title": "重複型 agent 工作應有持久狀態面，而不只留在聊天紀錄",
-      "oneLine": "GitHub 的 agentic canvas 實務強調明確狀態、決策焦點、即時保存與人工核准點。",
-      "facts": [
-        "工作流先定義可見狀態，讓使用者知道現在在哪一步。",
-        "關鍵決策與例外需要被凸顯，而不是埋在長篇對話。",
-        "進度與草稿應持久保存，正式行動仍保留人工核准。"
-      ],
-      "yourTake": ["這與 Kevin 的 state-first 與 approval gate 原則一致，適合先做 automation-local 輸出契約，而不是增加新 Agent。"],
-      "actions": ["在 automation-3 試作 currentState／evidenceFreshness／blocker／nextApproval 四格狀態區塊。"],
-      "sources": [{"label": "GitHub Blog", "url": "https://github.blog/ai-and-ml/github-copilot/how-canvases-make-agentic-workflows-visible-steerable-and-cost-efficient/", "publishedAt": "2026-08-17"}],
-      "credibility": {"level": "high", "reason": "GitHub 官方產品與工作流實務文章；轉用方案仍需本地小測試。"},
-      "status": "new",
-      "followups": ["觀察四格摘要是否降低 Kevin 的覆核時間，再決定是否進 Agent OS。"],
-      "tags": ["agentic-workflow", "state", "approval", "observability"]
-    },
-    {
-      "id": "20260814-mol-labor-law-accessibility",
-      "date": "2026-08-14",
-      "topic": "codex_workflow",
-      "title": "勞動法令查詢系統完成 RWD 與無障礙 AA 升級",
-      "oneLine": "勞動部更新法令查詢系統，加入響應式版面、AA 無障礙規範、Accesskey、鍵盤操作與螢幕報讀支援。",
-      "facts": [
-        "新版支援桌機與行動裝置的響應式呈現。",
-        "介面採用 AA 等級無障礙規範並提供 Accesskey。",
-        "官方特別列出鍵盤操作與螢幕報讀支援。"
-      ],
-      "yourTake": ["公開工具驗收不能只看 390px 不溢位，還要驗證鍵盤焦點、操作順序與輔助科技路徑。"],
-      "actions": ["對首頁、interns、talent-pool 各做一次鍵盤-only 快速檢查，記錄 focus、順序與可操作性。"],
-      "sources": [{"label": "勞動部", "url": "https://www.mol.gov.tw/1607/1632/1633/96629/post", "publishedAt": "2026-08-14"}],
-      "credibility": {"level": "high", "reason": "勞動部官方改版說明；AA 符合度仍應以實際稽核證據判定。"},
-      "status": "new",
-      "followups": ["把鍵盤與 focus 驗證加入既有人類式驗證回歸案例。"],
-      "tags": ["accessibility", "keyboard", "RWD", "public-tools"]
+      "id": "20260818-openai-chatgpt-for-teens", "date": "2026-08-18", "topic": "global_ai", "title": "ChatGPT for Teens 將年齡適切保護設為預設",
+      "oneLine": "OpenAI 推出青少年體驗，對推定或自述 13–17 歲使用者套用較強保護、學習導向設計與家長控制。",
+      "facts": ["系統推定未滿 18 歲或自述 13–17 歲者會自動進入青少年體驗。", "設計包含 Study Mode、作業捷徑提醒、休息提醒與敏感圖片上傳提示。", "官方新增未滿 18 歲 Eval，涵蓋自傷、飲食障礙、暴力、年齡限制商品與性內容。"],
+      "yourTake": ["青少年 AI 不能只靠內容阻擋；還要有預設保護、學習支架、真實關係邊界、家長控制與可公開驗證的 Eval。"], "actions": ["整理青少年 AI 的 default／guardian／relationship boundary／sensitive upload／eval 五欄最低要求。"],
+      "sources": [{"label": "OpenAI", "url": "https://openai.com/index/chatgpt-for-teens/", "publishedAt": "2026-08-18"}],
+      "credibility": {"level": "high", "reason": "OpenAI 官方產品與安全說明；實際成效與地區可用性需持續重驗。"}, "status": "new",
+      "followups": ["檢查青少年相關工具是否把依賴、敏感圖片與真人支持列入 Eval。"], "tags": ["teen-safety", "education", "defaults", "evaluation"]
     }
   ],
   "dashboard": {
-    "countsByTopic": {"tw_social_work": 2, "tw_fin_ed": 1, "global_ai": 1, "codex_workflow": 2, "growth_gamification": 0},
-    "trackingItems": [
-      "tracking-20260814-infocenter-freshness",
-      "tracking-20260814-rehab-transition-card",
-      "tracking-20260814-nhi-phishing-card",
-      "tracking-20260814-virtual-asset-consumer-checklist",
-      "tracking-20260814-codex-0147-approval-guard",
-      "tracking-20260807-ai-transparency-labels",
-      "tracking-20260731-gpt56-price-performance",
-      "tracking-20260731-covid-vaccine-extension",
-      "tracking-20260818-occupational-injury-legal-aid",
-      "tracking-20260818-child-future-account-status",
-      "tracking-20260818-digital-health-standards",
-      "tracking-20260818-agent-state-surface",
-      "tracking-20260818-keyboard-accessibility",
-      "tracking-20260818-event-xp-live-proof"
-    ]
+    "countsByTopic": {"tw_social_work": 1, "tw_fin_ed": 1, "global_ai": 2, "codex_workflow": 0, "growth_gamification": 0},
+    "trackingItems": ["tracking-20260814-infocenter-freshness", "tracking-20260814-rehab-transition-card", "tracking-20260814-nhi-phishing-card", "tracking-20260814-virtual-asset-consumer-checklist", "tracking-20260814-codex-0147-approval-guard", "tracking-20260807-ai-transparency-labels", "tracking-20260731-gpt56-price-performance", "tracking-20260731-covid-vaccine-extension", "tracking-20260818-occupational-injury-legal-aid", "tracking-20260818-child-future-account-status", "tracking-20260818-digital-health-standards", "tracking-20260818-agent-state-surface", "tracking-20260818-keyboard-accessibility", "tracking-20260818-event-xp-live-proof", "tracking-20260821-medical-ai-evidence", "tracking-20260820-loan-broker-card", "tracking-20260819-zdr-whitepaper", "tracking-20260818-teen-ai-eval"]
   }
 }

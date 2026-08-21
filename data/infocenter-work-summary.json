@@ -1,9 +1,9 @@
 {
   "meta": {
     "schemaVersion": "2.0.0",
-    "generatedAt": "2026-08-20T07:33:43.700Z",
-    "sourceFetchedAt": "2026-08-20T07:33:37.707Z",
-    "fingerprint": "a8d4415e212893722f4b913f3dfe93af9bce943c5520e214123fbbcf34c47c19",
+    "generatedAt": "2026-08-21T07:07:37.695Z",
+    "sourceFetchedAt": "2026-08-21T07:07:34.706Z",
+    "fingerprint": "15f330a00b79f186feaccbde621971850d49fff4a1bd89010eec48368ab87657",
     "publicationStatus": "ready_complete",
     "source": {
       "system": "InfoCenter",
@@ -15,9 +15,9 @@
       },
       "workCoverage": {
         "status": "complete",
-        "totalAvailable": 368,
-        "scannedWorks": 368,
-        "uniqueWorkIds": 368,
+        "totalAvailable": 371,
+        "scannedWorks": 371,
+        "uniqueWorkIds": 371,
         "duplicateWorkIds": 0,
         "missingWorkIds": 0,
         "unknownLifecycleStatuses": 0,
@@ -25,9 +25,9 @@
       },
       "eventCoverage": {
         "status": "complete",
-        "totalAvailable": 1705,
-        "scannedEvents": 1705,
-        "uniqueEventIds": 1705,
+        "totalAvailable": 1720,
+        "scannedEvents": 1720,
+        "uniqueEventIds": 1720,
         "duplicateEventIds": 0,
         "missingEventIds": 0,
         "unmatchedWorkLinks": 0
@@ -49,48 +49,48 @@
     }
   },
   "summary": {
-    "scannedWorks": 368,
-    "active": 43,
-    "pending": 31,
+    "scannedWorks": 371,
+    "active": 46,
+    "pending": 34,
     "inProgress": 12,
     "revision": 0,
     "completed": 325,
     "cancelled": 0,
-    "overdue": 21,
+    "overdue": 31,
     "assignment": {
       "provenance": "infocenter_assignment_tag",
       "provisional": true,
-      "applicable": 43,
-      "assigned": 43,
+      "applicable": 46,
+      "assigned": 46,
       "unassigned": 0,
       "coverageRate": 1
     },
     "resultEvidence": {
       "coverageStatus": "complete",
-      "worksComplete": 368,
+      "worksComplete": 371,
       "worksPartial": 0,
       "worksNone": 0,
       "coverageRate": 1,
       "eventOutcomes": {
-        "observedEvents": 1559,
+        "observedEvents": 1574,
         "reviewSuccess": 1298,
         "reviewReject": 23,
-        "reviewProcessing": 7,
-        "unreviewed": 231,
-        "open": 105,
+        "reviewProcessing": 10,
+        "unreviewed": 243,
+        "open": 120,
         "closed": 1454,
         "unknownLifecycle": 0,
         "isLowerBound": false
       }
     },
     "estimateEvidence": {
-      "covered": 43,
-      "applicable": 43,
+      "covered": 46,
+      "applicable": 46,
       "coverageRate": 1
     },
-    "timeReportCount": 675,
-    "reportedHours": 1503.97,
-    "totalEstimatedHoursP80": 117.85,
+    "timeReportCount": 676,
+    "reportedHours": 1498.63,
+    "totalEstimatedHoursP80": 128.05,
     "categoryCounts": [
       {
         "categoryId": "GENERAL_OPS",
@@ -113,8 +113,8 @@
       {
         "categoryId": "TRANSCRIPT_QA",
         "categoryName": "逐字稿與名詞校正",
-        "activeCount": 26,
-        "totalCount": 119
+        "activeCount": 29,
+        "totalCount": 122
       }
     ]
   },
@@ -131,16 +131,16 @@
     {
       "categoryId": "TRANSCRIPT_QA",
       "categoryName": "逐字稿與名詞校正",
-      "sampleCount": 130,
+      "sampleCount": 132,
       "p50Hours": 2.27,
-      "p80Hours": 3,
+      "p80Hours": 3.08,
       "confidence": "high",
       "source": "event-comments"
     },
     {
       "categoryId": "KNOWLEDGE_OPS",
       "categoryName": "資料與知識庫整理",
-      "sampleCount": 147,
+      "sampleCount": 146,
       "p50Hours": 2,
       "p80Hours": 3.33,
       "confidence": "high",
@@ -848,6 +848,62 @@
       }
     },
     {
+      "alias": "W-1F223BA1",
+      "label": "工具與網頁測試 · #1F22",
+      "categoryId": "TOOL_QA",
+      "categoryName": "工具與網頁測試",
+      "lifecycle": {
+        "status": "pending",
+        "statusLabel": "待開始",
+        "stage": "待派工",
+        "createdDate": "2026-08-06",
+        "dueDate": "2026-08-20",
+        "overdue": true,
+        "progress": 0,
+        "provenance": "infocenter_work_status"
+      },
+      "assignment": {
+        "provenance": "infocenter_assignment_tag",
+        "provisional": true,
+        "state": "assigned",
+        "observedTagCount": 1,
+        "appliesToDispatch": true
+      },
+      "outcome": {
+        "state": "activity_visible",
+        "coverage": "complete",
+        "declaredEventCount": 1,
+        "observedEventCount": 1,
+        "eventCountDelta": 0,
+        "lowerBound": false,
+        "counts": {
+          "observedEvents": 1,
+          "reviewSuccess": 0,
+          "reviewReject": 0,
+          "reviewProcessing": 0,
+          "unreviewed": 1,
+          "open": 1,
+          "closed": 0,
+          "unknownLifecycle": 0
+        }
+      },
+      "estimate": {
+        "p50Hours": 1.77,
+        "p80Hours": 2.55,
+        "sampleCount": 2,
+        "confidence": "low",
+        "source": "linked-event-comments"
+      },
+      "requirements": {
+        "minimumLevel": "L2",
+        "skills": [
+          "情境測試",
+          "問題重現",
+          "條理回報"
+        ]
+      }
+    },
+    {
       "alias": "W-2084E6AA",
       "label": "逐字稿與名詞校正 · #2084",
       "categoryId": "TRANSCRIPT_QA",
@@ -889,8 +945,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -945,8 +1001,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -1057,8 +1113,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -1113,8 +1169,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -1169,8 +1225,176 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
+        "confidence": "high",
+        "source": "category-comments"
+      },
+      "requirements": {
+        "minimumLevel": "L1",
+        "skills": [
+          "文字校對",
+          "專有名詞辨識",
+          "耐心"
+        ]
+      }
+    },
+    {
+      "alias": "W-8679D54B",
+      "label": "逐字稿與名詞校正 · #8679",
+      "categoryId": "TRANSCRIPT_QA",
+      "categoryName": "逐字稿與名詞校正",
+      "lifecycle": {
+        "status": "pending",
+        "statusLabel": "待開始",
+        "stage": "待派工",
+        "createdDate": "2026-08-06",
+        "dueDate": "2026-08-20",
+        "overdue": true,
+        "progress": 0,
+        "provenance": "infocenter_work_status"
+      },
+      "assignment": {
+        "provenance": "infocenter_assignment_tag",
+        "provisional": true,
+        "state": "assigned",
+        "observedTagCount": 1,
+        "appliesToDispatch": true
+      },
+      "outcome": {
+        "state": "in_review",
+        "coverage": "complete",
+        "declaredEventCount": 5,
+        "observedEventCount": 5,
+        "eventCountDelta": 0,
+        "lowerBound": false,
+        "counts": {
+          "observedEvents": 5,
+          "reviewSuccess": 0,
+          "reviewReject": 0,
+          "reviewProcessing": 1,
+          "unreviewed": 4,
+          "open": 5,
+          "closed": 0,
+          "unknownLifecycle": 0
+        }
+      },
+      "estimate": {
+        "p50Hours": 4.33,
+        "p80Hours": 4.33,
+        "sampleCount": 1,
+        "confidence": "low",
+        "source": "linked-event-comments"
+      },
+      "requirements": {
+        "minimumLevel": "L1",
+        "skills": [
+          "文字校對",
+          "專有名詞辨識",
+          "耐心"
+        ]
+      }
+    },
+    {
+      "alias": "W-8CD639C7",
+      "label": "工具與網頁測試 · #8CD6",
+      "categoryId": "TOOL_QA",
+      "categoryName": "工具與網頁測試",
+      "lifecycle": {
+        "status": "pending",
+        "statusLabel": "待開始",
+        "stage": "待派工",
+        "createdDate": "2026-08-06",
+        "dueDate": "2026-08-20",
+        "overdue": true,
+        "progress": 0,
+        "provenance": "infocenter_work_status"
+      },
+      "assignment": {
+        "provenance": "infocenter_assignment_tag",
+        "provisional": true,
+        "state": "assigned",
+        "observedTagCount": 1,
+        "appliesToDispatch": true
+      },
+      "outcome": {
+        "state": "in_review",
+        "coverage": "complete",
+        "declaredEventCount": 1,
+        "observedEventCount": 1,
+        "eventCountDelta": 0,
+        "lowerBound": false,
+        "counts": {
+          "observedEvents": 1,
+          "reviewSuccess": 0,
+          "reviewReject": 0,
+          "reviewProcessing": 1,
+          "unreviewed": 0,
+          "open": 1,
+          "closed": 0,
+          "unknownLifecycle": 0
+        }
+      },
+      "estimate": {
+        "p50Hours": 1,
+        "p80Hours": 1,
+        "sampleCount": 3,
+        "confidence": "medium",
+        "source": "linked-event-comments"
+      },
+      "requirements": {
+        "minimumLevel": "L2",
+        "skills": [
+          "情境測試",
+          "問題重現",
+          "條理回報"
+        ]
+      }
+    },
+    {
+      "alias": "W-940AFC8C",
+      "label": "逐字稿與名詞校正 · #940A",
+      "categoryId": "TRANSCRIPT_QA",
+      "categoryName": "逐字稿與名詞校正",
+      "lifecycle": {
+        "status": "pending",
+        "statusLabel": "待開始",
+        "stage": "待派工",
+        "createdDate": "2026-08-06",
+        "dueDate": "2026-08-20",
+        "overdue": true,
+        "progress": 0,
+        "provenance": "infocenter_work_status"
+      },
+      "assignment": {
+        "provenance": "infocenter_assignment_tag",
+        "provisional": true,
+        "state": "assigned",
+        "observedTagCount": 1,
+        "appliesToDispatch": true
+      },
+      "outcome": {
+        "state": "activity_visible",
+        "coverage": "complete",
+        "declaredEventCount": 5,
+        "observedEventCount": 5,
+        "eventCountDelta": 0,
+        "lowerBound": false,
+        "counts": {
+          "observedEvents": 5,
+          "reviewSuccess": 0,
+          "reviewReject": 0,
+          "reviewProcessing": 0,
+          "unreviewed": 5,
+          "open": 5,
+          "closed": 0,
+          "unknownLifecycle": 0
+        }
+      },
+      "estimate": {
+        "p50Hours": 2.27,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -1225,8 +1449,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -1236,6 +1460,230 @@
           "文字校對",
           "專有名詞辨識",
           "耐心"
+        ]
+      }
+    },
+    {
+      "alias": "W-A45EAAB0",
+      "label": "工具與網頁測試 · #A45E",
+      "categoryId": "TOOL_QA",
+      "categoryName": "工具與網頁測試",
+      "lifecycle": {
+        "status": "pending",
+        "statusLabel": "待開始",
+        "stage": "待派工",
+        "createdDate": "2026-08-06",
+        "dueDate": "2026-08-20",
+        "overdue": true,
+        "progress": 0,
+        "provenance": "infocenter_work_status"
+      },
+      "assignment": {
+        "provenance": "infocenter_assignment_tag",
+        "provisional": true,
+        "state": "assigned",
+        "observedTagCount": 1,
+        "appliesToDispatch": true
+      },
+      "outcome": {
+        "state": "activity_visible",
+        "coverage": "complete",
+        "declaredEventCount": 1,
+        "observedEventCount": 1,
+        "eventCountDelta": 0,
+        "lowerBound": false,
+        "counts": {
+          "observedEvents": 1,
+          "reviewSuccess": 0,
+          "reviewReject": 0,
+          "reviewProcessing": 0,
+          "unreviewed": 1,
+          "open": 1,
+          "closed": 0,
+          "unknownLifecycle": 0
+        }
+      },
+      "estimate": {
+        "p50Hours": 0.67,
+        "p80Hours": 0.67,
+        "sampleCount": 1,
+        "confidence": "low",
+        "source": "linked-event-comments"
+      },
+      "requirements": {
+        "minimumLevel": "L2",
+        "skills": [
+          "情境測試",
+          "問題重現",
+          "條理回報"
+        ]
+      }
+    },
+    {
+      "alias": "W-A70A5473",
+      "label": "逐字稿與名詞校正 · #A70A",
+      "categoryId": "TRANSCRIPT_QA",
+      "categoryName": "逐字稿與名詞校正",
+      "lifecycle": {
+        "status": "pending",
+        "statusLabel": "待開始",
+        "stage": "待派工",
+        "createdDate": "2026-08-06",
+        "dueDate": "2026-08-20",
+        "overdue": true,
+        "progress": 0,
+        "provenance": "infocenter_work_status"
+      },
+      "assignment": {
+        "provenance": "infocenter_assignment_tag",
+        "provisional": true,
+        "state": "assigned",
+        "observedTagCount": 1,
+        "appliesToDispatch": true
+      },
+      "outcome": {
+        "state": "activity_visible",
+        "coverage": "complete",
+        "declaredEventCount": 5,
+        "observedEventCount": 5,
+        "eventCountDelta": 0,
+        "lowerBound": false,
+        "counts": {
+          "observedEvents": 5,
+          "reviewSuccess": 0,
+          "reviewReject": 0,
+          "reviewProcessing": 0,
+          "unreviewed": 5,
+          "open": 5,
+          "closed": 0,
+          "unknownLifecycle": 0
+        }
+      },
+      "estimate": {
+        "p50Hours": 2.27,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
+        "confidence": "high",
+        "source": "category-comments"
+      },
+      "requirements": {
+        "minimumLevel": "L1",
+        "skills": [
+          "文字校對",
+          "專有名詞辨識",
+          "耐心"
+        ]
+      }
+    },
+    {
+      "alias": "W-AE503F75",
+      "label": "工具與網頁測試 · #AE50",
+      "categoryId": "TOOL_QA",
+      "categoryName": "工具與網頁測試",
+      "lifecycle": {
+        "status": "pending",
+        "statusLabel": "待開始",
+        "stage": "待派工",
+        "createdDate": "2026-08-06",
+        "dueDate": "2026-08-20",
+        "overdue": true,
+        "progress": 0,
+        "provenance": "infocenter_work_status"
+      },
+      "assignment": {
+        "provenance": "infocenter_assignment_tag",
+        "provisional": true,
+        "state": "assigned",
+        "observedTagCount": 1,
+        "appliesToDispatch": true
+      },
+      "outcome": {
+        "state": "needs_revision",
+        "coverage": "complete",
+        "declaredEventCount": 1,
+        "observedEventCount": 1,
+        "eventCountDelta": 0,
+        "lowerBound": false,
+        "counts": {
+          "observedEvents": 1,
+          "reviewSuccess": 0,
+          "reviewReject": 1,
+          "reviewProcessing": 0,
+          "unreviewed": 0,
+          "open": 1,
+          "closed": 0,
+          "unknownLifecycle": 0
+        }
+      },
+      "estimate": {
+        "p50Hours": 0.67,
+        "p80Hours": 0.67,
+        "sampleCount": 3,
+        "confidence": "medium",
+        "source": "linked-event-comments"
+      },
+      "requirements": {
+        "minimumLevel": "L2",
+        "skills": [
+          "情境測試",
+          "問題重現",
+          "條理回報"
+        ]
+      }
+    },
+    {
+      "alias": "W-B4A4D158",
+      "label": "工具與網頁測試 · #B4A4",
+      "categoryId": "TOOL_QA",
+      "categoryName": "工具與網頁測試",
+      "lifecycle": {
+        "status": "pending",
+        "statusLabel": "待開始",
+        "stage": "待派工",
+        "createdDate": "2026-08-06",
+        "dueDate": "2026-08-20",
+        "overdue": true,
+        "progress": 0,
+        "provenance": "infocenter_work_status"
+      },
+      "assignment": {
+        "provenance": "infocenter_assignment_tag",
+        "provisional": true,
+        "state": "assigned",
+        "observedTagCount": 1,
+        "appliesToDispatch": true
+      },
+      "outcome": {
+        "state": "activity_visible",
+        "coverage": "complete",
+        "declaredEventCount": 1,
+        "observedEventCount": 1,
+        "eventCountDelta": 0,
+        "lowerBound": false,
+        "counts": {
+          "observedEvents": 1,
+          "reviewSuccess": 0,
+          "reviewReject": 0,
+          "reviewProcessing": 0,
+          "unreviewed": 1,
+          "open": 1,
+          "closed": 0,
+          "unknownLifecycle": 0
+        }
+      },
+      "estimate": {
+        "p50Hours": 4,
+        "p80Hours": 4,
+        "sampleCount": 2,
+        "confidence": "low",
+        "source": "linked-event-comments"
+      },
+      "requirements": {
+        "minimumLevel": "L2",
+        "skills": [
+          "情境測試",
+          "問題重現",
+          "條理回報"
         ]
       }
     },
@@ -1281,8 +1729,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -1337,8 +1785,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -1348,6 +1796,118 @@
           "文字校對",
           "專有名詞辨識",
           "耐心"
+        ]
+      }
+    },
+    {
+      "alias": "W-D938B8BF",
+      "label": "工具與網頁測試 · #D938",
+      "categoryId": "TOOL_QA",
+      "categoryName": "工具與網頁測試",
+      "lifecycle": {
+        "status": "pending",
+        "statusLabel": "待開始",
+        "stage": "待派工",
+        "createdDate": "2026-08-06",
+        "dueDate": "2026-08-20",
+        "overdue": true,
+        "progress": 0,
+        "provenance": "infocenter_work_status"
+      },
+      "assignment": {
+        "provenance": "infocenter_assignment_tag",
+        "provisional": true,
+        "state": "assigned",
+        "observedTagCount": 1,
+        "appliesToDispatch": true
+      },
+      "outcome": {
+        "state": "activity_visible",
+        "coverage": "complete",
+        "declaredEventCount": 1,
+        "observedEventCount": 1,
+        "eventCountDelta": 0,
+        "lowerBound": false,
+        "counts": {
+          "observedEvents": 1,
+          "reviewSuccess": 0,
+          "reviewReject": 0,
+          "reviewProcessing": 0,
+          "unreviewed": 1,
+          "open": 1,
+          "closed": 0,
+          "unknownLifecycle": 0
+        }
+      },
+      "estimate": {
+        "p50Hours": 1,
+        "p80Hours": 1.55,
+        "sampleCount": 55,
+        "confidence": "high",
+        "source": "category-comments"
+      },
+      "requirements": {
+        "minimumLevel": "L2",
+        "skills": [
+          "情境測試",
+          "問題重現",
+          "條理回報"
+        ]
+      }
+    },
+    {
+      "alias": "W-E3F837D8",
+      "label": "工具與網頁測試 · #E3F8",
+      "categoryId": "TOOL_QA",
+      "categoryName": "工具與網頁測試",
+      "lifecycle": {
+        "status": "pending",
+        "statusLabel": "待開始",
+        "stage": "待派工",
+        "createdDate": "2026-08-06",
+        "dueDate": "2026-08-20",
+        "overdue": true,
+        "progress": 0,
+        "provenance": "infocenter_work_status"
+      },
+      "assignment": {
+        "provenance": "infocenter_assignment_tag",
+        "provisional": true,
+        "state": "assigned",
+        "observedTagCount": 1,
+        "appliesToDispatch": true
+      },
+      "outcome": {
+        "state": "activity_visible",
+        "coverage": "complete",
+        "declaredEventCount": 1,
+        "observedEventCount": 1,
+        "eventCountDelta": 0,
+        "lowerBound": false,
+        "counts": {
+          "observedEvents": 1,
+          "reviewSuccess": 0,
+          "reviewReject": 0,
+          "reviewProcessing": 0,
+          "unreviewed": 1,
+          "open": 1,
+          "closed": 0,
+          "unknownLifecycle": 0
+        }
+      },
+      "estimate": {
+        "p50Hours": 0.33,
+        "p80Hours": 1,
+        "sampleCount": 6,
+        "confidence": "medium",
+        "source": "linked-event-comments"
+      },
+      "requirements": {
+        "minimumLevel": "L2",
+        "skills": [
+          "情境測試",
+          "問題重現",
+          "條理回報"
         ]
       }
     },
@@ -1898,7 +2458,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -2346,7 +2906,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -2514,7 +3074,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -2962,7 +3522,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -3633,8 +4193,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -3745,8 +4305,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -3857,8 +4417,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -3970,7 +4530,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -5090,7 +5650,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -5369,8 +5929,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -5650,7 +6210,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -6321,8 +6881,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -7498,7 +8058,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -8337,8 +8897,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -8561,8 +9121,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -8618,7 +9178,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -9065,8 +9625,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -9401,8 +9961,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -9513,8 +10073,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -10353,8 +10913,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -10634,7 +11194,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -10970,7 +11530,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -11642,7 +12202,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -11697,8 +12257,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -12369,8 +12929,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -12705,8 +13265,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -13545,8 +14105,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -13657,8 +14217,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -13770,7 +14330,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3,
-        "sampleCount": 53,
+        "sampleCount": 52,
         "confidence": "high",
         "source": "linked-event-comments"
       },
@@ -14049,8 +14609,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -14106,7 +14666,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -15114,7 +15674,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -15281,8 +15841,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -15393,8 +15953,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -15898,7 +16458,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -16122,7 +16682,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -16458,7 +17018,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -16961,8 +17521,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -17298,7 +17858,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -17466,7 +18026,7 @@
       "estimate": {
         "p50Hours": 2,
         "p80Hours": 3.33,
-        "sampleCount": 147,
+        "sampleCount": 146,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -17913,8 +18473,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -18025,8 +18585,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -19425,8 +19985,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -19593,8 +20153,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -19720,16 +20280,16 @@
       }
     },
     {
-      "alias": "W-1F223BA1",
-      "label": "工具與網頁測試 · #1F22",
-      "categoryId": "TOOL_QA",
-      "categoryName": "工具與網頁測試",
+      "alias": "W-2818E7CA",
+      "label": "逐字稿與名詞校正 · #2818",
+      "categoryId": "TRANSCRIPT_QA",
+      "categoryName": "逐字稿與名詞校正",
       "lifecycle": {
         "status": "pending",
         "statusLabel": "待開始",
         "stage": "待派工",
-        "createdDate": "2026-08-06",
-        "dueDate": "2026-08-20",
+        "createdDate": "2026-08-20",
+        "dueDate": "2026-09-03",
         "overdue": false,
         "progress": 0,
         "provenance": "infocenter_work_status"
@@ -19744,34 +20304,34 @@
       "outcome": {
         "state": "activity_visible",
         "coverage": "complete",
-        "declaredEventCount": 1,
-        "observedEventCount": 1,
+        "declaredEventCount": 5,
+        "observedEventCount": 5,
         "eventCountDelta": 0,
         "lowerBound": false,
         "counts": {
-          "observedEvents": 1,
+          "observedEvents": 5,
           "reviewSuccess": 0,
           "reviewReject": 0,
           "reviewProcessing": 0,
-          "unreviewed": 1,
-          "open": 1,
+          "unreviewed": 5,
+          "open": 5,
           "closed": 0,
           "unknownLifecycle": 0
         }
       },
       "estimate": {
-        "p50Hours": 1.77,
-        "p80Hours": 2.55,
-        "sampleCount": 2,
-        "confidence": "low",
-        "source": "linked-event-comments"
+        "p50Hours": 2.27,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
+        "confidence": "high",
+        "source": "category-comments"
       },
       "requirements": {
-        "minimumLevel": "L2",
+        "minimumLevel": "L1",
         "skills": [
-          "情境測試",
-          "問題重現",
-          "條理回報"
+          "文字校對",
+          "專有名詞辨識",
+          "耐心"
         ]
       }
     },
@@ -19873,8 +20433,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -19944,72 +20504,16 @@
       }
     },
     {
-      "alias": "W-8679D54B",
-      "label": "逐字稿與名詞校正 · #8679",
-      "categoryId": "TRANSCRIPT_QA",
-      "categoryName": "逐字稿與名詞校正",
-      "lifecycle": {
-        "status": "pending",
-        "statusLabel": "待開始",
-        "stage": "待派工",
-        "createdDate": "2026-08-06",
-        "dueDate": "2026-08-20",
-        "overdue": false,
-        "progress": 0,
-        "provenance": "infocenter_work_status"
-      },
-      "assignment": {
-        "provenance": "infocenter_assignment_tag",
-        "provisional": true,
-        "state": "assigned",
-        "observedTagCount": 1,
-        "appliesToDispatch": true
-      },
-      "outcome": {
-        "state": "in_review",
-        "coverage": "complete",
-        "declaredEventCount": 5,
-        "observedEventCount": 5,
-        "eventCountDelta": 0,
-        "lowerBound": false,
-        "counts": {
-          "observedEvents": 5,
-          "reviewSuccess": 0,
-          "reviewReject": 0,
-          "reviewProcessing": 1,
-          "unreviewed": 4,
-          "open": 5,
-          "closed": 0,
-          "unknownLifecycle": 0
-        }
-      },
-      "estimate": {
-        "p50Hours": 4.33,
-        "p80Hours": 4.33,
-        "sampleCount": 1,
-        "confidence": "low",
-        "source": "linked-event-comments"
-      },
-      "requirements": {
-        "minimumLevel": "L1",
-        "skills": [
-          "文字校對",
-          "專有名詞辨識",
-          "耐心"
-        ]
-      }
-    },
-    {
-      "alias": "W-8CD639C7",
-      "label": "工具與網頁測試 · #8CD6",
+      "alias": "W-8E23AD5B",
+      "label": "工具與網頁測試 · #8E23",
       "categoryId": "TOOL_QA",
       "categoryName": "工具與網頁測試",
       "lifecycle": {
         "status": "pending",
         "statusLabel": "待開始",
         "stage": "待派工",
-        "createdDate": "2026-08-06",
-        "dueDate": "2026-08-20",
+        "createdDate": "2026-08-18",
+        "dueDate": "2026-09-01",
         "overdue": false,
         "progress": 0,
         "provenance": "infocenter_work_status"
@@ -20041,62 +20545,6 @@
       },
       "estimate": {
         "p50Hours": 1,
-        "p80Hours": 1,
-        "sampleCount": 3,
-        "confidence": "medium",
-        "source": "linked-event-comments"
-      },
-      "requirements": {
-        "minimumLevel": "L2",
-        "skills": [
-          "情境測試",
-          "問題重現",
-          "條理回報"
-        ]
-      }
-    },
-    {
-      "alias": "W-8E23AD5B",
-      "label": "工具與網頁測試 · #8E23",
-      "categoryId": "TOOL_QA",
-      "categoryName": "工具與網頁測試",
-      "lifecycle": {
-        "status": "pending",
-        "statusLabel": "待開始",
-        "stage": "待派工",
-        "createdDate": "2026-08-18",
-        "dueDate": "2026-09-01",
-        "overdue": false,
-        "progress": 0,
-        "provenance": "infocenter_work_status"
-      },
-      "assignment": {
-        "provenance": "infocenter_assignment_tag",
-        "provisional": true,
-        "state": "assigned",
-        "observedTagCount": 1,
-        "appliesToDispatch": true
-      },
-      "outcome": {
-        "state": "activity_visible",
-        "coverage": "complete",
-        "declaredEventCount": 1,
-        "observedEventCount": 1,
-        "eventCountDelta": 0,
-        "lowerBound": false,
-        "counts": {
-          "observedEvents": 1,
-          "reviewSuccess": 0,
-          "reviewReject": 0,
-          "reviewProcessing": 0,
-          "unreviewed": 1,
-          "open": 1,
-          "closed": 0,
-          "unknownLifecycle": 0
-        }
-      },
-      "estimate": {
-        "p50Hours": 1,
         "p80Hours": 1.55,
         "sampleCount": 55,
         "confidence": "high",
@@ -20112,16 +20560,16 @@
       }
     },
     {
-      "alias": "W-940AFC8C",
-      "label": "逐字稿與名詞校正 · #940A",
+      "alias": "W-A8FC2F75",
+      "label": "逐字稿與名詞校正 · #A8FC",
       "categoryId": "TRANSCRIPT_QA",
       "categoryName": "逐字稿與名詞校正",
       "lifecycle": {
         "status": "pending",
         "statusLabel": "待開始",
         "stage": "待派工",
-        "createdDate": "2026-08-06",
-        "dueDate": "2026-08-20",
+        "createdDate": "2026-08-20",
+        "dueDate": "2026-09-03",
         "overdue": false,
         "progress": 0,
         "provenance": "infocenter_work_status"
@@ -20153,120 +20601,8 @@
       },
       "estimate": {
         "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
-        "confidence": "high",
-        "source": "category-comments"
-      },
-      "requirements": {
-        "minimumLevel": "L1",
-        "skills": [
-          "文字校對",
-          "專有名詞辨識",
-          "耐心"
-        ]
-      }
-    },
-    {
-      "alias": "W-A45EAAB0",
-      "label": "工具與網頁測試 · #A45E",
-      "categoryId": "TOOL_QA",
-      "categoryName": "工具與網頁測試",
-      "lifecycle": {
-        "status": "pending",
-        "statusLabel": "待開始",
-        "stage": "待派工",
-        "createdDate": "2026-08-06",
-        "dueDate": "2026-08-20",
-        "overdue": false,
-        "progress": 0,
-        "provenance": "infocenter_work_status"
-      },
-      "assignment": {
-        "provenance": "infocenter_assignment_tag",
-        "provisional": true,
-        "state": "assigned",
-        "observedTagCount": 1,
-        "appliesToDispatch": true
-      },
-      "outcome": {
-        "state": "activity_visible",
-        "coverage": "complete",
-        "declaredEventCount": 1,
-        "observedEventCount": 1,
-        "eventCountDelta": 0,
-        "lowerBound": false,
-        "counts": {
-          "observedEvents": 1,
-          "reviewSuccess": 0,
-          "reviewReject": 0,
-          "reviewProcessing": 0,
-          "unreviewed": 1,
-          "open": 1,
-          "closed": 0,
-          "unknownLifecycle": 0
-        }
-      },
-      "estimate": {
-        "p50Hours": 0.67,
-        "p80Hours": 0.67,
-        "sampleCount": 1,
-        "confidence": "low",
-        "source": "linked-event-comments"
-      },
-      "requirements": {
-        "minimumLevel": "L2",
-        "skills": [
-          "情境測試",
-          "問題重現",
-          "條理回報"
-        ]
-      }
-    },
-    {
-      "alias": "W-A70A5473",
-      "label": "逐字稿與名詞校正 · #A70A",
-      "categoryId": "TRANSCRIPT_QA",
-      "categoryName": "逐字稿與名詞校正",
-      "lifecycle": {
-        "status": "pending",
-        "statusLabel": "待開始",
-        "stage": "待派工",
-        "createdDate": "2026-08-06",
-        "dueDate": "2026-08-20",
-        "overdue": false,
-        "progress": 0,
-        "provenance": "infocenter_work_status"
-      },
-      "assignment": {
-        "provenance": "infocenter_assignment_tag",
-        "provisional": true,
-        "state": "assigned",
-        "observedTagCount": 1,
-        "appliesToDispatch": true
-      },
-      "outcome": {
-        "state": "activity_visible",
-        "coverage": "complete",
-        "declaredEventCount": 5,
-        "observedEventCount": 5,
-        "eventCountDelta": 0,
-        "lowerBound": false,
-        "counts": {
-          "observedEvents": 5,
-          "reviewSuccess": 0,
-          "reviewReject": 0,
-          "reviewProcessing": 0,
-          "unreviewed": 5,
-          "open": 5,
-          "closed": 0,
-          "unknownLifecycle": 0
-        }
-      },
-      "estimate": {
-        "p50Hours": 2.27,
-        "p80Hours": 3,
-        "sampleCount": 130,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
         "confidence": "high",
         "source": "category-comments"
       },
@@ -20336,72 +20672,16 @@
       }
     },
     {
-      "alias": "W-AE503F75",
-      "label": "工具與網頁測試 · #AE50",
-      "categoryId": "TOOL_QA",
-      "categoryName": "工具與網頁測試",
+      "alias": "W-B003B137",
+      "label": "逐字稿與名詞校正 · #B003",
+      "categoryId": "TRANSCRIPT_QA",
+      "categoryName": "逐字稿與名詞校正",
       "lifecycle": {
         "status": "pending",
         "statusLabel": "待開始",
         "stage": "待派工",
-        "createdDate": "2026-08-06",
-        "dueDate": "2026-08-20",
-        "overdue": false,
-        "progress": 0,
-        "provenance": "infocenter_work_status"
-      },
-      "assignment": {
-        "provenance": "infocenter_assignment_tag",
-        "provisional": true,
-        "state": "assigned",
-        "observedTagCount": 1,
-        "appliesToDispatch": true
-      },
-      "outcome": {
-        "state": "needs_revision",
-        "coverage": "complete",
-        "declaredEventCount": 1,
-        "observedEventCount": 1,
-        "eventCountDelta": 0,
-        "lowerBound": false,
-        "counts": {
-          "observedEvents": 1,
-          "reviewSuccess": 0,
-          "reviewReject": 1,
-          "reviewProcessing": 0,
-          "unreviewed": 0,
-          "open": 1,
-          "closed": 0,
-          "unknownLifecycle": 0
-        }
-      },
-      "estimate": {
-        "p50Hours": 0.67,
-        "p80Hours": 0.67,
-        "sampleCount": 3,
-        "confidence": "medium",
-        "source": "linked-event-comments"
-      },
-      "requirements": {
-        "minimumLevel": "L2",
-        "skills": [
-          "情境測試",
-          "問題重現",
-          "條理回報"
-        ]
-      }
-    },
-    {
-      "alias": "W-B4A4D158",
-      "label": "工具與網頁測試 · #B4A4",
-      "categoryId": "TOOL_QA",
-      "categoryName": "工具與網頁測試",
-      "lifecycle": {
-        "status": "pending",
-        "statusLabel": "待開始",
-        "stage": "待派工",
-        "createdDate": "2026-08-06",
-        "dueDate": "2026-08-20",
+        "createdDate": "2026-08-20",
+        "dueDate": "2026-09-03",
         "overdue": false,
         "progress": 0,
         "provenance": "infocenter_work_status"
@@ -20416,34 +20696,34 @@
       "outcome": {
         "state": "activity_visible",
         "coverage": "complete",
-        "declaredEventCount": 1,
-        "observedEventCount": 1,
+        "declaredEventCount": 5,
+        "observedEventCount": 5,
         "eventCountDelta": 0,
         "lowerBound": false,
         "counts": {
-          "observedEvents": 1,
+          "observedEvents": 5,
           "reviewSuccess": 0,
           "reviewReject": 0,
           "reviewProcessing": 0,
-          "unreviewed": 1,
-          "open": 1,
+          "unreviewed": 5,
+          "open": 5,
           "closed": 0,
           "unknownLifecycle": 0
         }
       },
       "estimate": {
-        "p50Hours": 4,
-        "p80Hours": 4,
-        "sampleCount": 2,
-        "confidence": "low",
-        "source": "linked-event-comments"
+        "p50Hours": 2.27,
+        "p80Hours": 3.08,
+        "sampleCount": 132,
+        "confidence": "high",
+        "source": "category-comments"
       },
       "requirements": {
-        "minimumLevel": "L2",
+        "minimumLevel": "L1",
         "skills": [
-          "情境測試",
-          "問題重現",
-          "條理回報"
+          "文字校對",
+          "專有名詞辨識",
+          "耐心"
         ]
       }
     },
@@ -20560,62 +20840,6 @@
       }
     },
     {
-      "alias": "W-D938B8BF",
-      "label": "工具與網頁測試 · #D938",
-      "categoryId": "TOOL_QA",
-      "categoryName": "工具與網頁測試",
-      "lifecycle": {
-        "status": "pending",
-        "statusLabel": "待開始",
-        "stage": "待派工",
-        "createdDate": "2026-08-06",
-        "dueDate": "2026-08-20",
-        "overdue": false,
-        "progress": 0,
-        "provenance": "infocenter_work_status"
-      },
-      "assignment": {
-        "provenance": "infocenter_assignment_tag",
-        "provisional": true,
-        "state": "assigned",
-        "observedTagCount": 1,
-        "appliesToDispatch": true
-      },
-      "outcome": {
-        "state": "activity_visible",
-        "coverage": "complete",
-        "declaredEventCount": 1,
-        "observedEventCount": 1,
-        "eventCountDelta": 0,
-        "lowerBound": false,
-        "counts": {
-          "observedEvents": 1,
-          "reviewSuccess": 0,
-          "reviewReject": 0,
-          "reviewProcessing": 0,
-          "unreviewed": 1,
-          "open": 1,
-          "closed": 0,
-          "unknownLifecycle": 0
-        }
-      },
-      "estimate": {
-        "p50Hours": 1,
-        "p80Hours": 1.55,
-        "sampleCount": 55,
-        "confidence": "high",
-        "source": "category-comments"
-      },
-      "requirements": {
-        "minimumLevel": "L2",
-        "skills": [
-          "情境測試",
-          "問題重現",
-          "條理回報"
-        ]
-      }
-    },
-    {
       "alias": "W-DCBD8660",
       "label": "工具與網頁測試 · #DCBD",
       "categoryId": "TOOL_QA",
@@ -20672,62 +20896,6 @@
       }
     },
     {
-      "alias": "W-E3F837D8",
-      "label": "工具與網頁測試 · #E3F8",
-      "categoryId": "TOOL_QA",
-      "categoryName": "工具與網頁測試",
-      "lifecycle": {
-        "status": "pending",
-        "statusLabel": "待開始",
-        "stage": "待派工",
-        "createdDate": "2026-08-06",
-        "dueDate": "2026-08-20",
-        "overdue": false,
-        "progress": 0,
-        "provenance": "infocenter_work_status"
-      },
-      "assignment": {
-        "provenance": "infocenter_assignment_tag",
-        "provisional": true,
-        "state": "assigned",
-        "observedTagCount": 1,
-        "appliesToDispatch": true
-      },
-      "outcome": {
-        "state": "activity_visible",
-        "coverage": "complete",
-        "declaredEventCount": 1,
-        "observedEventCount": 1,
-        "eventCountDelta": 0,
-        "lowerBound": false,
-        "counts": {
-          "observedEvents": 1,
-          "reviewSuccess": 0,
-          "reviewReject": 0,
-          "reviewProcessing": 0,
-          "unreviewed": 1,
-          "open": 1,
-          "closed": 0,
-          "unknownLifecycle": 0
-        }
-      },
-      "estimate": {
-        "p50Hours": 0.33,
-        "p80Hours": 1,
-        "sampleCount": 6,
-        "confidence": "medium",
-        "source": "linked-event-comments"
-      },
-      "requirements": {
-        "minimumLevel": "L2",
-        "skills": [
-          "情境測試",
-          "問題重現",
-          "條理回報"
-        ]
-      }
-    },
-    {
       "alias": "W-F5DEDFEF",
       "label": "逐字稿與名詞校正 · #F5DE",
       "categoryId": "TRANSCRIPT_QA",
@@ -20760,18 +20928,18 @@
           "observedEvents": 5,
           "reviewSuccess": 0,
           "reviewReject": 0,
-          "reviewProcessing": 1,
-          "unreviewed": 4,
+          "reviewProcessing": 3,
+          "unreviewed": 2,
           "open": 5,
           "closed": 0,
           "unknownLifecycle": 0
         }
       },
       "estimate": {
-        "p50Hours": 3.5,
+        "p50Hours": 3.33,
         "p80Hours": 3.5,
-        "sampleCount": 1,
-        "confidence": "low",
+        "sampleCount": 3,
+        "confidence": "medium",
         "source": "linked-event-comments"
       },
       "requirements": {

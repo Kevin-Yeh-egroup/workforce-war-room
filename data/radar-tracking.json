@@ -142,6 +142,46 @@
       "nextCheck": "2026-08-21",
       "question": "2026-08-20 已在正確組織雙次驗證 organization ID SHA-256，並完成 repo 外 5,000/5,000 上限的全量候選：1,705/1,705、0 errors、1,013 qualifying、112,799 minutes、18,803 XP。待另批 automation hardening 與正式 promotion；live publish 仍停用，repo last-good 未改。",
       "links": ["https://www.egroup-infocenter.com/me/event/events"]
+    },
+    {
+      "id": "tracking-20260821-medical-ai-evidence",
+      "createdAt": "2026-08-21",
+      "topic": "tw_social_work",
+      "title": "追蹤慢性腎病 AI 實證設計與公開成效。",
+      "status": "open",
+      "nextCheck": "2026-09-18",
+      "question": "是否已公開驗證族群、比較基準、人工覆核、資料治理與臨床成效？",
+      "links": ["https://www.mohw.gov.tw/cp-16-87504-1.html"]
+    },
+    {
+      "id": "tracking-20260820-loan-broker-card",
+      "createdAt": "2026-08-20",
+      "topic": "tw_fin_ed",
+      "title": "建立不蒐集個資的貸款求助三步卡。",
+      "status": "open",
+      "nextCheck": "2026-08-28",
+      "question": "既有財務健檢內容是否已提供官方金融機構查證與直接聯絡入口？",
+      "links": ["https://www.fsc.gov.tw/ch/home.jsp?dataserno=202608200002&dtable=News&id=96&mcustomize=news_view.jsp&parentpath=0%2C2"]
+    },
+    {
+      "id": "tracking-20260819-zdr-whitepaper",
+      "createdAt": "2026-08-19",
+      "topic": "global_ai",
+      "title": "重驗 Private Safety Processing 技術白皮書。",
+      "status": "open",
+      "nextCheck": "2026-09-10",
+      "question": "資料流、客戶金鑰、人員存取、有限安全訊號與法定例外是否已可被獨立核對？",
+      "links": ["https://openai.com/index/offering-zero-data-retention-for-frontier-models/"]
+    },
+    {
+      "id": "tracking-20260818-teen-ai-eval",
+      "createdAt": "2026-08-18",
+      "topic": "global_ai",
+      "title": "把青少年 AI 預設保護轉成 Eval 邊界。",
+      "status": "open",
+      "nextCheck": "2026-08-28",
+      "question": "是否涵蓋年齡適切預設、依賴風險、敏感圖片、真人支持與家長控制？",
+      "links": ["https://openai.com/index/chatgpt-for-teens/"]
     }
   ]
 }
